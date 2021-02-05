@@ -61,7 +61,7 @@ During the development of a software project, different developers collaborate o
 
 ## Supplements
 
-_For supplementary data, please refer to the [Documentation](supplements.html)_
+_For supplementary data, please refer to the [Documentation](supplements.md)_
 
 
 ### Implementation 
