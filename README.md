@@ -14,7 +14,7 @@
     <a href="https://github.com/geodes-sms/DSMCompare"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/geodes-sms/DSMCompare">View Demo</a>
+    <!--<a href="https://github.com/geodes-sms/DSMCompare">View Demo</a>-->
     ·
     <a href="https://github.com/geodes-sms/DSMCompare/issues">Report Bug</a>
     ·
@@ -32,7 +32,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
-        <li><a href="#built-with">Implementation</a></li>
+        <li><a href="#implementation">Implementation</a></li>
       </ul>
     </li>
     <li>
@@ -42,9 +42,10 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Supplements</a></li>
+    <li><a href="#supplements">Supplements</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#publications">Publications</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -57,7 +58,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/geodes-sms/DSMCompare)
+<!-- [![Product Name Screen Shot][product-screenshot]] (https://github.com/geodes-sms/DSMCompare)-->
 
 During the development of a software project, different developers collaborate on creating and changing models. These models evolve and need to be versioned. Over the past several years, progress has been made in offering dedicated support for model versioning that improves on what is being supported by text-based version control systems. However, there is still a need to understand model differences in terms of the semantics of the modeling language, and to visualize the changes using its concrete syntax. To address these issues, we propose a comprehensive approach -called DSMCompare- that considers both the abstract and the concrete syntax of a domain-specific language (DSL) when expressing model differences, and which supports defining domain-specific semantics for specific difference patterns. The approach is based on the automatic extension of the DSL to enable the representation of changes and on the automatic adaptation of its graphical concrete syntax to visualize the differences. In addition, we allow for the definition of semantic differencing rules to capture recurrent domain-specific difference patterns. Since these rules can be conflicting with each other, we introduce algorithms for conflict resolution and rule scheduling. To demonstrate the applicability and effectiveness of our approach, we report on evaluations based on synthetic models and on version histories of models developed by third parties.
 
@@ -106,7 +107,6 @@ This is an example of how to list things you need to use the software and how to
    ```
 
 
-
 ## Supplements
 
 _For supplementary data, please refer to the [Documentation](supplements.md)_
@@ -126,6 +126,14 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Roadmap
 
 See the [open issues](https://github.com/geodes-sms/DSMCompare/issues) for a list of proposed features (and known issues).
+
+## Publications
+
+  <ul>        
+    <li>
+      <a href="https://dl.acm.org/doi/10.1145/3357766.3359537">Zadahmad, Manouchehr, Eugene Syriani, Omar Alam, Esther Guerra, and Juan de Lara. "Domain-specific model differencing in visual concrete syntax." In Proceedings of the 12th ACM SIGPLAN International Conference on Software Language Engineering, pp. 100-112. 2019.</a>
+    </li>
+  </ul>
 
 
 
