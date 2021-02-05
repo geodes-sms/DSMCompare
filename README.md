@@ -57,18 +57,18 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://github.com/geodes-sms/DSMCompare)
 
-During the development of a software project, different developers collaborate on creating and changing models. These models evolve and need to be versioned. Over the past several years, progress has been made in offering dedicated support for model versioning that improves on what is being supported by text-based version control systems. However, there is still need to understand model differences in terms of the semantics of the modeling language, and to visualize the changes using its concrete syntax. To address these issues, we propose a comprehensive approach -called DSMCompare- that considers both the abstract and the concrete syntax of a domain-speciffc language (DSL) when expressing model differences, and which supports defining domain-speciffic semantics for speciffic difference patterns. The approach is based on the automatic extension of the DSL to enable the representation of changes and on the automatic adaptation of its graphical concrete syntax to visualize the differences. In addition, we allow for the definition of semantic differencing rules to capture recurrent domain-speciffc difference patterns. Since these rules can be con icting with each other, we introduce algorithms for conflict resolution and rule scheduling. To demonstrate the applicability and effectiveness of our approach, we report on evaluations based on synthetic models and on version histories of models developed by third parties.
+During the development of a software project, different developers collaborate on creating and changing models. These models evolve and need to be versioned. Over the past several years, progress has been made in offering dedicated support for model versioning that improves on what is being supported by text-based version control systems. However, there is still a need to understand model differences in terms of the semantics of the modeling language, and to visualize the changes using its concrete syntax. To address these issues, we propose a comprehensive approach -called DSMCompare- that considers both the abstract and the concrete syntax of a domain-specific language (DSL) when expressing model differences, and which supports defining domain-specific semantics for specific difference patterns. The approach is based on the automatic extension of the DSL to enable the representation of changes and on the automatic adaptation of its graphical concrete syntax to visualize the differences. In addition, we allow for the definition of semantic differencing rules to capture recurrent domain-specific difference patterns. Since these rules can be conflicting with each other, we introduce algorithms for conflict resolution and rule scheduling. To demonstrate the applicability and effectiveness of our approach, we report on evaluations based on synthetic models and on version histories of models developed by third parties.
 
-## Supluments
+## Supplements
 
-_For suplumentary data, please refer to the [Documentation](supplements.html)_
+_For supplementary data, please refer to the [Documentation](supplements.html)_
 
 
 ### Implementation 
 
 
 DSMCompare consists of three main modules.
-The **Comparison** module takes as input two model versions and produces the corresponding fine granular Diff model. This module relies on the EMF-Compare model comparison tool. The **Ordering** module computes the priority order of the Semantic Differencing Rules (SDRule) to be applied. It first transforms the SDRules into Henshin rules. Then, it invokes the Henshin's MultiCDA tool to retrieve the potential conflicts among the rules. The ordering module takes the conflicts and the SDRules to produce the scheduling units of the Henshin transformation. Finally, the **Lifting** module applies this transformation on the Diff model to obtain the semantically lifted Diff model. The difference model is then fed to generated Sirius editor (version 6.3.0) to present the semantic Diff model in concrete syntax.
+The **Comparison** module takes as input two model versions and produces the corresponding fine granular Diff model. This module relies on the EMF-Compare model comparison tool. The **Ordering** module computes the priority order of the Semantic Differencing Rules (SDRule) to be applied. It first transforms the SDRules into Henshin rules. Then, it invokes Henshin's MultiCDA tool to retrieve the potential conflicts among the rules. The ordering module takes the conflicts and the SDRules to produce the scheduling units of the Henshin transformation. Finally, the **Lifting** module applies this transformation on the Diff model to obtain the semantically lifted Diff model. The difference model is then fed to generated Sirius editor (version 6.3.0) to present the semantic Diff model in concrete syntax.
 
 
 ### Built With
@@ -115,7 +115,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples, and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
@@ -131,7 +131,7 @@ See the [open issues](https://github.com/geodes-sms/DSMCompare/issues) for a lis
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what makes the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -151,7 +151,7 @@ Distributed under the GNU LESSER GENERAL PUBLIC LICENSE. See [LICENSE](https://g
 <!-- CONTACT -->
 ## Contact
 
-Manouchehr-Zadahmad - [LinkedIn](hhttps://www.linkedin.com/in/manouchehr-zadahmad/) - zadahmad@gmail.com
+Manouchehr-Zadahmad - [LinkedIn](https://www.linkedin.com/in/manouchehr-zadahmad/) - zadahmad@gmail.com
 
 Project Link: [https://github.com/geodes-sms/DSMCompare](https://github.com/geodes-sms/DSMCompare)
 
