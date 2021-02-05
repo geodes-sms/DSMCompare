@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ASCII"?>
+<oracleDiffMM:ROOT xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oracleDiffMM="www.geodes.UdeM.edu/oracleDiffMM" xsi:schemaLocation="www.geodes.UdeM.edu/oracleDiffMM ../../metamodels/oracleRuleMM.ecore#/0">
+  <b>
+    <bd xsi:type="oracleDiffMM:DiffD"/>
+    <bd xsi:type="oracleDiffMM:DiffD" operation="DELETE"/>
+    <bd xsi:type="oracleDiffMM:DiffD"/>
+    <bd xsi:type="oracleDiffMM:DiffD"/>
+  </b>
+  <b xsi:type="oracleDiffMM:C">
+    <bd xsi:type="oracleDiffMM:DiffD" Name="a" operation="DELETE" new_Name=""/>
+    <bd xsi:type="oracleDiffMM:DiffD" Name="a"/>
+    <bd xsi:type="oracleDiffMM:DiffD" Name="a" operation="DELETE" new_Name=""/>
+    <bd xsi:type="oracleDiffMM:DiffD" Name="a"/>
+    <bd xsi:type="oracleDiffMM:DiffD" Name="a" operation="DELETE" new_Name=""/>
+    <bd xsi:type="oracleDiffMM:DiffD" Name="a"/>
+    <bd xsi:type="oracleDiffMM:DiffD" Name="a" operation="DELETE" new_Name=""/>
+    <diffbd/>
+    <diffbd/>
+    <diffbd/>
+    <diffbd/>
+    <diffbd/>
+  </b>
+  <b xsi:type="oracleDiffMM:DiffC"/>
+  <b xsi:type="oracleDiffMM:DiffC"/>
+  <a xsi:type="oracleDiffMM:DiffA" Name="a" new_Name="">
+    <diffab operation="DELETE" eType="//@b.2"/>
+    <diffab operation="DELETE" eType="//@b.2"/>
+  </a>
+  <a xsi:type="oracleDiffMM:DiffA" Name="a" new_Name="">
+    <diffab operation="DELETE" eType="//@b.2"/>
+    <diffab operation="DELETE" eType="//@b.2"/>
+  </a>
+  <a xsi:type="oracleDiffMM:DiffA" Name="a" new_Name="">
+    <diffab operation="DELETE" eType="//@b.2"/>
+    <diffab operation="DELETE" eType="//@b.2"/>
+  </a>
+  <a Name="a">
+    <diffab operation="DELETE" eType="//@b.1"/>
+  </a>
+  <a Name="a">
+    <diffab operation="DELETE" eType="//@b.1"/>
+  </a>
+  <domainspecificdiffs name="rule2" DomainSpecificDiff_B="//@b.0" DomainSpecificDiff_C="//@b.1"/>
+  <domainspecificdiffs name="rule2" DomainSpecificDiff_B="//@b.0" DomainSpecificDiff_C="//@b.1"/>
+  <domainspecificdiffs name="rule2" DomainSpecificDiff_B="//@b.0" DomainSpecificDiff_C="//@b.1"/>
+</oracleDiffMM:ROOT>

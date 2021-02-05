@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracleRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:oracleRuleMM="www.geodes.UdeM.edu/oracleRuleMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/oracleRuleMM ../../metamodels/oracleRuleMM.ecore#/1"
+    name="rule3">
+  <constraints>Item(11,&quot;Name&quot;) != Item(11,&quot;new_Name&quot;)</constraints>
+  <constraints>Item(11,&quot;Name&quot;) == Item(2,&quot;Name&quot;)</constraints>
+  <pattern>
+    <b xsi:type="oracleRuleMM:Pattern_C"
+        ID_Pattern="1">
+      <bd xsi:type="oracleRuleMM:Pattern_DiffD"
+          Name=""
+          operation="DELETE"
+          new_Name=""
+          ID_Pattern="11"
+          filter="true"/>
+    </b>
+    <a xsi:type="oracleRuleMM:Pattern_DiffA"
+        ID_Pattern="2"/>
+    <domainspecificdiffs
+        xsi:type="oracleRuleMM:Pattern_DomainSpecificDiff"
+        name="rule3"
+        DomainSpecificDiff_A="2"
+        ID_Pattern="3"/>
+  </pattern>
+</oracleRuleMM:Rule>

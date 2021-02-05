@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arduinoRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:arduinoRuleMM="http://www.obeo.fr/arduinoRuleMM"
+    xsi:schemaLocation="http://www.obeo.fr/arduinoRuleMM ../metamodels/arduinoRuleMM.ecore#/1"
+    name="ResetFunctionalityEnabled">
+  <pattern>
+    <hardware
+        xsi:type="arduinoRuleMM:Pattern_Hardware"
+        ID_Pattern="1">
+      <connectors
+          xsi:type="arduinoRuleMM:Pattern_DiffConnector"
+          ID_Pattern="11">
+        <diffmodule
+            xsi:type="arduinoRuleMM:Pattern_DiffConnector_module"
+            eType="3"
+            ID_Pattern="111"/>
+      </connectors>
+    </hardware>
+    <modules
+        xsi:type="arduinoRuleMM:Pattern_OutputModule"
+        name="Blue LED"
+        ID_Pattern="3"/>
+    <domainspecificdiffs
+        xsi:type="arduinoRuleMM:Pattern_DomainSpecificDiff"
+        name="ResetFunctionalityEnabled"
+        DomainSpecificDiff_Connector="11"
+        ID_Pattern="4"/>
+  </pattern>
+</arduinoRuleMM:Rule>

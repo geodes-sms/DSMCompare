@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PacmanGoRuleMM:Rule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PacmanGoRuleMM="http://www.zadahmad.org/dsmcompare/PacmanGoRuleMM" name="PacmanEatFood">
+  <constraints>Item(3 , &quot;value&quot;)  != Item(3 , &quot;new_value&quot;)</constraints>
+  <pattern ID_Pattern="1">
+    <gridnodes xsi:type="PacmanGoRuleMM:Pattern_GridNode" id="" ID_Pattern="2"/>
+    <scoreboard xsi:type="PacmanGoRuleMM:Pattern_DiffScoreboard" id="1" operation="MODIFY" ID_Pattern="3"/>
+    <entities xsi:type="PacmanGoRuleMM:Pattern_Pacman" on="//@pattern/@gridnodes.0" ID_Pattern="4"/>
+    <entities xsi:type="PacmanGoRuleMM:Pattern_DiffFood" operation="DELETE" ID_Pattern="5">
+      <diffon xsi:type="PacmanGoRuleMM:Pattern_DiffPositionableEntity_on" operation="DELETE" eType="//@pattern/@gridnodes.0" ID_Pattern="6"/>
+    </entities>
+    <domainspecificdiffs xsi:type="PacmanGoRuleMM:Pattern_DomainSpecificDiff" name="PacmanEatFood" DomainSpecificDiff_Food="//@pattern/@entities.1" DomainSpecificDiff_Pacman="//@pattern/@entities.0" ID_Pattern="7"/>
+  </pattern>
+</PacmanGoRuleMM:Rule>

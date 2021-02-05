@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated PacManGo -->
+      <package
+            uri="http://www.zadahmad.org/dsmcompare/PacmanGo"
+            class="PacmanGo.PacmanGoPackage"
+            genModel="MetaModel/PacManGo.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated PacManGoDiffMM -->
+      <package
+            uri="http://www.zadahmad.org/dsmcompare/PacmanGoDiffMM"
+            class="PacmanGoDiffMM.PacmanGoDiffMMPackage"
+            genModel="MetaModel/PacManGoDiffMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated PacManGoRuleMM -->
+      <package
+            uri="http://www.zadahmad.org/dsmcompare/PacmanGoRuleMM"
+            class="PacmanGoRuleMM.PacmanGoRuleMMPackage"
+            genModel="MetaModel/PacManGoRuleMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated arduino -->
+      <package
+            uri="http://www.obeo.fr/arduino"
+            class="arduino.ArduinoPackage"
+            genModel="ardMMs/arduino.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated arduinoDiffMM -->
+      <package
+            uri="http://www.obeo.fr/arduinoDiffMM"
+            class="arduinoDiffMM.ArduinoDiffMMPackage"
+            genModel="ardMMs/arduinoDiffMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated arduinoRuleMM -->
+      <package
+            uri="http://www.obeo.fr/arduinoRuleMM"
+            class="arduinoRuleMM.ArduinoRuleMMPackage"
+            genModel="ardMMs/arduinoRuleMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated exploitation -->
+      <package
+            uri="http://www.gemoc.org/exploitation"
+            class="exploitation.ExploitationPackage"
+            genModel="MMFarmingmodeling/exploitation.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated exploitation -->
+      <package
+            uri="http://www.gemoc.org/agro/ActivitiesDSL"
+            class="activitiesDSL.ActivitiesDSLPackage"
+            genModel="MMFarmingmodeling/exploitation.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated henshin -->
+      <package
+            uri="http://www.eclipse.org/emf/2011/Henshin"
+            class="henshin.HenshinPackage"
+            genModel="MetaModel/henshin.genmodel"/>
+   </extension>
+
+</plugin>

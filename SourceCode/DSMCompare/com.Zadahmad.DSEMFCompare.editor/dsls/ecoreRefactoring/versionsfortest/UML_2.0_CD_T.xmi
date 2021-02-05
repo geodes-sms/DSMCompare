@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="uml2CD">
+  <eclassifiers name="Element">
+    <ereferences name="ownedComment" etype="Comment"/>
+    <ereferences name="owner" etype="Element"/>
+    <ereferences name="ownedElement" etype="Element"/>
+  </eclassifiers>
+  <eclassifiers name="Comment">
+    <ereferences name="owningElement" etype="Element"/>
+  </eclassifiers>
+  <eclassifiers name="Relationship" esupertypes="//@eclassifiers.0">
+    <ereferences name="relatedElement" etype="Element"/>
+  </eclassifiers>
+  <eclassifiers name="DirectRelationship" esupertypes="//@eclassifiers.2">
+    <ereferences name="target" etype="Element"/>
+    <ereferences name="source" etype="Element"/>
+  </eclassifiers>
+  <eclassifiers name="NamedElement" esupertypes="//@eclassifiers.0">
+    <eattributes name="name" etype="EString"/>
+    <eattributes name="visibility" etype="VisibilityKind"/>
+    <ereferences name="namespace" etype="Namespace"/>
+    <ereferences name="supplierDependency" etype="Dependency"/>
+    <ereferences name="clientDependency" etype="Dependency"/>
+  </eclassifiers>
+  <eclassifiers name="PackageableElement" esupertypes="//@eclassifiers.4">
+    <ereferences name="owningPackage" etype="Package"/>
+  </eclassifiers>
+  <eclassifiers name="Namespace" esupertypes="//@eclassifiers.4">
+    <ereferences name="importedMember" etype="PackageableElement"/>
+    <ereferences name="packageImport" etype="PackageImport"/>
+    <ereferences name="ownedElement" etype="NamedElement"/>
+    <ereferences name="elementImport" etype="ElementImport"/>
+    <ereferences name="ownedRule" etype="Constraint"/>
+  </eclassifiers>
+  <eclassifiers name="ElementImport" esupertypes="//@eclassifiers.3">
+    <eattributes name="visibility" etype="VisibilityKind"/>
+    <ereferences name="importedElement" etype="PackageableElement"/>
+    <ereferences name="importingNamespace" etype="Namespace"/>
+  </eclassifiers>
+  <eclassifiers name="PackageImport" esupertypes="//@eclassifiers.3">
+    <eattributes name="visibility" etype="VisibilityKind"/>
+    <ereferences name="importedPackage" etype="Package"/>
+    <ereferences name="importingNamespace" etype="Namespace"/>
+  </eclassifiers>
+  <eclassifiers name="Package" esupertypes="//@eclassifiers.5 //@eclassifiers.6">
+    <ereferences name="nestingPackage" etype="Package"/>
+    <ereferences name="nestedPackage" etype="Package"/>
+    <ereferences name="packagedElement" etype="PackageableElement"/>
+    <ereferences name="packageMerge" etype="PackageMerge"/>
+  </eclassifiers>
+  <eclassifiers name="MultiplicityElement" esupertypes="//@eclassifiers.0">
+    <eattributes name="isOrdered" etype="EBoolean"/>
+    <eattributes name="isUnique" etype="EBoolean"/>
+    <ereferences name="lowerValue" etype="ValueSpecification"/>
+    <ereferences name="upperValue" etype="ValueSpecification"/>
+  </eclassifiers>
+  <eclassifiers name="ValueSpecification" esupertypes="//@eclassifiers.12 //@eclassifiers.5">
+    <ereferences name="owningLower" etype="MultiplicityElement"/>
+    <ereferences name="owningUpper" etype="MultiplicityElement"/>
+    <ereferences name="owningConstraint" etype="Constraint"/>
+    <ereferences name="owningParameter" etype="Parameter"/>
+    <ereferences name="owningProperty" etype="Property"/>
+  </eclassifiers>
+  <eclassifiers name="TypedElement" esupertypes="//@eclassifiers.4">
+    <ereferences name="type" etype="Type"/>
+  </eclassifiers>
+  <eclassifiers name="Type" esupertypes="//@eclassifiers.5"/>
+  <eclassifiers name="Constraint" esupertypes="//@eclassifiers.5">
+    <ereferences name="constrainedElement" etype="Element"/>
+    <ereferences name="specification" etype="ValueSpecification"/>
+    <ereferences name="context" etype="Namespace"/>
+  </eclassifiers>
+  <eclassifiers name="Generalization" esupertypes="//@eclassifiers.3">
+    <eattributes name="isSubstitutable" etype="EBoolean"/>
+    <ereferences name="general" etype="Classifier"/>
+    <ereferences name="specific" etype="Classifier"/>
+    <ereferences name="generalizationSet" etype="GeneralizationSet"/>
+  </eclassifiers>
+  <eclassifiers name="Classifier" esupertypes="//@eclassifiers.13 //@eclassifiers.6">
+    <eattributes name="isAbstract" etype="EBoolean"/>
+    <ereferences name="generalization" etype="Generalization"/>
+    <ereferences name="feature" etype="Feature"/>
+    <ereferences name="Class" etype="Class"/>
+    <ereferences name="powertypeExtent" etype="GeneralizationSet"/>
+    <ereferences name="substitution" etype="Substitution"/>
+  </eclassifiers>
+  <eclassifiers name="Feature">
+    <eattributes name="isStatic" etype="EBoolean"/>
+    <ereferences name="featuringClassifier" etype="Classifier"/>
+  </eclassifiers>
+  <eclassifiers name="StructuralFeature" esupertypes="//@eclassifiers.17 //@eclassifiers.12 //@eclassifiers.10">
+    <eattributes name="isReadOnly" etype="EBoolean"/>
+  </eclassifiers>
+  <eclassifiers name="BehavioralFeature" esupertypes="//@eclassifiers.17 //@eclassifiers.6">
+    <ereferences name="ownedParameter" etype="Parameter"/>
+    <ereferences name="raisedException" etype="Type"/>
+  </eclassifiers>
+  <eclassifiers name="Parameter" esupertypes="//@eclassifiers.12 //@eclassifiers.10">
+    <eattributes name="direction" etype="ParameterDirectionKind"/>
+    <ereferences name="ownerFormalParam" etype="BehavioralFeature"/>
+    <ereferences name="defaultValue" etype="ValueSpecification"/>
+  </eclassifiers>
+  <eclassifiers name="Operation" esupertypes="//@eclassifiers.19">
+    <eattributes name="isQuery" etype="EBoolean"/>
+    <ereferences name="redefinedOperation" etype="Operation"/>
+    <ereferences name="Class" etype="Class"/>
+  </eclassifiers>
+  <eclassifiers name="Class" esupertypes="//@eclassifiers.16">
+    <ereferences name="superClass" etype="Class"/>
+    <ereferences name="nestedClassifier" etype="Classifier"/>
+    <ereferences name="ownedOperation" etype="Operation"/>
+    <ereferences name="ownedAttribute" etype="Property"/>
+  </eclassifiers>
+  <eclassifiers name="DataType" esupertypes="//@eclassifiers.16"/>
+  <eclassifiers name="Property" esupertypes="//@eclassifiers.18">
+    <eattributes name="isDerived" etype="EBoolean"/>
+    <eattributes name="aggregation" etype="AggregationKind"/>
+    <ereferences name="defaultValue" etype="ValueSpecification"/>
+    <ereferences name="Class" etype="Class"/>
+    <ereferences name="association" etype="Association"/>
+    <ereferences name="owningAssociation" etype="Association"/>
+    <ereferences name="qualifier" etype="Property"/>
+    <ereferences name="associationEnd" etype="Property"/>
+  </eclassifiers>
+  <eclassifiers name="Association" esupertypes="//@eclassifiers.16 //@eclassifiers.2">
+    <eattributes name="isDerived" etype="EBoolean"/>
+    <ereferences name="memberEnd" etype="Property"/>
+    <ereferences name="ownedEnd" etype="Property"/>
+  </eclassifiers>
+  <eclassifiers name="PrimitiveType" esupertypes="//@eclassifiers.23"/>
+  <eclassifiers name="Enumeration" esupertypes="//@eclassifiers.23">
+    <ereferences name="ownedLiteral" etype="EnumerationLiteral"/>
+  </eclassifiers>
+  <eclassifiers name="EnumerationLiteral" esupertypes="//@eclassifiers.11">
+    <ereferences name="enumeration" etype="Enumeration"/>
+  </eclassifiers>
+  <eclassifiers name="PackageMerge" esupertypes="//@eclassifiers.3">
+    <ereferences name="receivingPackage" etype="Package"/>
+    <ereferences name="mergedPackage" etype="Package"/>
+  </eclassifiers>
+  <eclassifiers name="Dependency" esupertypes="//@eclassifiers.3 //@eclassifiers.5">
+    <ereferences name="supplier" etype="NamedElement"/>
+    <ereferences name="client" etype="NamedElement"/>
+  </eclassifiers>
+  <eclassifiers name="Abstraction" esupertypes="//@eclassifiers.30"/>
+  <eclassifiers name="Usage" esupertypes="//@eclassifiers.30"/>
+  <eclassifiers name="Realization" esupertypes="//@eclassifiers.31"/>
+  <eclassifiers name="Substitution" esupertypes="//@eclassifiers.33">
+    <ereferences name="contract" etype="Classifier"/>
+    <ereferences name="substitutingClassifier" etype="Classifier"/>
+  </eclassifiers>
+  <eclassifiers name="Interface" esupertypes="//@eclassifiers.16">
+    <ereferences name="redefinedInterface" etype="Interface"/>
+  </eclassifiers>
+  <eclassifiers name="InterfaceRealization" esupertypes="//@eclassifiers.33">
+    <ereferences name="contract" etype="Interface"/>
+  </eclassifiers>
+  <eclassifiers name="AssociationClass" esupertypes="//@eclassifiers.25 //@eclassifiers.22"/>
+  <eclassifiers name="GeneralizationSet">
+    <eattributes name="isCovering" etype="EBoolean"/>
+    <eattributes name="isDisjoint" etype="EBoolean"/>
+    <ereferences name="generalization" etype="Generalization"/>
+    <ereferences name="powertype" etype="Classifier"/>
+  </eclassifiers>
+  <eclassifiers name="RedefinableElement" esupertypes="//@eclassifiers.0">
+    <eattributes name="isLeaf" etype="EBoolean"/>
+    <ereferences name="redefinedElement" etype="RedefinableElement"/>
+  </eclassifiers>
+</refactoring:EPackage>

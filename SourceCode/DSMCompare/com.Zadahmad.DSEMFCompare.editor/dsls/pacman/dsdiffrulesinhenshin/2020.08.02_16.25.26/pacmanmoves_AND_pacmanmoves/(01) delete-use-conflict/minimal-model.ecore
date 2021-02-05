@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="pacmanmoves_pacmanmoves" nsURI="http://cpapackage/pacmanmoves/pacmanmoves/delete-use-conflict"
+    nsPrefix="CPAPackage">
+  <eClassifiers xsi:type="ecore:EClass" name="n0_:Game">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gridnodes" eType="#//n1_n1%3AGridNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gridnodes" eType="#//n2_n2%3AGridNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" eType="#//n3_n3%3APacman"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="n1_n1:GridNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="n2_n2:GridNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="n3_n3:Pacman">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="#diffon#" eType="#//n31_n31%3A%23DiffPositionableEntity_on%23"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="#diffon#" eType="#//n32_n32%3A%23DiffPositionableEntity_on%23"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="n31_n31:#DiffPositionableEntity_on#">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation = r1_DELETE_r2_DELETE"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="#eType#" eType="#//n1_n1%3AGridNode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="n32_n32:#DiffPositionableEntity_on#">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation = r1_ADD_r2_ADD"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="#eType#" eType="#//n2_n2%3AGridNode"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,13 @@
+// Applied composite operation
+operationToVolatile(getResizeHandleNames)
+// Atomic changes realizing the composite operation above
+create(ResizeConstraints.resizeHandleNames)
+delete(getResizeHandleNames)
+
+// Applied composite operation
+operationToVolatile(getNonResizeHandleNames)
+// Atomic changes realizing the composite operation above
+create(ResizeConstraints.nonResizeHandleNames)
+delete(getNonResizeHandleNames)
+
+

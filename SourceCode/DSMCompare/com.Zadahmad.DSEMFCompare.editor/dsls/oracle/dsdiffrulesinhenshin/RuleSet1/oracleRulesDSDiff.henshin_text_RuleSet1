@@ -1,0 +1,145 @@
+ePackageImport  oracleDiffMM
+
+		rule rule1()
+		{
+			graph
+			{
+				 preserve			node n0:ROOT
+				 preserve			node n1:B
+				 preserve			node n11:DiffD{
+					preserve operation = "ADD"
+				}
+				 preserve			node n2:C
+				 delete				node n21:DiffD{
+					delete operation = "DELETE"
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"rule1\""
+				}
+			edges[
+			  		(preserve	n0->n1:b),
+			  		(preserve	n0->n2:b),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(preserve	n1->n11:bd),
+			  		(delete		n2->n21:bd),
+			  		(create		n3->n1:DomainSpecificDiff_B),
+			  		(create		n3->n2:DomainSpecificDiff_C)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule rule2()
+		{
+			graph
+			{
+				 preserve			node n0:ROOT
+				 preserve			node n1:B
+				 delete				node n11:DiffB_bd{
+					delete operation = "DELETE"
+				}
+				 preserve			node n2:C
+				 preserve			node n21:DiffB_bd{
+					preserve operation = "ADD"
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"rule2\""
+				}
+			edges[
+			  		(preserve	n0->n1:b),
+			  		(preserve	n0->n2:b),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(delete		n1->n11:diffbd),
+			  		(preserve	n2->n21:diffbd),
+			  		(create		n3->n1:DomainSpecificDiff_B),
+			  		(create		n3->n2:DomainSpecificDiff_C)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule rule3(VAR n11Name:EString, VAR n11new_Name:EString, VAR n2Name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:ROOT
+				 preserve			node n1:C
+				 delete				node n11:DiffD{
+					delete operation = "DELETE"
+					delete Name =  n11Name
+					delete new_Name =  n11new_Name
+				}
+				 preserve			node n2:DiffA{
+					preserve operation = "ADD"
+					preserve Name =  n2Name
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"rule3\""
+				}
+			edges[
+			  		(preserve	n0->n1:b),
+			  		(preserve	n0->n2:a),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(delete		n1->n11:bd),
+			  		(create		n3->n2:DomainSpecificDiff_A)
+	      		 ]
+			}
+			conditions [n11Name != n11new_Name, n11Name == n2Name]
+		}
+//----------------------------------------------------------------------
+
+		rule rule4()
+		{
+			graph
+			{
+				 preserve			node n0:ROOT
+				 preserve			node n1:C
+				 delete				node n11:DiffD{
+					delete operation = "DELETE"
+				}
+				 delete				node n12:DiffD{
+					delete operation = "ADD"
+				}
+				 delete				node n13:DiffD{
+					delete operation = "DELETE"
+				}
+				 preserve			node n2:B
+				 preserve			node n21:DiffD{
+					preserve operation = "DELETE"
+				}
+				 preserve			node n3:A
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"rule4\""
+				}
+			edges[
+			  		(preserve	n0->n1:b),
+			  		(preserve	n0->n2:b),
+			  		(preserve	n0->n3:a),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(delete		n1->n11:bd),
+			  		(delete		n1->n12:bd),
+			  		(delete		n1->n13:bd),
+			  		(preserve	n2->n21:bd),
+			  		(create		n4->n3:DomainSpecificDiff_A),
+			  		(create		n4->n2:DomainSpecificDiff_B),
+			  		(create		n4->n1:DomainSpecificDiff_C),
+			  		(create		n4->n21:DomainSpecificDiff_D)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+	unit unitSequntialStar(){
+		while{
+			rule1()
+		}
+		while{
+			rule2()
+		}
+		while{
+			rule3()
+		}
+		while{
+			rule4()
+		}
+	}

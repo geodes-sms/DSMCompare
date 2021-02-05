@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.Zadahmad.DSEMFCompare.editor/src" modelPluginID="com.Zadahmad.DSEMFCompare.editor"
+    modelName="ArduinoDiffMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>arduinoDiffMM.ecore</foreignModel>
+  <genPackages prefix="ArduinoDiffMM" disposableProviderFactory="true" ecorePackage="arduinoDiffMM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="arduinoDiffMM.ecore#//Time">
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//Time/MilliSecond"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//Time/MicroSecond"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="arduinoDiffMM.ecore#//ModuleKind">
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//ModuleKind/digital"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//ModuleKind/analog"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="arduinoDiffMM.ecore#//OperatorKind">
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/equal"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/minus"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/upper"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/lower"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/plus"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/diff"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/upperOrEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/lowerOrEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/mul"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/div"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/min"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/max"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/pourcent"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/and"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/or"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//OperatorKind/not"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="arduinoDiffMM.ecore#//Library">
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//Library/none"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//Library/servo"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//Library/music"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="arduinoDiffMM.ecore#//ParameterType">
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//ParameterType/Delay"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//ParameterType/Level"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//ParameterType/Status"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//ParameterType/Constant"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//ParameterType/Sensor"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="arduinoDiffMM.ecore#//ClassOp">
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//ClassOp/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//ClassOp/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//ClassOp/MODIFY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="arduinoDiffMM.ecore#//AscOp">
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//AscOp/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoDiffMM.ecore#//AscOp/DELETE"/>
+    </genEnums>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//Hardware">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Hardware/platforms"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Hardware/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Hardware/connectors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Hardware/diffplatforms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Hardware/diffmodules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Hardware/diffconnectors"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//Platform">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Platform/digitalPins"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Platform/analogPins"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//Platform/image"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Platform/diffdigitalPins"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Platform/diffanalogPins"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoDiffMM.ecore#//Module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//Module/kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//Module/image"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//Module/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//Module/library"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DigitalPin"/>
+    <genClasses image="false" ecoreClass="arduinoDiffMM.ecore#//Pin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//Pin/id"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//AnalogPin"/>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//Sketch">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Sketch/hardware"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Sketch/instructions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Sketch/functions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Sketch/diffhardware"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Sketch/diffinstructions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Sketch/difffunctions"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//Project">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Project/hardware"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Project/sketch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Project/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Project/platform"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Project/domainspecificdiffs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Project/diffhardware"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Project/diffsketch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Project/diffmodules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Project/diffplatform"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Project/diffdomainspecificdiffs"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoDiffMM.ecore#//Instruction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Instruction/previous"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Instruction/next"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Instruction/diffprevious"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Instruction/diffnext"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//Status">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//Status/status"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Status/sensor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Status/diffsensor"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//Level">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Level/level"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Level/difflevel"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoDiffMM.ecore#//ModuleInstruction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//ModuleInstruction/module"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//ModuleInstruction/diffmodule"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoDiffMM.ecore#//Control">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Control/instructions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Control/diffinstructions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoDiffMM.ecore#//Utilities"/>
+    <genClasses image="false" ecoreClass="arduinoDiffMM.ecore#//IO"/>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//Delay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//Delay/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//Delay/value"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//InputModule"/>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//OutputModule"/>
+    <genClasses image="false" ecoreClass="arduinoDiffMM.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//Connector">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Connector/pin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Connector/module"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Connector/diffpin"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Connector/diffmodule"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//Repeat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//Repeat/iteration"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//Sensor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Sensor/status"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Sensor/diffstatus"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//While">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//While/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//While/diffcondition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoDiffMM.ecore#//MathOperator">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//MathOperator/left"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//MathOperator/right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//MathOperator/operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//MathOperator/diffleft"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//MathOperator/diffright"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//Variable/name"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//Set">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Set/variable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Set/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Set/diffvariable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Set/diffvalue"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//NumericalOperator"/>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//BooleanOperator"/>
+    <genClasses image="false" ecoreClass="arduinoDiffMM.ecore#//Value">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//Value/value"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//Constant"/>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//If">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//If/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//If/diffcondition"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//Function/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Function/paramDefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Function/instructions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Function/diffparamDefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Function/diffinstructions"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//ParameterDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//ParameterDefinition/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//ParameterDefinition/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoDiffMM.ecore#//Parameter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Parameter/definition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//Parameter/diffdefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//FunctionCall">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//FunctionCall/definition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//FunctionCall/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//FunctionCall/diffdefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//FunctionCall/diffparameters"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//ParameterCall">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//ParameterCall/definition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//ParameterCall/diffdefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DomainSpecificDiff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DomainSpecificDiff/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Hardware"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Platform"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Module"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_DigitalPin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Pin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_AnalogPin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Sketch"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Instruction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Status"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Level"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_ModuleInstruction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Control"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Utilities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_IO"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Delay"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_InputModule"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_OutputModule"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_NamedElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Connector"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Repeat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Sensor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_While"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_MathOperator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Variable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Set"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_NumericalOperator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_BooleanOperator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Constant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_If"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Function"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_ParameterDefinition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Parameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_FunctionCall"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_ParameterCall"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffHardware">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffHardware/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffHardware/new_name"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffHardware_platforms">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffHardware_platforms/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffHardware_platforms/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffHardware_modules">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffHardware_modules/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffHardware_modules/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffHardware_connectors">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffHardware_connectors/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffHardware_connectors/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffPlatform">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffPlatform/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffPlatform/new_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffPlatform/new_image"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffPlatform_digitalPins">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffPlatform_digitalPins/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffPlatform_digitalPins/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffPlatform_analogPins">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffPlatform_analogPins/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffPlatform_analogPins/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffDigitalPin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffDigitalPin/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffDigitalPin/new_id"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffAnalogPin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffAnalogPin/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffAnalogPin/new_id"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffSketch">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffSketch/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffSketch/new_name"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffSketch_hardware">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffSketch_hardware/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffSketch_hardware/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffSketch_instructions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffSketch_instructions/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffSketch_instructions/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffSketch_functions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffSketch_functions/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffSketch_functions/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffProject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffProject/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffProject_hardware">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffProject_hardware/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffProject_hardware/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffProject_sketch">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffProject_sketch/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffProject_sketch/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffProject_modules">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffProject_modules/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffProject_modules/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffProject_platform">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffProject_platform/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffProject_platform/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffProject_domainspecificdiffs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffProject_domainspecificdiffs/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffProject_domainspecificdiffs/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffInstruction_previous">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffInstruction_previous/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffInstruction_previous/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffInstruction_next">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffInstruction_next/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffInstruction_next/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffStatus">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffStatus/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffStatus/new_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffStatus/new_status"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffStatus_sensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffStatus_sensor/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffStatus_sensor/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffLevel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffLevel/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffLevel_level">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffLevel_level/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffLevel_level/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffModuleInstruction_module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffModuleInstruction_module/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffModuleInstruction_module/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffControl_instructions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffControl_instructions/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffControl_instructions/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffDelay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffDelay/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffDelay/new_unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffDelay/new_value"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffInputModule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffInputModule/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffInputModule/new_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffInputModule/new_kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffInputModule/new_image"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffInputModule/new_level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffInputModule/new_library"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffOutputModule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffOutputModule/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffOutputModule/new_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffOutputModule/new_kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffOutputModule/new_image"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffOutputModule/new_level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffOutputModule/new_library"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffConnector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffConnector/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffConnector_pin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffConnector_pin/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffConnector_pin/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffConnector_module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffConnector_module/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffConnector_module/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffRepeat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffRepeat/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffRepeat/new_iteration"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffSensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffSensor/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffSensor/new_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffSensor/new_operator"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffSensor_status">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffSensor_status/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffSensor_status/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffWhile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffWhile/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffWhile_condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffWhile_condition/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffWhile_condition/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffMathOperator_left">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffMathOperator_left/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffMathOperator_left/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffMathOperator_right">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffMathOperator_right/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffMathOperator_right/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffVariable/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffVariable/new_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffVariable/new_name"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffSet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffSet/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffSet_variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffSet_variable/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffSet_variable/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffSet_value">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffSet_value/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffSet_value/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffNumericalOperator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffNumericalOperator/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffNumericalOperator/new_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffNumericalOperator/new_operator"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffBooleanOperator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffBooleanOperator/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffBooleanOperator/new_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffBooleanOperator/new_operator"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffConstant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffConstant/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffConstant/new_value"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffIf">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffIf/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffIf_condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffIf_condition/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffIf_condition/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffFunction/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffFunction/new_name"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffFunction_paramDefs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffFunction_paramDefs/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffFunction_paramDefs/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffFunction_instructions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffFunction_instructions/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffFunction_instructions/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffParameterDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffParameterDefinition/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffParameterDefinition/new_type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffParameterDefinition/new_name"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffParameter_to_definition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffParameter_to_definition/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffParameter_to_definition/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffFunctionCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffFunctionCall/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffFunctionCall_definition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffFunctionCall_definition/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffFunctionCall_definition/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffFunctionCall_parameters">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffFunctionCall_parameters/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffFunctionCall_parameters/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffParameterCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffParameterCall/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoDiffMM.ecore#//DiffParameterCall_definition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoDiffMM.ecore#//DiffParameterCall_definition/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoDiffMM.ecore#//DiffParameterCall_definition/eType"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

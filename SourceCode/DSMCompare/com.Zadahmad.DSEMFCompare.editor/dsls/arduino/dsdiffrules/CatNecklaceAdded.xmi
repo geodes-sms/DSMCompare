@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arduinoRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:arduinoRuleMM="http://www.obeo.fr/arduinoRuleMM"
+    xsi:schemaLocation="http://www.obeo.fr/arduinoRuleMM ../metamodels/arduinoRuleMM.ecore#/1"
+    name="CatNecklaceAdded">
+  <pattern>
+    <hardware
+        xsi:type="arduinoRuleMM:Pattern_Hardware"
+        ID_Pattern="1">
+      <connectors
+          xsi:type="arduinoRuleMM:Pattern_DiffConnector"
+          ID_Pattern="11">
+        <diffmodule
+            xsi:type="arduinoRuleMM:Pattern_DiffConnector_module"
+            eType="//@pattern/@modules.0"
+            ID_Pattern="111"/>
+      </connectors>
+      <connectors
+          xsi:type="arduinoRuleMM:Pattern_DiffConnector">
+        <diffmodule
+            xsi:type="arduinoRuleMM:Pattern_DiffConnector_module"
+            eType="//@pattern/@modules.1"/>
+      </connectors>
+      <connectors
+          xsi:type="arduinoRuleMM:Pattern_DiffConnector">
+        <diffmodule
+            xsi:type="arduinoRuleMM:Pattern_DiffConnector_module"
+            eType="//@pattern/@modules.2"/>
+      </connectors>
+      <connectors
+          xsi:type="arduinoRuleMM:Pattern_DiffConnector"
+          ID_Pattern="11">
+        <diffmodule
+            xsi:type="arduinoRuleMM:Pattern_DiffConnector_module"
+            eType="//@pattern/@modules.3"
+            ID_Pattern="111"/>
+      </connectors>
+    </hardware>
+    <sketch
+        xsi:type="arduinoRuleMM:Pattern_Sketch"
+        ID_Pattern="2">
+      <instructions
+          xsi:type="arduinoRuleMM:Pattern_DiffIf">
+        <instructions
+            xsi:type="arduinoRuleMM:Pattern_DiffSensor">
+          <diffmodule
+              xsi:type="arduinoRuleMM:Pattern_DiffModuleInstruction_module"
+              eType="//@pattern/@modules.0"/>
+        </instructions>
+        <diffcondition
+            xsi:type="arduinoRuleMM:Pattern_DiffIf_condition"
+            eType="//@pattern/@sketch/@instructions.0/@instructions.0"/>
+      </instructions>
+    </sketch>
+    <modules
+        xsi:type="arduinoRuleMM:Pattern_DiffInputModule"
+        name="Push botton 1"/>
+    <modules
+        xsi:type="arduinoRuleMM:Pattern_OutputModule"
+        name="Blue LED"/>
+    <modules
+        xsi:type="arduinoRuleMM:Pattern_OutputModule"
+        name="Red LED"/>
+    <modules
+        xsi:type="arduinoRuleMM:Pattern_OutputModule"
+        name="White LED"/>
+    <domainspecificdiffs
+        xsi:type="arduinoRuleMM:Pattern_DomainSpecificDiff"
+        name="CatNecklaceAdded"
+        DomainSpecificDiff_Connector="11"
+        ID_Pattern="4"/>
+  </pattern>
+</arduinoRuleMM:Rule>

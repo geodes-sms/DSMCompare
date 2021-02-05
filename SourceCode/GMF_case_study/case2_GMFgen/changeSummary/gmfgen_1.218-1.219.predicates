@@ -1,0 +1,18 @@
+create(LabelTextAccessMethod)
+create(MESSAGE_FORMAT)
+create(NATIVE)
+create(REGEXP)
+create(PRINTF)
+
+// Applied composite operation
+replaceEnum(LabelEditMethod, LabelTextAccessMethod, [MESSAGE_FORMAT, REGEXP, NATIVE], [MESSAGE_FORMAT, REGEXP, NATIVE])
+// Atomic changes realizing the composite operation above
+set(FeatureLabelModelFacet.editMethod, eType, LabelTextAccessMethod)
+delete(LabelEditMethod)
+
+// Applied composite operation
+replaceEnum(LabelViewMethod, LabelTextAccessMethod, [MESSAGE_FORMAT, PRINTF, NATIVE], [MESSAGE_FORMAT, PRINTF, NATIVE])
+// Atomic changes realizing the composite operation above
+set(FeatureLabelModelFacet.viewMethod, eType, LabelTextAccessMethod)
+delete(LabelViewMethod)
+

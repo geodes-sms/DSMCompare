@@ -1,0 +1,12 @@
+// Applied composite operation
+newOppositeReference(ToolGroup.entries, group, 1, 1, false)
+// Atomic changes realizing the composite operation above
+create(ToolGroupItem.group)
+
+// Applied composite operation
+newOppositeReference(Palette.groups, palette, 1, 1, false)
+// Atomic changes realizing the composite operation above
+create(ToolGroup.palette)
+
+create(definesStandardTools)
+

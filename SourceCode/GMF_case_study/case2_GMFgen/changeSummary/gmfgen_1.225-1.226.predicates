@@ -1,0 +1,23 @@
+set(GenDiagramUpdater, abstract, false)
+set(GenDiagramUpdater, interface, false)
+// Applied composite operation
+replaceInheritanceByDelegation(GenDiagram, GenDiagramUpdater, diagramUpdater)
+// Atomic changes realizing the composite operation above
+create(GenEditorGenerator.diagramUpdater)
+remove(GenDiagram, eSuperTypes, GenDiagramUpdater)
+
+// Applied composite operation
+rename(GenDiagramUpdater, GenDiagramUpdater)
+// Atomic changes realizing the composite operation above
+set(GenDiagramUpdater, name, GenDiagramUpdater)
+
+// Applied composite operation
+collectFeature(GenEditorGenerator.diagramUpdater, GenEditorGenerator.diagram)
+// Atomic changes realizing the composite operation above
+move(GenDiagram, GenEditorGenerator.diagramUpdater)
+
+// Applied composite operation
+newOppositeReference(GenEditorGenerator.diagramUpdater, editorGen, 0, 1, false)
+// Atomic changes realizing the composite operation above
+create(GenDiagramUpdater.editorGen)
+

@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.Zadahmad.DSEMFCompare.editor/src" modelPluginID="com.Zadahmad.DSEMFCompare.editor"
+    modelName="ArduinoRuleMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>arduinoRuleMM.ecore</foreignModel>
+  <genPackages prefix="ArduinoDiffMM" disposableProviderFactory="true" ecorePackage="arduinoRuleMM.ecore#/0">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="arduinoRuleMM.ecore#/0/Time">
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/Time/MilliSecond"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/Time/MicroSecond"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="arduinoRuleMM.ecore#/0/ModuleKind">
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/ModuleKind/digital"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/ModuleKind/analog"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="arduinoRuleMM.ecore#/0/OperatorKind">
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/equal"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/minus"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/upper"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/lower"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/plus"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/diff"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/upperOrEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/lowerOrEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/mul"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/div"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/min"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/max"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/pourcent"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/and"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/or"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/OperatorKind/not"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="arduinoRuleMM.ecore#/0/Library">
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/Library/none"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/Library/servo"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/Library/music"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="arduinoRuleMM.ecore#/0/ParameterType">
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/ParameterType/Delay"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/ParameterType/Level"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/ParameterType/Status"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/ParameterType/Constant"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/ParameterType/Sensor"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="arduinoRuleMM.ecore#/0/ClassOp">
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/ClassOp/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/ClassOp/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/ClassOp/MODIFY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="arduinoRuleMM.ecore#/0/AscOp">
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/AscOp/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="arduinoRuleMM.ecore#/0/AscOp/DELETE"/>
+    </genEnums>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/Hardware">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Hardware/platforms"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Hardware/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Hardware/connectors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Hardware/diffplatforms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Hardware/diffmodules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Hardware/diffconnectors"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/Platform">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Platform/digitalPins"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Platform/analogPins"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/Platform/image"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Platform/diffdigitalPins"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Platform/diffanalogPins"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/0/Module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/Module/kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/Module/image"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/Module/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/Module/library"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DigitalPin"/>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/0/Pin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/Pin/id"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/AnalogPin"/>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/Sketch">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Sketch/hardware"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Sketch/instructions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Sketch/functions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Sketch/diffhardware"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Sketch/diffinstructions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Sketch/difffunctions"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/Project">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Project/hardware"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Project/sketch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Project/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Project/platform"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Project/domainspecificdiffs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Project/diffhardware"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Project/diffsketch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Project/diffmodules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Project/diffplatform"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Project/diffdomainspecificdiffs"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/0/Instruction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Instruction/previous"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Instruction/next"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Instruction/diffprevious"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Instruction/diffnext"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/Status">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/Status/status"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Status/sensor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Status/diffsensor"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/Level">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Level/level"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Level/difflevel"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/0/ModuleInstruction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/ModuleInstruction/module"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/ModuleInstruction/diffmodule"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/0/Control">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Control/instructions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Control/diffinstructions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/0/Utilities"/>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/0/IO"/>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/Delay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/Delay/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/Delay/value"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/InputModule"/>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/OutputModule"/>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/0/NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/Connector">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Connector/pin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Connector/module"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Connector/diffpin"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Connector/diffmodule"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/Repeat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/Repeat/iteration"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/Sensor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Sensor/status"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Sensor/diffstatus"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/While">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/While/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/While/diffcondition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/0/MathOperator">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/MathOperator/left"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/MathOperator/right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/MathOperator/operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/MathOperator/diffleft"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/MathOperator/diffright"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/Variable/name"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/Set">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Set/variable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Set/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Set/diffvariable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Set/diffvalue"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/NumericalOperator"/>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/BooleanOperator"/>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/0/Value">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/Value/value"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/Constant"/>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/If">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/If/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/If/diffcondition"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/Function/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Function/paramDefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Function/instructions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Function/diffparamDefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Function/diffinstructions"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/ParameterDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/ParameterDefinition/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/ParameterDefinition/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/0/Parameter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Parameter/definition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/Parameter/diffdefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/FunctionCall">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/FunctionCall/definition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/FunctionCall/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/FunctionCall/diffdefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/FunctionCall/diffparameters"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/ParameterCall">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/ParameterCall/definition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/ParameterCall/diffdefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DomainSpecificDiff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DomainSpecificDiff/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Hardware"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Platform"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Module"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_DigitalPin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Pin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_AnalogPin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Sketch"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Instruction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Status"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Level"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_ModuleInstruction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Control"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Utilities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_IO"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Delay"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_InputModule"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_OutputModule"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_NamedElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Connector"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Repeat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Sensor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_While"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_MathOperator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Variable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Set"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_NumericalOperator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_BooleanOperator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Constant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_If"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Function"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_ParameterDefinition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Parameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_FunctionCall"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_ParameterCall"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffHardware">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffHardware/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffHardware/new_name"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffHardware_platforms">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffHardware_platforms/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffHardware_platforms/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffHardware_modules">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffHardware_modules/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffHardware_modules/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffHardware_connectors">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffHardware_connectors/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffHardware_connectors/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffPlatform">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffPlatform/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffPlatform/new_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffPlatform/new_image"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffPlatform_digitalPins">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffPlatform_digitalPins/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffPlatform_digitalPins/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffPlatform_analogPins">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffPlatform_analogPins/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffPlatform_analogPins/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffDigitalPin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffDigitalPin/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffDigitalPin/new_id"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffAnalogPin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffAnalogPin/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffAnalogPin/new_id"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffSketch">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffSketch/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffSketch/new_name"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffSketch_hardware">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffSketch_hardware/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffSketch_hardware/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffSketch_instructions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffSketch_instructions/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffSketch_instructions/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffSketch_functions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffSketch_functions/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffSketch_functions/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffProject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffProject/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffProject_hardware">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffProject_hardware/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffProject_hardware/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffProject_sketch">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffProject_sketch/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffProject_sketch/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffProject_modules">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffProject_modules/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffProject_modules/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffProject_platform">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffProject_platform/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffProject_platform/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffProject_domainspecificdiffs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffProject_domainspecificdiffs/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffProject_domainspecificdiffs/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffInstruction_previous">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffInstruction_previous/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffInstruction_previous/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffInstruction_next">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffInstruction_next/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffInstruction_next/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffStatus">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffStatus/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffStatus/new_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffStatus/new_status"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffStatus_sensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffStatus_sensor/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffStatus_sensor/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffLevel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffLevel/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffLevel_level">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffLevel_level/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffLevel_level/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffModuleInstruction_module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffModuleInstruction_module/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffModuleInstruction_module/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffControl_instructions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffControl_instructions/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffControl_instructions/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffDelay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffDelay/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffDelay/new_unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffDelay/new_value"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffInputModule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffInputModule/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffInputModule/new_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffInputModule/new_kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffInputModule/new_image"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffInputModule/new_level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffInputModule/new_library"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffOutputModule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffOutputModule/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffOutputModule/new_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffOutputModule/new_kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffOutputModule/new_image"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffOutputModule/new_level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffOutputModule/new_library"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffConnector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffConnector/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffConnector_pin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffConnector_pin/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffConnector_pin/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffConnector_module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffConnector_module/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffConnector_module/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffRepeat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffRepeat/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffRepeat/new_iteration"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffSensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffSensor/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffSensor/new_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffSensor/new_operator"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffSensor_status">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffSensor_status/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffSensor_status/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffWhile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffWhile/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffWhile_condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffWhile_condition/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffWhile_condition/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffMathOperator_left">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffMathOperator_left/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffMathOperator_left/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffMathOperator_right">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffMathOperator_right/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffMathOperator_right/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffVariable/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffVariable/new_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffVariable/new_name"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffSet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffSet/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffSet_variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffSet_variable/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffSet_variable/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffSet_value">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffSet_value/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffSet_value/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffNumericalOperator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffNumericalOperator/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffNumericalOperator/new_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffNumericalOperator/new_operator"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffBooleanOperator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffBooleanOperator/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffBooleanOperator/new_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffBooleanOperator/new_operator"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffConstant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffConstant/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffConstant/new_value"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffIf">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffIf/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffIf_condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffIf_condition/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffIf_condition/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffFunction/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffFunction/new_name"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffFunction_paramDefs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffFunction_paramDefs/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffFunction_paramDefs/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffFunction_instructions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffFunction_instructions/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffFunction_instructions/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffParameterDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffParameterDefinition/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffParameterDefinition/new_type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffParameterDefinition/new_name"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffParameter_to_definition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffParameter_to_definition/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffParameter_to_definition/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffFunctionCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffFunctionCall/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffFunctionCall_definition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffFunctionCall_definition/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffFunctionCall_definition/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffFunctionCall_parameters">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffFunctionCall_parameters/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffFunctionCall_parameters/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffParameterCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffParameterCall/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/0/DiffParameterCall_definition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/0/DiffParameterCall_definition/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/0/DiffParameterCall_definition/eType"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="ArduinoRuleMM" disposableProviderFactory="true" ecorePackage="arduinoRuleMM.ecore#/1">
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Hardware">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Hardware/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Hardware/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Platform">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Platform/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Platform/filter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Module/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Module/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DigitalPin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DigitalPin/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DigitalPin/filter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Pin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Pin/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Pin/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_AnalogPin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_AnalogPin/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_AnalogPin/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Sketch">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Sketch/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Sketch/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Project/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Project/filter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Instruction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Instruction/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Instruction/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Status">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Status/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Status/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Level">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Level/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Level/filter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/1/Pattern_ModuleInstruction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_ModuleInstruction/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_ModuleInstruction/filter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Control">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Control/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Control/filter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Utilities">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Utilities/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Utilities/filter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/1/Pattern_IO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_IO/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_IO/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Delay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Delay/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Delay/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_InputModule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_InputModule/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_InputModule/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_OutputModule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_OutputModule/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_OutputModule/filter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/1/Pattern_NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_NamedElement/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_NamedElement/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Connector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Connector/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Connector/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Repeat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Repeat/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Repeat/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Sensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Sensor/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Sensor/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_While">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_While/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_While/filter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/1/Pattern_MathOperator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_MathOperator/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_MathOperator/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Variable/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Variable/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Set">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Set/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Set/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_NumericalOperator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_NumericalOperator/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_NumericalOperator/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_BooleanOperator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_BooleanOperator/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_BooleanOperator/filter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Value">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Value/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Value/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Constant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Constant/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Constant/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_If">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_If/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_If/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Function/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Function/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_ParameterDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_ParameterDefinition/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_ParameterDefinition/filter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="arduinoRuleMM.ecore#/1/Pattern_Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Parameter/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_Parameter/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_FunctionCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_FunctionCall/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_FunctionCall/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_ParameterCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_ParameterCall/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_ParameterCall/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DomainSpecificDiff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DomainSpecificDiff/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DomainSpecificDiff/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffHardware">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffHardware/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffHardware/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffHardware_platforms">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffHardware_platforms/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffHardware_platforms/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffHardware_modules">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffHardware_modules/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffHardware_modules/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffHardware_connectors">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffHardware_connectors/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffHardware_connectors/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffPlatform">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffPlatform/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffPlatform/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffPlatform_digitalPins">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffPlatform_digitalPins/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffPlatform_digitalPins/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffPlatform_analogPins">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffPlatform_analogPins/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffPlatform_analogPins/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffDigitalPin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffDigitalPin/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffDigitalPin/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffAnalogPin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffAnalogPin/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffAnalogPin/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffSketch">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSketch/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSketch/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffSketch_hardware">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSketch_hardware/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSketch_hardware/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffSketch_instructions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSketch_instructions/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSketch_instructions/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffSketch_functions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSketch_functions/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSketch_functions/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffProject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffProject/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffProject/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffProject_hardware">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffProject_hardware/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffProject_hardware/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffProject_sketch">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffProject_sketch/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffProject_sketch/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffProject_modules">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffProject_modules/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffProject_modules/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffProject_platform">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffProject_platform/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffProject_platform/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffProject_domainspecificdiffs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffProject_domainspecificdiffs/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffProject_domainspecificdiffs/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffInstruction_previous">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffInstruction_previous/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffInstruction_previous/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffInstruction_next">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffInstruction_next/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffInstruction_next/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffStatus">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffStatus/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffStatus/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffStatus_sensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffStatus_sensor/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffStatus_sensor/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffLevel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffLevel/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffLevel/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffLevel_level">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffLevel_level/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffLevel_level/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffModuleInstruction_module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffModuleInstruction_module/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffModuleInstruction_module/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffControl_instructions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffControl_instructions/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffControl_instructions/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffDelay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffDelay/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffDelay/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffInputModule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffInputModule/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffInputModule/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffOutputModule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffOutputModule/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffOutputModule/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffConnector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffConnector/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffConnector/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffConnector_pin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffConnector_pin/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffConnector_pin/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffConnector_module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffConnector_module/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffConnector_module/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffRepeat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffRepeat/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffRepeat/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffSensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSensor/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSensor/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffSensor_status">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSensor_status/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSensor_status/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffWhile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffWhile/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffWhile/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffWhile_condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffWhile_condition/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffWhile_condition/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffMathOperator_left">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffMathOperator_left/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffMathOperator_left/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffMathOperator_right">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffMathOperator_right/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffMathOperator_right/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffVariable/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffVariable/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffSet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSet/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSet/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffSet_variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSet_variable/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSet_variable/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffSet_value">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSet_value/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffSet_value/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffNumericalOperator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffNumericalOperator/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffNumericalOperator/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffBooleanOperator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffBooleanOperator/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffBooleanOperator/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffConstant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffConstant/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffConstant/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffIf">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffIf/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffIf/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffIf_condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffIf_condition/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffIf_condition/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffFunction/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffFunction/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffFunction_paramDefs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffFunction_paramDefs/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffFunction_paramDefs/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffFunction_instructions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffFunction_instructions/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffFunction_instructions/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffParameterDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffParameterDefinition/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffParameterDefinition/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffParameter_to_definition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffParameter_to_definition/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffParameter_to_definition/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffFunctionCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffFunctionCall/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffFunctionCall/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffFunctionCall_definition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffFunctionCall_definition/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffFunctionCall_definition/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffFunctionCall_parameters">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffFunctionCall_parameters/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffFunctionCall_parameters/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffParameterCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffParameterCall/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffParameterCall/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Pattern_DiffParameterCall_definition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffParameterCall_definition/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Pattern_DiffParameterCall_definition/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="arduinoRuleMM.ecore#/1/Rule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Rule/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Rule/priority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute arduinoRuleMM.ecore#/1/Rule/constraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference arduinoRuleMM.ecore#/1/Rule/pattern"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

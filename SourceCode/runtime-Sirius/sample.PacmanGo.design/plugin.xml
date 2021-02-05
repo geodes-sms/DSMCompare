@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension point="org.eclipse.sirius.componentization">
+    <component class="sample.PacmanGo.design.Activator"
+               id="sample.PacmanGo.design"
+	       name="PacmanGo">
+    </component>
+  </extension>
+  <extension
+        point="org.eclipse.sirius.externalJavaAction">
+     <javaActions
+           actionClass="sample.PacmanGo.design.ExternalJavaAction1"
+           id="sample.PacmanGo.design.javaActions1">
+     </javaActions>
+  </extension>
+</plugin>

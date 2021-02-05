@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.Zadahmad.DSEMFCompare.editor/src" modelPluginID="com.Zadahmad.DSEMFCompare.editor"
+    modelName="Oracle" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>oracle.ecore</foreignModel>
+  <genPackages prefix="Oracle" disposableProviderFactory="true" ecorePackage="oracle.ecore#/">
+    <genClasses ecoreClass="oracle.ecore#//A">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracle.ecore#//A/ab"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracle.ecore#//A/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracle.ecore#//A/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="oracle.ecore#//B">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracle.ecore#//B/bd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracle.ecore#//B/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracle.ecore#//B/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="oracle.ecore#//C">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracle.ecore#//C/x"/>
+    </genClasses>
+    <genClasses ecoreClass="oracle.ecore#//D">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracle.ecore#//D/dd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracle.ecore#//D/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracle.ecore#//D/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="oracle.ecore#//ROOT">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracle.ecore#//ROOT/b"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracle.ecore#//ROOT/a"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,71 @@
+Rules:
+Id,	Name,					Filter#,				Element#	#Instances	#Overlaps
+							[Associations/Class]
+0	ghostmoves				2/0						8				1		 	5		
+1	ghostmovesbottom		1/0						8				0			5					
+2	ghostmovesleft			1/0						8				0			5	
+3	ghostmovesright			1/0						8				0			5		
+4	ghostmovesup			1/0						8				0			5
+5	pacmandies				1/0						7				0			6
+6	pacmaneatsfood			1/0						8				1			1
+7	pacmanmoves				2/0						8				1			6
+8	pacmanmovesbottom		1/0						8				0			6
+9	pacmanmovesleft			1/0						8				0			6
+10	pacmanmovesright		1/0						8				0			6
+11	pacmanmovesup			1/0						8				0			6
+------------------------------------------------------------------------------------
+
+
+[MultiCDA] Computing initial conflict reasons-computeResultsFine:
+6, 6, 6, 6, 6, 0, 0, 0, 0, 0, 0, 0,    | ghostmoves
+2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0,    | ghostmovesbottom
+2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0,    | ghostmovesleft
+2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0,    | ghostmovesright
+2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0,    | ghostmovesup
+0, 0, 0, 0, 0, 1, 0, 2, 2, 2, 2, 2,    | pacmandies
+0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0,    | pacmaneatsfood
+azcghjkkl;0, 0, 0, 0, 0, 2, 0, 6, 6, 6, 6, 6,    | pacmanmoves
+0, 0, 0, 0, 0, 1, 0, 2, 2, 2, 2, 2,    | pacmanmovesbottom
+0, 0, 0, 0, 0, 1, 0, 2, 2, 2, 2, 2,    | pacmanmovesleft
+0, 0, 0, 0, 0, 1, 0, 2, 2, 2, 2, 2,    | pacmanmovesright
+0, 0, 0, 0, 0, 1, 0, 2, 2, 2, 2, 2,    | pacmanmovesup
+------------------------------------------------------------------------------------
+
+//Filters shoud revised
+pacman = Graph(12, [(1,8),(1,8),(1,8),(1,8),(1,8),(1,7),(1,8),(1,8),(1,8),(1,8),(1,8),(1,8)], True, 
+["ghostmoves","ghostmovesbottom","ghostmovesleft","ghostmovesright","ghostmovesup","pacmandies",
+"pacmaneatsfood","pacmanmoves","pacmanmovesbottom","pacmanmovesleft","pacmanmovesright",
+"pacmanmovesup"], name='Pacman') 
+
+pacman.set_adjacency_matrix([
+	[0, 6, 6, 6, 6, 0, 0, 0, 0, 0, 0, 0],
+	[2, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0],
+	[2, 2, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0],
+	[2, 2, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0],
+	[2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 2, 0, 0, 6, 6, 6, 6],
+	[0, 0, 0, 0, 0, 1, 0, 2, 0, 2, 2, 2],
+	[0, 0, 0, 0, 0, 1, 0, 2, 2, 0, 2, 2],
+	[0, 0, 0, 0, 0, 1, 0, 2, 2, 2, 0, 2],
+	[0, 0, 0, 0, 0, 1, 0, 2, 2, 2, 2, 0]
+    ])
+
+------------------------------------------------------------------------------------
+Ordering result: 1<->6<->10-4<->9-2<->8-3<->11-0<->5-7
+
+Pacman
+Id      Vertex  			Order
+1       ghostmovesbottom        1
+6       pacmaneatsfood  		1
+10      pacmanmovesright        1
+4       ghostmovesup    		2
+9       pacmanmovesleft 		2
+2       ghostmovesleft  		3
+8       pacmanmovesbottom       3
+3       ghostmovesright 		4
+11      pacmanmovesup   		4
+0       ghostmoves      		5
+5       pacmandies      		5
+7       pacmanmoves     		6	    

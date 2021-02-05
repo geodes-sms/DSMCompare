@@ -1,0 +1,13 @@
+// Applied composite operation
+newOppositeReference(GenNavigator.childReferences, navigator, 0, 1, false)
+// Atomic changes realizing the composite operation above
+create(GenNavigatorChildReference.navigator)
+
+create(GenNavigatorPath)
+create(findConnectionPaths)
+create(GenNavigatorPathSegment)
+create(GenNavigatorPathSegment.path)
+create(GenNavigatorPath.segments)
+create(GenNavigatorPathSegment.from)
+create(GenNavigatorPathSegment.to)
+

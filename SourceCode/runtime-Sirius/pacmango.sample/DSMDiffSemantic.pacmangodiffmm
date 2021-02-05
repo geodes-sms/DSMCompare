@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PacmanGoDiffMM:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PacmanGoDiffMM="http://www.zadahmad.org/dsmcompare/PacmanGoDiffMM">
+  <gridnodes right="//@gridnodes.1" id=""/>
+  <gridnodes left="//@gridnodes.0" right="//@gridnodes.2"/>
+  <gridnodes left="//@gridnodes.1"/>
+  <scoreboard xsi:type="PacmanGoDiffMM:DiffScoreboard" value="1" id="3" operation="MODIFY" new_value="2" new_id="3"/>
+  <entities xsi:type="PacmanGoDiffMM:Pacman" id="">
+    <diffon eType="//@gridnodes.1"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:DiffFood" id="" operation="DELETE"/>
+  <entities xsi:type="PacmanGoDiffMM:Ghost" on="//@gridnodes.2"/>
+  <domainspecificdiffs name="PacmanEatsFood" DomainSpecificDiff_Food="//@entities.1" DomainSpecificDiff_Pacman="//@entities.0"/>
+  <domainspecificdiffs name="PacmanMovesRight" DomainSpecificDiff_Pacman="//@entities.0"/>
+</PacmanGoDiffMM:Game>

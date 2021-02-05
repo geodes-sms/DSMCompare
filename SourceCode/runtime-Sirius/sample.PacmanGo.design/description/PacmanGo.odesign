@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="PacmanGo" version="12.0.0.2017041100">
+  <ownedViewpoints name="PacmanGoVP" modelFileExtension="PacmanGo">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="PacmanGoDiagram" domainClass="PacmanGo::Game" enablePopupBars="true">
+      <metamodel href="http://www.zadahmad.org/dsmcompare/PacmanGo#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="PacmanNode" semanticCandidatesExpression="feature:entities" domainClass="PacmanGo::Pacman">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/PacmanIcon2.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="FoodNode" semanticCandidatesExpression="feature:entities" domainClass="PacmanGo::Food">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/FoodIcon2.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="GridNode" semanticCandidatesExpression="feature:gridnodes" domainClass="PacmanGo::GridNode">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" tooltipExpression="feature:id" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/gridenodeIcon2.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ScoreboardNode" semanticCandidatesExpression="feature:scoreboard" domainClass="PacmanGo::Scoreboard">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:value" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/scoreboardIcon2.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="GhostNode" semanticCandidatesExpression="feature:entities" domainClass="PacmanGo::Ghost">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:id" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/GhostIcon2.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="onEdge" label="ON" sourceMapping="//@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='FoodNode'] //@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='PacmanNode'] //@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='GhostNode']" targetMapping="//@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:on">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="upEdge" label="UP" sourceMapping="//@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:up">
+          <style lineStyle="dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="bottomEdge" label="BOTTOM" sourceMapping="//@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:bottom">
+          <style lineStyle="dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="leftEdge" label="LEFT" sourceMapping="//@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:left">
+          <style lineStyle="dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="rightEdge" label="RIGHT" sourceMapping="//@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:right">
+          <style lineStyle="dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="PacmanGoMMPallete">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="creatPacman" label="Pacmanan" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='PacmanNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGo::Pacman" referenceName="entities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Pacman_'+container.entities->filter(PacmanGo::Pacman)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createFood" label="Food" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='FoodNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGo::Food" referenceName="entities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Food_'+container.entities->filter(PacmanGo::Food)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createGridNode" label="GridNode" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='GridNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGo::GridNode" referenceName="gridnodes">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'GridNode_'+container.gridnodes->filter(PacmanGo::GridNode)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createScoreboard" label="Scoreboard" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='PacmanGoVP']/@ownedRepresentations[name='PacmanGoDiagram']/@defaultLayer/@nodeMappings[name='ScoreboardNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGo::Scoreboard" referenceName="scoreboard">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:container.entities->size()+container.gridnodes->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="value" valueExpression="0"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="sample.PacmanGo.design.Services"/>
+  </ownedViewpoints>
+  <ownedViewpoints name="PacmanGoDiffMMVP" modelFileExtension="pacmangodiffmm">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="PacmanGoDiffMMDiagram" domainClass="PacmanGoDiffMM::Game" enablePopupBars="true">
+      <metamodel href="http://www.zadahmad.org/dsmcompare/PacmanGoDiffMM#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="PacmanNode" label="Pacman" preconditionExpression="aql:self.oclIsTypeOf(PacmanGoDiffMM::Pacman)" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::Pacman">
+          <borderedNodeMappings name="DiffPositionableEntity_Pacman_onDelete" label="DiffPositionableEntity_Pacman_onDelete" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString() = 'DELETE'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_on_Delete2.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/PacmanIcon2.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="GridNode" preconditionExpression="aql:self.oclIsTypeOf(PacmanGoDiffMM::GridNode)" semanticCandidatesExpression="feature:gridnodes" domainClass="PacmanGoDiffMM::GridNode">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" labelExpression="feature:id" tooltipExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/gridenodeIcon2.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ScoreboardNode" label="Scoreboard" preconditionExpression="aql:self.oclIsTypeOf(PacmanGoDiffMM::Scoreboard)" semanticCandidatesExpression="feature:scoreboard" domainClass="PacmanGoDiffMM::Scoreboard">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" labelExpression="feature:value" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/scoreboardIcon2.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffFoodNodeDELETE" label="DiffFoodDELETE" preconditionExpression="aql:self.operation.toString().toUpper() = 'DELETE'" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::DiffFood">
+          <borderedNodeMappings name="DiffPositionableEntity_onDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString() = 'DELETE'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_on_Delete2.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+              <forbiddenSides>WEST</forbiddenSides>
+              <forbiddenSides>SOUTH</forbiddenSides>
+              <forbiddenSides>EAST</forbiddenSides>
+              <forbiddenSides>NORTH</forbiddenSides>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/diffFoodIcon.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="FoodNode" label="Food" preconditionExpression="aql:self.oclIsTypeOf(PacmanGoDiffMM::Food)" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::Food ">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/FoodIcon2.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DomainSpecificDiff_PACMANEATFOOD" label="DomainSpecificDiff_PACMANEATFOOD" preconditionExpression="aql:self.name.toUpper()= 'PACMANEATFOOD'" semanticCandidatesExpression="feature:domainspecificdiffs" domainClass="PacmanGoDiffMM::DomainSpecificDiff">
+          <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/dsdiffpacmaneatfood.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelFormat>italic</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffScoreboardNode" label="DiffScoreboard" preconditionExpression="aql:self.operation.toString().toUpper() = 'MODIFY'" semanticCandidatesExpression="feature:scoreboard" domainClass="PacmanGoDiffMM::DiffScoreboard">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:value" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/diffscoreboardIcon.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelFormat>italic</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DomainSpecificDiff_PACMANMOVEUP" label="DomainSpecificDiff_PACMANMOVEUP" preconditionExpression="aql:self.name.toUpper()= 'PACMANMOVESUP'" semanticCandidatesExpression="feature:domainspecificdiffs" domainClass="PacmanGoDiffMM::DomainSpecificDiff">
+          <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/dsdiffpacmanmovesup.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelFormat>italic</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffFoodNodeADD" label="DiffFoodADD" preconditionExpression="aql:self.operation.toString().toUpper() = 'ADD'" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::DiffFood">
+          <borderedNodeMappings name="DiffPositionableEntity_onNodeADD" label="DiffPositionableEntity_onADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString() = 'ADD'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_on_ADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+              <forbiddenSides>WEST</forbiddenSides>
+              <forbiddenSides>SOUTH</forbiddenSides>
+              <forbiddenSides>EAST</forbiddenSides>
+              <forbiddenSides>NORTH</forbiddenSides>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" labelExpression="feature:id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/diffFoodIcon.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="onEdge" label="ON" sourceMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='PacmanNode'] //@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='FoodNode']" targetMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:on">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <centerLabelStyleDescription labelExpression="ON">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="upEdge" label="UP" sourceMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:up">
+          <style lineStyle="dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelExpression="UP">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="bottomEdge" label="BOTTOM" sourceMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:bottom">
+          <style lineStyle="dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelExpression="BOTTOM">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="leftEdge" label="LEFT" sourceMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:left">
+          <style lineStyle="dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelExpression="LEFT">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="rightEdge" label="RIGHT" sourceMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:right">
+          <style lineStyle="dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelExpression="RIGHT">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="EdgeDsdPEatF_DiffFood" sourceMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='DomainSpecificDiff_PACMANEATFOOD']" targetMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='DiffFoodNodeDELETE']" targetFinderExpression="feature:DomainSpecificDiff_Food">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="EdgeDsdPEatF__Pacman" sourceMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='DomainSpecificDiff_PACMANEATFOOD'] //@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='DomainSpecificDiff_PACMANMOVEUP']" targetMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='PacmanNode']" targetFinderExpression="feature:DomainSpecificDiff_Pacman">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="EdgeeTypeDelete" label="eTypeDelete" sourceMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='DiffFoodNodeDELETE']/@borderedNodeMappings[name='DiffPositionableEntity_onDELETE'] //@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='PacmanNode']/@borderedNodeMappings[name='DiffPositionableEntity_Pacman_onDelete']" targetMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:eType">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <centerLabelStyleDescription labelExpression="feature:operation">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="EdgeeTypeADD" label="eTypeADD" targetMapping="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:eType">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            <centerLabelStyleDescription labelExpression="feature:operation">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="PacmanGoDiffMMPallete">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPacman" label="Pacman" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='PacmanNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::Pacman" referenceName="entities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Pacman_'+container.entities->filter(PacmanGoDiffMM::Pacman)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createGridNode" label="GridNode" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='GridNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::GridNode" referenceName="gridnodes">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'GridNode_'+container.gridnodes->filter(PacmanGoDiffMM::GridNode)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createScoreboard" label="Scoreboard" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='ScoreboardNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::Scoreboard" referenceName="scoreboard">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:container.entities->size()+container.gridnodes->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="value" valueExpression="0"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createDiffFood" label="DiffFood" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='DiffFoodNodeDELETE']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::DiffFood" referenceName="entities"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createDomainSpecificDiff" label="DomainSpecificDiff" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='DomainSpecificDiff_PACMANEATFOOD'] //@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='DomainSpecificDiff_PACMANMOVEUP']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::DomainSpecificDiff" referenceName="domainspecificdiffs"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createDiffScoreboard" label="DiffScoreboard" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='DiffScoreboardNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::DiffScoreboard" referenceName="scoreboard">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:container.entities->size()+container.gridnodes->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="value" valueExpression="0"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createDiffPositionableEntity_on" label="DiffPositionableEntity_on" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='DiffFoodNodeDELETE']/@borderedNodeMappings[name='DiffPositionableEntity_onDELETE'] //@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='PacmanNode']/@borderedNodeMappings[name='DiffPositionableEntity_Pacman_onDelete']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::DiffPositionableEntity_on" referenceName="diffon"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createFood" label="Food" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='PacmanGoDiffMMVP']/@ownedRepresentations[name='PacmanGoDiffMMDiagram']/@defaultLayer/@nodeMappings[name='PacmanNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::Food" referenceName="entities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="aql:'Pacman_'+container.entities->filter(PacmanGoDiffMM::Food)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

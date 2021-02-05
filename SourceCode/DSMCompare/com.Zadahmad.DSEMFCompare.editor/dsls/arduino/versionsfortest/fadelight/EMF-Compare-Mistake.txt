@@ -1,0 +1,13 @@
+DSDiff_4_5
+
+EMF-Compare makes mistake about a Delay:
+
+Although the only change is the modification of the value of the delay from 8 to 5
+It returns that the Delay is deleted with 5 value an again it Added with 8 value
+And then it results to another mistake: all object referring the deleted delay also will have a 
+diff-reference deleted associaiton
+Therefore instead of only one change we wil have two and more changes reported
+
+[CHANGE] value arduinoDiffMM.impl.DelayImpl@2f54a33d (unit: MilliSecond, value: 8) has been changed from reference next of object arduinoDiffMM.impl.LevelImpl@55740540
+[ADD] value arduinoDiffMM.impl.DelayImpl@2f54a33d (unit: MilliSecond, value: 8) has been added to reference instructions of object arduinoDiffMM.impl.WhileImpl@7c83dc97
+[DELETE] value arduinoDiffMM.impl.DelayImpl@1018bde2 (unit: MilliSecond, value: 5) has been deleted from reference instructions of object arduinoDiffMM.impl.WhileImpl@7c83dc97

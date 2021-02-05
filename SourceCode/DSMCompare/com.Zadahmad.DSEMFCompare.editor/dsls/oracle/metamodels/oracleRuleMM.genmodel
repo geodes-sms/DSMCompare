@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.Zadahmad.DSEMFCompare.editor/src" modelPluginID="com.Zadahmad.DSEMFCompare.editor"
+    modelName="OracleRuleMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>oracleRuleMM.ecore</foreignModel>
+  <genPackages prefix="OracleDiffMM" disposableProviderFactory="true" ecorePackage="oracleRuleMM.ecore#/0">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="oracleRuleMM.ecore#/0/ClassOp">
+      <genEnumLiterals ecoreEnumLiteral="oracleRuleMM.ecore#/0/ClassOp/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="oracleRuleMM.ecore#/0/ClassOp/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="oracleRuleMM.ecore#/0/ClassOp/MODIFY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="oracleRuleMM.ecore#/0/AscOp">
+      <genEnumLiterals ecoreEnumLiteral="oracleRuleMM.ecore#/0/AscOp/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="oracleRuleMM.ecore#/0/AscOp/DELETE"/>
+    </genEnums>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/A">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/A/ab"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/A/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/A/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/A/diffab"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/B">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/B/bd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/B/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/B/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/B/diffbd"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/C">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/C/x"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/D">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/D/dd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/D/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/D/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/D/diffdd"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/ROOT">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/ROOT/b"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/ROOT/a"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/ROOT/domainspecificdiffs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/ROOT/diffb"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/ROOT/diffa"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/ROOT/diffdomainspecificdiffs"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/DomainSpecificDiff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DomainSpecificDiff/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_A"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_B"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_C"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_D"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/DiffA">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffA/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffA/new_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffA/new_Name"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/DiffA_ab">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffA_ab/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/DiffA_ab/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/DiffB">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffB/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffB/new_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffB/new_Name"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/DiffB_bd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffB_bd/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/DiffB_bd/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/DiffC">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffC/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffC/new_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffC/new_Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffC/new_x"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/DiffD">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffD/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffD/new_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffD/new_Name"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/DiffD_dd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffD_dd/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/DiffD_dd/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/DiffROOT">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffROOT/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/DiffROOT_b">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffROOT_b/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/DiffROOT_b/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/DiffROOT_a">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffROOT_a/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/DiffROOT_a/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/0/DiffROOT_domainspecificdiffs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/0/DiffROOT_domainspecificdiffs/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/0/DiffROOT_domainspecificdiffs/eType"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="OracleRuleMM" disposableProviderFactory="true" ecorePackage="oracleRuleMM.ecore#/1">
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_A">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_A/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_A/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_B">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_B/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_B/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_C">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_C/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_C/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_D">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_D/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_D/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_ROOT">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_ROOT/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_ROOT/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_DomainSpecificDiff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DomainSpecificDiff/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DomainSpecificDiff/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_DiffA">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffA/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffA/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_DiffA_ab">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffA_ab/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffA_ab/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_DiffB">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffB/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffB/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_DiffB_bd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffB_bd/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffB_bd/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_DiffC">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffC/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffC/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_DiffD">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffD/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffD/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_DiffD_dd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffD_dd/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffD_dd/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_DiffROOT">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffROOT/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffROOT/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_DiffROOT_b">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffROOT_b/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffROOT_b/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_DiffROOT_a">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffROOT_a/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffROOT_a/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Pattern_DiffROOT_domainspecificdiffs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffROOT_domainspecificdiffs/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Pattern_DiffROOT_domainspecificdiffs/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleRuleMM.ecore#/1/Rule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Rule/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleRuleMM.ecore#/1/Rule/constraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleRuleMM.ecore#/1/Rule/pattern"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0">
+  <tool:SetValue featureName="on" valueExpression="var:target"/>
+  <tool:SetValue featureName="left" valueExpression="var:target"/>
+  <tool:SetValue featureName="left" valueExpression="var:target"/>
+  <tool:SetValue featureName="left" valueExpression="var:target"/>
+  <tool:SetValue featureName="left" valueExpression="var:target"/>
+  <description:NodeMapping name="DomainSpecificDiff" label="DomainSpecificDiff" semanticCandidatesExpression="feature:domainspecificdiffs" domainClass="PacmanGoDiffMM::DomainSpecificDiff">
+    <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="4" workspacePath="/sample.PacmanGo.design/icons/food.svg">
+      <borderColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+      <labelColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+    </style>
+  </description:NodeMapping>
+  <style:WorkspaceImageDescription labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/OclUndefined.svg">
+    <borderColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+    <labelColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+  </style:WorkspaceImageDescription>
+  <style:WorkspaceImageDescription labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/OclUndefined.svg">
+    <borderColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+    <labelColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+  </style:WorkspaceImageDescription>
+  <style:WorkspaceImageDescription labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/OclUndefined_ADD.svg">
+    <borderColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+    <labelColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+  </style:WorkspaceImageDescription>
+  <style:WorkspaceImageDescription labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/OclUndefined_DELETE.svg">
+    <borderColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+    <labelColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+  </style:WorkspaceImageDescription>
+  <style:WorkspaceImageDescription labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/OclUndefined_ADD.svg">
+    <borderColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+    <labelColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+  </style:WorkspaceImageDescription>
+  <style:WorkspaceImageDescription labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/OclUndefined_DELETE.svg">
+    <borderColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+    <labelColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+  </style:WorkspaceImageDescription>
+  <style:WorkspaceImageDescription labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/OclUndefined_ADD.svg">
+    <borderColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+    <labelColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+  </style:WorkspaceImageDescription>
+  <style:WorkspaceImageDescription labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/OclUndefined_DELETE.svg">
+    <borderColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+    <labelColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+  </style:WorkspaceImageDescription>
+  <description:EdgeMapping name="dsdEdgeScore" sourceMapping="/5" targetFinderExpression="feature:DomainSpecificDiff_Scoreboard">
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Score']"/>
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffScoreADD']"/>
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffScoreDELETE']"/>
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffScoreMODIFY']"/>
+    <style>
+      <strokeColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='gray']"/>
+      <centerLabelStyleDescription>
+        <labelColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+      </centerLabelStyleDescription>
+    </style>
+  </description:EdgeMapping>
+  <description:EdgeMapping name="dsdEdgeGridNode" sourceMapping="/5" targetFinderExpression="feature:DomainSpecificDiff_GridNode">
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']"/>
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']"/>
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']"/>
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']"/>
+    <style>
+      <strokeColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='gray']"/>
+      <centerLabelStyleDescription>
+        <labelColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+      </centerLabelStyleDescription>
+    </style>
+  </description:EdgeMapping>
+  <description:EdgeMapping name="dsdEdgePacman" sourceMapping="/5" targetFinderExpression="feature:DomainSpecificDiff_Pacman">
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Pacman']"/>
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffPacmanADD']"/>
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffPacmanDELETE']"/>
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffPacmanMODIFY']"/>
+    <style>
+      <strokeColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='gray']"/>
+      <centerLabelStyleDescription>
+        <labelColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+      </centerLabelStyleDescription>
+    </style>
+  </description:EdgeMapping>
+  <description:EdgeMapping name="dsdEdgeGhost" sourceMapping="/5" targetFinderExpression="feature:DomainSpecificDiff_Ghost">
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Ghost']"/>
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGhostADD']"/>
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGhostDELETE']"/>
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGhostMODIFY']"/>
+    <style>
+      <strokeColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='gray']"/>
+      <centerLabelStyleDescription>
+        <labelColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+      </centerLabelStyleDescription>
+    </style>
+  </description:EdgeMapping>
+  <description:EdgeMapping name="dsdEdgeFood" sourceMapping="/5" targetFinderExpression="feature:DomainSpecificDiff_Food">
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Food']"/>
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffFoodADD']"/>
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffFoodDELETE']"/>
+    <targetMapping xsi:type="description:NodeMapping" href="OSDeDiffMM.odesign#//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffFoodMODIFY']"/>
+    <style>
+      <strokeColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='gray']"/>
+      <centerLabelStyleDescription>
+        <labelColor xsi:type="description_1:SystemColor" href="environment:/viewpoint#/0/@systemColors/@entries[name='black']"/>
+      </centerLabelStyleDescription>
+    </style>
+  </description:EdgeMapping>
+</xmi:XMI>

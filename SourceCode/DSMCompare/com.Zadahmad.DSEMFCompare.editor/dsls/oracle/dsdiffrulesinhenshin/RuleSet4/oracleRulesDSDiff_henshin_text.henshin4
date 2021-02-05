@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_LtmsgMS6Eeqe8556Vhhcmw" name="HenshinDSL">
+  <imports href="../metamodels/oracleRuleMM.ecore#/0"/>
+  <units xsi:type="henshin:Rule" xmi:id="_LtmsgcS6Eeqe8556Vhhcmw" name="rule1">
+    <lhs xmi:id="_LtmsgsS6Eeqe8556Vhhcmw" name="rule1_LHS">
+      <nodes xmi:id="_Ltmsg8S6Eeqe8556Vhhcmw" name="n0" outgoing="_LtmsjMS6Eeqe8556Vhhcmw _LtmsjcS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT"/>
+      </nodes>
+      <nodes xmi:id="_LtmshMS6Eeqe8556Vhhcmw" name="n1" incoming="_LtmsjMS6Eeqe8556Vhhcmw" outgoing="_LtmsjsS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B"/>
+      </nodes>
+      <nodes xmi:id="_LtmshcS6Eeqe8556Vhhcmw" name="n2" incoming="_LtmsjcS6Eeqe8556Vhhcmw" outgoing="_Ltmsj8S6Eeqe8556Vhhcmw _LtmskMS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/C"/>
+      </nodes>
+      <nodes xmi:id="_LtmshsS6Eeqe8556Vhhcmw" name="n11" incoming="_LtmsjsS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffD"/>
+        <attributes xmi:id="_Ltmsh8S6Eeqe8556Vhhcmw" value="ADD">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffD/operation"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_LtmsiMS6Eeqe8556Vhhcmw" name="n21" incoming="_Ltmsj8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffD"/>
+        <attributes xmi:id="_LtmsicS6Eeqe8556Vhhcmw" value="DELETE">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffD/operation"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_LtmsisS6Eeqe8556Vhhcmw" name="n22" incoming="_LtmskMS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffB_bd"/>
+        <attributes xmi:id="_Ltmsi8S6Eeqe8556Vhhcmw" value="ADD">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffB_bd/operation"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_LtmsjMS6Eeqe8556Vhhcmw" source="_Ltmsg8S6Eeqe8556Vhhcmw" target="_LtmshMS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/b"/>
+      </edges>
+      <edges xmi:id="_LtmsjcS6Eeqe8556Vhhcmw" source="_Ltmsg8S6Eeqe8556Vhhcmw" target="_LtmshcS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/b"/>
+      </edges>
+      <edges xmi:id="_LtmsjsS6Eeqe8556Vhhcmw" source="_LtmshMS6Eeqe8556Vhhcmw" target="_LtmshsS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B/bd"/>
+      </edges>
+      <edges xmi:id="_Ltmsj8S6Eeqe8556Vhhcmw" source="_LtmshcS6Eeqe8556Vhhcmw" target="_LtmsiMS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B/bd"/>
+      </edges>
+      <edges xmi:id="_LtmskMS6Eeqe8556Vhhcmw" source="_LtmshcS6Eeqe8556Vhhcmw" target="_LtmsisS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B/diffbd"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_LtmskcS6Eeqe8556Vhhcmw" name="rule1_RHS">
+      <nodes xmi:id="_LtmsksS6Eeqe8556Vhhcmw" name="n0" outgoing="_Ltmsl8S6Eeqe8556Vhhcmw _LtmsmMS6Eeqe8556Vhhcmw _LtmsmcS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT"/>
+      </nodes>
+      <nodes xmi:id="_Ltmsk8S6Eeqe8556Vhhcmw" name="n1" incoming="_Ltmsl8S6Eeqe8556Vhhcmw _LtmsmsS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B"/>
+      </nodes>
+      <nodes xmi:id="_LtmslMS6Eeqe8556Vhhcmw" name="n2" incoming="_LtmsmMS6Eeqe8556Vhhcmw _Ltmsm8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/C"/>
+      </nodes>
+      <nodes xmi:id="_LtmslcS6Eeqe8556Vhhcmw" name="n3" incoming="_LtmsmcS6Eeqe8556Vhhcmw" outgoing="_LtmsmsS6Eeqe8556Vhhcmw _Ltmsm8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff"/>
+        <attributes xmi:id="_LtmslsS6Eeqe8556Vhhcmw" value="&quot;rule1&quot;">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_Ltmsl8S6Eeqe8556Vhhcmw" source="_LtmsksS6Eeqe8556Vhhcmw" target="_Ltmsk8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/b"/>
+      </edges>
+      <edges xmi:id="_LtmsmMS6Eeqe8556Vhhcmw" source="_LtmsksS6Eeqe8556Vhhcmw" target="_LtmslMS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/b"/>
+      </edges>
+      <edges xmi:id="_LtmsmcS6Eeqe8556Vhhcmw" source="_LtmsksS6Eeqe8556Vhhcmw" target="_LtmslcS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_LtmsmsS6Eeqe8556Vhhcmw" source="_LtmslcS6Eeqe8556Vhhcmw" target="_Ltmsk8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_B"/>
+      </edges>
+      <edges xmi:id="_Ltmsm8S6Eeqe8556Vhhcmw" source="_LtmslcS6Eeqe8556Vhhcmw" target="_LtmslMS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_C"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_LtmsnMS6Eeqe8556Vhhcmw" origin="_Ltmsg8S6Eeqe8556Vhhcmw" image="_LtmsksS6Eeqe8556Vhhcmw"/>
+    <mappings xmi:id="_LtmsncS6Eeqe8556Vhhcmw" origin="_LtmshMS6Eeqe8556Vhhcmw" image="_Ltmsk8S6Eeqe8556Vhhcmw"/>
+    <mappings xmi:id="_LtmsnsS6Eeqe8556Vhhcmw" origin="_LtmshcS6Eeqe8556Vhhcmw" image="_LtmslMS6Eeqe8556Vhhcmw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Ltmsn8S6Eeqe8556Vhhcmw" name="rule2">
+    <lhs xmi:id="_LtmsoMS6Eeqe8556Vhhcmw" name="rule2_LHS">
+      <nodes xmi:id="_LtmsocS6Eeqe8556Vhhcmw" name="n0" outgoing="_LtmsqMS6Eeqe8556Vhhcmw _LtmsqcS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT"/>
+      </nodes>
+      <nodes xmi:id="_LtmsosS6Eeqe8556Vhhcmw" name="n1" incoming="_LtmsqMS6Eeqe8556Vhhcmw" outgoing="_LtmsqsS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B"/>
+      </nodes>
+      <nodes xmi:id="_Ltmso8S6Eeqe8556Vhhcmw" name="n2" incoming="_LtmsqcS6Eeqe8556Vhhcmw" outgoing="_Ltmsq8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/C"/>
+      </nodes>
+      <nodes xmi:id="_LtmspMS6Eeqe8556Vhhcmw" name="n21" incoming="_Ltmsq8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffB_bd"/>
+        <attributes xmi:id="_LtmspcS6Eeqe8556Vhhcmw" value="ADD">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffB_bd/operation"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_LtmspsS6Eeqe8556Vhhcmw" name="n11" incoming="_LtmsqsS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffB_bd"/>
+        <attributes xmi:id="_Ltmsp8S6Eeqe8556Vhhcmw" value="DELETE">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffB_bd/operation"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_LtmsqMS6Eeqe8556Vhhcmw" source="_LtmsocS6Eeqe8556Vhhcmw" target="_LtmsosS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/b"/>
+      </edges>
+      <edges xmi:id="_LtmsqcS6Eeqe8556Vhhcmw" source="_LtmsocS6Eeqe8556Vhhcmw" target="_Ltmso8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/b"/>
+      </edges>
+      <edges xmi:id="_LtmsqsS6Eeqe8556Vhhcmw" source="_LtmsosS6Eeqe8556Vhhcmw" target="_LtmspsS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B/diffbd"/>
+      </edges>
+      <edges xmi:id="_Ltmsq8S6Eeqe8556Vhhcmw" source="_Ltmso8S6Eeqe8556Vhhcmw" target="_LtmspMS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B/diffbd"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_LtmsrMS6Eeqe8556Vhhcmw" name="rule2_RHS">
+      <nodes xmi:id="_LtmsrcS6Eeqe8556Vhhcmw" name="n0" outgoing="_LtmstMS6Eeqe8556Vhhcmw _LtmstcS6Eeqe8556Vhhcmw _LtmstsS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT"/>
+      </nodes>
+      <nodes xmi:id="_LtmsrsS6Eeqe8556Vhhcmw" name="n1" incoming="_LtmstMS6Eeqe8556Vhhcmw _LtmsuMS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B"/>
+      </nodes>
+      <nodes xmi:id="_Ltmsr8S6Eeqe8556Vhhcmw" name="n2" incoming="_LtmstcS6Eeqe8556Vhhcmw _LtmsucS6Eeqe8556Vhhcmw" outgoing="_Ltmst8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/C"/>
+      </nodes>
+      <nodes xmi:id="_LtmssMS6Eeqe8556Vhhcmw" name="n21" incoming="_Ltmst8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffB_bd"/>
+        <attributes xmi:id="_LtmsscS6Eeqe8556Vhhcmw" value="ADD">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffB_bd/operation"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_LtmsssS6Eeqe8556Vhhcmw" name="n3" incoming="_LtmstsS6Eeqe8556Vhhcmw" outgoing="_LtmsuMS6Eeqe8556Vhhcmw _LtmsucS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff"/>
+        <attributes xmi:id="_Ltmss8S6Eeqe8556Vhhcmw" value="&quot;rule2&quot;">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_LtmstMS6Eeqe8556Vhhcmw" source="_LtmsrcS6Eeqe8556Vhhcmw" target="_LtmsrsS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/b"/>
+      </edges>
+      <edges xmi:id="_LtmstcS6Eeqe8556Vhhcmw" source="_LtmsrcS6Eeqe8556Vhhcmw" target="_Ltmsr8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/b"/>
+      </edges>
+      <edges xmi:id="_LtmstsS6Eeqe8556Vhhcmw" source="_LtmsrcS6Eeqe8556Vhhcmw" target="_LtmsssS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_Ltmst8S6Eeqe8556Vhhcmw" source="_Ltmsr8S6Eeqe8556Vhhcmw" target="_LtmssMS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B/diffbd"/>
+      </edges>
+      <edges xmi:id="_LtmsuMS6Eeqe8556Vhhcmw" source="_LtmsssS6Eeqe8556Vhhcmw" target="_LtmsrsS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_B"/>
+      </edges>
+      <edges xmi:id="_LtmsucS6Eeqe8556Vhhcmw" source="_LtmsssS6Eeqe8556Vhhcmw" target="_Ltmsr8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_C"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_LtmsusS6Eeqe8556Vhhcmw" origin="_LtmsocS6Eeqe8556Vhhcmw" image="_LtmsrcS6Eeqe8556Vhhcmw"/>
+    <mappings xmi:id="_Ltmsu8S6Eeqe8556Vhhcmw" origin="_LtmsosS6Eeqe8556Vhhcmw" image="_LtmsrsS6Eeqe8556Vhhcmw"/>
+    <mappings xmi:id="_LtmsvMS6Eeqe8556Vhhcmw" origin="_Ltmso8S6Eeqe8556Vhhcmw" image="_Ltmsr8S6Eeqe8556Vhhcmw"/>
+    <mappings xmi:id="_LtmsvcS6Eeqe8556Vhhcmw" origin="_LtmspMS6Eeqe8556Vhhcmw" image="_LtmssMS6Eeqe8556Vhhcmw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_LtmsvsS6Eeqe8556Vhhcmw" name="rule3">
+    <parameters xmi:id="_Ltmsv8S6Eeqe8556Vhhcmw" name="n1Name" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_LtmswMS6Eeqe8556Vhhcmw" name="n2Name" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_LtmswcS6Eeqe8556Vhhcmw" name="rule3_LHS">
+      <nodes xmi:id="_LtmswsS6Eeqe8556Vhhcmw" name="n0" outgoing="_LtmszsS6Eeqe8556Vhhcmw _Ltmsz8S6Eeqe8556Vhhcmw _Ltms0MS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT"/>
+      </nodes>
+      <nodes xmi:id="_Ltmsw8S6Eeqe8556Vhhcmw" name="n1" incoming="_Ltmsz8S6Eeqe8556Vhhcmw" outgoing="_Ltms0cS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffA"/>
+        <attributes xmi:id="_LtmsxMS6Eeqe8556Vhhcmw" value="ADD">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffA/operation"/>
+        </attributes>
+        <attributes xmi:id="_LtmsxcS6Eeqe8556Vhhcmw" value="n1Name">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/A/Name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_LtmsxsS6Eeqe8556Vhhcmw" name="n11" incoming="_Ltms0cS6Eeqe8556Vhhcmw" outgoing="_Ltms0sS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffA_ab"/>
+        <attributes xmi:id="_Ltmsx8S6Eeqe8556Vhhcmw" value="DELETE">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffA_ab/operation"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_LtmsyMS6Eeqe8556Vhhcmw" name="n2" incoming="_Ltms0MS6Eeqe8556Vhhcmw" outgoing="_Ltms08S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/A"/>
+        <attributes xmi:id="_LtmsycS6Eeqe8556Vhhcmw" value="n2Name">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/A/Name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_LtmsysS6Eeqe8556Vhhcmw" name="n21" incoming="_Ltms08S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffA_ab"/>
+        <attributes xmi:id="_Ltmsy8S6Eeqe8556Vhhcmw" value="DELETE">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffA_ab/operation"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_LtmszMS6Eeqe8556Vhhcmw" name="n4" incoming="_LtmszsS6Eeqe8556Vhhcmw _Ltms0sS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffC"/>
+        <attributes xmi:id="_LtmszcS6Eeqe8556Vhhcmw" value="ADD">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffC/operation"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_LtmszsS6Eeqe8556Vhhcmw" source="_LtmswsS6Eeqe8556Vhhcmw" target="_LtmszMS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/b"/>
+      </edges>
+      <edges xmi:id="_Ltmsz8S6Eeqe8556Vhhcmw" source="_LtmswsS6Eeqe8556Vhhcmw" target="_Ltmsw8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/a"/>
+      </edges>
+      <edges xmi:id="_Ltms0MS6Eeqe8556Vhhcmw" source="_LtmswsS6Eeqe8556Vhhcmw" target="_LtmsyMS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/a"/>
+      </edges>
+      <edges xmi:id="_Ltms0cS6Eeqe8556Vhhcmw" source="_Ltmsw8S6Eeqe8556Vhhcmw" target="_LtmsxsS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/A/diffab"/>
+      </edges>
+      <edges xmi:id="_Ltms0sS6Eeqe8556Vhhcmw" source="_LtmsxsS6Eeqe8556Vhhcmw" target="_LtmszMS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffA_ab/eType"/>
+      </edges>
+      <edges xmi:id="_Ltms08S6Eeqe8556Vhhcmw" source="_LtmsyMS6Eeqe8556Vhhcmw" target="_LtmsysS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/A/diffab"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Ltms1MS6Eeqe8556Vhhcmw" name="rule3_RHS">
+      <nodes xmi:id="_Ltms1cS6Eeqe8556Vhhcmw" name="n0" outgoing="_Ltms4cS6Eeqe8556Vhhcmw _Ltms4sS6Eeqe8556Vhhcmw _Ltms48S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT"/>
+      </nodes>
+      <nodes xmi:id="_Ltms1sS6Eeqe8556Vhhcmw" name="n1" incoming="_Ltms4cS6Eeqe8556Vhhcmw _Ltms5sS6Eeqe8556Vhhcmw" outgoing="_Ltms5MS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffA"/>
+        <attributes xmi:id="_Ltms18S6Eeqe8556Vhhcmw" value="ADD">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffA/operation"/>
+        </attributes>
+        <attributes xmi:id="_Ltms2MS6Eeqe8556Vhhcmw" value="n1Name">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/A/Name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Ltms2cS6Eeqe8556Vhhcmw" name="n11" incoming="_Ltms5MS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffA_ab"/>
+        <attributes xmi:id="_Ltms2sS6Eeqe8556Vhhcmw" value="DELETE">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffA_ab/operation"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Ltms28S6Eeqe8556Vhhcmw" name="n2" incoming="_Ltms4sS6Eeqe8556Vhhcmw _Ltms58S6Eeqe8556Vhhcmw" outgoing="_Ltms5cS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/A"/>
+        <attributes xmi:id="_Ltms3MS6Eeqe8556Vhhcmw" value="n2Name">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/A/Name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Ltms3cS6Eeqe8556Vhhcmw" name="n21" incoming="_Ltms5cS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffA_ab"/>
+        <attributes xmi:id="_Ltms3sS6Eeqe8556Vhhcmw" value="DELETE">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffA_ab/operation"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Ltms38S6Eeqe8556Vhhcmw" name="n3" incoming="_Ltms48S6Eeqe8556Vhhcmw" outgoing="_Ltms5sS6Eeqe8556Vhhcmw _Ltms58S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff"/>
+        <attributes xmi:id="_Ltms4MS6Eeqe8556Vhhcmw" value="&quot;rule3&quot;">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_Ltms4cS6Eeqe8556Vhhcmw" source="_Ltms1cS6Eeqe8556Vhhcmw" target="_Ltms1sS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/a"/>
+      </edges>
+      <edges xmi:id="_Ltms4sS6Eeqe8556Vhhcmw" source="_Ltms1cS6Eeqe8556Vhhcmw" target="_Ltms28S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/a"/>
+      </edges>
+      <edges xmi:id="_Ltms48S6Eeqe8556Vhhcmw" source="_Ltms1cS6Eeqe8556Vhhcmw" target="_Ltms38S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_Ltms5MS6Eeqe8556Vhhcmw" source="_Ltms1sS6Eeqe8556Vhhcmw" target="_Ltms2cS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/A/diffab"/>
+      </edges>
+      <edges xmi:id="_Ltms5cS6Eeqe8556Vhhcmw" source="_Ltms28S6Eeqe8556Vhhcmw" target="_Ltms3cS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/A/diffab"/>
+      </edges>
+      <edges xmi:id="_Ltms5sS6Eeqe8556Vhhcmw" source="_Ltms38S6Eeqe8556Vhhcmw" target="_Ltms1sS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_A"/>
+      </edges>
+      <edges xmi:id="_Ltms58S6Eeqe8556Vhhcmw" source="_Ltms38S6Eeqe8556Vhhcmw" target="_Ltms28S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_A"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_Ltms6MS6Eeqe8556Vhhcmw" conditionText="n1Name==n2Name"/>
+    <mappings xmi:id="_Ltms6cS6Eeqe8556Vhhcmw" origin="_LtmswsS6Eeqe8556Vhhcmw" image="_Ltms1cS6Eeqe8556Vhhcmw"/>
+    <mappings xmi:id="_Ltms6sS6Eeqe8556Vhhcmw" origin="_Ltmsw8S6Eeqe8556Vhhcmw" image="_Ltms1sS6Eeqe8556Vhhcmw"/>
+    <mappings xmi:id="_Ltms68S6Eeqe8556Vhhcmw" origin="_LtmsxsS6Eeqe8556Vhhcmw" image="_Ltms2cS6Eeqe8556Vhhcmw"/>
+    <mappings xmi:id="_Ltms7MS6Eeqe8556Vhhcmw" origin="_LtmsyMS6Eeqe8556Vhhcmw" image="_Ltms28S6Eeqe8556Vhhcmw"/>
+    <mappings xmi:id="_Ltms7cS6Eeqe8556Vhhcmw" origin="_LtmsysS6Eeqe8556Vhhcmw" image="_Ltms3cS6Eeqe8556Vhhcmw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Ltms7sS6Eeqe8556Vhhcmw" name="rule4">
+    <lhs xmi:id="_Ltms78S6Eeqe8556Vhhcmw" name="rule4_LHS">
+      <nodes xmi:id="_Ltms8MS6Eeqe8556Vhhcmw" name="n0" outgoing="_Ltms-8S6Eeqe8556Vhhcmw _Ltms_MS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT"/>
+      </nodes>
+      <nodes xmi:id="_Ltms8cS6Eeqe8556Vhhcmw" name="n1" incoming="_Ltms-8S6Eeqe8556Vhhcmw" outgoing="_Ltms_cS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B"/>
+      </nodes>
+      <nodes xmi:id="_Ltms8sS6Eeqe8556Vhhcmw" name="n11" incoming="_Ltms_cS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffD"/>
+        <attributes xmi:id="_Ltms88S6Eeqe8556Vhhcmw" value="ADD">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffD/operation"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Ltms9MS6Eeqe8556Vhhcmw" name="n2" incoming="_Ltms_MS6Eeqe8556Vhhcmw" outgoing="_Ltms_sS6Eeqe8556Vhhcmw _Ltms_8S6Eeqe8556Vhhcmw _LtmtAMS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/C"/>
+      </nodes>
+      <nodes xmi:id="_Ltms9cS6Eeqe8556Vhhcmw" name="n23" incoming="_LtmtAMS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffB_bd"/>
+        <attributes xmi:id="_Ltms9sS6Eeqe8556Vhhcmw" value="ADD">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffB_bd/operation"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Ltms98S6Eeqe8556Vhhcmw" name="n21" incoming="_Ltms_sS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffD"/>
+        <attributes xmi:id="_Ltms-MS6Eeqe8556Vhhcmw" value="ADD">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffD/operation"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Ltms-cS6Eeqe8556Vhhcmw" name="n22" incoming="_Ltms_8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffD"/>
+        <attributes xmi:id="_Ltms-sS6Eeqe8556Vhhcmw" value="DELETE">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffD/operation"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_Ltms-8S6Eeqe8556Vhhcmw" source="_Ltms8MS6Eeqe8556Vhhcmw" target="_Ltms8cS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/b"/>
+      </edges>
+      <edges xmi:id="_Ltms_MS6Eeqe8556Vhhcmw" source="_Ltms8MS6Eeqe8556Vhhcmw" target="_Ltms9MS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/b"/>
+      </edges>
+      <edges xmi:id="_Ltms_cS6Eeqe8556Vhhcmw" source="_Ltms8cS6Eeqe8556Vhhcmw" target="_Ltms8sS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B/bd"/>
+      </edges>
+      <edges xmi:id="_Ltms_sS6Eeqe8556Vhhcmw" source="_Ltms9MS6Eeqe8556Vhhcmw" target="_Ltms98S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B/bd"/>
+      </edges>
+      <edges xmi:id="_Ltms_8S6Eeqe8556Vhhcmw" source="_Ltms9MS6Eeqe8556Vhhcmw" target="_Ltms-cS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B/bd"/>
+      </edges>
+      <edges xmi:id="_LtmtAMS6Eeqe8556Vhhcmw" source="_Ltms9MS6Eeqe8556Vhhcmw" target="_Ltms9cS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B/diffbd"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_LtmtAcS6Eeqe8556Vhhcmw" name="rule4_RHS">
+      <nodes xmi:id="_LtmtAsS6Eeqe8556Vhhcmw" name="n0" outgoing="_LtmtC8S6Eeqe8556Vhhcmw _LtmtDMS6Eeqe8556Vhhcmw _LtmtDcS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT"/>
+      </nodes>
+      <nodes xmi:id="_LtmtA8S6Eeqe8556Vhhcmw" name="n1" incoming="_LtmtC8S6Eeqe8556Vhhcmw _LtmtEMS6Eeqe8556Vhhcmw" outgoing="_LtmtDsS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B"/>
+      </nodes>
+      <nodes xmi:id="_LtmtBMS6Eeqe8556Vhhcmw" name="n11" incoming="_LtmtDsS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffD"/>
+        <attributes xmi:id="_LtmtBcS6Eeqe8556Vhhcmw" value="ADD">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffD/operation"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_LtmtBsS6Eeqe8556Vhhcmw" name="n2" incoming="_LtmtDMS6Eeqe8556Vhhcmw _LtmtEcS6Eeqe8556Vhhcmw" outgoing="_LtmtD8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/C"/>
+      </nodes>
+      <nodes xmi:id="_LtmtB8S6Eeqe8556Vhhcmw" name="n23" incoming="_LtmtD8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DiffB_bd"/>
+        <attributes xmi:id="_LtmtCMS6Eeqe8556Vhhcmw" value="ADD">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DiffB_bd/operation"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_LtmtCcS6Eeqe8556Vhhcmw" name="n3" incoming="_LtmtDcS6Eeqe8556Vhhcmw" outgoing="_LtmtEMS6Eeqe8556Vhhcmw _LtmtEcS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff"/>
+        <attributes xmi:id="_LtmtCsS6Eeqe8556Vhhcmw" value="&quot;rule4&quot;">
+          <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_LtmtC8S6Eeqe8556Vhhcmw" source="_LtmtAsS6Eeqe8556Vhhcmw" target="_LtmtA8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/b"/>
+      </edges>
+      <edges xmi:id="_LtmtDMS6Eeqe8556Vhhcmw" source="_LtmtAsS6Eeqe8556Vhhcmw" target="_LtmtBsS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/b"/>
+      </edges>
+      <edges xmi:id="_LtmtDcS6Eeqe8556Vhhcmw" source="_LtmtAsS6Eeqe8556Vhhcmw" target="_LtmtCcS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/ROOT/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_LtmtDsS6Eeqe8556Vhhcmw" source="_LtmtA8S6Eeqe8556Vhhcmw" target="_LtmtBMS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B/bd"/>
+      </edges>
+      <edges xmi:id="_LtmtD8S6Eeqe8556Vhhcmw" source="_LtmtBsS6Eeqe8556Vhhcmw" target="_LtmtB8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/B/diffbd"/>
+      </edges>
+      <edges xmi:id="_LtmtEMS6Eeqe8556Vhhcmw" source="_LtmtCcS6Eeqe8556Vhhcmw" target="_LtmtA8S6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_B"/>
+      </edges>
+      <edges xmi:id="_LtmtEcS6Eeqe8556Vhhcmw" source="_LtmtCcS6Eeqe8556Vhhcmw" target="_LtmtBsS6Eeqe8556Vhhcmw">
+        <type href="../metamodels/oracleRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_C"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_LtmtEsS6Eeqe8556Vhhcmw" origin="_Ltms8MS6Eeqe8556Vhhcmw" image="_LtmtAsS6Eeqe8556Vhhcmw"/>
+    <mappings xmi:id="_LtmtE8S6Eeqe8556Vhhcmw" origin="_Ltms8cS6Eeqe8556Vhhcmw" image="_LtmtA8S6Eeqe8556Vhhcmw"/>
+    <mappings xmi:id="_LtmtFMS6Eeqe8556Vhhcmw" origin="_Ltms8sS6Eeqe8556Vhhcmw" image="_LtmtBMS6Eeqe8556Vhhcmw"/>
+    <mappings xmi:id="_LtmtFcS6Eeqe8556Vhhcmw" origin="_Ltms9MS6Eeqe8556Vhhcmw" image="_LtmtBsS6Eeqe8556Vhhcmw"/>
+    <mappings xmi:id="_LtmtFsS6Eeqe8556Vhhcmw" origin="_Ltms9cS6Eeqe8556Vhhcmw" image="_LtmtB8S6Eeqe8556Vhhcmw"/>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_LtmtF8S6Eeqe8556Vhhcmw" name="unitSequntialStar" subUnits="_LtmtGMS6Eeqe8556Vhhcmw _LtmtGcS6Eeqe8556Vhhcmw _LtmtGsS6Eeqe8556Vhhcmw _LtmtG8S6Eeqe8556Vhhcmw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_LtmtGMS6Eeqe8556Vhhcmw" name="unitSequntialStarSequence0_0_782" subUnit="_LtmsgcS6Eeqe8556Vhhcmw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_LtmtGcS6Eeqe8556Vhhcmw" name="unitSequntialStarSequence0_1_782" subUnit="_Ltmsn8S6Eeqe8556Vhhcmw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_LtmtGsS6Eeqe8556Vhhcmw" name="unitSequntialStarSequence0_2_782" subUnit="_LtmsvsS6Eeqe8556Vhhcmw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_LtmtG8S6Eeqe8556Vhhcmw" name="unitSequntialStarSequence0_3_782" subUnit="_Ltms7sS6Eeqe8556Vhhcmw"/>
+</henshin:Module>

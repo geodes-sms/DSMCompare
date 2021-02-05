@@ -1,0 +1,52 @@
+-- @nsURI MMe=http://www.eclipse.org/pemf/2002/Ecore
+-- @path MMm=/ecoreTm/ecorem.ecore
+
+module eTm;
+create OUT : MMm from IN : MMe;
+
+rule pTp{
+	from 	pe: MMe!EPackage
+	to		pm:	MMm!EPackage(
+				name <- pe.name,
+				eClassifiers <- pe.eClassifiers
+		)
+}
+
+rule cTc{
+	from 	pe: MMe!EClass
+	to		pm:	MMm!EClass(
+				name <- pe.name,
+				abstract <- pe.abstract,
+				interface <- pe.interface,
+				eAttributes <- pe.eAllAttributes,
+				eOperations <- pe.eAllOperations,
+				eReferences <- pe.eReferences,
+				eSuperTypes <- pe.eSuperTypes
+		)
+}
+
+rule aTa{
+	from 	pe: MMe!EAttribute
+	to		pm:	MMm!EAttribute(
+				name <- pe.name,
+				eType <- pe.eType.name
+		)
+}
+
+rule oTo{
+	from 	pe: MMe!EOperation
+	to		pm:	MMm!EOperation(
+				name <- pe.name,
+				eType <- pe.eType.name
+		)
+}
+
+rule rTr{
+	from 	pe: MMe!EReference
+	to		pm:	MMm!EReference(
+				name <- pe.name,
+				eType <- pe.eType,
+				eReferenceType <- pe.eReferenceType
+		)
+}
+

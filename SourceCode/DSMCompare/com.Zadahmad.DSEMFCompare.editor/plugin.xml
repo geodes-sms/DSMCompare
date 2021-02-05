@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated exploitation -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="exploitation.presentation.ExploitationModelWizardID"
+            name="%_UI_ExploitationModelWizard_label"
+            class="exploitation.presentation.ExploitationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ExploitationModelFile.gif">
+         <description>%_UI_ExploitationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated exploitation -->
+      <editor
+            id="exploitation.presentation.ExploitationEditorID"
+            name="%_UI_ExploitationEditor_label"
+            icon="icons/full/obj16/ExploitationModelFile.gif"
+            extensions="exploitation"
+            class="exploitation.presentation.ExploitationEditor"
+            contributorClass="exploitation.presentation.ExploitationActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated exploitation -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="activitiesDSL.presentation.ActivitiesDSLModelWizardID"
+            name="%_UI_ActivitiesDSLModelWizard_label"
+            class="activitiesDSL.presentation.ActivitiesDSLModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ActivitiesDSLModelFile.gif">
+         <description>%_UI_ActivitiesDSLModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated exploitation -->
+      <editor
+            id="activitiesDSL.presentation.ActivitiesDSLEditorID"
+            name="%_UI_ActivitiesDSLEditor_label"
+            icon="icons/full/obj16/ActivitiesDSLModelFile.gif"
+            extensions="activitiesdsl"
+            class="activitiesDSL.presentation.ActivitiesDSLEditor"
+            contributorClass="activitiesDSL.presentation.ActivitiesDSLActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated PacManGo -->
+      <package
+            uri="http://www.zadahmad.org/dsmcompare/PacmanGo"
+            class="PacmanGo.PacmanGoPackage"
+            genModel="dsls/pacman/metamodels/PacManGo.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated PacManGoDiffMM -->
+      <package
+            uri="http://www.zadahmad.org/dsmcompare/PacmanGoDiffMM"
+            class="PacmanGoDiffMM.PacmanGoDiffMMPackage"
+            genModel="dsls/pacman/metamodels/PacManGoDiffMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated PacManGoRuleMM -->
+      <package
+            uri="http://www.zadahmad.org/dsmcompare/PacmanGoRuleMM"
+            class="PacmanGoRuleMM.PacmanGoRuleMMPackage"
+            genModel="dsls/pacman/metamodels/PacManGoRuleMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated arduino -->
+      <package
+            uri="http://www.obeo.fr/arduino"
+            class="arduino.ArduinoPackage"
+            genModel="dsls/arduino/metamodels/arduino.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated arduinoDiffMM -->
+      <package
+            uri="http://www.obeo.fr/arduinoDiffMM"
+            class="arduinoDiffMM.ArduinoDiffMMPackage"
+            genModel="dsls/arduino/metamodels/arduinoDiffMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated arduinoRuleMM -->
+      <package
+            uri="http://www.obeo.fr/arduinoRuleMM"
+            class="arduinoRuleMM.ArduinoRuleMMPackage"
+            genModel="dsls/arduino/metamodels/arduinoRuleMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated zecore -->
+      <package
+            uri="www.geodes.UdeM.edu/zecore"
+            class="zecore.ZecorePackage"
+            genModel="dsls/ecoreRefactoring/metamodels/zecore.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated zecoreDiffMM -->
+      <package
+            uri="www.geodes.UdeM.edu/zecoreDiffMM"
+            class="zecoreDiffMM.ZecoreDiffMMPackage"
+            genModel="dsls/ecoreRefactoring/metamodels/zecoreDiffMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated zecoreRuleMM -->
+      <package
+            uri="www.geodes.UdeM.edu/zecoreRuleMM"
+            class="zecoreRuleMM.ZecoreRuleMMPackage"
+            genModel="dsls/ecoreRefactoring/metamodels/zecoreRuleMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ze -->
+      <package
+            uri="www.geodes.UdeM.edu/ze"
+            class="ze.ZePackage"
+            genModel="dsls/ecoreRefactoring/metamodels/ze.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated zeDiffMM -->
+      <package
+            uri="www.geodes.UdeM.edu/zeDiffMM"
+            class="zeDiffMM.ZeDiffMMPackage"
+            genModel="dsls/ecoreRefactoring/metamodels/zeDiffMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated zeRuleMM -->
+      <package
+            uri="www.geodes.UdeM.edu/zeRuleMM"
+            class="zeRuleMM.ZeRuleMMPackage"
+            genModel="dsls/ecoreRefactoring/metamodels/zeRuleMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated refactoring -->
+      <package
+            uri="www.geodes.UdeM.edu/refactoring"
+            class="refactoring.RefactoringPackage"
+            genModel="dsls/ecoreRefactoring/metamodels/refactoring.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated refactoringDiffMM -->
+      <package
+            uri="www.geodes.UdeM.edu/refactoringDiffMM"
+            class="refactoringDiffMM.RefactoringDiffMMPackage"
+            genModel="dsls/ecoreRefactoring/metamodels/refactoringDiffMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated refactoringRuleMM -->
+      <package
+            uri="www.geodes.UdeM.edu/refactoringRuleMM"
+            class="refactoringRuleMM.RefactoringRuleMMPackage"
+            genModel="dsls/ecoreRefactoring/metamodels/refactoringRuleMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated oracleDiffMM -->
+      <package
+            uri="www.geodes.UdeM.edu/oracleDiffMM"
+            class="oracleDiffMM.OracleDiffMMPackage"
+            genModel="dsls/oracle/metamodels/oracleDiffMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated oracleRuleMM -->
+      <package
+            uri="www.geodes.UdeM.edu/oracleRuleMM"
+            class="oracleRuleMM.OracleRuleMMPackage"
+            genModel="dsls/oracle/metamodels/oracleRuleMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated oracle -->
+      <package
+            uri="www.geodes.UdeM.edu/oracle"
+            class="oracle.OraclePackage"
+            genModel="dsls/oracle/metamodels/oracle.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ecoreDiffMM -->
+      <package
+            uri="http://www.eclipse.org/emf/2002/EcoreDiffMM"
+            class="ecoreDiffMM.EcoreDiffMMPackage"
+            genModel="dsls/GMFgraph/metamodels/ecoreDiffMM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ecoreRuleMM -->
+      <package
+            uri="http://www.eclipse.org/emf/2002/EcoreRuleMM"
+            class="ecoreRuleMM.EcoreRuleMMPackage"
+            genModel="dsls/GMFgraph/metamodels/ecoreRuleMM.genmodel"/>
+   </extension>
+
+</plugin>

@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="groupPacmanGoDiffMM" version="12.0.0.2017041100">
+  <ownedViewpoints name="vpPacmanGoDiffMM" modelFileExtension="pacmangodiffmm">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="diagramPacmanGoDiffMM" label="diagramPacmanGoDiffMM" initialisation="true" domainClass="PacmanGoDiffMM::Game">
+      <metamodel href="http://www.zadahmad.org/dsmcompare/PacmanGoDiffMM#/"/>
+      <defaultLayer name="defaultlayer" label="defaultLayer">
+        <nodeMappings name="Score" preconditionExpression="aql:self.oclIsTypeOf(PacmanGoDiffMM::Scoreboard)" semanticCandidatesExpression="feature:scoreboard" domainClass="PacmanGoDiffMM::Scoreboard">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql: self.value" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/rectangle.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="GridNode" preconditionExpression="aql:self.oclIsTypeOf(PacmanGoDiffMM::GridNode)" semanticCandidatesExpression="feature:gridnodes" domainClass="PacmanGoDiffMM::GridNode">
+          <borderedNodeMappings name="DiffGridNode_upADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_up).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffup" domainClass="PacmanGoDiffMM::DiffGridNode_up"/>
+          <borderedNodeMappings name="DiffGridNode_bottomADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_bottom).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffbottom" domainClass="PacmanGoDiffMM::DiffGridNode_bottom"/>
+          <borderedNodeMappings name="DiffGridNode_leftADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_left).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffleft" domainClass="PacmanGoDiffMM::DiffGridNode_left"/>
+          <borderedNodeMappings name="DiffGridNode_rightADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_right).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffright" domainClass="PacmanGoDiffMM::DiffGridNode_right">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffGridNode_rightADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffGridNode_upDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_up).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffup" domainClass="PacmanGoDiffMM::DiffGridNode_up"/>
+          <borderedNodeMappings name="DiffGridNode_bottomDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_bottom).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffbottom" domainClass="PacmanGoDiffMM::DiffGridNode_bottom"/>
+          <borderedNodeMappings name="DiffGridNode_leftDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_left).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffleft" domainClass="PacmanGoDiffMM::DiffGridNode_left"/>
+          <borderedNodeMappings name="DiffGridNode_rightDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_right).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffright" domainClass="PacmanGoDiffMM::DiffGridNode_right">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffGridNode_rightDELETE.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/square.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Pacman" preconditionExpression="aql:self.oclIsTypeOf(PacmanGoDiffMM::Pacman)" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::Pacman">
+          <borderedNodeMappings name="DiffPositionableEntity_onADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/ADD.PNG">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffPositionableEntity_onDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/DELETE.PNG">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:id" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/pacman.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Ghost" preconditionExpression="aql:self.oclIsTypeOf(PacmanGoDiffMM::Ghost)" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::Ghost">
+          <borderedNodeMappings name="DiffPositionableEntity_onADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffPositionableEntity_onDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onDELETE.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/ghost.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Food" preconditionExpression="aql:self.oclIsTypeOf(PacmanGoDiffMM::Food)" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::Food">
+          <borderedNodeMappings name="DiffPositionableEntity_onADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffPositionableEntity_onDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onDELETE.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/Food.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffScoreADD" preconditionExpression="aql:self.operation.toString().toUpper() = 'ADD'" semanticCandidatesExpression="feature:scoreboard" domainClass="PacmanGoDiffMM::DiffScoreboard">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:'Score : ' + self.value" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/scoreboard.png_ADD.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffGridNodeADD" preconditionExpression="aql:self.operation.toString().toUpper() = 'ADD'" semanticCandidatesExpression="feature:gridnodes" domainClass="PacmanGoDiffMM::DiffGridNode">
+          <borderedNodeMappings name="DiffGridNode_upADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_up).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffup" domainClass="PacmanGoDiffMM::DiffGridNode_up"/>
+          <borderedNodeMappings name="DiffGridNode_bottomADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_bottom).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffbottom" domainClass="PacmanGoDiffMM::DiffGridNode_bottom"/>
+          <borderedNodeMappings name="DiffGridNode_leftADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_left).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffleft" domainClass="PacmanGoDiffMM::DiffGridNode_left"/>
+          <borderedNodeMappings name="DiffGridNode_rightADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_right).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffright" domainClass="PacmanGoDiffMM::DiffGridNode_right">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffGridNode_rightADD_ADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffGridNode_upDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_up).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffup" domainClass="PacmanGoDiffMM::DiffGridNode_up"/>
+          <borderedNodeMappings name="DiffGridNode_bottomDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_bottom).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffbottom" domainClass="PacmanGoDiffMM::DiffGridNode_bottom"/>
+          <borderedNodeMappings name="DiffGridNode_leftDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_left).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffleft" domainClass="PacmanGoDiffMM::DiffGridNode_left"/>
+          <borderedNodeMappings name="DiffGridNode_rightDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_right).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffright" domainClass="PacmanGoDiffMM::DiffGridNode_right">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffGridNode_rightDELETE_DELETE.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/square_ADD.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffPacmanADD" preconditionExpression="aql:self.operation.toString().toUpper() = 'ADD'" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::DiffPacman">
+          <borderedNodeMappings name="DiffPositionableEntity_onADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onADD_ADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffPositionableEntity_onDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onDELETE_DELETE.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:id" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/pacman.png_ADD.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffGhostADD" preconditionExpression="aql:self.operation.toString().toUpper() = 'ADD'" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::DiffGhost">
+          <borderedNodeMappings name="DiffPositionableEntity_onADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onADD_ADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffPositionableEntity_onDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onDELETE_DELETE.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/ghost.png_ADD.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffFoodADD" preconditionExpression="aql:self.operation.toString().toUpper() = 'ADD'" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::DiffFood">
+          <borderedNodeMappings name="DiffPositionableEntity_onADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onADD_ADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffPositionableEntity_onDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onDELETE_DELETE.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/Food_ADD.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffScoreDELETE" preconditionExpression="aql:self.operation.toString().toUpper() = 'DELETE'" semanticCandidatesExpression="feature:scoreboard" domainClass="PacmanGoDiffMM::DiffScoreboard">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:'Score : ' + self.value" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/scoreboard.png_DELETE.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffGridNodeDELETE" preconditionExpression="aql:self.operation.toString().toUpper() = 'DELETE'" semanticCandidatesExpression="feature:gridnodes" domainClass="PacmanGoDiffMM::DiffGridNode">
+          <borderedNodeMappings name="DiffGridNode_upADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_up).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffup" domainClass="PacmanGoDiffMM::DiffGridNode_up"/>
+          <borderedNodeMappings name="DiffGridNode_bottomADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_bottom).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffbottom" domainClass="PacmanGoDiffMM::DiffGridNode_bottom"/>
+          <borderedNodeMappings name="DiffGridNode_leftADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_left).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffleft" domainClass="PacmanGoDiffMM::DiffGridNode_left"/>
+          <borderedNodeMappings name="DiffGridNode_rightADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_right).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffright" domainClass="PacmanGoDiffMM::DiffGridNode_right">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffGridNode_rightADD_ADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffGridNode_upDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_up).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffup" domainClass="PacmanGoDiffMM::DiffGridNode_up"/>
+          <borderedNodeMappings name="DiffGridNode_bottomDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_bottom).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffbottom" domainClass="PacmanGoDiffMM::DiffGridNode_bottom"/>
+          <borderedNodeMappings name="DiffGridNode_leftDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_left).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffleft" domainClass="PacmanGoDiffMM::DiffGridNode_left"/>
+          <borderedNodeMappings name="DiffGridNode_rightDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_right).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffright" domainClass="PacmanGoDiffMM::DiffGridNode_right">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffGridNode_rightDELETE_DELETE.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/square_DELETE.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffPacmanDELETE" preconditionExpression="aql:self.operation.toString().toUpper() = 'DELETE'" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::DiffPacman">
+          <borderedNodeMappings name="DiffPositionableEntity_onADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onADD_ADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffPositionableEntity_onDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onDELETE_DELETE.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:id" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/pacman.png_DELETE.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffGhostDELETE" preconditionExpression="aql:self.operation.toString().toUpper() = 'DELETE'" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::DiffGhost">
+          <borderedNodeMappings name="DiffPositionableEntity_onADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onADD_ADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffPositionableEntity_onDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onDELETE_DELETE.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/ghost.png_DELETE.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffFoodDELETE" preconditionExpression="aql:self.operation.toString().toUpper() = 'DELETE'" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::DiffFood">
+          <borderedNodeMappings name="DiffPositionableEntity_onADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onADD_ADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffPositionableEntity_onDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/DELETE.PNG">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/FoodDelete.PNG">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffScoreMODIFY" preconditionExpression="aql:self.operation.toString().toUpper() = 'MODIFY'" semanticCandidatesExpression="feature:scoreboard" domainClass="PacmanGoDiffMM::DiffScoreboard">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" labelExpression="aql:self.value + '->' + self.new_value" labelPosition="node" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/rectangleTilde.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffGridNodeMODIFY" preconditionExpression="aql:self.operation.toString().toUpper() = 'MODIFY'" semanticCandidatesExpression="feature:gridnodes" domainClass="PacmanGoDiffMM::DiffGridNode">
+          <borderedNodeMappings name="DiffGridNode_upADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_up).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffup" domainClass="PacmanGoDiffMM::DiffGridNode_up"/>
+          <borderedNodeMappings name="DiffGridNode_bottomADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_bottom).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffbottom" domainClass="PacmanGoDiffMM::DiffGridNode_bottom"/>
+          <borderedNodeMappings name="DiffGridNode_leftADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_left).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffleft" domainClass="PacmanGoDiffMM::DiffGridNode_left"/>
+          <borderedNodeMappings name="DiffGridNode_rightADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_right).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffright" domainClass="PacmanGoDiffMM::DiffGridNode_right">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffGridNode_rightADD_ADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffGridNode_upDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_up).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffup" domainClass="PacmanGoDiffMM::DiffGridNode_up"/>
+          <borderedNodeMappings name="DiffGridNode_bottomDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_bottom).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffbottom" domainClass="PacmanGoDiffMM::DiffGridNode_bottom"/>
+          <borderedNodeMappings name="DiffGridNode_leftDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_left).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffleft" domainClass="PacmanGoDiffMM::DiffGridNode_left"/>
+          <borderedNodeMappings name="DiffGridNode_rightDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffGridNode_right).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffright" domainClass="PacmanGoDiffMM::DiffGridNode_right">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffGridNode_rightDELETE_DELETE.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/square_MODIFY.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffPacmanMODIFY" preconditionExpression="aql:self.operation.toString().toUpper() = 'MODIFY'" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::DiffPacman">
+          <borderedNodeMappings name="DiffPositionableEntity_onADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onADD_ADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffPositionableEntity_onDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onDELETE_DELETE.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:id" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/pacman.png_MODIFY.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffGhostMODIFY" preconditionExpression="aql:self.operation.toString().toUpper() = 'MODIFY'" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::DiffGhost">
+          <borderedNodeMappings name="DiffPositionableEntity_onADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onADD_ADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffPositionableEntity_onDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onDELETE_DELETE.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/ghost.png_MODIFY.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiffFoodMODIFY" preconditionExpression="aql:self.operation.toString().toUpper() = 'MODIFY'" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::DiffFood">
+          <borderedNodeMappings name="DiffPositionableEntity_onADD" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'ADD'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onADD_ADD.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="DiffPositionableEntity_onDELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffPositionableEntity_on).operation.toString()  = 'DELETE'" semanticCandidatesExpression="feature:diffon" domainClass="PacmanGoDiffMM::DiffPositionableEntity_on">
+            <style xsi:type="style:WorkspaceImageDescription" labelExpression="feature:operation" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/DiffPositionableEntity_onDELETE_DELETE.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/Food_MODIFY.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DomainSpecificDiff" label="DomainSpecificDiff" semanticCandidatesExpression="feature:domainspecificdiffs" domainClass="PacmanGoDiffMM::DomainSpecificDiff">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" arcWidth="1" arcHeight="1" workspacePath="/sample.PacmanGo.design/iconsJ/rectangle.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="On" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Pacman'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Food'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Ghost']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:on">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Left" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:left">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Right" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:right">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="UP" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:up">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Bottom" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:bottom">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="On_eType" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Pacman']/@borderedNodeMappings[name='DiffPositionableEntity_onADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Pacman']/@borderedNodeMappings[name='DiffPositionableEntity_onDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffPacmanADD']/@borderedNodeMappings[name='DiffPositionableEntity_onADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffPacmanADD']/@borderedNodeMappings[name='DiffPositionableEntity_onDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffPacmanDELETE']/@borderedNodeMappings[name='DiffPositionableEntity_onADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffPacmanDELETE']/@borderedNodeMappings[name='DiffPositionableEntity_onDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffPacmanMODIFY']/@borderedNodeMappings[name='DiffPositionableEntity_onADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffPacmanMODIFY']/@borderedNodeMappings[name='DiffPositionableEntity_onDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Ghost']/@borderedNodeMappings[name='DiffPositionableEntity_onADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Ghost']/@borderedNodeMappings[name='DiffPositionableEntity_onDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGhostADD']/@borderedNodeMappings[name='DiffPositionableEntity_onADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGhostADD']/@borderedNodeMappings[name='DiffPositionableEntity_onDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGhostDELETE']/@borderedNodeMappings[name='DiffPositionableEntity_onADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGhostDELETE']/@borderedNodeMappings[name='DiffPositionableEntity_onDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGhostMODIFY']/@borderedNodeMappings[name='DiffPositionableEntity_onADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGhostMODIFY']/@borderedNodeMappings[name='DiffPositionableEntity_onDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Food']/@borderedNodeMappings[name='DiffPositionableEntity_onADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Food']/@borderedNodeMappings[name='DiffPositionableEntity_onDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffFoodADD']/@borderedNodeMappings[name='DiffPositionableEntity_onADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffFoodADD']/@borderedNodeMappings[name='DiffPositionableEntity_onDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffFoodDELETE']/@borderedNodeMappings[name='DiffPositionableEntity_onADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffFoodDELETE']/@borderedNodeMappings[name='DiffPositionableEntity_onDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffFoodMODIFY']/@borderedNodeMappings[name='DiffPositionableEntity_onADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffFoodMODIFY']/@borderedNodeMappings[name='DiffPositionableEntity_onDELETE']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:eType">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Left_eType" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_rightDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_rightDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_rightDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_rightDELETE']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:eType">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Right_eType" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_rightDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_rightDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_rightDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_rightDELETE']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:eType">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="UP_eType" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_rightDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_rightDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_rightDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_rightDELETE']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:eType">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Bottom_eType" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']/@borderedNodeMappings[name='DiffGridNode_rightDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']/@borderedNodeMappings[name='DiffGridNode_rightDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']/@borderedNodeMappings[name='DiffGridNode_rightDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_upADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_bottomADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_leftADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_rightADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_upDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_bottomDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_leftDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']/@borderedNodeMappings[name='DiffGridNode_rightDELETE']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:eType">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="dsdEdgeFood" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DomainSpecificDiff']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Food'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffFoodADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffFoodDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffFoodMODIFY']" targetFinderExpression="feature:DomainSpecificDiff_Food">
+          <style sizeComputationExpression="[eContents()->size()/]">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="dsdEdgeGhost" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DomainSpecificDiff']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Ghost'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGhostADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGhostDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGhostMODIFY']" targetFinderExpression="feature:DomainSpecificDiff_Ghost">
+          <style sizeComputationExpression="[eContents()->size()/]">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="dsdEdgePacman" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DomainSpecificDiff']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Pacman'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffPacmanADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffPacmanDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffPacmanMODIFY']" targetFinderExpression="feature:DomainSpecificDiff_Pacman">
+          <style sizeComputationExpression="[eContents()->size()/]">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="dsdEdgeGridNode" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DomainSpecificDiff']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeMODIFY']" targetFinderExpression="feature:DomainSpecificDiff_GridNode">
+          <style sizeComputationExpression="[eContents()->size()/]">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="dsdEdgeScore" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DomainSpecificDiff']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Score'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffScoreADD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffScoreDELETE'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffScoreMODIFY']" targetFinderExpression="feature:DomainSpecificDiff_Scoreboard">
+          <style sizeComputationExpression="[eContents()->size()/]">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="DefaultPalette">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationScore" label="Create Score" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Score']" iconPath="/sample.PacmanGo.design/iconsJ/scoreboard.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::Scoreboard" referenceName="scoreboard"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationGridNode" label="Create GridNode" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='GridNode']" iconPath="/sample.PacmanGo.design/iconsJ/square.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::GridNode" referenceName="gridnodes"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationPacman" label="Create Pacman" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Pacman']" iconPath="/sample.PacmanGo.design/iconsJ/pacman.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::Pacman" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationGhost" label="Create Ghost" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Ghost']" iconPath="/sample.PacmanGo.design/iconsJ/ghost.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::Ghost" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationFood" label="Create Food" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='Food']" iconPath="/sample.PacmanGo.design/iconsJ/Food.PNG">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::Food" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationDiffPacmanADDED" label="Create Diff Pacman ADDED" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffPacmanADD']" iconPath="/sample.PacmanGo.design/iconsJ/pacmanADD.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::DiffPacman" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationDiffFoodADDED" label="Create Diff Food ADDED" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffFoodADD']" iconPath="/sample.PacmanGo.design/iconsJ/FoodADD.PNG">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::DiffFood" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationDiffGhostADDED" label="Create Diff Ghost ADDED" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGhostADD']" iconPath="/sample.PacmanGo.design/iconsJ/ghostADD.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::DiffFood" referenceName="entities">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::DiffGhost" referenceName="entities"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationGridNodeADDED" label="Create GridNode ADDED" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeADD']" iconPath="/sample.PacmanGo.design/iconsJ/squareADD.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::GridNode" referenceName="gridnodes"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationDiffScore" label="Create Diff Score MODIFIED" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffScoreMODIFY']" iconPath="/sample.PacmanGo.design/iconsJ/scoreboardMODIFY.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::DiffScoreboard" referenceName="scoreboard"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationDiffPacmanDELETED" label="Create Diff Pacman DELETED" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffPacmanDELETE']" iconPath="/sample.PacmanGo.design/iconsJ/pacmanDelete.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::DiffPacman" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationDiffFoodDELETED" label="Create Diff Food DELETED" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffFoodDELETE']" iconPath="/sample.PacmanGo.design/iconsJ/FoodDelete.PNG">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::DiffFood" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationDiffGhostDELETED" label="Create Diff Ghost DELETED" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGhostDELETE']" iconPath="/sample.PacmanGo.design/iconsJ/ghostDelete.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::DiffFood" referenceName="entities">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::DiffGhost" referenceName="entities"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationGridNodeDELETED" label="Create GridNode DELETED" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM']/@defaultLayer/@nodeMappings[name='DiffGridNodeDELETE']" iconPath="/sample.PacmanGo.design/iconsJ/squareDELETE.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::GridNode" referenceName="gridnodes"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

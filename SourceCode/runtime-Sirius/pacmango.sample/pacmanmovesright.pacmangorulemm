@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PacmanGoRuleMM:Rule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PacmanGoRuleMM="http://www.zadahmad.org/dsmcompare/PacmanGoRuleMM" name="PacmanMovesUp">
+  <pattern ID_Pattern="1">
+    <gridnodes xsi:type="PacmanGoRuleMM:Pattern_GridNode" right="//@pattern/@gridnodes.1" id="" ID_Pattern="2"/>
+    <gridnodes xsi:type="PacmanGoRuleMM:Pattern_GridNode" left="//@pattern/@gridnodes.0" id="" ID_Pattern="3"/>
+    <entities xsi:type="PacmanGoRuleMM:Pattern_Pacman" ID_Pattern="4">
+      <diffon xsi:type="PacmanGoRuleMM:Pattern_DiffPositionableEntity_on" operation="DELETE" eType="//@pattern/@gridnodes.0" ID_Pattern="5"/>
+      <diffon xsi:type="PacmanGoRuleMM:Pattern_DiffPositionableEntity_on" eType="//@pattern/@gridnodes.1" ID_Pattern="6"/>
+    </entities>
+    <domainspecificdiffs xsi:type="PacmanGoRuleMM:Pattern_DomainSpecificDiff" name="pacmanmovesright" DomainSpecificDiff_Pacman="//@pattern/@entities.0" ID_Pattern="7"/>
+  </pattern>
+</PacmanGoRuleMM:Rule>

@@ -1,0 +1,49 @@
+-- @nsURI MMe=http://www.eclipse.org/pemf/2002/Ecore
+-- @path MMm=/com.Zadahmad.DSEMFCompare.editor/dsls/ecoreRefactoring/metamodels/refactoring.ecore
+
+module eTm;
+create OUT : MMm from IN : MMe;
+
+rule pTp{
+	from 	pe: MMe!EPackage
+	to		pm:	MMm!EPackage(
+				name <- pe.name,
+				eclassifiers <- pe.eClassifiers
+		)
+}
+
+rule cTc{
+	from 	pe: MMe!EClass
+	to		pm:	MMm!EClass(
+				name <- pe.name,
+				eattributes <- pe.eAttributes,
+				eoperations <- pe.eOperations,
+				ereferences <- pe.eReferences,
+				esupertypes <- pe.eSuperTypes
+		)
+}
+
+rule aTa{
+	from 	pe: MMe!EAttribute
+	to		pm:	MMm!EAttribute(
+				name <- pe.name,
+				etype<- pe.eType.name
+		)
+}
+
+rule oTo{
+	from 	pe: MMe!EOperation
+	to		pm:	MMm!EOperation(
+				name <- pe.name,
+				etype<- pe.eType.name
+		)
+}
+
+rule rTr{
+	from 	pe: MMe!EReference
+	to		pm:	MMm!EReference(
+				name <- pe.name,
+				etype<- pe.eType.name
+		)
+}
+

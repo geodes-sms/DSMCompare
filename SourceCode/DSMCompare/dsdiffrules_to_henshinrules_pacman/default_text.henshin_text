@@ -1,0 +1,18 @@
+ePackageImport PacmanGoDiffMM
+
+rule Test()
+{
+	graph{
+		preserve node n2:GridNode
+		preserve node n3:DiffScoreboard
+		preserve node n4:Pacman
+		preserve node n5:DiffFood
+		preserve node n6:DiffPositionableEntity_on
+		
+		create   node n7:DomainSpecificDiff
+		
+		edges[(preserve n4->n6:diffon),(preserve n6->n2:eType),(create n7->n4:DomainSpecificDiff_Pacman),(create n7->n5:DomainSpecificDiff_Food)]
+		
+	}
+}
+

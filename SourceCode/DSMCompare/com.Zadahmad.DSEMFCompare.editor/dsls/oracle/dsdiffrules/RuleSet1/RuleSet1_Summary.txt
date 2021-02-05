@@ -1,0 +1,31 @@
+Rules:
+Id,	Name,	Filter#,				Element#	Adjacency	#Instances	#Overlaps
+			[Associations/Class]
+0	Rule1	0/1						7			[2, 3]					2
+1	Rule2	1/0						7			[]						0
+2	Rule3	0/1						6			[0, 3]					2
+3	Rule4	0/3						9			[0, 2]					2
+
+[MultiCDA] Computing initial conflict reasons-computeResultsFine:
+2, 0, 1,  4,    | rule1
+0, 2, 0,  0,    | rule2
+2, 0, 1,  4,    | rule3
+6, 0, 3, 36,    | rule4
+
+oracle1.set_adjacency_matrix([
+    [0, 0, 1, 4],
+    [0, 0, 0, 0],
+    [2, 0, 0, 4],
+    [6, 0, 3, 0]
+    ])
+    
+------------------------------------------------------------------------------------
+Ordering result: 0<->1-3-2
+
+Ordering Detail:
+Oracle-Rule set 1
+Id      Vertex  Order
+0       0       1    
+1       1       1    
+3       3       2    
+2       2       3      

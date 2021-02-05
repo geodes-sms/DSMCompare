@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ASCII"?>
+<arduinoDiffMM:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduinoDiffMM="http://www.obeo.fr/arduinoDiffMM">
+  <hardware name="Hardware">
+    <platforms href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@platform.0"/>
+    <modules xsi:type="arduinoDiffMM:InputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.8"/>
+    <modules xsi:type="arduinoDiffMM:OutputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.7"/>
+    <connectors>
+      <pin xsi:type="arduinoDiffMM:DigitalPin" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@platform.0/@digitalPins.9"/>
+      <module xsi:type="arduinoDiffMM:OutputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.7"/>
+    </connectors>
+    <connectors>
+      <pin xsi:type="arduinoDiffMM:DigitalPin" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@platform.0/@digitalPins.4"/>
+      <module xsi:type="arduinoDiffMM:InputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.8"/>
+    </connectors>
+    <connectors xsi:type="arduinoDiffMM:DiffConnector"/>
+  </hardware>
+  <sketch name="Sketch" next="//@sketch/@instructions.0" hardware="//@hardware">
+    <instructions xsi:type="arduinoDiffMM:If" next="//@sketch" condition="//@sketch/@instructions.1">
+      <diffnext operation="DELETE" eType="//@sketch/@instructions.4"/>
+      <instructions xsi:type="arduinoDiffMM:Delay" next="//@sketch/@instructions.0/@instructions.1" value="400">
+        <diffnext operation="DELETE" eType="//@sketch/@instructions.0/@instructions.5"/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:Level" next="//@sketch/@instructions.0/@instructions.2" level="//@sketch/@instructions.3">
+        <diffnext operation="DELETE" eType="//@sketch/@instructions.0/@instructions.0"/>
+        <module xsi:type="arduinoDiffMM:OutputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.7"/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:Delay" value="400"/>
+      <instructions xsi:type="arduinoDiffMM:DiffLevel" operation="DELETE">
+        <diffnext operation="DELETE" eType="//@sketch/@instructions.0/@instructions.0"/>
+        <difflevel operation="DELETE" eType="//@sketch/@instructions.2"/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:DiffStatus">
+        <diffnext/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:DiffLevel">
+        <diffnext eType="//@sketch/@instructions.0/@instructions.2"/>
+        <difflevel eType="//@sketch/@instructions.2"/>
+      </instructions>
+    </instructions>
+    <instructions xsi:type="arduinoDiffMM:Sensor">
+      <module xsi:type="arduinoDiffMM:InputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.8"/>
+    </instructions>
+    <instructions xsi:type="arduinoDiffMM:Constant" value="90"/>
+    <instructions xsi:type="arduinoDiffMM:Constant" value="0"/>
+    <instructions xsi:type="arduinoDiffMM:DiffStatus" status="true">
+      <diffnext eType="//@sketch"/>
+    </instructions>
+  </sketch>
+</arduinoDiffMM:Project>

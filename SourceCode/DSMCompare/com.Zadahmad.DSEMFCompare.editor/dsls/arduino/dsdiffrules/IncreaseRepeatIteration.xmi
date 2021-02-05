@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arduinoRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:arduinoRuleMM="http://www.obeo.fr/arduinoRuleMM"
+    xsi:schemaLocation="http://www.obeo.fr/arduinoRuleMM ../metamodels/arduinoRuleMM.ecore#/1"
+    name="IncreaseRepeatIteration">
+  <constraints>Item(11,&quot;iteration&quot;) &lt; Item(11,&quot;new_iteration&quot;)</constraints>
+  <pattern>
+    <sketch
+        xsi:type="arduinoRuleMM:Pattern_Sketch"
+        ID_Pattern="1">
+      <instructions
+          xsi:type="arduinoRuleMM:Pattern_DiffRepeat"
+          iteration="0"
+          operation="MODIFY"
+          ID_Pattern="11"/>
+    </sketch>
+    <domainspecificdiffs
+        xsi:type="arduinoRuleMM:Pattern_DomainSpecificDiff"
+        name="IncreaseRepeatIteration"
+        DomainSpecificDiff_Repeat="11"
+        ID_Pattern="2"/>
+  </pattern>
+</arduinoRuleMM:Rule>

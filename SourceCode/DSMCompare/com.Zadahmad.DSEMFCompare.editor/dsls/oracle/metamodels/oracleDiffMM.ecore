@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="oracleDiffMM" nsURI="www.geodes.UdeM.edu/oracleDiffMM" nsPrefix="oracleDiffMM">
+  <eClassifiers xsi:type="ecore:EClass" name="A">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ab" upperBound="-1" eType="#//B"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffab" upperBound="-1"
+        eType="#//DiffA_ab" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="B">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bd" upperBound="-1" eType="#//D"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffbd" upperBound="-1"
+        eType="#//DiffB_bd" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="C" eSuperTypes="#//B">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="D">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dd" upperBound="-1" eType="#//D"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffdd" upperBound="-1"
+        eType="#//DiffD_dd" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ROOT">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="b" upperBound="-1" eType="#//B"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="a" upperBound="-1" eType="#//A"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domainspecificdiffs" upperBound="-1"
+        eType="#//DomainSpecificDiff" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffb" upperBound="-1"
+        eType="#//DiffROOT_b" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffa" upperBound="-1"
+        eType="#//DiffROOT_a" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffdomainspecificdiffs"
+        upperBound="-1" eType="#//DiffROOT_domainspecificdiffs" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ClassOp">
+    <eLiterals name="ADD" literal="ADD"/>
+    <eLiterals name="DELETE" value="1" literal="DELETE"/>
+    <eLiterals name="MODIFY" value="2" literal="MODIFY"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AscOp">
+    <eLiterals name="ADD" literal="ADD"/>
+    <eLiterals name="DELETE" value="1" literal="DELETE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainSpecificDiff">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_A" upperBound="-1"
+        eType="#//A"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_B" upperBound="-1"
+        eType="#//B"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_C" upperBound="-1"
+        eType="#//C"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_D" upperBound="-1"
+        eType="#//D"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffA" eSuperTypes="#//A">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//ClassOp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffA_ab">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//AscOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//B"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffB" eSuperTypes="#//B">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//ClassOp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffB_bd">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//AscOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//D"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffC" eSuperTypes="#//C">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//ClassOp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffD" eSuperTypes="#//D">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//ClassOp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffD_dd">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//AscOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//D"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffROOT" eSuperTypes="#//ROOT">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//ClassOp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffROOT_b">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//AscOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//B"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffROOT_a">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//AscOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//A"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffROOT_domainspecificdiffs">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//AscOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//DomainSpecificDiff"/>
+  </eClassifiers>
+</ecore:EPackage>

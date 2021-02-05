@@ -1,0 +1,153 @@
+// Applied composite operation
+extractSuperClass(Node, [], gmfgraph, AbstractNode, true, DiagramElement)
+// Atomic changes realizing the composite operation above
+create(AbstractNode)
+add(Node, eSuperTypes, AbstractNode)
+remove(Node, eSuperTypes, DiagramElement)
+
+// Applied composite operation
+extractSuperClass(ConnectionFigure, [], gmfgraph, RealFigure, true, Figure)
+// Atomic changes realizing the composite operation above
+create(RealFigure)
+add(ConnectionFigure, eSuperTypes, RealFigure)
+remove(ConnectionFigure, eSuperTypes, Figure)
+
+// Applied composite operation
+specializeSuperType(DecorationFigure, Figure, RealFigure)
+// Atomic changes realizing the composite operation above
+add(DecorationFigure, eSuperTypes, RealFigure)
+remove(DecorationFigure, eSuperTypes, Figure)
+
+// Applied composite operation
+specializeSuperType(Shape, Figure, RealFigure)
+// Atomic changes realizing the composite operation above
+add(Shape, eSuperTypes, RealFigure)
+remove(Shape, eSuperTypes, Figure)
+
+// Applied composite operation
+specializeSuperType(Label, Figure, RealFigure)
+// Atomic changes realizing the composite operation above
+add(Label, eSuperTypes, RealFigure)
+remove(Label, eSuperTypes, Figure)
+
+// Applied composite operation
+specializeSuperType(LabeledContainer, Figure, RealFigure)
+// Atomic changes realizing the composite operation above
+add(LabeledContainer, eSuperTypes, RealFigure)
+remove(LabeledContainer, eSuperTypes, Figure)
+
+// Applied composite operation
+specializeSuperType(CustomFigure, Figure, RealFigure)
+// Atomic changes realizing the composite operation above
+add(CustomFigure, eSuperTypes, RealFigure)
+remove(CustomFigure, eSuperTypes, Figure)
+
+// Applied composite operation
+extractSuperClass(RealFigure, [], gmfgraph, AbstractFigure, true, Figure)
+// Atomic changes realizing the composite operation above
+create(AbstractFigure)
+add(RealFigure, eSuperTypes, AbstractFigure)
+remove(RealFigure, eSuperTypes, Figure)
+
+// Applied composite operation
+pushFeature(RealFigure.children)
+// Atomic changes realizing the composite operation above
+set(edu.tum.cs.cope.history.impl.DeleteImpl@7ca65d82 (breaking: false, description: null) (referenceName: eStructuralFeatures).parent, eType, AbstractFigure)
+move(Figure, RealFigure.children)
+
+// Applied composite operation
+pushFeature(RealFigure.children)
+// Atomic changes realizing the composite operation above
+move(AbstractFigure, RealFigure.children)
+set(edu.tum.cs.cope.history.impl.DeleteImpl@7ca65d82 (breaking: false, description: null) (referenceName: eStructuralFeatures).parent, eType, RealFigure)
+
+// Applied composite operation
+imitateSuperType(Figure, Identity)
+// Atomic changes realizing the composite operation above
+create(RealFigure.name)
+remove(Figure, eSuperTypes, Identity)
+
+// Applied composite operation
+pushFeature(RealFigure.name)
+// Atomic changes realizing the composite operation above
+move(Figure, RealFigure.name)
+
+// Applied composite operation
+pushFeature(RealFigure.name)
+// Atomic changes realizing the composite operation above
+move(AbstractFigure, RealFigure.name)
+
+// Applied composite operation
+generalizeAttribute(RealFigure.name, 0, 1)
+// Atomic changes realizing the composite operation above
+set(RealFigure.name, lowerBound, 0)
+
+set(RealFigure.name, iD, false)
+// Applied composite operation
+specializeReferenceType(FigureRef.figure, AbstractFigure)
+// Atomic changes realizing the composite operation above
+set(FigureRef.figure, eType, AbstractFigure)
+
+// Applied composite operation
+specializeReferenceType(FigureRef.figure, RealFigure)
+// Atomic changes realizing the composite operation above
+set(FigureRef.figure, eType, RealFigure)
+
+// Applied composite operation
+specializeReferenceType(FigureGallery.figures, AbstractFigure)
+// Atomic changes realizing the composite operation above
+set(FigureGallery.figures, eType, AbstractFigure)
+
+// Applied composite operation
+specializeReferenceType(FigureGallery.figures, RealFigure)
+// Atomic changes realizing the composite operation above
+set(FigureGallery.figures, eType, RealFigure)
+
+// Applied composite operation
+specializeSuperType(FigureRef, FigureMarker, AbstractFigure)
+// Atomic changes realizing the composite operation above
+add(FigureRef, eSuperTypes, AbstractFigure)
+remove(FigureRef, eSuperTypes, FigureMarker)
+
+// Applied composite operation
+inlineSuperClass(FigureMarker)
+// Atomic changes realizing the composite operation above
+move(FigureMarker, edu.tum.cs.cope.history.impl.DeleteImpl@7ca65d82 (breaking: false, description: null) (referenceName: eStructuralFeatures).parent)
+add(Figure, eSuperTypes, Layoutable)
+set(RealFigure.children, eType, Figure)
+remove(Figure, eSuperTypes, FigureMarker)
+delete(FigureMarker)
+
+// Applied composite operation
+deleteFeature(edu.tum.cs.cope.history.impl.DeleteImpl@7ca65d82 (breaking: false, description: null) (referenceName: eStructuralFeatures).parent)
+// Atomic changes realizing the composite operation above
+delete(edu.tum.cs.cope.history.impl.DeleteImpl@7ca65d82 (breaking: false, description: null) (referenceName: eStructuralFeatures).parent)
+
+create(DiagramLabel.external)
+// Applied composite operation
+deleteFeature(edu.tum.cs.cope.history.impl.DeleteImpl@e4541bd (breaking: false, description: null) (referenceName: eStructuralFeatures).nodeFigure)
+// Atomic changes realizing the composite operation above
+delete(edu.tum.cs.cope.history.impl.DeleteImpl@e4541bd (breaking: false, description: null) (referenceName: eStructuralFeatures).nodeFigure)
+
+// Applied composite operation
+deleteFeature(edu.tum.cs.cope.history.impl.DeleteImpl@64dee69c (breaking: false, description: null) (referenceName: eStructuralFeatures).connectionFigure)
+// Atomic changes realizing the composite operation above
+delete(edu.tum.cs.cope.history.impl.DeleteImpl@64dee69c (breaking: false, description: null) (referenceName: eStructuralFeatures).connectionFigure)
+
+// Applied composite operation
+deleteFeature(edu.tum.cs.cope.history.impl.DeleteImpl@65f63f80 (breaking: false, description: null) (referenceName: eStructuralFeatures).bundleName)
+// Atomic changes realizing the composite operation above
+delete(edu.tum.cs.cope.history.impl.DeleteImpl@65f63f80 (breaking: false, description: null) (referenceName: eStructuralFeatures).bundleName)
+
+delete(find)
+// Applied composite operation
+generalizeReference(FigureAccessor.typedFigure, RealFigure, 0, 1)
+// Atomic changes realizing the composite operation above
+set(FigureAccessor.typedFigure, eType, RealFigure)
+
+// Applied composite operation
+makeContainment(FigureAccessor.typedFigure)
+// Atomic changes realizing the composite operation above
+set(FigureAccessor.typedFigure, containment, true)
+
+set(gmfgraph, nsURI, http://www.eclipse.org/gmf/2006/GraphicalDefinition)

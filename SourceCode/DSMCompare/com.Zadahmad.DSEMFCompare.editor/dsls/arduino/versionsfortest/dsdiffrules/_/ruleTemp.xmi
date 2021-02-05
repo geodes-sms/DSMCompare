@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arduinoRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:arduinoRuleMM="http://www.obeo.fr/arduinoRuleMM"
+    xsi:schemaLocation="http://www.obeo.fr/arduinoRuleMM ../../../../com.Zadahmad.DSEMFCompare/ardMMs/arduinoRuleMM.ecore#/1">
+  <pattern ID_Pattern="1">
+    <hardware
+        xsi:type="arduinoRuleMM:Pattern_Hardware"
+        ID_Pattern="2">
+      <connectors
+          xsi:type="arduinoRuleMM:Pattern_DiffConnector"
+          ID_Pattern="3">
+        <diffpin
+            xsi:type="arduinoRuleMM:Pattern_DiffConnector_pin"
+            ID_Pattern="4"/>
+        <diffmodule
+            xsi:type="arduinoRuleMM:Pattern_DiffConnector_module"
+            ID_Pattern="5"/>
+      </connectors>
+    </hardware>
+    <sketch
+        xsi:type="arduinoRuleMM:Pattern_Sketch"
+        ID_Pattern="6">
+      <instructions
+          xsi:type="arduinoRuleMM:Pattern_If"
+          ID_Pattern="9">
+        <diffnext
+            xsi:type="arduinoRuleMM:Pattern_DiffInstruction_next"
+            ID_Pattern="10"/>
+      </instructions>
+    </sketch>
+  </pattern>
+</arduinoRuleMM:Rule>

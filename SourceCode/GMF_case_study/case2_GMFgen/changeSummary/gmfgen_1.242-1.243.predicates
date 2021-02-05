@@ -1,0 +1,35 @@
+// Applied composite operation
+extractAndGroupAttribute(GenAuditContext.className, gmfgen, GenAuditContext, contextSelector, GenAuditRoot, clientContexts)
+// Atomic changes realizing the composite operation above
+create(GenAuditContext)
+create(GenAuditRoot.clientContexts)
+create(GenAuditable.contextSelector)
+move(GenAuditRule, GenAuditContext.className)
+set(GenAuditContext.className, lowerBound, 1)
+
+// Applied composite operation
+moveFeature(GenAuditable.contextSelector, GenAuditRule.target)
+// Atomic changes realizing the composite operation above
+move(GenAuditRule, GenAuditable.contextSelector)
+
+// Applied composite operation
+rename(GenAuditContext.className, className)
+// Atomic changes realizing the composite operation above
+set(GenAuditContext.className, name, className)
+
+// Applied composite operation
+newOppositeReference(GenAuditRoot.clientContexts, root, 1, 1, true)
+// Atomic changes realizing the composite operation above
+create(GenAuditContext.root)
+
+set(GenAuditContext.root, resolveProxies, false)
+// Applied composite operation
+newOppositeReference(GenAuditable.contextSelector, ruleTargets, 0, -1, true)
+// Atomic changes realizing the composite operation above
+create(GenAuditContext.ruleTargets)
+
+create(getQualifiedClassName)
+delete(getContextSelectorClassName)
+delete(getContextSelectorQualifiedClassName)
+delete(getClientContextID)
+

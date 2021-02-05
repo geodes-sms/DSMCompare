@@ -1,0 +1,504 @@
+ePackageImport  oracleDiffMM
+
+		rule rule1()
+		{
+			graph
+			{
+				 preserve			node n0:ROOT
+				 preserve			node n1:B
+				 preserve			node n11:DiffD{
+					preserve operation = "ADD"
+				}
+				 preserve			node n2:C
+				 preserve			node n21:DiffD{
+					preserve operation = "DELETE"
+				}
+				 preserve			node n22:DiffB_bd{
+					preserve operation = "ADD"
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"rule1\""
+				}
+			edges[
+			  		(preserve	n0->n1:b),
+			  		(preserve	n0->n2:b),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(preserve	n1->n11:bd),
+			  		(preserve	n2->n21:bd),
+			  		(preserve	n2->n22:diffbd),
+			  		(create		n3->n1:DomainSpecificDiff_B),
+			  		(create		n3->n2:DomainSpecificDiff_C)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule rule2()
+		{
+			graph
+			{
+				 preserve			node n0:ROOT
+				 preserve			node n1:B
+				 preserve			node n11:DiffB_bd{
+					preserve operation = "DELETE"
+				}
+				 preserve			node n2:C
+				 preserve			node n21:DiffB_bd{
+					preserve operation = "ADD"
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"rule2\""
+				}
+			edges[
+			  		(preserve	n0->n1:b),
+			  		(preserve	n0->n2:b),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(preserve	n1->n11:diffbd),
+			  		(preserve	n2->n21:diffbd),
+			  		(create		n3->n1:DomainSpecificDiff_B),
+			  		(create		n3->n2:DomainSpecificDiff_C)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule rule3(VAR n1Name:EString, VAR n2Name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:ROOT
+				 preserve			node n4:DiffC{
+					preserve operation = "ADD"
+				}
+				 preserve			node n1:DiffA{
+					preserve operation = "ADD"
+					preserve Name =  n1Name
+				}
+				 preserve			node n11:DiffA_ab{
+					preserve operation = "DELETE"
+				}
+				 preserve			node n2:A{
+					preserve Name =  n2Name
+				}
+				 preserve			node n21:DiffA_ab{
+					preserve operation = "DELETE"
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"rule3\""
+				}
+			edges[
+			  		(preserve	n0->n4:b),
+			  		(preserve	n0->n1:a),
+			  		(preserve	n0->n2:a),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(preserve	n1->n11:diffab),
+			  		(preserve	n11->n4:eType),
+			  		(preserve	n2->n21:diffab),
+			  		(create		n3->n1:DomainSpecificDiff_A),
+			  		(create		n3->n2:DomainSpecificDiff_A)
+	      		 ]
+			}
+			conditions [n1Name == n2Name]
+		}
+//----------------------------------------------------------------------
+
+		rule rule4()
+		{
+			graph
+			{
+				 preserve			node n0:ROOT
+				 preserve			node n1:B
+				 preserve			node n11:DiffD{
+					preserve operation = "ADD"
+				}
+				 preserve			node n2:C
+				 preserve			node n21:DiffD{
+					preserve operation = "ADD"
+				}
+				 preserve			node n22:DiffD{
+					preserve operation = "DELETE"
+				}
+				 preserve			node n23:DiffB_bd{
+					preserve operation = "ADD"
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"rule4\""
+				}
+			edges[
+			  		(preserve	n0->n1:b),
+			  		(preserve	n0->n2:b),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(preserve	n1->n11:bd),
+			  		(preserve	n2->n21:bd),
+			  		(preserve	n2->n22:bd),
+			  		(preserve	n2->n23:diffbd),
+			  		(create		n3->n1:DomainSpecificDiff_B),
+			  		(create		n3->n2:DomainSpecificDiff_C)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+//****************1
+	unit unitSequntialStar11(){
+		while{
+			rule1()
+		}
+		while{
+			rule2()
+		}
+		while{
+			rule3()
+		}
+		while{
+			rule4()
+		}
+	}
+	
+	unit unitSequntialStar12(){
+		while{
+			rule1()
+		}
+		while{
+			rule2()
+		}
+		while{
+			rule4()
+		}
+		while{
+			rule3()
+		}
+	}	
+	
+	unit unitSequntialStar13(){
+		while{
+			rule1()
+		}
+		while{
+			rule3()
+		}
+		while{
+			rule2()
+		}
+		while{
+			rule4()
+		}
+	}	
+	
+	unit unitSequntialStar14(){
+		while{
+			rule1()
+		}
+		while{
+			rule3()
+		}
+		while{
+			rule4()
+		}
+		while{
+			rule2()
+		}
+	}
+	
+	unit unitSequntialStar15(){
+		while{
+			rule1()
+		}
+		while{
+			rule4()
+		}
+		while{
+			rule2()
+		}
+		while{
+			rule3()
+		}
+	}		
+	
+	unit unitSequntialStar16(){
+		while{
+			rule1()
+		}
+		while{
+			rule4()
+		}
+		while{
+			rule3()
+		}
+		while{
+			rule2()
+		}
+	}	
+	
+//********************2	
+	unit unitSequntialStar21(){
+		while{
+			rule2()
+		}
+		while{
+			rule1()
+		}
+		while{
+			rule3()
+		}
+		while{
+			rule4()
+		}
+	}
+	
+	unit unitSequntialStar22(){
+		while{
+			rule2()
+		}
+		while{
+			rule1()
+		}
+		while{
+			rule4()
+		}
+		while{
+			rule3()
+		}
+	}
+	
+	unit unitSequntialStar23(){
+		while{
+			rule2()
+		}
+		while{
+			rule3()
+		}
+		while{
+			rule1()
+		}
+		while{
+			rule4()
+		}
+	}
+	
+	unit unitSequntialStar24(){
+		while{
+			rule2()
+		}
+		while{
+			rule3()
+		}
+		while{
+			rule4()
+		}
+		while{
+			rule1()
+		}
+	}
+	
+	unit unitSequntialStar25(){
+		while{
+			rule2()
+		}
+		while{
+			rule4()
+		}
+		while{
+			rule1()
+		}
+		while{
+			rule3()
+		}
+	}
+	
+	unit unitSequntialStar26(){
+		while{
+			rule2()
+		}
+		while{
+			rule4()
+		}
+		while{
+			rule3()
+		}
+		while{
+			rule1()
+		}
+	}	
+//******************3		
+	unit unitSequntialStar31(){	
+		while{
+			rule3()
+		}
+		while{
+			rule1()
+		}
+		while{
+			rule2()
+		}
+		while{
+			rule4()
+		}
+	}
+
+	unit unitSequntialStar32(){	
+		while{
+			rule3()
+		}
+		while{
+			rule1()
+		}
+		while{
+			rule4()
+		}
+		while{
+			rule2()
+		}
+	}
+		
+	unit unitSequntialStar33(){	
+		while{
+			rule3()
+		}
+		while{
+			rule2()
+		}
+		while{
+			rule1()
+		}
+		while{
+			rule4()
+		}
+	}
+		
+	unit unitSequntialStar34(){	
+		while{
+			rule3()
+		}
+		while{
+			rule2()
+		}
+		while{
+			rule4()
+		}
+		while{
+			rule1()
+		}
+	}
+		
+	unit unitSequntialStar35(){	
+		while{
+			rule3()
+		}
+		while{
+			rule4()
+		}
+		while{
+			rule1()
+		}
+		while{
+			rule2()
+		}
+	}
+		
+	unit unitSequntialStar36(){	
+		while{
+			rule3()
+		}
+		while{
+			rule4()
+		}
+		while{
+			rule2()
+		}
+		while{
+			rule1()
+		}
+	}
+//*****************4	
+	unit unitSequntialStar41(){
+		while{
+			rule4()
+		}
+		while{
+			rule1()
+		}
+		while{
+			rule2()
+		}
+		while{
+			rule3()
+		}
+	}
+		
+	unit unitSequntialStar42(){
+		while{
+			rule4()
+		}
+		while{
+			rule1()
+		}
+		while{
+			rule3()
+		}
+		while{
+			rule2()
+		}
+	}
+	
+	unit unitSequntialStar43(){
+		while{
+			rule4()
+		}
+		while{
+			rule2()
+		}
+		while{
+			rule1()
+		}
+		while{
+			rule3()
+		}
+	}
+	
+	unit unitSequntialStar44(){
+		while{
+			rule4()
+		}
+		while{
+			rule2()
+		}
+		while{
+			rule3()
+		}
+		while{
+			rule1()
+		}
+	}
+	
+	unit unitSequntialStar45(){
+		while{
+			rule4()
+		}
+		while{
+			rule3()
+		}
+		while{
+			rule1()
+		}
+		while{
+			rule2()
+		}
+	}
+
+	unit unitSequntialStar46(){
+		while{
+			rule4()
+		}
+		while{
+			rule3()
+		}
+		while{
+			rule2()
+		}
+		while{
+			rule1()
+		}
+	}
+
+	
