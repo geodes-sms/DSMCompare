@@ -1,5 +1,23 @@
 # Supplements
 
+## Section 6.3.1 Experimental setting
+
+### Conflict graph for the Pac-Man case
+
+<p align="center">
+  <a href="#">
+    <img src="images/PacmanGraph.svg" alt="Logo" width="100%">
+  </a>
+</p>
+
+### Conflict graph for the MM-Refactoring case
+
+<p align="center">
+  <a href="#">
+    <img src="images/MMRefactoringGraph.svg" alt="Logo" width="100%">
+  </a>
+</p>
+
 ## List of all the rules related to the MM-Refactoring case
 
 <ul>
