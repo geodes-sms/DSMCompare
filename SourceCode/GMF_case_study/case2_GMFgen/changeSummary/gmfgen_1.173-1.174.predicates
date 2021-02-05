@@ -1,0 +1,18 @@
+// Applied composite operation
+extractSuperClass(ToolEntry, [AbstractToolEntry.default, AbstractToolEntry.properties, AbstractToolEntry.qualifiedToolName], gmfgen, AbstractToolEntry, true, [EntryBase, ToolGroupItem])
+// Atomic changes realizing the composite operation above
+create(AbstractToolEntry)
+move(ToolEntry, AbstractToolEntry.default)
+move(ToolEntry, AbstractToolEntry.properties)
+move(ToolEntry, AbstractToolEntry.qualifiedToolName)
+add(ToolEntry, eSuperTypes, AbstractToolEntry)
+remove(ToolEntry, eSuperTypes, EntryBase)
+remove(ToolEntry, eSuperTypes, ToolGroupItem)
+
+create(StandardEntry)
+create(StandardEntryKind)
+create(StandardEntry.kind)
+create(SELECT)
+create(MARQUEE)
+create(ZOOM)
+

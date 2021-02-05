@@ -1,0 +1,84 @@
+// Applied composite operation
+extractClass(GenEditorGenerator, edu.tum.cs.cope.history.impl.DeleteImpl@660221ad (breaking: false, description: null) (referenceName: eStructuralFeatures).audits, gmfgen, GenAuditRoot, audits)
+// Atomic changes realizing the composite operation above
+create(GenAuditRoot)
+create(GenEditorGenerator.audits)
+move(GenEditorGenerator, edu.tum.cs.cope.history.impl.DeleteImpl@660221ad (breaking: false, description: null) (referenceName: eStructuralFeatures).audits)
+
+// Applied composite operation
+newOppositeReference(GenEditorGenerator.audits, editorGen, 1, 1, false)
+// Atomic changes realizing the composite operation above
+create(GenAuditRoot.editorGen)
+
+// Applied composite operation
+generalizeReference(GenEditorGenerator.audits, GenAuditRoot, 0, 1)
+// Atomic changes realizing the composite operation above
+set(GenEditorGenerator.audits, lowerBound, 0)
+
+// Applied composite operation
+flattenHierarchy(edu.tum.cs.cope.history.impl.DeleteImpl@660221ad (breaking: false, description: null) (referenceName: eStructuralFeatures).audits, edu.tum.cs.cope.history.impl.DeleteImpl@15f1192d (breaking: false, description: null) (referenceName: eStructuralFeatures).childContainers, categories)
+// Atomic changes realizing the composite operation above
+create(GenAuditRoot.categories)
+delete(edu.tum.cs.cope.history.impl.DeleteImpl@660221ad (breaking: false, description: null) (referenceName: eStructuralFeatures).audits)
+delete(edu.tum.cs.cope.history.impl.DeleteImpl@15f1192d (breaking: false, description: null) (referenceName: eStructuralFeatures).childContainers)
+
+// Applied composite operation
+newOppositeReference(GenAuditRoot.categories, root, 1, 1, false)
+// Atomic changes realizing the composite operation above
+create(GenAuditContainer.root)
+
+// Applied composite operation
+deleteFeature(edu.tum.cs.cope.history.impl.DeleteImpl@7abe49c (breaking: false, description: null) (referenceName: eStructuralFeatures).container)
+// Atomic changes realizing the composite operation above
+delete(edu.tum.cs.cope.history.impl.DeleteImpl@7abe49c (breaking: false, description: null) (referenceName: eStructuralFeatures).container)
+
+// Applied composite operation
+rename(GenAuditRoot.rules, rules)
+// Atomic changes realizing the composite operation above
+set(GenAuditRoot.rules, name, rules)
+
+// Applied composite operation
+newOppositeReference(GenAuditRoot.rules, category, 1, 1)
+// Atomic changes realizing the composite operation above
+create(GenAuditRule.category)
+
+// Applied composite operation
+dropOpposite(GenAuditRoot.rules)
+// Atomic changes realizing the composite operation above
+set(GenAuditRoot.rules, eOpposite, null)
+set(GenAuditRule.category, eOpposite, null)
+
+// Applied composite operation
+newOppositeReference(GenAuditRule.category, audits, 0, -1, true)
+// Atomic changes realizing the composite operation above
+create(GenAuditContainer.audits)
+
+// Applied composite operation
+collectFeature(GenAuditRoot.rules, GenAuditRoot.categories)
+// Atomic changes realizing the composite operation above
+move(GenAuditContainer, GenAuditRoot.rules)
+
+// Applied composite operation
+deleteFeature(edu.tum.cs.cope.history.impl.DeleteImpl@262dc1b3 (breaking: false, description: null) (referenceName: eStructuralFeatures).parentContainer)
+// Atomic changes realizing the composite operation above
+delete(edu.tum.cs.cope.history.impl.DeleteImpl@262dc1b3 (breaking: false, description: null) (referenceName: eStructuralFeatures).parentContainer)
+
+// Applied composite operation
+removeSuperType(GenAuditContainer, GenRuleContainerBase)
+// Atomic changes realizing the composite operation above
+remove(GenAuditContainer, eSuperTypes, GenRuleContainerBase)
+
+// Applied composite operation
+newOppositeReference(GenAuditRoot.rules, root, 1, 1, false)
+// Atomic changes realizing the composite operation above
+create(GenAuditRule.root)
+
+create(GenAuditContext.className)
+delete(getContextSelectorLocalClassName)
+delete(getAllAuditRules)
+delete(getAllAuditContainers)
+delete(getPath)
+delete(getAllRulesToTargetContextMap)
+delete(getAllTargetedModelPackages)
+delete(hasDiagramElementRule)
+

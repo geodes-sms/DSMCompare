@@ -1,0 +1,24 @@
+// Applied composite operation
+pushFeature(GenContainerBase.canonicalEditPolicyClassName)
+// Atomic changes realizing the composite operation above
+move(EditPartCandies, GenContainerBase.canonicalEditPolicyClassName)
+
+// Applied composite operation
+pullFeature([GenContainerBase.canonicalEditPolicyClassName, edu.tum.cs.cope.history.impl.DeleteImpl@53f5fcb6 (breaking: false, description: null) (referenceName: eStructuralFeatures).canonicalEditPolicyClassName], GenContainerBase)
+// Atomic changes realizing the composite operation above
+move(GenDiagram, GenContainerBase.canonicalEditPolicyClassName)
+delete(edu.tum.cs.cope.history.impl.DeleteImpl@53f5fcb6 (breaking: false, description: null) (referenceName: eStructuralFeatures).canonicalEditPolicyClassName)
+
+// Applied composite operation
+pushOperation(getCanonicalEditPolicyQualifiedClassName)
+// Atomic changes realizing the composite operation above
+move(EditPartCandies, getCanonicalEditPolicyQualifiedClassName)
+
+// Applied composite operation
+pullOperation([getCanonicalEditPolicyQualifiedClassName, getCanonicalEditPolicyQualifiedClassName], GenContainerBase)
+// Atomic changes realizing the composite operation above
+move(GenChildContainer, getCanonicalEditPolicyQualifiedClassName)
+delete(getCanonicalEditPolicyQualifiedClassName)
+
+create(needsCanonicalEditPolicy)
+

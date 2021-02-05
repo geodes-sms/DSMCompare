@@ -1,0 +1,31 @@
+// Applied composite operation
+extractSuperClass(FeatureValueSpec, [FeatureInitializer.feature, FeatureInitializer.featureSeqInitializer], mappings, FeatureInitializer, false, [])
+// Atomic changes realizing the composite operation above
+create(FeatureInitializer)
+move(FeatureValueSpec, FeatureInitializer.feature)
+move(FeatureValueSpec, FeatureInitializer.featureSeqInitializer)
+set(FeatureSeqInitializer.initializers, eType, FeatureInitializer)
+add(FeatureValueSpec, eSuperTypes, FeatureInitializer)
+
+set(FeatureInitializer, interface, true)
+set(FeatureInitializer.featureSeqInitializer, changeable, false)
+
+create(ReferenceNewElementSpec)
+create(FeatureSeqInitializer.creatingInitializer)
+create(ReferenceNewElementSpec.newElementInitializers)
+
+
+create(FeatureSeqInitializer.elementClass)
+
+// Applied composite operation
+makeFeatureVolatile(ElementInitializer.mappingEntry, true, false, false)
+// Atomic changes realizing the composite operation above
+set(ElementInitializer.mappingEntry, changeable, false)
+set(ElementInitializer.mappingEntry, volatile, true)
+set(ElementInitializer.mappingEntry, transient, true)
+set(ElementInitializer.mappingEntry, eOpposite, null)
+set(MappingEntry.domainInitializer, eOpposite, null)
+
+
+
+set(mappings, nsURI, http://www.eclipse.org/gmf/2005/mappings/2.0)

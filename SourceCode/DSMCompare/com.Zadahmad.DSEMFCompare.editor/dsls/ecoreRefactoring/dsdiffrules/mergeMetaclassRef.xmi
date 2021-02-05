@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refactoringRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoringRuleMM="www.geodes.UdeM.edu/refactoringRuleMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/refactoringRuleMM ../metamodels/refactoringRuleMM.ecore#/1"
+    name="mergeMetaclassRef">
+  <constraints>Item(11,&quot;name&quot;) == Item(21,&quot;name&quot;)</constraints>
+  <constraints>Item(11,&quot;etype&quot;) == Item(21,&quot;etype&quot;)</constraints>
+  <constraints>Item(31,&quot;name&quot;) == Item(21,&quot;name&quot;)</constraints>
+  <constraints>Item(31,&quot;etype&quot;) == Item(21,&quot;etype&quot;)</constraints>
+  <pattern name="">
+    <eclassifiers
+        xsi:type="refactoringRuleMM:Pattern_DiffEClass"
+        operation="DELETE"
+        ID_Pattern="1">
+      <ereferences
+          xsi:type="refactoringRuleMM:Pattern_DiffEReference"
+          operation="DELETE"
+          ID_Pattern="11"
+          filter="true"/>
+    </eclassifiers>
+    <eclassifiers
+        xsi:type="refactoringRuleMM:Pattern_DiffEClass"
+        operation="DELETE"
+        ID_Pattern="2">
+      <ereferences
+          xsi:type="refactoringRuleMM:Pattern_DiffEReference"
+          operation="DELETE"
+          ID_Pattern="21"
+          filter="true"/>
+    </eclassifiers>
+    <eclassifiers
+        xsi:type="refactoringRuleMM:Pattern_DiffEClass"
+        ID_Pattern="3">
+      <ereferences
+          xsi:type="refactoringRuleMM:Pattern_DiffEReference"
+          ID_Pattern="31"/>
+    </eclassifiers>
+    <domainspecificdiffs
+        xsi:type="refactoringRuleMM:Pattern_DomainSpecificDiff"
+        name="mergeMetaclassRef"
+        DomainSpecificDiff_EClass="1 3 2"
+        ID_Pattern="4"/>
+  </pattern>
+</refactoringRuleMM:Rule>

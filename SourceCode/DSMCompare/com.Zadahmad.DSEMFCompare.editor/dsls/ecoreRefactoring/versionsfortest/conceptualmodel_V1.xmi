@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="conceptualmodel">
+  <eclassifiers name="Class">
+    <eattributes name="name" etype="EString"/>
+    <eattributes name="abstract" etype="EBoolean"/>
+    <ereferences name="properties" etype="Attribute"/>
+    <ereferences name="superclass" etype="Class"/>
+    <ereferences name="composites" etype="Composite"/>
+  </eclassifiers>
+  <eclassifiers name="Attribute">
+    <eattributes name="name" etype="EString"/>
+  </eclassifiers>
+  <eclassifiers name="Composite">
+    <ereferences name="end" etype="Class"/>
+  </eclassifiers>
+  <eclassifiers name="ConceptualModel">
+    <ereferences name="classes" etype="Class"/>
+  </eclassifiers>
+</refactoring:EPackage>

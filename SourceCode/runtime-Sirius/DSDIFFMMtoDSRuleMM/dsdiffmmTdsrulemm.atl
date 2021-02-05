@@ -1,0 +1,368 @@
+-- @nsURI IMM=http://www.zadahmad.org/dsmcompare/PacmanGo
+-- @nsURI IDIFFMM=http://www.zadahmad.org/dsmcompare/PacmanGoDiffMM
+-- @nsURI IDIFFMMDef=http://www.eclipse.org/emf/2002/Ecore
+-- @nsURI IRULEMM=http://www.zadahmad.org/dsmcompare/PacmanGoRuleMM
+-- @nsURI IRULEMMMDef=http://www.eclipse.org/emf/2002/Ecore
+-- @nsURI ISDe=http://www.eclipse.org/sirius/description/1.1.0
+-- @nsURI ISDi=http://www.eclipse.org/sirius/diagram/1.1.0
+
+-- @nsURI OSDe=http://www.eclipse.org/sirius/description/1.1.0
+-- @nsURI OSDi=http://www.eclipse.org/sirius/diagram/1.1.0
+
+
+module mTd;
+create OUT1 : OSDe, OUT2 : OSDi from IN : IMM, IN1 : ISDe, IN2 : ISDi, IN3 : IDIFFMM, IN4:IDIFFMMDef, IN5:IRULEMM, IN6:IRULEMMMDef; 
+
+helper def 	: DIFF 			: String 								= 'Diff';
+helper def 	: RULE 			: String 								= 'Rule';
+helper def 	: DIFFMM 		: String 								= 'DiffMM';
+helper def 	: DIFFMMc 		: String 								= thisModule.DIFFMM+'::';
+helper def 	: DIFFMMcDIFF 	: String 								= thisModule.DIFFMMc+'Diff';	
+helper def 	: iconPath	 	: String 								= '/sample.PacmanGo.design/icons/';	
+helper def	: ruleNode 		: Sequence(OSDi!NodeMapping) 			=  Sequence{};
+helper def	: dsdEdges 		: Sequence(OSDi!EdgeMapping) 			=  Sequence{};
+helper def	: bnms 			: Sequence(OSDi!DiagramElementMapping) 	=  Sequence{}; 
+
+
+
+
+-- ------------------------------------------------------------ 
+
+rule gTg {
+	from
+		i: ISDe!Group	
+	to
+		o: OSDe!Group (
+			name <- i.name.replace(thisModule.DIFF,thisModule.RULE)
+			, ownedViewpoints <- i.getOwnedViewpoints()
+		)
+		
+
+
+}
+
+rule vTv {
+	from
+		i: ISDe!Viewpoint		
+	to
+		o: OSDe!Viewpoint (
+			name <- i.name.replace(thisModule.DIFF,thisModule.RULE)
+			, modelFileExtension <-  i.modelFileExtension.replace(thisModule.DIFF.toLower(),thisModule.RULE.toLower()).toLower()
+			, ownedRepresentations <- i.ownedRepresentations->first() --  i.ownedRepresentations->first()
+		)
+}
+
+rule ddTdd{
+	from
+		i: ISDi!DiagramDescription
+	to
+		o: OSDi!DiagramDescription  (
+			name <- i.name.replace(thisModule.DIFF,thisModule.RULE)
+			--, label <- i.label.replace(thisModule.DIFF,thisModule.RULE)
+			--, domainClass <- i.domainClass.replace(thisModule.DIFF,thisModule.RULE).split('::')->first()+'::Rule' 
+			, domainClass <- i.domainClass.split('::')->first().replace(thisModule.DIFF,thisModule.RULE) + '::Pattern_' + 
+								i.domainClass.split('::')->last()
+			, initialisation <- i.initialisation
+			, showOnStartup <- i.showOnStartup
+			, enablePopupBars <- i.enablePopupBars
+			, defaultLayer <- i.defaultLayer
+			, metamodel <- IRULEMM!Rule.getEPackage()
+		) 
+}
+
+rule dLTdL{
+	from
+		i: ISDi!Layer
+	to
+		o: OSDi!Layer (
+			name <- i.name.replace(thisModule.DIFF,thisModule.RULE)
+			--, label <- i.label.replace(thisModule.DIFF,thisModule.RULE)
+		    , nodeMappings <- i.nodeMappings->collect(e | thisModule.resolveTemp(e , 'o'))
+--														-> union(i.nodeMappings->collect(e | thisModule.resolveTemp(e , 'oDiffADD')))
+--														-> union(i.nodeMappings->collect(e | thisModule.resolveTemp(e , 'oDiffDELETE')))
+--														-> union(i.nodeMappings->collect(e | thisModule.resolveTemp(e , 'oDiffMODIFY')))
+														-> union(i.nodeMappings->collect(e | thisModule.ruleNode))
+															
+			, edgeMappings <- i.edgeMappings->collect(e | thisModule.resolveTemp(e , 'o'))
+--														-> union(i.edgeMappings->collect(e | thisModule.resolveTemp(e , 'o2')))
+--														-> union(i.nodeMappings->collect(e | thisModule.dsdEdges))
+			, toolSections <- i.toolSections
+		)
+		
+		do{			
+		}
+			
+}
+
+------------------------------------
+
+rule tsTts{
+	from
+		i: ISDi!ToolSection
+	to
+		o: OSDi!ToolSection (
+			name <- i.name.replace(thisModule.DIFF,thisModule.RULE),
+			ownedTools <- i.ownedTools
+			
+		)
+}
+
+rule ncdTncd{
+	from
+		i: ISDi!NodeCreationDescription
+	to
+		o: OSDi!NodeCreationDescription (
+			name <- i.name.replace(thisModule.DIFF,thisModule.RULE),
+			label <- i.label.replace(thisModule.DIFF,thisModule.RULE),
+			forceRefresh <- i.forceRefresh,
+			nodeMappings <- i.nodeMappings,
+			initialOperation <- i.initialOperation
+			
+		)
+}
+
+rule incoTinco{
+	from
+		i: ISDi!InitialNodeCreationOperation
+	to
+		o: OSDi!InitialNodeCreationOperation (
+			firstModelOperations <- i.firstModelOperations
+			
+		)
+}
+
+
+rule ccTcc{
+	from
+		i: ISDi!ChangeContext
+	to
+		o: OSDi!ChangeContext (
+			browseExpression <- i.browseExpression,
+			subModelOperations <- i.subModelOperations			
+		)
+}
+
+rule ciTci{
+	from
+		i: ISDi!CreateInstance
+	to
+		o: OSDi!CreateInstance (
+			typeName <- i.typeName,
+			referenceName <- i.referenceName,
+			subModelOperations <- i.subModelOperations			
+		)
+}
+
+rule svTsv{
+	from
+		i: ISDi!SetValue
+	to
+		o: OSDi!SetValue (
+			featureName <- i.featureName,
+			valueExpression <- i.valueExpression		
+		)
+}
+
+-- ------------------------------------------------------------------- dsdiff to NodeMapping
+rule ruleTn{
+	from
+		i: IRULEMMMDef!EClass    (i.name.equals('Rule'))
+	to
+		oDSrule:OSDi!NodeMapping
+		(
+			name <- i.name,
+			label <- i.name  , --'['+i.constraints+']',
+			domainClass <-   IRULEMM!Rule.getEPackage().name + '::' +i.name, 
+			semanticCandidatesExpression <- 'feature:eContainer',
+			style <- oDSrule_Style 
+		),
+		oDSrule_Style: OSDi!WorkspaceImageDescription 
+		(
+			showIcon <- true,
+			labelExpression <- 'feature:name',
+			sizeComputationExpression <- '4',
+			labelPosition <- 'border',
+			workspacePath<- thisModule.iconPath+'Rule.svg'
+		)
+			
+			
+	do
+	{
+		 thisModule.ruleNode <- thisModule.ruleNode->append(oDSrule);	
+		 thisModule.debug(thisModule.ruleNode.toString());		 
+	}
+}
+-- ------------------------------------------------------------ NODE
+
+rule nTn{
+	from
+		i: ISDi!NodeMapping 
+	to
+		o: 
+			OSDi!NodeMapping (
+				name <- i.name,
+				--label <- i.label,
+				domainClass <- 	i.domainClass.split('::')->first().replace(thisModule.DIFF,thisModule.RULE) + '::Pattern_' + 
+								i.domainClass.split('::')->last(),
+				preconditionExpression <- i.preconditionExpression, --IsOfNewDomainClassTypeQuery, -- 'aql:self.oclIsTypeOf('+NewDomainClass+')',
+				semanticCandidatesExpression <- i.semanticCandidatesExpression,
+				borderedNodeMappings <- i.borderedNodeMappings ,
+				style <- thisModule.resolveTemp(i.style , 'o')
+			)
+					
+			
+				
+		
+--		, odsdEdge: 
+--			OSDi!EdgeMapping(
+--				name <- 'dsdEdge' + i.name,
+--				label <- i.label, --+ 'DIFFMMcMODIFY',
+--				targetFinderExpression <- 'feature:DomainSpecificDiff_'+ NewDomainClass.split('::')->last(), --  i.domainClass.split('!')->last().r.replace('Diff',''),
+--				sourceMapping <- thisModule.dsdiffNode->first(),
+--				targetMapping <- Sequence{o, oDiffADD, oDiffDELETE, oDiffMODIFY}
+--				, style <-  odsdEdgeStyle
+--			), 
+--			odsdEdgeStyle: OSDi!EdgeStyleDescription (
+--			sizeComputationExpression <- '1',
+--			--strokeColor <- 'gray',
+--			centerLabelStyleDescription <- centerLSD
+--			),
+--			centerLSD: OSDi!CenterLabelStyleDescription(
+--				--labelExpression <-i.labelExpression,
+--				--labelColor <-i.labelColor
+--			)
+		
+		
+
+
+		do
+		{
+--			thisModule.dsdEdges <- thisModule.dsdEdges->union(Sequence{odsdEdge});
+
+		 	thisModule.debug(OSDi!NodeMapping.allInstances().toString());
+		}			
+}
+
+--NodeStyleDescription
+rule sTs{
+	from
+		i: ISDi!WorkspaceImageDescription 
+	to
+		o: OSDi!WorkspaceImageDescription (
+			showIcon <- i.showIcon,
+			labelExpression <- 'feature:ID_Pattern',
+			sizeComputationExpression <- i.sizeComputationExpression,
+			labelPosition <- i.labelPosition,
+			resizeKind <- i.resizeKind,
+			workspacePath <- i.workspacePath
+		)
+		
+		do{
+			
+		}
+}
+
+-- ------------------------------------------------------------ EDGE
+rule eTe{
+	from
+		i: ISDi!EdgeMapping
+	using {		
+			equalsADD: String = ' = \'ADD\'';
+			equalsDELETE: String = ' = \'DELETE\'';
+			equalsMODIFY: String = ' = \'MODIFY\'';
+			associationName: String = i.targetFinderExpression.split(':')->last();
+			domainClassName: String = i.sourceMapping->first().domainClass.toString().split('::')->last();
+	}
+	to
+		o: 
+			OSDi!EdgeMapping (
+			name <- i.name,
+			label <- i.label,
+			targetFinderExpression <- i.targetFinderExpression,
+			sourceMapping <- i.sourceMapping,
+			targetMapping <- i.targetMapping,
+			style <-  thisModule.resolveTemp(i.style , 'o') 	--	-> collect(e | thisModule.resolveTemp(e , 'o'))
+								--  ->union(i.style->collect(e | thisModule.resolveTemp(e , 'oEdgeETypeStyleDELETE')))
+		)
+		
+		do
+		{
+			--thisModule.debug(OSDi!EdgeMapping.eSet(thisModule.odsdEdge));
+		}
+		
+		
+}
+
+-- EdgeStyleDescription
+
+rule seTse{
+	from
+		i: ISDi!EdgeStyleDescription 
+	to
+		o: OSDi!EdgeStyleDescription (
+			sizeComputationExpression <- i.sizeComputationExpression,
+			strokeColor <- i.strokeColor,
+			centerLabelStyleDescription <- centerLSD
+		),
+		centerLSD: OSDi!CenterLabelStyleDescription(
+			--labelExpression <-i.labelExpression,
+			--labelColor <-i.labelColor
+		),
+				
+		oEdgeETypeStyleDELETE:OSDi!EdgeStyleDescription (
+			sizeComputationExpression <- i.sizeComputationExpression,
+			strokeColor <-  i.strokeColor,
+			centerLabelStyleDescription <- oEdgeETypeStyleDELETEcenterLSD
+		),
+		--oEdgeETypeStyleDELETEcolorDescription: OSDi!ColorDescription(
+
+			
+		--),
+		oEdgeETypeStyleDELETEcenterLSD: OSDi!CenterLabelStyleDescription(
+
+
+		)
+		
+		do{
+			--thisModule.debug(OSDi!NodeMapping->allInstances().toString());			
+		}
+}
+
+
+
+
+-- ----------------------------------------------------------- HELPERS
+
+
+--helper def : getAllBorderedNodeMappings() : String = OSDi!NodeMapping.allInstances()->collect(n | n.borderedNodeMappings)->flatten().toString();
+
+helper def:GetDIFFMMPackageName():String= IDIFFMM!DomainSpecificDiff.getEPackage().name; 
+helper def:GetDIFFMMUrlName():String= IDIFFMM!DomainSpecificDiff.getEPackage().getNsURI();
+--helper def:GetDIFFMMUrlName():String= IDIFFMM!DomainSpecificDiff.getEPackage()
+
+-- helper def:GetDIFFMMEClassName(domainClassName: String):String= IDIFFMM!DomainSpecificDiff.getEPackage().getEClassifier(domainClassName).name; 
+	
+
+helper  def : GetRelatedbnms(associationName:String, domainClassName: String) : Sequence (OSDi!DiagramElementMapping) = 
+	thisModule.bnms-> select(b | b.name.contains(self.GetECC(associationName, domainClassName)->first()))
+				->flatten()
+			;
+			
+
+helper def : GetECC(associationName:String, domainClassName: String) : String = 
+	IMM!Pacman.getEPackage().getEClassifier(domainClassName)
+		.getEAllReferences()->asSequence()->select(r|r.toString().split('!')->last()=associationName)
+		->collect(r | r.getEContainingClass().toString().split('!')->last()); 
+
+helper def : GetEAllReferences(domainClass:String) : Sequence (String) = 
+	IMM!Pacman.getEPackage().getEClassifier(domainClass.split('::')->last())
+		.getEAllReferences()->asSequence()->
+		collect(r | 'Diff'	+ 	r.getEContainingClass().toString().split('!')->last()
+							+	'_'		
+							+	r.toString().split('!')->last()
+			);
+
+
+helper def : bnmsStyleName(bnmsName : String) : String =
+	let name : String = bnmsName.split(' ')->last().split('!')->last() in bnmsName;
+

@@ -1,0 +1,1639 @@
+ePackageImport  refactoringDiffMM
+
+		rule extractSuperclassAttr(VAR n11name:EString, VAR n21name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:DiffEClass{
+					preserve operation = "ADD"
+				}
+				 preserve			node n11:DiffEAttribute{
+					preserve operation = "ADD"
+					preserve name =  n11name
+				}
+				 preserve			node n2:EClass
+				 delete				node n21:DiffEAttribute{
+					delete operation = "DELETE"
+					delete name =  n21name
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"extractSuperclassAttr\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(preserve	n1->n11:eattributes),
+			  		(delete		n2->n21:eattributes),
+			  		(preserve	n2->n1:esupertypes),
+			  		(create		n3->n2:DomainSpecificDiff_EClass),
+			  		(create		n3->n11:DomainSpecificDiff_EAttribute)
+	      		 ]
+			}
+			conditions [n11name == n21name]
+		}
+//----------------------------------------------------------------------
+
+		rule extractSuperclassRef(VAR n11name:EString, VAR n21name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:DiffEClass{
+					preserve operation = "ADD"
+				}
+				 preserve			node n11:DiffEReference{
+					preserve operation = "ADD"
+					preserve name =  n11name
+				}
+				 preserve			node n2:EClass
+				 delete				node n21:DiffEReference{
+					delete operation = "DELETE"
+					delete name =  n21name
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"extractSuperclassRef\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(preserve	n1->n11:ereferences),
+			  		(delete		n2->n21:ereferences),
+			  		(preserve	n2->n1:esupertypes),
+			  		(create		n3->n2:DomainSpecificDiff_EClass),
+			  		(create		n3->n11:DomainSpecificDiff_EReference)
+	      		 ]
+			}
+			conditions [n11name == n21name]
+		}
+//----------------------------------------------------------------------
+
+		rule flattenHierarchyAttr(VAR n11name:EString, VAR n21name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:DiffEClass{
+					preserve operation = "DELETE"
+				}
+				 delete				node n11:DiffEAttribute{
+					delete operation = "DELETE"
+					delete name =  n11name
+				}
+				 preserve			node n2:EClass
+				 preserve			node n21:DiffEAttribute{
+					preserve operation = "ADD"
+					preserve name =  n21name
+				}
+				 preserve				node n22:DiffEClass_esupertypes{
+					preserve operation = "DELETE"
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"flattenHierarchyAttr\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(delete		n1->n11:eattributes),
+			  		(preserve	n2->n21:eattributes),
+			  		(preserve	n2->n22:diffesupertypes),
+			  		(preserve	n22->n1:eType),
+			  		(create		n3->n1:DomainSpecificDiff_EClass),
+			  		(create		n3->n2:DomainSpecificDiff_EClass),
+			  		(create		n3->n21:DomainSpecificDiff_EAttribute)
+	      		 ]
+			}
+			conditions [n11name == n21name]
+		}
+//----------------------------------------------------------------------
+
+		rule flattenHierarchyRef(VAR n11name:EString, VAR n21name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:DiffEClass{
+					preserve operation = "DELETE"
+				}
+				 delete				node n11:DiffEReference{
+					delete operation = "DELETE"
+					delete name =  n11name
+				}
+				 preserve			node n2:EClass
+				 preserve			node n21:DiffEReference{
+					preserve operation = "ADD"
+					preserve name =  n21name
+				}
+				 preserve				node n22:DiffEClass_esupertypes{
+					preserve operation = "DELETE"
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"flattenHierarchyRef\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(delete		n1->n11:ereferences),
+			  		(preserve	n2->n21:ereferences),
+			  		(preserve	n2->n22:diffesupertypes),
+			  		(preserve	n22->n1:eType),
+			  		(create		n3->n1:DomainSpecificDiff_EClass),
+			  		(create		n3->n2:DomainSpecificDiff_EClass),
+			  		(create		n3->n21:DomainSpecificDiff_EReference)
+	      		 ]
+			}
+			conditions [n11name == n21name]
+		}
+//----------------------------------------------------------------------
+
+		rule mergeMetaclassAttr(VAR n11name:EString, VAR n21name:EString, VAR n11etype:EString, VAR n21etype:EString, VAR n31name:EString, VAR n31etype:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:DiffEClass{
+					preserve operation = "DELETE"
+				}
+				 delete				node n11:DiffEAttribute{
+					delete operation = "DELETE"
+					delete name =  n11name
+					delete etype =  n11etype
+				}
+				 preserve			node n2:DiffEClass{
+					preserve operation = "DELETE"
+				}
+				 delete				node n21:DiffEAttribute{
+					delete operation = "DELETE"
+					delete name =  n21name
+					delete etype =  n21etype
+				}
+				 preserve			node n3:DiffEClass{
+					preserve operation = "ADD"
+				}
+				 preserve			node n31:DiffEAttribute{
+					preserve operation = "ADD"
+					preserve name =  n31name
+					preserve etype =  n31etype
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"mergeMetaclassAttr\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(delete		n1->n11:eattributes),
+			  		(delete		n2->n21:eattributes),
+			  		(preserve	n3->n31:eattributes),
+			  		(create		n4->n1:DomainSpecificDiff_EClass),
+			  		(create		n4->n3:DomainSpecificDiff_EClass),
+			  		(create		n4->n2:DomainSpecificDiff_EClass)
+	      		 ]
+			}
+			conditions [n11name == n21name, n11etype == n21etype, n31name == n21name, n31etype == n21etype]
+		}
+//----------------------------------------------------------------------
+
+		rule mergeMetaclassRef(VAR n11name:EString, VAR n21name:EString, VAR n11etype:EString, VAR n21etype:EString, VAR n31name:EString, VAR n31etype:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:DiffEClass{
+					preserve operation = "DELETE"
+				}
+				 delete				node n11:DiffEReference{
+					delete operation = "DELETE"
+					delete name =  n11name
+					delete etype =  n11etype
+				}
+				 preserve			node n2:DiffEClass{
+					preserve operation = "DELETE"
+				}
+				 delete				node n21:DiffEReference{
+					delete operation = "DELETE"
+					delete name =  n21name
+					delete etype =  n21etype
+				}
+				 preserve			node n3:DiffEClass{
+					preserve operation = "ADD"
+				}
+				 preserve			node n31:DiffEReference{
+					preserve operation = "ADD"
+					preserve name =  n31name
+					preserve etype =  n31etype
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"mergeMetaclassRef\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(delete		n1->n11:ereferences),
+			  		(delete		n2->n21:ereferences),
+			  		(preserve	n3->n31:ereferences),
+			  		(create		n4->n1:DomainSpecificDiff_EClass),
+			  		(create		n4->n3:DomainSpecificDiff_EClass),
+			  		(create		n4->n2:DomainSpecificDiff_EClass),
+			  		(create		n4->n31:DomainSpecificDiff_EReference)
+	      		 ]
+			}
+			conditions [n11name == n21name, n11etype == n21etype, n31name == n21name, n31etype == n21etype]
+		}
+//----------------------------------------------------------------------
+
+		rule mergeReference(VAR n11etype:EString, VAR n21etype:EString, VAR n12etype:EString, VAR n2name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 delete				node n11:DiffEReference{
+					delete operation = "DELETE"
+					delete etype =  n11etype
+				}
+				 preserve			node n12:DiffEReference{
+					preserve operation = "ADD"
+					preserve etype =  n12etype
+				}
+				 preserve			node n2:EClass{
+					preserve name =  n2name
+				}
+				 preserve			node n21:EReference{
+					preserve etype =  n21etype
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"mergeReferences\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(delete		n1->n11:ereferences),
+			  		(preserve	n1->n12:ereferences),
+			  		(preserve	n2->n21:ereferences),
+			  		(create		n3->n12:DomainSpecificDiff_EReference),
+			  		(create		n3->n21:DomainSpecificDiff_EReference),
+			  		(create		n3->n1:DomainSpecificDiff_EClass),
+			  		(create		n3->n2:DomainSpecificDiff_EClass)
+	      		 ]
+			}
+			conditions [n11etype == n21etype, n12etype == n2name]
+		}
+//----------------------------------------------------------------------
+
+		rule moveAttribute(VAR n11name:EString, VAR n21name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n11:DiffEAttribute{
+					preserve operation = "ADD"
+					preserve name =  n11name
+				}
+				 preserve			node n2:EClass
+				 delete				node n21:DiffEAttribute{
+					delete operation = "DELETE"
+					delete name =  n21name
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"moveAttribute\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(preserve	n1->n11:eattributes),
+			  		(delete		n2->n21:eattributes),
+			  		(create		n3->n11:DomainSpecificDiff_EAttribute),
+			  		(create		n3->n2:DomainSpecificDiff_EClass)
+	      		 ]
+			}
+			conditions [n11name == n21name]
+		}
+//----------------------------------------------------------------------
+
+		rule moveMethod(VAR n11name:EString, VAR n21name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n11:DiffEOperation{
+					preserve operation = "ADD"
+					preserve name =  n11name
+				}
+				 preserve			node n2:EClass
+				 delete				node n21:DiffEOperation{
+					delete operation = "DELETE"
+					delete name =  n21name
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"moveMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(preserve	n1->n11:eoperations),
+			  		(delete		n2->n21:eoperations),
+			  		(create		n3->n2:DomainSpecificDiff_EClass),
+			  		(create		n3->n11:DomainSpecificDiff_EOperation)
+	      		 ]
+			}
+			conditions [n11name == n21name]
+		}
+//----------------------------------------------------------------------
+
+		rule moveReference(VAR n11name:EString, VAR n21name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n11:DiffEReference{
+					preserve operation = "ADD"
+					preserve name =  n11name
+				}
+				 preserve			node n2:EClass
+				 delete				node n21:DiffEReference{
+					delete operation = "DELETE"
+					delete name =  n21name
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"moveReference\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(preserve	n1->n11:ereferences),
+			  		(delete		n2->n21:ereferences),
+			  		(create		n3->n2:DomainSpecificDiff_EClass),
+			  		(create		n3->n11:DomainSpecificDiff_EReference)
+	      		 ]
+			}
+			conditions [n11name == n21name]
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpAttribute(VAR n11name:EString, VAR n21name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n11:DiffEAttribute{
+					preserve operation = "ADD"
+					preserve name =  n11name
+				}
+				 preserve			node n2:EClass
+				 delete				node n21:DiffEAttribute{
+					delete operation = "DELETE"
+					delete name =  n21name
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"pullUpAttribute\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(preserve	n1->n11:eattributes),
+			  		(delete		n2->n21:eattributes),
+			  		(preserve	n2->n1:esupertypes),
+			  		(create		n3->n11:DomainSpecificDiff_EAttribute),
+			  		(create		n3->n2:DomainSpecificDiff_EClass)
+	      		 ]
+			}
+			conditions [n11name == n21name]
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpMethod(VAR n11name:EString, VAR n21name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n11:DiffEOperation{
+					preserve operation = "ADD"
+					preserve name =  n11name
+				}
+				 preserve			node n2:EClass
+				 delete				node n21:DiffEOperation{
+					delete operation = "DELETE"
+					delete name =  n21name
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"pullUpMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(preserve	n1->n11:eoperations),
+			  		(delete		n2->n21:eoperations),
+			  		(preserve	n2->n1:esupertypes),
+			  		(create		n3->n2:DomainSpecificDiff_EClass),
+			  		(create		n3->n11:DomainSpecificDiff_EOperation)
+	      		 ]
+			}
+			conditions [n11name == n21name]
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpReference(VAR n11name:EString, VAR n21name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n11:DiffEReference{
+					preserve operation = "ADD"
+					preserve name =  n11name
+				}
+				 preserve			node n2:EClass
+				 delete				node n21:DiffEReference{
+					delete operation = "DELETE"
+					delete name =  n21name
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"pullUpReference\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(preserve	n1->n11:ereferences),
+			  		(delete		n2->n21:ereferences),
+			  		(preserve	n2->n1:esupertypes),
+			  		(create		n3->n2:DomainSpecificDiff_EClass),
+			  		(create		n3->n11:DomainSpecificDiff_EReference)
+	      		 ]
+			}
+			conditions [n11name == n21name]
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownAttribute(VAR n11name:EString, VAR n21name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 delete				node n11:DiffEAttribute{
+					delete operation = "DELETE"
+					delete name =  n11name
+				}
+				 preserve			node n2:EClass
+				 preserve			node n21:DiffEAttribute{
+					preserve operation = "ADD"
+					preserve name =  n21name
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"pushDownAttribute\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(delete		n1->n11:eattributes),
+			  		(preserve	n2->n21:eattributes),
+			  		(preserve	n2->n1:esupertypes),
+			  		(create		n3->n21:DomainSpecificDiff_EAttribute),
+			  		(create		n3->n1:DomainSpecificDiff_EClass)
+	      		 ]
+			}
+			conditions [n11name == n21name]
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownMethod(VAR n11name:EString, VAR n21name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 delete				node n11:DiffEOperation{
+					delete operation = "DELETE"
+					delete name =  n11name
+				}
+				 preserve			node n2:EClass
+				 preserve			node n21:DiffEOperation{
+					preserve operation = "ADD"
+					preserve name =  n21name
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"pushDownMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(delete		n1->n11:eoperations),
+			  		(preserve	n2->n21:eoperations),
+			  		(preserve	n2->n1:esupertypes),
+			  		(create		n3->n1:DomainSpecificDiff_EClass),
+			  		(create		n3->n21:DomainSpecificDiff_EOperation)
+	      		 ]
+			}
+			conditions [n11name == n21name]
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownReference(VAR n11name:EString, VAR n21name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 delete				node n11:DiffEReference{
+					delete operation = "DELETE"
+					delete name =  n11name
+				}
+				 preserve			node n2:EClass
+				 preserve			node n21:DiffEReference{
+					preserve operation = "ADD"
+					preserve name =  n21name
+				}
+				 create				node n3:DomainSpecificDiff{
+					create name = "\"pushDownReference\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n0->n3:domainspecificdiffs),
+			  		(delete		n1->n11:ereferences),
+			  		(preserve	n2->n21:ereferences),
+			  		(preserve	n2->n1:esupertypes),
+			  		(create		n3->n1:DomainSpecificDiff_EClass),
+			  		(create		n3->n21:DomainSpecificDiff_EReference)
+	      		 ]
+			}
+			conditions [n11name == n21name]
+		}
+//----------------------------------------------------------------------
+
+		rule removeMiddleMan(VAR n11etype:EString, VAR nn2name:EString, VAR n12etype:EString, VAR nn3name:EString, VAR n21etype:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 delete				node n11:DiffEReference{
+					delete operation = "DELETE"
+					delete etype =  n11etype
+				}
+				 preserve			node n12:DiffEReference{
+					preserve operation = "ADD"
+					preserve etype =  n12etype
+				}
+				 preserve			node n2:EClass
+				 delete				node n21:DiffEReference{
+					delete operation = "DELETE"
+					delete etype =  n21etype
+				}
+				 preserve			node n3:EClass
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"removeMiddleMan\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(delete		n1->n11:ereferences),
+			  		(preserve	n1->n12:ereferences),
+			  		(delete		n2->n21:ereferences),
+			  		(create		n4->n1:DomainSpecificDiff_EClass),
+			  		(create		n4->n2:DomainSpecificDiff_EClass),
+			  		(create		n4->n3:DomainSpecificDiff_EClass),
+			  		(create		n4->n12:DomainSpecificDiff_EReference)
+	      		 ]
+			}
+			conditions [n11etype == nn2name, n12etype == nn3name, n21etype == nn3name]
+		}
+//----------------------------------------------------------------------
+
+		rule renameAttribute(VAR n11name:EString, VAR n11new_name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n11:DiffEAttribute{
+					preserve operation = "MODIFY"
+					preserve name =  n11name
+					preserve new_name =  n11new_name
+				}
+				 create				node n2:DomainSpecificDiff{
+					create name = "\"renameAttribute\""
+				}
+				forbid				node n3:DomainSpecificDiff{
+					forbid name = "\"renameAttribute\""
+				} 
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(create		n0->n2:domainspecificdiffs),
+			  		(preserve	n1->n11:eattributes),
+			  		(create		n2->n11:DomainSpecificDiff_EAttribute),
+			  		(forbid		n3->n11:DomainSpecificDiff_EAttribute),
+			  		(create		n2->n1:DomainSpecificDiff_EClass)
+	      		 ]
+			}
+			conditions [n11name != n11new_name, n11new_name  != "\"\"" ]
+		}
+//----------------------------------------------------------------------
+
+		rule renameMethod(VAR n11name:EString, VAR n11new_name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n11:DiffEOperation{
+					preserve operation = "MODIFY"
+					preserve name =  n11name
+					preserve new_name =  n11new_name
+				}
+				 create				node n2:DomainSpecificDiff{
+					create name = "\"renameMethod\""
+				}
+				forbid				node n3:DomainSpecificDiff{
+					forbid name = "\"renameMethod\""
+				} 
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(create		n0->n2:domainspecificdiffs),
+			  		(preserve	n1->n11:eoperations),
+			  		(create		n2->n11:DomainSpecificDiff_EOperation),
+			  		(forbid		n3->n11:DomainSpecificDiff_EOperation),
+			  		(create		n2->n1:DomainSpecificDiff_EClass)
+	      		 ]
+			}
+			conditions [n11name != n11new_name, n11new_name  != "\"\"" ]
+		}
+//----------------------------------------------------------------------
+
+		rule renameReference(VAR n11name:EString, VAR n11new_name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n11:DiffEReference{
+					preserve operation = "MODIFY"
+					preserve name =  n11name
+					preserve new_name =  n11new_name
+				}
+				 create				node n2:DomainSpecificDiff{
+					create name = "\"renameReference\""
+				}
+				forbid				node n3:DomainSpecificDiff{
+					forbid name = "\"renameReference\""
+				} 
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(create		n0->n2:domainspecificdiffs),
+			  		(preserve	n1->n11:ereferences),
+			  		(create		n2->n11:DomainSpecificDiff_EReference),
+			  		(forbid		n3->n11:DomainSpecificDiff_EReference),
+			  		(create		n2->n1:DomainSpecificDiff_EClass)
+	      		 ]
+			}
+			conditions [n11name != n11new_name, n11new_name  != "\"\"" ]
+		}
+		
+//----------------------------------------------------------------------
+
+		rule extractSuperclassGMF()
+		{
+			graph
+			{
+				preserve			node n0:EPackage
+				preserve			node n1:DiffEClass{
+					preserve operation = "ADD"
+				}
+				preserve			node n2:EClass
+				delete				node n21:DiffEClass_esupertypes{
+					delete operation = "DELETE"
+				}				
+				preserve				node n22:DiffEClass_esupertypes{
+					preserve operation = "ADD"
+				}				
+				create				node n3:DomainSpecificDiff{
+					create name = "\"extractSuperclassGMF\""
+				}
+				
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n0->n3:domainspecificdiffs),	
+			  		(delete		n2->n21:diffesupertypes),		
+			  		(preserve	n2->n22:diffesupertypes),	
+			  		(preserve	n22->n1:eType),			  	  		
+			  		(create		n3->n2:DomainSpecificDiff_EClass)
+	      		 ]
+			}
+		}
+		
+//---
+
+		rule specializeSuperTypeGMF()
+		{
+			graph
+			{
+				preserve	node n0:EPackage
+				preserve	node n1:EClass
+				preserve	node n2:EClass
+				preserve	node n3:EClass
+				delete		node n31:DiffEClass_esupertypes{
+					delete 		operation = "DELETE"
+				}				
+				preserve	node n32:DiffEClass_esupertypes{
+					preserve 	operation = "ADD"
+				}				
+				create		node n4:DomainSpecificDiff{
+					create 		name = "\"specializeSuperTypeGMF\""
+				}
+				
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		//(preserve	n2->n1:esupertypes),			  	
+			  		(delete		n3->n31:diffesupertypes),		
+			  		(preserve	n3->n32:diffesupertypes),		
+			  		(delete		n31->n1:eType),			  	
+			  		(preserve	n32->n2:eType),	
+					(create		n4->n1:DomainSpecificDiff_EClass),
+			  	  	(create		n4->n2:DomainSpecificDiff_EClass), 		
+			  		(create		n4->n3:DomainSpecificDiff_EClass)
+	      		 ]
+			}
+		}
+		
+//---
+
+		rule pushFeatureEReferenceGMF(VAR n11name:EString)
+		{
+			graph
+			{
+				preserve	node n0:EPackage
+				preserve	node n1:EClass
+				delete		node n11:DiffEReference{
+					delete operation = "DELETE"
+					delete name =  n11name
+				}
+				preserve	node n2:EClass
+				preserve	node n21:DiffEReference{
+					preserve operation = "ADD"
+					preserve name =  n11name
+				}
+				create		node n4:DomainSpecificDiff{
+					create 		name = "\"pushFeatureGMF\""
+				}
+				
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create  	n0->n4:domainspecificdiffs),
+			  		(delete		n1->n11:ereferences),	
+			  		(preserve	n2->n21:ereferences), 	  	  		
+			  		(create		n4->n1:DomainSpecificDiff_EClass), 	  	  		
+			  		(create		n4->n2:DomainSpecificDiff_EClass)
+	      		 ]
+			}
+		}		
+		
+//---
+
+		rule pushFeatureEAttributeGMF(VAR n11name:EString)
+		{
+			graph
+			{
+				preserve	node n0:EPackage
+				preserve	node n1:EClass
+				delete		node n11:DiffEAttribute{
+					delete operation = "DELETE"
+					delete name =  n11name
+				}
+				preserve	node n2:EClass
+				preserve	node n21:DiffEAttribute{
+					preserve operation = "ADD"
+					preserve name =  n11name
+				}
+				create		node n4:DomainSpecificDiff{
+					create 		name = "\"pushFeatureGMF\""
+				}
+				
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create  	n0->n4:domainspecificdiffs),
+			  		(delete		n1->n11:eattributes),	
+			  		(preserve	n2->n21:eattributes), 	  	  		
+			  		(create		n4->n1:DomainSpecificDiff_EClass), 	  	  		
+			  		(create		n4->n2:DomainSpecificDiff_EClass)
+	      		 ]
+			}
+		}
+		
+//---
+
+		rule deleteFeatureEClassGMF()
+		{
+			graph
+			{
+				preserve	node n0:EPackage
+				preserve	node n1:DiffEClass{
+					preserve operation = "DELETE"
+				}
+				create		node n2:DomainSpecificDiff{
+					create 		name = "\"deleteFeature\""
+				}
+				forbid				node n3:DomainSpecificDiff{
+					forbid name = "\"deleteFeature\""
+				} 
+				
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+					(create		n0->n2:domainspecificdiffs),
+					(forbid		n0->n3:domainspecificdiffs),  					
+			  		(create		n2->n1:DomainSpecificDiff_EClass),  					
+			  		(forbid		n3->n1:DomainSpecificDiff_EClass)
+	      		 ]
+			}
+		}
+		
+		rule extractSuperclassGMF2()
+		{
+			graph
+			{
+				preserve	node n0:EPackage
+				preserve	node n1:EClass
+				preserve	node n2:DiffEClass{
+					preserve operation = "ADD"
+				}
+				preserve	node n3:EClass
+				delete		node n31:DiffEClass_esupertypes{
+					delete 		operation = "DELETE"
+				}				
+				preserve	node n32:DiffEClass_esupertypes{
+					preserve 	operation = "ADD"
+				}				
+				create		node n4:DomainSpecificDiff{
+					create 		name = "\"extractSuperclassGMF\""
+				}
+				
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		//(preserve	n1->n2:esupertypes),			  	
+			  		(delete		n3->n31:diffesupertypes),		
+			  		(preserve	n3->n32:diffesupertypes),		
+			  		(delete		n31->n1:eType),			  	
+			  		(preserve	n32->n2:eType),	
+					(create		n4->n1:DomainSpecificDiff_EClass),
+			  	  	(create		n4->n2:DomainSpecificDiff_EClass), 		
+			  		(create		n4->n3:DomainSpecificDiff_EClass)
+	      		 ]
+			}
+		}
+		
+unit loop_extractSuperclassGMF2(){
+	while{
+		extractSuperclassGMF2()
+	}
+}				
+				
+//---
+
+unit loop_deleteFeatureEClassGMF(){
+	while{
+		deleteFeatureEClassGMF()
+	}
+}
+
+unit loop_pushFeatureEAttributeGMF(){
+	while{
+		pushFeatureEAttributeGMF()
+	}
+}
+
+unit loop_pushFeatureEReferenceGMF(){
+	while{
+		pushFeatureEReferenceGMF()
+	}
+}	
+
+unit loop_extractSuperclassGMF(){
+	while{
+		extractSuperclassGMF()
+	}
+}	
+
+
+unit loop_specializeSuperTypeGMF(){
+	while{
+		specializeSuperTypeGMF()
+	}
+}	
+
+unit unitGMF(){	
+	loop_extractSuperclassGMF2()
+	//loop_extractSuperclassGMF()
+	loop_specializeSuperTypeGMF()
+	loop_deleteFeatureEClassGMF()
+	loop_pushFeatureEAttributeGMF()
+	loop_pushFeatureEReferenceGMF()
+}
+
+//----------------------------------------------------------------------
+		rule extractSuperclassGMFmap()
+		{
+			graph
+			{
+				preserve	node n0:EPackage
+				preserve	node n1:EClass
+				preserve	node n2:DiffEClass{
+					preserve operation = "ADD"
+				}
+				preserve	node n3:EClass
+				preserve	node n32:DiffEClass_esupertypes{
+					preserve 	operation = "ADD"
+				}				
+				create		node n4:DomainSpecificDiff{
+					create 		name = "\"extractSuperclassGMF\""
+				}
+				
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		//(preserve	n1->n2:esupertypes),			  	
+			  		//(delete		n3->n31:diffesupertypes),		
+			  		(delete	n3->n32:diffesupertypes),		
+			  		//(delete		n31->n1:eType),
+					(create		n4->n1:DomainSpecificDiff_EClass),
+			  	  	(create		n4->n2:DomainSpecificDiff_EClass), 		
+			  		(create		n4->n3:DomainSpecificDiff_EClass)
+	      		 ]
+			}
+		}
+		
+		
+//---
+
+		rule replaceEnumGMFmap(VAR n11newetype:EString)
+		{
+			graph
+			{
+				preserve	node n0:EPackage
+				preserve	node n1:EClass
+				preserve	node n11:DiffEAttribute{
+					preserve operation = "MODIFY"
+					preserve new_etype =  n11newetype
+				}
+				create		node n2:DomainSpecificDiff{
+					create 		name = "\"replaceEnumGMFmap\""
+				}
+				forbid		node n3:DomainSpecificDiff{
+					forbid 		name = "\"replaceEnumGMFmap\""
+				}
+				
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(create		n0->n2:domainspecificdiffs),
+			  		(forbid		n0->n3:domainspecificdiffs),	  	
+			  		(preserve	n1->n11:eattributes),	
+					(create		n2->n1:DomainSpecificDiff_EClass),
+			  		(create		n2->n11:DomainSpecificDiff_EAttribute),	
+					(forbid		n3->n1:DomainSpecificDiff_EClass),
+			  		(forbid		n3->n11:DomainSpecificDiff_EAttribute)
+	      		 ]
+			}
+			conditions [n11newetype != "\"EString\"", n11newetype != "\"ESInt\""]
+		}
+		
+//---
+unit loop_replaceEnumGMFmap(){
+	while{
+		replaceEnumGMFmap()
+	}
+}	
+		
+//---
+unit loop_extractSuperclassGMFmap(){
+	while{
+		extractSuperclassGMFmap()
+	}
+}	
+		
+//---
+
+unit unitGMFmap(){
+	loop_replaceEnumGMFmap()	
+	loop_extractSuperclassGMFmap()
+	loop_pushFeatureEAttributeGMF()
+	loop_pushFeatureEReferenceGMF()
+}
+
+//--------------------------------------------------------------------------------
+//For MM-Refactoring, you can use the following orders of clusters (not of the rules!):
+//0 1 2 3 4 5 6 7 8  // our order
+//8 7 6 5 4 3 2 1 0  // our order
+//4 2 8 7 0 6 1 3 5  // random 1
+//6 0 7 1 2 4 8 5 3  // random 2
+//7 3 0 8 6 1 5 4 2  // random 3
+//5 8 1 6 7 0 3 2 4  // random 4
+//2 5 3 4 1 7 0 8 6  // random 5
+//1 6 5 2 3 8 4 0 7  // random 6
+//--------------------------------------------------------------------------------
+unit unitAlgorithmOrder(){
+			loop_renameAttribute() loop_renameMethod() loop_renameReference() 				//0// 17 - 18 - 19
+			loop_mergeReference() loop_moveAttribute() loop_moveMethod() 					//1// 6  - 7  - 8
+			loop_flattenHierarchyAttr() loop_extractSuperclassRef() loop_pullUpMethod() 	//2// 1  - 2  - 11	
+			loop_flattenHierarchyRef() loop_pullUpAttribute() loop_pushDownMethod()			//3// 3  - 10 - 14
+			loop_pushDownAttribute() loop_pushDownReference() 								//4// 13 - 15
+			loop_extractSuperclassAttr() loop_moveReference()								//5// 0  - 9
+			loop_mergeMetaclassAttr() loop_pullUpReference() 								//6// 4  - 12
+			loop_mergeMetaclassRef() 														//7// 5 
+			loop_removeMiddleMan()															//8// 16
+}
+
+unit unitReverseOrderSeq(){
+			loop_removeMiddleMan()															//8// 16
+			loop_mergeMetaclassRef() 														//7// 5 
+			loop_mergeMetaclassAttr() loop_pullUpReference() 								//6// 4  - 12
+			loop_extractSuperclassAttr() loop_moveReference()								//5// 0  - 9
+			loop_pushDownAttribute() loop_pushDownReference() 								//4// 13 - 15
+			loop_flattenHierarchyRef() loop_pullUpAttribute() loop_pushDownMethod()			//3// 3  - 10 - 14
+			loop_flattenHierarchyAttr() loop_extractSuperclassRef() loop_pullUpMethod() 	//2// 1  - 2  - 11	
+			loop_mergeReference() loop_moveAttribute() loop_moveMethod() 					//1// 6  - 7  - 8
+			loop_renameAttribute() loop_renameMethod() loop_renameReference() 				//0// 17 - 18 - 19
+}
+
+unit unitRandCluster1(){
+			loop_pushDownAttribute() loop_pushDownReference() 								//4// 13 - 15
+			loop_flattenHierarchyAttr() loop_extractSuperclassRef() loop_pullUpMethod() 	//2// 1  - 2  - 11
+			loop_removeMiddleMan()															//8// 16
+			loop_mergeMetaclassRef() 														//7// 5 
+			loop_renameAttribute() loop_renameMethod() loop_renameReference() 				//0// 17 - 18 - 19
+			loop_mergeMetaclassAttr() loop_pullUpReference() 								//6// 4  - 12
+			loop_mergeReference() loop_moveAttribute() loop_moveMethod() 					//1// 6  - 7  - 8
+			loop_flattenHierarchyRef() loop_pullUpAttribute() loop_pushDownMethod()			//3// 3  - 10 - 14
+			loop_extractSuperclassAttr() loop_moveReference()								//5// 0  - 9
+}
+
+unit unitRandCluster2(){
+			loop_mergeMetaclassAttr() loop_pullUpReference() 								//6// 4  - 12
+			loop_renameAttribute() loop_renameMethod() loop_renameReference() 				//0// 17 - 18 - 19
+			loop_mergeMetaclassRef() 														//7// 5 
+			loop_mergeReference() loop_moveAttribute() loop_moveMethod() 					//1// 6  - 7  - 8
+			loop_flattenHierarchyAttr() loop_extractSuperclassRef() loop_pullUpMethod() 	//2// 1  - 2  - 11
+			loop_pushDownAttribute() loop_pushDownReference() 								//4// 13 - 15
+			loop_removeMiddleMan()															//8// 16
+			loop_extractSuperclassAttr() loop_moveReference()								//5// 0  - 9
+			loop_flattenHierarchyRef() loop_pullUpAttribute() loop_pushDownMethod()			//3// 3  - 10 - 14
+}
+
+unit unitRandCluster3(){
+			loop_mergeMetaclassRef() 														//7// 5 
+			loop_flattenHierarchyRef() loop_pullUpAttribute() loop_pushDownMethod()			//3// 3  - 10 - 14
+			loop_renameAttribute() loop_renameMethod() loop_renameReference() 				//0// 17 - 18 - 19
+			loop_removeMiddleMan()															//8// 16
+			loop_mergeMetaclassAttr() loop_pullUpReference() 								//6// 4  - 12
+			loop_mergeReference() loop_moveAttribute() loop_moveMethod() 					//1// 6  - 7  - 8
+			loop_extractSuperclassAttr() loop_moveReference()								//5// 0  - 9
+			loop_pushDownAttribute() loop_pushDownReference() 								//4// 13 - 15
+			loop_flattenHierarchyAttr() loop_extractSuperclassRef() loop_pullUpMethod() 	//2// 1  - 2  - 11
+}
+
+unit unitRandCluster4(){
+			loop_extractSuperclassAttr() loop_moveReference()								//5// 0  - 9
+			loop_removeMiddleMan()															//8// 16
+			loop_mergeReference() loop_moveAttribute() loop_moveMethod() 					//1// 6  - 7  - 8
+			loop_mergeMetaclassAttr() loop_pullUpReference() 								//6// 4  - 12
+			loop_mergeMetaclassRef() 														//7// 5 
+			loop_renameAttribute() loop_renameMethod() loop_renameReference() 				//0// 17 - 18 - 19
+			loop_flattenHierarchyRef() loop_pullUpAttribute() loop_pushDownMethod()			//3// 3  - 10 - 14
+			loop_flattenHierarchyAttr() loop_extractSuperclassRef() loop_pullUpMethod() 	//2// 1  - 2  - 11
+			loop_pushDownAttribute() loop_pushDownReference() 								//4// 13 - 15
+}
+
+unit unitRandCluster5(){
+			loop_flattenHierarchyAttr() loop_extractSuperclassRef() loop_pullUpMethod() 	//2// 1  - 2  - 11
+			loop_extractSuperclassAttr() loop_moveReference()								//5// 0  - 9
+			loop_flattenHierarchyRef() loop_pullUpAttribute() loop_pushDownMethod()			//3// 3  - 10 - 14
+			loop_pushDownAttribute() loop_pushDownReference() 								//4// 13 - 15
+			loop_mergeReference() loop_moveAttribute() loop_moveMethod() 					//1// 6  - 7  - 8
+			loop_mergeMetaclassRef() 														//7// 5 
+			loop_renameAttribute() loop_renameMethod() loop_renameReference() 				//0// 17 - 18 - 19
+			loop_removeMiddleMan()															//8// 16
+			loop_mergeMetaclassAttr() loop_pullUpReference() 								//6// 4  - 12
+}
+
+unit unitRandCluster6(){
+			loop_mergeReference() loop_moveAttribute() loop_moveMethod() 					//1// 6  - 7  - 8
+			loop_mergeMetaclassAttr() loop_pullUpReference() 								//6// 4  - 12
+			loop_extractSuperclassAttr() loop_moveReference()								//5// 0  - 9
+			loop_flattenHierarchyAttr() loop_extractSuperclassRef() loop_pullUpMethod() 	//2// 1  - 2  - 11
+			loop_flattenHierarchyRef() loop_pullUpAttribute() loop_pushDownMethod()			//3// 3  - 10 - 14
+			loop_removeMiddleMan()															//8// 16
+			loop_pushDownAttribute() loop_pushDownReference() 								//4// 13 - 15
+			loop_renameAttribute() loop_renameMethod() loop_renameReference() 				//0// 17 - 18 - 19
+			loop_mergeMetaclassRef() 														//7// 5 
+}
+
+//----------------------------------------------------------------------
+
+
+
+//----------------------------------------------------------------------
+//Ordering result: 17<->18<->19-6<->7<->8
+//      -2<->14-3<->4<->11-0<->5-13<->16-10<->12-15-9-1 
+/*
+ Rules:
+Id,	Name,	
+0  	extractSuperclassAttr		
+1	extractSuperclassRef		
+2	flattenHierarchyAttr		
+3	flattenHierarchyRef			
+4	mergeMetaclassAttr			
+5	mergeMetaclassRef			
+6	mergeReference				
+7	moveAttribute				
+8	moveMethod					
+9	moveReference				
+10	pullUpAttribute				
+11	pullUpMethod									
+12	pullUpReference				
+13	pushDownAttribute			
+14	pushDownMethod			
+15	pushDownReference		
+16	removeMiddleMan		
+17	renameAttribute		
+18	renameMethod	
+19	renameReference	
+ */ 
+ 
+ /*
+  Order generated by algorithm:
+  Id	Vertex	Order
+19	19	1
+17	17	1
+18	18	1
+6	6	2
+7	7	2
+8	8	2
+2	2	3
+1	1	3
+11	11	3
+3	3	4
+10	10	4
+14	14	4
+13	13	5
+15	15	5
+0	0	6
+9	9	6
+4	4	7
+12	12	7
+5	5	8
+16	16	9
+  */
+
+//
+
+unit unitRand1(){
+	loop_extractSuperclassAttr()
+	loop_extractSuperclassRef()
+	loop_flattenHierarchyAttr()
+	loop_flattenHierarchyRef()
+	loop_mergeMetaclassAttr()
+	loop_mergeMetaclassRef()
+	loop_mergeReference()
+	loop_moveAttribute()
+	loop_moveMethod()
+	loop_moveReference()
+	loop_pullUpAttribute()
+	loop_pullUpMethod()
+	loop_pushDownReference()
+	loop_pushDownAttribute()
+	loop_pushDownMethod()
+	loop_pullUpReference()
+	loop_removeMiddleMan()
+	loop_renameAttribute()
+	loop_renameMethod()
+	loop_renameReference()
+}
+
+unit unitRand2(){
+	loop_pushDownAttribute()
+	loop_renameMethod()
+	loop_moveReference()
+	loop_pullUpMethod()
+	loop_moveMethod()
+	loop_extractSuperclassRef()
+	loop_renameReference()
+	loop_mergeMetaclassRef()
+	loop_flattenHierarchyRef()
+	loop_pullUpAttribute()
+	loop_removeMiddleMan()
+	loop_pullUpReference()
+	loop_pushDownMethod()
+	loop_mergeMetaclassAttr()
+	loop_flattenHierarchyAttr()
+	loop_pushDownReference()
+	loop_renameAttribute()
+	loop_mergeReference()
+	loop_extractSuperclassAttr()
+	loop_moveAttribute()
+}
+
+unit unitRand3(){
+	loop_pullUpMethod()
+	loop_flattenHierarchyAttr()
+	loop_renameReference()
+	loop_moveMethod()
+	loop_pullUpReference()
+	loop_mergeMetaclassAttr()
+	loop_extractSuperclassRef()
+	loop_renameAttribute()
+	loop_pushDownReference()
+	loop_removeMiddleMan()
+	loop_moveAttribute()
+	loop_renameMethod()
+	loop_flattenHierarchyRef()
+	loop_mergeMetaclassRef()
+	loop_pullUpAttribute()
+	loop_mergeReference()
+	loop_pushDownMethod()
+	loop_moveReference()
+	loop_pushDownAttribute()
+	loop_extractSuperclassAttr()
+}
+
+unit unitRand4(){
+	loop_pullUpAttribute()
+	loop_pushDownAttribute()
+	loop_pushDownReference()
+	loop_renameReference()
+	loop_renameMethod()
+	loop_mergeMetaclassAttr()
+	loop_renameAttribute()
+	loop_flattenHierarchyAttr()
+	loop_moveAttribute()
+	loop_pushDownMethod()
+	loop_pullUpMethod()
+	loop_removeMiddleMan()
+	loop_pullUpReference()
+	loop_mergeReference()
+	loop_moveMethod()
+	loop_flattenHierarchyRef()
+	loop_extractSuperclassRef()
+	loop_extractSuperclassAttr()
+	loop_moveReference()
+	loop_mergeMetaclassRef()
+}
+
+unit unitRand5(){
+	loop_pushDownMethod()
+	loop_renameReference()
+	loop_moveMethod()
+	loop_extractSuperclassAttr()
+	loop_moveAttribute()
+	loop_flattenHierarchyAttr()
+	loop_pullUpReference()
+	loop_mergeMetaclassAttr()
+	loop_pullUpAttribute()
+	loop_renameMethod()
+	loop_flattenHierarchyRef()
+	loop_moveReference()
+	loop_renameAttribute()
+	loop_pullUpMethod()
+	loop_mergeMetaclassRef()
+	loop_removeMiddleMan()
+	loop_pushDownAttribute()
+	loop_mergeReference()
+	loop_pushDownReference()
+	loop_extractSuperclassRef()
+}
+ 
+//----------------------------------------------------------------------
+unit unitAlgorithmOrder1(){
+			loop_renameAttribute() loop_renameMethod() loop_renameReference() 				// 17 - 18 - 19
+			loop_mergeReference() loop_moveAttribute() loop_moveMethod() 					// 6  - 7  - 8
+			loop_flattenHierarchyAttr() loop_extractSuperclassRef() loop_pullUpMethod() 	// 1  - 2  - 11	
+			loop_flattenHierarchyRef() loop_pullUpAttribute() loop_pushDownMethod()			// 3  - 10 - 14
+			loop_pushDownAttribute() loop_pushDownReference() 								// 13 - 15
+			loop_extractSuperclassAttr() loop_moveReference()								// 0  - 9
+			loop_mergeMetaclassAttr() loop_pullUpReference() 								// 4  - 12
+			loop_mergeMetaclassRef() 														// 5 
+			loop_removeMiddleMan()															// 16
+}
+
+
+unit unitAlgorithmOrderRev(){ 
+			loop_removeMiddleMan()															// 16
+			loop_mergeMetaclassRef() 														// 5
+			loop_mergeMetaclassAttr() loop_pullUpReference() 								// 4  - 12
+			loop_extractSuperclassAttr() loop_moveReference()								// 0  - 9
+			loop_pushDownAttribute() loop_pushDownReference() 								// 13 - 15
+			loop_flattenHierarchyRef() loop_pullUpAttribute() loop_pushDownMethod()			// 3  - 10 - 14
+			loop_flattenHierarchyAttr() loop_extractSuperclassRef() loop_pullUpMethod() 	// 1  - 2  - 11	
+			loop_mergeReference() loop_moveAttribute() loop_moveMethod() 					// 6  - 7  - 8			
+			loop_renameAttribute() loop_renameMethod() loop_renameReference() 				// 17 - 18 - 19
+}
+
+
+//----------------------------------------------------------------------
+	
+
+unit loop_removeMiddleMan(){
+	while{
+		removeMiddleMan()
+	}
+}
+
+
+unit loop_mergeMetaclassRef(){
+	while{
+		mergeMetaclassRef()
+	}
+}	
+
+unit loop_extractSuperclassAttr(){
+	while{
+		extractSuperclassAttr()
+	}
+}
+
+unit loop_extractSuperclassRef(){
+	while{
+		extractSuperclassRef()
+	}
+
+}	
+	
+unit loop_flattenHierarchyAttr(){
+	while{
+		flattenHierarchyAttr()
+	}
+}
+
+unit loop_flattenHierarchyRef(){
+	while{
+		flattenHierarchyRef()
+	}
+}
+
+unit loop_mergeMetaclassAttr(){
+	while{
+		mergeMetaclassAttr()
+	}
+}
+unit loop_mergeReference(){
+	while{
+		mergeReference()
+	}
+}	
+
+unit loop_moveAttribute(){
+	while{
+		moveAttribute()
+	}
+}	
+
+unit loop_moveMethod(){
+	while{
+		moveMethod()
+	}
+}	
+
+unit loop_moveReference(){
+	while{
+		moveReference()
+	}
+}
+
+unit loop_pullUpAttribute(){
+	while{
+		pullUpAttribute()
+	}
+}
+
+unit loop_pullUpMethod(){
+	while{
+		pullUpMethod()
+	}
+}	
+
+unit loop_pullUpReference(){
+	while{
+		pullUpReference()
+	}
+}
+
+unit loop_pushDownAttribute(){
+	while{
+		pushDownAttribute()
+	}
+}
+
+unit loop_pushDownMethod(){
+	while{
+		pushDownMethod()
+	}
+}
+
+unit loop_pushDownReference(){
+	while{
+		pushDownReference()
+	}
+}
+
+unit loop_renameAttribute(){
+	while{
+		renameAttribute()
+	}
+}
+
+unit loop_renameMethod(){
+	while{
+		renameMethod()
+	}
+}	
+
+unit loop_renameReference(){
+	while{
+		renameReference()
+	}
+}
+	
+
+
+
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+//--- Random Order ---
+
+unit unitAlgorithmOrderIndependent(){
+			independent[loop_renameAttribute(),loop_renameMethod(),loop_renameReference()]
+			independent[loop_mergeReference(),loop_moveAttribute(),loop_moveMethod()]
+			independent[loop_flattenHierarchyAttr(),loop_pushDownMethod()]
+			independent[loop_flattenHierarchyRef(),loop_mergeMetaclassAttr(),loop_pullUpMethod()]
+			independent[loop_extractSuperclassAttr(),loop_mergeMetaclassRef()]
+			independent[loop_pushDownAttribute(),loop_removeMiddleMan()]
+			independent[loop_pullUpAttribute(),loop_pullUpReference()]
+			independent[loop_pushDownReference()]
+			independent[loop_moveReference()]
+			independent[loop_extractSuperclassRef()]				
+}
+
+unit unitAlgorithmOrderSeq(){
+			loop_renameAttribute() loop_renameMethod() loop_renameReference() 
+			loop_mergeReference() loop_moveAttribute() loop_moveMethod() 
+			loop_flattenHierarchyAttr() loop_pushDownMethod() 
+			loop_flattenHierarchyRef() loop_mergeMetaclassAttr() loop_pullUpMethod() 
+			loop_extractSuperclassAttr() loop_mergeMetaclassRef() 
+			loop_pushDownAttribute() loop_removeMiddleMan() 
+			loop_pullUpAttribute() loop_pullUpReference() 
+			loop_pushDownReference() 
+			loop_moveReference() 
+			loop_extractSuperclassRef() 	
+			//loop_removeMiddleMan()			
+}
+
+unit unitAlgorithmOrderSeqUML_NoIns(){
+	loop_renameAttribute() loop_renameMethod() loop_renameReference()
+	loop_moveReference() 
+	loop_mergeReference()
+	loop_moveAttribute() 	
+	loop_pushDownAttribute()
+	loop_mergeMetaclassAttr()
+	loop_removeMiddleMan()		
+}
+
+
+unit unitAlgorithmOrderSeq0(){
+			loop_renameAttribute() loop_renameMethod() loop_renameReference() 
+			loop_moveAttribute() loop_moveMethod() 
+			loop_flattenHierarchyAttr() loop_pushDownMethod() 
+			loop_flattenHierarchyRef()  loop_pullUpMethod() 
+			loop_extractSuperclassAttr() 
+			loop_pushDownAttribute()  
+			loop_pullUpAttribute() loop_pullUpReference() 
+			loop_pushDownReference() 
+			loop_moveReference() 
+			loop_extractSuperclassRef() 
+			loop_mergeReference()
+			loop_mergeMetaclassRef() 
+			loop_removeMiddleMan()
+			loop_mergeMetaclassAttr()
+							
+}
+//----------------------------------------------------------------------
+
+unit unitAlgorithmOrderReverseIndependent(){
+			independent[loop_extractSuperclassRef()]
+			independent[loop_moveReference()]
+			independent[loop_pushDownReference()]
+			independent[loop_pullUpAttribute(),loop_pullUpReference()]
+			independent[loop_pushDownAttribute(),loop_removeMiddleMan()]
+			independent[loop_extractSuperclassAttr(),loop_mergeMetaclassRef()]
+			independent[loop_flattenHierarchyRef(),loop_mergeMetaclassAttr(),loop_pullUpMethod()]
+			independent[loop_flattenHierarchyAttr(),loop_pushDownMethod()]
+			independent[loop_mergeReference(),loop_moveAttribute(),loop_moveMethod()]			
+			independent[loop_renameAttribute(),loop_renameMethod(),loop_renameReference()]
+}
+
+unit unitAlgorithmOrderReverseSeq(){
+			loop_extractSuperclassRef()
+			loop_moveReference()
+			loop_pushDownReference()
+			loop_pullUpAttribute() loop_pullUpReference()
+			loop_pushDownAttribute() loop_removeMiddleMan()
+			loop_extractSuperclassAttr() loop_mergeMetaclassRef()
+			loop_flattenHierarchyRef() loop_mergeMetaclassAttr() loop_pullUpMethod()
+			loop_flattenHierarchyAttr() loop_pushDownMethod()
+			loop_mergeReference() loop_moveAttribute() loop_moveMethod()			
+			loop_renameAttribute() loop_renameMethod() loop_renameReference()
+}
+
+
+unit unitAlgorithmOrderReverseSeq5(){
+			loop_removeMiddleMan() loop_mergeReference() loop_mergeMetaclassAttr()
+			loop_extractSuperclassRef()
+			loop_moveReference()
+			loop_pushDownReference()
+			loop_pullUpAttribute() loop_pullUpReference()
+			loop_pushDownAttribute() 
+			loop_extractSuperclassAttr() loop_mergeMetaclassRef()
+			loop_flattenHierarchyRef()  loop_pullUpMethod()
+			loop_flattenHierarchyAttr() loop_pushDownMethod()
+			loop_moveAttribute() loop_moveMethod()			
+			loop_renameAttribute() loop_renameMethod() loop_renameReference()
+}
+
+unit unitAlgorithmOrderReverseSeq2(){
+			loop_pushDownAttribute()  loop_removeMiddleMan()
+	
+			loop_mergeReference()  loop_moveAttribute()  loop_moveMethod()
+			loop_flattenHierarchyAttr()  loop_pushDownMethod()
+			loop_flattenHierarchyRef()  loop_mergeMetaclassAttr()  loop_pullUpMethod()
+			loop_extractSuperclassAttr()  loop_mergeMetaclassRef()
+			
+			loop_pullUpAttribute()  loop_pullUpReference()
+			loop_pushDownReference()
+			loop_extractSuperclassRef()
+			loop_moveReference()			
+			loop_renameAttribute()  loop_renameMethod()  loop_renameReference()
+}
+
+unit unitAlgorithmOrderReverseSeq3(){
+			loop_removeMiddleMan()  loop_pushDownAttribute()  
+	
+			loop_mergeReference()  loop_moveAttribute()  loop_moveMethod()
+			loop_flattenHierarchyAttr()  loop_pushDownMethod()
+			loop_flattenHierarchyRef()  loop_mergeMetaclassAttr()  loop_pullUpMethod()
+			loop_extractSuperclassAttr()  loop_mergeMetaclassRef()
+			
+			loop_pullUpAttribute()  loop_pullUpReference()
+			loop_pushDownReference()
+			loop_extractSuperclassRef()
+			loop_moveReference()			
+			loop_renameAttribute()  loop_renameMethod()  loop_renameReference()
+}
+
+
+unit unitAlgorithmOrderReverseSeq4(){
+			loop_removeMiddleMan()  
+			loop_mergeReference() loop_mergeMetaclassAttr() loop_mergeMetaclassRef() 
+			loop_pushDownAttribute()  
+	
+			loop_moveAttribute()  loop_moveMethod()
+			loop_flattenHierarchyAttr()  loop_pushDownMethod()
+			loop_flattenHierarchyRef()    loop_pullUpMethod()
+			loop_extractSuperclassAttr()  
+			
+			loop_pullUpAttribute()  loop_pullUpReference()
+			loop_pushDownReference()
+			loop_extractSuperclassRef()
+			loop_moveReference()			
+			loop_renameAttribute()  loop_renameMethod()  loop_renameReference()
+}
+	

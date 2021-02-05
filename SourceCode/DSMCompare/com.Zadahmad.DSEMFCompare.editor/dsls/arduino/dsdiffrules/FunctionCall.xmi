@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arduinoRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:arduinoRuleMM="http://www.obeo.fr/arduinoRuleMM"
+    xsi:schemaLocation="http://www.obeo.fr/arduinoRuleMM ../metamodels/arduinoRuleMM.ecore#/1"
+    name="FunctionCall">
+  <pattern>
+    <sketch
+        xsi:type="arduinoRuleMM:Pattern_Sketch"
+        ID_Pattern="1">
+      <instructions
+          xsi:type="arduinoRuleMM:Pattern_DiffFunctionCall"
+          ID_Pattern="11">
+        <diffdefinition
+            xsi:type="arduinoRuleMM:Pattern_DiffFunctionCall_definition"
+            ID_Pattern="111"/>
+      </instructions>
+    </sketch>
+    <domainspecificdiffs
+        xsi:type="arduinoRuleMM:Pattern_DomainSpecificDiff"
+        name="FunctionCall"
+        DomainSpecificDiff_FunctionCall="11"
+        ID_Pattern="2"/>
+  </pattern>
+</arduinoRuleMM:Rule>

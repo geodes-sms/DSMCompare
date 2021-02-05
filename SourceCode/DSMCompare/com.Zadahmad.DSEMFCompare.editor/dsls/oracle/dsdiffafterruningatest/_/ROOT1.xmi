@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracleDiffMM:ROOT
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:oracleDiffMM="www.geodes.UdeM.edu/oracleDiffMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/oracleDiffMM ../metamodels/oracleDiffMM.ecore">
+  <b/>
+  <b/>
+  <b xsi:type="oracleDiffMM:C"/>
+  <b xsi:type="oracleDiffMM:DiffB">
+    <bd xsi:type="oracleDiffMM:DiffD"
+        operation="DELETE"/>
+    <diffbd
+        eType="//@b.3/@bd.0"/>
+  </b>
+  <b xsi:type="oracleDiffMM:DiffB">
+    <bd/>
+    <diffbd
+        eType="//@b.4/@bd.0"/>
+  </b>
+  <b xsi:type="oracleDiffMM:DiffB">
+    <diffbd
+        operation="DELETE"
+        eType="//@b.6/@bd.0"/>
+  </b>
+  <b xsi:type="oracleDiffMM:DiffC">
+    <bd xsi:type="oracleDiffMM:DiffD"/>
+  </b>
+  <b xsi:type="oracleDiffMM:DiffC"
+      operation="DELETE">
+    <diffbd
+        eType="//@b.4/@bd.0"/>
+  </b>
+  <b xsi:type="oracleDiffMM:DiffC">
+    <bd/>
+    <bd xsi:type="oracleDiffMM:DiffD"/>
+    <bd xsi:type="oracleDiffMM:DiffD"/>
+    <diffbd
+        operation="DELETE"
+        eType="//@b.8/@bd.1"/>
+  </b>
+  <a/>
+  <a xsi:type="oracleDiffMM:DiffA">
+    <diffab
+        eType="//@b.4"/>
+  </a>
+</oracleDiffMM:ROOT>

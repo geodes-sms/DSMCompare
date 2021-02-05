@@ -1,0 +1,11 @@
+// Applied composite operation
+extractSuperClass(GenDiagram, [], gmfgen, Updater, true, [])
+// Atomic changes realizing the composite operation above
+create(GenDiagramUpdater)
+add(GenDiagram, eSuperTypes, GenDiagramUpdater)
+
+create(getDiagramUpdaterQualifiedClassName)
+create(GenDiagramUpdater.diagramUpdaterClassName)
+set(GenExpressionProviderBase.container, changeable, false)
+set(GenDiagramUpdater, interface, true)
+

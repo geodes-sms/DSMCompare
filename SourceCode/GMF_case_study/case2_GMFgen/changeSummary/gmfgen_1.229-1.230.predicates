@@ -1,0 +1,32 @@
+// Applied composite operation
+pullFeature(GenPlugin.requiredPlugins, GenExpressionProviderBase)
+// Atomic changes realizing the composite operation above
+move(GenExpressionInterpreter, GenPlugin.requiredPlugins)
+
+// Applied composite operation
+collectFeature(GenPlugin.requiredPlugins, GenExpressionProviderContainer.providers)
+// Atomic changes realizing the composite operation above
+move(GenExpressionProviderBase, GenPlugin.requiredPlugins)
+
+// Applied composite operation
+moveFeature(GenPlugin.requiredPlugins, GenExpressionProviderContainer.editorGen)
+// Atomic changes realizing the composite operation above
+move(GenExpressionProviderContainer, GenPlugin.requiredPlugins)
+
+// Applied composite operation
+moveFeature(GenPlugin.requiredPlugins, GenEditorGenerator.plugin)
+// Atomic changes realizing the composite operation above
+move(GenEditorGenerator, GenPlugin.requiredPlugins)
+
+// Applied composite operation
+rename(GenPlugin.requiredPlugins, requiredPlugins)
+// Atomic changes realizing the composite operation above
+set(GenPlugin.requiredPlugins, name, requiredPlugins)
+
+// Applied composite operation
+rename(getAllRequiredPlugins, getAllRequiredPlugins)
+// Atomic changes realizing the composite operation above
+set(getAllRequiredPlugins, name, getAllRequiredPlugins)
+
+delete(getRequiredPluginIDs)
+

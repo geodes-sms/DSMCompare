@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="UML_14">
+  <eclassifiers name="ModelElement" esupertypes="//@eclassifiers.20">
+    <eattributes name="name" etype="EString"/>
+    <ereferences name="constraint" etype="Constraint"/>
+    <ereferences name="comments" etype="Comment"/>
+    <ereferences name="supplierDependency" etype="Dependency"/>
+    <ereferences name="clientDependency" etype="Dependency"/>
+  </eclassifiers>
+  <eclassifiers name="Feature" esupertypes="//@eclassifiers.0">
+    <eattributes name="ownerScope" etype="ScopeKind"/>
+    <eattributes name="visibility" etype="VisibilityKind"/>
+    <ereferences name="owner" etype="Classifier"/>
+  </eclassifiers>
+  <eclassifiers name="NameSpace" esupertypes="//@eclassifiers.0"/>
+  <eclassifiers name="GeneralizableElement" esupertypes="//@eclassifiers.0">
+    <eattributes name="isRoot" etype="EBoolean"/>
+    <eattributes name="isLeaf" etype="EBoolean"/>
+    <eattributes name="isAbstract" etype="EBoolean"/>
+    <ereferences name="generalization" etype="Generalization"/>
+    <ereferences name="specialization" etype="Generalization"/>
+  </eclassifiers>
+  <eclassifiers name="Parameter" esupertypes="//@eclassifiers.0">
+    <eattributes name="kind" etype="ParameterDirectionKind"/>
+    <eattributes name="defaultValue" etype="EString"/>
+    <ereferences name="type" etype="Classifier"/>
+    <ereferences name="feature" etype="BehavioralFeature"/>
+  </eclassifiers>
+  <eclassifiers name="Constraint" esupertypes="//@eclassifiers.0">
+    <eattributes name="body" etype="EString"/>
+    <ereferences name="constrainedElement" etype="ModelElement"/>
+  </eclassifiers>
+  <eclassifiers name="Classifier" esupertypes="//@eclassifiers.2 //@eclassifiers.3">
+    <ereferences name="feature" etype="Feature"/>
+    <ereferences name="typedParameter" etype="Parameter"/>
+    <ereferences name="typedFeature" etype="StructuralFeature"/>
+    <ereferences name="powertypeRange" etype="Generalization"/>
+    <ereferences name="association" etype="AssociationEnd"/>
+    <ereferences name="specifiedEnd" etype="AssociationEnd"/>
+  </eclassifiers>
+  <eclassifiers name="StructuralFeature" esupertypes="//@eclassifiers.1">
+    <eattributes name="changeability" etype="ChangeableKind"/>
+    <eattributes name="targetScope" etype="ScopeKind"/>
+    <eattributes name="ordering" etype="OrderingKind"/>
+    <ereferences name="type" etype="Classifier"/>
+    <ereferences name="multiplicity" etype="Multiplicity"/>
+  </eclassifiers>
+  <eclassifiers name="BehavioralFeature" esupertypes="//@eclassifiers.1">
+    <eattributes name="isQuery" etype="EBoolean"/>
+    <ereferences name="parameter" etype="Parameter"/>
+  </eclassifiers>
+  <eclassifiers name="Multiplicity">
+    <ereferences name="range" etype="MultiplicityRange"/>
+  </eclassifiers>
+  <eclassifiers name="MultiplicityRange">
+    <eattributes name="lower" etype="EInt"/>
+    <eattributes name="upper" etype="EInt"/>
+    <ereferences name="multiplicity" etype="Multiplicity"/>
+  </eclassifiers>
+  <eclassifiers name="Operation" esupertypes="//@eclassifiers.8">
+    <eattributes name="isRoot" etype="EBoolean"/>
+    <eattributes name="isLeaf" etype="EBoolean"/>
+    <eattributes name="isAbstract" etype="EBoolean"/>
+    <eattributes name="specification" etype="EString"/>
+  </eclassifiers>
+  <eclassifiers name="Method" esupertypes="//@eclassifiers.8">
+    <eattributes name="body" etype="EString"/>
+    <ereferences name="operation" etype="Operation"/>
+  </eclassifiers>
+  <eclassifiers name="Attribute" esupertypes="//@eclassifiers.7">
+    <eattributes name="initialValue" etype="EString"/>
+    <ereferences name="associationEnd" etype="AssociationEnd"/>
+  </eclassifiers>
+  <eclassifiers name="Relationship" esupertypes="//@eclassifiers.0"/>
+  <eclassifiers name="Generalization" esupertypes="//@eclassifiers.14">
+    <eattributes name="discriminator" etype="EString"/>
+    <ereferences name="child" etype="GeneralizableElement"/>
+    <ereferences name="parent" etype="GeneralizableElement"/>
+    <ereferences name="powertype" etype="Classifier"/>
+  </eclassifiers>
+  <eclassifiers name="Association" esupertypes="//@eclassifiers.14 //@eclassifiers.3">
+    <ereferences name="connection" etype="AssociationEnd"/>
+  </eclassifiers>
+  <eclassifiers name="AssociationEnd" esupertypes="//@eclassifiers.0">
+    <eattributes name="isNavigable" etype="EBoolean"/>
+    <eattributes name="aggregation" etype="AggregationKind"/>
+    <eattributes name="visibility" etype="VisibilityKind"/>
+    <eattributes name="targetScope" etype="ScopeKind"/>
+    <eattributes name="changeability" etype="ChangeableKind"/>
+    <ereferences name="association" etype="Association"/>
+    <ereferences name="participant" etype="Classifier"/>
+    <ereferences name="specification" etype="Classifier"/>
+    <ereferences name="multiplicity" etype="Multiplicity"/>
+    <ereferences name="qualifier" etype="Attribute"/>
+  </eclassifiers>
+  <eclassifiers name="Class" esupertypes="//@eclassifiers.6">
+    <eattributes name="isActive" etype="EBoolean"/>
+  </eclassifiers>
+  <eclassifiers name="AssociationClass" esupertypes="//@eclassifiers.18 //@eclassifiers.16"/>
+  <eclassifiers name="Element"/>
+  <eclassifiers name="Dependency" esupertypes="//@eclassifiers.14">
+    <ereferences name="supplier" etype="ModelElement"/>
+    <ereferences name="client" etype="ModelElement"/>
+  </eclassifiers>
+  <eclassifiers name="Binding" esupertypes="//@eclassifiers.21"/>
+  <eclassifiers name="Abstraction" esupertypes="//@eclassifiers.21"/>
+  <eclassifiers name="Usage" esupertypes="//@eclassifiers.21"/>
+  <eclassifiers name="Permission" esupertypes="//@eclassifiers.21"/>
+  <eclassifiers name="Interface" esupertypes="//@eclassifiers.6"/>
+  <eclassifiers name="DataType" esupertypes="//@eclassifiers.6"/>
+  <eclassifiers name="Primitive" esupertypes="//@eclassifiers.27"/>
+  <eclassifiers name="Enumeration" esupertypes="//@eclassifiers.27">
+    <ereferences name="literal" etype="EnumerationLiteral"/>
+  </eclassifiers>
+  <eclassifiers name="EnumerationLiteral" esupertypes="//@eclassifiers.0">
+    <ereferences name="enumeration" etype="Enumeration"/>
+  </eclassifiers>
+  <eclassifiers name="Comment">
+    <eattributes name="body" etype="EString"/>
+    <ereferences name="annotatedElement" etype="ModelElement"/>
+  </eclassifiers>
+  <eclassifiers name="ElementOwnership">
+    <eattributes name="visibility" etype="VisibilityKind"/>
+    <eattributes name="isSpecification" etype="EBoolean"/>
+  </eclassifiers>
+</refactoring:EPackage>

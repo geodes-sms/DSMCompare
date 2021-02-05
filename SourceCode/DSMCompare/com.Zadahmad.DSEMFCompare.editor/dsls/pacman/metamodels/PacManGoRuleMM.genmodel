@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.Zadahmad.DSEMFCompare.editor/src" modelPluginID="com.Zadahmad.DSEMFCompare.editor"
+    modelName="PacManGoRuleMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>PacManGoRuleMM.ecore</foreignModel>
+  <genPackages prefix="PacmanGoDiffMM" disposableProviderFactory="true" ecorePackage="PacManGoRuleMM.ecore#/0">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PacManGoRuleMM.ecore#/0/ClassOp">
+      <genEnumLiterals ecoreEnumLiteral="PacManGoRuleMM.ecore#/0/ClassOp/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="PacManGoRuleMM.ecore#/0/ClassOp/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="PacManGoRuleMM.ecore#/0/ClassOp/MODIFY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PacManGoRuleMM.ecore#/0/AscOp">
+      <genEnumLiterals ecoreEnumLiteral="PacManGoRuleMM.ecore#/0/AscOp/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="PacManGoRuleMM.ecore#/0/AscOp/DELETE"/>
+    </genEnums>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/GridNode">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/GridNode/up"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/GridNode/bottom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/GridNode/left"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/GridNode/right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/GridNode/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/GridNode/diffup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/GridNode/diffbottom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/GridNode/diffleft"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/GridNode/diffright"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/Food"/>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/Pacman"/>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/Ghost"/>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/Scoreboard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/Scoreboard/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/Scoreboard/id"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/Game">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/Game/gridnodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/Game/scoreboard"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/Game/entities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/Game/domainspecificdiffs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/Game/diffgridnodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/Game/diffscoreboard"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/Game/diffentities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/Game/diffdomainspecificdiffs"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="PacManGoRuleMM.ecore#/0/PositionableEntity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/PositionableEntity/on"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/PositionableEntity/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/PositionableEntity/diffon"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DomainSpecificDiff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DomainSpecificDiff/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_GridNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Food"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Pacman"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Ghost"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Scoreboard"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DiffGridNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffGridNode/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffGridNode/new_id"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DiffGridNode_up">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffGridNode_up/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/DiffGridNode_up/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DiffGridNode_bottom">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffGridNode_bottom/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/DiffGridNode_bottom/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DiffGridNode_left">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffGridNode_left/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/DiffGridNode_left/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DiffGridNode_right">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffGridNode_right/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/DiffGridNode_right/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DiffFood">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffFood/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffFood/new_id"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DiffPacman">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffPacman/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffPacman/new_id"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DiffGhost">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffGhost/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffGhost/new_id"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DiffScoreboard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffScoreboard/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffScoreboard/new_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffScoreboard/new_id"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DiffGame">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffGame/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DiffGame_gridnodes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffGame_gridnodes/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/DiffGame_gridnodes/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DiffGame_scoreboard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffGame_scoreboard/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/DiffGame_scoreboard/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DiffGame_entities">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffGame_entities/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/DiffGame_entities/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DiffGame_domainspecificdiffs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffGame_domainspecificdiffs/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/DiffGame_domainspecificdiffs/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/0/DiffPositionableEntity_on">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/0/DiffPositionableEntity_on/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/0/DiffPositionableEntity_on/eType"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="PacmanGoRuleMM" disposableProviderFactory="true" ecorePackage="PacManGoRuleMM.ecore#/1">
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_GridNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_GridNode/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_GridNode/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_Food">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_Food/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_Food/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_Pacman">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_Pacman/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_Pacman/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_Ghost">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_Ghost/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_Ghost/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_Scoreboard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_Scoreboard/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_Scoreboard/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_Game">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_Game/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_Game/filter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_PositionableEntity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_PositionableEntity/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_PositionableEntity/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DomainSpecificDiff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DomainSpecificDiff/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DomainSpecificDiff/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DiffGridNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGridNode/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGridNode/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DiffGridNode_up">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGridNode_up/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGridNode_up/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DiffGridNode_bottom">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGridNode_bottom/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGridNode_bottom/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DiffGridNode_left">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGridNode_left/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGridNode_left/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DiffGridNode_right">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGridNode_right/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGridNode_right/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DiffFood">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffFood/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffFood/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DiffPacman">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffPacman/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffPacman/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DiffGhost">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGhost/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGhost/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DiffScoreboard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffScoreboard/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffScoreboard/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DiffGame">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGame/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGame/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DiffGame_gridnodes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGame_gridnodes/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGame_gridnodes/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DiffGame_scoreboard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGame_scoreboard/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGame_scoreboard/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DiffGame_entities">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGame_entities/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGame_entities/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DiffGame_domainspecificdiffs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGame_domainspecificdiffs/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffGame_domainspecificdiffs/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Pattern_DiffPositionableEntity_on">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffPositionableEntity_on/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Pattern_DiffPositionableEntity_on/filter"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoRuleMM.ecore#/1/Rule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Rule/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoRuleMM.ecore#/1/Rule/constraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoRuleMM.ecore#/1/Rule/pattern"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

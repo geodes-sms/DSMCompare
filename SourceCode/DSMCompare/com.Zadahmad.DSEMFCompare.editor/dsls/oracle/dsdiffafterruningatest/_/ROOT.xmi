@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracleDiffMM:ROOT
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:oracleDiffMM="www.geodes.UdeM.edu/oracleDiffMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/oracleDiffMM ../metamodels/oracleDiffMM.ecore">
+  <b xsi:type="oracleDiffMM:DiffB"/>
+  <b xsi:type="oracleDiffMM:DiffB"/>
+  <b xsi:type="oracleDiffMM:DiffC"
+      operation="DELETE"/>
+  <a xsi:type="oracleDiffMM:DiffA">
+    <diffab
+        operation="DELETE"
+        eType="//@b.1"/>
+  </a>
+</oracleDiffMM:ROOT>

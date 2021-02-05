@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.Zadahmad.DSEMFCompare.editor/src" modelPluginID="com.Zadahmad.DSEMFCompare.editor"
+    modelName="RefactoringDiffMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>refactoringDiffMM.ecore</foreignModel>
+  <genPackages prefix="RefactoringDiffMM" disposableProviderFactory="true" ecorePackage="refactoringDiffMM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="refactoringDiffMM.ecore#//ClassOp">
+      <genEnumLiterals ecoreEnumLiteral="refactoringDiffMM.ecore#//ClassOp/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="refactoringDiffMM.ecore#//ClassOp/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="refactoringDiffMM.ecore#//ClassOp/MODIFY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="refactoringDiffMM.ecore#//AscOp">
+      <genEnumLiterals ecoreEnumLiteral="refactoringDiffMM.ecore#//AscOp/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="refactoringDiffMM.ecore#//AscOp/DELETE"/>
+    </genEnums>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//EAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//EAttribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//EAttribute/etype"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//EClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//EClass/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//EClass/eattributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//EClass/eoperations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//EClass/ereferences"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//EClass/esupertypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//EClass/diffeattributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//EClass/diffeoperations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//EClass/differeferences"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//EClass/diffesupertypes"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//EOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//EOperation/eparameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//EOperation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//EOperation/etype"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//EPackage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//EPackage/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//EPackage/domainspecificdiffs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//EPackage/diffeclassifiers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//EPackage/diffdomainspecificdiffs"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//EReference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//EReference/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//EReference/etype"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//DomainSpecificDiff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DomainSpecificDiff/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_EAttribute"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_EClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_EOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_EReference"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//DiffEAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEAttribute/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEAttribute/new_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEAttribute/new_etype"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//DiffEClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEClass/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEClass/new_name"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//DiffEClass_eattributes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEClass_eattributes/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//DiffEClass_eattributes/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//DiffEClass_eoperations">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEClass_eoperations/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//DiffEClass_eoperations/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//DiffEClass_ereferences">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEClass_ereferences/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//DiffEClass_ereferences/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//DiffEClass_esupertypes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEClass_esupertypes/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//DiffEClass_esupertypes/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//DiffEOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEOperation/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEOperation/new_eparameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEOperation/new_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEOperation/new_etype"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//DiffEPackage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEPackage/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEPackage/new_name"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//DiffEPackage_eclassifiers">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEPackage_eclassifiers/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//DiffEPackage_eclassifiers/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//DiffEPackage_domainspecificdiffs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEPackage_domainspecificdiffs/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference refactoringDiffMM.ecore#//DiffEPackage_domainspecificdiffs/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="refactoringDiffMM.ecore#//DiffEReference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEReference/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEReference/new_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute refactoringDiffMM.ecore#//DiffEReference/new_etype"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

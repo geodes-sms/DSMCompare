@@ -1,0 +1,460 @@
+ePackageImport  PacmanGoDiffMM
+
+		rule ghostmoves()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Ghost
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"GhostMoves\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Ghost)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule ghostmovesbottom()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Ghost
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"GhostMovesBottom\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:bottom),
+			  		(preserve	n2->n1:up),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Ghost)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule ghostmovesleft()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Ghost
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"GhostMovesLeft\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:left),
+			  		(preserve	n2->n1:right),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Ghost)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule ghostmovesright()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Ghost
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"GostMovesRight\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:right),
+			  		(preserve	n2->n1:left),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule ghostmovesup()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Ghost
+				 preserve			node n31:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 delete				node n32:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"GhostMovesUp\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:up),
+			  		(preserve	n2->n1:bottom),
+			  		(preserve	n3->n31:diffon),
+			  		(delete		n3->n32:diffon),
+			  		(preserve	n31->n2:eType),
+			  		(delete		n32->n1:eType),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Ghost)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmandies()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:DiffPacman{
+					preserve operation = "ADD"
+				}
+				 delete				node n21:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n3:Ghost
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"PacmanDies\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:entities),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(delete		n2->n21:diffon),
+			  		(delete		n21->n1:eType),
+			  		(create		n4->n3:DomainSpecificDiff_Ghost)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmaneatsfood(VAR n3value:, VAR n3new_value:)
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:DiffScoreboard{
+					preserve operation = "MODIFY"
+				}
+				 preserve			node n3:Pacman{
+					preserve value =  n3value
+					preserve new_value =  n3new_value
+				}
+				 preserve			node n4:DiffFood{
+					preserve operation = "DELETE"
+				}
+				 delete				node n41:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 create				node n5:DomainSpecificDiff{
+					create name = "\"PacmanEatsFood\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:scoreboard),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n0->n4:entities),
+			  		(create		n0->n5:domainspecificdiffs),
+			  		(delete		n4->n41:diffon),
+			  		(delete		n41->n1:eType),
+			  		(create		n5->n4:DomainSpecificDiff_Food),
+			  		(create		n5->n3:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+			conditions [n3value < n3new_value]
+		}
+//----------------------------------------------------------------------
+
+		rule pacmanmoves()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Pacman
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"PacmanMoves\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmanmovesbottom()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Pacman
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"PacmanMovesBottom\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:bottom),
+			  		(preserve	n2->n1:up),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmanmovesleft()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Pacman
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"PacmanMovesLeft\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:left),
+			  		(preserve	n2->n1:right),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmanmovesright()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Pacman
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"PacmanMovesRight\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:right),
+			  		(preserve	n2->n1:left),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmanmovesup()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Pacman
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"pacmanMovesUp\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:up),
+			  		(preserve	n2->n1:bottom),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+	unit unitSequntialStar(){
+		while{
+			ghostmoves()
+		}
+		while{
+			ghostmovesbottom()
+		}
+		while{
+			ghostmovesleft()
+		}
+		while{
+			ghostmovesright()
+		}
+		while{
+			ghostmovesup()
+		}
+		while{
+			pacmandies()
+		}
+		while{
+			pacmaneatsfood()
+		}
+		while{
+			pacmanmoves()
+		}
+		while{
+			pacmanmovesbottom()
+		}
+		while{
+			pacmanmovesleft()
+		}
+		while{
+			pacmanmovesright()
+		}
+		while{
+			pacmanmovesup()
+		}
+	}

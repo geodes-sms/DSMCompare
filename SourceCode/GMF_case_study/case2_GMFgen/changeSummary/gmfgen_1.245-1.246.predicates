@@ -1,0 +1,8 @@
+// Applied composite operation
+replaceInheritanceByDelegation(GenFeatureValueSpec, ValueExpression, value)
+// Atomic changes realizing the composite operation above
+create(GenFeatureValueSpec.value)
+remove(GenFeatureValueSpec, eSuperTypes, ValueExpression)
+
+set(gmfgen, nsURI, http://www.eclipse.org/gmf/2008/GenModel)
+

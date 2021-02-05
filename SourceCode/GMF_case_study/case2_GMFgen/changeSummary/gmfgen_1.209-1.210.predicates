@@ -1,0 +1,21 @@
+// Applied composite operation
+inlineSuperClass(GenRuleContainerBase)
+// Atomic changes realizing the composite operation above
+move(GenRuleContainerBase, GenMetricContainer.editorGen)
+remove(GenMetricContainer, eSuperTypes, GenRuleContainerBase)
+delete(GenRuleContainerBase)
+
+// Applied composite operation
+rename(GenMetricContainer.editorGen, editorGen)
+// Atomic changes realizing the composite operation above
+set(GenMetricContainer.editorGen, name, editorGen)
+
+// Applied composite operation
+volatileToOpposite(GenMetricContainer.editorGen, GenEditorGenerator.metrics, false)
+// Atomic changes realizing the composite operation above
+set(GenMetricContainer.editorGen, volatile, false)
+set(GenMetricContainer.editorGen, transient, false)
+set(GenMetricContainer.editorGen, derived, false)
+set(GenEditorGenerator.metrics, eOpposite, GenMetricContainer.editorGen)
+set(GenMetricContainer.editorGen, eOpposite, GenEditorGenerator.metrics)
+

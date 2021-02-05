@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduinoDiffMM="http://www.obeo.fr/arduinoDiffMM">
+  <arduinoDiffMM:Project>
+    <hardware name="Hardware" platforms="/10" modules="/11 /12 /13 /14">
+      <connectors xsi:type="arduinoDiffMM:DiffConnector">
+        <diffpin/>
+        <diffmodule/>
+      </connectors>
+      <connectors xsi:type="arduinoDiffMM:DiffConnector">
+        <diffpin/>
+        <diffmodule/>
+      </connectors>
+      <connectors xsi:type="arduinoDiffMM:DiffConnector">
+        <diffpin/>
+        <diffmodule/>
+      </connectors>
+      <connectors xsi:type="arduinoDiffMM:DiffConnector">
+        <diffpin/>
+        <diffmodule/>
+      </connectors>
+    </hardware>
+    <sketch name="Sketch" hardware="/0/@hardware">
+      <diffnext eType="/0/@sketch/@instructions.0"/>
+      <instructions xsi:type="arduinoDiffMM:DiffIf">
+        <diffnext eType="/0/@sketch/@instructions.1"/>
+        <diffcondition eType="/0/@sketch/@instructions.2"/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:DiffStatus" status="true">
+        <diffnext/>
+        <diffmodule/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:DiffBooleanOperator" operator="upper">
+        <diffleft eType="/0/@sketch/@instructions.3"/>
+        <diffright eType="/0/@sketch/@instructions.4"/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:DiffSensor">
+        <diffmodule/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:DiffConstant" value="128"/>
+      <instructions xsi:type="arduinoDiffMM:DiffConstant" value="0"/>
+      <instructions xsi:type="arduinoDiffMM:DiffConstant" value="60"/>
+    </sketch>
+  </arduinoDiffMM:Project>
+  <arduinoDiffMM:DiffLevel>
+    <diffnext eType="/2"/>
+    <diffmodule/>
+    <difflevel eType="/0/@sketch/@instructions.5"/>
+  </arduinoDiffMM:DiffLevel>
+  <arduinoDiffMM:DiffDelay value="50">
+    <diffnext eType="/3"/>
+  </arduinoDiffMM:DiffDelay>
+  <arduinoDiffMM:DiffStatus status="true">
+    <diffnext eType="/4"/>
+    <diffmodule/>
+  </arduinoDiffMM:DiffStatus>
+  <arduinoDiffMM:DiffDelay value="1500">
+    <diffnext eType="/5"/>
+  </arduinoDiffMM:DiffDelay>
+  <arduinoDiffMM:DiffStatus>
+    <diffnext eType="/6"/>
+    <diffmodule/>
+  </arduinoDiffMM:DiffStatus>
+  <arduinoDiffMM:DiffLevel>
+    <diffnext eType="/7"/>
+    <diffmodule/>
+    <difflevel eType="/0/@sketch/@instructions.6"/>
+  </arduinoDiffMM:DiffLevel>
+  <arduinoDiffMM:DiffDelay value="1500"/>
+  <arduinoDiffMM:DiffStatus>
+    <diffnext eType="/9"/>
+    <diffmodule/>
+  </arduinoDiffMM:DiffStatus>
+  <arduinoDiffMM:DiffRepeat iteration="3"/>
+  <arduinoDiffMM:DiffPlatform/>
+  <arduinoDiffMM:DiffInputModule/>
+  <arduinoDiffMM:DiffOutputModule/>
+  <arduinoDiffMM:DiffOutputModule/>
+  <arduinoDiffMM:DiffOutputModule/>
+</xmi:XMI>

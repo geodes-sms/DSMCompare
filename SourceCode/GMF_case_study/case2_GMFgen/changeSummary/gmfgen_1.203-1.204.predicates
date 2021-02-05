@@ -1,0 +1,6 @@
+// Applied composite operation
+newOppositeReference(GenContributionManager.items, owner, 0, 1, false)
+// Atomic changes realizing the composite operation above
+create(GenContributionItem.owner)
+
+create(GenContributionItem.application)

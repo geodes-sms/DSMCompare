@@ -1,0 +1,778 @@
+/*
+				 //.toString().contains("domainspecificdiff")
+				 
+				 /*
+				 EClassifier dsdEClass = dsdEReference.getEType();
+				 
+				 System.out.println(dsdEReference.getName());	
+				 System.out.println(dsdEClass.getName());	
+				 
+				 System.out.println();
+				 System.out.println(dsRuleMatched.RootD);*/
+				 
+				 /*
+				 //EList<EObject> objs= (EList<EObject>) dsRuleMatched.RootD.eGet(dsdEReference);
+				 //System.out.println(objs.getClass());
+				 
+				 EObject 	DSDiffObject = PacmanGoDiffMMFactory.eINSTANCE.create(dsdEClass);
+				 EAttribute attrNameDSD 	= EAttributeByName(rDsdHead,"Name");
+				 DSDiffObject.eSet(attrNameDSD,valAttrName);
+				 
+				 SetEFeature(dsRuleMatched.RootD, dsdEReference, DSDiffObject);
+				 
+				 //@@@@@ It should be added to resource NOT to dsRuleMatched.RootD
+				 
+				// dsRuleMatched.RootD.eSet(dsdEClass,DSDiffObject.eGet(eAtrrsNoNew));
+				 
+				 for(EObject rhsObj:rRHSObjs)
+				 {
+					 EAttribute attrID_Pattern 	= EAttributeByName(rhsObj,"ID_Pattern");
+					 Object     valID_Pattern  	= rhsObj.eGet(attrID_Pattern);				
+						
+					 System.out.println("rhsObj : " + rhsObj);
+					 //v.matchList.forEach(t->{System.out.println("nodeRule: " + t.nodeRule);});
+					 List<MVItem>  mvRHSObjs= v.matchList.stream()
+							 .filter(m->m.nodeRule.eGet(EAttributeByName(m.nodeRule,"ID_Pattern" ))
+								.equals(valID_Pattern)).collect(Collectors.toList());
+					 ArrayList<EObject> dsdrhs= new ArrayList<EObject>();
+					 mvRHSObjs.forEach(x->dsdrhs.add(x.nodeDSD));
+					 System.out.println("dsdrhs : " + dsdrhs);
+				 }	
+				 */	
+*/
+
+/*
+		 dsRuleMatched.ruleRes.getContents().stream()
+		 .filter(obj -> obj.eClass().getEAllAttributes().stream()
+				 .filter(a -> a.getName().toLowerCase().contains("constraints")).count()>0
+				).findFirst().get();
+
+/*
+	 //@Test
+	 public void bshTest()
+	 {
+		  Interpreter interpreter = new Interpreter(); 
+		  
+		  try
+		  {
+			  interpreter.eval("PacmanGoDiffMM.Pacman p= PacmanGoDiffMM.PacmanGoDiffMMFactory.eINSTANCE.createPacman();p.setId(\"123\");String pID=p.getId();System.out.println(pID); System.out.println(p);");  
+		  }
+		  catch(Exception ex)
+		  {
+			  
+		  }		  
+	 }
+	 
+	  /*String[] CODE_Eobject = new String[] { "PacmanGoDiffMM.Pacman p= PacmanGoDiffMM.PacmanGoDiffMMFactory.eINSTANCE.createPacman();p.setId(\"123\");String pID=p.getId();System.out.println(pID);" };
+	  for (String code : CODE_Eobject) 
+	  {
+		  	System.out.println(interpreter.eval(code));
+	  }*/	 
+*/
+
+		 /*
+		 String[] CODE_FRAGMENTS = new String[] { "2+3", "foo*10", "new java.io.File(\"/\").exists()",
+		   "sum(a,b){\n return a+b;\n }\nsum(40,2)" };
+		  Interpreter interpreter = new Interpreter(); // Construct an interpreter
+
+		  // set variables
+		  interpreter.set("foo", 5);
+		  interpreter.set("date", new Date());
+
+		  // get variables
+		  Object date = interpreter.get("date");
+
+		  // evaluate statements
+		  for (String code : CODE_FRAGMENTS) {
+		   System.out.println(interpreter.eval(code));
+		  }
+		  */
+		 
+		 /*
+		  PacmanGoDiffMM.Pacman p= PacmanGoDiffMM.PacmanGoDiffMMFactory.eINSTANCE.createPacman();
+		  p.setId("123");
+		  String pID=p.getId();
+		  System.out.println(pID);
+		  */
+
+	 /*
+	 EObject 	rootRule= dsRuleMatched.RootR;
+	 
+	 EList<EReference> refsOutEClassR = rootRule.eClass().getEAllReferences();
+	 //System.out.println("--- "+RuleObject+"---> refsOutEClassR: "+ refsOutEClassR);
+	 //refsOutEClassR.forEach(r ->  System.out.println(r));
+	 //System.out.println("-----------------------------");
+	 //ArrayList<DSRuleMatched> dsrMatchs= new ArrayList<DSRuleMatched>();	
+	 		 
+	 for(EReference refOutEClassR:refsOutEClassR)
+	 {			 
+	 	if(refOutEClassR.getName().toLowerCase().contains("domainspecificdiffs"))
+			 continue;
+			 
+		List<EObject> refsOutRObjects = new ArrayList<EObject>();				 
+		try
+		{
+		    refsOutRObjects= (List<EObject>) RuleObject.eGet(refOutEClassR);
+		}
+		catch(Exception ex1)
+		{				 
+			 refsOutRObjects.add((EObject) RuleObject.eGet(refOutEClassR));
+		}
+		
+		Map<Object,List<EObject>> RR=refsOutRObjects.stream().collect(Collectors.groupingBy(p -> p.getClass()));				 
+			 //System.out.println("RR: ");
+			 //RR.forEach((k,vs) -> System.out.println(k+ " : "+vs));
+			 //System.out.println("--------");
+	 }
+	 */
+
+	 //boolean referenceMatchForEquality(EObject DiffModelObject, EObject RuleObject, DSRuleMatched dsRuleMatched)
+	 //{
+		 //DSRuleMatched dsRuleMatched= new DSRuleMatched();	
+		 
+		 //Match CrossReferences
+		 //Starting from References objects of the Rule class, match the corresponding object in DSMDiff 
+		 
+		 //
+		 // public class MRN {
+		 //		public EObject    		ruleNode;
+		 //		public EObject	  		matchedNode;
+		 //		public List<RefObjPer>	refObjPer= new ArrayList<RefObjPer>();
+		 //	}
+		 //  public class RefObjPer {
+		 //		public EReference 		Ref;									
+		 //		public Class			Clas;
+		 //		public EObject 			refObjR;
+		 //		public List<EObject> 	refObjDs= new ArrayList<EObject>(); 	
+		 //	//public List<List<EObject>> 	matchedPermutaion= new ArrayList<List<EObject>>(); 
+		 //	}
+		  //* /
+		 
+	 /*
+		 List<EObject> objsInR = getReferencingObjects(RuleObject);// RuleObject.eClass().getEAllReferences();
+		 List<EObject> objsInD = getReferencingObjects(DiffModelObject);//DiffModelObject.eClass().getEAllReferences();	
+		 
+	 
+		 int sizeRefsInR=objsInR.size();
+		 int sizeRefsInD=objsInD.size();
+		 
+		 
+		 if(sizeRefsInD < sizeRefsInR)
+			 return false;
+		 
+		 while(objsInR!=null && objsInR.size() > 0)  //for(int i= 0; i < objsInR.size();i++ )//EObject objInR:objsInR
+		 {		
+			 
+			 EObject objInR=objsInR.get(0);
+			 EClass  eclassObjInR=objInR.eClass();
+			 boolean found=false;
+			 
+			 for(int j= 0;j < objsInD.size();j++ )
+			 {
+				 EObject objInD=objsInD.get(j);
+				 EClass  eclassObjInD=objInD.eClass();
+				 //System.out.println("***eclassObjInD: "+eclassObjInD);
+				 if(eclassObjInR==eclassObjInD && attributeMatcher(DiffModelObject,RuleObject))
+				 {					 
+					 objsInD.remove(objInD);
+					 objsInR.remove(objInR);
+					 found=true;
+					 break;
+				 }					 
+			 }
+
+			 if(found==false)
+				 return false;
+		 }		 
+		 
+		 EList<EReference> refsOutEClassR = RuleObject.eClass().getEAllReferences();
+		 System.out.println("--- "+RuleObject+"---> refsOutEClassR: "+ refsOutEClassR);
+		 //ArrayList<DSRuleMatched> dsrMatchs= new ArrayList<DSRuleMatched>();	
+		 		 
+		 for(EReference refOutEClassR:refsOutEClassR)
+		 {
+			 if(refOutEClassR.getName().toLowerCase().contains("domainspecificdiffs"))
+				 continue;
+			 
+			 
+			 //DSRuleMatched dsrMatch= new DSRuleMatched();
+			 //dsrMatch.dsRuleSpec=null; 
+			 MRN matchedRuleNode= new MRN();
+			 matchedRuleNode.ruleNode=RuleObject;
+			 matchedRuleNode.matchedNode=DiffModelObject;
+			 RefObjPer	refObjPer= null;
+					 
+			 List<EObject> refsOutRObjects = new ArrayList<EObject>();				 
+			 try
+			 {
+			    refsOutRObjects= (List<EObject>) RuleObject.eGet(refOutEClassR);
+			 }
+			 catch(Exception ex1)
+			 {
+				 //System.out.println("^^^^^^ex1: "+ ex1.toString());					 
+				 refsOutRObjects.add((EObject) RuleObject.eGet(refOutEClassR));
+				 //System.out.println("^^^^^^ex1 solved");
+			 }
+					 
+			 //refObjPer.refObjects= refsOutRObjects;
+				 
+			 List<EObject> refsOutDObjects = new ArrayList<EObject>();;
+			 try
+			 {
+				 refsOutDObjects= (List<EObject>) DiffModelObject.eGet(refOutEClassR);
+			 }
+			 catch(Exception ex2)
+			 {
+				 //System.out.println("^^^^^^ex2: "+ ex2.toString());
+				 refsOutDObjects.add((EObject) DiffModelObject.eGet(refOutEClassR));
+				 //System.out.println("^^^^^^ex2 solved");
+			 }	
+			 
+		 	int sizeOutR=0, sizeOutD=0;
+		 	
+			try 
+			{				
+			 sizeOutR  = refsOutRObjects.size();
+			}
+			catch(Exception ex2)
+			{
+				sizeOutR=0;
+			}	 			 
+
+			try 
+			{	
+			 sizeOutD  = refsOutDObjects.size();			 
+			}
+			catch(Exception ex2)
+			{
+				sizeOutD=0;
+			}
+			
+			 System.out.println(sizeOutR + " : " +  sizeOutD); 
+			 if(sizeOutR==0)
+				 continue;
+				 //return true;
+			 
+			 if(sizeOutD < sizeOutR)
+				 return false;	
+			 
+			 Map<Object,List<EObject>> RR=refsOutRObjects.stream().collect(Collectors.groupingBy(p -> p.getClass()));
+			 Map<Object,List<EObject>> DD=refsOutDObjects.stream().collect(Collectors.groupingBy(p -> p.getClass()));
+			 for(Entry<Object, List<EObject>> R:RR.entrySet())
+			 {
+				 refObjPer= new 	RefObjPer();			 
+				 refObjPer.Ref=refOutEClassR;
+				 
+				 System.out.println(R.getKey());
+				 refObjPer.Clas=(Class) R.getKey();
+				 for(int i=0; i<R.getValue().size();i++)
+				 {
+					 EObject refsOutRObject=R.getValue().get(i);
+					 boolean found=false;
+					 
+					 List<EObject> ds= DD.get(R.getKey());
+					 List<EObject> dsMatched= ds.stream().filter(d -> attributeMatcher(d,refsOutRObject)).collect(Collectors.toList());
+					 if(dsMatched!=null)
+						 found=refObjPer.refObjDs.addAll(dsMatched);
+					 
+					 if(found==false)
+					 {					 
+						 
+						 System.out.println("***+++Matching Attribute+++***: "+refsOutRObject +"--Not found in---: " + ds);
+						 System.out.println("*********NNNNN************* ");
+						 return false;
+					 }						 
+					 else
+						 refObjPer.refObjR=refsOutRObject;					 
+				 }
+				 matchedRuleNode.refObjPer.add(refObjPer);
+			 }
+			 System.out.println();
+			 dsRuleMatched.matchedRuleNode.add(matchedRuleNode);
+		 }
+		 
+		 System.out.println();
+		 System.out.println("++++++++++++matchedRuleNode+++++++++++++++ " );
+		 for(MRN m: dsRuleMatched.matchedRuleNode)
+		 {
+			 System.out.println();
+			 System.out.println(">>>>>>>>>>>>matchedRuleNode: " );
+			 System.out.println("Rule   Node:--- "+m.ruleNode.toString());
+			 System.out.println("DSDiff Node:--- "+m.matchedNode.toString());	
+			 for(RefObjPer d: m.refObjPer)
+			 {
+				 System.out.println("#################--> RefObjPer: " );
+				 System.out.println(d.Ref);
+				 System.out.println(d.Clas);	
+				 System.out.println(d.refObjR);	
+				 System.out.println(d.refObjDs.toString());				 
+			 }
+		 }
+		 
+		 for(MRN m: dsRuleMatched.matchedRuleNode)
+		 {
+			 for(RefObjPer d: m.refObjPer)
+			 {
+				 List<EObject> toRemoveObjs=new ArrayList<EObject>();
+				 for(EObject dr: d.refObjDs)
+				 {
+					 System.out.println("==========Call==="+RuleObject+"==>");
+					 System.out.println(d.refObjR);
+					 System.out.println(dr);
+					 boolean mtch= referenceMatchForEquality(dr,d.refObjR, dsRuleMatched);
+					 if(mtch==false)
+						 toRemoveObjs.add(dr);	 
+					 System.out.println("Result for: "+"==========Call==="+RuleObject+"==>"+mtch);
+				 }
+				 d.refObjDs.removeAll(toRemoveObjs);
+				 
+				 if(d.refObjR !=null && d.refObjDs.size()==0)
+				 {
+					 System.out.println("*********NNNNN************* ");
+					 return false;
+				 }
+			 }
+		 
+		 }
+		 
+		 System.out.println("<-Eref Matched for-> " + DiffModelObject+" /-- and --/ "+RuleObject);
+		 
+		 
+		 
+		 return true;
+		*/
+	// }
+	
+	
+	
+
+
+
+
+//@Test
+/*
+ public void RuleMatching()
+{	 	 
+	List<EPackage> metamodel = new ArrayList<EPackage>();
+	ResourceSet resourceSet = new ResourceSetImpl();
+	resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl());
+	//!!! DSAugMMPath replaced with 
+	URI fileURI = URI.createFileURI(DSMDiffPath);//ecore.getFullPath().toOSString());		
+	Resource resource = resourceSet.getResource(fileURI, true);	
+	
+	for (EObject obj : resource.getContents()) {
+		if (obj instanceof EPackage) {
+			EPackage.Registry.INSTANCE.put		(((EPackage)obj).getNsURI(), ((EPackage)obj).getEFactoryInstance().getEPackage());
+			resourceSet.getPackageRegistry().put(((EPackage)obj).getNsURI(), ((EPackage)obj).getEFactoryInstance().getEPackage());
+			metamodel.add((EPackage)obj);
+		}
+	}				
+	
+	EPackage pack = metamodel.get(0);
+	
+	//EClassifier ecDSDiffSuperClassifier=pack.getEClassifiers().stream().filter(ec -> ec.getName().toLowerCase().contains("domainspecificdiff")).collect(Collectors.toList()).get(0);		
+	
+	ArrayList<DSRuleSpec> dSRuleSpecs= new ArrayList<DSRuleSpec>();
+	
+	for(EObject eo:pack.eContents())
+	{
+		try {
+			List<EObject> eobj= eo.eCrossReferences().stream().filter(e -> e.eClass().getName().toLowerCase().contains("egenerictype")).collect(Collectors.toList());
+
+			for(EObject eocr:eobj)
+			{
+				
+				EClassifier superTypeEClassifier=((EGenericType)eocr).getERawType();
+				if(superTypeEClassifier.getName().toLowerCase().contains("domainspecificdiff"))
+				{
+					//System.out.println("*********************");	
+					DSRuleSpec dSRuleSpec= new DSRuleSpec();
+					String RuleEClassName=((EClass) eo).getName();
+					dSRuleSpec.EClassName=RuleEClassName;
+					dSRuleSpec.filePath=ModelRootPath+RuleEClassName+"/Rule.xmi";
+					// * //dSRuleSpec.dsDiffRootEClass=(EClass) eo;
+					
+					List<EObject> dsDiffReqObjects= eo.eCrossReferences().stream().filter(e -> e.eClass().getName().toLowerCase().contains("ereference")).collect(Collectors.toList());
+					//Remove duplicated objects	
+					//System.out.println(dsDiffReqObjects);
+					 Set<EObject> s= new HashSet<EObject>();
+					 s.addAll(dsDiffReqObjects);         
+					 dsDiffReqObjects = new ArrayList<EObject>();
+					 dsDiffReqObjects.addAll(s); 
+					
+					for(EObject dsDiffRObj:dsDiffReqObjects)
+					{
+						EReference eref= (EReference) dsDiffRObj;
+						EClassifier eClassifierERef=eref.getEType();
+						dSRuleSpec.dsDiffReqEClassifiers.add(eClassifierERef);
+					}
+					dSRuleSpecs.add(dSRuleSpec);
+
+				}
+			}	
+		}catch(Exception ec) {}			
+	}
+	
+	//*****
+	PacmanGoAugmented.Root rootDSDiff=null;
+	try 
+	{
+	//Get DSDiff
+	ResourceSet rsDSDiffModel=setResourceSet(DSMDiffPath , PacmanGoDiffMMPackage.eNS_URI, PacmanGoDiffMMPackage.eINSTANCE);
+	//ResourceSet rsDSDiffModel=setResourceSet(DSMDiffPath , PacmanGoAugmentedPackage.eNS_URI, PacmanGoAugmentedPackage.eINSTANCE);
+	Resource resorceDSDiffModel=rsDSDiffModel.getResource(URI.createFileURI(DSMDiffPath) , true);
+	rootDSDiff = (PacmanGoAugmented.Root)resorceDSDiffModel.getContents().get(0);					
+	}catch(Exception ec) {}	
+	
+	//Get Rules to match using a loop
+	//Test : It will be catched from dSRuleSpec.filePath within a Loop
+	PacmanGoAugmented.Root rootRule=null;
+	
+	DSRuleMatched dsRuleMatched= new DSRuleMatched();
+	try 
+	{	
+		DSRuleSpec dSRuleSpec=dSRuleSpecs.get(2);
+		dsRuleMatched.dsRuleSpec=dSRuleSpec;				
+		ResourceSet rsRule=setResourceSet(dSRuleSpec.filePath , PacmanGoDiffMMPackage.eNS_URI, PacmanGoDiffMMPackage.eINSTANCE);	
+		//ResourceSet rsRule=setResourceSet(dSRuleSpec.filePath , PacmanGoAugmentedPackage.eNS_URI, PacmanGoAugmentedPackage.eINSTANCE);	
+		Resource resorceRule=rsRule.getResource(URI.createFileURI(dSRuleSpec.filePath) , true);
+		rootRule = (PacmanGoAugmented.Root)resorceRule.getContents().get(0);		
+	}catch(Exception ec) {}	
+	
+	//System.out.println(rootRule.getGn().get(0).toString());
+	
+	if(matchRoots(rootDSDiff,rootRule))
+	{
+		dsRuleMatched.RootR=rootRule;
+		dsRuleMatched.RootD=rootDSDiff;
+		
+		MRN RootM= new 	MRN();
+		RootM.Ref=null;
+		RootM.Clas=rootRule.getClass();
+		RootM.ruleNode=rootRule;
+		//RootM.matchedNodes.add(rootDSDiff);
+		RootM.matchedNode=rootDSDiff;
+		
+		dsRuleMatched.RootM=RootM;
+		
+		dsRuleMatched.isMached=matcher(dsRuleMatched.RootM); 
+		
+		//if(dsRuleMatched.isMached)
+		{				
+			//System.out.println("There is a match!");
+			PrintMRN(dsRuleMatched.RootM, ">>>>>>>>>>>>>>>>>>>>>>>>> MatchedRN: ");				
+		}
+		//else
+			//System.out.println("There is not a match!");
+		
+	}
+		
+	//!!!!!!!!!!!!!!!!!!!!!!!!! Should be set
+	//dsRuleMatched.matchedRuleNode 
+
+
+}
+*/
+
+
+
+//@Test 
+/*
+public void CreateDSMDiff()
+{
+   try {				
+		ResourceSet rsDSDiffModel=setResourceSet(DSMDiffPath , PacmanGoAugmentedPackage.eNS_URI, PacmanGoAugmentedPackage.eINSTANCE);
+		Resource resorceDSDiffModel=rsDSDiffModel.getResource(URI.createFileURI(DSMDiffPath) , true);
+		PacmanGoAugmented.Root root= (PacmanGoAugmented.Root)resorceDSDiffModel.getContents().get(0);	
+		
+		if(root.getSb().eClass().equals(PacmanGoAugmentedPackage.Literals.DIFF_SCOREBOARD))
+		{
+			DiffScoreboard diffScoreboard=(DiffScoreboard) root.getSb();
+			if(diffScoreboard.getNew_score() > diffScoreboard.getScore())
+				System.out.println("diffScoreboard: Yes / "+ diffScoreboard.toString());
+		}				
+		
+		List<PositionableEntity> diffPelletsDeleted=(List<PositionableEntity>) 
+				root.getEntity().stream()
+					.filter(e -> e.eClass().equals(PacmanGoAugmentedPackage.Literals.DIFF_PELLET))
+					.filter(e -> ((PacmanGoAugmented.DiffPellet) e)
+							.getOperation().equals(ClassOp.DELETE))
+					.filter(e -> !e.getDiffon().stream()                        
+							.filter(o->o.getOperation().equals(AscOp.DELETE))
+							.collect(Collectors.toList()).isEmpty())
+					.collect(Collectors.toList()); 
+		
+		System.out.println("diffPelletsDeleted: Yes / "+ diffPelletsDeleted.get(0).toString());
+		
+		List<PositionableEntity> PacmanOnGridNode=null;
+		
+		for(PositionableEntity diffPeDel:diffPelletsDeleted) 
+		{
+			PacmanGoAugmented.DiffPellet dPeDelItem=(PacmanGoAugmented.DiffPellet) diffPeDel;
+			GridNode gridNode=dPeDelItem.getDiffon().get(0).getEType();			
+								
+			PacmanOnGridNode=(List<PositionableEntity>) 
+					root.getEntity().stream()
+						.filter(e -> e.eClass().equals(PacmanGoAugmentedPackage.Literals.PACMAN))
+						.filter(e -> ((PacmanGoAugmented.Pacman) e).getOn().equals(gridNode))
+						.collect(Collectors.toList());
+			
+			System.out.println("PacmanOnGridNode: Yes / "+ PacmanOnGridNode.get(0).toString());
+		}
+		
+		EClass 		RootEClass 	= root.eClass();	
+		
+		EClassifier PacmanEatingPelletEClassEClassifier	= RootEClass.getEPackage().getEClassifier("PacmanEatingPellet");	
+		EClass		PacmanEatingPelletEClass			= (EClass)PacmanEatingPelletEClassEClassifier;
+		EObject 	PacmanEatingPelletObject			= PacmanGoAugmentedFactory.eINSTANCE.create(PacmanEatingPelletEClass);
+		
+		//--------------------------------------------
+		EReference refType=PacmanEatingPelletObject.eClass()
+				.getEAllReferences().stream()
+				.filter(r -> r.getName().toLowerCase() == "pacman")
+				.collect(Collectors.toList()).get(0); 
+		SetEFeature(PacmanEatingPelletObject,refType,PacmanOnGridNode.get(0));
+		
+		refType=PacmanEatingPelletObject.eClass()
+				.getEAllReferences().stream()
+				.filter(r -> r.getName().toLowerCase() == "delpelle")
+				.collect(Collectors.toList()).get(0); 
+		SetEFeature(PacmanEatingPelletObject,refType,diffPelletsDeleted.get(0));
+		
+		refType=root.eClass()
+				.getEAllReferences().stream()
+				.filter(r -> r.getName().toLowerCase() == "domainspecificdiffs")
+				.collect(Collectors.toList()).get(0); 	
+		SetEFeature(root,refType,PacmanEatingPelletObject);
+					
+		
+		resorceDSDiffModel.save(null);	
+	} 
+   catch (Throwable _e) 
+	{
+		throw Exceptions.sneakyThrow(_e);
+	}
+}
+*/
+/*
+
+rootRule.eContents().forEach(
+		 r ->System.out.println(r.eClass())
+		 );
+
+
+ruleRes.getContents().forEach( 
+		 eo -> System.out.println(
+				 eo.eCrossReferences().stream()
+				 .filter(e -> e.eClass().getName().toLowerCase().contains("egenerictype"))
+				 .collect(Collectors.toList())
+				 )
+		 );
+*/
+/*
+		 if(ruleRes!=null)
+		 {
+			boolean ddcFound=false; 
+			for(EObject eo:ruleRes.getContents())
+			{
+				try {
+					List<EObject> eobj= eo.eCrossReferences().stream().filter(e -> e.eClass().getName().toLowerCase().contains("egenerictype")).collect(Collectors.toList());
+
+					for(EObject eocr:eobj)
+					{						
+						EClassifier superTypeEClassifier=((EGenericType)eocr).getERawType();
+						if(superTypeEClassifier.getName().toLowerCase().contains("domainspecificdiff"))
+						{
+							//System.out.println("*********************");	
+							String RuleEClassName=((EClass) eo).getName();
+							dSRuleSpec.EClassName=RuleEClassName;
+							dSRuleSpec.filePath= RulePath;  //ModelRootPath+RuleEClassName+"/Rule.xmi";
+							dSRuleSpec.dsDiffRootEClass=(EClass) eo;							
+							List<EObject> dsDiffReqObjects= eo.eCrossReferences().stream().filter(e -> e.eClass().getName().toLowerCase().contains("ereference")).collect(Collectors.toList());
+							//Remove duplicated objects	
+							//System.out.println(dsDiffReqObjects);
+							 Set<EObject> s= new HashSet<EObject>();
+							 s.addAll(dsDiffReqObjects);         
+							 dsDiffReqObjects = new ArrayList<EObject>();
+							 dsDiffReqObjects.addAll(s); 
+							
+							for(EObject dsDiffRObj:dsDiffReqObjects)
+							{
+								EReference eref= (EReference) dsDiffRObj;
+								EClassifier eClassifierERef=eref.getEType();
+								dSRuleSpec.dsDiffReqEClassifiers.add(eClassifierERef);
+							}
+							ddcFound=true;
+							break;
+						}
+					}
+					if(ddcFound)
+						break;
+				}catch(Exception ec) {}			
+			}			 
+		 }
+		 else
+			 return null;
+ */
+
+
+
+
+
+//*****
+ /*
+//PacmanGoAugmented.Root rootDSDiff=null;
+EObject rootDSDiff=null;
+try 
+{
+//ResourceSet rsDSDiffModel=setResourceSet(DSMDiffPath , DiffMM_eNSURI, DiffMM_eIN);// PacmanGoDiffMMPackage.eNS_URI, PacmanGoDiffMMPackage.eINSTANCE);
+//Resource resorceDSDiffModel=rsDSDiffModel.getResource(URI.createFileURI(DSMDiffPath) , true);
+rootDSDiff = EMFUtils.getTheRoot(DSDiffMainPack);//(PacmanGoAugmented.Root)resorceDSDiffModel.getContents().get(0);	
+
+}catch(Exception ec) {}	
+
+//Get Rules to match using a loop
+//Test : It will be catched from dSRuleSpec.filePath within a Loop
+//PacmanGoAugmented.Root rootRule=null;
+EObject rootRule=null;
+
+DSRuleMatched dsRuleMatched= new DSRuleMatched();
+try 
+{	
+	// ***** /DSRuleSpec dSRuleSpec=dSRuleSpecs.get(2);
+	dsRuleMatched.dsRuleSpec=dSRuleSpec;				
+	//ResourceSet rsRule=setResourceSet(dSRuleSpec.filePath , PacmanGoDiffMMPackage.eNS_URI, PacmanGoDiffMMPackage.eINSTANCE);	
+	//Resource resorceRule=rsRule.getResource(URI.createFileURI(dSRuleSpec.filePath) , true);
+	rootRule =  EMFUtils.getTheRoot(rulePack);//(PacmanGoAugmented.Root)resorceRule.getContents().get(0);		
+	}catch(Exception ec) {}	
+
+//System.out.println(rootRule.getGn().get(0).toString());
+
+*/
+
+
+
+//As we do not have the post elements attrMatchAllForEquality is not needwed anymore
+/*
+//get attributes starting with post from Rule
+//if they were not in default value
+//get associated attributes and apply the post rule on them
+EAttribute operationEAttrR = null;
+ClassOp ValueAttOperationD  = null;
+try
+{
+	 operationEAttrR = allEAttrR.stream()
+		 .filter(a -> a.getName().toLowerCase()=="operation").findAny().get();//equals("operation")).findAny().get();	
+	 
+	 //System.out.println(" $$$ RuleObject $$$" + operationEAttrR);
+	 
+	 ValueAttOperationD = (ClassOp) RuleObject.eGet(operationEAttrR);	
+	 
+	 if(ValueAttOperationD == ClassOp.MODIFY)
+	 {
+		 return attrMatchForModifyEqu(DiffModelObject, RuleObject, allEAttrR, operationEAttrR);	
+	 }
+	 else
+		 return attrMatchAllForEquality(DiffModelObject, RuleObject, allEAttrR);
+		 
+}
+catch(Exception ex)
+{
+	 //!!!!!!!!!!!!!!Check here only for equality
+	 //System.out.println(ex.toString()+ " --- " +DiffModelObject+ " $$$ "+RuleObject +" $$$ "+ operationEAttrR + " $$$ "+ValueAttOperationD );
+	 //return attrMatchAllForEquality(DiffModelObject, RuleObject, allEAttrR);
+}
+
+*/
+
+/*
+EAttribute attNewR = null;
+try {
+	 attNewR = allEAttrR.stream().filter(a ->a.getName().toLowerCase().equals("new_"+attrName.toLowerCase())).findAny().get();
+}
+catch(Exception ex)
+{
+	 System.out.println(ex.toString() + " --- "+attrName);
+}
+
+final Object ValueAttOrgD  = DiffModelObject.eGet(attOrgR);
+final Object ValueAttNewD  = DiffModelObject.eGet(attNewR);			 
+System.out.println("---------");
+System.out.println(attrName + " [ Default = "+attOrgR.getDefaultValue()+" ] [ Old = "+ ValueAttOrgD+" ] [ New = "+ValueAttNewD+ " ]");
+System.out.println("-- did not have post: matched for equality");
+if(ValueAttOrgD==null && ValueAttNewD==null)
+	continue; 
+if((ValueAttOrgD!=null && ValueAttNewD==null)||(ValueAttOrgD==null && ValueAttNewD!=null) || !(ValueAttOrgD == ValueAttNewD))
+	 return false;
+	 
+	 
+	 //------
+	 boolean attrMatchForModifyEqu(EObject DiffModelObject, EObject RuleObject, List<EAttribute> allEAttrR, EAttribute operationEAttrR)
+	 {
+		final List<EAttribute> postEAttrsR = 
+				 allEAttrR.stream()
+				 .filter(a -> a.getName().toLowerCase().startsWith("post_")) // &&  RuleObject.eGet(a) !=a.getDefaultValue()
+				 .collect(Collectors.toList());
+		 
+		 if(postEAttrsR!=null)
+		 {
+			 for(EAttribute postEAttrR : postEAttrsR)
+			 {
+				 String attrName = postEAttrR.getName().substring(5);
+				 final Object ValueAttPostR = RuleObject.eGet(postEAttrR);
+
+				 System.out.println("---------");
+			     System.out.println(postEAttrR.getName() + " [ Default-post = "+postEAttrR.getDefaultValue() +" ] [ Current-post = "+ ValueAttPostR+ " ]");				 
+
+				 EAttribute attOrgR = allEAttrR.stream()
+						 .filter(a ->a.getName().toLowerCase()
+								 .equals(attrName.toLowerCase()))
+						 .findAny().get();
+				 EAttribute attNewR = allEAttrR.stream()
+						 .filter(a ->a.getName().toLowerCase()
+								 .equals("new_"+attrName.toLowerCase()))
+						 .findAny().get();
+				 final Object ValueAttOrgD  = DiffModelObject.eGet(attOrgR);
+				 final Object ValueAttNewD  = DiffModelObject.eGet(attNewR);
+			     
+				 if(ValueAttPostR.toString()!="" && ValueAttPostR!=null)
+				 {
+					 System.out.println("--Had post: Considered for evaluation match");
+					 
+					 //Following should be done by OCL tools
+					 switch(ValueAttPostR.toString())
+					 {
+						 case "!=":
+							 if(!(ValueAttOrgD != ValueAttNewD))
+							 {
+								 System.out.println("-- did NOT match");
+								 return false;
+							 }	
+							 System.out.println("-- did match");
+							 break;
+							 /*
+						 case ">":
+							 if(!(ValueAttOrgD > ValueAttNewD))
+								 return false;
+							 break;	
+							 */						 
+					/* }
+				 }
+				 else
+				 {
+					 System.out.println("-- did not have post: matched for equality");
+					 if(ValueAttOrgD==null && ValueAttNewD==null)
+						continue; 
+					 if((ValueAttOrgD!=null && ValueAttNewD==null)||(ValueAttOrgD==null && ValueAttNewD!=null) || !(ValueAttOrgD == ValueAttNewD))
+						 return false;
+				 }
+					 
+			 }				 
+		 }	
+		 System.out.println(".............................  EAttributes  are matched!");
+		 return true;
+	 }
+	 
+*/
+
+	

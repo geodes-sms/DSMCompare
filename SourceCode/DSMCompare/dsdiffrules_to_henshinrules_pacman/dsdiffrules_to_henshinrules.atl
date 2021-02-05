@@ -1,0 +1,100 @@
+-- @path MMdsdiff=file:/R:/_udemRepo/DSMCompare-Project/srcCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/dsls/pacman/metamodels/PacManGoDiffMM.ecore
+-- @path MMdsdifrule=file:/R:/_udemRepo/DSMCompare-Project/srcCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/dsls/pacman/metamodels/PacManGoRuleMM.ecore
+-- @nsURI MMhenshin=http://www.eclipse.org/emf/2011/Henshin
+
+module dsdiffrules2henshinrules;
+create OUTdsdiff : MMdsdiff, OUThenshin : MMhenshin from INdsdifrule : MMdsdifrule, INdsdiff : MMdsdiff;
+
+helper def	: MMEPackageName	: String	=  MMdsdiff!DomainSpecificDiff.getEPackage().getName();
+
+
+
+rule DsdiffToHenshinRule {
+	from
+		ruleD : MMdsdifrule!Rule
+	to
+		ruleH : MMhenshin!Module (units <- Rul),
+		Rul:	MMhenshin!Rule (name <- ruleD.name , lhs <-LHS, rhs<-RHS),
+		LHS: 	MMhenshin!Graph (name<-'Lhs', nodes <- LHSNodes, edges <- LHSEdges),
+		RHS: 	MMhenshin!Graph (name<-'Rhs', nodes <- RHSNodes, edges <- RHSEdges),
+		LHSNodes: 	distinct MMhenshin!Node 
+					foreach(g in ruleD.getNodes().flatten())
+							( 
+								name <- g.eGet(g.eClass().getEAllAttributes()->
+									select(a|a.name.toLower()='id_pattern')->first()).toString()
+								, description <- MMhenshin!Action.getDefaultValue().toString() --MMhenshin!Action.toString()--.parse('CREATE')--.toString() --.eClass().getEAllOperations().toString() --.toString() --.eClass().name --.eClass().getEAllOperations().get(2).toString() 
+			  					,type <- g.eClass().getESuperTypes().get(0) 
+								,action <- MMhenshin!Action.createActionFromString(MMhenshin!Action,'CREATE')
+								--,action <- MMhenshin!Action.eClass().getEAllOperations().get(0).toString() 
+								
+								
+								--,description <-MMhenshin!Rule.getEPackage().getEFactoryInstance().eClass().create()
+								--MMhenshin!Rule.getEPackage().getEClassifier('MMhenshin!Rule')
+								--MMhenshin!Rule.getEPackage().getEFactoryInstance().eClass().create(MMhenshin!Rule.eClass())
+								--Mhenshin!Rule.getEPackage().getEFactoryInstance().eClass().create(MMhenshin!Rule.getEPackage().getEClassifier('Action'))
+								--MMhenshin!Rule.getEPackage().getEFactoryInstance().eClass().getEAllOperations().get(1).toString() 
+								--MMhenshin!Rule.getEPackage().getEClassifier('Action').toString() 
+								--,action <- MMhenshin!Rule.getEPackage().getEClassifier('org.eclipse.emf.henshin.model.Action').toString() 
+								-- MMhenshin!Rule.getEPackage().getEFactoryInstance().create(MMdsdifrule!Rule.getEPackage().getEClassifier('org.eclipse.emf.henshin.model.Action').eClass())
+								--.create(MMhenshin!Rule.getEPackage().getEClassifier('org.eclipse.emf.henshin.model.Action'))
+								--.createFromString(MMhenshin!Rule.getEPackage().getEClassifier('org.eclipse.emf.henshin.model.Action'), 'preserve')
+		      				),
+		RHSNodes: 	distinct MMhenshin!Node 
+					foreach(g in ruleD.getNodes().flatten()) 
+							( 
+								name <- g.eGet(g.eClass().getEAllAttributes()->
+									select(a|a.name.toLower()='id_pattern')->first()).toString(),	 
+			  					type <- g.eClass().getESuperTypes().get(0)--, action <- Ac
+								,action <- MMdsdifrule!Rule.getEPackage().getEClassifier('org.eclipse.emf.henshin.model.Action')
+		      				),
+						
+		LHSEdges: 	distinct MMhenshin!Edge 
+					foreach(g in ruleD.getEdges().flatten()) 
+							( 
+			  					index <- g.toString()--, action <- Ac
+		      				),		
+		RHSEdges: 	distinct MMhenshin!Edge 
+					foreach(g in ruleD.getEdges().flatten()) 
+							( 
+			  					index <- g.toString()--, action <- Ac
+		      				)--,							
+						
+		--Ac: 	MMhenshin!Action
+		
+		
+		do{
+			--thisModule.debug(GLHS.allInstances()->first().toString());
+		}
+}
+
+
+helper context MMdsdifrule!Rule def : isDSD() : Boolean =
+	self.eClass().getName().contains('DomainSpecificDiff');
+
+
+
+  
+helper context MMdsdifrule!Rule def : getRoot() : OrderedSet(String) =
+	self.eContents();
+    
+helper context MMdsdifrule!Rule def : getNodes() : OrderedSet(String) =
+	self.eContents().get(0).eContents()->iterate( child ; elements : OrderedSet(String) =
+		OrderedSet{} | 
+		if child.eClass().getESuperTypes().get(0).getName().toLower() <> 'domainspecificdiff' then
+			elements.append(child).union(child.eContents())
+		else
+				elements.append(OrderedSet{})
+		endif
+		).append(self.eContents());
+
+
+helper context MMdsdifrule!Rule def : getEdges() : OrderedSet(String) =
+	self.eContents().get(0).eContents()->iterate( child ; elements : OrderedSet(String) =
+		OrderedSet{} | 
+		if child.eClass().getEAllReferences().size() > 0  then
+			elements.append(child.eClass().getEAllReferences()).union(child.eContents())
+		else
+				elements.append(OrderedSet{})
+		endif);
+		
+--eClass().getEAllReferences()   --eClass().getEAllReferences()

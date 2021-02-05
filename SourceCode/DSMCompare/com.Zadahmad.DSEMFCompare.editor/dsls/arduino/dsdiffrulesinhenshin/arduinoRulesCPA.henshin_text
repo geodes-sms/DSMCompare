@@ -1,0 +1,300 @@
+ePackageImport  arduinoDiffMM
+
+		rule AddAFunction()
+		{
+			graph
+			{
+				 preserve			node n0:Project
+				 preserve			node n1:Sketch
+				 preserve			node n11:DiffFunction
+				 create				node n2:DomainSpecificDiff{
+					create name = "\"AddAFunction\""
+				}
+			edges[
+			  		(preserve	n0->n1:sketch),
+			  		(create		n0->n2:domainspecificdiffs),
+			  		(preserve	n1->n11:functions),
+			  		(create		n2->n11:DomainSpecificDiff_Function)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule AddMusicPlayer()
+		{
+			graph
+			{
+				 preserve			node n0:Project
+				 preserve			node n1:Hardware
+				 preserve			node n11:DiffConnector
+				 preserve			node n111:DiffConnector_module
+				 preserve			node n3:OutputModule
+				 preserve			node n2:Sketch
+				 preserve			node n21:DiffStatus
+				 preserve			node n211:DiffModuleInstruction_module
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"AddMusicPlayer\""
+				}
+			edges[
+			  		(preserve	n0->n1:hardware),
+			  		(preserve	n0->n2:sketch),
+			  		(preserve	n0->n3:modules),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n11:connectors),
+			  		(preserve	n11->n111:diffmodule),
+			  		(preserve	n111->n3:eType),
+			  		(preserve	n2->n21:instructions),
+			  		(preserve	n21->n211:diffmodule),
+			  		(preserve	n211->n3:eType),
+			  		(create		n4->n21:DomainSpecificDiff_Status),
+			  		(create		n4->n11:DomainSpecificDiff_Connector)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule DeleteARepeatLoop()
+		{
+			graph
+			{
+				 preserve			node n0:Project
+				 preserve			node n1:Sketch
+				 preserve			node n11:DiffRepeat
+				 preserve			node n111:DiffInstruction_next
+				 create				node n2:DomainSpecificDiff{
+					create name = "\"DeleteARepeatLoop\""
+				}
+			edges[
+			  		(preserve	n0->n1:sketch),
+			  		(create		n0->n2:domainspecificdiffs),
+			  		(preserve	n1->n11:instructions),
+			  		(preserve	n11->n111:diffnext),
+			  		(create		n2->n11:DomainSpecificDiff_Repeat)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule DeleteIncompleteWhileLoop()
+		{
+			graph
+			{
+				 preserve			node n0:Project
+				 preserve			node n1:Sketch
+				 preserve			node n11:DiffWhile
+				 create				node n2:DomainSpecificDiff{
+					create name = "\"DeleteIncompleteWhileLoop\""
+				}
+			edges[
+			  		(preserve	n0->n1:sketch),
+			  		(create		n0->n2:domainspecificdiffs),
+			  		(preserve	n1->n11:instructions),
+			  		(create		n2->n11:DomainSpecificDiff_While)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule FunctionCall()
+		{
+			graph
+			{
+				 preserve			node n0:Project
+				 preserve			node n1:Sketch
+				 preserve			node n11:DiffFunctionCall
+				 preserve			node n111:DiffFunctionCall_definition
+				 create				node n2:DomainSpecificDiff{
+					create name = "\"FunctionCall\""
+				}
+			edges[
+			  		(preserve	n0->n1:sketch),
+			  		(create		n0->n2:domainspecificdiffs),
+			  		(preserve	n1->n11:instructions),
+			  		(preserve	n11->n111:diffdefinition),
+			  		(create		n2->n11:DomainSpecificDiff_FunctionCall)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule IncreaseRepeatIteration(VAR n11iteration:EInt, VAR n11new_iteration:EInt)
+		{
+			graph
+			{
+				 preserve			node n0:Project
+				 preserve			node n1:Sketch
+				 preserve			node n11:DiffRepeat{
+					preserve iteration =  n11iteration
+					preserve new_iteration =  n11new_iteration
+				}
+				 create				node n2:DomainSpecificDiff{
+					create name = "\"IncreaseRepeatIteration\""
+				}
+			edges[
+			  		(preserve	n0->n1:sketch),
+			  		(create		n0->n2:domainspecificdiffs),
+			  		(preserve	n1->n11:instructions),
+			  		(create		n2->n11:DomainSpecificDiff_Repeat)
+	      		 ]
+			}
+			conditions [n11iteration < n11new_iteration]
+		}
+//----------------------------------------------------------------------
+
+		rule RefactorARepeatLoop()
+		{
+			graph
+			{
+				 preserve			node n0:Project
+				 preserve			node n1:Sketch
+				 preserve			node n11:DiffRepeat
+				 preserve			node n111:DiffInstruction_next
+				 create				node n2:DomainSpecificDiff{
+					create name = "\"RefactorARepeatLoop\""
+				}
+			edges[
+			  		(preserve	n0->n1:sketch),
+			  		(create		n0->n2:domainspecificdiffs),
+			  		(preserve	n1->n11:instructions),
+			  		(preserve	n11->n111:diffnext),
+			  		(create		n2->n11:DomainSpecificDiff_Repeat)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule RefactorAWhileLoop()
+		{
+			graph
+			{
+				 preserve			node n0:Project
+				 preserve			node n1:Sketch
+				 preserve			node n11:DiffWhile
+				 preserve			node n111:DiffInstruction_next
+				 create				node n2:DomainSpecificDiff{
+					create name = "\"RefactorAWhileLoop\""
+				}
+			edges[
+			  		(preserve	n0->n1:sketch),
+			  		(create		n0->n2:domainspecificdiffs),
+			  		(preserve	n1->n11:instructions),
+			  		(preserve	n11->n111:diffnext),
+			  		(create		n2->n11:DomainSpecificDiff_While)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule RefactorToAnIfCondition()
+		{
+			graph
+			{
+				 preserve			node n0:Project
+				 preserve			node n1:Sketch
+				 preserve			node n11:DiffIf
+				 preserve			node n111:DiffInstruction_next
+				 preserve			node n112:DiffIf_condition
+				 create				node n2:DomainSpecificDiff{
+					create name = "\"RefactorToAnIfCondition\""
+				}
+			edges[
+			  		(preserve	n0->n1:sketch),
+			  		(create		n0->n2:domainspecificdiffs),
+			  		(preserve	n1->n11:instructions),
+			  		(preserve	n11->n111:diffnext),
+			  		(preserve	n11->n112:diffcondition),
+			  		(create		n2->n11:DomainSpecificDiff_If)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule ResetFunctionalityEnabled()
+		{
+			graph
+			{
+				 preserve			node n0:Project
+				 preserve			node n1:Hardware
+				 preserve			node n11:DiffConnector
+				 preserve			node n111:DiffConnector_module
+				 preserve			node n3:OutputModule
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"ResetFunctionalityEnabled\""
+				}
+			edges[
+			  		(preserve	n0->n1:hardware),
+			  		(preserve	n0->n3:modules),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n11:connectors),
+			  		(preserve	n11->n111:diffmodule),
+			  		(preserve	n111->n3:eType),
+			  		(create		n4->n11:DomainSpecificDiff_Connector)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule ServoFeatureEnabled ()
+		{
+			graph
+			{
+				 preserve			node n0:Project
+				 preserve			node n1:Hardware
+				 preserve			node n11:DiffConnector
+				 preserve			node n111:DiffConnector_module
+				 preserve			node n3:OutputModule
+				 preserve			node n2:Sketch
+				 preserve			node n21:DiffLevel
+				 preserve			node n211:DiffModuleInstruction_module
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"ServoFeatureEnabled \""
+				}
+			edges[
+			  		(preserve	n0->n1:hardware),
+			  		(preserve	n0->n2:sketch),
+			  		(preserve	n0->n3:modules),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n11:connectors),
+			  		(preserve	n11->n111:diffmodule),
+			  		(preserve	n111->n3:eType),
+			  		(preserve	n2->n21:instructions),
+			  		(preserve	n21->n211:diffmodule),
+			  		(preserve	n211->n3:eType),
+			  		(create		n4->n21:DomainSpecificDiff_Level),
+			  		(create		n4->n11:DomainSpecificDiff_Connector)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule SupportInfraredConnections()
+		{
+			graph
+			{
+				 preserve			node n0:Project
+				 preserve			node n1:Hardware
+				 preserve			node n11:DiffConnector
+				 preserve			node n111:DiffConnector_module
+				 preserve			node n3:InputModule
+				 preserve			node n2:Sketch
+				 preserve			node n21:DiffSensor
+				 preserve			node n211:DiffModuleInstruction_module
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"SupportInfraredConnections\""
+				}
+			edges[
+			  		(preserve	n0->n1:hardware),
+			  		(preserve	n0->n2:sketch),
+			  		(preserve	n0->n3:modules),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n11:connectors),
+			  		(preserve	n11->n111:diffmodule),
+			  		(preserve	n111->n3:eType),
+			  		(preserve	n2->n21:instructions),
+			  		(preserve	n21->n211:diffmodule),
+			  		(preserve	n211->n3:eType),
+			  		(create		n4->n11:DomainSpecificDiff_Connector)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------

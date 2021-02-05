@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.Zadahmad.DSEMFCompare.editor/src" modelPluginID="com.Zadahmad.DSEMFCompare.editor"
+    modelName="OracleDiffMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>oracleDiffMM.ecore</foreignModel>
+  <genPackages prefix="OracleDiffMM" disposableProviderFactory="true" ecorePackage="oracleDiffMM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="oracleDiffMM.ecore#//ClassOp">
+      <genEnumLiterals ecoreEnumLiteral="oracleDiffMM.ecore#//ClassOp/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="oracleDiffMM.ecore#//ClassOp/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="oracleDiffMM.ecore#//ClassOp/MODIFY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="oracleDiffMM.ecore#//AscOp">
+      <genEnumLiterals ecoreEnumLiteral="oracleDiffMM.ecore#//AscOp/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="oracleDiffMM.ecore#//AscOp/DELETE"/>
+    </genEnums>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//A">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//A/ab"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//A/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//A/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//A/diffab"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//B">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//B/bd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//B/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//B/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//B/diffbd"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//C">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//C/x"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//D">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//D/dd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//D/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//D/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//D/diffdd"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//ROOT">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//ROOT/b"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//ROOT/a"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//ROOT/domainspecificdiffs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//ROOT/diffb"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//ROOT/diffa"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//ROOT/diffdomainspecificdiffs"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//DomainSpecificDiff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DomainSpecificDiff/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_A"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_B"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_C"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_D"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//DiffA">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffA/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffA/new_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffA/new_Name"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//DiffA_ab">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffA_ab/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//DiffA_ab/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//DiffB">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffB/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffB/new_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffB/new_Name"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//DiffB_bd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffB_bd/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//DiffB_bd/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//DiffC">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffC/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffC/new_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffC/new_Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffC/new_x"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//DiffD">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffD/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffD/new_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffD/new_Name"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//DiffD_dd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffD_dd/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//DiffD_dd/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//DiffROOT">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffROOT/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//DiffROOT_b">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffROOT_b/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//DiffROOT_b/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//DiffROOT_a">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffROOT_a/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//DiffROOT_a/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="oracleDiffMM.ecore#//DiffROOT_domainspecificdiffs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oracleDiffMM.ecore#//DiffROOT_domainspecificdiffs/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference oracleDiffMM.ecore#//DiffROOT_domainspecificdiffs/eType"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

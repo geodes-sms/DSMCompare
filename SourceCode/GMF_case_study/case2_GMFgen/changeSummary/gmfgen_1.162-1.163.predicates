@@ -1,0 +1,11 @@
+// Applied composite operation
+propagateFeature(GenChildLabelNode.labelReadOnly, [GenChildLabelNode.labelModelFacet, GenLabel.modelFacet])
+// Atomic changes realizing the composite operation above
+create(GenLabel.readOnly)
+move(LabelModelFacet, GenChildLabelNode.labelReadOnly)
+
+// Applied composite operation
+rename(GenChildLabelNode.labelReadOnly, labelReadOnly)
+// Atomic changes realizing the composite operation above
+set(GenChildLabelNode.labelReadOnly, name, labelReadOnly)
+

@@ -1,0 +1,16 @@
+// Applied composite operation
+pullFeature(GenLink.createCommandClassName, LinkModelFacet)
+// Atomic changes realizing the composite operation above
+move(TypeLinkModelFacet, GenLink.createCommandClassName)
+
+// Applied composite operation
+collectFeature(GenLink.createCommandClassName, GenLink.modelFacet)
+// Atomic changes realizing the composite operation above
+move(LinkModelFacet, GenLink.createCommandClassName)
+
+// Applied composite operation
+pullOperation(getCreateCommandQualifiedClassName, LinkModelFacet)
+// Atomic changes realizing the composite operation above
+move(TypeLinkModelFacet, getCreateCommandQualifiedClassName)
+
+move(LinkModelFacet, getCreateCommandQualifiedClassName)

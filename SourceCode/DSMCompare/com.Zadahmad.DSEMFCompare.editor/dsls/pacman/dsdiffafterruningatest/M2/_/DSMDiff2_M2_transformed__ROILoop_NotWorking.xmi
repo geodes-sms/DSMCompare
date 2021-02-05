@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ASCII"?>
+<PacmanGoDiffMM:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PacmanGoDiffMM="http://www.zadahmad.org/dsmcompare/PacmanGoDiffMM" xsi:schemaLocation="http://www.zadahmad.org/dsmcompare/PacmanGoDiffMM ../dsdiffrulesinhenshin/_Archive/_2/PacManGoDiffMM.ecore">
+  <gridnodes bottom="//@gridnodes.3" right="//@gridnodes.1" id="00"/>
+  <gridnodes bottom="//@gridnodes.4" left="//@gridnodes.0" right="//@gridnodes.2" id="01"/>
+  <gridnodes bottom="//@gridnodes.5" left="//@gridnodes.1" id="02"/>
+  <gridnodes up="//@gridnodes.0" bottom="//@gridnodes.6" right="//@gridnodes.4" id="10"/>
+  <gridnodes up="//@gridnodes.1" bottom="//@gridnodes.7" left="//@gridnodes.3" right="//@gridnodes.5" id="11"/>
+  <gridnodes up="//@gridnodes.2" bottom="//@gridnodes.8" left="//@gridnodes.4" id="12"/>
+  <gridnodes up="//@gridnodes.3" right="//@gridnodes.7" id="20"/>
+  <gridnodes up="//@gridnodes.4" left="//@gridnodes.6" right="//@gridnodes.8" id="21"/>
+  <gridnodes up="//@gridnodes.5" left="//@gridnodes.7" id="22"/>
+  <scoreboard xsi:type="PacmanGoDiffMM:DiffScoreboard" operation="MODIFY" new_value="1"/>
+  <entities xsi:type="PacmanGoDiffMM:DiffFood" id="f1" operation="DELETE">
+    <diffon operation="DELETE" eType="//@gridnodes.7"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:DiffFood" id="f2" operation="DELETE">
+    <diffon operation="DELETE" eType="//@gridnodes.0"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:DiffFood" id="f3" operation="DELETE">
+    <diffon operation="DELETE" eType="//@gridnodes.1"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:DiffFood" id="f4" operation="DELETE">
+    <diffon operation="DELETE" eType="//@gridnodes.3"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:DiffFood" id="f5" operation="DELETE">
+    <diffon operation="DELETE" eType="//@gridnodes.6"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:DiffFood" id="f6" operation="DELETE">
+    <diffon operation="DELETE" eType="//@gridnodes.5"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:DiffPacman" id="p1" operation="DELETE"/>
+  <entities xsi:type="PacmanGoDiffMM:Pacman" on="//@gridnodes.7" id="p11"/>
+  <entities xsi:type="PacmanGoDiffMM:Pacman" on="//@gridnodes.7" id="p12">
+    <diffon operation="DELETE" eType="//@gridnodes.3"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:Pacman" on="//@gridnodes.7" id="p13">
+    <diffon operation="DELETE" eType="//@gridnodes.2"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:Pacman" on="//@gridnodes.7" id="p14"/>
+  <entities xsi:type="PacmanGoDiffMM:Pacman" on="//@gridnodes.7" id="p15"/>
+  <entities xsi:type="PacmanGoDiffMM:Pacman" on="//@gridnodes.7" id="p16">
+    <diffon operation="DELETE" eType="//@gridnodes.4"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:Pacman" on="//@gridnodes.7" id="p17"/>
+  <entities xsi:type="PacmanGoDiffMM:Pacman" on="//@gridnodes.7" id="p18">
+    <diffon operation="DELETE" eType="//@gridnodes.1"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:Ghost" on="//@gridnodes.7" id="g11">
+    <diffon eType="//@gridnodes.3"/>
+    <diffon operation="DELETE" eType="//@gridnodes.6"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:Ghost" on="//@gridnodes.7" id="g12">
+    <diffon eType="//@gridnodes.4"/>
+    <diffon operation="DELETE" eType="//@gridnodes.7"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:Ghost" on="//@gridnodes.7" id="g13">
+    <diffon eType="//@gridnodes.5"/>
+    <diffon operation="DELETE" eType="//@gridnodes.8"/>
+    <diffon operation="DELETE" eType="//@gridnodes.4"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:Ghost" on="//@gridnodes.7" id="g14">
+    <diffon eType="//@gridnodes.1"/>
+    <diffon operation="DELETE" eType="//@gridnodes.4"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:Ghost" on="//@gridnodes.7" id="g15">
+    <diffon eType="//@gridnodes.4"/>
+    <diffon operation="DELETE" eType="//@gridnodes.7"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:Ghost" on="//@gridnodes.7" id="g16">
+    <diffon eType="//@gridnodes.7"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:Ghost" on="//@gridnodes.7" id="g17">
+    <diffon eType="//@gridnodes.0"/>
+    <diffon operation="DELETE" eType="//@gridnodes.3"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:Ghost" on="//@gridnodes.7" id="g18">
+    <diffon eType="//@gridnodes.4"/>
+    <diffon operation="DELETE" eType="//@gridnodes.3"/>
+  </entities>
+  <domainspecificdiffs name="pacmanmoves" DomainSpecificDiff_GridNode="//@gridnodes.3 //@gridnodes.4" DomainSpecificDiff_Pacman="//@entities.14"/>
+  <domainspecificdiffs name="pacmanmoves" DomainSpecificDiff_GridNode="//@gridnodes.1 //@gridnodes.0" DomainSpecificDiff_Pacman="//@entities.13"/>
+  <domainspecificdiffs name="pacmanmoves" DomainSpecificDiff_GridNode="//@gridnodes.6 //@gridnodes.7" DomainSpecificDiff_Pacman="//@entities.12"/>
+  <domainspecificdiffs name="pacmanmoves" DomainSpecificDiff_GridNode="//@gridnodes.3 //@gridnodes.4" DomainSpecificDiff_Pacman="//@entities.11"/>
+  <domainspecificdiffs name="pacmanmoves" DomainSpecificDiff_GridNode="//@gridnodes.0 //@gridnodes.1" DomainSpecificDiff_Pacman="//@entities.10"/>
+  <domainspecificdiffs name="pacmanmoves" DomainSpecificDiff_GridNode="//@gridnodes.4 //@gridnodes.5" DomainSpecificDiff_Pacman="//@entities.9"/>
+  <domainspecificdiffs name="pacmanmoves" DomainSpecificDiff_GridNode="//@gridnodes.7 //@gridnodes.4" DomainSpecificDiff_Pacman="//@entities.8"/>
+  <domainspecificdiffs name="pacmanmoves" DomainSpecificDiff_GridNode="//@gridnodes.6 //@gridnodes.3" DomainSpecificDiff_Pacman="//@entities.7"/>
+  <domainspecificdiffs name="PacmanDies" DomainSpecificDiff_Ghost="//@entities.22"/>
+  <domainspecificdiffs name="ghostmovesLeft" DomainSpecificDiff_GridNode="//@gridnodes.5 //@gridnodes.4" DomainSpecificDiff_Ghost="//@entities.16"/>
+</PacmanGoDiffMM:Game>

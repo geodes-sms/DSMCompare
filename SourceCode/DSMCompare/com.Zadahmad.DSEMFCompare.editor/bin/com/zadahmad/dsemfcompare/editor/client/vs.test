@@ -1,0 +1,248 @@
+	public void test() {
+		//Vertex(name, id, number of Semantics, number of Filters, initial order)
+		
+		//Cyclic graph: Passed
+		_vertices= new ArrayList<Vertex>();
+		_vertices.add(new Vertex("A", 0,  1, 1, 1,-1));
+		_vertices.add(new Vertex("B", 1,  1, 2,-1));
+		_vertices.add(new Vertex("C", 2,  1, 2,-1));
+		_vertices.add(new Vertex("D", 3,  1, 3,-1));
+		
+		_edges= new ArrayList<Edge>();
+		_edges= new ArrayList<Edge>();
+		_edges.add(new Edge(VId(0), VId(1), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(0), VId(2), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(1), VId(3), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(3), VId(0), EdgeType.CONFLICT, 0));	
+		initGraph();
+		G = G.reverse();
+		
+		//-----------------------------------------------------
+		
+		//Directed acyclic graph: Passed
+		_vertices= new ArrayList<Vertex>();
+		_vertices.add(new Vertex("A", 0,  1, 2,-1));
+		_vertices.add(new Vertex("B", 1,  1, 1, 1,-1));
+		_vertices.add(new Vertex("C", 2,  1, 1, 1,-1));
+		_vertices.add(new Vertex("D", 3,  1, 2,-1));
+		
+		_edges= new ArrayList<Edge>();
+		_edges= new ArrayList<Edge>();
+		_edges.add(new Edge(VId(0), VId(1), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(0), VId(3), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(1), VId(2), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(3), VId(1), EdgeType.CONFLICT, 0));	
+		initGraph();	
+		G = G.reverse();
+		
+		//-----------------------------------------------------		
+		
+		//Clique graph: Passed
+		_vertices= new ArrayList<Vertex>();
+		_vertices.add(new Vertex("A", 0,  1, 2,-1));
+		_vertices.add(new Vertex("B", 1,  1, 1, 1,-1));
+		_vertices.add(new Vertex("C", 2,  1, 2,-1));
+		_vertices.add(new Vertex("D", 3,  1, 3,-1));
+		
+		_edges= new ArrayList<Edge>();
+		_edges= new ArrayList<Edge>();
+		_edges.add(new Edge(VId(0), VId(1), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(1), VId(2), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(2), VId(3), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(3), VId(0), EdgeType.CONFLICT, 0));	
+		initGraph();	
+		G = G.reverse();
+		
+		//-----------------------------------------------------		
+		
+		//Disconnected graph: Passed
+		_vertices= new ArrayList<Vertex>();
+		_vertices.add(new Vertex("A", 0,  1, 3,-1));
+		_vertices.add(new Vertex("B", 1,  1, 2,-1));
+		_vertices.add(new Vertex("C", 2,  1, 1, 1,-1));
+		_vertices.add(new Vertex("D", 3,  1, 1, 1,-1));
+		
+		_edges= new ArrayList<Edge>();
+		_edges= new ArrayList<Edge>();
+		_edges.add(new Edge(VId(0), VId(1), EdgeType.CONFLICT, 0));
+		initGraph();	
+		G = G.reverse();
+		
+		//			
+		_vertices= new ArrayList<Vertex>();
+		_vertices.add(new Vertex("A", 0,  1, 1, 1,-1));
+		_vertices.add(new Vertex("B", 1,  1, 1, 1,-1));
+		_vertices.add(new Vertex("C", 2,  1, 1, 1,-1));
+		_vertices.add(new Vertex("D", 3,  1, 1, 1,-1));
+		_vertices.add(new Vertex("E", 4,  1, 1, 1,-1));
+		_vertices.add(new Vertex("F", 5,  1, 1, 1,-1));
+		_vertices.add(new Vertex("G", 6,  1, 1, 1,-1));
+		_vertices.add(new Vertex("H", 7,  1, 1, 1,-1));
+		_vertices.add(new Vertex("I", 8,  1, 1, 1,-1));
+		_vertices.add(new Vertex("J", 9,  1, 1, 1,-1));
+		_vertices.add(new Vertex("K", 10, 1, 1, 1,-1));
+		_vertices.add(new Vertex("L", 11, 1, 1, 1,-1));
+		_vertices.add(new Vertex("M", 12, 1, 1, 1,-1));
+		
+		_edges= new ArrayList<Edge>();
+		_edges.add(new Edge(VId(0), VId(5), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(0), VId(1), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(2), VId(0), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(2), VId(3), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(3), VId(2), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(3), VId(5), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(4), VId(2), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(4), VId(3), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(5), VId(4), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(6), VId(0), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(6), VId(4), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(6), VId(8), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(6), VId(9), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(7), VId(6), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(7), VId(9), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(8), VId(6), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(9), VId(10), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(9), VId(11), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(10), VId(12), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(11), VId(4), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(11), VId(12), EdgeType.CONFLICT, 0));
+		_edges.add(new Edge(VId(12), VId(9), EdgeType.CONFLICT, 0));
+		
+		initGraph();
+		//*/
+		
+		
+		List<Integer> itemsToRemove = new ArrayList<Integer>();
+		
+		
+		
+		System.out.println("Graph:");	
+		System.out.print(G.toString());		
+		TopologicalX topological1 = new TopologicalX(G);
+		printTopo(topological1, new ArrayList<Integer>());
+						
+		Digraph cloneG= new Digraph(G);
+		
+		while(new DirectedCycle(cloneG).hasCycle()) {
+			TarjanSCC scc = new TarjanSCC(cloneG);
+			int m = scc.count();
+			Queue<Integer>[] components = (Queue<Integer>[]) new Queue[m];
+	        for (int i = 0; i < m; i++) {
+	            components[i] = new Queue<Integer>();
+	        }
+	        for (int v = 0; v < cloneG.V(); v++) {
+	            components[scc.id(v)].enqueue(v);
+	        }
+	        System.out.println("SCC:");	
+	        for (int i = 0; i < m; i++) {
+	        	int aVertex=components[i].peek();
+	        	int itemToRemoveByCriteria = aVertex;
+	        	int minFilter = VId(aVertex)._numFilters;// vertices[aVertex][0];
+	        	int minInOutEdges= cloneG.indegree(aVertex) + cloneG.outdegree(aVertex);
+	        	 System.out.println("v: " + aVertex + " minFilter: " + aVertex + " minInOutEdges: " + minInOutEdges);
+	            for (int v : components[i]) {
+	            	//To be investigated more
+	            	if(minFilter > (VId(v)._numFilters)) //if(minFilter <= (vertices[v][0]))
+	            	{
+            			itemToRemoveByCriteria=v;
+            			minFilter = VId(v)._numFilters;
+            			minInOutEdges = cloneG.indegree(v) + cloneG.outdegree(v);
+            			
+	            	} else if(minFilter == (VId(v)._numFilters)) { //if(minFilter <= (vertices[v][0]))
+	            	
+	            		if(minInOutEdges < cloneG.indegree(v) + cloneG.outdegree(v)) {
+	            			itemToRemoveByCriteria=v;
+	            			minFilter = VId(v)._numFilters;
+	            			minInOutEdges = cloneG.indegree(v) + cloneG.outdegree(v);
+	            			//StdOut.print("[ " + v + " <= itemToRemoveByCriteria] ");
+	            		}	            		
+	            	}
+	            		
+	                StdOut.print(v + " ");
+	            }
+	            if(components[i].size()>1) {
+	            	cloneG = cloneG.isolateNode(itemToRemoveByCriteria);
+	            	itemsToRemove.add(itemToRemoveByCriteria);
+	            }
+	            	
+	            StdOut.println();
+	        }
+		};
+		
+		System.out.print(cloneG.toString());
+        topological1 = new TopologicalX(cloneG);
+        
+
+		if(topological1.order()!=null)
+        {
+			for(int v=0; v<_vertices.size();v++)
+			{
+				//vertices[v][1]=1;
+				VId(v)._order=1;
+			}	
+			
+			Iterable<Integer> topoOrders= topological1.order();
+			ArrayList<Integer> topoOrderVisited= new ArrayList<Integer>();
+	        for (int v : topoOrders) {	        	
+	        	if(cloneG.indegree(v)>0) {
+	        		ArrayList<Integer> inVs= cloneG.inVertices(v);
+	        		for(int w:topoOrderVisited) {	        			
+	        			inVs.forEach(wIn->{
+	        				if(w==wIn) {
+	        					VId(v)._order=VId(w)._order+1;
+	        					//vertices[v][1]=vertices[w][1]+1;
+	        				}
+	        			});
+	        		}
+	        	}
+	        	topoOrderVisited.add(v);
+	        }
+	        
+	        int maxOrderTopo= VId(0)._order;// vertices[0][1];
+
+	        for(int v=1; v<_vertices.size();v++)
+			{
+				if(maxOrderTopo<VId(1)._order)//vertices[v][1])
+					maxOrderTopo=VId(1)._order;//vertices[v][1];
+			}
+	        
+	        for(int r: itemsToRemove) {
+	        	ArrayList<Integer> inVs= G.inVertices(r);
+	        	if(inVs.size()>0) {
+	        		int maxOrderR = VId(inVs.get(0))._order;//vertices[inVs.get(0)][1];
+	        		for(int i=1; i<inVs.size();i++)
+	        			if(maxOrderR<VId(inVs.get(i))._order)//vertices[inVs.get(i)][1])
+	        				maxOrderR=VId(inVs.get(i))._order;//vertices[inVs.get(i)][1];
+	        		VId(r)._order=maxOrderR+1;
+	        		//vertices[r][1]=maxOrderR+1;
+	        	}
+	        	else {
+	        		VId(r)._order=maxOrderTopo+1;
+	        		//vertices[r][1]=maxOrderTopo+1;
+	        	}
+	        }
+	        
+	        ///////Arrays.sort(vertices, (a, b) -> Double.compare(a[1], b[1]));
+	        Collections.sort(_vertices, new SortVerticesByOrder()); 	        
+        }      
+        
+        printTopo(topological1, itemsToRemove);
+        
+        System.out.println("itemsToRemove:");
+        for(Integer v:itemsToRemove) {
+        	System.out.print(v + " ");	
+        }
+        
+        System.out.println("\nresult:\n"+"\tId\tName\tFilters\tOrder");
+
+        //for(int[] n:vertices) {
+        	//System.out.println("\t"+n[2] + "\t\t"+n[0] + "\t"+n[1]);
+        //}
+        
+        
+        for(Vertex n:_vertices) {
+        	System.out.println("\t "+n._id +"\t "+n._name+ "\t "+n._numFilters+"\t "+n._order);
+        }
+        
+        	
+	}

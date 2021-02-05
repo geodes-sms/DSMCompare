@@ -1,0 +1,18 @@
+// Applied composite operation
+extractSuperClass(GenNavigator, [], gmfgen, GenDomainModelNavigator, true, [])
+// Atomic changes realizing the composite operation above
+create(GenDomainModelNavigator)
+add(GenNavigator, eSuperTypes, GenDomainModelNavigator)
+
+create(GenDomainModelNavigator.domainContentExtensionName)
+create(GenDomainModelNavigator.domainContentExtensionPriority)
+create(GenDomainModelNavigator.domainContentProviderClassName)
+create(GenDomainModelNavigator.domainLabelProviderClassName)
+create(GenDomainModelNavigator.generateDomainModelNavigator)
+create(GenDomainModelNavigator.domainModelElementTesterClassName)
+create(GenDomainModelNavigator.domainContentExtensionID)
+create(getDomainModelElementTesterQualifiedClassName)
+create(getDomainLabelProviderQualifiedClassName)
+create(getDomainContentProviderQualifiedClassName)
+set(GenDomainModelNavigator, interface, true)
+

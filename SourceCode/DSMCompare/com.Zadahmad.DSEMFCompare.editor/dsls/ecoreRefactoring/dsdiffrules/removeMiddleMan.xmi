@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refactoringRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoringRuleMM="www.geodes.UdeM.edu/refactoringRuleMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/refactoringRuleMM ../metamodels/refactoringRuleMM.ecore#/1"
+    name="removeMiddleMan">
+  <constraints>Item(11,&quot;etype&quot;) == Item(n2,&quot;name&quot;)</constraints>
+  <constraints>Item(12,&quot;etype&quot;) == Item(n3,&quot;name&quot;)</constraints>
+  <constraints>Item(21,&quot;etype&quot;) == Item(n3,&quot;name&quot;)</constraints>
+  <pattern name="">
+    <eclassifiers
+        xsi:type="refactoringRuleMM:Pattern_EClass"
+        name=""
+        ID_Pattern="1">
+      <ereferences
+          xsi:type="refactoringRuleMM:Pattern_DiffEReference"
+          etype=""
+          operation="DELETE"
+          ID_Pattern="11"
+          filter="true"/>
+      <ereferences
+          xsi:type="refactoringRuleMM:Pattern_DiffEReference"
+          etype=""
+          ID_Pattern="12"/>
+    </eclassifiers>
+    <eclassifiers
+        xsi:type="refactoringRuleMM:Pattern_EClass"
+        name=""
+        ID_Pattern="2">
+      <ereferences
+          xsi:type="refactoringRuleMM:Pattern_DiffEReference"
+          etype=""
+          operation="DELETE"
+          ID_Pattern="21"
+          filter="true"/>
+    </eclassifiers>
+    <eclassifiers
+        xsi:type="refactoringRuleMM:Pattern_EClass"
+        name=""
+        ID_Pattern="3"/>
+    <domainspecificdiffs
+        xsi:type="refactoringRuleMM:Pattern_DomainSpecificDiff"
+        name="removeMiddleMan"
+        DomainSpecificDiff_EClass="1 2 3"
+        DomainSpecificDiff_EReference="12"
+        ID_Pattern="4"/>
+  </pattern>
+</refactoringRuleMM:Rule>

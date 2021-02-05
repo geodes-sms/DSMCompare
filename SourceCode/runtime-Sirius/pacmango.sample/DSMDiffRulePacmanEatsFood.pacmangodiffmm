@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PacmanGoDiffMM:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PacmanGoDiffMM="http://www.zadahmad.org/dsmcompare/PacmanGoDiffMM">
+  <gridnodes id=""/>
+  <scoreboard xsi:type="PacmanGoDiffMM:DiffScoreboard" value="1" id="3" operation="MODIFY" new_value="2" new_id="3"/>
+  <entities xsi:type="PacmanGoDiffMM:Pacman" on="//@gridnodes.0" id="">
+    <diffon eType="//@gridnodes.0"/>
+  </entities>
+  <entities xsi:type="PacmanGoDiffMM:DiffFood" id="" operation="DELETE">
+    <diffon operation="DELETE" eType="//@gridnodes.0"/>
+  </entities>
+  <domainspecificdiffs name="PacmanEatsFood" DomainSpecificDiff_Food="//@entities.1" DomainSpecificDiff_Pacman="//@entities.0"/>
+  <domainspecificdiffs name="Rule                                                PacmanEatsFood   "/>
+  <domainspecificdiffs name="1"/>
+  <domainspecificdiffs name="2"/>
+  <domainspecificdiffs name="3"/>
+  <domainspecificdiffs name="4"/>
+  <domainspecificdiffs name="5"/>
+  <domainspecificdiffs name="Constraints= [&quot;Item(3 , &quot;value&quot;)  &lt; Item(3 , &quot;new_value&quot;)&quot;]"/>
+  <domainspecificdiffs name="&quot;filter&quot;"/>
+</PacmanGoDiffMM:Game>

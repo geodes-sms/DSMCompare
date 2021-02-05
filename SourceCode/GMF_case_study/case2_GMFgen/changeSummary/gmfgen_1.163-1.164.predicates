@@ -1,0 +1,35 @@
+// Applied composite operation
+makeAbstract(FeatureModelFacet, FeatureLabelModelFacet)
+// Atomic changes realizing the composite operation above
+set(FeatureModelFacet, abstract, true)
+
+// Applied composite operation
+inlineSuperClass(FeatureModelFacet)
+// Atomic changes realizing the composite operation above
+create(FeatureLabelModelFacet.metaFeatures)
+move(FeatureModelFacet, FeatureLinkModelFacet.metaFeature)
+remove(FeatureLinkModelFacet, eSuperTypes, FeatureModelFacet)
+remove(FeatureLabelModelFacet, eSuperTypes, FeatureModelFacet)
+delete(FeatureModelFacet)
+
+// Applied composite operation
+rename(FeatureLabelModelFacet.metaFeatures, metaFeatures)
+// Atomic changes realizing the composite operation above
+set(FeatureLabelModelFacet.metaFeatures, name, metaFeatures)
+
+// Applied composite operation
+generalizeReference(FeatureLabelModelFacet.metaFeatures, GenFeature, 1, -1)
+// Atomic changes realizing the composite operation above
+set(FeatureLabelModelFacet.metaFeatures, upperBound, -1)
+
+// Applied composite operation
+replaceClass(CompositeFeatureLabelModelFacet, FeatureLabelModelFacet, [CompositeFeatureModelFacet.metaFeatures, CompositeFeatureLabelModelFacet.viewPattern, CompositeFeatureLabelModelFacet.editPattern], [FeatureLabelModelFacet.metaFeatures, FeatureLabelModelFacet.viewPattern, FeatureLabelModelFacet.editPattern])
+// Atomic changes realizing the composite operation above
+delete(CompositeFeatureLabelModelFacet)
+
+// Applied composite operation
+replaceClass(CompositeFeatureModelFacet, FeatureLabelModelFacet, CompositeFeatureModelFacet.metaFeatures, FeatureLabelModelFacet.metaFeatures)
+// Atomic changes realizing the composite operation above
+delete(CompositeFeatureModelFacet)
+
+

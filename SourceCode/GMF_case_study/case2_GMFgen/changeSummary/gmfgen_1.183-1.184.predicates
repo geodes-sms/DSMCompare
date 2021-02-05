@@ -1,0 +1,11 @@
+// Applied composite operation
+operationToVolatile(getReorientedIncomingGenLinks)
+// Atomic changes realizing the composite operation above
+create(GenNode.reorientedIncomingLinks)
+delete(getReorientedIncomingGenLinks)
+
+// Applied composite operation
+rename(GenNode.reorientedIncomingLinks, reorientedIncomingLinks)
+// Atomic changes realizing the composite operation above
+set(GenNode.reorientedIncomingLinks, name, reorientedIncomingLinks)
+

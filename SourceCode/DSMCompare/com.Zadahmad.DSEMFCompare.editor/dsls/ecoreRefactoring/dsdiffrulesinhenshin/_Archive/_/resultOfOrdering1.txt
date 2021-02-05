@@ -1,0 +1,593 @@
+Starting CDA with 20 rules CONFLICT Analysis.
+[MultiCDA] Computing binary granularity-computeResultsBinary:
+1 0 1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0    | extractSuperclassAttr   |Exceptions: 
+0 1 0 1 0 1 1 0 0 1 0 0 1 0 0 1 1 0 0 1    | extractSuperclassRef   |Exceptions: 
+1 0 1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0    | flattenHierarchyAttr   |Exceptions: 
+0 1 0 1 0 1 1 0 0 1 0 0 1 0 0 1 1 0 0 1    | flattenHierarchyRef   |Exceptions: 
+1 0 1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0    | mergeMetaclassAttr   |Exceptions: 
+0 1 0 1 0 1 1 0 0 1 0 0 1 0 0 1 1 0 0 1    | mergeMetaclassRef   |Exceptions: 
+0 1 0 1 0 1 1 0 0 1 0 0 1 0 0 1 1 0 0 1    | mergeReference   |Exceptions: 
+1 0 1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0    | moveAttribute   |Exceptions: 
+0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 0 0 0 1 0    | moveMethod   |Exceptions: 
+0 1 0 1 0 1 1 0 0 1 0 0 1 0 0 1 1 0 0 1    | moveReference   |Exceptions: 
+1 0 1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0    | pullUpAttribute   |Exceptions: 
+0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 0 0 0 1 0    | pullUpMethod   |Exceptions: 
+0 1 0 1 0 1 1 0 0 1 0 0 1 0 0 1 1 0 0 1    | pullUpReference   |Exceptions: 
+1 0 1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0    | pushDownAttribute   |Exceptions: 
+0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 0 0 0 1 0    | pushDownMethod   |Exceptions: 
+0 1 0 1 0 1 1 0 0 1 0 0 1 0 0 1 1 0 0 1    | pushDownReference   |Exceptions: 
+0 1 0 1 0 1 1 0 0 1 0 0 1 0 0 1 1 0 0 1    | removeMiddleMan   |Exceptions: 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameAttribute   |Exceptions: 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameMethod   |Exceptions: 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameReference   |Exceptions: 
+
+[MultiCDA] Computing minimal conflict reasons-computeResultsCoarse:
+2 0 2 0 3 0 0 2 0 0 2 0 0 2 0 0 0 1 0 0    | extractSuperclassAttr
+0 2 0 2 0 3 3 0 0 2 0 0 2 0 0 2 3 0 0 1    | extractSuperclassRef
+2 0 2 0 3 0 0 2 0 0 2 0 0 2 0 0 0 1 0 0    | flattenHierarchyAttr
+0 2 0 2 0 3 3 0 0 2 0 0 2 0 0 2 3 0 0 1    | flattenHierarchyRef
+4 0 4 0 6 0 0 4 0 0 4 0 0 4 0 0 0 2 0 0    | mergeMetaclassAttr
+0 4 0 4 0 6 6 0 0 4 0 0 4 0 0 4 6 0 0 2    | mergeMetaclassRef
+0 4 0 4 0 6 6 0 0 4 0 0 4 0 0 4 6 0 0 2    | mergeReference
+2 0 2 0 3 0 0 2 0 0 2 0 0 2 0 0 0 1 0 0    | moveAttribute
+0 0 0 0 0 0 0 0 2 0 0 2 0 0 2 0 0 0 1 0    | moveMethod
+0 2 0 2 0 3 3 0 0 2 0 0 2 0 0 2 3 0 0 1    | moveReference
+2 0 2 0 3 0 0 2 0 0 2 0 0 2 0 0 0 1 0 0    | pullUpAttribute
+0 0 0 0 0 0 0 0 2 0 0 2 0 0 2 0 0 0 1 0    | pullUpMethod
+0 2 0 2 0 3 3 0 0 2 0 0 2 0 0 2 3 0 0 1    | pullUpReference
+2 0 2 0 3 0 0 2 0 0 2 0 0 2 0 0 0 1 0 0    | pushDownAttribute
+0 0 0 0 0 0 0 0 2 0 0 2 0 0 2 0 0 0 1 0    | pushDownMethod
+0 2 0 2 0 3 3 0 0 2 0 0 2 0 0 2 3 0 0 1    | pushDownReference
+0 4 0 4 0 6 6 0 0 4 0 0 4 0 0 4 6 0 0 2    | removeMiddleMan
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameAttribute
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameMethod
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameReference
+
+[MultiCDA] Computing initial conflict reasons-computeResultsFine:
+2 0 2 0 3 0 0 2 0 0 2 0 0 2 0 0 0 1 0 0    | extractSuperclassAttr
+0 2 0 2 0 3 3 0 0 2 0 0 2 0 0 2 3 0 0 1    | extractSuperclassRef
+2 0 2 0 3 0 0 2 0 0 2 0 0 2 0 0 0 1 0 0    | flattenHierarchyAttr
+0 2 0 2 0 3 3 0 0 2 0 0 2 0 0 2 3 0 0 1    | flattenHierarchyRef
+6 0 6 0 12 0 0 6 0 0 6 0 0 6 0 0 0 2 0 0    | mergeMetaclassAttr
+0 6 0 6 0 12 10 0 0 6 0 0 6 0 0 6 10 0 0 2    | mergeMetaclassRef
+0 6 0 6 0 12 10 0 0 6 0 0 6 0 0 6 10 0 0 2    | mergeReference
+2 0 2 0 3 0 0 2 0 0 2 0 0 2 0 0 0 1 0 0    | moveAttribute
+0 0 0 0 0 0 0 0 2 0 0 2 0 0 2 0 0 0 1 0    | moveMethod
+0 2 0 2 0 3 3 0 0 2 0 0 2 0 0 2 3 0 0 1    | moveReference
+2 0 2 0 3 0 0 2 0 0 2 0 0 2 0 0 0 1 0 0    | pullUpAttribute
+0 0 0 0 0 0 0 0 2 0 0 2 0 0 2 0 0 0 1 0    | pullUpMethod
+0 2 0 2 0 3 3 0 0 2 0 0 2 0 0 2 3 0 0 1    | pullUpReference
+2 0 2 0 3 0 0 2 0 0 2 0 0 2 0 0 0 1 0 0    | pushDownAttribute
+0 0 0 0 0 0 0 0 2 0 0 2 0 0 2 0 0 0 1 0    | pushDownMethod
+0 2 0 2 0 3 3 0 0 2 0 0 2 0 0 2 3 0 0 1    | pushDownReference
+0 6 0 6 0 12 10 0 0 6 0 0 6 0 0 6 10 0 0 2    | removeMiddleMan
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameAttribute
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameMethod
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameReference
+
+Starting CDA with 20 rules for DEPENDENCY Analysis.
+[MultiCDA] Computing binary granularity:
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | extractSuperclassAttr
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | extractSuperclassRef
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | flattenHierarchyAttr
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | flattenHierarchyRef
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | mergeMetaclassAttr
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | mergeMetaclassRef
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | mergeReference
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | moveAttribute
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | moveMethod
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | moveReference
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pullUpAttribute
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pullUpMethod
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pullUpReference
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pushDownAttribute
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pushDownMethod
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pushDownReference
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | removeMiddleMan
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameAttribute
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameMethod
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameReference
+
+[MultiCDA] Computing minimal conflict reasons:
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | extractSuperclassAttr
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | extractSuperclassRef
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | flattenHierarchyAttr
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | flattenHierarchyRef
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | mergeMetaclassAttr
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | mergeMetaclassRef
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | mergeReference
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | moveAttribute
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | moveMethod
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | moveReference
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pullUpAttribute
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pullUpMethod
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pullUpReference
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pushDownAttribute
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pushDownMethod
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pushDownReference
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | removeMiddleMan
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameAttribute
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameMethod
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameReference
+
+[MultiCDA] Computing initial conflict reasons:
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | extractSuperclassAttr
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | extractSuperclassRef
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | flattenHierarchyAttr
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | flattenHierarchyRef
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | mergeMetaclassAttr
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | mergeMetaclassRef
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | mergeReference
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | moveAttribute
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | moveMethod
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | moveReference
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pullUpAttribute
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pullUpMethod
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pullUpReference
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pushDownAttribute
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pushDownMethod
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | pushDownReference
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | removeMiddleMan
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameAttribute
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameMethod
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0    | renameReference
+
+Graph:
+20 vertices, 109 edges 
+0: 17 13 10 7 4 2 
+1: 19 16 15 12 9 6 5 3 
+2: 17 13 10 7 4 0 
+3: 19 16 15 12 9 6 5 1 
+4: 17 13 10 7 2 0 
+5: 19 16 15 12 9 6 3 1 
+6: 19 16 15 12 9 5 3 1 
+7: 17 13 10 4 2 0 
+8: 18 14 11 
+9: 19 16 15 12 6 5 3 1 
+10: 17 13 7 4 2 0 
+11: 18 14 8 
+12: 19 16 15 9 6 5 3 1 
+13: 17 10 7 4 2 0 
+14: 18 11 8 
+15: 19 16 12 9 6 5 3 1 
+16: 19 15 12 9 6 5 3 1 
+17: 
+18: 
+19: 
+Topological order:
+The graph contains cycles. Topological order cannot be calculated.
+SCC:
+
+Vertex[1-n] for Component: 17 - 
+itemToRemoveByCriteria: 17 minFilter: 0 minInOutEdges: 6
+
+
+Vertex[1-n] for Component: 0 - 2 - 4 - 7 - 10 - 13 - 
+itemToRemoveByCriteria: 0 minFilter: 2 minInOutEdges: 11
+
+
+Vertex[1-n] for Component: 19 - 
+itemToRemoveByCriteria: 19 minFilter: 0 minInOutEdges: 8
+
+
+Vertex[1-n] for Component: 1 - 3 - 5 - 6 - 9 - 12 - 15 - 16 - 
+itemToRemoveByCriteria: 1 minFilter: 2 minInOutEdges: 15
+
+
+Vertex[1-n] for Component: 18 - 
+itemToRemoveByCriteria: 18 minFilter: 0 minInOutEdges: 3
+
+
+Vertex[1-n] for Component: 8 - 11 - 14 - 
+itemToRemoveByCriteria: 8 minFilter: 2 minInOutEdges: 5
+
+SCC:
+
+Vertex[1-n] for Component: 0 - 
+itemToRemoveByCriteria: 0 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 1 - 
+itemToRemoveByCriteria: 1 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 17 - 
+itemToRemoveByCriteria: 17 minFilter: 0 minInOutEdges: 5
+
+
+Vertex[1-n] for Component: 2 - 4 - 7 - 10 - 13 - 
+itemToRemoveByCriteria: 2 minFilter: 2 minInOutEdges: 9
+
+
+Vertex[1-n] for Component: 19 - 
+itemToRemoveByCriteria: 19 minFilter: 0 minInOutEdges: 7
+
+
+Vertex[1-n] for Component: 3 - 5 - 6 - 9 - 12 - 15 - 16 - 
+itemToRemoveByCriteria: 3 minFilter: 2 minInOutEdges: 13
+
+
+Vertex[1-n] for Component: 8 - 
+itemToRemoveByCriteria: 8 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 18 - 
+itemToRemoveByCriteria: 18 minFilter: 0 minInOutEdges: 2
+
+
+Vertex[1-n] for Component: 11 - 14 - 
+itemToRemoveByCriteria: 11 minFilter: 2 minInOutEdges: 3
+
+SCC:
+
+Vertex[1-n] for Component: 0 - 
+itemToRemoveByCriteria: 0 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 1 - 
+itemToRemoveByCriteria: 1 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 2 - 
+itemToRemoveByCriteria: 2 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 3 - 
+itemToRemoveByCriteria: 3 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 17 - 
+itemToRemoveByCriteria: 17 minFilter: 0 minInOutEdges: 4
+
+
+Vertex[1-n] for Component: 4 - 7 - 10 - 13 - 
+itemToRemoveByCriteria: 7 minFilter: 2 minInOutEdges: 7
+
+
+Vertex[1-n] for Component: 19 - 
+itemToRemoveByCriteria: 19 minFilter: 0 minInOutEdges: 6
+
+
+Vertex[1-n] for Component: 5 - 6 - 9 - 12 - 15 - 16 - 
+itemToRemoveByCriteria: 9 minFilter: 2 minInOutEdges: 11
+
+
+Vertex[1-n] for Component: 8 - 
+itemToRemoveByCriteria: 8 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 11 - 
+itemToRemoveByCriteria: 11 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 18 - 
+itemToRemoveByCriteria: 18 minFilter: 0 minInOutEdges: 1
+
+
+Vertex[1-n] for Component: 14 - 
+itemToRemoveByCriteria: 14 minFilter: 2 minInOutEdges: 1
+
+SCC:
+
+Vertex[1-n] for Component: 0 - 
+itemToRemoveByCriteria: 0 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 1 - 
+itemToRemoveByCriteria: 1 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 2 - 
+itemToRemoveByCriteria: 2 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 3 - 
+itemToRemoveByCriteria: 3 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 17 - 
+itemToRemoveByCriteria: 17 minFilter: 0 minInOutEdges: 3
+
+
+Vertex[1-n] for Component: 4 - 10 - 13 - 
+itemToRemoveByCriteria: 10 minFilter: 2 minInOutEdges: 5
+
+
+Vertex[1-n] for Component: 19 - 
+itemToRemoveByCriteria: 19 minFilter: 0 minInOutEdges: 5
+
+
+Vertex[1-n] for Component: 5 - 6 - 12 - 15 - 16 - 
+itemToRemoveByCriteria: 12 minFilter: 2 minInOutEdges: 9
+
+
+Vertex[1-n] for Component: 7 - 
+itemToRemoveByCriteria: 7 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 8 - 
+itemToRemoveByCriteria: 8 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 9 - 
+itemToRemoveByCriteria: 9 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 11 - 
+itemToRemoveByCriteria: 11 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 18 - 
+itemToRemoveByCriteria: 18 minFilter: 0 minInOutEdges: 1
+
+
+Vertex[1-n] for Component: 14 - 
+itemToRemoveByCriteria: 14 minFilter: 2 minInOutEdges: 1
+
+SCC:
+
+Vertex[1-n] for Component: 0 - 
+itemToRemoveByCriteria: 0 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 1 - 
+itemToRemoveByCriteria: 1 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 2 - 
+itemToRemoveByCriteria: 2 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 3 - 
+itemToRemoveByCriteria: 3 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 17 - 
+itemToRemoveByCriteria: 17 minFilter: 0 minInOutEdges: 2
+
+
+Vertex[1-n] for Component: 4 - 13 - 
+itemToRemoveByCriteria: 13 minFilter: 2 minInOutEdges: 3
+
+
+Vertex[1-n] for Component: 19 - 
+itemToRemoveByCriteria: 19 minFilter: 0 minInOutEdges: 4
+
+
+Vertex[1-n] for Component: 5 - 6 - 15 - 16 - 
+itemToRemoveByCriteria: 15 minFilter: 2 minInOutEdges: 7
+
+
+Vertex[1-n] for Component: 7 - 
+itemToRemoveByCriteria: 7 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 8 - 
+itemToRemoveByCriteria: 8 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 9 - 
+itemToRemoveByCriteria: 9 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 10 - 
+itemToRemoveByCriteria: 10 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 11 - 
+itemToRemoveByCriteria: 11 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 12 - 
+itemToRemoveByCriteria: 12 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 18 - 
+itemToRemoveByCriteria: 18 minFilter: 0 minInOutEdges: 1
+
+
+Vertex[1-n] for Component: 14 - 
+itemToRemoveByCriteria: 14 minFilter: 2 minInOutEdges: 1
+
+SCC:
+
+Vertex[1-n] for Component: 0 - 
+itemToRemoveByCriteria: 0 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 1 - 
+itemToRemoveByCriteria: 1 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 2 - 
+itemToRemoveByCriteria: 2 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 3 - 
+itemToRemoveByCriteria: 3 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 17 - 
+itemToRemoveByCriteria: 17 minFilter: 0 minInOutEdges: 1
+
+
+Vertex[1-n] for Component: 4 - 
+itemToRemoveByCriteria: 4 minFilter: 4 minInOutEdges: 1
+
+
+Vertex[1-n] for Component: 19 - 
+itemToRemoveByCriteria: 19 minFilter: 0 minInOutEdges: 3
+
+
+Vertex[1-n] for Component: 5 - 6 - 16 - 
+itemToRemoveByCriteria: 5 minFilter: 4 minInOutEdges: 5
+
+
+Vertex[1-n] for Component: 7 - 
+itemToRemoveByCriteria: 7 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 8 - 
+itemToRemoveByCriteria: 8 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 9 - 
+itemToRemoveByCriteria: 9 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 10 - 
+itemToRemoveByCriteria: 10 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 11 - 
+itemToRemoveByCriteria: 11 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 12 - 
+itemToRemoveByCriteria: 12 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 13 - 
+itemToRemoveByCriteria: 13 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 18 - 
+itemToRemoveByCriteria: 18 minFilter: 0 minInOutEdges: 1
+
+
+Vertex[1-n] for Component: 14 - 
+itemToRemoveByCriteria: 14 minFilter: 2 minInOutEdges: 1
+
+
+Vertex[1-n] for Component: 15 - 
+itemToRemoveByCriteria: 15 minFilter: 2 minInOutEdges: 0
+
+SCC:
+
+Vertex[1-n] for Component: 0 - 
+itemToRemoveByCriteria: 0 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 1 - 
+itemToRemoveByCriteria: 1 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 2 - 
+itemToRemoveByCriteria: 2 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 3 - 
+itemToRemoveByCriteria: 3 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 17 - 
+itemToRemoveByCriteria: 17 minFilter: 0 minInOutEdges: 1
+
+
+Vertex[1-n] for Component: 4 - 
+itemToRemoveByCriteria: 4 minFilter: 4 minInOutEdges: 1
+
+
+Vertex[1-n] for Component: 5 - 
+itemToRemoveByCriteria: 5 minFilter: 4 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 19 - 
+itemToRemoveByCriteria: 19 minFilter: 0 minInOutEdges: 2
+
+
+Vertex[1-n] for Component: 6 - 16 - 
+itemToRemoveByCriteria: 6 minFilter: 4 minInOutEdges: 3
+
+
+Vertex[1-n] for Component: 7 - 
+itemToRemoveByCriteria: 7 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 8 - 
+itemToRemoveByCriteria: 8 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 9 - 
+itemToRemoveByCriteria: 9 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 10 - 
+itemToRemoveByCriteria: 10 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 11 - 
+itemToRemoveByCriteria: 11 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 12 - 
+itemToRemoveByCriteria: 12 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 13 - 
+itemToRemoveByCriteria: 13 minFilter: 2 minInOutEdges: 0
+
+
+Vertex[1-n] for Component: 18 - 
+itemToRemoveByCriteria: 18 minFilter: 0 minInOutEdges: 1
+
+
+Vertex[1-n] for Component: 14 - 
+itemToRemoveByCriteria: 14 minFilter: 2 minInOutEdges: 1
+
+
+Vertex[1-n] for Component: 15 - 
+itemToRemoveByCriteria: 15 minFilter: 2 minInOutEdges: 0
+
+20 vertices, 3 edges 
+0: 
+1: 
+2: 
+3: 
+4: 17 
+5: 
+6: 
+7: 
+8: 
+9: 
+10: 
+11: 
+12: 
+13: 
+14: 18 
+15: 
+16: 19 
+17: 
+18: 
+19: 
+Topological order:
+4
+14
+16
+17
+18
+19
+itemsToRemove:
+0 1 8 2 3 11 7 9 10 12 13 15 5 6 
+result:
+	Id	Filters	Order	Name
+	 4	 4	 1	 mergeMetaclassAttr
+	 14	 2	 1	 pushDownMethod
+	 16	 4	 1	 removeMiddleMan
+	 17	 0	 2	 renameAttribute
+	 18	 0	 2	 renameMethod
+	 19	 0	 2	 renameReference
+	 0	 2	 2	 extractSuperclassAttr
+	 1	 2	 2	 extractSuperclassRef
+	 8	 2	 2	 moveMethod
+	 2	 2	 3	 flattenHierarchyAttr
+	 3	 2	 3	 flattenHierarchyRef
+	 11	 2	 3	 pullUpMethod
+	 7	 2	 4	 moveAttribute
+	 9	 2	 4	 moveReference
+	 10	 2	 5	 pullUpAttribute
+	 12	 2	 5	 pullUpReference
+	 13	 2	 6	 pushDownAttribute
+	 15	 2	 6	 pushDownReference
+	 5	 4	 7	 mergeMetaclassRef
+	 6	 4	 8	 mergeReference

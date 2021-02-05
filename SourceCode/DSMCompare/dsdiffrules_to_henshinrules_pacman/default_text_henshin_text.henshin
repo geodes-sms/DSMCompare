@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_-NYXIAJ5EeqYPNeFXu_E-g" name="HenshinDSL">
+  <imports href="PacmanGoDiffMM.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_-NYXIQJ5EeqYPNeFXu_E-g" name="Test">
+    <lhs xmi:id="_-NYXIgJ5EeqYPNeFXu_E-g" name="Test_LHS">
+      <nodes xmi:id="_-NYXIwJ5EeqYPNeFXu_E-g" name="n2" incoming="_-NYXKQJ5EeqYPNeFXu_E-g">
+        <type href="PacmanGoDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_-NYXJAJ5EeqYPNeFXu_E-g" name="n3">
+        <type href="PacmanGoDiffMM.ecore#//DiffScoreboard"/>
+      </nodes>
+      <nodes xmi:id="_-NYXJQJ5EeqYPNeFXu_E-g" name="n4" outgoing="_-NYXKAJ5EeqYPNeFXu_E-g">
+        <type href="PacmanGoDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_-NYXJgJ5EeqYPNeFXu_E-g" name="n5">
+        <type href="PacmanGoDiffMM.ecore#//DiffFood"/>
+      </nodes>
+      <nodes xmi:id="_-NYXJwJ5EeqYPNeFXu_E-g" name="n6" incoming="_-NYXKAJ5EeqYPNeFXu_E-g" outgoing="_-NYXKQJ5EeqYPNeFXu_E-g">
+        <type href="PacmanGoDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_-NYXKAJ5EeqYPNeFXu_E-g" source="_-NYXJQJ5EeqYPNeFXu_E-g" target="_-NYXJwJ5EeqYPNeFXu_E-g">
+        <type href="PacmanGoDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_-NYXKQJ5EeqYPNeFXu_E-g" source="_-NYXJwJ5EeqYPNeFXu_E-g" target="_-NYXIwJ5EeqYPNeFXu_E-g">
+        <type href="PacmanGoDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_-NYXKgJ5EeqYPNeFXu_E-g" name="Test_RHS">
+      <nodes xmi:id="_-NYXKwJ5EeqYPNeFXu_E-g" name="n2" incoming="_-NYXMgJ5EeqYPNeFXu_E-g">
+        <type href="PacmanGoDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_-NYXLAJ5EeqYPNeFXu_E-g" name="n3">
+        <type href="PacmanGoDiffMM.ecore#//DiffScoreboard"/>
+      </nodes>
+      <nodes xmi:id="_-NYXLQJ5EeqYPNeFXu_E-g" name="n4" incoming="_-NYXMwJ5EeqYPNeFXu_E-g" outgoing="_-NYXMQJ5EeqYPNeFXu_E-g">
+        <type href="PacmanGoDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_-NYXLgJ5EeqYPNeFXu_E-g" name="n5" incoming="_-NYXNAJ5EeqYPNeFXu_E-g">
+        <type href="PacmanGoDiffMM.ecore#//DiffFood"/>
+      </nodes>
+      <nodes xmi:id="_-NYXLwJ5EeqYPNeFXu_E-g" name="n6" incoming="_-NYXMQJ5EeqYPNeFXu_E-g" outgoing="_-NYXMgJ5EeqYPNeFXu_E-g">
+        <type href="PacmanGoDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <nodes xmi:id="_-NYXMAJ5EeqYPNeFXu_E-g" name="n7" outgoing="_-NYXMwJ5EeqYPNeFXu_E-g _-NYXNAJ5EeqYPNeFXu_E-g">
+        <type href="PacmanGoDiffMM.ecore#//DomainSpecificDiff"/>
+      </nodes>
+      <edges xmi:id="_-NYXMQJ5EeqYPNeFXu_E-g" source="_-NYXLQJ5EeqYPNeFXu_E-g" target="_-NYXLwJ5EeqYPNeFXu_E-g">
+        <type href="PacmanGoDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_-NYXMgJ5EeqYPNeFXu_E-g" source="_-NYXLwJ5EeqYPNeFXu_E-g" target="_-NYXKwJ5EeqYPNeFXu_E-g">
+        <type href="PacmanGoDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_-NYXMwJ5EeqYPNeFXu_E-g" source="_-NYXMAJ5EeqYPNeFXu_E-g" target="_-NYXLQJ5EeqYPNeFXu_E-g">
+        <type href="PacmanGoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Pacman"/>
+      </edges>
+      <edges xmi:id="_-NYXNAJ5EeqYPNeFXu_E-g" source="_-NYXMAJ5EeqYPNeFXu_E-g" target="_-NYXLgJ5EeqYPNeFXu_E-g">
+        <type href="PacmanGoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Food"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_-NYXNQJ5EeqYPNeFXu_E-g" origin="_-NYXIwJ5EeqYPNeFXu_E-g" image="_-NYXKwJ5EeqYPNeFXu_E-g"/>
+    <mappings xmi:id="_-NYXNgJ5EeqYPNeFXu_E-g" origin="_-NYXJAJ5EeqYPNeFXu_E-g" image="_-NYXLAJ5EeqYPNeFXu_E-g"/>
+    <mappings xmi:id="_-NYXNwJ5EeqYPNeFXu_E-g" origin="_-NYXJQJ5EeqYPNeFXu_E-g" image="_-NYXLQJ5EeqYPNeFXu_E-g"/>
+    <mappings xmi:id="_-NYXOAJ5EeqYPNeFXu_E-g" origin="_-NYXJgJ5EeqYPNeFXu_E-g" image="_-NYXLgJ5EeqYPNeFXu_E-g"/>
+    <mappings xmi:id="_-NYXOQJ5EeqYPNeFXu_E-g" origin="_-NYXJwJ5EeqYPNeFXu_E-g" image="_-NYXLwJ5EeqYPNeFXu_E-g"/>
+  </units>
+</henshin:Module>

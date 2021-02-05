@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduinoDiffMM="http://www.obeo.fr/arduinoDiffMM">
+  <arduinoDiffMM:Project>
+    <hardware name="Hardware" platforms="/2" modules="/3 /4">
+      <connectors xsi:type="arduinoDiffMM:DiffConnector">
+        <diffpin/>
+        <diffmodule/>
+      </connectors>
+      <connectors xsi:type="arduinoDiffMM:DiffConnector">
+        <diffpin/>
+        <diffmodule/>
+      </connectors>
+    </hardware>
+    <sketch name="Sketch" hardware="/0/@hardware">
+      <diffnext eType="/1"/>
+      <instructions xsi:type="arduinoDiffMM:DiffStatus" status="true"/>
+      <instructions xsi:type="arduinoDiffMM:DiffSensor">
+        <diffmodule/>
+      </instructions>
+    </sketch>
+  </arduinoDiffMM:Project>
+  <arduinoDiffMM:DiffStatus status="true">
+    <diffnext/>
+    <diffmodule/>
+    <diffsensor eType="/0/@sketch/@instructions.1"/>
+  </arduinoDiffMM:DiffStatus>
+  <arduinoDiffMM:DiffPlatform/>
+  <arduinoDiffMM:DiffInputModule/>
+  <arduinoDiffMM:DiffOutputModule/>
+</xmi:XMI>

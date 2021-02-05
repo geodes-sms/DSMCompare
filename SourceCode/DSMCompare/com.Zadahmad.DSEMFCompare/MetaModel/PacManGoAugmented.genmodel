@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.Zadahmad.DSEMFCompare/src" modelPluginID="com.Zadahmad.DSEMFCompare"
+    modelName="PacManGoAugmented" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>PacManGoAugmented.ecore</foreignModel>
+  <genPackages prefix="PacmanGoAugmented" disposableProviderFactory="true" ecorePackage="PacManGoAugmented.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PacManGoAugmented.ecore#//ClassOp">
+      <genEnumLiterals ecoreEnumLiteral="PacManGoAugmented.ecore#//ClassOp/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="PacManGoAugmented.ecore#//ClassOp/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="PacManGoAugmented.ecore#//ClassOp/MODIFY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PacManGoAugmented.ecore#//AscOp">
+      <genEnumLiterals ecoreEnumLiteral="PacManGoAugmented.ecore#//AscOp/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="PacManGoAugmented.ecore#//AscOp/DELETE"/>
+    </genEnums>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//GridNode">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//GridNode/up"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//GridNode/bottom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//GridNode/left"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//GridNode/right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//GridNode/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//GridNode/diffup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//GridNode/diffbottom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//GridNode/diffleft"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//GridNode/diffright"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//Pellet"/>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//Pacman"/>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//Ghost"/>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//Scoreboard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//Scoreboard/score"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//Scoreboard/id"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//Root">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//Root/gn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//Root/sb"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//Root/entity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//Root/domainspecificdiffs"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="PacManGoAugmented.ecore#//PositionableEntity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//PositionableEntity/on"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//PositionableEntity/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//PositionableEntity/diffon"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//DiffGridNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffGridNode/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffGridNode/new_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffGridNode/post_id"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//DiffGridNode_up">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffGridNode_up/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//DiffGridNode_up/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//DiffGridNode_bottom">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffGridNode_bottom/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//DiffGridNode_bottom/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//DiffGridNode_left">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffGridNode_left/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//DiffGridNode_left/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//DiffGridNode_right">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffGridNode_right/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//DiffGridNode_right/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//DiffPellet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffPellet/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffPellet/new_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffPellet/post_id"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//DiffPacman">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffPacman/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffPacman/new_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffPacman/post_id"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//DiffGhost">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffGhost/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffGhost/new_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffGhost/post_id"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//DiffScoreboard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffScoreboard/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffScoreboard/new_score"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffScoreboard/post_score"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffScoreboard/new_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffScoreboard/post_id"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//DiffPositionableEntity_on">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PacManGoAugmented.ecore#//DiffPositionableEntity_on/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//DiffPositionableEntity_on/eType"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="PacManGoAugmented.ecore#//DomainSpecificDiff"/>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//MoveUp">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//MoveUp/ghost"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//GhostKillingPacman">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//GhostKillingPacman/ghost"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//GhostKillingPacman/delpacman"/>
+    </genClasses>
+    <genClasses ecoreClass="PacManGoAugmented.ecore#//PacmanEatingPellet">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//PacmanEatingPellet/pacman"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PacManGoAugmented.ecore#//PacmanEatingPellet/delpelle"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore">
+  <ecore:EPackage name="PacmanGoDiffMM" nsURI="http://www.zadahmad.org/dsmcompare/PacmanGoDiffMM"
+      nsPrefix="PacmanGoDiffMM">
+    <eClassifiers xsi:type="ecore:EClass" name="GridNode">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="up" eType="#/0/GridNode"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="bottom" eType="#/0/GridNode"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#/0/GridNode"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#/0/GridNode"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffup" upperBound="2"
+          eType="#/0/DiffGridNode_up" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffbottom" upperBound="2"
+          eType="#/0/DiffGridNode_bottom" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffleft" upperBound="2"
+          eType="#/0/DiffGridNode_left" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffright" upperBound="2"
+          eType="#/0/DiffGridNode_right" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Food" eSuperTypes="#/0/PositionableEntity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Pacman" eSuperTypes="#/0/PositionableEntity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Ghost" eSuperTypes="#/0/PositionableEntity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Scoreboard">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Game">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="gridnodes" upperBound="-1"
+          eType="#/0/GridNode" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="scoreboard" lowerBound="1"
+          eType="#/0/Scoreboard" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+          eType="#/0/PositionableEntity" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="domainspecificdiffs"
+          upperBound="-1" eType="#/0/DomainSpecificDiff" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffgridnodes" upperBound="-1"
+          eType="#/0/DiffGame_gridnodes" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffscoreboard" upperBound="2"
+          eType="#/0/DiffGame_scoreboard" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffentities" upperBound="-1"
+          eType="#/0/DiffGame_entities" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffdomainspecificdiffs"
+          upperBound="-1" eType="#/0/DiffGame_domainspecificdiffs" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PositionableEntity" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="on" lowerBound="1" eType="#/0/GridNode"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffon" upperBound="2"
+          eType="#/0/DiffPositionableEntity_on" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ClassOp">
+      <eLiterals name="ADD" literal="ADD"/>
+      <eLiterals name="DELETE" value="1" literal="DELETE"/>
+      <eLiterals name="MODIFY" value="2" literal="MODIFY"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="AscOp">
+      <eLiterals name="ADD" literal="ADD"/>
+      <eLiterals name="DELETE" value="1" literal="DELETE"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DomainSpecificDiff">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_GridNode"
+          upperBound="-1" eType="#/0/GridNode"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_Food"
+          upperBound="-1" eType="#/0/Food"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_Pacman"
+          upperBound="-1" eType="#/0/Pacman"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_Ghost"
+          upperBound="-1" eType="#/0/Ghost"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_Scoreboard"
+          upperBound="-1" eType="#/0/Scoreboard"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_PositionableEntity"
+          upperBound="-1" eType="#/0/PositionableEntity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffGridNode" eSuperTypes="#/0/GridNode">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#/0/ClassOp"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffGridNode_up">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#/0/AscOp"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/GridNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffGridNode_bottom">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#/0/AscOp"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/GridNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffGridNode_left">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#/0/AscOp"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/GridNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffGridNode_right">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#/0/AscOp"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/GridNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffFood" eSuperTypes="#/0/Food">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#/0/ClassOp"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffPacman" eSuperTypes="#/0/Pacman">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#/0/ClassOp"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffGhost" eSuperTypes="#/0/Ghost">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#/0/ClassOp"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffScoreboard" eSuperTypes="#/0/Scoreboard">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#/0/ClassOp"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffGame" eSuperTypes="#/0/Game">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#/0/ClassOp"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffGame_gridnodes">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#/0/AscOp"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/GridNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffGame_scoreboard">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#/0/AscOp"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/Scoreboard"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffGame_entities">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#/0/AscOp"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/PositionableEntity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffGame_domainspecificdiffs">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#/0/AscOp"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/DomainSpecificDiff"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffPositionableEntity_on">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+          eType="#/0/AscOp"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/GridNode"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ecore:EPackage name="PacmanGoRuleMM" nsURI="http://www.zadahmad.org/dsmcompare/PacmanGoRuleMM"
+      nsPrefix="PacmanGoRuleMM">
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_GridNode" eSuperTypes="#/0/GridNode">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_Food" eSuperTypes="#/0/Food">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_Pacman" eSuperTypes="#/0/Pacman">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_Ghost" eSuperTypes="#/0/Ghost">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_Scoreboard" eSuperTypes="#/0/Scoreboard">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_Game" eSuperTypes="#/0/Game">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_PositionableEntity" abstract="true"
+        eSuperTypes="#/0/PositionableEntity">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DomainSpecificDiff" eSuperTypes="#/0/DomainSpecificDiff">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffGridNode" eSuperTypes="#/0/DiffGridNode">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffGridNode_up" eSuperTypes="#/0/DiffGridNode_up">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffGridNode_bottom" eSuperTypes="#/0/DiffGridNode_bottom">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffGridNode_left" eSuperTypes="#/0/DiffGridNode_left">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffGridNode_right" eSuperTypes="#/0/DiffGridNode_right">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffFood" eSuperTypes="#/0/DiffFood">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffPacman" eSuperTypes="#/0/DiffPacman">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffGhost" eSuperTypes="#/0/DiffGhost">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffScoreboard" eSuperTypes="#/0/DiffScoreboard">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffGame" eSuperTypes="#/0/DiffGame">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffGame_gridnodes" eSuperTypes="#/0/DiffGame_gridnodes">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffGame_scoreboard" eSuperTypes="#/0/DiffGame_scoreboard">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffGame_entities" eSuperTypes="#/0/DiffGame_entities">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffGame_domainspecificdiffs"
+        eSuperTypes="#/0/DiffGame_domainspecificdiffs">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffPositionableEntity_on"
+        eSuperTypes="#/0/DiffPositionableEntity_on">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Rule">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="constraints" upperBound="-1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="pattern" lowerBound="1"
+          eType="#/1/Pattern_Game" containment="true"/>
+    </eClassifiers>
+  </ecore:EPackage>
+</xmi:XMI>

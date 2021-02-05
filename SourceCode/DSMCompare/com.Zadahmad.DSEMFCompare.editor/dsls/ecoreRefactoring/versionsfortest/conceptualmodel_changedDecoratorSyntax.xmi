@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="conceptualmodel">
+  <eclassifiers name="Entity">
+    <eattributes name="name" etype="EString"/>
+    <eattributes name="abstract" etype="EBoolean"/>
+    <ereferences name="attributes" etype="Attribute"/>
+    <ereferences name="extends" etype="Entity"/>
+    <ereferences name="associations" etype="Association"/>
+  </eclassifiers>
+  <eclassifiers name="Attribute">
+    <eattributes name="name" etype="EString"/>
+    <eattributes name="type" etype="EString"/>
+  </eclassifiers>
+  <eclassifiers name="Association">
+    <eattributes name="type" etype="AssociationType"/>
+    <eattributes name="name" etype="EString"/>
+    <eattributes name="cardinality" etype="EString"/>
+    <ereferences name="to" etype="Entity"/>
+  </eclassifiers>
+  <eclassifiers name="Package">
+    <eattributes name="namespace" etype="EString"/>
+    <ereferences name="entities" etype="Entity"/>
+    <ereferences name="comments" etype="Comment"/>
+  </eclassifiers>
+  <eclassifiers name="Comment">
+    <eattributes name="Text" etype="EString"/>
+    <ereferences name="entity" etype="Entity"/>
+  </eclassifiers>
+</refactoring:EPackage>

@@ -1,0 +1,30 @@
+// Applied composite operation
+extractSuperClass(CustomBehaviour, [], gmfgen, Behaviour, true, [])
+// Atomic changes realizing the composite operation above
+create(Behaviour)
+add(CustomBehaviour, eSuperTypes, Behaviour)
+
+// Applied composite operation
+rename(GenCommonBase.behaviour, behaviour)
+// Atomic changes realizing the composite operation above
+set(GenCommonBase.behaviour, name, behaviour)
+
+// Applied composite operation
+generalizeReference(GenCommonBase.behaviour, Behaviour, 0, -1)
+// Atomic changes realizing the composite operation above
+set(GenCommonBase.behaviour, eType, Behaviour)
+
+// Applied composite operation
+newOppositeReference(GenCommonBase.behaviour, subject, 0, 1, false)
+// Atomic changes realizing the composite operation above
+create(Behaviour.subject)
+
+create(getEditPolicyQualifiedClassName)
+set(Behaviour, interface, true)
+set(Behaviour, abstract, false)
+
+create(OpenDiagramBehaviour)
+create(OpenDiagramBehaviour.editPolicyClassName)
+create(SharedBehaviour)
+create(SharedBehaviour.delegate)
+

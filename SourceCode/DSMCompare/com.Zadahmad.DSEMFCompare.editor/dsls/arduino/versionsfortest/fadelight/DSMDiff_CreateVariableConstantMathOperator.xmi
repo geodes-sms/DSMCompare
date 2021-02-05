@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ASCII"?>
+<arduinoDiffMM:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduinoDiffMM="http://www.obeo.fr/arduinoDiffMM">
+  <hardware name="Hardware">
+    <platforms href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@platform.0"/>
+    <modules xsi:type="arduinoDiffMM:OutputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.0"/>
+    <connectors>
+      <pin xsi:type="arduinoDiffMM:DigitalPin" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@platform.0/@digitalPins.11"/>
+      <module xsi:type="arduinoDiffMM:OutputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.0"/>
+    </connectors>
+  </hardware>
+  <sketch name="Sketch" next="//@sketch/@instructions.2" hardware="//@hardware">
+    <instructions xsi:type="arduinoDiffMM:Constant" value="255"/>
+    <instructions xsi:type="arduinoDiffMM:Variable" name="brightness"/>
+    <instructions xsi:type="arduinoDiffMM:While" next="//@sketch/@instructions.6" condition="//@sketch/@instructions.3">
+      <instructions xsi:type="arduinoDiffMM:Set" next="//@sketch/@instructions.2/@instructions.2" variable="//@sketch/@instructions.2/@instructions.3" value="//@sketch/@instructions.4">
+        <diffvariable operation="DELETE"/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:Delay" value="5"/>
+      <instructions xsi:type="arduinoDiffMM:Level" next="//@sketch/@instructions.2/@instructions.1" level="//@sketch/@instructions.1">
+        <module xsi:type="arduinoDiffMM:OutputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.0"/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:Variable" name="var1"/>
+    </instructions>
+    <instructions xsi:type="arduinoDiffMM:BooleanOperator" left="//@sketch/@instructions.1" right="//@sketch/@instructions.0" operator="lower"/>
+    <instructions xsi:type="arduinoDiffMM:NumericalOperator" left="//@sketch/@instructions.1" right="//@sketch/@instructions.5" operator="plus"/>
+    <instructions xsi:type="arduinoDiffMM:Constant" value="1"/>
+    <instructions xsi:type="arduinoDiffMM:While" next="//@sketch" condition="//@sketch/@instructions.7">
+      <instructions xsi:type="arduinoDiffMM:Set" next="//@sketch/@instructions.6/@instructions.1" variable="//@sketch/@instructions.1" value="//@sketch/@instructions.9"/>
+      <instructions xsi:type="arduinoDiffMM:Level" next="//@sketch/@instructions.6/@instructions.2" level="//@sketch/@instructions.1">
+        <module xsi:type="arduinoDiffMM:OutputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.0"/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:Delay" value="8"/>
+    </instructions>
+    <instructions xsi:type="arduinoDiffMM:BooleanOperator" left="//@sketch/@instructions.1" right="//@sketch/@instructions.8" operator="upper"/>
+    <instructions xsi:type="arduinoDiffMM:Constant" value="0"/>
+    <instructions xsi:type="arduinoDiffMM:NumericalOperator" left="//@sketch/@instructions.1" right="//@sketch/@instructions.5" operator="minus"/>
+    <instructions xsi:type="arduinoDiffMM:DiffWhile">
+      <diffcondition eType="//@sketch/@instructions.11"/>
+    </instructions>
+    <instructions xsi:type="arduinoDiffMM:DiffBooleanOperator">
+      <diffleft eType="//@sketch/@instructions.14"/>
+      <diffright eType="//@sketch/@instructions.13"/>
+    </instructions>
+    <instructions xsi:type="arduinoDiffMM:DiffVariable" name="var2"/>
+    <instructions xsi:type="arduinoDiffMM:DiffVariable" name="var3"/>
+    <instructions xsi:type="arduinoDiffMM:DiffBooleanOperator"/>
+  </sketch>
+</arduinoDiffMM:Project>

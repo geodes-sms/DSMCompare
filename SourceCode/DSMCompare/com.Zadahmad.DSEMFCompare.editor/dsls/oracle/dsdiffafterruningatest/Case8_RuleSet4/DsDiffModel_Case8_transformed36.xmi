@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<oracleDiffMM:ROOT xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oracleDiffMM="www.geodes.UdeM.edu/oracleDiffMM" xsi:schemaLocation="www.geodes.UdeM.edu/oracleDiffMM ../../metamodels/oracleRuleMM.ecore#/0">
+  <b/>
+  <b xsi:type="oracleDiffMM:C"/>
+  <b xsi:type="oracleDiffMM:DiffC"/>
+  <a xsi:type="oracleDiffMM:DiffA" Name="a" new_Name="">
+    <diffab operation="DELETE"/>
+    <diffab operation="DELETE"/>
+  </a>
+  <a xsi:type="oracleDiffMM:DiffA" Name="a" new_Name="">
+    <diffab operation="DELETE"/>
+    <diffab operation="DELETE"/>
+  </a>
+  <a Name="a">
+    <diffab operation="DELETE" eType="//@b.1"/>
+  </a>
+  <a Name="a">
+    <diffab operation="DELETE" eType="//@b.1"/>
+  </a>
+  <domainspecificdiffs name="rule3" DomainSpecificDiff_A="//@a.1 //@a.3"/>
+  <domainspecificdiffs name="rule4" DomainSpecificDiff_B="//@b.0" DomainSpecificDiff_C="//@b.1"/>
+  <domainspecificdiffs name="rule4" DomainSpecificDiff_B="//@b.0" DomainSpecificDiff_C="//@b.1"/>
+  <domainspecificdiffs name="rule4" DomainSpecificDiff_B="//@b.0" DomainSpecificDiff_C="//@b.1"/>
+  <domainspecificdiffs name="rule2" DomainSpecificDiff_B="//@b.0" DomainSpecificDiff_C="//@b.1"/>
+  <domainspecificdiffs name="rule2" DomainSpecificDiff_B="//@b.0" DomainSpecificDiff_C="//@b.1"/>
+  <domainspecificdiffs name="rule2" DomainSpecificDiff_B="//@b.0" DomainSpecificDiff_C="//@b.1"/>
+  <domainspecificdiffs name="rule1" DomainSpecificDiff_B="//@b.0" DomainSpecificDiff_C="//@b.1"/>
+  <domainspecificdiffs name="rule1" DomainSpecificDiff_B="//@b.0" DomainSpecificDiff_C="//@b.1"/>
+  <domainspecificdiffs name="rule1" DomainSpecificDiff_B="//@b.0" DomainSpecificDiff_C="//@b.1"/>
+</oracleDiffMM:ROOT>

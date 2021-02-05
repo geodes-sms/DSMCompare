@@ -1,0 +1,36 @@
+// Applied composite operation
+extractSuperClass(GenFeatureValueSpec, [GenFeatureInitializer.feature, GenFeatureInitializer.featureSeqInitializer], gmfgen, GenFeatureInitializer, true, [])
+// Atomic changes realizing the composite operation above
+create(GenFeatureInitializer)
+add(GenFeatureValueSpec, eSuperTypes, GenFeatureInitializer)
+set(GenFeatureSeqInitializer.initializers, eType, GenFeatureInitializer)
+move(GenFeatureValueSpec, GenFeatureInitializer.feature)
+move(GenFeatureValueSpec, GenFeatureInitializer.featureSeqInitializer)
+
+// Applied composite operation
+pullOperation(getFeatureQualifiedPackageInterfaceName, GenFeatureInitializer)
+// Atomic changes realizing the composite operation above
+move(GenFeatureValueSpec, getFeatureQualifiedPackageInterfaceName)
+
+set(GenFeatureInitializer.featureSeqInitializer, changeable, false)
+set(GenFeatureInitializer, interface, true)
+set(GenFeatureInitializer, abstract, false)
+
+
+create(GenReferenceNewElementSpec)
+create(GenFeatureSeqInitializer.creatingInitializer)
+create(GenReferenceNewElementSpec.newElementInitializers)
+
+set(GenElementInitializer, interface, true)
+set(GenElementInitializer, abstract, false)
+// Applied composite operation
+makeFeatureVolatile(GenElementInitializer.typeModelFacet, true, false, false)
+// Atomic changes realizing the composite operation above
+set(GenElementInitializer.typeModelFacet, volatile, true)
+set(GenElementInitializer.typeModelFacet, transient, true)
+set(GenElementInitializer.typeModelFacet, eOpposite, null)
+set(TypeModelFacet.modelElementInitializer, eOpposite, null)
+
+create(GenFeatureSeqInitializer.elementClass)
+
+set(gmfgen, nsURI, http://www.eclipse.org/gmf/2005/GenModel/2.0)

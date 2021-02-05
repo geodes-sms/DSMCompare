@@ -1,0 +1,20 @@
+// Applied composite operation
+extractSubClass(LabelMapping, FeatureLabelMapping.features, FeatureLabelMapping)
+// Atomic changes realizing the composite operation above
+create(FeatureLabelMapping)
+move(LabelMapping, FeatureLabelMapping.features)
+set(FeatureLabelMapping.features, lowerBound, 1)
+
+// Applied composite operation
+pushFeature(FeatureLabelMapping.editPattern)
+// Atomic changes realizing the composite operation above
+move(LabelMapping, FeatureLabelMapping.editPattern)
+
+// Applied composite operation
+pushFeature(FeatureLabelMapping.viewPattern)
+// Atomic changes realizing the composite operation above
+move(LabelMapping, FeatureLabelMapping.viewPattern)
+
+
+create(DesignLabelMapping)
+

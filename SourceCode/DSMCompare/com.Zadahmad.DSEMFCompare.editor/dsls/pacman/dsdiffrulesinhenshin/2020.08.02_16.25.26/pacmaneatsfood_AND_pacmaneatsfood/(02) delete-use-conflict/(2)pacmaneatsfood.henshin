@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Rule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_55dnIMl_Eeqan_KLgBFsjg" name="pacmaneatsfood">
+  <parameters xmi:id="_55dnIcl_Eeqan_KLgBFsjg" name="n3value" kind="VAR">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </parameters>
+  <parameters xmi:id="_55dnIsl_Eeqan_KLgBFsjg" name="n3new_value" kind="VAR">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </parameters>
+  <lhs xmi:id="_55dnI8l_Eeqan_KLgBFsjg" name="pacmaneatsfood_LHS">
+    <nodes xmi:id="_55dnJMl_Eeqan_KLgBFsjg" name="n0" outgoing="_55dnL8l_Eeqan_KLgBFsjg _55dnMMl_Eeqan_KLgBFsjg _55dnMcl_Eeqan_KLgBFsjg _55dnMsl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_55dnJcl_Eeqan_KLgBFsjg" name="n1" incoming="_55dnL8l_Eeqan_KLgBFsjg _55dnNMl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//GridNode"/>
+    </nodes>
+    <nodes xmi:id="_55dnJsl_Eeqan_KLgBFsjg" name="n2" incoming="_55dnMMl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffScoreboard"/>
+      <attributes xmi:id="_55dnJ8l_Eeqan_KLgBFsjg" value="MODIFY">
+        <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffScoreboard/operation"/>
+      </attributes>
+      <attributes xmi:id="_55dnKMl_Eeqan_KLgBFsjg" value="n3value">
+        <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Scoreboard/value"/>
+      </attributes>
+      <attributes xmi:id="_55dnKcl_Eeqan_KLgBFsjg" value="n3new_value">
+        <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffScoreboard/new_value"/>
+      </attributes>
+    </nodes>
+    <nodes xmi:id="_55dnKsl_Eeqan_KLgBFsjg" name="n3" incoming="_55dnMcl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Pacman"/>
+    </nodes>
+    <nodes xmi:id="_55dnK8l_Eeqan_KLgBFsjg" name="n4" incoming="_55dnMsl_Eeqan_KLgBFsjg" outgoing="_55dnM8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffFood"/>
+      <attributes xmi:id="_55dnLMl_Eeqan_KLgBFsjg" value="DELETE">
+        <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffFood/operation"/>
+      </attributes>
+    </nodes>
+    <nodes xmi:id="_55dnLcl_Eeqan_KLgBFsjg" name="n41" incoming="_55dnM8l_Eeqan_KLgBFsjg" outgoing="_55dnNMl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffPositionableEntity_on"/>
+      <attributes xmi:id="_55dnLsl_Eeqan_KLgBFsjg" value="DELETE">
+        <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffPositionableEntity_on/operation"/>
+      </attributes>
+    </nodes>
+    <edges xmi:id="_55dnL8l_Eeqan_KLgBFsjg" source="_55dnJMl_Eeqan_KLgBFsjg" target="_55dnJcl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/gridnodes"/>
+    </edges>
+    <edges xmi:id="_55dnMMl_Eeqan_KLgBFsjg" source="_55dnJMl_Eeqan_KLgBFsjg" target="_55dnJsl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/scoreboard"/>
+    </edges>
+    <edges xmi:id="_55dnMcl_Eeqan_KLgBFsjg" source="_55dnJMl_Eeqan_KLgBFsjg" target="_55dnKsl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/entities"/>
+    </edges>
+    <edges xmi:id="_55dnMsl_Eeqan_KLgBFsjg" source="_55dnJMl_Eeqan_KLgBFsjg" target="_55dnK8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/entities"/>
+    </edges>
+    <edges xmi:id="_55dnM8l_Eeqan_KLgBFsjg" source="_55dnK8l_Eeqan_KLgBFsjg" target="_55dnLcl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//PositionableEntity/diffon"/>
+    </edges>
+    <edges xmi:id="_55dnNMl_Eeqan_KLgBFsjg" source="_55dnLcl_Eeqan_KLgBFsjg" target="_55dnJcl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+    </edges>
+  </lhs>
+  <rhs xmi:id="_55dnNcl_Eeqan_KLgBFsjg" name="pacmaneatsfood_RHS">
+    <nodes xmi:id="_55dnNsl_Eeqan_KLgBFsjg" name="n0" outgoing="_55dnQcl_Eeqan_KLgBFsjg _55dnQsl_Eeqan_KLgBFsjg _55dnQ8l_Eeqan_KLgBFsjg _55dnRMl_Eeqan_KLgBFsjg _55dnRcl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_55dnN8l_Eeqan_KLgBFsjg" name="n1" incoming="_55dnQcl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//GridNode"/>
+    </nodes>
+    <nodes xmi:id="_55dnOMl_Eeqan_KLgBFsjg" name="n2" incoming="_55dnQsl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffScoreboard"/>
+      <attributes xmi:id="_55dnOcl_Eeqan_KLgBFsjg" value="MODIFY">
+        <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffScoreboard/operation"/>
+      </attributes>
+      <attributes xmi:id="_55dnOsl_Eeqan_KLgBFsjg" value="n3value">
+        <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Scoreboard/value"/>
+      </attributes>
+      <attributes xmi:id="_55dnO8l_Eeqan_KLgBFsjg" value="n3new_value">
+        <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffScoreboard/new_value"/>
+      </attributes>
+    </nodes>
+    <nodes xmi:id="_55dnPMl_Eeqan_KLgBFsjg" name="n3" incoming="_55dnQ8l_Eeqan_KLgBFsjg _55dnR8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Pacman"/>
+    </nodes>
+    <nodes xmi:id="_55dnPcl_Eeqan_KLgBFsjg" name="n4" incoming="_55dnRMl_Eeqan_KLgBFsjg _55dnRsl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffFood"/>
+      <attributes xmi:id="_55dnPsl_Eeqan_KLgBFsjg" value="DELETE">
+        <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffFood/operation"/>
+      </attributes>
+    </nodes>
+    <nodes xmi:id="_55dnP8l_Eeqan_KLgBFsjg" name="n5" incoming="_55dnRcl_Eeqan_KLgBFsjg" outgoing="_55dnRsl_Eeqan_KLgBFsjg _55dnR8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DomainSpecificDiff"/>
+      <attributes xmi:id="_55dnQMl_Eeqan_KLgBFsjg" value="&quot;PacmanEatsFood&quot;">
+        <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DomainSpecificDiff/name"/>
+      </attributes>
+    </nodes>
+    <edges xmi:id="_55dnQcl_Eeqan_KLgBFsjg" source="_55dnNsl_Eeqan_KLgBFsjg" target="_55dnN8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/gridnodes"/>
+    </edges>
+    <edges xmi:id="_55dnQsl_Eeqan_KLgBFsjg" source="_55dnNsl_Eeqan_KLgBFsjg" target="_55dnOMl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/scoreboard"/>
+    </edges>
+    <edges xmi:id="_55dnQ8l_Eeqan_KLgBFsjg" source="_55dnNsl_Eeqan_KLgBFsjg" target="_55dnPMl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/entities"/>
+    </edges>
+    <edges xmi:id="_55dnRMl_Eeqan_KLgBFsjg" source="_55dnNsl_Eeqan_KLgBFsjg" target="_55dnPcl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/entities"/>
+    </edges>
+    <edges xmi:id="_55dnRcl_Eeqan_KLgBFsjg" source="_55dnNsl_Eeqan_KLgBFsjg" target="_55dnP8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/domainspecificdiffs"/>
+    </edges>
+    <edges xmi:id="_55dnRsl_Eeqan_KLgBFsjg" source="_55dnP8l_Eeqan_KLgBFsjg" target="_55dnPcl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Food"/>
+    </edges>
+    <edges xmi:id="_55dnR8l_Eeqan_KLgBFsjg" source="_55dnP8l_Eeqan_KLgBFsjg" target="_55dnPMl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Pacman"/>
+    </edges>
+  </rhs>
+  <attributeConditions xmi:id="_55dnSMl_Eeqan_KLgBFsjg" conditionText="n3value&lt;n3new_value"/>
+  <mappings xmi:id="_55dnScl_Eeqan_KLgBFsjg" origin="_55dnJMl_Eeqan_KLgBFsjg" image="_55dnNsl_Eeqan_KLgBFsjg"/>
+  <mappings xmi:id="_55dnSsl_Eeqan_KLgBFsjg" origin="_55dnJcl_Eeqan_KLgBFsjg" image="_55dnN8l_Eeqan_KLgBFsjg"/>
+  <mappings xmi:id="_55dnS8l_Eeqan_KLgBFsjg" origin="_55dnJsl_Eeqan_KLgBFsjg" image="_55dnOMl_Eeqan_KLgBFsjg"/>
+  <mappings xmi:id="_55dnTMl_Eeqan_KLgBFsjg" origin="_55dnKsl_Eeqan_KLgBFsjg" image="_55dnPMl_Eeqan_KLgBFsjg"/>
+  <mappings xmi:id="_55dnTcl_Eeqan_KLgBFsjg" origin="_55dnK8l_Eeqan_KLgBFsjg" image="_55dnPcl_Eeqan_KLgBFsjg"/>
+</henshin:Rule>

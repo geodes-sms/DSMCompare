@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<oracleDiffMM:ROOT xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oracleDiffMM="www.geodes.UdeM.edu/oracleDiffMM" xsi:schemaLocation="www.geodes.UdeM.edu/oracleDiffMM ../../metamodels/oracleRuleMM.ecore#/0">
+  <b>
+    <bd xsi:type="oracleDiffMM:DiffD"/>
+    <bd xsi:type="oracleDiffMM:DiffD" operation="DELETE"/>
+    <bd xsi:type="oracleDiffMM:DiffD"/>
+    <diffbd operation="DELETE"/>
+  </b>
+  <b xsi:type="oracleDiffMM:C">
+    <bd xsi:type="oracleDiffMM:DiffD" Name="a"/>
+    <diffbd/>
+  </b>
+  <b xsi:type="oracleDiffMM:DiffC"/>
+  <a xsi:type="oracleDiffMM:DiffA" Name="a" new_Name="">
+    <diffab operation="DELETE" eType="//@b.2"/>
+  </a>
+  <a Name="a">
+    <diffab operation="DELETE" eType="//@b.1"/>
+  </a>
+  <domainspecificdiffs name="rule3" DomainSpecificDiff_A="//@a.0"/>
+  <domainspecificdiffs name="rule3" DomainSpecificDiff_A="//@a.0"/>
+</oracleDiffMM:ROOT>

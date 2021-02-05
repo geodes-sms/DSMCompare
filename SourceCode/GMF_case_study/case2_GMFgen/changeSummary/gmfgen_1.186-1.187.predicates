@@ -1,0 +1,49 @@
+// Applied composite operation
+rename(GenApplication.className, className)
+// Atomic changes realizing the composite operation above
+set(GenApplication.className, name, className)
+
+// Applied composite operation
+rename(GenApplication.packageName, packageName)
+// Atomic changes realizing the composite operation above
+set(GenApplication.packageName, name, packageName)
+
+// Applied composite operation
+rename(getQualifiedClassName, getQualifiedClassName)
+// Atomic changes realizing the composite operation above
+set(getQualifiedClassName, name, getQualifiedClassName)
+
+// Applied composite operation
+makeFeatureVolatile(GenApplication.workbenchWindowAdvisorClassName, true, true, false)
+// Atomic changes realizing the composite operation above
+set(GenApplication.workbenchWindowAdvisorClassName, changeable, false)
+set(GenApplication.workbenchWindowAdvisorClassName, volatile, true)
+set(GenApplication.workbenchWindowAdvisorClassName, transient, true)
+set(GenApplication.workbenchWindowAdvisorClassName, derived, true)
+
+// Applied composite operation
+makeFeatureVolatile(GenApplication.workbenchAdvisorClassName, true, true, false)
+// Atomic changes realizing the composite operation above
+set(GenApplication.workbenchAdvisorClassName, changeable, false)
+set(GenApplication.workbenchAdvisorClassName, volatile, true)
+set(GenApplication.workbenchAdvisorClassName, transient, true)
+set(GenApplication.workbenchAdvisorClassName, derived, true)
+
+// Applied composite operation
+makeFeatureVolatile(GenApplication.actionBarAdvisorClassName, true, true, false)
+// Atomic changes realizing the composite operation above
+set(GenApplication.actionBarAdvisorClassName, changeable, false)
+set(GenApplication.actionBarAdvisorClassName, volatile, true)
+set(GenApplication.actionBarAdvisorClassName, transient, true)
+set(GenApplication.actionBarAdvisorClassName, derived, true)
+
+// Applied composite operation
+makeFeatureVolatile(GenApplication.perspectiveClassName, true, true, false)
+// Atomic changes realizing the composite operation above
+set(GenApplication.perspectiveClassName, changeable, false)
+set(GenApplication.perspectiveClassName, volatile, true)
+set(GenApplication.perspectiveClassName, transient, true)
+set(GenApplication.perspectiveClassName, derived, true)
+
+create(GenApplication.supportFiles)
+

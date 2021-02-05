@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduinoDiffMM="http://www.obeo.fr/arduinoDiffMM">
+  <arduinoDiffMM:Project>
+    <hardware name="Hardware">
+      <platforms href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@platform.0"/>
+      <modules xsi:type="arduinoDiffMM:OutputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.3"/>
+      <modules xsi:type="arduinoDiffMM:InputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.1"/>
+      <modules xsi:type="arduinoDiffMM:OutputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.5"/>
+      <connectors>
+        <pin xsi:type="arduinoDiffMM:DigitalPin" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@platform.0/@digitalPins.13"/>
+        <module xsi:type="arduinoDiffMM:OutputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.3"/>
+      </connectors>
+      <connectors>
+        <pin xsi:type="arduinoDiffMM:DigitalPin" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@platform.0/@digitalPins.0"/>
+        <module xsi:type="arduinoDiffMM:InputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.1"/>
+      </connectors>
+      <connectors>
+        <pin xsi:type="arduinoDiffMM:DigitalPin" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@platform.0/@digitalPins.1"/>
+        <module xsi:type="arduinoDiffMM:OutputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.5"/>
+      </connectors>
+    </hardware>
+    <sketch name="Sketch" hardware="/0/@hardware">
+      <instructions xsi:type="arduinoDiffMM:Sensor" status="/0/@sketch/@instructions.1">
+        <module xsi:type="arduinoDiffMM:InputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.1"/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:Status" next="/0/@sketch" status="true" sensor="/0/@sketch/@instructions.0">
+        <module xsi:type="arduinoDiffMM:OutputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.5"/>
+      </instructions>
+    </sketch>
+  </arduinoDiffMM:Project>
+  <arduinoDiffMM:DiffStatus status="true" operation="MODIFY"/>
+</xmi:XMI>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+    <extension point="org.eclipse.core.expressions.definitions">
+		<definition id="dsmcompare.isecore">
+			<adapt type="org.eclipse.core.resources.IResource">
+         		<test property="org.eclipse.core.resources.extension" value="ecore" />
+         	</adapt>
+         </definition>
+	</extension>
+	
+   <extension point="org.eclipse.ui.handlers">
+      <handler
+            class="dsmcompare.mmextension.ui.handlers.MMExtensionHandler"
+            commandId="dsmcompare.commands.mmextension">
+      </handler>
+   </extension>	
+	
+    <extension point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               id="dsmcompare.menus"
+               label="DSMCompare">
+      		<category
+            	id="dsmcompare.commands.category"
+            	name="DSMCompare Category">
+      		</category>            
+            <command
+            	  categoryId="dsmcompare.commands.category"
+                  commandId="dsmcompare.commands.mmextension"
+                  id="dsmcompare.menus.mmextension"
+                  label="Extend metamodel">
+				<visibleWhen checkEnabled="false">
+					<iterate>
+						<reference definitionId="dsmcompare.isecore" />
+					</iterate>		
+				</visibleWhen>  
+            </command>
+         </menu>
+      </menuContribution>
+    </extension>
+
+</plugin>

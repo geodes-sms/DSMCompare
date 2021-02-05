@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="groupPacmanGo123" version="12.0.0.2017041100">
+  <ownedViewpoints name="vpPacmanGo123" label="vpPacmanGo" modelFileExtension="pacmango123">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="diagramPacmanGo123" label="diagramPacmanGo" initialisation="true" domainClass="PacmanGo::Game">
+      <metamodel href="http://www.zadahmad.org/dsmcompare/PacmanGo#/"/>
+      <defaultLayer name="defaultlayer" label="defaultLayer">
+        <nodeMappings name="Score" semanticCandidatesExpression="feature:scoreboard" domainClass="PacmanGo::Scoreboard">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" labelExpression="aql:'Score : ' + self.value" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/scoreboard.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelFormat>underline</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="GridNode" semanticCandidatesExpression="feature:gridnodes" domainClass="PacmanGo::GridNode">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/square.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Pacman" semanticCandidatesExpression="feature:entities" domainClass="PacmanGo::Pacman">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:id" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/pacman.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Ghost" semanticCandidatesExpression="feature:entities" domainClass="PacmanGo::Ghost">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/ghost.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Food" semanticCandidatesExpression="feature:entities" domainClass="PacmanGo::Food">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/Food.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="On" sourceMapping="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='Pacman'] //@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='Food'] //@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='Ghost']" targetMapping="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:on">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Left" sourceMapping="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:left">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Right" sourceMapping="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:right">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="UP" sourceMapping="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:up">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Bottom" sourceMapping="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='GridNode']" targetMapping="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='GridNode']" targetFinderExpression="feature:bottom">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="DefaultPalette">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationScore" label="Create Score" nodeMappings="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='Score']" iconPath="/sample.PacmanGo.design/iconsJ/scoreboard.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGo::Scoreboard" referenceName="scoreboard"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationGridNode" label="Create GridNode" nodeMappings="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='GridNode']" iconPath="/sample.PacmanGo.design/iconsJ/square.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGo::GridNode" referenceName="gridnodes"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationPacman" label="Create Pacman" nodeMappings="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='Pacman']" iconPath="/sample.PacmanGo.design/iconsJ/pacman.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGo::Pacman" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationGhost" label="Create Ghost" nodeMappings="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='Ghost']" iconPath="/sample.PacmanGo.design/iconsJ/ghost.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGo::Ghost" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationFood" label="Create Food" nodeMappings="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@nodeMappings[name='Food']" iconPath="/sample.PacmanGo.design/iconsJ/circle.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGo::Pellet" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="EdgeOn" label="Create On link" edgeMappings="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@edgeMappings[name='On']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="on" valueExpression="var:target"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IdCreationGridNodeGridNodeLeft" label="Create Left Link GridNode to GridNode" edgeMappings="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@edgeMappings[name='Left']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="left" valueExpression="var:target"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IdCreationGridNodeGridNodeRight" label="Create Right Link GridNode to GridNode" edgeMappings="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@edgeMappings[name='Right']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="left" valueExpression="var:target"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IdCreationGridNodeGridNodeUp" label="Create Up Link GridNode to GridNode" edgeMappings="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@edgeMappings[name='UP']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="left" valueExpression="var:target"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IdCreationGridNodeGridNodeBottom" label="Create Bottom Link GridNode to GridNode" edgeMappings="//@ownedViewpoints[name='vpPacmanGo123']/@ownedRepresentations[name='diagramPacmanGo123']/@defaultLayer/@edgeMappings[name='Bottom']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="left" valueExpression="var:target"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteElement">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="DeleteEMFElement" id="GamePlay.odesign.DeleteEObjectInstanceAction">
+                <parameters name="eObject" value="var:element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="vpPacmanGoDiffMM" modelFileExtension="pacmangodiffmm123">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="diagramPacmanGoDiffMM123" label="diagramPacmanGoDiffMM" initialisation="true" domainClass="PacmanGoDiffMM::Game">
+      <metamodel href="http://www.zadahmad.org/dsmcompare/PacmanGoDiffMM#/"/>
+      <defaultLayer name="defaultlayer" label="defaultLayer">
+        <nodeMappings name="IdScoreboard" preconditionExpression="aql:self.oclIsTypeOf(PacmanGoDiffMM::Scoreboard)" semanticCandidatesExpression="feature:scoreboard" domainClass="PacmanGoDiffMM::Scoreboard">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/scoreboardIcon2.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="IdGridNode" preconditionExpression="aql:self.oclIsTypeOf(PacmanGoDiffMM::GridNode)" semanticCandidatesExpression="feature:gridnodes" domainClass="PacmanGoDiffMM::GridNode">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/square.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="IdPacman" preconditionExpression="aql:self.oclIsTypeOf(PacmanGoDiffMM::Pacman)" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::Pacman">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:id" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/PacmanIcon2.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="IdGhost" preconditionExpression="aql:self.oclIsTypeOf(PacmanGoDiffMM::Ghost)" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::Ghost">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/ghost.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="IdFood" preconditionExpression="aql:self.oclIsTypeOf(PacmanGoDiffMM::Food)" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::Food">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/Food.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="IdDiffFood_DELETE" preconditionExpression="aql:self.oclAsType(PacmanGoDiffMM::DiffFood).operation.toString() = 'DELETE'" semanticCandidatesExpression="feature:entities" domainClass="PacmanGoDiffMM::DiffFood">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="eaten food" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/DiffFood_Delete.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="IdDiffScoreboard" semanticCandidatesExpression="feature:scoreboard" domainClass="PacmanGoDiffMM::DiffScoreboard">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:new_value" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/icons/diffscoreboardIcon.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DomainSpecificDiff_PACMANEATFOOD" preconditionExpression="aql:self.name.toUpper()= 'PACMANEATFOOD'" semanticCandidatesExpression="feature:domainspecificdiffs" domainClass="PacmanGoDiffMM::DomainSpecificDiff">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/dsdiffpacmaneatfood.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>italic</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DomainSpecificDiff_PACMANMOVEUP" preconditionExpression="aql:self.name.toUpper()= 'PACMANMOVESUP'" semanticCandidatesExpression="feature:domainspecificdiffs" domainClass="PacmanGoDiffMM::DomainSpecificDiff">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/sample.PacmanGo.design/iconsJ/PACMANMOVEUP.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>italic</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="IdGridNodeGridNodeleft" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdGridNode']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdGridNode']" targetFinderExpression="feature:left">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="IdPacmanGridNodeon" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdPacman']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdGridNode']" targetFinderExpression="feature:on">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="IdGhostGridNodeon" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdGhost']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdGridNode']" targetFinderExpression="feature:on">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="IdFoodGridNodeon" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdFood']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdGridNode']" targetFinderExpression="feature:on">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="IdGridNodeGridNodeup" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdGridNode']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdGridNode']" targetFinderExpression="feature:up">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="IdGridNodeGridNoderight" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdGridNode']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdGridNode']" targetFinderExpression="feature:right">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="EdgeDsd__Pacman" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='DomainSpecificDiff_PACMANEATFOOD'] //@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='DomainSpecificDiff_PACMANMOVEUP']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdPacman']" targetFinderExpression="feature:DomainSpecificDiff_Pacman">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="EdgeDsdPEatF_DiffFood" sourceMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='DomainSpecificDiff_PACMANEATFOOD']" targetMapping="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdDiffFood_DELETE']" targetFinderExpression="feature:DomainSpecificDiff_Food">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="DefaultPalette">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IdCreationGridNodeGridNodeleft" label="Create Link GridNode to GridNode" edgeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@edgeMappings[name='IdGridNodeGridNodeleft']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="left" valueExpression="var:target"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IdCreationPacmanGridNodeon" label="Create Link Pacman to GridNode" edgeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@edgeMappings[name='IdPacmanGridNodeon']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="on" valueExpression="var:target"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IdCreationGhostGridNodeon" label="Create Link Ghost to GridNode" edgeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@edgeMappings[name='IdGhostGridNodeon']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="on" valueExpression="var:target"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IdCreationFoodGridNodeon" label="Create Link Food to GridNode" edgeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@edgeMappings[name='IdFoodGridNodeon']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="on" valueExpression="var:target"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationScoreboard" label="Create Scoreboard" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdScoreboard']" iconPath="/sample.PacmanGo.design/iconsJ/scoreboard.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::Scoreboard" referenceName="scoreboard"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationGridNode" label="Create GridNode" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdGridNode']" iconPath="/sample.PacmanGo.design/iconsJ/square.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::GridNode" referenceName="gridnodes"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationPacman" label="Create Pacman" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdPacman']" iconPath="/sample.PacmanGo.design/iconsJ/pacman.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::Pacman" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationGhost" label="Create Ghost" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdGhost']" iconPath="/sample.PacmanGo.design/iconsJ/ghost.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::Ghost" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IdCreationFood" label="Create Food" nodeMappings="//@ownedViewpoints[name='vpPacmanGoDiffMM']/@ownedRepresentations[name='diagramPacmanGoDiffMM123']/@defaultLayer/@nodeMappings[name='IdFood']" iconPath="/sample.PacmanGo.design/iconsJ/circle.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="PacmanGoDiffMM::Pellet" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteElement">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="DeleteEMFElement" id="GamePlay.odesign.DeleteEObjectInstanceAction">
+                <parameters name="eObject" value="var:element"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <userColorsPalettes name="DefaultPalette"/>
+</description:Group>

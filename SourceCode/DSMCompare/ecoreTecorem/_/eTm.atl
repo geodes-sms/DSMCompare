@@ -1,0 +1,52 @@
+-- @nsURI MMe=http://www.eclipse.org/pemf/2002/Ecore
+-- @path MMm=/com.Zadahmad.DSEMFCompare.editor/dsls/ecoreRefactoring/metamodels/zecore.ecore
+
+module eTm;
+create OUT : MMm from IN : MMe;
+
+rule pTp{
+	from 	pe: MMe!EPackage
+	to		pm:	MMm!ZEPackage(
+				name <- pe.name,
+				zeClassifiers <- pe.eClassifiers
+		)
+}
+
+rule cTc{
+	from 	pe: MMe!EClass
+	to		pm:	MMm!ZEClass(
+				name <- pe.name,
+				zabstract <- pe.abstract,
+				zinterface <- pe.interface,
+				zeAttributes <- pe.eAttributes,
+				zeOperations <- pe.eOperations,
+				zeReferences <- pe.eReferences,
+				zeSuperType <- pe.eSuperTypes
+		)
+}
+
+rule aTa{
+	from 	pe: MMe!EAttribute
+	to		pm:	MMm!ZEAttribute(
+				name <- pe.name,
+				zeType <- pe.eType.name
+		)
+}
+
+rule oTo{
+	from 	pe: MMe!EOperation
+	to		pm:	MMm!ZEOperation(
+				name <- pe.name,
+				zeType <- pe.eType.name
+		)
+}
+
+rule rTr{
+	from 	pe: MMe!EReference
+	to		pm:	MMm!ZEReference(
+				name <- pe.name,
+				zeType <- pe.eType,
+				zeReferenceType <- pe.eReferenceType
+		)
+}
+

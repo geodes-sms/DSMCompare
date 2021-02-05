@@ -1,0 +1,747 @@
+-- @nsURI IMM=http://www.obeo.fr/arduino
+-- @nsURI IDIFFMM=http://www.obeo.fr/arduinoDiffMM
+-- @nsURI IDIFFMMDef=http://www.eclipse.org/emf/2002/Ecore
+-- @nsURI ISDe=http://www.eclipse.org/sirius/description/1.1.0
+-- @nsURI ISDi=http://www.eclipse.org/sirius/diagram/1.1.0
+
+-- @nsURI OSDe=http://www.eclipse.org/sirius/description/1.1.0
+-- @nsURI OSDi=http://www.eclipse.org/sirius/diagram/1.1.0
+
+
+module mTd;
+create OUT1 : OSDe, OUT2 : OSDi from IN : IMM, IN1 : ISDe, IN2 : ISDi, IN3 : IDIFFMM, IN4:IDIFFMMDef; 
+
+helper def 	: DIFF 					: String 								= 'Diff';
+helper def 	: DIFFMM 				: String 								= 'DiffMM';
+helper def 	: DIFFMMc 				: String 								= thisModule.DIFFMM+'::';
+helper def 	: DIFFMMcDIFF 			: String 								= thisModule.DIFFMMc+'Diff';	
+helper def 	: iconPath	 			: String 								= '/fr.obeo.dsl.arduino.design/icons/';	
+helper def	: dsdiffNode 			: Sequence(OSDi!NodeMapping) 			=  Sequence{};
+helper def	: dsdEdges 				: Sequence(OSDi!EdgeMapping) 			=  Sequence{};
+helper def	: bnms 					: Sequence(OSDi!DiagramElementMapping) 	=  Sequence{}; 
+helper def	: MMEPackageName		: String							 	=  IMM!Project.getEPackage().getName();
+helper def	: DiffMMEPackageName	: String							 	=  IDIFFMM!Project.getEPackage().getName();
+
+
+
+
+-- ------------------------------------------------------------ 
+
+rule gTg {
+	from
+		i: ISDe!Group			
+--	using {
+--			DIFFMM : String = 'DIFFMM';
+--	}
+	to
+		o: OSDe!Group (
+			name <- i.name + thisModule.DIFFMM
+			, ownedViewpoints <- i.getOwnedViewpoints()
+		)
+		
+
+
+}
+
+rule vTv {
+	from
+		i: ISDe!Viewpoint		
+	to
+		o: OSDe!Viewpoint (
+			name <- i.name + thisModule.DIFFMM
+			, modelFileExtension <-  (i.modelFileExtension+ thisModule.DIFFMM).toLower() -- i.getOwnedRepresentations()->first().oclType().toString() = DiagramDescription
+--			, label <- iv.label + 'DIFFMMc'
+			, ownedRepresentations <- i.ownedRepresentations -- ->first()
+			, customizes <- i.customizes 
+			, ownedJavaExtensions<- i.ownedJavaExtensions 
+			--, ownedRepresentationExtensions<- i.ownedRepresentationExtensions
+			--, ownedFeatureExtensions<- i.ownedFeatureExtensions  
+			
+		)
+	do{
+		--thisModule.debug(OSDe!Viewpoint->allInstances().toString());
+	}
+}
+
+
+------------------------------------------------------
+rule ddTdd{
+	from
+		i: ISDi!DiagramDescription	
+	using {
+			DomainClassName:String= i.domainClass.split('::')->last()->split('\\.')->last();
+			NewDomainClass: String= thisModule.DiffMMEPackageName+'::'+DomainClassName;
+			-- NewDomainClass: String= i.domainClass.split('::')->first()+thisModule.DIFFMMc+i.domainClass.split('::')->last();
+	}
+	to
+		o: OSDi!DiagramDescription  (
+			name <- i.name + thisModule.DIFFMM 
+			, label <- i.label
+			, domainClass <- NewDomainClass 
+			, initialisation <- i.initialisation
+			, showOnStartup <- i.showOnStartup
+			, enablePopupBars <- i.enablePopupBars
+		--	, defaultLayer <- thisModule.resolveTemp(i.defaultLayer , 'o') -- this is working
+			, defaultLayer <- i.defaultLayer
+			, metamodel <- IDIFFMM!DomainSpecificDiff.getEPackage() -- i.getMetamodel() -- ->collect(e | e.name)->flatten()  --Set{mm} --i.getMetamodel() -- -> first().modifyHref()
+		) 
+		--, mm: OSDi!EPackage (Name <- i.getMetamodel().Name, nsURI <-i.getMetamodel().nsURI , metamodelURI <- i.getMetamodel().metamodelURI  )
+	do{
+		--thisModule.debug(OSDi!DiagramDescription->allInstances().toString());
+	}
+
+}
+
+rule dLTdL{
+	from
+		i: ISDi!Layer
+	to
+		o: OSDi!Layer (
+			name <- i.name
+			, label <- i.label
+		    , nodeMappings <- i.nodeMappings->collect(e | thisModule.resolveTemp(e , 'o'))->
+															union(i.nodeMappings->collect(e | thisModule.resolveTemp(e , 'oDiffADD')))->
+															union(i.nodeMappings->collect(e | thisModule.resolveTemp(e , 'oDiffDELETE')))->
+															union(i.nodeMappings->collect(e | thisModule.resolveTemp(e , 'oDiffMODIFY')))->
+															union(i.nodeMappings->collect(e | thisModule.dsdiffNode))
+															
+			, edgeMappings <- i.edgeMappings->collect(e | thisModule.resolveTemp(e , 'o'))->
+															union(i.edgeMappings->collect(e | thisModule.resolveTemp(e , 'o2')))->
+															union(i.nodeMappings->collect(e | thisModule.dsdEdges))
+			, toolSections <- i.toolSections,
+			customization <- i.customization,
+			containerMappings <- i.containerMappings
+		)
+		
+		do{
+--				thisModule.debug(OSDi!Layer.allInstances()->first().nodeMappings.toString());
+--				thisModule.debug(OSDi!Layer.allInstances()->last().nodeMappings.toString());
+--				
+--				thisModule.debug(ISDi!Layer.allInstances()->first().nodeMappings.toString());
+--				thisModule.debug(ISDi!Layer.allInstances()->last().nodeMappings.toString());
+		}
+			
+}
+
+-------------------------------------
+
+
+rule tsTts{
+	from
+		i: ISDi!ToolSection
+	to
+		o: OSDi!ToolSection 
+		(
+			
+			groupExtensions <- i.groupExtensions,
+			icon <- i.icon,
+			label <- i.label,
+			name <- i.name,
+			ownedTools <- i.ownedTools,
+			popupMenus <- i.popupMenus,
+			reusedTools <- i.reusedTools,
+			subSections <- i.subSections		
+			
+		)
+}
+
+
+rule swdTswd{
+	from
+		i: ISDi!SelectionWizardDescription
+	to
+		o: OSDi!SelectionWizardDescription 
+		(			
+			initialOperation <- i.initialOperation 
+		)
+}
+
+
+rule dldTdld{
+	from
+		i: ISDi!DeleteElementDescription
+	to
+		o: OSDi!DeleteElementDescription 
+		(			
+			initialOperation <- i.initialOperation
+		)
+}
+
+rule redTred{
+	from
+		i: ISDi!ReconnectEdgeDescription
+	to
+		o: OSDi!ReconnectEdgeDescription 
+		(			
+			initialOperation <- i.initialOperation
+		)
+}
+
+
+rule ncdTncd{
+	from
+		i: ISDi!NodeCreationDescription
+	to
+		o: OSDi!NodeCreationDescription (
+			name <- i.name,
+			label <- i.label,
+			forceRefresh <- i.forceRefresh,
+			nodeMappings <- i.nodeMappings,
+			initialOperation <- i.initialOperation
+			
+		)
+}
+
+rule incoTinco{
+	from
+		i: ISDi!InitialNodeCreationOperation
+	to
+		o: OSDi!InitialNodeCreationOperation (
+			firstModelOperations <- i.firstModelOperations
+			
+		)
+}
+
+
+rule ccTcc{
+	from
+		i: ISDi!ChangeContext
+	to
+		o: OSDi!ChangeContext (
+			browseExpression <- i.browseExpression,
+			subModelOperations <- i.subModelOperations			
+		)
+}
+
+rule ciTci{
+	from
+		i: ISDi!CreateInstance
+	to
+		o: OSDi!CreateInstance (
+			typeName <- i.typeName,
+			referenceName <- i.referenceName,
+			subModelOperations <- i.subModelOperations			
+		)
+}
+
+rule svTsv{
+	from
+		i: ISDi!SetValue
+	to
+		o: OSDi!SetValue (
+			featureName <- i.featureName,
+			valueExpression <- i.valueExpression		
+		)
+}
+
+-- ------------------------------------------------------------------- dsdiff to NodeMapping
+rule dsdTn{
+	from
+		i: IDIFFMMDef!EClass    (i.name.equals('DomainSpecificDiff'))
+		using 
+		{		
+			--NewDomainClass: String= i.domainClass.split('::')->first()+thisModule.DIFFMMc+i.domainClass.split('::')->last();
+			--NewDiffDomainClass: String= i.domainClass.split('::')->first()+thisModule.DIFFMMcDIFF+i.domainClass.split('::')->last();
+			--DomainClassName:String= i.domainClass.split('::')->last()->split('\\.')->last();
+			--NewDomainClass: String= thisModule.DiffMMEPackageName+'::'+DomainClassName;
+			
+			IsOfNewDomainClassTypeQuery: String = 'aql:self.oclIsTypeOf('+'NewDomainClass'+')'; --NewDomainClass
+			operationQuery: String = 'aql:self.operation.toString().toUpper()';
+			iconPath: String = '/fr.obeo.dsl.arduino.design/icons/';
+			equalsADD: String = ' = \'ADD\'';
+			equalsDELETE: String = ' = \'DELETE\'';
+			equalsMODIFY: String = ' = \'MODIFY\'';
+		}
+	to
+		oDSDiff:OSDi!NodeMapping
+		(
+			name <- i.name,
+			label <- i.name  , --'['+i.constraints+']',
+			domainClass <-   thisModule.GetDIFFMMPackageName() + '::' +i.name, --  '::DomainSpecificDiff', --, + i.pattern.domainspecificdiffs.name, + i.pattern->first().eClass().toString()
+			--preconditionExpression <- 'aql:self.name.toUpper()= \''+i.name.toUpper()+'\'', 
+			semanticCandidatesExpression <- 'feature:domainspecificdiffs',
+			style <- oDiff_Style 
+		),
+		oDiff_Style: OSDi!WorkspaceImageDescription 
+		(
+			showIcon <- true,
+			labelExpression <- 'feature:name',
+			sizeComputationExpression <- '4',
+			labelPosition <- 'border',
+			-- resizeKind <- 'i.resizeKind',
+			workspacePath<- thisModule.iconPath+OSDi!NodeMapping.allInstances()->last().name.split('!')->last().toLower()+'.svg'	
+			-- workspacePath<- '/sample.PacmanGo.design/icons/dsdiff'+oDSDiff.toString().split('!')->last().toLower()+'.svg'	
+		)
+			
+			
+	do
+	{
+		 thisModule.dsdiffNode <- thisModule.dsdiffNode->append(oDSDiff);					
+		 --self.debug(oDSDiff->toString());
+	}
+}
+
+
+------------------------------------ContainerMapping
+rule cMapTcMap{
+	from
+		i: ISDi!ContainerMapping
+		using {		
+			DomainClassName:String= i.domainClass.split('::')->last()->split('\\.')->last();
+			NewDomainClass: String= thisModule.DiffMMEPackageName+'::'+DomainClassName;--i.domainClass.split('::')->first()+thisModule.DIFFMMc+i.domainClass.split('::')->last(); thisModule.DiffMMEPackage+
+			NewDiffDomainClass: String= thisModule.DiffMMEPackageName+'::Diff'+DomainClassName;--i.domainClass.split('::')->first()+thisModule.DIFFMMcDIFF+i.domainClass.split('::')->last();thisModule.DiffMMEPackage+
+		}
+	to
+		o: OSDi!ContainerMapping 
+		(
+			name <- i.name,
+			label <- i.label,
+			domainClass <- NewDomainClass,
+			semanticCandidatesExpression <- i.semanticCandidatesExpression,
+			reusedNodeMappings <- i.reusedNodeMappings,
+			reusedContainerMappings <- i.reusedContainerMappings,
+			style <- i.style,
+			labelDirectEdit<-i.labelDirectEdit,
+			borderedNodeMappings<-i.borderedNodeMappings,
+			subNodeMappings<-i.subNodeMappings,
+			subContainerMappings<-i.subContainerMappings,
+			reusedBorderedNodeMappings<-i.reusedBorderedNodeMappings
+			
+		)
+}
+
+
+-- ------------------------------------------------------------ NODE
+
+rule nTn{
+	from
+		i: ISDi!NodeMapping
+	using {		
+			DomainClassName:String= i.domainClass.split('::')->last()->split('\\.')->last();
+			NewDomainClass: String= thisModule.DiffMMEPackageName+'::'+DomainClassName;--i.domainClass.split('::')->first()+thisModule.DIFFMMc+i.domainClass.split('::')->last(); thisModule.DiffMMEPackage+
+			NewDiffDomainClass: String= thisModule.DiffMMEPackageName+'::Diff'+DomainClassName;--i.domainClass.split('::')->first()+thisModule.DIFFMMcDIFF+i.domainClass.split('::')->last();thisModule.DiffMMEPackage+
+			IsOfNewDomainClassTypeQuery: String = 'aql:self.oclIsTypeOf('+NewDomainClass+')';
+			operationQuery: String = 'aql:self.operation.toString().toUpper()';
+			equalsADD: String = ' = \'ADD\'';
+			equalsDELETE: String = ' = \'DELETE\'';
+			equalsMODIFY: String = ' = \'MODIFY\'';
+	}
+	to
+		o: 
+			OSDi!NodeMapping (
+				name <- i.name,
+				label <- i.label,
+				domainClass <- NewDomainClass,
+				preconditionExpression <- IsOfNewDomainClassTypeQuery, -- 'aql:self.oclIsTypeOf('+NewDomainClass+')',
+				semanticCandidatesExpression <- i.semanticCandidatesExpression,
+				borderedNodeMappings <- Sequence{i.borderedNodeMappings, bnmsADD, bnmsDELETE},
+				style <- Sequence{i.style,thisModule.resolveTemp(i.style , 'o')}
+			),
+		oDiffADD: 
+			OSDi!NodeMapping (
+				name <- thisModule.DIFF+i.name+ 'ADD',
+				label <- i.label, --+ 'DIFFMMcADD',
+				domainClass <- NewDiffDomainClass,
+				preconditionExpression <- operationQuery + equalsADD,
+				semanticCandidatesExpression <- i.semanticCandidatesExpression,
+				borderedNodeMappings <- Sequence{bnmsADD_ADD, bnmsADD_DELETE},
+				style <- thisModule.resolveTemp(i.style , 'oDiffADD')
+			),
+		oDiffDELETE: 
+			OSDi!NodeMapping (
+				name <- thisModule.DIFF+i.name+ 'DELETE',
+				label <- i.label, --+ 'DIFFMMcDELETE',
+				domainClass <- NewDiffDomainClass,
+				preconditionExpression <-  operationQuery + equalsDELETE,
+				semanticCandidatesExpression <- i.semanticCandidatesExpression,
+				borderedNodeMappings <- Sequence{bnmsDELETE_ADD, bnmsDELETE_DELETE},
+				style <- thisModule.resolveTemp(i.style , 'oDiffDELETE')
+			),						
+		oDiffMODIFY: 
+			OSDi!NodeMapping (
+				name <- thisModule.DIFF+i.name+ 'MODIFY',
+				label <- i.label, --+ 'DIFFMMcMODIFY',
+				domainClass <- NewDiffDomainClass,
+				preconditionExpression <-  operationQuery + equalsMODIFY,
+				semanticCandidatesExpression <- i.semanticCandidatesExpression,
+				borderedNodeMappings <- Sequence{bnmsMODIFY_ADD, bnmsMODIFY_DELETE},
+				style <- thisModule.resolveTemp(i.style , 'oDiffMODIFY')
+			),
+			
+			
+			
+		bnmsADD: 
+			distinct OSDi!NodeMapping 
+			foreach	(b in thisModule.GetEAllReferences(NewDomainClass))	
+			(	
+					name <- b+'ADD', 
+					domainClass<-i.domainClass.split('::')->first()+thisModule.DIFFMM+'::'+b,
+					semanticCandidatesExpression<-'feature:diff'+b.split('_')->last(),
+					preconditionExpression<-'aql:self.oclAsType(arduinoGoDiffMM::'+b+').operation.toString() ' + equalsADD,
+					style <- bnmsADD_Style 
+			),		
+		bnmsDELETE: 
+			distinct OSDi!NodeMapping 
+			foreach	(b in thisModule.GetEAllReferences(NewDomainClass))	
+			(	
+					name <- b+'DELETE', 
+					domainClass<-i.domainClass.split('::')->first()+thisModule.DIFFMM+'::'+b,
+					semanticCandidatesExpression<-'feature:diff'+b.split('_')->last(),
+					preconditionExpression<-'aql:self.oclAsType(arduinoGoDiffMM::'+b+').operation.toString() ' + equalsDELETE,
+					style <- bnmsDELETE_Style  ---> replaceWorkspacePath(b)
+			),
+			
+			
+			
+		bnmsADD_ADD: 
+			distinct OSDi!NodeMapping 
+			foreach	(b in thisModule.GetEAllReferences(NewDomainClass))	
+			(	
+					name <- b+'ADD', 
+					domainClass<-i.domainClass.split('::')->first()+thisModule.DIFFMM+'::'+b,
+					semanticCandidatesExpression<-'feature:diff'+b.split('_')->last(),
+					preconditionExpression<-'aql:self.oclAsType(arduinoGoDiffMM::'+b+').operation.toString() ' + equalsADD,
+					style <- bnmsADD_ADD_Style
+			),		
+		bnmsADD_DELETE: 
+			distinct OSDi!NodeMapping 
+			foreach	(b in thisModule.GetEAllReferences(NewDomainClass))	
+			(	
+					name <- b+'DELETE', 
+					domainClass<-i.domainClass.split('::')->first()+thisModule.DIFFMM+'::'+b,
+					semanticCandidatesExpression<-'feature:diff'+b.split('_')->last(),
+					preconditionExpression<-'aql:self.oclAsType(arduinoGoDiffMM::'+b+').operation.toString() ' + equalsDELETE,
+					style <- bnmsADD_DELETE_Style
+			),
+			
+			
+			
+			
+		bnmsDELETE_ADD: 
+			distinct OSDi!NodeMapping 
+			foreach	(b in thisModule.GetEAllReferences(NewDomainClass))	
+			(	
+					name <- b+'ADD', 
+					domainClass<-i.domainClass.split('::')->first()+thisModule.DIFFMM+'::'+b,
+					semanticCandidatesExpression<-'feature:diff'+b.split('_')->last(),
+					preconditionExpression<-'aql:self.oclAsType(arduinoGoDiffMM::'+b+').operation.toString() ' + equalsADD,
+					style <- bnmsDELETE_ADD_Style
+			),		
+		bnmsDELETE_DELETE: 
+			distinct OSDi!NodeMapping 
+			foreach	(b in thisModule.GetEAllReferences(NewDomainClass))	
+			(	
+					name <- b+'DELETE', 
+					domainClass<-i.domainClass.split('::')->first()+thisModule.DIFFMM+'::'+b,
+					semanticCandidatesExpression<-'feature:diff'+b.split('_')->last(),
+					preconditionExpression<-'aql:self.oclAsType(arduinoGoDiffMM::'+b+').operation.toString() ' + equalsDELETE,
+					style <- bnmsDELETE_DELETE_Style
+			),
+			
+			
+			
+			
+		bnmsMODIFY_ADD: 
+			distinct OSDi!NodeMapping 
+			foreach	(b in thisModule.GetEAllReferences(NewDomainClass))	
+			(	
+					name <- b+'ADD', 
+					domainClass<-i.domainClass.split('::')->first()+thisModule.DIFFMM+'::'+b,
+					semanticCandidatesExpression<-'feature:diff'+b.split('_')->last(),
+					preconditionExpression<-'aql:self.oclAsType(arduinoGoDiffMM::'+b+').operation.toString() ' + equalsADD,
+					style <- bnmsMODIFY_ADD_Style
+			),		
+		bnmsMODIFY_DELETE: 
+			distinct OSDi!NodeMapping 
+			foreach	(b in thisModule.GetEAllReferences(NewDomainClass))	
+			(	
+					name <- b+'DELETE', 
+					domainClass<-i.domainClass.split('::')->first()+thisModule.DIFFMM+'::'+b,
+					semanticCandidatesExpression<-'feature:diff'+b.split('_')->last(),
+					preconditionExpression<-'aql:self.oclAsType(arduinoGoDiffMM::'+b+').operation.toString() ' + equalsDELETE,
+					style <- bnmsMODIFY_DELETE_Style 
+			),
+			
+			
+			
+			
+		bnmsADD_Style:OSDi!WorkspaceImageDescription(
+			showIcon <- true,
+			labelExpression <- 'feature:operation', 
+			sizeComputationExpression<-'4', 
+			resizeKind<-'NSEW', 
+			workspacePath<-thisModule.iconPath+bnmsADD->last().toString().split(' ')->last().split('!')->last()+'.svg' 
+		),
+		bnmsDELETE_Style:OSDi!WorkspaceImageDescription(
+			showIcon <- true,
+			labelExpression <- 'feature:operation', 
+			sizeComputationExpression<-'4', 
+			resizeKind<-'NSEW', 
+			workspacePath<-thisModule.iconPath+bnmsDELETE->last().toString().split(' ')->last().split('!')->last()+'.svg'  
+		),
+	
+			
+		bnmsADD_ADD_Style:OSDi!WorkspaceImageDescription(
+			showIcon <- true,
+			labelExpression <- 'feature:operation', 
+			sizeComputationExpression<-'4', 
+			resizeKind<-'NSEW', 
+			workspacePath<-thisModule.iconPath+bnmsADD_ADD->last().toString().split(' ')->last().split('!')->last()+'_ADD.svg'  
+		),
+		bnmsADD_DELETE_Style:OSDi!WorkspaceImageDescription(
+			showIcon <- true,
+			labelExpression <- 'feature:operation', 
+			sizeComputationExpression<-'4', 
+			resizeKind<-'NSEW', 
+			workspacePath<-thisModule.iconPath+bnmsADD_DELETE->last().toString().split(' ')->last().split('!')->last()+'_DELETE.svg'  
+		),	
+		
+		
+		bnmsDELETE_ADD_Style:OSDi!WorkspaceImageDescription(
+			showIcon <- true,
+			labelExpression <- 'feature:operation', 
+			sizeComputationExpression<-'4', 
+			resizeKind<-'NSEW', 
+			workspacePath<-thisModule.iconPath+bnmsDELETE_ADD->last().toString().split(' ')->last().split('!')->last()+'_ADD.svg'  
+		),
+		bnmsDELETE_DELETE_Style:OSDi!WorkspaceImageDescription(
+			showIcon <- true,
+			labelExpression <- 'feature:operation', 
+			sizeComputationExpression<-'4', 
+			resizeKind<-'NSEW', 
+			workspacePath<-thisModule.iconPath+bnmsDELETE_DELETE->last().toString().split(' ')->last().split('!')->last()+'_DELETE.svg' 
+		),	
+
+		
+		
+		bnmsMODIFY_ADD_Style:OSDi!WorkspaceImageDescription(
+			showIcon <- true,
+			labelExpression <- 'feature:operation', 
+			sizeComputationExpression<-'4', 
+			resizeKind<-'NSEW', 
+			workspacePath<-thisModule.iconPath+bnmsMODIFY_ADD->last().toString().split(' ')->last().split('!')->last()+'_ADD.svg'  
+		),
+		bnmsMODIFY_DELETE_Style:OSDi!WorkspaceImageDescription(
+			showIcon <- true,
+			labelExpression <- 'feature:operation', 
+			sizeComputationExpression<-'4', 
+			resizeKind<-'NSEW', 
+			workspacePath<-thisModule.iconPath+bnmsMODIFY_DELETE->last().toString().split(' ')->last().split('!')->last()+'_DELETE.svg'  
+		)	
+		
+		, odsdEdge: 
+			OSDi!EdgeMapping(
+				name <- 'dsdEdge' + i.name,
+				label <- i.label, --+ 'DIFFMMcMODIFY',
+				targetFinderExpression <- 'feature:DomainSpecificDiff_'+ NewDomainClass.split('::')->last(), --  i.domainClass.split('!')->last().r.replace('Diff',''),
+				sourceMapping <- thisModule.dsdiffNode->first(),
+				targetMapping <- Sequence{o, oDiffADD, oDiffDELETE, oDiffMODIFY}
+				, style <-  odsdEdgeStyle
+			), 
+			odsdEdgeStyle: OSDi!EdgeStyleDescription (
+			sizeComputationExpression <- '1',
+			--strokeColor <- 'gray',
+			centerLabelStyleDescription <- centerLSD
+			),
+			centerLSD: OSDi!CenterLabelStyleDescription(
+				--labelExpression <-i.labelExpression,
+				--labelColor <-i.labelColor
+			)
+		
+		
+
+
+		do
+		{
+			
+			--thisModule.debug(OSDi!EdgeMapping.allInstances().toString());
+			
+			thisModule.bnms <- thisModule.bnms->union(Sequence{bnmsADD, bnmsDELETE, bnmsADD_ADD, bnmsADD_DELETE, bnmsDELETE_ADD, bnmsDELETE_DELETE, bnmsMODIFY_ADD, bnmsMODIFY_DELETE})->flatten();
+			thisModule.dsdEdges <- thisModule.dsdEdges->union(Sequence{odsdEdge});
+		}			
+}
+
+--NodeStyleDescription
+rule sTs{
+	from
+		i: ISDi!WorkspaceImageDescription 
+	to
+		o: OSDi!WorkspaceImageDescription (
+			showIcon <- i.showIcon,
+			labelExpression <- i.labelExpression,
+			sizeComputationExpression <- i.sizeComputationExpression,
+			labelPosition <- i.labelPosition,
+			resizeKind <- i.resizeKind
+			,workspacePath<- i.workspacePath
+		),
+		oDiffADD: OSDi!WorkspaceImageDescription (
+			showIcon <- i.showIcon,
+			labelExpression <- i.labelExpression,
+			sizeComputationExpression <- i.sizeComputationExpression,
+			labelPosition <- i.labelPosition,
+			resizeKind <- i.resizeKind
+			,workspacePath<- i.workspacePath.split('.svg')->first() +'_ADD.svg'
+		),
+		oDiffDELETE: OSDi!WorkspaceImageDescription (
+			showIcon <- i.showIcon,
+			labelExpression <- i.labelExpression,
+			sizeComputationExpression <- i.sizeComputationExpression,
+			labelPosition <- i.labelPosition,
+			resizeKind <- i.resizeKind
+			,workspacePath<- i.workspacePath.split('.svg')->first() +'_DELETE.svg'
+		),
+		oDiffMODIFY: OSDi!WorkspaceImageDescription (
+			showIcon <- i.showIcon,
+			labelExpression <- i.labelExpression,
+			sizeComputationExpression <- i.sizeComputationExpression,
+			labelPosition <- i.labelPosition,
+			resizeKind <- i.resizeKind
+			,workspacePath<- i.workspacePath.split('.svg')->first() +'_MODIFY.svg'
+		)
+		
+		do{
+			
+		}
+}
+
+-- ------------------------------------------------------------ EDGE
+rule eTe{
+	from
+		i: ISDi!EdgeMapping
+	using {		
+			equalsADD: String = ' = \'ADD\'';
+			equalsDELETE: String = ' = \'DELETE\'';
+			equalsMODIFY: String = ' = \'MODIFY\'';
+			associationName: String = i.targetFinderExpression.split(':')->last();
+			domainClassName: String = i.sourceMapping->first().domainClass.toString().split('::')->last();
+	}
+	to
+		o: 
+			OSDi!EdgeMapping (
+			name <- i.name,
+			label <- i.label,
+			targetFinderExpression <- i.targetFinderExpression,
+			sourceMapping <- i.sourceMapping,
+			targetMapping <- i.targetMapping,
+			style <-  thisModule.resolveTemp(i.style , 'o') 	--	-> collect(e | thisModule.resolveTemp(e , 'o'))
+								--  ->union(i.style->collect(e | thisModule.resolveTemp(e , 'oEdgeETypeStyleDELETE')))
+		),
+		o2: 
+			OSDi!EdgeMapping(
+			name <- i.name + '_eType',
+			--label <- i.label+ '_eType',
+			targetFinderExpression <- 'feature:eType', -- + thisModule.getAllBorderedNodeMappings(),
+			sourceMapping <- thisModule.GetRelatedbnms(associationName, domainClassName.split('\\.')->last()),
+			--.split('\\.')->last() for arduino case
+			--thisModule.bnms->asSet(), --i.GetAllbnms(associationName, domainClassName),    --sourceMapping, 
+			targetMapping <- i.targetMapping,
+			style <- thisModule.resolveTemp(i.style , 'oEdgeETypeStyleDELETE') 
+		)
+		
+		do
+		{
+			--thisModule.debug(OSDi!EdgeMapping.eSet(thisModule.odsdEdge));
+			--OSDi!EdgeMapping.allInstances()->collect(e | thisModule.odsdEdge);
+			--OSDi!EdgeMapping.addAll(thisModule.odsdEdge);
+			--thisModule.debug(OSDi!EdgeMapping.allInstances().toString());
+			
+			--o <- o->union(Sequence{thisModule.odsdEdge});
+			
+			
+			--thisModule.debug(OSDi!EdgeMapping.allInstances().toString());
+			
+			--OSDi!EdgeMapping->append(thisModule.dsdEdges->first());
+			
+			
+			
+			--thisModule.debug(thisModule.dsdEdges.toString());
+			-- thisModule.debug(OSDi!EdgeMapping.allInstances()->first().toString());
+			
+		}
+		
+		
+}
+
+-- EdgeStyleDescription
+
+rule seTse{
+	from
+		i: ISDi!EdgeStyleDescription 
+	to
+		o: OSDi!EdgeStyleDescription (
+			sizeComputationExpression <- i.sizeComputationExpression,
+			strokeColor <- i.strokeColor,
+			centerLabelStyleDescription <- centerLSD
+		),
+		centerLSD: OSDi!CenterLabelStyleDescription(
+			--labelExpression <-i.labelExpression,
+			--labelColor <-i.labelColor
+		),
+				
+		oEdgeETypeStyleDELETE:OSDi!EdgeStyleDescription (
+			sizeComputationExpression <- i.sizeComputationExpression,
+			strokeColor <-  i.strokeColor,
+			centerLabelStyleDescription <- oEdgeETypeStyleDELETEcenterLSD
+		),
+		--oEdgeETypeStyleDELETEcolorDescription: OSDi!ColorDescription(
+
+			
+		--),
+		oEdgeETypeStyleDELETEcenterLSD: OSDi!CenterLabelStyleDescription(
+
+
+		)
+		
+		do{
+			--thisModule.debug(OSDi!NodeMapping->allInstances().toString());			
+		}
+}
+
+
+
+
+-- ----------------------------------------------------------- HELPERS
+
+
+--helper def : getAllBorderedNodeMappings() : String = OSDi!NodeMapping.allInstances()->collect(n | n.borderedNodeMappings)->flatten().toString();
+
+helper def:GetDIFFMMPackageName():String= IDIFFMM!DomainSpecificDiff.getEPackage().name; 
+helper def:GetDIFFMMUrlName():String= IDIFFMM!DomainSpecificDiff.getEPackage().getNsURI();
+--helper def:GetDIFFMMUrlName():String= IDIFFMM!DomainSpecificDiff.getEPackage()
+
+-- helper def:GetDIFFMMEClassName(domainClassName: String):String= IDIFFMM!DomainSpecificDiff.getEPackage().getEClassifier(domainClassName).name; 
+	
+
+helper  def : GetRelatedbnms(associationName:String, domainClassName: String) : Sequence (OSDi!DiagramElementMapping) = 
+	thisModule.bnms-> select(b | b.name.contains(self.GetECC(associationName, domainClassName)->first()))
+				->flatten()
+			;
+			
+
+helper def : GetECC(associationName:String, domainClassName: String) : Sequence (String) = 
+	if IMM!Project.getEPackage().getEClassifier(domainClassName)
+		 .getEAllReferences()->asSequence()->select(r|r.toString().split('!')->last()=associationName)
+		 ->collect(r | r.getEContainingClass().toString().split('!')->last()) =  Sequence{}
+		  then 
+		  		Sequence{''} 
+  	else 
+		  		IMM!Project.getEPackage().getEClassifier(domainClassName)
+		 			.getEAllReferences()->asSequence()->select(r|r.toString().split('!')->last()=associationName)
+		 			->collect(r | r.getEContainingClass().toString().split('!')->last())
+  	endif; -- -> debug()
+--->first()->ToString() for arduino case added 
+
+helper def : GetEAllReferences(domainClass:String) : Sequence (String) = 
+	IMM!Project.getEPackage().getEClassifier(domainClass.split('::')->last().split('\\.')->last()) 
+	-- .split('\\.')->last() for arduino case added since 
+	-- it is like arduino.InputModuleDiffMM::arduino.InputModule!!!!
+		.getEAllReferences()->asSequence()->
+		collect(r | 'Diff'	+ 	r.getEContainingClass().toString().split('!')->last()
+							+	'_'		
+							+	r.toString().split('!')->last()
+			);
+
+
+helper def : bnmsStyleName(bnmsName : String) : String =
+	let name : String = bnmsName.split(' ')->last().split('!')->last() in bnmsName;
+

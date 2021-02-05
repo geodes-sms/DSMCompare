@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arduinoDiffMM="http://www.obeo.fr/arduinoDiffMM">
+  <arduinoDiffMM:Project>
+    <hardware name="Hardware">
+      <platforms href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@platform.0"/>
+      <modules xsi:type="arduinoDiffMM:OutputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.0"/>
+      <connectors>
+        <pin xsi:type="arduinoDiffMM:DigitalPin" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@platform.0/@digitalPins.11"/>
+        <module xsi:type="arduinoDiffMM:OutputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.0"/>
+      </connectors>
+    </hardware>
+    <sketch name="Sketch" next="/0/@sketch/@instructions.1" hardware="/0/@hardware">
+      <instructions xsi:type="arduinoDiffMM:Variable" name="brightness"/>
+      <instructions xsi:type="arduinoDiffMM:While" condition="/0/@sketch/@instructions.2">
+        <diffnext operation="DELETE" eType="/0/@sketch/@instructions.8"/>
+        <instructions xsi:type="arduinoDiffMM:Set" next="/0/@sketch/@instructions.1/@instructions.1" variable="/0/@sketch/@instructions.0" value="/0/@sketch/@instructions.3"/>
+        <instructions xsi:type="arduinoDiffMM:Level" level="/0/@sketch/@instructions.0">
+          <diffnext operation="DELETE"/>
+          <module xsi:type="arduinoDiffMM:OutputModule" href="../../plugin/fr.obeo.dsl.arduinoDiffMM.design/resources/ArdublockKit.arduinoDiffMM#//@modules.0"/>
+        </instructions>
+        <instructions xsi:type="arduinoDiffMM:DiffDelay" value="5" operation="DELETE"/>
+        <instructions xsi:type="arduinoDiffMM:DiffVariable" name="var1" operation="DELETE"/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:BooleanOperator" left="/0/@sketch/@instructions.0" right="/0/@sketch/@instructions.7" operator="lower"/>
+      <instructions xsi:type="arduinoDiffMM:NumericalOperator" left="/0/@sketch/@instructions.0" right="/0/@sketch/@instructions.4" operator="plus"/>
+      <instructions xsi:type="arduinoDiffMM:Constant" value="1"/>
+      <instructions xsi:type="arduinoDiffMM:BooleanOperator" left="/0/@sketch/@instructions.0" operator="upper">
+        <diffright operation="DELETE" eType="/0/@sketch/@instructions.9"/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:NumericalOperator" left="/0/@sketch/@instructions.0" right="/0/@sketch/@instructions.4" operator="minus">
+        <diffright operation="DELETE" eType="/0/@sketch/@instructions.9"/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:Constant" value="255"/>
+      <instructions xsi:type="arduinoDiffMM:DiffWhile">
+        <diffnext eType="/0/@sketch/@instructions.10"/>
+        <diffcondition/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:DiffConstant" value="1"/>
+      <instructions xsi:type="arduinoDiffMM:DiffDelay" value="200">
+        <diffnext/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:DiffWhile" operation="DELETE">
+        <diffnext operation="DELETE" eType="/0/@sketch"/>
+        <diffcondition operation="DELETE" eType="/0/@sketch/@instructions.5"/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:DiffConstant" value="0" operation="DELETE"/>
+      <instructions xsi:type="arduinoDiffMM:DiffWhile" operation="DELETE">
+        <diffcondition operation="DELETE" eType="/0/@sketch/@instructions.14"/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:DiffBooleanOperator" operation="DELETE">
+        <diffleft operation="DELETE" eType="/0/@sketch/@instructions.17"/>
+        <diffright operation="DELETE" eType="/0/@sketch/@instructions.16"/>
+      </instructions>
+      <instructions xsi:type="arduinoDiffMM:DiffVariable" name="var2" operation="DELETE"/>
+      <instructions xsi:type="arduinoDiffMM:DiffVariable" name="var3" operation="DELETE"/>
+      <instructions xsi:type="arduinoDiffMM:DiffBooleanOperator" operation="DELETE"/>
+    </sketch>
+  </arduinoDiffMM:Project>
+  <arduinoDiffMM:DiffDelay value="8"/>
+</xmi:XMI>

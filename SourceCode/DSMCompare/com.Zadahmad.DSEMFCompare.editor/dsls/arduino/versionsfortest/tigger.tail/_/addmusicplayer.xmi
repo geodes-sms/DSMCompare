@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arduinoRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:arduinoRuleMM="http://www.obeo.fr/arduinoRuleMM"
+    xsi:schemaLocation="http://www.obeo.fr/arduinoRuleMM ../../../../com.Zadahmad.DSEMFCompare/ardMMs/arduinoRuleMM.ecore#/1"
+    name="addmusicplayer">
+  <pattern ID_Pattern="1">
+     <hardware name="Hardware">
+      <platforms href="../../plugin/fr.obeo.dsl.arduinoRuleMM.design/resources/ArdublockKit.arduinoRuleMM#//@platform.0"/>
+      <modules xsi:type="arduinoRuleMM:Pattern_InputModule" href="../../plugin/fr.obeo.dsl.arduinoRuleMM.design/resources/ArdublockKit.arduinoRuleMM#//@modules.8"/>
+      <modules xsi:type="arduinoRuleMM:Pattern_OutputModule" href="../../plugin/fr.obeo.dsl.arduinoRuleMM.design/resources/ArdublockKit.arduinoRuleMM#//@modules.7"/>
+      <modules xsi:type="arduinoRuleMM:Pattern_DiffOutputModule" href="#/1"/>
+      <connectors>
+        <pin xsi:type="arduinoRuleMM:Pattern_DigitalPin" href="../../plugin/fr.obeo.dsl.arduinoRuleMM.design/resources/ArdublockKit.arduinoRuleMM#//@platform.0/@digitalPins.9"/>
+        <module xsi:type="arduinoRuleMM:Pattern_OutputModule" href="../../plugin/fr.obeo.dsl.arduinoRuleMM.design/resources/ArdublockKit.arduinoRuleMM#//@modules.7"/>
+      </connectors>
+      <connectors>
+        <pin xsi:type="arduinoRuleMM:Pattern_DigitalPin" href="../../plugin/fr.obeo.dsl.arduinoRuleMM.design/resources/ArdublockKit.arduinoRuleMM#//@platform.0/@digitalPins.4"/>
+        <module xsi:type="arduinoRuleMM:Pattern_InputModule" href="../../plugin/fr.obeo.dsl.arduinoRuleMM.design/resources/ArdublockKit.arduinoRuleMM#//@modules.8"/>
+      </connectors>
+      <connectors xsi:type="arduinoRuleMM:Pattern_DiffConnector">
+        <diffpin/>
+        <diffmodule/>
+      </connectors>
+    </hardware>
+    <sketch name="Sketch" next="/0/@pattern/@sketch/@instructions.0" hardware="/0/@pattern/@hardware">
+      <instructions xsi:type="arduinoRuleMM:Pattern_If" next="/0/@pattern/@sketch" condition="/0/@pattern/@sketch/@instructions.1">
+        <diffnext operation="DELETE" eType="/0/@pattern/@sketch/@instructions.4"/>
+        <instructions xsi:type="arduinoRuleMM:Pattern_Level" next="/0/@pattern/@sketch/@instructions.0/@instructions.1" level="/0/@pattern/@sketch/@instructions.2">
+          <diffnext operation="DELETE"/>
+          <module xsi:type="arduinoRuleMM:Pattern_OutputModule" href="../../plugin/fr.obeo.dsl.arduinoRuleMM.design/resources/ArdublockKit.arduinoRuleMM#//@modules.7"/>
+        </instructions>
+        <instructions xsi:type="arduinoRuleMM:Pattern_Delay" next="/0/@pattern/@sketch/@instructions.0/@instructions.2" value="400">
+          <diffnext operation="DELETE"/>
+        </instructions>
+        <instructions xsi:type="arduinoRuleMM:Pattern_Level" next="/0/@pattern/@sketch/@instructions.0/@instructions.3" level="/0/@pattern/@sketch/@instructions.3">
+          <diffnext operation="DELETE"/>
+          <module xsi:type="arduinoRuleMM:Pattern_OutputModule" href="../../plugin/fr.obeo.dsl.arduinoRuleMM.design/resources/ArdublockKit.arduinoRuleMM#//@modules.7"/>
+        </instructions>
+        <instructions xsi:type="arduinoRuleMM:Pattern_Delay" value="400"/>
+        <instructions xsi:type="arduinoRuleMM:Pattern_DiffStatus">
+          <diffnext/>
+          <diffmodule/>
+        </instructions>
+      </instructions>
+      <instructions xsi:type="arduinoRuleMM:Pattern_Sensor">
+        <module xsi:type="arduinoRuleMM:Pattern_InputModule" href="../../plugin/fr.obeo.dsl.arduinoRuleMM.design/resources/ArdublockKit.arduinoRuleMM#//@modules.8"/>
+      </instructions>
+      <instructions xsi:type="arduinoRuleMM:Pattern_Constant" value="90"/>
+      <instructions xsi:type="arduinoRuleMM:Pattern_Constant" value="0"/>
+      <instructions xsi:type="arduinoRuleMM:Pattern_DiffStatus" status="true">
+        <diffnext/>
+        <diffmodule/>
+      </instructions>
+    </sketch>
+  </pattern>
+</arduinoRuleMM:Rule>

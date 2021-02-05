@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracleRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:oracleRuleMM="www.geodes.UdeM.edu/oracleRuleMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/oracleRuleMM ../../metamodels/oracleRuleMM.ecore#/1"
+    name="rule2">
+  <pattern>
+    <b xsi:type="oracleRuleMM:Pattern_B"
+        ID_Pattern="1">
+      <diffbd
+          xsi:type="oracleRuleMM:Pattern_DiffB_bd"
+          operation="DELETE"
+          ID_Pattern="11"
+          filter="true"/>
+    </b>
+    <b xsi:type="oracleRuleMM:Pattern_C"
+        ID_Pattern="2">
+      <diffbd
+          xsi:type="oracleRuleMM:Pattern_DiffB_bd"
+          ID_Pattern="21"/>
+    </b>
+    <domainspecificdiffs
+        xsi:type="oracleRuleMM:Pattern_DomainSpecificDiff"
+        name="rule2"
+        DomainSpecificDiff_B="1"
+        DomainSpecificDiff_C="2"
+        ID_Pattern="3"/>
+  </pattern>
+</oracleRuleMM:Rule>

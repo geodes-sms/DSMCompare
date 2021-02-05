@@ -1,0 +1,237 @@
+	 
+	 //@Test
+	 public void dsvcshenshinTest() throws IOException 
+	 {
+		 String wsPath=System.getProperty("user.dir");		 
+		 String wsPathForImports=wsPath.replace("\\", "/");
+		 //Use corresponding henshin rules to find dependencies and conflicts between rules and to match dsdiffs	
+		 String workingRuledirectory = wsPath+"\\dsls\\pacman\\dsdiffrulesinhenshin";
+		 String dsdiffModuleName = "pacmanrulesDSDiff_henshin_text.henshin";
+		 String cpaModuleName = "pacmanrulesCPA_henshin_text.henshin";
+		 String dsmDiffFileName = "DSMDiff2.xmi";
+		 
+		 
+		 dsvcshenshin dcpa = new dsvcshenshin();
+		 dcpa.workingRuledirectory = workingRuledirectory;
+		 dcpa.dsdiffModuleName = dsdiffModuleName;
+		 dcpa.cpaModuleName = cpaModuleName;
+		 dcpa.workingDsDiffdirectory = wsPath+"\\dsls\\pacman\\dsdiffafterruningatest";// DSMDiffPath;
+		 dcpa.dsdiffFileName = dsmDiffFileName;
+		 dcpa.init();
+		 //dcpa.runHenshinMatcher();
+		 
+	 	 dcpa.runcpa();
+	 
+		 System.out.println("#Dependencies#:*************************");
+		 for(CriticalPair dpd : dcpa.dependencies) {
+			System.out.println(
+					dpd.getFirstRule().getName() + " --- " + 
+			dpd.getSecondRule().getName() + "  [" +((Dependency) dpd).
+			getDependencyKind().toString()+  "]"); 
+		 }
+		
+		
+		 System.out.println("#Conflicts#:*************************");
+		 for(CriticalPair cf : dcpa.conflicts) {
+		 	System.out.println(
+		 			cf.getFirstRule().getName() + " --- " + 
+		 	cf.getSecondRule().getName() + "  [" +((Conflict) cf).
+		 	getConflictKind().toString()+  "]"); 
+		 }
+		 System.out.println("#End#:************************* dsvcshenshinTest");
+	 }
+	 
+	 //@Test
+	 public void dsmcContainerForPacman() throws IOException 
+	 {
+		 String wsPath=System.getProperty("user.dir");		 
+		 String wsPathForImports=wsPath.replace("\\", "/");
+		 
+		 setPathes(	wsPathForImports+"/dsls/pacman/metamodels/",  wsPathForImports+"/dsls/pacman/versionsfortest/", 
+				 	wsPathForImports+"/dsls/pacman/dsdiffrules/", wsPathForImports+"/dsls/pacman/dsdiffafterruningatest/",
+				 	"PacManGo.ecore", "V1.xmi", "V2.xmi");
+		 setDsdRulePackages(
+		 			new ArrayList<String>(Arrays.asList("pacmanmovesright.xmi", "pacmaneatsfood.xmi")), 
+		 		 	PacmanGoDiffMMPackage.eNS_URI, PacmanGoDiffMMPackage.eINSTANCE, PacmanGoDiffMMFactory.eINSTANCE, 		 		 	
+		 		 	PacmanGoRuleMMPackage.eNS_URI, PacmanGoRuleMMPackage.eINSTANCE, PacmanGoRuleMMFactory.eINSTANCE,
+		 		 	"PacmanGo");
+		 
+		 //generateDIFFMM_RuleMM();		 
+		 //MapEmfCompareDiffsToFineGranularDSMDiffs(VerBasePath, VerNewPath, DSMDiffPath, result);		 
+		 
+		 DsmcRulesToHenshinText 	dsmcRulesToHenshinText= new DsmcRulesToHenshinText();
+		 dsmcRulesToHenshinText.dsmName = "pacman";
+		 dsmcRulesToHenshinText.dsmCasePath = "dsls/pacman/";
+		 dsmcRulesToHenshinText.dsmCaseRulesFolderName = "dsdiffrules/";
+		 dsmcRulesToHenshinText.dsmCaseHenshinRulesFolderName = "dsdiffrulesinhenshin/";
+		 dsmcRulesToHenshinText.dsmCaseRuleFileNames = 
+				 new ArrayList<String>(Arrays.asList("pacmaneatsfood.xmi", 
+						 "pacmanmoves.xmi", "pacmanmovesright.xmi", "pacmanmovesleft.xmi", 
+						 "pacmanmovesup.xmi", "pacmanmovesbottom.xmi", "pacmandies.xmi"));
+		 dsmcRulesToHenshinText.run();
+
+		 
+		 //Use corresponding henshin rules to find dependencies and conflicts between rules and to match dsdiffs	
+		 String workingRuledirectory = wsPath+"\\dsls\\pacman\\dsdiffrulesinhenshin";
+ 
+		 
+		 MultiCdaSolver mcdaSolver= new MultiCdaSolver();
+		 mcdaSolver.fullRulesSubDirectoryPath = workingRuledirectory;
+		 mcdaSolver.domainName ="PacManGoDiffMM";
+		 mcdaSolver.execute();
+		 mcdaSolver.rules.isEmpty();
+		 mcdaSolver.conflictMatrix.toString();
+		 mcdaSolver.dependencyMatrix.toString();
+		 
+		 VertexSorting vs= new VertexSorting();
+		 vs._vertices= new ArrayList<Vertex>();
+		 int id=-1;
+		 for(org.eclipse.emf.henshin.model.Rule r:mcdaSolver.rules) {
+			 ++id;
+			 vs._vertices.add(
+					 new Vertex(
+							 r.getName(),  
+							 id, 
+							 1, //#semantics (it can be more than One)
+							 dsmcRulesToHenshinText.rulesFilter.get(id)._filtersCount, //number of filters
+							 dsmcRulesToHenshinText.rulesFilter.get(id)._elementsCount, //number of elements
+							 -1 //initial order
+							 ));
+			 }
+		 vs._edges= new ArrayList<Edge>();
+		 for(int i=0;i<mcdaSolver.rules.size();i++) {
+			 for(int j=0;j<mcdaSolver.rules.size();j++) {
+				 if(i!=j && mcdaSolver.conflictMatrix[i][j]==1) {
+					 vs._edges.add(new Edge(vs.VId(i), vs.VId(j), EdgeType.CONFLICT));
+				 }				 
+			 }
+		 }
+		 
+		 vs.execute();
+		 
+		 //Vertex(name, id, number of Semantics, number of Filters, initial order)
+		 //Edge(VId(i), VId(j), EdgeType.CONFLICT);
+		 
+		 
+		 /*
+		 String dsdiffModuleName = "pacmanrulesDSDiff_henshin_text.henshin";
+		 String cpaModuleName = "pacmanrulesCPA_henshin_text.henshin";
+		 String dsmDiffFileName = "DSMDiff2.xmi";
+		 
+		 dsvcshenshin dcpa = new dsvcshenshin();
+		 dcpa.workingRuledirectory = workingRuledirectory;
+		 dcpa.dsdiffModuleName = dsdiffModuleName;
+		 dcpa.cpaModuleName = cpaModuleName;
+		 dcpa.workingDsDiffdirectory = wsPath+"\\dsls\\pacman\\dsdiffafterruningatest";// DSMDiffPath;
+		 dcpa.dsdiffFileName = dsmDiffFileName;
+		 dcpa.init();
+		 dcpa.runHenshinMatcher();
+		 */
+		 
+		 /*
+	 	 dcpa.runcpa();
+	 	 
+		 System.out.println("#Dependencies#:*************************");
+		 for(CriticalPair dpd : dcpa.dependencies) {
+			System.out.println(dpd.getFirstRule().getName() + " --- " + dpd.getSecondRule().getName() + "  [" +((Dependency) dpd).getDependencyKind().toString()+  "]"); 
+		 }
+		
+		
+		 System.out.println("#Conflicts#:*************************");
+		 for(CriticalPair cf : dcpa.conflicts) {
+		 	System.out.println(cf.getFirstRule().getName() + " --- " + cf.getSecondRule().getName() + "  [" +((Conflict) cf).getConflictKind().toString()+  "]"); 
+		 }
+		 */
+		 
+		 
+	 }
+	 
+	 //Pacman
+	 //@Test
+	 public void dsmcContainerForPacmanInit() throws IOException
+	 {
+		 String wsPath=System.getProperty("user.dir");		 
+		 String wsPathForImports=wsPath.replace("\\", "/");
+		 
+		 setPathes(	wsPathForImports+"/dsls/pacman/metamodels/",  wsPathForImports+"/dsls/pacman/versionsfortest/", 
+				 	wsPathForImports+"/dsls/pacman/dsdiffrules/", wsPathForImports+"/dsls/pacman/dsdiffafterruningatest/",
+				 	"PacManGo.ecore", "V1.xmi", "V2.xmi");
+		 /*setDsdRulePackages(
+		 			new ArrayList<String>(Arrays.asList("pacmanmovesright.xmi", "pacmaneatsfood.xmi")), 
+		 		 	PacmanGoDiffMMPackage.eNS_URI, PacmanGoDiffMMPackage.eINSTANCE, PacmanGoDiffMMFactory.eINSTANCE, 		 		 	
+		 		 	PacmanGoRuleMMPackage.eNS_URI, PacmanGoRuleMMPackage.eINSTANCE, PacmanGoRuleMMFactory.eINSTANCE,
+		 		 	"PacmanGo");*/
+		 		 
+		 String rootClassName ="Game";
+		 URI fileURI = URI.createFileURI(DSMMPath);
+		 MMExtension extender    = new MMExtension();
+		 //Resource	DsDiffMM = extender.generateDsDiffMM(fileURI, rootClassName );
+		 URI         diffmmURI    = extender.appendTextToFileNameInTheURI(fileURI,".ecore","DiffMM.ecore");		 
+		 //Resource	DsRuleMM = extender.generateDsRuleMM(diffmmURI, rootClassName);
+	 }
+	 
+	 //@Test
+	 public void dsmcRulesToHenshinText_ConflictResolution_ForPacman()  throws IOException
+	 {
+		 //MapEmfCompareDiffsToFineGranularDSMDiffs(VerBasePath, VerNewPath, DSMDiffPath, result);		 
+		 
+		 DsmcRulesToHenshinText 	dsmcRulesToHenshinText= new DsmcRulesToHenshinText();
+		 dsmcRulesToHenshinText.dsmName = "pacman";
+		 dsmcRulesToHenshinText.dsmCasePath = "dsls/pacman/";
+		 dsmcRulesToHenshinText.dsmCaseRulesFolderName = "dsdiffrules/";
+		 dsmcRulesToHenshinText.dsmCaseHenshinRulesFolderName = "dsdiffrulesinhenshin/";
+		 dsmcRulesToHenshinText.dsmCaseRuleFileNames = 
+				 new ArrayList<String>(Arrays.asList(
+						 	"ghostmoves.xmi",  
+		 					"ghostmovesbottom.xmi",
+		 					"ghostmovesleft.xmi", 
+		 					"ghostmovesright.xmi", 
+		 					"ghostmovesup.xmi",
+		 					"pacmandies.xmi",
+		 					"pacmaneatsfood.xmi",
+		 					"pacmanmoves.xmi",  
+		 					"pacmanmovesbottom.xmi",
+		 					"pacmanmovesleft.xmi", 
+		 					"pacmanmovesright.xmi", 
+		 					"pacmanmovesup.xmi"));
+		dsmcRulesToHenshinText.ruleMM_eNSURI = PacmanGoRuleMMPackage.eINSTANCE.eNS_URI;
+		dsmcRulesToHenshinText.ruleMM_eIN = PacmanGoRuleMMPackage.eINSTANCE;
+		dsmcRulesToHenshinText.run(true);
+		 
+		 String wsPath=System.getProperty("user.dir");		 
+		 //Use corresponding henshin rules to find dependencies and conflicts between rules and to match dsdiffs	
+		 String workingRuledirectory = wsPath+"\\dsls\\pacman\\dsdiffrulesinhenshin";
+ 
+		 //Could not seperate because of dependency to rulesFilter
+		 MultiCdaSolver mcdaSolver= new MultiCdaSolver();
+		 mcdaSolver.fullRulesSubDirectoryPath = workingRuledirectory;
+		 mcdaSolver.domainName ="PacManGoDiffMM";
+		 mcdaSolver.execute();
+		 
+		 VertexSorting vs= new VertexSorting();
+		 vs._vertices= new ArrayList<Vertex>();
+		 int id=-1;
+		 for(org.eclipse.emf.henshin.model.Rule r:mcdaSolver.rules) {
+			 ++id;
+			 vs._vertices.add(
+					 new Vertex(
+							 r.getName(),  
+							 id, 
+							 1, //#semantics (it can be more than One)
+							 dsmcRulesToHenshinText.rulesFilter.get(id)._filtersCount, //number of filters
+							 dsmcRulesToHenshinText.rulesFilter.get(id)._elementsCount, //number of elements
+							 -1 //initial order
+							 ));
+			 }
+		 vs._edges= new ArrayList<Edge>();
+		 for(int i=0;i<mcdaSolver.rules.size();i++) {
+			 for(int j=0;j<mcdaSolver.rules.size();j++) {
+				 if(i!=j && mcdaSolver.conflictMatrix[i][j]==1) {
+					 vs._edges.add(new Edge(vs.VId(i), vs.VId(j), EdgeType.CONFLICT));
+				 }				 
+			 }
+		 }
+		 
+		 vs.execute();	
+	 }
+	 

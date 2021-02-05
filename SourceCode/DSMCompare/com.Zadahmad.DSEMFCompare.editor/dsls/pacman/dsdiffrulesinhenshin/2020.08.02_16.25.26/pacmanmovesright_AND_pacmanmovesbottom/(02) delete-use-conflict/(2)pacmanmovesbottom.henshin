@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Rule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_55dnccl_Eeqan_KLgBFsjg" name="pacmanmovesbottom">
+  <lhs xmi:id="_55dncsl_Eeqan_KLgBFsjg" name="pacmanmovesbottom_LHS">
+    <nodes xmi:id="_55dnc8l_Eeqan_KLgBFsjg" name="n0" outgoing="_55dne8l_Eeqan_KLgBFsjg _55dnfMl_Eeqan_KLgBFsjg _55dnfcl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_55dndMl_Eeqan_KLgBFsjg" name="n1" incoming="_55dne8l_Eeqan_KLgBFsjg _55dnf8l_Eeqan_KLgBFsjg _55dngsl_Eeqan_KLgBFsjg" outgoing="_55dnfsl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//GridNode"/>
+    </nodes>
+    <nodes xmi:id="_55dndcl_Eeqan_KLgBFsjg" name="n2" incoming="_55dnfMl_Eeqan_KLgBFsjg _55dnfsl_Eeqan_KLgBFsjg _55dng8l_Eeqan_KLgBFsjg" outgoing="_55dnf8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//GridNode"/>
+    </nodes>
+    <nodes xmi:id="_55dndsl_Eeqan_KLgBFsjg" name="n3" incoming="_55dnfcl_Eeqan_KLgBFsjg" outgoing="_55dngMl_Eeqan_KLgBFsjg _55dngcl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Pacman"/>
+    </nodes>
+    <nodes xmi:id="_55dnd8l_Eeqan_KLgBFsjg" name="n32" incoming="_55dngcl_Eeqan_KLgBFsjg" outgoing="_55dng8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffPositionableEntity_on"/>
+      <attributes xmi:id="_55dneMl_Eeqan_KLgBFsjg" value="ADD">
+        <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffPositionableEntity_on/operation"/>
+      </attributes>
+    </nodes>
+    <nodes xmi:id="_55dnecl_Eeqan_KLgBFsjg" name="n31" incoming="_55dngMl_Eeqan_KLgBFsjg" outgoing="_55dngsl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffPositionableEntity_on"/>
+      <attributes xmi:id="_55dnesl_Eeqan_KLgBFsjg" value="DELETE">
+        <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffPositionableEntity_on/operation"/>
+      </attributes>
+    </nodes>
+    <edges xmi:id="_55dne8l_Eeqan_KLgBFsjg" source="_55dnc8l_Eeqan_KLgBFsjg" target="_55dndMl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/gridnodes"/>
+    </edges>
+    <edges xmi:id="_55dnfMl_Eeqan_KLgBFsjg" source="_55dnc8l_Eeqan_KLgBFsjg" target="_55dndcl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/gridnodes"/>
+    </edges>
+    <edges xmi:id="_55dnfcl_Eeqan_KLgBFsjg" source="_55dnc8l_Eeqan_KLgBFsjg" target="_55dndsl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/entities"/>
+    </edges>
+    <edges xmi:id="_55dnfsl_Eeqan_KLgBFsjg" source="_55dndMl_Eeqan_KLgBFsjg" target="_55dndcl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//GridNode/bottom"/>
+    </edges>
+    <edges xmi:id="_55dnf8l_Eeqan_KLgBFsjg" source="_55dndcl_Eeqan_KLgBFsjg" target="_55dndMl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//GridNode/up"/>
+    </edges>
+    <edges xmi:id="_55dngMl_Eeqan_KLgBFsjg" source="_55dndsl_Eeqan_KLgBFsjg" target="_55dnecl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//PositionableEntity/diffon"/>
+    </edges>
+    <edges xmi:id="_55dngcl_Eeqan_KLgBFsjg" source="_55dndsl_Eeqan_KLgBFsjg" target="_55dnd8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//PositionableEntity/diffon"/>
+    </edges>
+    <edges xmi:id="_55dngsl_Eeqan_KLgBFsjg" source="_55dnecl_Eeqan_KLgBFsjg" target="_55dndMl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+    </edges>
+    <edges xmi:id="_55dng8l_Eeqan_KLgBFsjg" source="_55dnd8l_Eeqan_KLgBFsjg" target="_55dndcl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+    </edges>
+  </lhs>
+  <rhs xmi:id="_55dnhMl_Eeqan_KLgBFsjg" name="pacmanmovesbottom_RHS">
+    <nodes xmi:id="_55dnhcl_Eeqan_KLgBFsjg" name="n0" outgoing="_55dnjcl_Eeqan_KLgBFsjg _55dnjsl_Eeqan_KLgBFsjg _55dnj8l_Eeqan_KLgBFsjg _55dnkMl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_55dnhsl_Eeqan_KLgBFsjg" name="n1" incoming="_55dnjcl_Eeqan_KLgBFsjg _55dnksl_Eeqan_KLgBFsjg _55dnlcl_Eeqan_KLgBFsjg" outgoing="_55dnkcl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//GridNode"/>
+    </nodes>
+    <nodes xmi:id="_55dnh8l_Eeqan_KLgBFsjg" name="n2" incoming="_55dnjsl_Eeqan_KLgBFsjg _55dnkcl_Eeqan_KLgBFsjg _55dnlMl_Eeqan_KLgBFsjg _55dnlsl_Eeqan_KLgBFsjg" outgoing="_55dnksl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//GridNode"/>
+    </nodes>
+    <nodes xmi:id="_55dniMl_Eeqan_KLgBFsjg" name="n3" incoming="_55dnj8l_Eeqan_KLgBFsjg _55dnl8l_Eeqan_KLgBFsjg" outgoing="_55dnk8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Pacman"/>
+    </nodes>
+    <nodes xmi:id="_55dnicl_Eeqan_KLgBFsjg" name="n32" incoming="_55dnk8l_Eeqan_KLgBFsjg" outgoing="_55dnlMl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffPositionableEntity_on"/>
+      <attributes xmi:id="_55dnisl_Eeqan_KLgBFsjg" value="ADD">
+        <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffPositionableEntity_on/operation"/>
+      </attributes>
+    </nodes>
+    <nodes xmi:id="_55dni8l_Eeqan_KLgBFsjg" name="n4" incoming="_55dnkMl_Eeqan_KLgBFsjg" outgoing="_55dnlcl_Eeqan_KLgBFsjg _55dnlsl_Eeqan_KLgBFsjg _55dnl8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DomainSpecificDiff"/>
+      <attributes xmi:id="_55dnjMl_Eeqan_KLgBFsjg" value="&quot;PacmanMovesBottom&quot;">
+        <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DomainSpecificDiff/name"/>
+      </attributes>
+    </nodes>
+    <edges xmi:id="_55dnjcl_Eeqan_KLgBFsjg" source="_55dnhcl_Eeqan_KLgBFsjg" target="_55dnhsl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/gridnodes"/>
+    </edges>
+    <edges xmi:id="_55dnjsl_Eeqan_KLgBFsjg" source="_55dnhcl_Eeqan_KLgBFsjg" target="_55dnh8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/gridnodes"/>
+    </edges>
+    <edges xmi:id="_55dnj8l_Eeqan_KLgBFsjg" source="_55dnhcl_Eeqan_KLgBFsjg" target="_55dniMl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/entities"/>
+    </edges>
+    <edges xmi:id="_55dnkMl_Eeqan_KLgBFsjg" source="_55dnhcl_Eeqan_KLgBFsjg" target="_55dni8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//Game/domainspecificdiffs"/>
+    </edges>
+    <edges xmi:id="_55dnkcl_Eeqan_KLgBFsjg" source="_55dnhsl_Eeqan_KLgBFsjg" target="_55dnh8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//GridNode/bottom"/>
+    </edges>
+    <edges xmi:id="_55dnksl_Eeqan_KLgBFsjg" source="_55dnh8l_Eeqan_KLgBFsjg" target="_55dnhsl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//GridNode/up"/>
+    </edges>
+    <edges xmi:id="_55dnk8l_Eeqan_KLgBFsjg" source="_55dniMl_Eeqan_KLgBFsjg" target="_55dnicl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//PositionableEntity/diffon"/>
+    </edges>
+    <edges xmi:id="_55dnlMl_Eeqan_KLgBFsjg" source="_55dnicl_Eeqan_KLgBFsjg" target="_55dnh8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+    </edges>
+    <edges xmi:id="_55dnlcl_Eeqan_KLgBFsjg" source="_55dni8l_Eeqan_KLgBFsjg" target="_55dnhsl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_GridNode"/>
+    </edges>
+    <edges xmi:id="_55dnlsl_Eeqan_KLgBFsjg" source="_55dni8l_Eeqan_KLgBFsjg" target="_55dnh8l_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_GridNode"/>
+    </edges>
+    <edges xmi:id="_55dnl8l_Eeqan_KLgBFsjg" source="_55dni8l_Eeqan_KLgBFsjg" target="_55dniMl_Eeqan_KLgBFsjg">
+      <type href="../../../../metamodels/PacManGoDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Pacman"/>
+    </edges>
+  </rhs>
+  <mappings xmi:id="_55dnmMl_Eeqan_KLgBFsjg" origin="_55dnc8l_Eeqan_KLgBFsjg" image="_55dnhcl_Eeqan_KLgBFsjg"/>
+  <mappings xmi:id="_55dnmcl_Eeqan_KLgBFsjg" origin="_55dndMl_Eeqan_KLgBFsjg" image="_55dnhsl_Eeqan_KLgBFsjg"/>
+  <mappings xmi:id="_55dnmsl_Eeqan_KLgBFsjg" origin="_55dndcl_Eeqan_KLgBFsjg" image="_55dnh8l_Eeqan_KLgBFsjg"/>
+  <mappings xmi:id="_55dnm8l_Eeqan_KLgBFsjg" origin="_55dndsl_Eeqan_KLgBFsjg" image="_55dniMl_Eeqan_KLgBFsjg"/>
+  <mappings xmi:id="_55dnnMl_Eeqan_KLgBFsjg" origin="_55dnd8l_Eeqan_KLgBFsjg" image="_55dnicl_Eeqan_KLgBFsjg"/>
+</henshin:Rule>
