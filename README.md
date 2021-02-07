@@ -60,7 +60,7 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]] (https://github.com/geodes-sms/DSMCompare)-->
 
-During the development of a software project, different developers collaborate on creating and changing models. These models evolve and need to be versioned. Over the past several years, progress has been made in offering dedicated support for model versioning that improves on what is being supported by text-based version control systems. However, there is still a need to understand model differences in terms of the semantics of the modeling language, and to visualize the changes using its concrete syntax. To address these issues, we propose a comprehensive approach -called DSMCompare- that considers both the abstract and the concrete syntax of a domain-specific language (DSL) when expressing model differences, and which supports defining domain-specific semantics for specific difference patterns. The approach is based on the automatic extension of the DSL to enable the representation of changes and on the automatic adaptation of its graphical concrete syntax to visualize the differences. In addition, we allow for the definition of semantic differencing rules to capture recurrent domain-specific difference patterns. Since these rules can be conflicting with each other, we introduce algorithms for conflict resolution and rule scheduling. To demonstrate the applicability and effectiveness of our approach, we report on evaluations based on synthetic models and on version histories of models developed by third parties.
+During the development of a software project, different developers collaborate on creating and changing models. These models evolve and need to be versioned. Over the past several years, progress has been made in offering dedicated support for model versioning that improves on what is being supported by text-based version control systems. However, there is still a need to understand model differences in terms of the semantics of the modeling language, and to visualize the changes using its concrete syntax. To address these issues, we propose a comprehensive approach -called DSMCompare- that considers both the abstract and the concrete syntax of a domain-specific language (DSL) when expressing model differences, and which supports defining domain-specific semantics for specific difference patterns. The approach is based on the automatic extension of the DSL to enable the representation of changes and on the automatic adaptation of its graphical concrete syntax to visualize the differences. Besides, we allow for the definition of semantic differencing rules to capture recurrent domain-specific difference patterns. Since these rules can be conflicting with each other, we introduce algorithms for conflict resolution and rule scheduling. To demonstrate the applicability and effectiveness of our approach, we report on evaluations based on synthetic models and on version histories of models developed by third parties.
 
 
 ### Built With
@@ -85,9 +85,8 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* Eclipse
-  ```sh
-   Install Eclipse (version 2020-09), Modeling 
+* Eclipse (version 2020-09), Modeling 
+  ```sh   
    In the Help/Install new software menu make sure that the following features with the versions specified in the (Built with section) installed
       . EMF
       . Henshin
@@ -98,12 +97,13 @@ This is an example of how to list things you need to use the software and how to
 * Install Python (for the ordering algorithm)
 
 
-### Installation and pathes
+### Installation and paths
 
 1. Clone the repo (Codes are in the SourceCode folder)
    ```sh
    git clone https://github.com/geodes-sms/DSMCompare.git
    ```
+
 2. **Comparison**
 
     Path for the DSLs (dsls folder)
@@ -121,18 +121,19 @@ This is an example of how to list things you need to use the software and how to
     ```sh
     emfCompareResultToFineGranularDsmdiff() 
     ```
-    Results will be stored in the dsls folder. For the pacman case for example the result will be stored in the ".../dsls/pacman/dsdiffafterruningatest" path
+    Results will be stored in the DSLs folder. For the Pac-Man case for example the result will be stored in the ".../dsls/pacman/dsdiffafterruningatest" path
 
 3. **Ordering**
+
     3.1 To transform the DSRules to its equivalent in the Henshin:  Run the following method  
     ```sh
     dsmDiffRulesToHenshinTextRulesRun() 
     ```
 
-    The result will be stored in a file with ".hensin_text" extension. We need to tranform it to Henshin by right-click on it and select the transform command. For the pacman case for example the result will be stored in the ".../dsls/pacman/dsdiffrulesinhenshin/" path
+    The result will be stored in a file with ".hensin_text" extension. We need to transform it to Henshin by right-clicking on it and select the transform command. For the Pac-Man case for example the result will be stored in the ".../dsls/pacman/dsdiffrulesinhenshin/" path
 
 
-    3.2 to calculate the conflicts among the DSRules: Run the following method . 
+    3.2 to calculate the conflicts among the DSRules: Run the following method. 
     ```sh
      dsmcConflictManagement()
     ```
@@ -144,13 +145,20 @@ This is an example of how to list things you need to use the software and how to
     ```js
     SourceCode/VertexSortingPython/VertexSorting/vertex_sort.py
     ```
-    3.4 copy the conflict matrix retrieved from the step 3.2 to the "adjacency_matrix" field. In the Pac-Man case it is "pacman.set_adjacency_matrix". Then run the code. Results will be shown in the console and provides you the ordering.
+
+    3.4 copy the conflict matrix retrieved from step 3.2 to the "adjacency_matrix" field. In the Pac-Man case it is "pacman.set_adjacency_matrix". Then run the code. Results will be shown in the console and provide you the ordering.
 
 4. **Lifting** 
 
-4.1 [Specify the rule units](https://wiki.eclipse.org/Henshin/Textual_Editor#Specifying_Units) representing the orders generated inside the ".henshin_text" file that is created in the step 3.1. You also need to use the results generated in the step 3.4 showing the prefered order of execution of the rules. The result will be stored in the specified path by the user. The pre-executed example results are stored in the "dsdiffrulesinhenshin" folder for each case.
-4.2 
+    4.1 [Specify the rule units](https://wiki.eclipse.org/Henshin/Textual_Editor#Specifying_Units) representing the orders generated inside the ".henshin_text" file that is created in step 3.1. You also need to use the results generated in step 3.4 showing the preferred order of execution of the rules. The result will be stored in the specified path by the user. The pre-executed example results are stored in the "dsdiffrulesinhenshin" folder for each case.
 
+    4.2 Graphical concrete syntax project is in the following path
+    ```sh
+    SourceCode\runtime-Sirius
+    ```
+    4.3 Inside the Eclipse, select "com.Zadahmad.DSEMFCompare.editor" project and select RUN
+    4.4 Select menu command "File/Open Projects from file system" and select "runtime-Sirius" project.
+    There you can find different examples from different cases
 
 
 ## Supplements
@@ -162,7 +170,7 @@ _For supplementary data, please refer to the [supplements.md](supplements.md)_
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples, and demos work well in this space. You may also link to more resources.
+<!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples, and demos work well in this space. You may also link to more resources.-->
 
 <!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
@@ -171,7 +179,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/geodes-sms/DSMCompare/issues) for a list of proposed features (and known issues).
+<!-- See the [open issues](https://github.com/geodes-sms/DSMCompare/issues) for a list of proposed features (and known issues).-->
 
 ## Publications
 
@@ -186,7 +194,7 @@ See the [open issues](https://github.com/geodes-sms/DSMCompare/issues) for a lis
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what makes the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
