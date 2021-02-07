@@ -229,3 +229,5 @@
 			</ul>
 		</li>
 	</ul>
+
+## Sizes of all metamodels involved in the case study
