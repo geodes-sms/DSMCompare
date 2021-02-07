@@ -231,3 +231,84 @@
 	</ul>
 
 ## Sizes of all metamodels involved in the case study
+
+<table cellspacing=0 border=1>
+					<tr>
+						<td style=min-width:50px>Name</td>
+						<td style=min-width:50px>#Class</td>
+						<td style=min-width:50px>#Association</td>
+						<td style=min-width:50px>#Attribute</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>UML 1.4.2 </td>
+						<td style=min-width:50px>39</td>
+						<td style=min-width:50px>37</td>
+						<td style=min-width:50px>31</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px> UML 2.0 </td>
+						<td style=min-width:50px>43</td>
+						<td style=min-width:50px>75</td>
+						<td style=min-width:50px>18</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px> gmfgraph V-1.29 </td>
+						<td style=min-width:50px>69</td>
+						<td style=min-width:50px>45</td>
+						<td style=min-width:50px>63</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px> gmfgraph V-1.30 </td>
+						<td style=min-width:50px>73</td>
+						<td style=min-width:50px>51</td>
+						<td style=min-width:50px>65</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px> gmfmappings V-1.45 </td>
+						<td style=min-width:50px>34</td>
+						<td style=min-width:50px>62</td>
+						<td style=min-width:50px>19</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px> gmfmappings V-1.46 </td>
+						<td style=min-width:50px>36</td>
+						<td style=min-width:50px>65</td>
+						<td style=min-width:50px>19</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px> gmfmappings V-1.48 </td>
+						<td style=min-width:50px>36</td>
+						<td style=min-width:50px>66</td>
+						<td style=min-width:50px>19</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px> gmfmappings V-1.49 </td>
+						<td style=min-width:50px>38</td>
+						<td style=min-width:50px>66</td>
+						<td style=min-width:50px>19</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px> gmfmappings V-1.51 </td>
+						<td style=min-width:50px>40</td>
+						<td style=min-width:50px>66</td>
+						<td style=min-width:50px>21</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px> gmfmappings V-1.52 </td>
+						<td style=min-width:50px>39</td>
+						<td style=min-width:50px>66</td>
+						<td style=min-width:50px>21</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px> gmfmappings V-1.55 </td>
+						<td style=min-width:50px>39</td>
+						<td style=min-width:50px>66</td>
+						<td style=min-width:50px>22</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px> gmfmappings V-1.56 </td>
+						<td style=min-width:50px>39</td>
+						<td style=min-width:50px>67</td>
+						<td style=min-width:50px>22</td>
+					</tr>
+				</table>
