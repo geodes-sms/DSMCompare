@@ -104,37 +104,52 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/geodes-sms/DSMCompare.git
    ```
-2. Path for the the case DSLs such as "pacman" folder the Pac-Man case
-   ```js
-   SourceCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/dsls 
-   ```
-3. Calculate Fine-Diffs, and create, Henshin rules, and conflict matrix
-    3.1 For the driver files such as "CaseStudyDsmcPacman.java" in the Pac-Man case stored in the following path
-    ```js
-    SourceCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/src/com/zadahmad/dsemfcompare/editor/client
-    ```
-    3.2 In each driver call the following method to calculate Fine-Granular difsf. For the pacman case for example the result will be stored in the ".../dsls/pacman/dsdiffafterruningatest" path
+2. **Comparison**
+
+    Path for the DSLs (dsls folder)
+      ```js
+      SourceCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/dsls 
+      ```
+    Path for the Driver files (defined as JUnits)
+      ```js
+      SourceCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/src/com/zadahmad/dsemfcompare/editor/client
+      ```
+
+    2.1 Open the driver files like "CaseStudyDsmcPacman.java" in the Pac-Man case 
+
+    2.2 To calculate the fine-granular diffs: Run the following method. 
     ```sh
     emfCompareResultToFineGranularDsmdiff() 
     ```
-    3.3 call the following method to transform the DSRules to its equivalent in the Henshin and stored in a file with ".hensin_text" file. We need to tranform it to Henshin by right-click on it and select the transform command. For the pacman case for example the result will be stored in the ".../dsls/pacman/dsdiffrulesinhenshin/" path
+    Results will be stored in the dsls folder. For the pacman case for example the result will be stored in the ".../dsls/pacman/dsdiffafterruningatest" path
+
+3. **Ordering**
+    3.1 To transform the DSRules to its equivalent in the Henshin:  Run the following method  
     ```sh
     dsmDiffRulesToHenshinTextRulesRun() 
     ```
-    3.4 call the following method to calculate the conflicts among the DSRules. The results will be shown in the console and need to be copied and formatted to the python code calculates the ordering.
+
+    The result will be stored in a file with ".hensin_text" extension. We need to tranform it to Henshin by right-click on it and select the transform command. For the pacman case for example the result will be stored in the ".../dsls/pacman/dsdiffrulesinhenshin/" path
+
+
+    3.2 to calculate the conflicts among the DSRules: Run the following method . 
     ```sh
      dsmcConflictManagement()
     ```
-4. Calculate the ordering using the python code
-    4.1 Path for the python sorting file
+
+    The results will be shown in the console and need to be copied and formatted to the python code that calculates the ordering.
+
+    3.3. Calculate the ordering using the python code located in the following path:
+
     ```js
     SourceCode/VertexSortingPython/VertexSorting/vertex_sort.py
     ```
-    4.2 copy the conflict matrix retrieved from the step 3.4 to the "adjacency_matrix" field like  "pacman.set_adjacency_matrix" for the Pac-Man case and run the code. Results will be shown in the console and provides you the ordering 
-5. [Specifying units](https://wiki.eclipse.org/Henshin/Textual_Editor#Specifying_Units) to run the rules based on the generated order in the step 4.2 inside the ".henshin_text" file like "pacmanrulesDSDiff.henshin_text" for the Pac-man case. The result will be stored in the specified path by the user. The examples are in the in the "dsdiffrulesinhenshin" folder for each case
+    3.4 copy the conflict matrix retrieved from the step 3.2 to the "adjacency_matrix" field. In the Pac-Man case it is "pacman.set_adjacency_matrix". Then run the code. Results will be shown in the console and provides you the ordering.
 
+4. **Lifting** 
 
-
+4.1 [Specify the rule units](https://wiki.eclipse.org/Henshin/Textual_Editor#Specifying_Units) representing the orders generated inside the ".henshin_text" file that is created in the step 3.1. You also need to use the results generated in the step 3.4 showing the prefered order of execution of the rules. The result will be stored in the specified path by the user. The pre-executed example results are stored in the "dsdiffrulesinhenshin" folder for each case.
+4.2 
 
 
 
