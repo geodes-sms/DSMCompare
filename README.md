@@ -85,26 +85,57 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+* Eclipse
   ```sh
-  npm install npm@latest -g
+   Install Eclipse (version 2020-09), Modeling 
+   In the Help/Install new software menu make sure that the following features with the versions specified in the (Built with section) installed
+      . EMF
+      . Henshin
+      . EMF-Compare
+      . Sirius 
+      . Xtend
   ```
+* Install Python (for the ordering algorithm)
 
-### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+### Installation and pathes
+
+1. Clone the repo (Codes are in the SourceCode folder)
    ```sh
    git clone https://github.com/geodes-sms/DSMCompare.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
+2. Path for the the case DSLs such as "pacman" folder the Pac-Man case
+   ```js
+   SourceCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/dsls 
    ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
+3. Calculate Fine-Diffs, and create, Henshin rules, and conflict matrix
+    3.1 For the driver files such as "CaseStudyDsmcPacman.java" in the Pac-Man case stored in the following path
+    ```js
+    SourceCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/src/com/zadahmad/dsemfcompare/editor/client
+    ```
+    3.2 In each driver call the following method to calculate Fine-Granular difsf. For the pacman case for example the result will be stored in the ".../dsls/pacman/dsdiffafterruningatest" path
+    ```sh
+    emfCompareResultToFineGranularDsmdiff() 
+    ```
+    3.3 call the following method to transform the DSRules to its equivalent in the Henshin and stored in a file with ".hensin_text" file. We need to tranform it to Henshin by right-click on it and select the transform command. For the pacman case for example the result will be stored in the ".../dsls/pacman/dsdiffrulesinhenshin/" path
+    ```sh
+    dsmDiffRulesToHenshinTextRulesRun() 
+    ```
+    3.4 call the following method to calculate the conflicts among the DSRules. The results will be shown in the console and need to be copied and formatted to the python code calculates the ordering.
+    ```sh
+     dsmcConflictManagement()
+    ```
+4. Calculate the ordering using the python code
+    4.1 Path for the python sorting file
+    ```js
+    SourceCode/VertexSortingPython/VertexSorting/vertex_sort.py
+    ```
+    4.2 copy the conflict matrix retrieved from the step 3.4 to the "adjacency_matrix" field like  "pacman.set_adjacency_matrix" for the Pac-Man case and run the code. Results will be shown in the console and provides you the ordering 
+5. [Specifying units](https://wiki.eclipse.org/Henshin/Textual_Editor#Specifying_Units) to run the rules based on the generated order in the step 4.2 inside the ".henshin_text" file like "pacmanrulesDSDiff.henshin_text" for the Pac-man case. The result will be stored in the specified path by the user. The examples are in the in the "dsdiffrulesinhenshin" folder for each case
+
+
+
+
 
 
 ## Supplements
