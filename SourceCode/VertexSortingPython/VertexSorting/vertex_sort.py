@@ -1,3 +1,11 @@
+'''
+==========================================
+Title:  Module to create, visualize, perform operations, and algorithms on directed labeled weighted graphs
+Author: Eugene Syriani
+Date:   18 Dec 2020
+==========================================
+'''
+
 from functools import reduce
 import random
 
