@@ -60,7 +60,7 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]] (https://github.com/geodes-sms/DSMCompare)-->
 
-During the development of a software project, different developers collaborate on creating and changing models. These models evolve and need to be versioned. Over the past several years, progress has been made in offering dedicated support for model versioning that improves on what is being supported by text-based version control systems. However, there is still a need to understand model differences in terms of the semantics of the modeling language, and to visualize the changes using its concrete syntax. To address these issues, we propose a comprehensive approach -called DSMCompare- that considers both the abstract and the concrete syntax of a domain-specific language (DSL) when expressing model differences, and which supports defining domain-specific semantics for specific difference patterns. The approach is based on the automatic extension of the DSL to enable the representation of changes and on the automatic adaptation of its graphical concrete syntax to visualize the differences. Besides, we allow for the definition of semantic differencing rules to capture recurrent domain-specific difference patterns. Since these rules can be conflicting with each other, we introduce algorithms for conflict resolution and rule scheduling. To demonstrate the applicability and effectiveness of our approach, we report on evaluations based on synthetic models and on version histories of models developed by third parties.
+During the development of a software project, different developers collaborate on creating and changing models. These models evolve and need to be versioned. Over the past several years, progress has been made in offering dedicated support for model versioning that improves on what is being supported by text-based version control systems. However, there is still a need to understand model differences in terms of the semantics of the modeling language, and to visualize the changes using its concrete syntax. To address these issues, we propose a comprehensive approach -called DSMCompare- that considers both the abstract and the concrete syntax of a domain-specific language (DSL) when expressing model differences, and which supports defining domain-specific semantics for specific difference patterns. The approach is based on the automatic extension of the DSL to enable the representation of changes and on the automatic adaptation of its graphical concrete syntax to visualize the differences. Besides, we allow for the definition of semantic differencing rules to capture recurrent domain-specific difference patterns. Since these rules can be conflicting with each other, we introduce algorithms for conflict resolution and rule scheduling. To demonstrate the applicability and effectiveness of our approach, we report on evaluations based on synthetic models and on version histories of models developed by third parties. This wiki page will help you run the experiments discussed in the paper listed in the Publication section below. 
 
 
 ### Built With
@@ -84,7 +84,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+Here is a list of things you need to install.
 * Eclipse (version 2020-09), Modeling 
   ```sh   
    In the Help/Install new software menu make sure that the following features with the versions specified in the (Built with section) installed
@@ -130,7 +130,7 @@ This is an example of how to list things you need to use the software and how to
     dsmDiffRulesToHenshinTextRulesRun() 
     ```
 
-    The result will be stored in a file with ".hensin_text" extension. We need to transform it to Henshin by right-clicking on it and select the transform command. For the Pac-Man case for example the result will be stored in the ".../dsls/pacman/dsdiffrulesinhenshin/" path
+    The result will be stored in a file with ".hensin_text" extension. You need to transform it to Henshin by right-clicking on it and selecting the transform command. For example, for the Pac-Man case study, the result will be stored in the ".../dsls/pacman/dsdiffrulesinhenshin/" path
 
 
     3.2 to calculate the conflicts among the DSRules: Run the following method. 
@@ -146,19 +146,19 @@ This is an example of how to list things you need to use the software and how to
     SourceCode/VertexSortingPython/VertexSorting/vertex_sort.py
     ```
 
-    3.4 copy the conflict matrix retrieved from step 3.2 to the "adjacency_matrix" field. In the Pac-Man case it is "pacman.set_adjacency_matrix". Then run the code. Results will be shown in the console and provide you the ordering.
+    3.4 Copy the conflict matrix retrieved from step 3.2 to the "adjacency_matrix" field. In the Pac-Man case study, the matrix is called "pacman.set_adjacency_matrix". Then run the code. The results (the ordering) will be shown in the console.
 
 4. **Lifting** 
 
-    4.1 [Specify the rule units](https://wiki.eclipse.org/Henshin/Textual_Editor#Specifying_Units) representing the orders generated inside the ".henshin_text" file that is created in step 3.1. You also need to use the results generated in step 3.4 showing the preferred order of execution of the rules. The result will be stored in the specified path by the user. The pre-executed example results are stored in the "dsdiffrulesinhenshin" folder for each case.
+    4.1 [Specify the rule units](https://wiki.eclipse.org/Henshin/Textual_Editor#Specifying_Units) representing the orders generated inside the ".henshin_text" file that is created in step 3.1. You also need to use the results generated in step 3.4 showing the preferred order of execution of the rules. The result will be stored in the path specified by the user. The pre-executed example results are stored in the "dsdiffrulesinhenshin" folder for each case study.
 
-    4.2 Graphical concrete syntax project is in the following path
+    4.2 Graphical concrete syntax project is storedin the following path
     ```sh
     SourceCode\runtime-Sirius
     ```
     4.3 Inside the Eclipse, select "com.Zadahmad.DSEMFCompare.editor" project and select RUN
     4.4 Select menu command "File/Open Projects from file system" and select "runtime-Sirius" project.
-    There you can find different examples from different cases
+    There you can find examples from different case studies
 
 
 ## Supplements
