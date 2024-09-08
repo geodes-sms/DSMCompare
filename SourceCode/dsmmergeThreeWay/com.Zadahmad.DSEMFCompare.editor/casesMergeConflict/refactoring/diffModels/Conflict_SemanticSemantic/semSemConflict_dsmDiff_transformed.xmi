@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoringDiffMM:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" name="rfc">
+  <eclassifiers name="super">
+    <diffeattributes diff_kind_Left="ADD" eType="attr"/>
+  </eclassifiers>
+  <eclassifiers name="sub" esupertypes="super">
+    <eattributes name="attr"/>
+  </eclassifiers>
+  <eclassifiers name="cls">
+    <diffeattributes diff_kind_Right="ADD" eType="attr"/>
+  </eclassifiers>
+  <domainspecificdiffs name="pullUpAttribute" DomainSpecificDiff_EAttribute="attr" DomainSpecificDiff_EClass="super sub" DomainSpecificDiff_EPackage="rfc" DomainSpecificDiff_DiffEClass_eattributes="//@eclassifiers.0/@diffeattributes.0"/>
+  <domainspecificdiffs name="moveAttribute" DomainSpecificDiff_EAttribute="attr" DomainSpecificDiff_EClass="sub cls" DomainSpecificDiff_EPackage="rfc" DomainSpecificDiff_DiffEClass_eattributes="//@eclassifiers.2/@diffeattributes.0"/>
+  <semanticconflicts name="pullUpAttribute - moveAttribute[attr| sub] - CONTRADICTING" SemanticConflict_DomainSpecificDiff="//@domainspecificdiffs.0 //@domainspecificdiffs.1"/>
+</refactoringDiffMM:EPackage>

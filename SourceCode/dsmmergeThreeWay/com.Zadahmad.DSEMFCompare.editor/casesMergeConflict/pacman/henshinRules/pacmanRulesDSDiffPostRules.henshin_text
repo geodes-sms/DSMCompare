@@ -1,0 +1,384 @@
+ePackageImport  pacmanDiffMM
+
+		rule PacmanEatFoodPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:DiffGame
+				 preserve			node n3:DiffFood{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n4:DomainSpecificDiff{
+					preserve	name = "\"Pacman Eat Food\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n3:entities),
+					(preserve		n0->n4:domainspecificdiffs),
+					(preserve		n4->n0:DomainSpecificDiff_Game),
+					(preserve		n4->n3:DomainSpecificDiff_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanDiePost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n3:DiffPacman{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n31:DiffPositionableEntity_on
+				 preserve			node n4:DomainSpecificDiff{
+					preserve	name = "\"PacmanDie\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n3:entities),
+					(preserve		n0->n4:domainspecificdiffs),
+					(preserve	n3->n31:diffon)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveRightPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n3:Ghost
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n4:DomainSpecificDiff{
+					preserve	name = "\"Ghost Move Right\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n3:entities),
+					(preserve		n0->n4:domainspecificdiffs),
+					(preserve	n3->n32:diffon),
+					(preserve		n4->n3:DomainSpecificDiff_PositionableEntity),
+					(preserve		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveLeftPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n3:Ghost
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n4:DomainSpecificDiff{
+					preserve	name = "\"Ghost Move Left\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n3:entities),
+					(preserve		n0->n4:domainspecificdiffs),
+					(preserve	n3->n32:diffon),
+					(preserve		n4->n3:DomainSpecificDiff_PositionableEntity),
+					(preserve		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveUpPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n3:Ghost
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n4:DomainSpecificDiff{
+					preserve	name = "\"Ghost Move Up\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n3:entities),
+					(preserve		n0->n4:domainspecificdiffs),
+					(preserve	n3->n32:diffon),
+					(preserve		n4->n3:DomainSpecificDiff_PositionableEntity),
+					(preserve		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveDownPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n3:Ghost
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n4:DomainSpecificDiff{
+					preserve	name = "\"Ghost Move Down\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n3:entities),
+					(preserve		n0->n4:domainspecificdiffs),
+					(preserve	n3->n32:diffon),
+					(preserve		n4->n3:DomainSpecificDiff_PositionableEntity),
+					(preserve		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMovePost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n3:Ghost
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n4:DomainSpecificDiff{
+					preserve	name = "\"Ghost Move\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n3:entities),
+					(preserve		n0->n4:domainspecificdiffs),
+					(preserve	n3->n32:diffon),
+					(preserve		n4->n3:DomainSpecificDiff_PositionableEntity),
+					(preserve		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveRightPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n3:Pacman
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n4:DomainSpecificDiff{
+					preserve	name = "\"Pacman Move Right\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n3:entities),
+					(preserve		n0->n4:domainspecificdiffs),
+					(preserve	n3->n32:diffon),
+					(preserve		n4->n3:DomainSpecificDiff_PositionableEntity),
+					(preserve		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveLeftPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n3:Pacman
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n4:DomainSpecificDiff{
+					preserve	name = "\"Pacman Move Left\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n3:entities),
+					(preserve		n0->n4:domainspecificdiffs),
+					(preserve	n3->n32:diffon),
+					(preserve		n4->n3:DomainSpecificDiff_PositionableEntity),
+					(preserve		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveUpPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n3:Pacman
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n4:DomainSpecificDiff{
+					preserve	name = "\"Pacman Move Up\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n3:entities),
+					(preserve		n0->n4:domainspecificdiffs),
+					(preserve	n3->n32:diffon),
+					(preserve		n4->n3:DomainSpecificDiff_PositionableEntity),
+					(preserve		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveDownPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n3:Pacman
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n4:DomainSpecificDiff{
+					preserve	name = "\"Pacman Move Down\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n3:entities),
+					(preserve		n0->n4:domainspecificdiffs),
+					(preserve	n3->n32:diffon),
+					(preserve		n4->n3:DomainSpecificDiff_PositionableEntity),
+					(preserve		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMovePost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n3:Pacman
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n4:DomainSpecificDiff{
+					preserve	name = "\"Pacman Move\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n3:entities),
+					(preserve		n0->n4:domainspecificdiffs),
+					(preserve	n3->n32:diffon),
+					(preserve		n4->n3:DomainSpecificDiff_PositionableEntity),
+					(preserve		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+	unit unitSequntialStar(){
+		unitPacmanEatFoodPostStar()
+		unitPacmanDiePostStar()
+		unitGhostMoveRightPostStar()
+		unitGhostMoveLeftPostStar()
+		unitGhostMoveUpPostStar()
+		unitGhostMoveDownPostStar()
+		unitGhostMovePostStar()
+		unitPacmanMoveRightPostStar()
+		unitPacmanMoveLeftPostStar()
+		unitPacmanMoveUpPostStar()
+		unitPacmanMoveDownPostStar()
+		unitPacmanMovePostStar()
+	}
+	unit unitPacmanEatFoodPostStar(){
+		while{
+			PacmanEatFoodPost()
+		}
+	}
+	unit unitPacmanDiePostStar(){
+		while{
+			PacmanDiePost()
+		}
+	}
+	unit unitGhostMoveRightPostStar(){
+		while{
+			GhostMoveRightPost()
+		}
+	}
+	unit unitGhostMoveLeftPostStar(){
+		while{
+			GhostMoveLeftPost()
+		}
+	}
+	unit unitGhostMoveUpPostStar(){
+		while{
+			GhostMoveUpPost()
+		}
+	}
+	unit unitGhostMoveDownPostStar(){
+		while{
+			GhostMoveDownPost()
+		}
+	}
+	unit unitGhostMovePostStar(){
+		while{
+			GhostMovePost()
+		}
+	}
+	unit unitPacmanMoveRightPostStar(){
+		while{
+			PacmanMoveRightPost()
+		}
+	}
+	unit unitPacmanMoveLeftPostStar(){
+		while{
+			PacmanMoveLeftPost()
+		}
+	}
+	unit unitPacmanMoveUpPostStar(){
+		while{
+			PacmanMoveUpPost()
+		}
+	}
+	unit unitPacmanMoveDownPostStar(){
+		while{
+			PacmanMoveDownPost()
+		}
+	}
+	unit unitPacmanMovePostStar(){
+		while{
+			PacmanMovePost()
+		}
+	}

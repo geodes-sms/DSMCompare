@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore">
+  <ecore:EPackage name="dssmm2WayDiffMM" nsURI="http://www.zadahmad.org/dsvcs/dssmm2WayDiffMM"
+      nsPrefix="dssmm2WayDiffMM">
+    <eClassifiers xsi:type="ecore:EClass" name="DecisionSupport">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="model" eType="#/0/Model"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="options" upperBound="-1"
+          eType="#/0/Option" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="vendors" upperBound="-1"
+          eType="#/0/Vendor" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffmodel" upperBound="-1"
+          eType="#/0/DiffDecisionSupport_model" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffoptions" upperBound="-1"
+          eType="#/0/DiffDecisionSupport_options" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffvendors" upperBound="-1"
+          eType="#/0/DiffDecisionSupport_vendors" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Model">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ModelID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Goal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Descr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="NumFacts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rootFactor" eType="#/0/Factor"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffrootFactor" upperBound="-1"
+          eType="#/0/DiffModel_rootFactor" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Factor" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="FactorID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Descr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="GW" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="LW" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Del" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="HideOnLine" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="scores" upperBound="-1"
+          eType="#/0/Score" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Hierarchy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="MasterFactorID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffscores" upperBound="-1"
+          eType="#/0/DiffFactor_scores" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="LeafFactor" eSuperTypes="#/0/Factor"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CompositeFactor" eSuperTypes="#/0/Factor">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subFactors" upperBound="-1"
+          eType="#/0/Factor" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffsubFactors" upperBound="-1"
+          eType="#/0/DiffCompositeFactor_subFactors" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Option">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="OptionID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Sort" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Cost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="NumOtherCosts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="vendor" eType="#/0/Vendor"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffvendor" upperBound="-1"
+          eType="#/0/DiffOption_vendor" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Vendor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="VendorID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Score">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="SScore" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Standard Score 0-100 and is the one used for all calculations&#xD;&#xA;&#xD;&#xA;"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="DScore" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="In the case of a verbal or List method this is the verbal method definition index. In the case of numeric methods it is the actual numeric value.&#xD;&#xA;&#xD;&#xA;"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Descr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Comment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="score_option" eType="#/0/Option"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="MethodID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="diffscore_option" upperBound="-1"
+          eType="#/0/DiffScore_score_option" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ClassDiffKind">
+      <eLiterals name="ADD" literal="ADD"/>
+      <eLiterals name="DELETE" value="1" literal="DELETE"/>
+      <eLiterals name="MODIFY" value="2" literal="MODIFY"/>
+      <eLiterals name="NON" value="3" literal="NON"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="AscDiffKind">
+      <eLiterals name="ADD" literal="ADD"/>
+      <eLiterals name="DELETE" value="1" literal="DELETE"/>
+      <eLiterals name="NON" value="2" literal="NON"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SemanticObject" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DecisionSupport"
+          upperBound="-1" eType="#/0/DecisionSupport"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffCompositeFactor_subFactors"
+          upperBound="-1" eType="#/0/DiffCompositeFactor_subFactors"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffDecisionSupport_model"
+          upperBound="-1" eType="#/0/DiffDecisionSupport_model"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffDecisionSupport_options"
+          upperBound="-1" eType="#/0/DiffDecisionSupport_options"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffDecisionSupport_vendors"
+          upperBound="-1" eType="#/0/DiffDecisionSupport_vendors"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffFactor_scores"
+          upperBound="-1" eType="#/0/DiffFactor_scores"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffModel_rootFactor"
+          upperBound="-1" eType="#/0/DiffModel_rootFactor"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffOption_vendor"
+          upperBound="-1" eType="#/0/DiffOption_vendor"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffScore_score_option"
+          upperBound="-1" eType="#/0/DiffScore_score_option"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_Factor"
+          upperBound="-1" eType="#/0/Factor"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_Model"
+          upperBound="-1" eType="#/0/Model"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_Option"
+          upperBound="-1" eType="#/0/Option"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_Score"
+          upperBound="-1" eType="#/0/Score"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_Vendor"
+          upperBound="-1" eType="#/0/Vendor"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SemanticDiff" eSuperTypes="#/0/SemanticObject"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SemanticConflict" eSuperTypes="#/0/SemanticObject">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="semanticdiffs" upperBound="-1"
+          eType="#/0/SemanticDiff" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffDecisionSupport" eSuperTypes="#/0/DecisionSupport">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+          lowerBound="1" eType="#/0/ClassDiffKind" defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Name" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffDecisionSupport_model">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+          lowerBound="1" eType="#/0/AscDiffKind" defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/Model"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffDecisionSupport_options">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+          lowerBound="1" eType="#/0/AscDiffKind" defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/Option"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffDecisionSupport_vendors">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+          lowerBound="1" eType="#/0/AscDiffKind" defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/Vendor"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffModel" eSuperTypes="#/0/Model">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+          lowerBound="1" eType="#/0/ClassDiffKind" defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_ModelID" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Name" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Goal" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Descr" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_NumFacts" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffModel_rootFactor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+          lowerBound="1" eType="#/0/AscDiffKind" defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/Factor"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffFactor_scores">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+          lowerBound="1" eType="#/0/AscDiffKind" defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/Score"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffLeafFactor" eSuperTypes="#/0/LeafFactor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+          lowerBound="1" eType="#/0/ClassDiffKind" defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_FactorID" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Name" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Descr" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_GW" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_LW" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Del" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_HideOnLine" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Hierarchy" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_MasterFactorID" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffCompositeFactor" eSuperTypes="#/0/CompositeFactor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+          lowerBound="1" eType="#/0/ClassDiffKind" defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_FactorID" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Name" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Descr" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_GW" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_LW" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Del" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_HideOnLine" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Hierarchy" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_MasterFactorID" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffCompositeFactor_subFactors">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+          lowerBound="1" eType="#/0/AscDiffKind" defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/Factor"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffOption" eSuperTypes="#/0/Option">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+          lowerBound="1" eType="#/0/ClassDiffKind" defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_OptionID" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Name" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Sort" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Cost" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_NumOtherCosts" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Description" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffOption_vendor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+          lowerBound="1" eType="#/0/AscDiffKind" defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/Vendor"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffVendor" eSuperTypes="#/0/Vendor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+          lowerBound="1" eType="#/0/ClassDiffKind" defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_VendorID" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Name" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Description" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffScore" eSuperTypes="#/0/Score">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+          lowerBound="1" eType="#/0/ClassDiffKind" defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_SScore" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_DScore" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Descr" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_Comment" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_MethodID" unique="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DiffScore_score_option">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+          lowerBound="1" eType="#/0/AscDiffKind" defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1"
+          eType="#/0/Option"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ecore:EPackage name="dssmm2WayRuleMM" nsURI="http://www.zadahmad.org/dsvcs/dssmm2WayRuleMM"
+      nsPrefix="dssmm2WayRuleMM">
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DecisionSupport" eSuperTypes="#/0/DecisionSupport">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_Model" eSuperTypes="#/0/Model">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_Factor" abstract="true" eSuperTypes="#/0/Factor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_LeafFactor" eSuperTypes="#/0/LeafFactor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_CompositeFactor" eSuperTypes="#/0/CompositeFactor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_Option" eSuperTypes="#/0/Option">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_Vendor" eSuperTypes="#/0/Vendor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_Score" eSuperTypes="#/0/Score">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_SemanticObject" abstract="true"
+        eSuperTypes="#/0/SemanticObject">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_SemanticDiff" eSuperTypes="#/0/SemanticDiff">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_SemanticConflict" eSuperTypes="#/0/SemanticConflict">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffDecisionSupport" eSuperTypes="#/0/DiffDecisionSupport">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffDecisionSupport_model"
+        eSuperTypes="#/0/DiffDecisionSupport_model">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffDecisionSupport_options"
+        eSuperTypes="#/0/DiffDecisionSupport_options">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffDecisionSupport_vendors"
+        eSuperTypes="#/0/DiffDecisionSupport_vendors">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffModel" eSuperTypes="#/0/DiffModel">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffModel_rootFactor" eSuperTypes="#/0/DiffModel_rootFactor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffFactor_scores" eSuperTypes="#/0/DiffFactor_scores">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffLeafFactor" eSuperTypes="#/0/DiffLeafFactor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffCompositeFactor" eSuperTypes="#/0/DiffCompositeFactor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffCompositeFactor_subFactors"
+        eSuperTypes="#/0/DiffCompositeFactor_subFactors">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffOption" eSuperTypes="#/0/DiffOption">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffOption_vendor" eSuperTypes="#/0/DiffOption_vendor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffVendor" eSuperTypes="#/0/DiffVendor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffScore" eSuperTypes="#/0/DiffScore">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffScore_score_option" eSuperTypes="#/0/DiffScore_score_option">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Rule">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="constraints" upperBound="-1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rulePattern_DecisionSupport"
+          upperBound="-1" eType="#/0/DecisionSupport" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rulePattern_DiffCompositeFactor_subFactors"
+          upperBound="-1" eType="#/0/DiffCompositeFactor_subFactors" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rulePattern_DiffDecisionSupport_model"
+          upperBound="-1" eType="#/0/DiffDecisionSupport_model" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rulePattern_DiffDecisionSupport_options"
+          upperBound="-1" eType="#/0/DiffDecisionSupport_options" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rulePattern_DiffDecisionSupport_vendors"
+          upperBound="-1" eType="#/0/DiffDecisionSupport_vendors" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rulePattern_DiffFactor_scores"
+          upperBound="-1" eType="#/0/DiffFactor_scores" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rulePattern_DiffModel_rootFactor"
+          upperBound="-1" eType="#/0/DiffModel_rootFactor" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rulePattern_DiffOption_vendor"
+          upperBound="-1" eType="#/0/DiffOption_vendor" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rulePattern_DiffScore_score_option"
+          upperBound="-1" eType="#/0/DiffScore_score_option" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rulePattern_Factor" upperBound="-1"
+          eType="#/0/Factor" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rulePattern_Model" upperBound="-1"
+          eType="#/0/Model" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rulePattern_Option" upperBound="-1"
+          eType="#/0/Option" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rulePattern_Score" upperBound="-1"
+          eType="#/0/Score" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rulePattern_SemanticObject"
+          upperBound="-1" eType="#/0/SemanticObject" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rulePattern_Vendor" upperBound="-1"
+          eType="#/0/Vendor" containment="true"/>
+    </eClassifiers>
+  </ecore:EPackage>
+</xmi:XMI>

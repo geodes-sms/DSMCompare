@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Rule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_GuMvYNeYEeyEnrzG7GdwSg" name="PacmanEatFood2">
+  <parameters xmi:id="_GuMvYdeYEeyEnrzG7GdwSg" name="n0diff_kind_Left" kind="VAR">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </parameters>
+  <parameters xmi:id="_GuMvYteYEeyEnrzG7GdwSg" name="n0diff_kind_Right" kind="VAR">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </parameters>
+  <parameters xmi:id="_GuMvY9eYEeyEnrzG7GdwSg" name="n3diff_kind_Left" kind="VAR">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </parameters>
+  <parameters xmi:id="_GuMvZNeYEeyEnrzG7GdwSg" name="n3diff_kind_Right" kind="VAR">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </parameters>
+  <parameters xmi:id="_GuMvZdeYEeyEnrzG7GdwSg" name="n31diff_kind_Left" kind="VAR">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </parameters>
+  <parameters xmi:id="_GuMvZteYEeyEnrzG7GdwSg" name="n31diff_kind_Right" kind="VAR">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </parameters>
+  <parameters xmi:id="_GuMvZ9eYEeyEnrzG7GdwSg" name="n0score" kind="VAR">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </parameters>
+  <parameters xmi:id="_GuMvaNeYEeyEnrzG7GdwSg" name="n0new_score_Left" kind="VAR">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </parameters>
+  <parameters xmi:id="_GuMvadeYEeyEnrzG7GdwSg" name="n0new_score_Right" kind="VAR">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </parameters>
+  <lhs xmi:id="_GuMvateYEeyEnrzG7GdwSg" name="PacmanEatFood2_LHS">
+    <nodes xmi:id="_GuMva9eYEeyEnrzG7GdwSg" name="n0" outgoing="_GuMvedeYEeyEnrzG7GdwSg _GuMveteYEeyEnrzG7GdwSg _GuMve9eYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DiffGame"/>
+      <attributes xmi:id="_GuMvbNeYEeyEnrzG7GdwSg" value="n0diff_kind_Left">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//DiffGame/diff_kind_Left"/>
+      </attributes>
+      <attributes xmi:id="_GuMvbdeYEeyEnrzG7GdwSg" value="n0diff_kind_Right">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//DiffGame/diff_kind_Right"/>
+      </attributes>
+      <attributes xmi:id="_GuMvbteYEeyEnrzG7GdwSg" value="n0score">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//Game/score"/>
+      </attributes>
+      <attributes xmi:id="_GuMvb9eYEeyEnrzG7GdwSg" value="n0new_score_Left">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//DiffGame/new_score_Left"/>
+      </attributes>
+      <attributes xmi:id="_GuMvcNeYEeyEnrzG7GdwSg" value="n0new_score_Right">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//DiffGame/new_score_Right"/>
+      </attributes>
+    </nodes>
+    <nodes xmi:id="_GuMvcdeYEeyEnrzG7GdwSg" name="n1" incoming="_GuMvedeYEeyEnrzG7GdwSg _GuMvfNeYEeyEnrzG7GdwSg _GuMvfteYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//GridNode"/>
+    </nodes>
+    <nodes xmi:id="_GuMvcteYEeyEnrzG7GdwSg" name="n2" incoming="_GuMveteYEeyEnrzG7GdwSg" outgoing="_GuMvfNeYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DiffPacman"/>
+    </nodes>
+    <nodes xmi:id="_GuMvc9eYEeyEnrzG7GdwSg" name="n3" incoming="_GuMve9eYEeyEnrzG7GdwSg" outgoing="_GuMvfdeYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DiffFood"/>
+      <attributes xmi:id="_GuMvdNeYEeyEnrzG7GdwSg" value="n3diff_kind_Left">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//DiffFood/diff_kind_Left"/>
+      </attributes>
+      <attributes xmi:id="_GuMvddeYEeyEnrzG7GdwSg" value="n3diff_kind_Right">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//DiffFood/diff_kind_Right"/>
+      </attributes>
+    </nodes>
+    <nodes xmi:id="_GuMvdteYEeyEnrzG7GdwSg" name="n31" incoming="_GuMvfdeYEeyEnrzG7GdwSg" outgoing="_GuMvfteYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      <attributes xmi:id="_GuMvd9eYEeyEnrzG7GdwSg" value="n31diff_kind_Left">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+      </attributes>
+      <attributes xmi:id="_GuMveNeYEeyEnrzG7GdwSg" value="n31diff_kind_Right">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+      </attributes>
+    </nodes>
+    <edges xmi:id="_GuMvedeYEeyEnrzG7GdwSg" source="_GuMva9eYEeyEnrzG7GdwSg" target="_GuMvcdeYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+    </edges>
+    <edges xmi:id="_GuMveteYEeyEnrzG7GdwSg" source="_GuMva9eYEeyEnrzG7GdwSg" target="_GuMvcteYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game/entities"/>
+    </edges>
+    <edges xmi:id="_GuMve9eYEeyEnrzG7GdwSg" source="_GuMva9eYEeyEnrzG7GdwSg" target="_GuMvc9eYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game/entities"/>
+    </edges>
+    <edges xmi:id="_GuMvfNeYEeyEnrzG7GdwSg" source="_GuMvcteYEeyEnrzG7GdwSg" target="_GuMvcdeYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//PositionableEntity/on"/>
+    </edges>
+    <edges xmi:id="_GuMvfdeYEeyEnrzG7GdwSg" source="_GuMvc9eYEeyEnrzG7GdwSg" target="_GuMvdteYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+    </edges>
+    <edges xmi:id="_GuMvfteYEeyEnrzG7GdwSg" source="_GuMvdteYEeyEnrzG7GdwSg" target="_GuMvcdeYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+    </edges>
+  </lhs>
+  <rhs xmi:id="_GuMvf9eYEeyEnrzG7GdwSg" name="PacmanEatFood2_RHS">
+    <nodes xmi:id="_GuMvgNeYEeyEnrzG7GdwSg" name="n0" incoming="_GuMvkteYEeyEnrzG7GdwSg" outgoing="_GuMvjdeYEeyEnrzG7GdwSg _GuMvjteYEeyEnrzG7GdwSg _GuMvj9eYEeyEnrzG7GdwSg _GuMvkNeYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DiffGame"/>
+      <attributes xmi:id="_GuMvgdeYEeyEnrzG7GdwSg" value="n0diff_kind_Left">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//DiffGame/diff_kind_Left"/>
+      </attributes>
+      <attributes xmi:id="_GuMvgteYEeyEnrzG7GdwSg" value="n0diff_kind_Right">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//DiffGame/diff_kind_Right"/>
+      </attributes>
+      <attributes xmi:id="_GuMvg9eYEeyEnrzG7GdwSg" value="n0score">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//Game/score"/>
+      </attributes>
+      <attributes xmi:id="_GuMvhNeYEeyEnrzG7GdwSg" value="n0new_score_Left">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//DiffGame/new_score_Left"/>
+      </attributes>
+      <attributes xmi:id="_GuMvhdeYEeyEnrzG7GdwSg" value="n0new_score_Right">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//DiffGame/new_score_Right"/>
+      </attributes>
+    </nodes>
+    <nodes xmi:id="_GuMvhteYEeyEnrzG7GdwSg" name="n1" incoming="_GuMvjdeYEeyEnrzG7GdwSg _GuMvkdeYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//GridNode"/>
+    </nodes>
+    <nodes xmi:id="_GuMvh9eYEeyEnrzG7GdwSg" name="n2" incoming="_GuMvjteYEeyEnrzG7GdwSg _GuMvk9eYEeyEnrzG7GdwSg" outgoing="_GuMvkdeYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DiffPacman"/>
+    </nodes>
+    <nodes xmi:id="_GuMviNeYEeyEnrzG7GdwSg" name="n3" incoming="_GuMvj9eYEeyEnrzG7GdwSg _GuMvlNeYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DiffFood"/>
+      <attributes xmi:id="_GuMvideYEeyEnrzG7GdwSg" value="n3diff_kind_Left">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//DiffFood/diff_kind_Left"/>
+      </attributes>
+      <attributes xmi:id="_GuMviteYEeyEnrzG7GdwSg" value="n3diff_kind_Right">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//DiffFood/diff_kind_Right"/>
+      </attributes>
+    </nodes>
+    <nodes xmi:id="_GuMvi9eYEeyEnrzG7GdwSg" name="n4" incoming="_GuMvkNeYEeyEnrzG7GdwSg" outgoing="_GuMvkteYEeyEnrzG7GdwSg _GuMvk9eYEeyEnrzG7GdwSg _GuMvlNeYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DomainSpecificDiff"/>
+      <attributes xmi:id="_GuMvjNeYEeyEnrzG7GdwSg" value="&quot;Pacman Eat Food&quot;">
+        <type href="../../../../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/name"/>
+      </attributes>
+    </nodes>
+    <edges xmi:id="_GuMvjdeYEeyEnrzG7GdwSg" source="_GuMvgNeYEeyEnrzG7GdwSg" target="_GuMvhteYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+    </edges>
+    <edges xmi:id="_GuMvjteYEeyEnrzG7GdwSg" source="_GuMvgNeYEeyEnrzG7GdwSg" target="_GuMvh9eYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game/entities"/>
+    </edges>
+    <edges xmi:id="_GuMvj9eYEeyEnrzG7GdwSg" source="_GuMvgNeYEeyEnrzG7GdwSg" target="_GuMviNeYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game/entities"/>
+    </edges>
+    <edges xmi:id="_GuMvkNeYEeyEnrzG7GdwSg" source="_GuMvgNeYEeyEnrzG7GdwSg" target="_GuMvi9eYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game/domainspecificdiffs"/>
+    </edges>
+    <edges xmi:id="_GuMvkdeYEeyEnrzG7GdwSg" source="_GuMvh9eYEeyEnrzG7GdwSg" target="_GuMvhteYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//PositionableEntity/on"/>
+    </edges>
+    <edges xmi:id="_GuMvkteYEeyEnrzG7GdwSg" source="_GuMvi9eYEeyEnrzG7GdwSg" target="_GuMvgNeYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Game"/>
+    </edges>
+    <edges xmi:id="_GuMvk9eYEeyEnrzG7GdwSg" source="_GuMvi9eYEeyEnrzG7GdwSg" target="_GuMvh9eYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+    </edges>
+    <edges xmi:id="_GuMvlNeYEeyEnrzG7GdwSg" source="_GuMvi9eYEeyEnrzG7GdwSg" target="_GuMviNeYEeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+    </edges>
+  </rhs>
+  <mappings xmi:id="_GuMvldeYEeyEnrzG7GdwSg" origin="_GuMva9eYEeyEnrzG7GdwSg" image="_GuMvgNeYEeyEnrzG7GdwSg"/>
+  <mappings xmi:id="_GuMvlteYEeyEnrzG7GdwSg" origin="_GuMvcdeYEeyEnrzG7GdwSg" image="_GuMvhteYEeyEnrzG7GdwSg"/>
+  <mappings xmi:id="_GuMvl9eYEeyEnrzG7GdwSg" origin="_GuMvcteYEeyEnrzG7GdwSg" image="_GuMvh9eYEeyEnrzG7GdwSg"/>
+  <mappings xmi:id="_GuMvmNeYEeyEnrzG7GdwSg" origin="_GuMvc9eYEeyEnrzG7GdwSg" image="_GuMviNeYEeyEnrzG7GdwSg"/>
+</henshin:Rule>

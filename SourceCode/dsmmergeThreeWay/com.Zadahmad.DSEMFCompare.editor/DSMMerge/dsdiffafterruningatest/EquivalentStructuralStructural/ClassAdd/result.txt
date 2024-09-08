@@ -1,0 +1,42 @@
+Matches count 	:	1
+Diffs count 	:	4
+Conflicts count :	0
+Matched resources :
+Left = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/DSMMerge/versionsfortest/V1.xmi
+Right = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/DSMMerge/versionsfortest/V2.xmi
+origin = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/DSMMerge/versionsfortest/CA.xmi
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| pacmanDiffMM.impl.GameImpl@4cf8b2dc (id: 1, lives: 1, score: 1)| pacmanDiffMM.impl.GameImpl@61ce23ac (id: 1, lives: 1, score: 1)|
+| |-pacmanDiffMM.impl.GridNodeImpl@708400f6 (id: L)| |-pacmanDiffMM.impl.GridNodeImpl@3668d4 (id: L)|
+| |-pacmanDiffMM.impl.GridNodeImpl@5829e4f4 (id: O)| |-pacmanDiffMM.impl.GridNodeImpl@1c3b9394 (id: O)|
+| |-pacmanDiffMM.impl.GridNodeImpl@4218500f (id: R)| |-pacmanDiffMM.impl.GridNodeImpl@6f2cfcc2 (id: R)|
+| |-pacmanDiffMM.impl.PacmanImpl@4bff64c2 (id: P) (initialPosition: null)| |-pacmanDiffMM.impl.PacmanImpl@7f6f61c8 (id: P) (initialPosition: null)|
+| |-pacmanDiffMM.impl.FoodImpl@1b2c4efb (id: F) (value: 0)| |-pacmanDiffMM.impl.FoodImpl@4c2cc639 (id: F) (value: 0)|
+| |-pacmanDiffMM.impl.GhostImpl@c35172e (id: G) (strategy: Blinky)| |-pacmanDiffMM.impl.GhostImpl@ccb4b1b (id: G) (strategy: Blinky)|
+| |-pacmanDiffMM.impl.EnergizerImpl@c2db68f (id: E) (value: 0) (durations: [])| |-pacmanDiffMM.impl.EnergizerImpl@4097cac (id: E) (value: 0) (durations: [])|
+| |-pacmanDiffMM.impl.FruitImpl@3cc41abc (id: Fr) (value: 0)| |-pacmanDiffMM.impl.FruitImpl@ec2cc4 (id: Fr) (value: 0)|
+| |-pacmanDiffMM.impl.GhostImpl@4566d049 (id: G2) (strategy: Blinky)| |-pacmanDiffMM.impl.GhostImpl@2a5b3fee (id: G2) (strategy: Blinky)|
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+REFERENCE CHANGES
+
+ [CHANGE] value pacmanDiffMM.impl.GridNodeImpl@5829e4f4 (id: O) has been changed from reference on
+ of object pacmanDiffMM.impl.GhostImpl@4566d049 (id: G2) (strategy: Blinky)
+
+ [CHANGE] value pacmanDiffMM.impl.GridNodeImpl@1c3b9394 (id: O) has been remotely(RIGHT) changed from reference on
+ of object pacmanDiffMM.impl.GhostImpl@4566d049 (id: G2) (strategy: Blinky)
+
+ [ADD] value pacmanDiffMM.impl.GhostImpl@4566d049 (id: G2) (strategy: Blinky) has been added to reference entities
+ of object pacmanDiffMM.impl.GameImpl@4cf8b2dc (id: 1, lives: 1, score: 1)
+
+ [ADD] value pacmanDiffMM.impl.GhostImpl@2a5b3fee (id: G2) (strategy: Blinky) has been remotely(RIGHT) added to reference entities
+ of object pacmanDiffMM.impl.GameImpl@4cf8b2dc (id: 1, lives: 1, score: 1)
+
+ATTRIBUTE CHANGES
+
+CONFLICTS
+The end of transforming EMF-Diff to DSMC-Diff
+emf-Compare result transformed to Fine-Grained DsmdiffMM!

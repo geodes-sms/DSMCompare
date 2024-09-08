@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Rule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_hXb8ANeREeyEnrzG7GdwSg" name="addGridNode_right">
+  <lhs xmi:id="_hXb8AdeREeyEnrzG7GdwSg" name="addGridNode_right_LHS">
+    <nodes xmi:id="_hXb8AteREeyEnrzG7GdwSg" name="n0">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_hXb8A9eREeyEnrzG7GdwSg" name="n1">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//GridNode"/>
+    </nodes>
+  </lhs>
+  <rhs xmi:id="_hXb8BNeREeyEnrzG7GdwSg" name="addGridNode_right_RHS">
+    <nodes xmi:id="_hXb8BdeREeyEnrzG7GdwSg" name="n0" outgoing="_hXb8CNeREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_hXb8BteREeyEnrzG7GdwSg" name="n1" incoming="_hXb8CNeREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//GridNode"/>
+    </nodes>
+    <nodes xmi:id="_hXb8B9eREeyEnrzG7GdwSg" name="n2">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DiffGridNode_right"/>
+    </nodes>
+    <edges xmi:id="_hXb8CNeREeyEnrzG7GdwSg" source="_hXb8BdeREeyEnrzG7GdwSg" target="_hXb8BteREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+    </edges>
+  </rhs>
+  <mappings xmi:id="_hXb8CdeREeyEnrzG7GdwSg" origin="_hXb8AteREeyEnrzG7GdwSg" image="_hXb8BdeREeyEnrzG7GdwSg"/>
+  <mappings xmi:id="_hXb8CteREeyEnrzG7GdwSg" origin="_hXb8A9eREeyEnrzG7GdwSg" image="_hXb8BteREeyEnrzG7GdwSg"/>
+</henshin:Rule>

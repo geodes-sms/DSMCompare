@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pacman:Game
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:pacman="http://www.zadahmad.org/dsmcompare/pacman"
+    xsi:schemaLocation="http://www.zadahmad.org/dsmcompare/pacman ../metaModels/pacman.ecore"
+    id="1" score="1">
+  <gridnodes
+      right="O"
+      id="L"/>
+  <gridnodes
+      left="L"
+      right="R"
+      id="O"/>
+  <gridnodes
+      left="O"
+      id="R"/>
+  <entities
+      xsi:type="pacman:Pacman"
+      on="L"
+      id="P"/>
+  <entities
+      xsi:type="pacman:Food"
+      id="F"/>
+  <entities
+      xsi:type="pacman:Ghost"
+      on="R"
+      id="G"/>
+  <entities
+      xsi:type="pacman:Energizer"
+      id="E"/>
+  <entities
+      xsi:type="pacman:Fruit"
+      on="O"
+      id="Fr"/>
+</pacman:Game>

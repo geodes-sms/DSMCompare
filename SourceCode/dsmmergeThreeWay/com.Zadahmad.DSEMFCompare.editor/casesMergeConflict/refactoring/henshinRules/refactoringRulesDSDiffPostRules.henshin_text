@@ -1,0 +1,1383 @@
+ePackageImport  refactoringDiffMM
+
+		rule pullUpMethodPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n3:EClass
+				 preserve			node n6:SemanticDiff{
+					preserve	name = "\"pullUpMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n3:eclassifiers),
+					(preserve		n6->n1:SemanticObject_EClass),
+					(preserve		n6->n3:SemanticObject_EClass),
+					(preserve		n6->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpMethod2Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"pullUpMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpMethod3Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n22:DiffEClass_esupertypes
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"pullUpMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpMethod4Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n3:DiffEClass{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n6:DiffEClass_esupertypes
+				 preserve			node n7:SemanticDiff{
+					preserve	name = "\"pullUpMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n3:eclassifiers),
+					(preserve	n3->n6:diffesupertypes),
+					(preserve	n6->n1:eType),
+					(preserve		n7->n1:SemanticObject_EClass),
+					(preserve		n7->n3:SemanticObject_EClass),
+					(preserve		n7->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpMethod5Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n3:DiffEClass
+				 preserve			node n6:DiffEClass_esupertypes
+				 preserve			node n7:SemanticDiff{
+					preserve	name = "\"pullUpMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n3:eclassifiers),
+					(preserve	n3->n6:diffesupertypes),
+					(preserve	n6->n1:eType),
+					(preserve		n7->n1:SemanticObject_EClass),
+					(preserve		n7->n3:SemanticObject_EClass),
+					(preserve		n7->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpMethod6Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n3:DiffEClass{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n6:DiffEClass_esupertypes
+				 preserve			node n7:SemanticDiff{
+					preserve	name = "\"pullUpMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n3:eclassifiers),
+					(preserve	n3->n6:diffesupertypes),
+					(preserve	n6->n1:eType),
+					(preserve		n7->n1:SemanticObject_EClass),
+					(preserve		n7->n3:SemanticObject_EClass),
+					(preserve		n7->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownMethod33Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n2:EClass
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"pushDownMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n2:eclassifiers),
+					(preserve		n3->n2:SemanticObject_EClass),
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownMethodPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n4:EClass
+				 preserve			node n5:DiffEClass_eoperations{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n6:SemanticDiff{
+					preserve	name = "\"push-Down Method\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n4:eclassifiers),
+					(preserve	n4->n1:esupertypes),
+					(preserve	n4->n5:diffeoperations),
+					(preserve		n6->n1:SemanticObject_EClass),
+					(preserve		n6->n4:SemanticObject_EClass),
+					(preserve		n6->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownMethod2Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n2:EClass
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"push-Down Method\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n2:eclassifiers),
+					(preserve		n3->n2:SemanticObject_EClass),
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownMethod3Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n2:EClass
+				 preserve			node n22:DiffEClass_esupertypes{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"pushDownMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n2:eclassifiers),
+					(preserve	n2->n22:diffesupertypes),
+					(preserve		n3->n2:SemanticObject_EClass),
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownMethod4Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n6:DiffEClass_esupertypes{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n7:SemanticDiff{
+					preserve	name = "\"push-Down Method\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n7->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownMethod5Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n6:DiffEClass_esupertypes
+				 preserve			node n7:SemanticDiff{
+					preserve	name = "\"push-Down Method\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n6->n1:eType),
+					(preserve		n7->n1:SemanticObject_EClass),
+					(preserve		n7->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownMethod6Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n6:DiffEClass_esupertypes{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n7:SemanticDiff{
+					preserve	name = "\"push-Down Method\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n7->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpAttributePost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"pullUpAttribute\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpAttribute2Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n3:EClass
+				 preserve			node n5:SemanticDiff{
+					preserve	name = "\"pullUpAttribute\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n3:eclassifiers),
+					(preserve	n3->n1:esupertypes),
+					(preserve		n5->n1:SemanticObject_EClass),
+					(preserve		n5->n3:SemanticObject_EClass),
+					(preserve		n5->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpAttribute3Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n3:EClass
+				 preserve			node n5:DiffEClass_esupertypes
+				 preserve			node n6:SemanticDiff{
+					preserve	name = "\"pullUpAttribute\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n3:eclassifiers),
+					(preserve	n3->n5:diffesupertypes),
+					(preserve	n5->n1:eType),
+					(preserve		n6->n1:SemanticObject_EClass),
+					(preserve		n6->n3:SemanticObject_EClass),
+					(preserve		n6->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownAttributePost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n4:EClass
+				 preserve			node n5:DiffEClass_eattributes{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n6:SemanticDiff{
+					preserve	name = "\"pushDownAttribute\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n4:eclassifiers),
+					(preserve	n4->n1:esupertypes),
+					(preserve	n4->n5:diffeattributes),
+					(preserve		n6->n5:SemanticObject_DiffEClass_eattributes),
+					(preserve		n6->n1:SemanticObject_EClass),
+					(preserve		n6->n4:SemanticObject_EClass),
+					(preserve		n6->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownAttribute2Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n12:DiffEAttribute{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"pushDownAttribute\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n3->n12:SemanticObject_EAttribute),
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownAttribute3Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n22:DiffEClass_esupertypes
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"pushDownAttribute\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule changePackagePost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:DiffEClass
+				 preserve			node n2:SemanticDiff{
+					preserve	name = "\"changePackage\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve		n2->n1:SemanticObject_EClass),
+					(preserve		n2->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule extractAndMoveMethod2Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n3:EClass
+				 preserve			node n4:DiffEOperation{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n5:SemanticDiff{
+					preserve	name = "\"Extract And Move Method\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n3:eclassifiers),
+					(preserve	n3->n4:eoperations),
+					(preserve		n5->n1:SemanticObject_EClass),
+					(preserve		n5->n4:SemanticObject_EOperation),
+					(preserve		n5->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule extractAndMoveMethod3Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n3:EClass
+				 preserve			node n4:DiffEOperation{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n5:SemanticDiff{
+					preserve	name = "\"Extract And Move Method\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n3:eclassifiers),
+					(preserve	n3->n4:eoperations),
+					(preserve		n5->n1:SemanticObject_EClass),
+					(preserve		n5->n4:SemanticObject_EOperation),
+					(preserve		n5->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule extractInterfacePost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:DiffEClass
+				 preserve			node n2:SemanticDiff{
+					preserve	name = "\"extractInterface\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve		n2->n1:SemanticObject_EClass),
+					(preserve		n2->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule extractMethodPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n3:DiffEOperation{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n4:SemanticDiff{
+					preserve	name = "\"extractMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n1->n3:eoperations),
+					(preserve		n4->n1:SemanticObject_EClass),
+					(preserve		n4->n3:SemanticObject_EOperation),
+					(preserve		n4->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule extractMethod2Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n30:EClass
+				 preserve			node n4:SemanticDiff{
+					preserve	name = "\"extractMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n30:eclassifiers),
+					(preserve		n4->n1:SemanticObject_EClass),
+					(preserve		n4->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule extractMethod3Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n30:EClass
+				 preserve			node n4:SemanticDiff{
+					preserve	name = "\"extractMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n30:eclassifiers),
+					(preserve		n4->n1:SemanticObject_EClass),
+					(preserve		n4->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule extractMethod4Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n3:DiffEOperation{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n4:SemanticDiff{
+					preserve	name = "\"extractMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n1->n3:eoperations),
+					(preserve		n4->n1:SemanticObject_EClass),
+					(preserve		n4->n3:SemanticObject_EOperation),
+					(preserve		n4->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule extractSuperclassPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n7:DiffEClass_esupertypes{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"extractSuperclass\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n3->n7:SemanticObject_DiffEClass_esupertypes),
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule extractSuperclass2Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n3:EClass
+				 preserve			node n4:SemanticDiff{
+					preserve	name = "\"extractSuperclass\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n3:eclassifiers),
+					(preserve		n4->n1:SemanticObject_EClass),
+					(preserve		n4->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule extractSuperclassAttrPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n8:DiffEClass_eattributes{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"extractSuperclassAttr\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n3->n8:SemanticObject_DiffEClass_eattributes),
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule extractSuperclassRefPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n8:DiffEClass_ereferences{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"extractSuperclassRef\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n3->n8:SemanticObject_DiffEClass_ereferences),
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule moveAndRenameClassPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n1:EPackage
+				 preserve			node n2:DiffEClass
+				 preserve			node n4:SemanticDiff{
+					preserve	name = "\"moveClass\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n1->n2:eclassifiers),
+					(forbid		n4->n2:SemanticObject_EClass),
+					(forbid		n4->n1:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule moveClass4Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n5:DiffEPackage_eclassifiers{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n6:SemanticDiff{
+					preserve	name = "\"moveClass\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n5:diffeclassifiers),
+					(forbid		n6->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule moveClass3Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n3:EClass
+				 preserve			node n4:SemanticDiff{
+					preserve	name = "\"moveClass\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n3:eclassifiers),
+					(preserve		n4->n3:SemanticObject_EClass),
+					(preserve		n4->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule moveClassPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n2:DiffEClass{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"moveClass\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n2:eclassifiers),
+					(preserve		n3->n2:SemanticObject_EClass),
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule moveClass2Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n3:DiffEPackage_eclassifiers{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n4:SemanticDiff{
+					preserve	name = "\"moveClass\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n3:diffeclassifiers),
+					(preserve		n4->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule moveMethodPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n6:DiffEClass_eoperations{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"moveMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n3->n6:SemanticObject_DiffEClass_eoperations),
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule moveMethod2Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n3:EClass
+				 preserve			node n4:DiffEOperation{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n5:SemanticDiff{
+					preserve	name = "\"moveMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n3:eclassifiers),
+					(preserve	n3->n4:eoperations),
+					(preserve		n5->n1:SemanticObject_EClass),
+					(preserve		n5->n3:SemanticObject_EClass),
+					(preserve		n5->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule moveMethod3Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n3:EClass
+				 preserve			node n4:DiffEOperation{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n5:SemanticDiff{
+					preserve	name = "\"moveMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n3:eclassifiers),
+					(preserve	n3->n4:eoperations),
+					(preserve		n5->n1:SemanticObject_EClass),
+					(preserve		n5->n3:SemanticObject_EClass),
+					(preserve		n5->n4:SemanticObject_EOperation),
+					(preserve		n5->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule moveAttributePost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n6:DiffEClass_eattributes{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"moveAttribute\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n3->n6:SemanticObject_DiffEClass_eattributes),
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule moveAttribute2Post(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n3:EClass
+				 preserve			node n4:DiffEAttribute{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n5:SemanticDiff{
+					preserve	name = "\"moveAttribute\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n0->n3:eclassifiers),
+					(preserve	n3->n4:eattributes),
+					(preserve		n5->n4:SemanticObject_EAttribute),
+					(preserve		n5->n1:SemanticObject_EClass),
+					(preserve		n5->n3:SemanticObject_EClass),
+					(preserve		n5->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule renameClassPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n1:EPackage
+				 preserve			node n2:DiffEClass
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"renameClass\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n1->n2:eclassifiers),
+					(preserve		n3->n2:SemanticObject_EClass),
+					(preserve		n3->n1:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule renameMethodPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n2:DiffEOperation
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"renameMethod\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n1->n2:eoperations),
+					(preserve		n3->n1:SemanticObject_EClass),
+					(preserve		n3->n2:SemanticObject_EOperation),
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule renameAttributePost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n1:EClass
+				 preserve			node n2:DiffEAttribute
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"renameAttribute\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve	n0->n1:eclassifiers),
+					(preserve	n1->n2:eattributes),
+					(preserve		n3->n2:SemanticObject_EAttribute),
+					(preserve		n3->n1:SemanticObject_EClass),
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule flattenHierarchyAttrPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"flattenHierarchyAttr\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule mergeMetaClassAttrPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n5:SemanticDiff{
+					preserve	name = "\"mergeMetaClassAttr\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n5->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule mergeRefrencesPost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n5:SemanticDiff{
+					preserve	name = "\"mergeRefrences\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n5->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownRefrencePost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n9:DiffEClass_ereferences{
+					preserve	changeStatus 	= 	nPostchangeStatus
+					preserve	diff_kind_Left 	= 	nPostdiff_kind_Left
+					preserve	diff_kind_Right	= 	nPostdiff_kind_Right
+				}
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"pushDownRefrence\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n3->n9:SemanticObject_DiffEClass_ereferences),
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpRefrencePost(VAR nPostchangeStatus:EString, VAR nPostdiff_kind_Left:EString, VAR nPostdiff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage
+				 preserve			node n3:SemanticDiff{
+					preserve	name = "\"pullUpRefrence\""
+					create		author		=  "(nPostchangeStatus.toString().replace('EQUIVALENT','EQUAL') + nPostdiff_kind_Right.toString().replaceAll('ADD|DELETE|MODIFY','RIGHT') +  nPostdiff_kind_Left.toString().replaceAll('ADD|DELETE|MODIFY','LEFT')).replaceAll('NON','').replaceAll('EQUALRIGHTLEFT|RIGHTLEFT','EQUAL');"
+				}
+			edges[
+					(preserve		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+	unit unitSequntialStar(){
+		unitpullUpMethodPostStar()
+		unitpullUpMethod2PostStar()
+		unitpullUpMethod3PostStar()
+		unitpullUpMethod4PostStar()
+		unitpullUpMethod5PostStar()
+		unitpullUpMethod6PostStar()
+		unitpushDownMethod33PostStar()
+		unitpushDownMethodPostStar()
+		unitpushDownMethod2PostStar()
+		unitpushDownMethod3PostStar()
+		unitpushDownMethod4PostStar()
+		unitpushDownMethod5PostStar()
+		unitpushDownMethod6PostStar()
+		unitpullUpAttributePostStar()
+		unitpullUpAttribute2PostStar()
+		unitpullUpAttribute3PostStar()
+		unitpushDownAttributePostStar()
+		unitpushDownAttribute2PostStar()
+		unitpushDownAttribute3PostStar()
+		unitchangePackagePostStar()
+		unitextractAndMoveMethod2PostStar()
+		unitextractAndMoveMethod3PostStar()
+		unitextractInterfacePostStar()
+		unitextractMethodPostStar()
+		unitextractMethod2PostStar()
+		unitextractMethod3PostStar()
+		unitextractMethod4PostStar()
+		unitextractSuperclassPostStar()
+		unitextractSuperclass2PostStar()
+		unitextractSuperclassAttrPostStar()
+		unitextractSuperclassRefPostStar()
+		unitmoveAndRenameClassPostStar()
+		unitmoveClass4PostStar()
+		unitmoveClass3PostStar()
+		unitmoveClassPostStar()
+		unitmoveClass2PostStar()
+		unitmoveMethodPostStar()
+		unitmoveMethod2PostStar()
+		unitmoveMethod3PostStar()
+		unitmoveAttributePostStar()
+		unitmoveAttribute2PostStar()
+		unitrenameClassPostStar()
+		unitrenameMethodPostStar()
+		unitrenameAttributePostStar()
+		unitflattenHierarchyAttrPostStar()
+		unitmergeMetaClassAttrPostStar()
+		unitmergeRefrencesPostStar()
+		unitpushDownRefrencePostStar()
+		unitpullUpRefrencePostStar()
+	}
+	unit unitpullUpMethodPostStar(){
+		while{
+			pullUpMethodPost()
+		}
+	}
+	unit unitpullUpMethod2PostStar(){
+		while{
+			pullUpMethod2Post()
+		}
+	}
+	unit unitpullUpMethod3PostStar(){
+		while{
+			pullUpMethod3Post()
+		}
+	}
+	unit unitpullUpMethod4PostStar(){
+		while{
+			pullUpMethod4Post()
+		}
+	}
+	unit unitpullUpMethod5PostStar(){
+		while{
+			pullUpMethod5Post()
+		}
+	}
+	unit unitpullUpMethod6PostStar(){
+		while{
+			pullUpMethod6Post()
+		}
+	}
+	unit unitpushDownMethod33PostStar(){
+		while{
+			pushDownMethod33Post()
+		}
+	}
+	unit unitpushDownMethodPostStar(){
+		while{
+			pushDownMethodPost()
+		}
+	}
+	unit unitpushDownMethod2PostStar(){
+		while{
+			pushDownMethod2Post()
+		}
+	}
+	unit unitpushDownMethod3PostStar(){
+		while{
+			pushDownMethod3Post()
+		}
+	}
+	unit unitpushDownMethod4PostStar(){
+		while{
+			pushDownMethod4Post()
+		}
+	}
+	unit unitpushDownMethod5PostStar(){
+		while{
+			pushDownMethod5Post()
+		}
+	}
+	unit unitpushDownMethod6PostStar(){
+		while{
+			pushDownMethod6Post()
+		}
+	}
+	unit unitpullUpAttributePostStar(){
+		while{
+			pullUpAttributePost()
+		}
+	}
+	unit unitpullUpAttribute2PostStar(){
+		while{
+			pullUpAttribute2Post()
+		}
+	}
+	unit unitpullUpAttribute3PostStar(){
+		while{
+			pullUpAttribute3Post()
+		}
+	}
+	unit unitpushDownAttributePostStar(){
+		while{
+			pushDownAttributePost()
+		}
+	}
+	unit unitpushDownAttribute2PostStar(){
+		while{
+			pushDownAttribute2Post()
+		}
+	}
+	unit unitpushDownAttribute3PostStar(){
+		while{
+			pushDownAttribute3Post()
+		}
+	}
+	unit unitchangePackagePostStar(){
+		while{
+			changePackagePost()
+		}
+	}
+	unit unitextractAndMoveMethod2PostStar(){
+		while{
+			extractAndMoveMethod2Post()
+		}
+	}
+	unit unitextractAndMoveMethod3PostStar(){
+		while{
+			extractAndMoveMethod3Post()
+		}
+	}
+	unit unitextractInterfacePostStar(){
+		while{
+			extractInterfacePost()
+		}
+	}
+	unit unitextractMethodPostStar(){
+		while{
+			extractMethodPost()
+		}
+	}
+	unit unitextractMethod2PostStar(){
+		while{
+			extractMethod2Post()
+		}
+	}
+	unit unitextractMethod3PostStar(){
+		while{
+			extractMethod3Post()
+		}
+	}
+	unit unitextractMethod4PostStar(){
+		while{
+			extractMethod4Post()
+		}
+	}
+	unit unitextractSuperclassPostStar(){
+		while{
+			extractSuperclassPost()
+		}
+	}
+	unit unitextractSuperclass2PostStar(){
+		while{
+			extractSuperclass2Post()
+		}
+	}
+	unit unitextractSuperclassAttrPostStar(){
+		while{
+			extractSuperclassAttrPost()
+		}
+	}
+	unit unitextractSuperclassRefPostStar(){
+		while{
+			extractSuperclassRefPost()
+		}
+	}
+	unit unitmoveAndRenameClassPostStar(){
+		while{
+			moveAndRenameClassPost()
+		}
+	}
+	unit unitmoveClass4PostStar(){
+		while{
+			moveClass4Post()
+		}
+	}
+	unit unitmoveClass3PostStar(){
+		while{
+			moveClass3Post()
+		}
+	}
+	unit unitmoveClassPostStar(){
+		while{
+			moveClassPost()
+		}
+	}
+	unit unitmoveClass2PostStar(){
+		while{
+			moveClass2Post()
+		}
+	}
+	unit unitmoveMethodPostStar(){
+		while{
+			moveMethodPost()
+		}
+	}
+	unit unitmoveMethod2PostStar(){
+		while{
+			moveMethod2Post()
+		}
+	}
+	unit unitmoveMethod3PostStar(){
+		while{
+			moveMethod3Post()
+		}
+	}
+	unit unitmoveAttributePostStar(){
+		while{
+			moveAttributePost()
+		}
+	}
+	unit unitmoveAttribute2PostStar(){
+		while{
+			moveAttribute2Post()
+		}
+	}
+	unit unitrenameClassPostStar(){
+		while{
+			renameClassPost()
+		}
+	}
+	unit unitrenameMethodPostStar(){
+		while{
+			renameMethodPost()
+		}
+	}
+	unit unitrenameAttributePostStar(){
+		while{
+			renameAttributePost()
+		}
+	}
+	unit unitflattenHierarchyAttrPostStar(){
+		while{
+			flattenHierarchyAttrPost()
+		}
+	}
+	unit unitmergeMetaClassAttrPostStar(){
+		while{
+			mergeMetaClassAttrPost()
+		}
+	}
+	unit unitmergeRefrencesPostStar(){
+		while{
+			mergeRefrencesPost()
+		}
+	}
+	unit unitpushDownRefrencePostStar(){
+		while{
+			pushDownRefrencePost()
+		}
+	}
+	unit unitpullUpRefrencePostStar(){
+		while{
+			pullUpRefrencePost()
+		}
+	}

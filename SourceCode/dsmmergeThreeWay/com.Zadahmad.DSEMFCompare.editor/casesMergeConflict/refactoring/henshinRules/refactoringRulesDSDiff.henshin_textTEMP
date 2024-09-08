@@ -1,0 +1,2227 @@
+ePackageImport  refactoringDiffMM
+
+		rule pullUpMethod(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n5diff_kind_Left:EString,VAR n5diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEClass_eoperations{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+				}			      		
+				 preserve			node n3:EClass			      		
+				 preserve			node n4:EOperation			      		
+				 delete				node n5:DiffEClass_eoperations{
+					delete diff_kind_Left = n5diff_kind_Left
+					delete diff_kind_Right = n5diff_kind_Right
+				}
+				 create				node n6:SemanticDiff{
+					create name = "\"pullUpMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(preserve	n1->n2:diffeoperations),
+			  		(preserve	n2->n4:eType),
+			  		(preserve	n3->n4:eoperations),
+			  		(delete		n3->n5:diffeoperations),
+			  		(delete		n5->n4:eType),
+			  		(create		n6->n1:SemanticObject_EClass),
+			  		(create		n6->n3:SemanticObject_EClass),
+			  		(create		n6->n4:SemanticObject_EOperation),
+			  		(create		n6->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"ADD\"") AND (n5diff_kind_Left == "\"DELETE\"")) OR ((n2diff_kind_Right == "\"ADD\"") AND (n5diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpMethod2(VAR n11diff_kind_Left:EString,VAR n11diff_kind_Right:EString,VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n11name:EString,VAR n12name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:EClass			      		
+				 preserve			node n11:DiffEOperation{
+					preserve diff_kind_Left = n11diff_kind_Left
+					preserve diff_kind_Right = n11diff_kind_Right
+					preserve name =  n11name
+				}			      		
+				 delete				node n12:DiffEOperation{
+					delete diff_kind_Left = n12diff_kind_Left
+					delete diff_kind_Right = n12diff_kind_Right
+					delete name =  n12name
+				}
+				 create				node n3:SemanticDiff{
+					create name = "\"pullUpMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n1->n11:eoperations),
+			  		(delete		n2->n12:eoperations),
+			  		(preserve	n2->n1:esupertypes),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n11:SemanticObject_EOperation),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n11name == n12name) AND (n11diff_kind_Left == "\"ADD\"") AND (n12diff_kind_Left == "\"DELETE\"")) OR ((n11name == n12name) AND (n11diff_kind_Right == "\"ADD\"") AND (n12diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpMethod3(VAR n11diff_kind_Left:EString,VAR n11diff_kind_Right:EString,VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n22diff_kind_Left:EString,VAR n22diff_kind_Right:EString,VAR n11name:EString,VAR n12name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:EClass			      		
+				 preserve			node n11:DiffEOperation{
+					preserve diff_kind_Left = n11diff_kind_Left
+					preserve diff_kind_Right = n11diff_kind_Right
+					preserve name =  n11name
+				}			      		
+				 delete				node n12:DiffEOperation{
+					delete diff_kind_Left = n12diff_kind_Left
+					delete diff_kind_Right = n12diff_kind_Right
+					delete name =  n12name
+				}
+				 preserve			node n22:DiffEClass_esupertypes{
+					preserve diff_kind_Left = n22diff_kind_Left
+					preserve diff_kind_Right = n22diff_kind_Right
+				}			      		
+				 create				node n3:SemanticDiff{
+					create name = "\"pullUpMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n1->n11:eoperations),
+			  		(delete		n2->n12:eoperations),
+			  		(preserve	n2->n22:diffesupertypes),
+			  		(preserve	n22->n1:eType),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n11:SemanticObject_EOperation),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n11name == n12name) AND (n11diff_kind_Left == "\"ADD\"") AND (n12diff_kind_Left == "\"DELETE\"") AND (n22diff_kind_Left == "\"NON\"")) OR ((n11name == n12name) AND (n11diff_kind_Right == "\"ADD\"") AND (n12diff_kind_Right == "\"DELETE\"") AND (n22diff_kind_Right == "\"NON\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpMethod4(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n5diff_kind_Left:EString,VAR n5diff_kind_Right:EString,VAR n6diff_kind_Left:EString,VAR n6diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEClass_eoperations{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+				}			      		
+				 preserve			node n3:DiffEClass{
+					preserve diff_kind_Left = n3diff_kind_Left
+					preserve diff_kind_Right = n3diff_kind_Right
+				}			      		
+				 preserve			node n4:DiffEOperation{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+				}			      		
+				 preserve			node n5:DiffEClass_eoperations{
+					preserve diff_kind_Left = n5diff_kind_Left
+					preserve diff_kind_Right = n5diff_kind_Right
+				}			      		
+				 preserve			node n6:DiffEClass_esupertypes{
+					preserve diff_kind_Left = n6diff_kind_Left
+					preserve diff_kind_Right = n6diff_kind_Right
+				}			      		
+				 create				node n7:SemanticDiff{
+					create name = "\"pullUpMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(preserve	n1->n2:diffeoperations),
+			  		(preserve	n2->n4:eType),
+			  		(preserve	n3->n4:eoperations),
+			  		(preserve	n3->n5:diffeoperations),
+			  		(preserve	n3->n6:diffesupertypes),
+			  		(preserve	n5->n4:eType),
+			  		(preserve	n6->n1:eType),
+			  		(create		n7->n1:SemanticObject_EClass),
+			  		(create		n7->n3:SemanticObject_EClass),
+			  		(create		n7->n4:SemanticObject_EOperation),
+			  		(create		n7->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"ADD\"") AND (n3diff_kind_Left == "\"DELETE\"") AND (n4diff_kind_Left == "\"DELETE\"") AND (n5diff_kind_Left == "\"DELETE\"") AND (n6diff_kind_Left == "\"DELETE\"")) OR ((n2diff_kind_Right == "\"ADD\"") AND (n3diff_kind_Right == "\"DELETE\"") AND (n4diff_kind_Right == "\"DELETE\"") AND (n5diff_kind_Right == "\"DELETE\"") AND (n6diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpMethod5(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n5diff_kind_Left:EString,VAR n5diff_kind_Right:EString,VAR n6diff_kind_Left:EString,VAR n6diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEClass_eoperations{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+				}			      		
+				 preserve			node n3:DiffEClass{
+					preserve diff_kind_Left = n3diff_kind_Left
+					preserve diff_kind_Right = n3diff_kind_Right
+				}			      		
+				 preserve			node n4:DiffEOperation{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+				}			      		
+				 preserve			node n5:DiffEClass_eoperations{
+					preserve diff_kind_Left = n5diff_kind_Left
+					preserve diff_kind_Right = n5diff_kind_Right
+				}			      		
+				 preserve			node n6:DiffEClass_esupertypes{
+					preserve diff_kind_Left = n6diff_kind_Left
+					preserve diff_kind_Right = n6diff_kind_Right
+				}			      		
+				 create				node n7:SemanticDiff{
+					create name = "\"pullUpMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(preserve	n1->n2:diffeoperations),
+			  		(preserve	n2->n4:eType),
+			  		(preserve	n3->n4:eoperations),
+			  		(preserve	n3->n5:diffeoperations),
+			  		(preserve	n3->n6:diffesupertypes),
+			  		(preserve	n5->n4:eType),
+			  		(preserve	n6->n1:eType),
+			  		(create		n7->n1:SemanticObject_EClass),
+			  		(create		n7->n3:SemanticObject_EClass),
+			  		(create		n7->n4:SemanticObject_EOperation),
+			  		(create		n7->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"NON\"") AND (n3diff_kind_Left == "\"NON\"") AND (n4diff_kind_Left == "\"NON\"") AND (n5diff_kind_Left == "\"NON\"") AND (n6diff_kind_Left == "\"NON\"")) OR ((n2diff_kind_Right == "\"NON\"") AND (n3diff_kind_Right == "\"NON\"") AND (n4diff_kind_Right == "\"NON\"") AND (n5diff_kind_Right == "\"NON\"") AND (n6diff_kind_Right == "\"NON\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpMethod6(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n5diff_kind_Left:EString,VAR n5diff_kind_Right:EString,VAR n6diff_kind_Left:EString,VAR n6diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEClass_eoperations{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+				}			      		
+				 preserve			node n3:DiffEClass{
+					preserve diff_kind_Left = n3diff_kind_Left
+					preserve diff_kind_Right = n3diff_kind_Right
+				}			      		
+				 preserve			node n4:DiffEOperation{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+				}			      		
+				 preserve			node n5:DiffEClass_eoperations{
+					preserve diff_kind_Left = n5diff_kind_Left
+					preserve diff_kind_Right = n5diff_kind_Right
+				}			      		
+				 preserve			node n6:DiffEClass_esupertypes{
+					preserve diff_kind_Left = n6diff_kind_Left
+					preserve diff_kind_Right = n6diff_kind_Right
+				}			      		
+				 create				node n7:SemanticDiff{
+					create name = "\"pullUpMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(preserve	n1->n2:diffeoperations),
+			  		(preserve	n2->n4:eType),
+			  		(preserve	n3->n4:eoperations),
+			  		(preserve	n3->n5:diffeoperations),
+			  		(preserve	n3->n6:diffesupertypes),
+			  		(preserve	n5->n4:eType),
+			  		(preserve	n6->n1:eType),
+			  		(create		n7->n1:SemanticObject_EClass),
+			  		(create		n7->n3:SemanticObject_EClass),
+			  		(create		n7->n4:SemanticObject_EOperation),
+			  		(create		n7->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"ADD\"") AND (n3diff_kind_Left == "\"DELETE\"") AND (n4diff_kind_Left == "\"DELETE\"") AND (n5diff_kind_Left == "\"DELETE\"") AND (n6diff_kind_Left == "\"DELETE\"")) OR ((n2diff_kind_Right == "\"ADD\"") AND (n3diff_kind_Right == "\"DELETE\"") AND (n4diff_kind_Right == "\"DELETE\"") AND (n5diff_kind_Right == "\"DELETE\"") AND (n6diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownMethod33(VAR n11diff_kind_Left:EString,VAR n11diff_kind_Right:EString,VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n1name:EString,VAR n2extends:EString,VAR n11name:EString,VAR n12name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass{
+					preserve name =  n1name
+				}			      		
+				 preserve			node n2:EClass{
+					preserve extends =  n2extends
+				}			      		
+				 preserve			node n11:DiffEOperation{
+					preserve diff_kind_Left = n11diff_kind_Left
+					preserve diff_kind_Right = n11diff_kind_Right
+					preserve name =  n11name
+				}			      		
+				 delete				node n12:DiffEOperation{
+					delete diff_kind_Left = n12diff_kind_Left
+					delete diff_kind_Right = n12diff_kind_Right
+					delete name =  n12name
+				}
+				 create				node n3:SemanticDiff{
+					create name = "\"pushDownMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(delete		n1->n12:eoperations),
+			  		(preserve	n2->n11:eoperations),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n11:SemanticObject_EOperation),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n1name  != "null" ) AND (n1name  != "\"\"" ) AND (n2extends  != "null" ) AND (n2extends  != "\"\"" ) AND (n11name  != "null" ) AND (n11name  != "\"\"" ) AND (n12name  != "null" ) AND (n12name  != "\"\"" ) AND (n11name == n12name) AND ("n2extends.trim().contains(n1name.trim().replace('return;',''))" == 'true') AND (n11diff_kind_Left == "\"ADD\"") AND (n12diff_kind_Left == "\"DELETE\"")) OR ((n1name  != "null" ) AND (n1name  != "\"\"" ) AND (n2extends  != "null" ) AND (n2extends  != "\"\"" ) AND (n11name  != "null" ) AND (n11name  != "\"\"" ) AND (n12name  != "null" ) AND (n12name  != "\"\"" ) AND (n11name == n12name) AND ("n2extends.trim().contains(n1name.trim().replace('return;',''))" == 'true') AND (n11diff_kind_Right == "\"ADD\"") AND (n12diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownMethod(VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n5diff_kind_Left:EString,VAR n5diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:EOperation			      		
+				 delete				node n3:DiffEClass_eoperations{
+					delete diff_kind_Left = n3diff_kind_Left
+					delete diff_kind_Right = n3diff_kind_Right
+				}
+				 preserve			node n4:EClass			      		
+				 preserve			node n5:DiffEClass_eoperations{
+					preserve diff_kind_Left = n5diff_kind_Left
+					preserve diff_kind_Right = n5diff_kind_Right
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"push-Down Method\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n4:eclassifiers),
+			  		(preserve	n1->n2:eoperations),
+			  		(delete		n1->n3:diffeoperations),
+			  		(delete		n3->n2:eType),
+			  		(preserve	n4->n1:esupertypes),
+			  		(preserve	n4->n5:diffeoperations),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n1:SemanticObject_EClass),
+			  		(create		n6->n4:SemanticObject_EClass),
+			  		(create		n6->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n3diff_kind_Left == "\"DELETE\"") AND (n5diff_kind_Left == "\"ADD\"")) OR ((n3diff_kind_Right == "\"DELETE\"") AND (n5diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownMethod2(VAR n11diff_kind_Left:EString,VAR n11diff_kind_Right:EString,VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n11name:EString,VAR n12name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:EClass			      		
+				 preserve			node n11:DiffEOperation{
+					preserve diff_kind_Left = n11diff_kind_Left
+					preserve diff_kind_Right = n11diff_kind_Right
+					preserve name =  n11name
+				}			      		
+				 delete				node n12:DiffEOperation{
+					delete diff_kind_Left = n12diff_kind_Left
+					delete diff_kind_Right = n12diff_kind_Right
+					delete name =  n12name
+				}
+				 create				node n3:SemanticDiff{
+					create name = "\"push-Down Method\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(delete		n1->n12:eoperations),
+			  		(preserve	n2->n11:eoperations),
+			  		(preserve	n2->n1:esupertypes),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n11:SemanticObject_EOperation),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n11name == n12name) AND (n11diff_kind_Left == "\"ADD\"") AND (n12diff_kind_Left == "\"DELETE\"")) OR ((n11name == n12name) AND (n11diff_kind_Right == "\"ADD\"") AND (n12diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownMethod3(VAR n11diff_kind_Left:EString,VAR n11diff_kind_Right:EString,VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n22diff_kind_Left:EString,VAR n22diff_kind_Right:EString,VAR n11name:EString,VAR n12name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:EClass			      		
+				 preserve			node n11:DiffEOperation{
+					preserve diff_kind_Left = n11diff_kind_Left
+					preserve diff_kind_Right = n11diff_kind_Right
+					preserve name =  n11name
+				}			      		
+				 delete				node n12:DiffEOperation{
+					delete diff_kind_Left = n12diff_kind_Left
+					delete diff_kind_Right = n12diff_kind_Right
+					delete name =  n12name
+				}
+				 preserve			node n22:DiffEClass_esupertypes{
+					preserve diff_kind_Left = n22diff_kind_Left
+					preserve diff_kind_Right = n22diff_kind_Right
+				}			      		
+				 create				node n3:SemanticDiff{
+					create name = "\"pushDownMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(delete		n1->n12:eoperations),
+			  		(preserve	n2->n11:eoperations),
+			  		(preserve	n2->n22:diffesupertypes),
+			  		(preserve	n22->n1:eType),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n11:SemanticObject_EOperation),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n11name == n12name) AND (n11diff_kind_Left == "\"ADD\"") AND (n12diff_kind_Left == "\"DELETE\"") AND (n22diff_kind_Left == "\"ADD\"")) OR ((n11name == n12name) AND (n11diff_kind_Right == "\"ADD\"") AND (n12diff_kind_Right == "\"DELETE\"") AND (n22diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownMethod4(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n5diff_kind_Left:EString,VAR n5diff_kind_Right:EString,VAR n6diff_kind_Left:EString,VAR n6diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEClass_eoperations{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+				}			      		
+				 preserve			node n3:DiffEClass{
+					preserve diff_kind_Left = n3diff_kind_Left
+					preserve diff_kind_Right = n3diff_kind_Right
+				}			      		
+				 preserve			node n4:DiffEOperation{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+				}			      		
+				 preserve			node n5:DiffEClass_eoperations{
+					preserve diff_kind_Left = n5diff_kind_Left
+					preserve diff_kind_Right = n5diff_kind_Right
+				}			      		
+				 preserve			node n6:DiffEClass_esupertypes{
+					preserve diff_kind_Left = n6diff_kind_Left
+					preserve diff_kind_Right = n6diff_kind_Right
+				}			      		
+				 create				node n7:SemanticDiff{
+					create name = "\"push-Down Method\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(preserve	n1->n4:eoperations),
+			  		(preserve	n1->n5:diffeoperations),
+			  		(preserve	n2->n4:eType),
+			  		(preserve	n3->n2:diffeoperations),
+			  		(preserve	n3->n6:diffesupertypes),
+			  		(preserve	n5->n4:eType),
+			  		(preserve	n6->n1:eType),
+			  		(create		n7->n1:SemanticObject_EClass),
+			  		(create		n7->n3:SemanticObject_EClass),
+			  		(create		n7->n4:SemanticObject_EOperation),
+			  		(create		n7->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"ADD\"") AND (n3diff_kind_Left == "\"ADD\"") AND (n4diff_kind_Left == "\"DELETE\"") AND (n5diff_kind_Left == "\"DELETE\"") AND (n6diff_kind_Left == "\"ADD\"")) OR ((n2diff_kind_Right == "\"ADD\"") AND (n3diff_kind_Right == "\"ADD\"") AND (n4diff_kind_Right == "\"DELETE\"") AND (n5diff_kind_Right == "\"DELETE\"") AND (n6diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownMethod5(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n5diff_kind_Left:EString,VAR n5diff_kind_Right:EString,VAR n6diff_kind_Left:EString,VAR n6diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEClass_eoperations{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+				}			      		
+				 preserve			node n3:DiffEClass{
+					preserve diff_kind_Left = n3diff_kind_Left
+					preserve diff_kind_Right = n3diff_kind_Right
+				}			      		
+				 preserve			node n4:DiffEOperation{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+				}			      		
+				 preserve			node n5:DiffEClass_eoperations{
+					preserve diff_kind_Left = n5diff_kind_Left
+					preserve diff_kind_Right = n5diff_kind_Right
+				}			      		
+				 preserve			node n6:DiffEClass_esupertypes{
+					preserve diff_kind_Left = n6diff_kind_Left
+					preserve diff_kind_Right = n6diff_kind_Right
+				}			      		
+				 create				node n7:SemanticDiff{
+					create name = "\"push-Down Method\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(preserve	n1->n4:eoperations),
+			  		(preserve	n1->n2:diffeoperations),
+			  		(preserve	n2->n4:eType),
+			  		(preserve	n3->n5:diffeoperations),
+			  		(preserve	n3->n6:diffesupertypes),
+			  		(preserve	n5->n4:eType),
+			  		(preserve	n6->n1:eType),
+			  		(create		n7->n1:SemanticObject_EClass),
+			  		(create		n7->n3:SemanticObject_EClass),
+			  		(create		n7->n4:SemanticObject_EOperation),
+			  		(create		n7->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"NON\"") AND (n3diff_kind_Left == "\"NON\"") AND (n4diff_kind_Left == "\"NON\"") AND (n5diff_kind_Left == "\"NON\"") AND (n6diff_kind_Left == "\"NON\"")) OR ((n2diff_kind_Right == "\"NON\"") AND (n3diff_kind_Right == "\"NON\"") AND (n4diff_kind_Right == "\"NON\"") AND (n5diff_kind_Right == "\"NON\"") AND (n6diff_kind_Right == "\"NON\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownMethod6(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n5diff_kind_Left:EString,VAR n5diff_kind_Right:EString,VAR n6diff_kind_Left:EString,VAR n6diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEClass_eoperations{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+				}			      		
+				 preserve			node n3:DiffEClass{
+					preserve diff_kind_Left = n3diff_kind_Left
+					preserve diff_kind_Right = n3diff_kind_Right
+				}			      		
+				 preserve			node n4:DiffEOperation{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+				}			      		
+				 preserve			node n5:DiffEClass_eoperations{
+					preserve diff_kind_Left = n5diff_kind_Left
+					preserve diff_kind_Right = n5diff_kind_Right
+				}			      		
+				 preserve			node n6:DiffEClass_esupertypes{
+					preserve diff_kind_Left = n6diff_kind_Left
+					preserve diff_kind_Right = n6diff_kind_Right
+				}			      		
+				 create				node n7:SemanticDiff{
+					create name = "\"push-Down Method\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(preserve	n1->n4:eoperations),
+			  		(preserve	n1->n5:diffeoperations),
+			  		(preserve	n2->n4:eType),
+			  		(preserve	n3->n2:diffeoperations),
+			  		(preserve	n3->n6:diffesupertypes),
+			  		(preserve	n5->n4:eType),
+			  		(preserve	n6->n1:eType),
+			  		(create		n7->n1:SemanticObject_EClass),
+			  		(create		n7->n3:SemanticObject_EClass),
+			  		(create		n7->n4:SemanticObject_EOperation),
+			  		(create		n7->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"ADD\"") AND (n3diff_kind_Left == "\"ADD\"") AND (n4diff_kind_Left == "\"DELETE\"") AND (n5diff_kind_Left == "\"DELETE\"") AND (n6diff_kind_Left == "\"ADD\"")) OR ((n2diff_kind_Right == "\"ADD\"") AND (n3diff_kind_Right == "\"ADD\"") AND (n4diff_kind_Right == "\"DELETE\"") AND (n5diff_kind_Right == "\"DELETE\"") AND (n6diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpAttribute(VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n8diff_kind_Left:EString,VAR n8diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:EClass			      		
+				 preserve			node n4:DiffEClass_eattributes{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+				}			      		
+				 preserve			node n6:EAttribute			      		
+				 delete				node n8:DiffEClass_eattributes{
+					delete diff_kind_Left = n8diff_kind_Left
+					delete diff_kind_Right = n8diff_kind_Right
+				}
+				 create				node n3:SemanticDiff{
+					create name = "\"pullUpAttribute\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n1->n4:diffeattributes),
+			  		(preserve	n2->n6:eattributes),
+			  		(preserve	n2->n1:esupertypes),
+			  		(delete		n2->n8:diffeattributes),
+			  		(preserve	n4->n6:eType),
+			  		(delete		n8->n6:eType),
+			  		(create		n3->n4:SemanticObject_DiffEClass_eattributes),
+			  		(create		n3->n6:SemanticObject_EAttribute),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n4diff_kind_Left == "\"ADD\"") AND (n8diff_kind_Left == "\"DELETE\"")) OR ((n4diff_kind_Right == "\"ADD\"") AND (n8diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpAttribute2(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n2name:EString,VAR n4name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEAttribute{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+					preserve name =  n2name
+				}			      		
+				 preserve			node n3:EClass			      		
+				 delete				node n4:DiffEAttribute{
+					delete diff_kind_Left = n4diff_kind_Left
+					delete diff_kind_Right = n4diff_kind_Right
+					delete name =  n4name
+				}
+				 create				node n5:SemanticDiff{
+					create name = "\"pullUpAttribute\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(preserve	n1->n2:eattributes),
+			  		(delete		n3->n4:eattributes),
+			  		(preserve	n3->n1:esupertypes),
+			  		(create		n5->n2:SemanticObject_EAttribute),
+			  		(create		n5->n1:SemanticObject_EClass),
+			  		(create		n5->n3:SemanticObject_EClass),
+			  		(create		n5->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2name == n4name) AND (n2diff_kind_Left == "\"ADD\"") AND (n4diff_kind_Left == "\"DELETE\"")) OR ((n2name == n4name) AND (n2diff_kind_Right == "\"ADD\"") AND (n4diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpAttribute3(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n5diff_kind_Left:EString,VAR n5diff_kind_Right:EString,VAR n2name:EString,VAR n4name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEAttribute{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+					preserve name =  n2name
+				}			      		
+				 preserve			node n3:EClass			      		
+				 delete				node n4:DiffEAttribute{
+					delete diff_kind_Left = n4diff_kind_Left
+					delete diff_kind_Right = n4diff_kind_Right
+					delete name =  n4name
+				}
+				 preserve			node n5:DiffEClass_esupertypes{
+					preserve diff_kind_Left = n5diff_kind_Left
+					preserve diff_kind_Right = n5diff_kind_Right
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"pullUpAttribute\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(preserve	n1->n2:eattributes),
+			  		(delete		n3->n4:eattributes),
+			  		(preserve	n3->n5:diffesupertypes),
+			  		(preserve	n5->n1:eType),
+			  		(create		n6->n2:SemanticObject_EAttribute),
+			  		(create		n6->n1:SemanticObject_EClass),
+			  		(create		n6->n3:SemanticObject_EClass),
+			  		(create		n6->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2name == n4name) AND (n2diff_kind_Left == "\"ADD\"") AND (n4diff_kind_Left == "\"DELETE\"") AND (n5diff_kind_Left == "\"NON\"")) OR ((n2name == n4name) AND (n2diff_kind_Right == "\"ADD\"") AND (n4diff_kind_Right == "\"DELETE\"") AND (n5diff_kind_Right == "\"NON\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownAttribute(VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n5diff_kind_Left:EString,VAR n5diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:EAttribute			      		
+				 delete				node n3:DiffEClass_eattributes{
+					delete diff_kind_Left = n3diff_kind_Left
+					delete diff_kind_Right = n3diff_kind_Right
+				}
+				 preserve			node n4:EClass			      		
+				 preserve			node n5:DiffEClass_eattributes{
+					preserve diff_kind_Left = n5diff_kind_Left
+					preserve diff_kind_Right = n5diff_kind_Right
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"pushDownAttribute\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n4:eclassifiers),
+			  		(preserve	n1->n2:eattributes),
+			  		(delete		n1->n3:diffeattributes),
+			  		(delete		n3->n2:eType),
+			  		(preserve	n4->n1:esupertypes),
+			  		(preserve	n4->n5:diffeattributes),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n5:SemanticObject_DiffEClass_eattributes),
+			  		(create		n6->n2:SemanticObject_EAttribute),
+			  		(create		n6->n1:SemanticObject_EClass),
+			  		(create		n6->n4:SemanticObject_EClass),
+			  		(create		n6->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n3diff_kind_Left == "\"DELETE\"") AND (n5diff_kind_Left == "\"ADD\"")) OR ((n3diff_kind_Right == "\"DELETE\"") AND (n5diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownAttribute2(VAR n11diff_kind_Left:EString,VAR n11diff_kind_Right:EString,VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n11name:EString,VAR n12name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:EClass			      		
+				 delete				node n11:DiffEAttribute{
+					delete diff_kind_Left = n11diff_kind_Left
+					delete diff_kind_Right = n11diff_kind_Right
+					delete name =  n11name
+				}
+				 preserve			node n12:DiffEAttribute{
+					preserve diff_kind_Left = n12diff_kind_Left
+					preserve diff_kind_Right = n12diff_kind_Right
+					preserve name =  n12name
+				}			      		
+				 create				node n3:SemanticDiff{
+					create name = "\"pushDownAttribute\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(delete		n1->n11:eattributes),
+			  		(preserve	n2->n12:eattributes),
+			  		(preserve	n2->n1:esupertypes),
+			  		(create		n3->n12:SemanticObject_EAttribute),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n11name == n12name) AND (n11diff_kind_Left == "\"DELETE\"") AND (n12diff_kind_Left == "\"ADD\"")) OR ((n11name == n12name) AND (n11diff_kind_Right == "\"DELETE\"") AND (n12diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownAttribute3(VAR n11diff_kind_Left:EString,VAR n11diff_kind_Right:EString,VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n22diff_kind_Left:EString,VAR n22diff_kind_Right:EString,VAR n11name:EString,VAR n12name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:EClass			      		
+				 delete				node n11:DiffEAttribute{
+					delete diff_kind_Left = n11diff_kind_Left
+					delete diff_kind_Right = n11diff_kind_Right
+					delete name =  n11name
+				}
+				 preserve			node n12:DiffEAttribute{
+					preserve diff_kind_Left = n12diff_kind_Left
+					preserve diff_kind_Right = n12diff_kind_Right
+					preserve name =  n12name
+				}			      		
+				 preserve			node n22:DiffEClass_esupertypes{
+					preserve diff_kind_Left = n22diff_kind_Left
+					preserve diff_kind_Right = n22diff_kind_Right
+				}			      		
+				 create				node n3:SemanticDiff{
+					create name = "\"pushDownAttribute\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(delete		n1->n11:eattributes),
+			  		(preserve	n2->n12:eattributes),
+			  		(preserve	n2->n22:diffesupertypes),
+			  		(preserve	n22->n1:eType),
+			  		(create		n3->n12:SemanticObject_EAttribute),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n11name == n12name) AND (n11diff_kind_Left == "\"DELETE\"") AND (n12diff_kind_Left == "\"ADD\"") AND (n22diff_kind_Left == "\"NON\"")) OR ((n11name == n12name) AND (n11diff_kind_Right == "\"DELETE\"") AND (n12diff_kind_Right == "\"ADD\"") AND (n22diff_kind_Right == "\"NON\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule changePackage(VAR n1diff_kind_Left:EString,VAR n1diff_kind_Right:EString,VAR n1new_packageName_Left:EString,VAR n1packageName:EString,VAR n1new_packageName_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:DiffEClass{
+					preserve diff_kind_Left = n1diff_kind_Left
+					preserve diff_kind_Right = n1diff_kind_Right
+					preserve new_packageName_Left =  n1new_packageName_Left
+					preserve packageName =  n1packageName
+					preserve new_packageName_Right =  n1new_packageName_Right
+				}			      		
+				 create				node n2:SemanticDiff{
+					create name = "\"changePackage\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(create		n2->n1:SemanticObject_EClass),
+			  		(create		n2->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n1new_packageName_Left  != "null" ) AND (n1new_packageName_Left  != "\"\"" ) AND (n1packageName != n1new_packageName_Left) AND (n1diff_kind_Left == "\"MODIFY\"")) OR ((n1new_packageName_Right  != "null" ) AND (n1new_packageName_Right  != "\"\"" ) AND (n1packageName != n1new_packageName_Right) AND (n1diff_kind_Right == "\"MODIFY\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule extractAndMoveMethod2(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n1name:EString,VAR n3name:EString,VAR n4methodBody:EString,VAR n2methodBody:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass{
+					preserve name =  n1name
+				}			      		
+				 preserve			node n2:DiffEOperation{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+					preserve methodBody =  n2methodBody
+				}			      		
+				 preserve			node n3:EClass{
+					preserve name =  n3name
+				}			      		
+				 preserve			node n4:DiffEOperation{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+					preserve methodBody =  n4methodBody
+				}			      		
+				 create				node n5:SemanticDiff{
+					create name = "\"Extract And Move Method\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(preserve	n1->n2:eoperations),
+			  		(preserve	n3->n4:eoperations),
+			  		(create		n5->n1:SemanticObject_EClass),
+			  		(create		n5->n2:SemanticObject_EOperation),
+			  		(create		n5->n4:SemanticObject_EOperation),
+			  		(create		n5->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n1name != n3name) AND (n4methodBody  != "null" ) AND (n4methodBody  != "\"\"" ) AND (n2methodBody != n4methodBody) AND ("n2methodBody.trim().contains(n4methodBody.trim().replace('return;',''))" == 'true') AND (n2diff_kind_Left == "\"MODIFY\"") AND (n4diff_kind_Left == "\"ADD\"")) OR ((n1name != n3name) AND (n4methodBody  != "null" ) AND (n4methodBody  != "\"\"" ) AND (n2methodBody != n4methodBody) AND ("n2methodBody.trim().contains(n4methodBody.trim().replace('return;',''))" == 'true') AND (n2diff_kind_Right == "\"MODIFY\"") AND (n4diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule extractAndMoveMethod3(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n1name:EString,VAR n3name:EString,VAR n4name:EString,VAR n2new_methodBody_Left:EString,VAR n2new_methodBody_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass{
+					preserve name =  n1name
+				}			      		
+				 preserve			node n2:DiffEOperation{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+					preserve new_methodBody_Left =  n2new_methodBody_Left
+					preserve new_methodBody_Right =  n2new_methodBody_Right
+				}			      		
+				 preserve			node n3:EClass{
+					preserve name =  n3name
+				}			      		
+				 preserve			node n4:DiffEOperation{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+					preserve name =  n4name
+				}			      		
+				 create				node n5:SemanticDiff{
+					create name = "\"Extract And Move Method\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(preserve	n1->n2:eoperations),
+			  		(preserve	n3->n4:eoperations),
+			  		(create		n5->n1:SemanticObject_EClass),
+			  		(create		n5->n2:SemanticObject_EOperation),
+			  		(create		n5->n4:SemanticObject_EOperation),
+			  		(create		n5->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n1name != n3name) AND (n4name  != "null" ) AND (n4name  != "\"\"" ) AND (n2new_methodBody_Left  != "null" ) AND (n2new_methodBody_Left  != "\"\"" ) AND ("n2new_methodBody_Left.trim().contains(n3name.trim().replace('return;',''))" == 'true') AND (n2diff_kind_Left == "\"MODIFY\"") AND (n4diff_kind_Left == "\"ADD\"")) OR ((n1name != n3name) AND (n4name  != "null" ) AND (n4name  != "\"\"" ) AND (n2new_methodBody_Right  != "null" ) AND (n2new_methodBody_Right  != "\"\"" ) AND ("n2new_methodBody_Right.trim().contains(n3name.trim().replace('return;',''))" == 'true') AND (n2diff_kind_Right == "\"MODIFY\"") AND (n4diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule extractInterface(VAR n1diff_kind_Left:EString,VAR n1diff_kind_Right:EString,VAR n1new_implements_Left:EString,VAR n1implements:EString,VAR n1new_implements_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:DiffEClass{
+					preserve diff_kind_Left = n1diff_kind_Left
+					preserve diff_kind_Right = n1diff_kind_Right
+					preserve new_implements_Left =  n1new_implements_Left
+					preserve implements =  n1implements
+					preserve new_implements_Right =  n1new_implements_Right
+				}			      		
+				 create				node n2:SemanticDiff{
+					create name = "\"extractInterface\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(create		n2->n1:SemanticObject_EClass),
+			  		(create		n2->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n1new_implements_Left  != "null" ) AND (n1new_implements_Left  != "\"\"" ) AND (n1implements != n1new_implements_Left) AND (n1diff_kind_Left == "\"MODIFY\"")) OR ((n1new_implements_Right  != "null" ) AND (n1new_implements_Right  != "\"\"" ) AND (n1implements != n1new_implements_Right) AND (n1diff_kind_Right == "\"MODIFY\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule extractMethod(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n3methodBody:EString,VAR n2methodBody:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEOperation{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+					preserve methodBody =  n2methodBody
+				}			      		
+				 preserve			node n3:DiffEOperation{
+					preserve diff_kind_Left = n3diff_kind_Left
+					preserve diff_kind_Right = n3diff_kind_Right
+					preserve methodBody =  n3methodBody
+				}			      		
+				 create				node n4:SemanticDiff{
+					create name = "\"extractMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n1->n2:eoperations),
+			  		(preserve	n1->n3:eoperations),
+			  		(create		n4->n1:SemanticObject_EClass),
+			  		(create		n4->n2:SemanticObject_EOperation),
+			  		(create		n4->n3:SemanticObject_EOperation),
+			  		(create		n4->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n3methodBody  != "null" ) AND (n3methodBody  != "\"\"" ) AND (n2methodBody != n3methodBody) AND ("n2methodBody.trim().contains(n3methodBody.trim().replace('return;',''))" == 'true') AND (n2diff_kind_Left == "\"MODIFY\"") AND (n3diff_kind_Left == "\"ADD\"")) OR ((n3methodBody  != "null" ) AND (n3methodBody  != "\"\"" ) AND (n2methodBody != n3methodBody) AND ("n2methodBody.trim().contains(n3methodBody.trim().replace('return;',''))" == 'true') AND (n2diff_kind_Right == "\"MODIFY\"") AND (n3diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule extractMethod2(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n3methodBody:EString,VAR n2methodBody:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEOperation{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+					preserve methodBody =  n2methodBody
+				}			      		
+				 preserve			node n3:DiffEOperation{
+					preserve diff_kind_Left = n3diff_kind_Left
+					preserve diff_kind_Right = n3diff_kind_Right
+					preserve methodBody =  n3methodBody
+				}			      		
+				 preserve			node n30:EClass			      		
+				 create				node n4:SemanticDiff{
+					create name = "\"extractMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n30:eclassifiers),
+			  		(preserve	n1->n2:eoperations),
+			  		(preserve	n30->n3:eoperations),
+			  		(create		n4->n1:SemanticObject_EClass),
+			  		(create		n4->n2:SemanticObject_EOperation),
+			  		(create		n4->n3:SemanticObject_EOperation),
+			  		(create		n4->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n3methodBody  != "null" ) AND (n3methodBody  != "\"\"" ) AND (n2methodBody != n3methodBody) AND ("n2methodBody.trim().contains(n3methodBody.trim().replace('return;',''))" == 'true') AND (n2diff_kind_Left == "\"MODIFY\"") AND (n3diff_kind_Left == "\"ADD\"")) OR ((n3methodBody  != "null" ) AND (n3methodBody  != "\"\"" ) AND (n2methodBody != n3methodBody) AND ("n2methodBody.trim().contains(n3methodBody.trim().replace('return;',''))" == 'true') AND (n2diff_kind_Right == "\"MODIFY\"") AND (n3diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule extractMethod3(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n3name:EString,VAR n2new_methodBody_Left:EString,VAR n2new_methodBody_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEOperation{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+					preserve new_methodBody_Left =  n2new_methodBody_Left
+					preserve new_methodBody_Right =  n2new_methodBody_Right
+				}			      		
+				 preserve			node n3:DiffEOperation{
+					preserve diff_kind_Left = n3diff_kind_Left
+					preserve diff_kind_Right = n3diff_kind_Right
+					preserve name =  n3name
+				}			      		
+				 preserve			node n30:EClass			      		
+				 create				node n4:SemanticDiff{
+					create name = "\"extractMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n30:eclassifiers),
+			  		(preserve	n1->n2:eoperations),
+			  		(preserve	n30->n3:eoperations),
+			  		(create		n4->n1:SemanticObject_EClass),
+			  		(create		n4->n2:SemanticObject_EOperation),
+			  		(create		n4->n3:SemanticObject_EOperation),
+			  		(create		n4->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n3name  != "null" ) AND (n2new_methodBody_Left  != "null" ) AND (n2new_methodBody_Left  != "\"\"" ) AND (n3name  != "\"\"" ) AND ("n2new_methodBody_Left.trim().contains(n3name.trim().replace('return;',''))" == 'true') AND (n2diff_kind_Left == "\"MODIFY\"") AND (n3diff_kind_Left == "\"ADD\"")) OR ((n3name  != "null" ) AND (n2new_methodBody_Right  != "null" ) AND (n2new_methodBody_Right  != "\"\"" ) AND (n3name  != "\"\"" ) AND ("n2new_methodBody_Right.trim().contains(n3name.trim().replace('return;',''))" == 'true') AND (n2diff_kind_Right == "\"MODIFY\"") AND (n3diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule extractMethod4(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n3name:EString,VAR n2new_methodBody_Left:EString,VAR n2new_methodBody_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEOperation{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+					preserve new_methodBody_Left =  n2new_methodBody_Left
+					preserve new_methodBody_Right =  n2new_methodBody_Right
+				}			      		
+				 preserve			node n3:DiffEOperation{
+					preserve diff_kind_Left = n3diff_kind_Left
+					preserve diff_kind_Right = n3diff_kind_Right
+					preserve name =  n3name
+				}			      		
+				 create				node n4:SemanticDiff{
+					create name = "\"extractMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n1->n2:eoperations),
+			  		(preserve	n1->n3:eoperations),
+			  		(create		n4->n1:SemanticObject_EClass),
+			  		(create		n4->n2:SemanticObject_EOperation),
+			  		(create		n4->n3:SemanticObject_EOperation),
+			  		(create		n4->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n3name  != "null" ) AND (n2new_methodBody_Left  != "null" ) AND (n2new_methodBody_Left  != "\"\"" ) AND (n3name  != "\"\"" ) AND ("n2new_methodBody_Left.trim().contains(n3name.trim().replace('return;',''))" == 'true') AND (n2diff_kind_Left == "\"MODIFY\"") AND (n3diff_kind_Left == "\"ADD\"")) OR ((n3name  != "null" ) AND (n2new_methodBody_Right  != "null" ) AND (n2new_methodBody_Right  != "\"\"" ) AND (n3name  != "\"\"" ) AND ("n2new_methodBody_Right.trim().contains(n3name.trim().replace('return;',''))" == 'true') AND (n2diff_kind_Right == "\"MODIFY\"") AND (n3diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule extractSuperclass(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n7diff_kind_Left:EString,VAR n7diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEClass{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+				}			      		
+				 preserve			node n7:DiffEClass_esupertypes{
+					preserve diff_kind_Left = n7diff_kind_Left
+					preserve diff_kind_Right = n7diff_kind_Right
+				}			      		
+				 create				node n3:SemanticDiff{
+					create name = "\"extractSuperclass\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n1->n2:esupertypes),
+			  		(preserve	n1->n7:diffesupertypes),
+			  		(preserve	n7->n2:eType),
+			  		(create		n3->n7:SemanticObject_DiffEClass_esupertypes),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"ADD\"") AND (n7diff_kind_Left == "\"ADD\"")) OR ((n2diff_kind_Right == "\"ADD\"") AND (n7diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule extractSuperclass2(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 delete				node n2:DiffEClass_esupertypes{
+					delete diff_kind_Left = n2diff_kind_Left
+					delete diff_kind_Right = n2diff_kind_Right
+				}
+				 preserve			node n3:EClass			      		
+				 create				node n4:SemanticDiff{
+					create name = "\"extractSuperclass\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(delete		n1->n2:diffesupertypes),
+			  		(delete		n2->n3:eType),
+			  		(create		n4->n1:SemanticObject_EClass),
+			  		(create		n4->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"ADD\"")) OR ((n2diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule extractSuperclassAttr(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n6diff_kind_Left:EString,VAR n6diff_kind_Right:EString,VAR n7diff_kind_Left:EString,VAR n7diff_kind_Right:EString,VAR n8diff_kind_Left:EString,VAR n8diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEClass{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+				}			      		
+				 preserve			node n4:EAttribute			      		
+				 delete				node n6:DiffEClass_eattributes{
+					delete diff_kind_Left = n6diff_kind_Left
+					delete diff_kind_Right = n6diff_kind_Right
+				}
+				 preserve			node n7:DiffEClass_esupertypes{
+					preserve diff_kind_Left = n7diff_kind_Left
+					preserve diff_kind_Right = n7diff_kind_Right
+				}			      		
+				 preserve			node n8:DiffEClass_eattributes{
+					preserve diff_kind_Left = n8diff_kind_Left
+					preserve diff_kind_Right = n8diff_kind_Right
+				}			      		
+				 create				node n3:SemanticDiff{
+					create name = "\"extractSuperclassAttr\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n1->n4:eattributes),
+			  		(preserve	n1->n2:esupertypes),
+			  		(delete		n1->n6:diffeattributes),
+			  		(preserve	n1->n7:diffesupertypes),
+			  		(preserve	n2->n8:diffeattributes),
+			  		(delete		n6->n4:eType),
+			  		(preserve	n7->n2:eType),
+			  		(preserve	n8->n4:eType),
+			  		(create		n3->n8:SemanticObject_DiffEClass_eattributes),
+			  		(create		n3->n7:SemanticObject_DiffEClass_esupertypes),
+			  		(create		n3->n4:SemanticObject_EAttribute),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"ADD\"") AND (n6diff_kind_Left == "\"DELETE\"") AND (n7diff_kind_Left == "\"ADD\"") AND (n8diff_kind_Left == "\"ADD\"")) OR ((n2diff_kind_Right == "\"ADD\"") AND (n6diff_kind_Right == "\"DELETE\"") AND (n7diff_kind_Right == "\"ADD\"") AND (n8diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule extractSuperclassRef(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n6diff_kind_Left:EString,VAR n6diff_kind_Right:EString,VAR n7diff_kind_Left:EString,VAR n7diff_kind_Right:EString,VAR n8diff_kind_Left:EString,VAR n8diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEClass{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+				}			      		
+				 preserve			node n4:EReference			      		
+				 delete				node n6:DiffEClass_ereferences{
+					delete diff_kind_Left = n6diff_kind_Left
+					delete diff_kind_Right = n6diff_kind_Right
+				}
+				 preserve			node n7:DiffEClass_esupertypes{
+					preserve diff_kind_Left = n7diff_kind_Left
+					preserve diff_kind_Right = n7diff_kind_Right
+				}			      		
+				 preserve			node n8:DiffEClass_ereferences{
+					preserve diff_kind_Left = n8diff_kind_Left
+					preserve diff_kind_Right = n8diff_kind_Right
+				}			      		
+				 create				node n3:SemanticDiff{
+					create name = "\"extractSuperclassRef\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n1->n4:ereferences),
+			  		(preserve	n1->n2:esupertypes),
+			  		(delete		n1->n6:differeferences),
+			  		(preserve	n1->n7:diffesupertypes),
+			  		(preserve	n2->n8:differeferences),
+			  		(delete		n6->n4:eType),
+			  		(preserve	n7->n2:eType),
+			  		(preserve	n8->n4:eType),
+			  		(create		n3->n8:SemanticObject_DiffEClass_ereferences),
+			  		(create		n3->n7:SemanticObject_DiffEClass_esupertypes),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n0:SemanticObject_EPackage),
+			  		(create		n3->n4:SemanticObject_EReference)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"ADD\"") AND (n6diff_kind_Left == "\"DELETE\"") AND (n7diff_kind_Left == "\"ADD\"") AND (n8diff_kind_Left == "\"ADD\"")) OR ((n2diff_kind_Right == "\"ADD\"") AND (n6diff_kind_Right == "\"DELETE\"") AND (n7diff_kind_Right == "\"ADD\"") AND (n8diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule moveAndRenameClass(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n2new_packageName_Left:EString,VAR n2new_name_Left:EString,VAR n2name:EString,VAR n2packageName:EString,VAR n2new_packageName_Right:EString,VAR n2new_name_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n1:EPackage			      		
+				 preserve			node n2:DiffEClass{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+					preserve new_packageName_Left =  n2new_packageName_Left
+					preserve new_name_Left =  n2new_name_Left
+					preserve name =  n2name
+					preserve packageName =  n2packageName
+					preserve new_packageName_Right =  n2new_packageName_Right
+					preserve new_name_Right =  n2new_name_Right
+				}			      		
+				 forbid			node n4:SemanticDiff{
+					forbid name = "\"Move And Rename Class\""
+				}					
+			edges[
+			  		(preserve	n1->n2:eclassifiers),
+			  		(forbid		n4->n2:SemanticObject_EClass),
+			  		(forbid		n4->n1:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2new_packageName_Left  != "null" ) AND (n2new_packageName_Left  != "\"\"" ) AND (n2new_name_Left  != "null" ) AND (n2new_name_Left  != "\"\"" ) AND (n2name != n2new_name_Left) AND (n2packageName != n2new_packageName_Left) AND (n2diff_kind_Left == "\"MODIFY\"")) OR ((n2new_packageName_Right  != "null" ) AND (n2new_packageName_Right  != "\"\"" ) AND (n2new_name_Right  != "null" ) AND (n2new_name_Right  != "\"\"" ) AND (n2name != n2new_name_Right) AND (n2packageName != n2new_packageName_Right) AND (n2diff_kind_Right == "\"MODIFY\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule moveClass4(VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n5diff_kind_Left:EString,VAR n5diff_kind_Right:EString,VAR n2name:EString,VAR n1name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass{
+					preserve name =  n1name
+				}			      		
+				 preserve			node n2:EClass{
+					preserve name =  n2name
+				}			      		
+				 preserve			node n4:DiffEPackage_eclassifiers{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+				}			      		
+				 preserve			node n5:DiffEPackage_eclassifiers{
+					preserve diff_kind_Left = n5diff_kind_Left
+					preserve diff_kind_Right = n5diff_kind_Right
+				}			      		
+				 forbid			node n6:SemanticDiff{
+					forbid name = "\"moveClass\""
+				}					
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n0->n4:diffeclassifiers),
+			  		(preserve	n0->n5:diffeclassifiers),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n1:eType),
+			  		(forbid		n6->n2:SemanticObject_EClass),
+			  		(forbid		n6->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [(("n2name.trim().contains(n1name.trim().replace('return;',''))" == 'true') AND (n4diff_kind_Left == "\"DELETE\"") AND (n5diff_kind_Left == "\"ADD\"")) OR (("n2name.trim().contains(n1name.trim().replace('return;',''))" == 'true') AND (n4diff_kind_Right == "\"DELETE\"") AND (n5diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule moveClass3(VAR n1diff_kind_Left:EString,VAR n1diff_kind_Right:EString,VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n1name:EString,VAR n2name:EString,VAR n3name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 delete				node n1:DiffEClass{
+					delete diff_kind_Left = n1diff_kind_Left
+					delete diff_kind_Right = n1diff_kind_Right
+					delete name =  n1name
+				}
+				 preserve			node n2:DiffEClass{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+					preserve name =  n2name
+				}			      		
+				 preserve			node n3:EClass{
+					preserve name =  n3name
+				}			      		
+				 create				node n4:SemanticDiff{
+					create name = "\"moveClass\""
+				}
+			edges[
+			  		(delete		n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(create		n4->n2:SemanticObject_EClass),
+			  		(create		n4->n3:SemanticObject_EClass),
+			  		(create		n4->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n1name == n2name) AND ("n3name.trim().contains(n1name.trim().replace('return;',''))" == 'true') AND (n1diff_kind_Left == "\"DELETE\"") AND (n2diff_kind_Left == "\"ADD\"")) OR ((n1name == n2name) AND ("n3name.trim().contains(n1name.trim().replace('return;',''))" == 'true') AND (n1diff_kind_Right == "\"DELETE\"") AND (n2diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule moveClass(VAR n1diff_kind_Left:EString,VAR n1diff_kind_Right:EString,VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n1name:EString,VAR n2name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 delete				node n1:DiffEClass{
+					delete diff_kind_Left = n1diff_kind_Left
+					delete diff_kind_Right = n1diff_kind_Right
+					delete name =  n1name
+				}
+				 preserve			node n2:DiffEClass{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+					preserve name =  n2name
+				}			      		
+				 create				node n3:SemanticDiff{
+					create name = "\"moveClass\""
+				}
+			edges[
+			  		(delete		n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n1name == n2name) AND (n1diff_kind_Left == "\"DELETE\"") AND (n2diff_kind_Left == "\"ADD\"")) OR ((n1name == n2name) AND (n1diff_kind_Right == "\"DELETE\"") AND (n2diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule moveClass2(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 delete				node n2:DiffEPackage_eclassifiers{
+					delete diff_kind_Left = n2diff_kind_Left
+					delete diff_kind_Right = n2diff_kind_Right
+				}
+				 preserve			node n3:DiffEPackage_eclassifiers{
+					preserve diff_kind_Left = n3diff_kind_Left
+					preserve diff_kind_Right = n3diff_kind_Right
+				}			      		
+				 create				node n4:SemanticDiff{
+					create name = "\"moveClass\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(delete		n0->n2:diffeclassifiers),
+			  		(preserve	n0->n3:diffeclassifiers),
+			  		(delete		n2->n1:eType),
+			  		(preserve	n3->n1:eType),
+			  		(create		n4->n1:SemanticObject_EClass),
+			  		(create		n4->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"DELETE\"") AND (n3diff_kind_Left == "\"ADD\"")) OR ((n2diff_kind_Right == "\"DELETE\"") AND (n3diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule moveMethod(VAR n5diff_kind_Left:EString,VAR n5diff_kind_Right:EString,VAR n6diff_kind_Left:EString,VAR n6diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:EClass			      		
+				 preserve			node n4:EOperation			      		
+				 delete				node n5:DiffEClass_eoperations{
+					delete diff_kind_Left = n5diff_kind_Left
+					delete diff_kind_Right = n5diff_kind_Right
+				}
+				 preserve			node n6:DiffEClass_eoperations{
+					preserve diff_kind_Left = n6diff_kind_Left
+					preserve diff_kind_Right = n6diff_kind_Right
+				}			      		
+				 create				node n3:SemanticDiff{
+					create name = "\"moveMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n1->n4:eoperations),
+			  		(delete		n1->n5:diffeoperations),
+			  		(preserve	n2->n6:diffeoperations),
+			  		(delete		n5->n4:eType),
+			  		(preserve	n6->n4:eType),
+			  		(create		n3->n6:SemanticObject_DiffEClass_eoperations),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n4:SemanticObject_EOperation),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n5diff_kind_Left == "\"DELETE\"") AND (n6diff_kind_Left == "\"ADD\"")) OR ((n5diff_kind_Right == "\"DELETE\"") AND (n6diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule moveMethod2(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n2name:EString,VAR n4name:EString,VAR n2eparameters:EString,VAR n4eparameters:EString,VAR n2methodBody:EString,VAR n4methodBody:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 delete				node n2:DiffEOperation{
+					delete diff_kind_Left = n2diff_kind_Left
+					delete diff_kind_Right = n2diff_kind_Right
+					delete name =  n2name
+					delete eparameters =  n2eparameters
+					delete methodBody =  n2methodBody
+				}
+				 preserve			node n3:EClass			      		
+				 preserve			node n4:DiffEOperation{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+					preserve name =  n4name
+					preserve eparameters =  n4eparameters
+					preserve methodBody =  n4methodBody
+				}			      		
+				 create				node n5:SemanticDiff{
+					create name = "\"moveMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(delete		n1->n2:eoperations),
+			  		(preserve	n3->n4:eoperations),
+			  		(create		n5->n1:SemanticObject_EClass),
+			  		(create		n5->n3:SemanticObject_EClass),
+			  		(create		n5->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2name == n4name) AND (n2eparameters == n4eparameters) AND (n2methodBody == n4methodBody) AND (n2diff_kind_Left == "\"DELETE\"") AND (n4diff_kind_Left == "\"ADD\"")) OR ((n2name == n4name) AND (n2eparameters == n4eparameters) AND (n2methodBody == n4methodBody) AND (n2diff_kind_Right == "\"DELETE\"") AND (n4diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule moveMethod3(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n2name:EString,VAR n4name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 delete				node n2:DiffEOperation{
+					delete diff_kind_Left = n2diff_kind_Left
+					delete diff_kind_Right = n2diff_kind_Right
+					delete name =  n2name
+				}
+				 preserve			node n3:EClass			      		
+				 preserve			node n4:DiffEOperation{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+					preserve name =  n4name
+				}			      		
+				 create				node n5:SemanticDiff{
+					create name = "\"moveMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(delete		n1->n2:eoperations),
+			  		(preserve	n3->n4:eoperations),
+			  		(create		n5->n1:SemanticObject_EClass),
+			  		(create		n5->n3:SemanticObject_EClass),
+			  		(create		n5->n4:SemanticObject_EOperation),
+			  		(create		n5->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2name == n4name) AND (n2diff_kind_Left == "\"DELETE\"") AND (n4diff_kind_Left == "\"ADD\"")) OR ((n2name == n4name) AND (n2diff_kind_Right == "\"DELETE\"") AND (n4diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule moveAttribute(VAR n5diff_kind_Left:EString,VAR n5diff_kind_Right:EString,VAR n6diff_kind_Left:EString,VAR n6diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:EClass			      		
+				 preserve			node n4:EAttribute			      		
+				 delete				node n5:DiffEClass_eattributes{
+					delete diff_kind_Left = n5diff_kind_Left
+					delete diff_kind_Right = n5diff_kind_Right
+				}
+				 preserve			node n6:DiffEClass_eattributes{
+					preserve diff_kind_Left = n6diff_kind_Left
+					preserve diff_kind_Right = n6diff_kind_Right
+				}			      		
+				 create				node n3:SemanticDiff{
+					create name = "\"moveAttribute\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n1->n4:eattributes),
+			  		(delete		n1->n5:diffeattributes),
+			  		(preserve	n2->n6:diffeattributes),
+			  		(delete		n5->n4:eType),
+			  		(preserve	n6->n4:eType),
+			  		(create		n3->n6:SemanticObject_DiffEClass_eattributes),
+			  		(create		n3->n4:SemanticObject_EAttribute),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n5diff_kind_Left == "\"DELETE\"") AND (n6diff_kind_Left == "\"ADD\"")) OR ((n5diff_kind_Right == "\"DELETE\"") AND (n6diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule moveAttribute2(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n2name:EString,VAR n4name:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 delete				node n2:DiffEAttribute{
+					delete diff_kind_Left = n2diff_kind_Left
+					delete diff_kind_Right = n2diff_kind_Right
+					delete name =  n2name
+				}
+				 preserve			node n3:EClass			      		
+				 preserve			node n4:DiffEAttribute{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+					preserve name =  n4name
+				}			      		
+				 create				node n5:SemanticDiff{
+					create name = "\"moveAttribute\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(delete		n1->n2:eattributes),
+			  		(preserve	n3->n4:eattributes),
+			  		(create		n5->n4:SemanticObject_EAttribute),
+			  		(create		n5->n1:SemanticObject_EClass),
+			  		(create		n5->n3:SemanticObject_EClass),
+			  		(create		n5->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2name == n4name) AND (n2diff_kind_Left == "\"DELETE\"") AND (n4diff_kind_Left == "\"ADD\"")) OR ((n2name == n4name) AND (n2diff_kind_Right == "\"DELETE\"") AND (n4diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule renameClass(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n2new_name_Left:EString,VAR n2name:EString,VAR n2new_name_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n1:EPackage			      		
+				 preserve			node n2:DiffEClass{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+					preserve new_name_Left =  n2new_name_Left
+					preserve name =  n2name
+					preserve new_name_Right =  n2new_name_Right
+				}			      		
+				 create				node n3:SemanticDiff{
+					create name = "\"renameClass\""
+				}
+			edges[
+			  		(preserve	n1->n2:eclassifiers),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n1:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2new_name_Left  != "null" ) AND (n2new_name_Left  != "\"\"" ) AND (n2name != n2new_name_Left) AND (n2diff_kind_Left == "\"MODIFY\"")) OR ((n2new_name_Right  != "null" ) AND (n2new_name_Right  != "\"\"" ) AND (n2name != n2new_name_Right) AND (n2diff_kind_Right == "\"MODIFY\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule renameMethod(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n2new_name_Left:EString,VAR n2name:EString,VAR n2new_name_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEOperation{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+					preserve new_name_Left =  n2new_name_Left
+					preserve name =  n2name
+					preserve new_name_Right =  n2new_name_Right
+				}			      		
+				 create				node n3:SemanticDiff{
+					create name = "\"renameMethod\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n1->n2:eoperations),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EOperation),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2new_name_Left  != "null" ) AND (n2new_name_Left  != "\"\"" ) AND (n2name != n2new_name_Left) AND (n2diff_kind_Left == "\"MODIFY\"")) OR ((n2new_name_Right  != "null" ) AND (n2new_name_Right  != "\"\"" ) AND (n2name != n2new_name_Right) AND (n2diff_kind_Right == "\"MODIFY\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule renameAttribute(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n2new_name_Left:EString,VAR n2name:EString,VAR n2new_name_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEAttribute{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+					preserve new_name_Left =  n2new_name_Left
+					preserve name =  n2name
+					preserve new_name_Right =  n2new_name_Right
+				}			      		
+				 create				node n3:SemanticDiff{
+					create name = "\"renameAttribute\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n1->n2:eattributes),
+			  		(create		n3->n2:SemanticObject_EAttribute),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2new_name_Left  != "null" ) AND (n2new_name_Left  != "\"\"" ) AND (n2name != n2new_name_Left) AND (n2diff_kind_Left == "\"MODIFY\"")) OR ((n2new_name_Right  != "null" ) AND (n2new_name_Right  != "\"\"" ) AND (n2name != n2new_name_Right) AND (n2diff_kind_Right == "\"MODIFY\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule flattenHierarchyAttr(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n5diff_kind_Left:EString,VAR n5diff_kind_Right:EString,VAR n6diff_kind_Left:EString,VAR n6diff_kind_Right:EString,VAR n7diff_kind_Left:EString,VAR n7diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEClass{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+				}			      		
+				 preserve			node n4:DiffEClass_eattributes{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+				}			      		
+				 delete				node n5:DiffEClass_esupertypes{
+					delete diff_kind_Left = n5diff_kind_Left
+					delete diff_kind_Right = n5diff_kind_Right
+				}
+				 preserve			node n6:DiffEAttribute{
+					preserve diff_kind_Left = n6diff_kind_Left
+					preserve diff_kind_Right = n6diff_kind_Right
+				}			      		
+				 delete				node n7:DiffEClass_eattributes{
+					delete diff_kind_Left = n7diff_kind_Left
+					delete diff_kind_Right = n7diff_kind_Right
+				}
+				 create				node n3:SemanticDiff{
+					create name = "\"flattenHierarchyAttr\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n1->n4:diffeattributes),
+			  		(delete		n1->n5:diffesupertypes),
+			  		(preserve	n2->n6:eattributes),
+			  		(delete		n2->n7:diffeattributes),
+			  		(preserve	n4->n6:eType),
+			  		(delete		n5->n2:eType),
+			  		(delete		n7->n6:eType),
+			  		(create		n3->n4:SemanticObject_DiffEClass_eattributes),
+			  		(create		n3->n6:SemanticObject_EAttribute),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"DELETE\"") AND (n4diff_kind_Left == "\"ADD\"") AND (n5diff_kind_Left == "\"DELETE\"") AND (n6diff_kind_Left == "\"DELETE\"") AND (n7diff_kind_Left == "\"DELETE\"")) OR ((n2diff_kind_Right == "\"DELETE\"") AND (n4diff_kind_Right == "\"ADD\"") AND (n5diff_kind_Right == "\"DELETE\"") AND (n6diff_kind_Right == "\"DELETE\"") AND (n7diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule mergeMetaClassAttr(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n7diff_kind_Left:EString,VAR n7diff_kind_Right:EString,VAR n8diff_kind_Left:EString,VAR n8diff_kind_Right:EString,VAR n9diff_kind_Left:EString,VAR n9diff_kind_Right:EString,VAR n10diff_kind_Left:EString,VAR n10diff_kind_Right:EString,VAR n11diff_kind_Left:EString,VAR n11diff_kind_Right:EString,VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n13diff_kind_Left:EString,VAR n13diff_kind_Right:EString,VAR n14diff_kind_Left:EString,VAR n14diff_kind_Right:EString,VAR n15diff_kind_Left:EString,VAR n15diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:DiffEClass{
+					preserve diff_kind_Left = n2diff_kind_Left
+					preserve diff_kind_Right = n2diff_kind_Right
+				}			      		
+				 preserve			node n3:DiffEClass{
+					preserve diff_kind_Left = n3diff_kind_Left
+					preserve diff_kind_Right = n3diff_kind_Right
+				}			      		
+				 preserve			node n4:DiffEClass{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+				}			      		
+				 preserve			node n7:DiffEClass_eattributes{
+					preserve diff_kind_Left = n7diff_kind_Left
+					preserve diff_kind_Right = n7diff_kind_Right
+				}			      		
+				 preserve			node n8:DiffEClass_eattributes{
+					preserve diff_kind_Left = n8diff_kind_Left
+					preserve diff_kind_Right = n8diff_kind_Right
+				}			      		
+				 preserve			node n9:DiffEClass_esupertypes{
+					preserve diff_kind_Left = n9diff_kind_Left
+					preserve diff_kind_Right = n9diff_kind_Right
+				}			      		
+				 preserve			node n10:DiffEAttribute{
+					preserve diff_kind_Left = n10diff_kind_Left
+					preserve diff_kind_Right = n10diff_kind_Right
+				}			      		
+				 delete				node n11:DiffEClass_eattributes{
+					delete diff_kind_Left = n11diff_kind_Left
+					delete diff_kind_Right = n11diff_kind_Right
+				}
+				 delete				node n12:DiffEClass_esupertypes{
+					delete diff_kind_Left = n12diff_kind_Left
+					delete diff_kind_Right = n12diff_kind_Right
+				}
+				 preserve			node n13:DiffEAttribute{
+					preserve diff_kind_Left = n13diff_kind_Left
+					preserve diff_kind_Right = n13diff_kind_Right
+				}			      		
+				 delete				node n14:DiffEClass_eattributes{
+					delete diff_kind_Left = n14diff_kind_Left
+					delete diff_kind_Right = n14diff_kind_Right
+				}
+				 delete				node n15:DiffEClass_esupertypes{
+					delete diff_kind_Left = n15diff_kind_Left
+					delete diff_kind_Right = n15diff_kind_Right
+				}
+				 create				node n5:SemanticDiff{
+					create name = "\"mergeMetaClassAttr\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(preserve	n0->n4:eclassifiers),
+			  		(preserve	n2->n1:esupertypes),
+			  		(preserve	n2->n7:diffeattributes),
+			  		(preserve	n2->n8:diffeattributes),
+			  		(preserve	n2->n9:diffesupertypes),
+			  		(preserve	n3->n10:eattributes),
+			  		(delete		n3->n11:diffeattributes),
+			  		(delete		n3->n12:diffesupertypes),
+			  		(preserve	n4->n13:eattributes),
+			  		(delete		n4->n14:diffeattributes),
+			  		(delete		n4->n15:diffesupertypes),
+			  		(preserve	n7->n10:eType),
+			  		(preserve	n8->n13:eType),
+			  		(preserve	n9->n1:eType),
+			  		(delete		n11->n10:eType),
+			  		(delete		n12->n1:eType),
+			  		(delete		n14->n13:eType),
+			  		(delete		n15->n1:eType),
+			  		(create		n5->n7:SemanticObject_DiffEClass_eattributes),
+			  		(create		n5->n8:SemanticObject_DiffEClass_eattributes),
+			  		(create		n5->n9:SemanticObject_DiffEClass_esupertypes),
+			  		(create		n5->n10:SemanticObject_EAttribute),
+			  		(create		n5->n13:SemanticObject_EAttribute),
+			  		(create		n5->n1:SemanticObject_EClass),
+			  		(create		n5->n2:SemanticObject_EClass),
+			  		(create		n5->n3:SemanticObject_EClass),
+			  		(create		n5->n4:SemanticObject_EClass),
+			  		(create		n5->n0:SemanticObject_EPackage)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"ADD\"") AND (n3diff_kind_Left == "\"DELETE\"") AND (n4diff_kind_Left == "\"DELETE\"") AND (n7diff_kind_Left == "\"ADD\"") AND (n8diff_kind_Left == "\"ADD\"") AND (n9diff_kind_Left == "\"ADD\"") AND (n10diff_kind_Left == "\"DELETE\"") AND (n11diff_kind_Left == "\"DELETE\"") AND (n12diff_kind_Left == "\"DELETE\"") AND (n13diff_kind_Left == "\"DELETE\"") AND (n14diff_kind_Left == "\"DELETE\"") AND (n15diff_kind_Left == "\"DELETE\"")) OR ((n2diff_kind_Right == "\"ADD\"") AND (n3diff_kind_Right == "\"DELETE\"") AND (n4diff_kind_Right == "\"DELETE\"") AND (n7diff_kind_Right == "\"ADD\"") AND (n8diff_kind_Right == "\"ADD\"") AND (n9diff_kind_Right == "\"ADD\"") AND (n10diff_kind_Right == "\"DELETE\"") AND (n11diff_kind_Right == "\"DELETE\"") AND (n12diff_kind_Right == "\"DELETE\"") AND (n13diff_kind_Right == "\"DELETE\"") AND (n14diff_kind_Right == "\"DELETE\"") AND (n15diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule mergeRefrences(VAR n14diff_kind_Left:EString,VAR n14diff_kind_Right:EString,VAR n15diff_kind_Left:EString,VAR n15diff_kind_Right:EString,VAR n16diff_kind_Left:EString,VAR n16diff_kind_Right:EString,VAR n8etype:EString,VAR n15etype:EString,VAR n9etype:EString,VAR n16etype:EString,VAR n1name:EString,VAR n2name:EString,VAR n3name:EString,VAR n14etype:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass{
+					preserve name =  n1name
+				}			      		
+				 preserve			node n2:EClass{
+					preserve name =  n2name
+				}			      		
+				 preserve			node n3:EClass{
+					preserve name =  n3name
+				}			      		
+				 preserve			node n4:EClass			      		
+				 preserve			node n8:EReference{
+					preserve etype =  n8etype
+				}			      		
+				 preserve			node n9:EReference{
+					preserve etype =  n9etype
+				}			      		
+				 preserve			node n14:DiffEReference{
+					preserve diff_kind_Left = n14diff_kind_Left
+					preserve diff_kind_Right = n14diff_kind_Right
+					preserve etype =  n14etype
+				}			      		
+				 delete				node n15:DiffEReference{
+					delete diff_kind_Left = n15diff_kind_Left
+					delete diff_kind_Right = n15diff_kind_Right
+					delete etype =  n15etype
+				}
+				 delete				node n16:DiffEReference{
+					delete diff_kind_Left = n16diff_kind_Left
+					delete diff_kind_Right = n16diff_kind_Right
+					delete etype =  n16etype
+				}
+				 create				node n5:SemanticDiff{
+					create name = "\"mergeRefrences\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n0->n3:eclassifiers),
+			  		(preserve	n0->n4:eclassifiers),
+			  		(preserve	n1->n3:esupertypes),
+			  		(preserve	n2->n3:esupertypes),
+			  		(preserve	n3->n8:ereferences),
+			  		(preserve	n3->n9:ereferences),
+			  		(preserve	n4->n14:ereferences),
+			  		(delete		n4->n15:ereferences),
+			  		(delete		n4->n16:ereferences),
+			  		(create		n5->n1:SemanticObject_EClass),
+			  		(create		n5->n2:SemanticObject_EClass),
+			  		(create		n5->n4:SemanticObject_EClass),
+			  		(create		n5->n0:SemanticObject_EPackage),
+			  		(create		n5->n8:SemanticObject_EReference),
+			  		(create		n5->n9:SemanticObject_EReference),
+			  		(create		n5->n14:SemanticObject_EReference)
+	      		 ]
+			}
+			conditions [((n8etype == n15etype) AND (n9etype == n16etype) AND (n1name == n8etype) AND (n2name == n9etype) AND (n3name == n14etype) AND (n14diff_kind_Left == "\"ADD\"") AND (n15diff_kind_Left == "\"DELETE\"") AND (n16diff_kind_Left == "\"DELETE\"")) OR ((n8etype == n15etype) AND (n9etype == n16etype) AND (n1name == n8etype) AND (n2name == n9etype) AND (n3name == n14etype) AND (n14diff_kind_Right == "\"ADD\"") AND (n15diff_kind_Right == "\"DELETE\"") AND (n16diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownRefrence(VAR n6diff_kind_Left:EString,VAR n6diff_kind_Right:EString,VAR n9diff_kind_Left:EString,VAR n9diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:EClass			      		
+				 preserve			node n4:EReference			      		
+				 delete				node n6:DiffEClass_ereferences{
+					delete diff_kind_Left = n6diff_kind_Left
+					delete diff_kind_Right = n6diff_kind_Right
+				}
+				 preserve			node n9:DiffEClass_ereferences{
+					preserve diff_kind_Left = n9diff_kind_Left
+					preserve diff_kind_Right = n9diff_kind_Right
+				}			      		
+				 create				node n3:SemanticDiff{
+					create name = "\"pushDownRefrence\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n1->n4:ereferences),
+			  		(delete		n1->n6:differeferences),
+			  		(preserve	n2->n1:esupertypes),
+			  		(preserve	n2->n9:differeferences),
+			  		(delete		n6->n4:eType),
+			  		(preserve	n9->n4:eType),
+			  		(create		n3->n9:SemanticObject_DiffEClass_ereferences),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n0:SemanticObject_EPackage),
+			  		(create		n3->n4:SemanticObject_EReference)
+	      		 ]
+			}
+			conditions [((n6diff_kind_Left == "\"DELETE\"") AND (n9diff_kind_Left == "\"ADD\"")) OR ((n6diff_kind_Right == "\"DELETE\"") AND (n9diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpRefrence(VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n8diff_kind_Left:EString,VAR n8diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:EPackage			      		
+				 preserve			node n1:EClass			      		
+				 preserve			node n2:EClass			      		
+				 preserve			node n4:DiffEClass_ereferences{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+				}			      		
+				 preserve			node n6:EReference			      		
+				 delete				node n8:DiffEClass_ereferences{
+					delete diff_kind_Left = n8diff_kind_Left
+					delete diff_kind_Right = n8diff_kind_Right
+				}
+				 create				node n3:SemanticDiff{
+					create name = "\"pullUpRefrence\""
+				}
+			edges[
+			  		(preserve	n0->n1:eclassifiers),
+			  		(preserve	n0->n2:eclassifiers),
+			  		(preserve	n1->n4:differeferences),
+			  		(preserve	n2->n6:ereferences),
+			  		(preserve	n2->n1:esupertypes),
+			  		(delete		n2->n8:differeferences),
+			  		(preserve	n4->n6:eType),
+			  		(delete		n8->n6:eType),
+			  		(create		n3->n4:SemanticObject_DiffEClass_ereferences),
+			  		(create		n3->n1:SemanticObject_EClass),
+			  		(create		n3->n2:SemanticObject_EClass),
+			  		(create		n3->n0:SemanticObject_EPackage),
+			  		(create		n3->n6:SemanticObject_EReference)
+	      		 ]
+			}
+			conditions [((n4diff_kind_Left == "\"ADD\"") AND (n8diff_kind_Left == "\"DELETE\"")) OR ((n4diff_kind_Right == "\"ADD\"") AND (n8diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+	unit unitSequntialStar(){
+		unitpullUpMethodStar()
+		unitpullUpMethod2Star()
+		unitpullUpMethod3Star()
+		unitpullUpMethod4Star()
+		unitpullUpMethod5Star()
+		unitpullUpMethod6Star()
+		unitpushDownMethod33Star()
+		unitpushDownMethodStar()
+		unitpushDownMethod2Star()
+		unitpushDownMethod3Star()
+		unitpushDownMethod4Star()
+		unitpushDownMethod5Star()
+		unitpushDownMethod6Star()
+		unitpullUpAttributeStar()
+		unitpullUpAttribute2Star()
+		unitpullUpAttribute3Star()
+		unitpushDownAttributeStar()
+		unitpushDownAttribute2Star()
+		unitpushDownAttribute3Star()
+		unitchangePackageStar()
+		unitextractAndMoveMethod2Star()
+		unitextractAndMoveMethod3Star()
+		unitextractInterfaceStar()
+		unitextractMethodStar()
+		unitextractMethod2Star()
+		unitextractMethod3Star()
+		unitextractMethod4Star()
+		unitextractSuperclassStar()
+		unitextractSuperclass2Star()
+		unitextractSuperclassAttrStar()
+		unitextractSuperclassRefStar()
+		unitmoveAndRenameClassStar()
+		unitmoveClass4Star()
+		unitmoveClass3Star()
+		unitmoveClassStar()
+		unitmoveClass2Star()
+		unitmoveMethodStar()
+		unitmoveMethod2Star()
+		unitmoveMethod3Star()
+		unitmoveAttributeStar()
+		unitmoveAttribute2Star()
+		unitrenameClassStar()
+		unitrenameMethodStar()
+		unitrenameAttributeStar()
+		unitflattenHierarchyAttrStar()
+		unitmergeMetaClassAttrStar()
+		unitmergeRefrencesStar()
+		unitpushDownRefrenceStar()
+		unitpullUpRefrenceStar()
+	}
+	unit unitpullUpMethodStar(){
+		while{
+			pullUpMethod()
+		}
+	}
+	unit unitpullUpMethod2Star(){
+		while{
+			pullUpMethod2()
+		}
+	}
+	unit unitpullUpMethod3Star(){
+		while{
+			pullUpMethod3()
+		}
+	}
+	unit unitpullUpMethod4Star(){
+		while{
+			pullUpMethod4()
+		}
+	}
+	unit unitpullUpMethod5Star(){
+		while{
+			pullUpMethod5()
+		}
+	}
+	unit unitpullUpMethod6Star(){
+		while{
+			pullUpMethod6()
+		}
+	}
+	unit unitpushDownMethod33Star(){
+		while{
+			pushDownMethod33()
+		}
+	}
+	unit unitpushDownMethodStar(){
+		while{
+			pushDownMethod()
+		}
+	}
+	unit unitpushDownMethod2Star(){
+		while{
+			pushDownMethod2()
+		}
+	}
+	unit unitpushDownMethod3Star(){
+		while{
+			pushDownMethod3()
+		}
+	}
+	unit unitpushDownMethod4Star(){
+		while{
+			pushDownMethod4()
+		}
+	}
+	unit unitpushDownMethod5Star(){
+		while{
+			pushDownMethod5()
+		}
+	}
+	unit unitpushDownMethod6Star(){
+		while{
+			pushDownMethod6()
+		}
+	}
+	unit unitpullUpAttributeStar(){
+		while{
+			pullUpAttribute()
+		}
+	}
+	unit unitpullUpAttribute2Star(){
+		while{
+			pullUpAttribute2()
+		}
+	}
+	unit unitpullUpAttribute3Star(){
+		while{
+			pullUpAttribute3()
+		}
+	}
+	unit unitpushDownAttributeStar(){
+		while{
+			pushDownAttribute()
+		}
+	}
+	unit unitpushDownAttribute2Star(){
+		while{
+			pushDownAttribute2()
+		}
+	}
+	unit unitpushDownAttribute3Star(){
+		while{
+			pushDownAttribute3()
+		}
+	}
+	unit unitchangePackageStar(){
+		while{
+			changePackage()
+		}
+	}
+	unit unitextractAndMoveMethod2Star(){
+		while{
+			extractAndMoveMethod2()
+		}
+	}
+	unit unitextractAndMoveMethod3Star(){
+		while{
+			extractAndMoveMethod3()
+		}
+	}
+	unit unitextractInterfaceStar(){
+		while{
+			extractInterface()
+		}
+	}
+	unit unitextractMethodStar(){
+		while{
+			extractMethod()
+		}
+	}
+	unit unitextractMethod2Star(){
+		while{
+			extractMethod2()
+		}
+	}
+	unit unitextractMethod3Star(){
+		while{
+			extractMethod3()
+		}
+	}
+	unit unitextractMethod4Star(){
+		while{
+			extractMethod4()
+		}
+	}
+	unit unitextractSuperclassStar(){
+		while{
+			extractSuperclass()
+		}
+	}
+	unit unitextractSuperclass2Star(){
+		while{
+			extractSuperclass2()
+		}
+	}
+	unit unitextractSuperclassAttrStar(){
+		while{
+			extractSuperclassAttr()
+		}
+	}
+	unit unitextractSuperclassRefStar(){
+		while{
+			extractSuperclassRef()
+		}
+	}
+	unit unitmoveAndRenameClassStar(){
+		while{
+			moveAndRenameClass()
+		}
+	}
+	unit unitmoveClass4Star(){
+		while{
+			moveClass4()
+		}
+	}
+	unit unitmoveClass3Star(){
+		while{
+			moveClass3()
+		}
+	}
+	unit unitmoveClassStar(){
+		while{
+			moveClass()
+		}
+	}
+	unit unitmoveClass2Star(){
+		while{
+			moveClass2()
+		}
+	}
+	unit unitmoveMethodStar(){
+		while{
+			moveMethod()
+		}
+	}
+	unit unitmoveMethod2Star(){
+		while{
+			moveMethod2()
+		}
+	}
+	unit unitmoveMethod3Star(){
+		while{
+			moveMethod3()
+		}
+	}
+	unit unitmoveAttributeStar(){
+		while{
+			moveAttribute()
+		}
+	}
+	unit unitmoveAttribute2Star(){
+		while{
+			moveAttribute2()
+		}
+	}
+	unit unitrenameClassStar(){
+		while{
+			renameClass()
+		}
+	}
+	unit unitrenameMethodStar(){
+		while{
+			renameMethod()
+		}
+	}
+	unit unitrenameAttributeStar(){
+		while{
+			renameAttribute()
+		}
+	}
+	unit unitflattenHierarchyAttrStar(){
+		while{
+			flattenHierarchyAttr()
+		}
+	}
+	unit unitmergeMetaClassAttrStar(){
+		while{
+			mergeMetaClassAttr()
+		}
+	}
+	unit unitmergeRefrencesStar(){
+		while{
+			mergeRefrences()
+		}
+	}
+	unit unitpushDownRefrenceStar(){
+		while{
+			pushDownRefrence()
+		}
+	}
+	unit unitpullUpRefrenceStar(){
+		while{
+			pullUpRefrence()
+		}
+	}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refactoringRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoringRuleMM="www.geodes.UdeM.edu/refactoringRuleMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/refactoringRuleMM ../metamodels/refactoringRuleMM.ecore#/1"
+    name="extractSuperclassRef">
+  <constraints>Item(11,&quot;name&quot;) == Item(21,&quot;name&quot;)</constraints>
+  <pattern name="">
+    <eclassifiers
+        xsi:type="refactoringRuleMM:Pattern_DiffEClass"
+        ID_Pattern="1">
+      <ereferences
+          xsi:type="refactoringRuleMM:Pattern_DiffEReference"
+          ID_Pattern="11"/>
+    </eclassifiers>
+    <eclassifiers
+        xsi:type="refactoringRuleMM:Pattern_EClass"
+        name=""
+        esupertypes="1"
+        ID_Pattern="2">
+      <ereferences
+          xsi:type="refactoringRuleMM:Pattern_DiffEReference"
+          operation="DELETE"
+          ID_Pattern="21"
+          filter="true"/>
+    </eclassifiers>
+    <domainspecificdiffs
+        xsi:type="refactoringRuleMM:Pattern_DomainSpecificDiff"
+        name="extractSuperclassRef"
+        DomainSpecificDiff_EClass="2"
+        ID_Pattern="3"/>
+  </pattern>
+</refactoringRuleMM:Rule>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dssmm2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dssmm2WayRuleMM="http://www.zadahmad.org/dsvcs/dssmm2WayRuleMM"
+    xsi:schemaLocation="http://www.zadahmad.org/dsvcs/dssmm2WayRuleMM ../metaModels/DSSMM2WayRuleMM.ecore#/1"
+    name="renameFactorCF">
+  <constraints>Item(10,&quot;new_Name&quot;) != &quot;null&quot;</constraints>
+  <constraints>Item(10,&quot;new_Name&quot;) != &quot;\&quot;\&quot;&quot;</constraints>
+  <constraints>Item(10,&quot;Name&quot;) != Item(10,&quot;new_Name&quot;)</constraints>
+  <rulePattern_Factor
+      xsi:type="dssmm2WayRuleMM:Pattern_DiffCompositeFactor"
+      diff_kind="MODIFY"
+      ID_Pattern="10"/>
+  <rulePattern_SemanticObject
+      xsi:type="dssmm2WayRuleMM:Pattern_SemanticDiff"
+      name="Rename factor"
+      SemanticObject_Factor="//@rulePattern_Factor.0"
+      ID_Pattern="20"/>
+  <rulePattern_SemanticObject
+      xsi:type="dssmm2WayRuleMM:Pattern_SemanticDiff"
+      name="Rename factor"
+      SemanticObject_Factor="//@rulePattern_Factor.0"
+      ID_Pattern="30"
+      isForbidden="true"/>
+</dssmm2WayRuleMM:Rule>

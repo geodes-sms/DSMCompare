@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoringDiffMM:EPackage
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM"
+    name="pkg">
+  <eclassifiers
+      name="GlobalInterceptor"
+      implements="Interceptor"
+      interfaces="Interceptor">
+    <eattributes
+        name="SLASH_AT_END"
+        etype="String"/>
+    <eattributes
+        name="env"
+        etype="Environment"/>
+    <eattributes
+        name="result"
+        etype="Result"/>
+    <eattributes
+        name="req"
+        etype="HttpServletRequest"/>
+    <eattributes
+        name="localization"
+        etype="Localization"/>
+    <eattributes
+        name="LOG"
+        etype="Logger"/>
+    <eattributes
+        name="menuInfo"
+        etype="MenuInfo"/>
+    <eattributes
+        name="brutalDateFormat"
+        etype="BrutalDateFormat"/>
+    <eattributes
+        name="messageFactory"
+        etype="MessageFactory"/>
+    <eattributes
+        name="ads"
+        etype="BrutalAds"/>
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="recentTagsContainer"
+        etype="RecentTagsContainer"
+        diff_kind_Left="DELETE"/>
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="newses"
+        etype="NewsDAO"
+        diff_kind_Left="DELETE"/>
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="messageFactory"
+        etype="MessageFactory"
+        diff_kind_Left="ADD"/>
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="sideBarInfo"
+        etype="SideBarInfo"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        name="deployTimestamp()"
+        eparameters=""
+        etype="String"
+        methodBody="return; method invocation; getProperty; string literal; string literal; "
+        __idKDM="deployTimestamp______"/>
+    <eoperations
+        name="getCurrentUrl()"
+        eparameters=""
+        etype="String"
+        methodBody="return; expression statement; method invocation; debug; PLUS; url; string literal; if; expression statement; ASSIGN; url; array access; number literal; method invocation; split; method invocation; endsWith; string literal; if; expression statement; ASSIGN; url; PLUS; host; method invocation; getRequestURI; string literal; expression statement; ASSIGN; url; method invocation; toString; method invocation; getRequestURL; EQUALS; host; null; variable declaration; url; variable declaration; host; "
+        __idKDM="getCurrentUrl______"/>
+    <eoperations
+        name="logHeaders()"
+        eparameters=""
+        etype="void"
+        methodBody="while; expression statement; method invocation; debug; expression statement; method invocation; debug; variable declaration; value; variable declaration; key; method invocation; hasMoreElements; expression statement; method invocation; debug; string literal; variable declaration; headerNames; "
+        __idKDM="logHeaders______"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="GlobalInterceptor()"
+        eparameters="env:Environment, result:Result, req:HttpServletRequest, localization:Localization, servletContext:ServletContext, loggedUser:LoggedUser, menuInfo:MenuInfo, newses:NewsDAO, recentTagsContainer:RecentTagsContainer, brutalDateFormat:BrutalDateFormat, messageFactory:MessageFactory, ads:BrutalAds"
+        methodBody="expression statement; ASSIGN; field access; ads; this; expression statement; ASSIGN; field access; messageFactory; this; expression statement; ASSIGN; field access; brutalDateFormat; this; expression statement; ASSIGN; field access; recentTagsContainer; this; expression statement; ASSIGN; field access; newses; this; expression statement; ASSIGN; field access; menuInfo; this; expression statement; ASSIGN; field access; localization; this; expression statement; ASSIGN; field access; req; this; expression statement; ASSIGN; field access; result; this; expression statement; ASSIGN; field access; env; this; "
+        __idKDM="GlobalInterceptor___Environment__Result__HttpServletRequest__Localization__ServletContext__LoggedUser__MenuInfo__NewsDAO__RecentTagsContainer__BrutalDateFormat__MessageFactory__BrutalAds___"
+        diff_kind_Left="MODIFY"
+        diff_kind_Right="DELETE"
+        changeStatus="CONTRADICTING"
+        new_eparameters_Left="env:Environment, result:Result, req:HttpServletRequest, localization:Localization, servletContext:ServletContext, menuInfo:MenuInfo, sideBarInfo:SideBarInfo, brutalDateFormat:BrutalDateFormat, messageFactory:MessageFactory, ads:BrutalAds"
+        new_methodBody_Left="expression statement; ASSIGN; field access; ads; this; expression statement; ASSIGN; field access; messageFactory; this; expression statement; ASSIGN; field access; brutalDateFormat; this; expression statement; ASSIGN; field access; sideBarInfo; this; expression statement; ASSIGN; field access; menuInfo; this; expression statement; ASSIGN; field access; localization; this; expression statement; ASSIGN; field access; req; this; expression statement; ASSIGN; field access; result; this; expression statement; ASSIGN; field access; env; this; "/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="accepts()"
+        eparameters="method:ResourceMethod"
+        etype="boolean"
+        methodBody="return; boolean literal; "
+        __idKDM="accepts___ResourceMethod___"
+        diff_kind_Right="MODIFY"
+        new_eparameters_Right="method:ControllerMethod"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="intercept()"
+        eparameters="stack:InterceptorStack, method:ResourceMethod, resourceInstance:Object, null:InterceptionException"
+        etype="void"
+        methodBody="expression statement; method invocation; next; expression statement; method invocation; logHeaders; expression statement; method invocation; loginForm; string literal; method invocation; redirectTo; type literal; method invocation; include; method invocation; asList; method invocation; build; string literal; string literal; string literal; method invocation; on; type literal; expression statement; method invocation; notFound; method invocation; on; type literal; expression statement; method invocation; include; method invocation; shouldShowAds; string literal; expression statement; method invocation; include; method invocation; getRecentTagsUsage; string literal; expression statement; method invocation; include; method invocation; allVisibleAndApproved; number literal; string literal; expression statement; method invocation; include; method invocation; deployTimestamp; string literal; expression statement; method invocation; include; method invocation; getContextPath; string literal; expression statement; method invocation; include; method invocation; getCurrentUrl; string literal; expression statement; method invocation; include; method invocation; getInstance; string literal; string literal; expression statement; method invocation; include; class instance creation; Object; method invocation; getLocale; string literal; expression statement; method invocation; include; string literal; expression statement; method invocation; include; "
+        __idKDM="intercept___InterceptorStack__ResourceMethod__Object__InterceptionException___"
+        diff_kind_Left="MODIFY"
+        diff_kind_Right="MODIFY"
+        new_eparameters_Right="stack:InterceptorStack, method:ControllerMethod, resourceInstance:Object, null:InterceptionException"
+        new_methodBody_Left="expression statement; method invocation; next; expression statement; method invocation; logHeaders; expression statement; method invocation; loginForm; string literal; method invocation; redirectTo; type literal; method invocation; include; method invocation; asList; method invocation; build; string literal; string literal; string literal; method invocation; on; type literal; expression statement; method invocation; notFound; method invocation; on; type literal; expression statement; method invocation; include; method invocation; shouldShowAds; string literal; expression statement; method invocation; include; method invocation; deployTimestamp; string literal; expression statement; method invocation; include; method invocation; getContextPath; string literal; expression statement; method invocation; include; method invocation; getCurrentUrl; string literal; expression statement; method invocation; include; method invocation; getInstance; string literal; string literal; expression statement; method invocation; include; class instance creation; Object; method invocation; getLocale; string literal; expression statement; method invocation; include; string literal; expression statement; method invocation; include; expression statement; method invocation; include; "/>
+    <diffeattributes
+        diff_kind_Left="ADD"
+        eType="result"/>
+    <diffeattributes
+        diff_kind_Right="DELETE"
+        eType="LOG"/>
+    <diffeattributes
+        diff_kind_Right="ADD"
+        eType="LOG"/>
+    <diffeattributes
+        diff_kind_Left="DELETE"
+        eType="newses"/>
+  </eclassifiers>
+  <eclassifiers
+      name="TagPageValidator">
+    <eattributes
+        name="messageFactory"
+        etype="MessageFactory"/>
+    <eattributes
+        name="tagPages"
+        etype="TagPageDAO"/>
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="validator"
+        etype="Validator"
+        diff_kind_Right="MODIFY"
+        changeStatus="CONTRADICTING"
+        new_etype_Right="TagPageValidator"/>
+    <eoperations
+        name="TagPageValidator()"
+        eparameters="validator:Validator, messageFactory:MessageFactory, tagPages:TagPageDAO"
+        methodBody="expression statement; ASSIGN; field access; tagPages; this; expression statement; ASSIGN; field access; messageFactory; this; expression statement; ASSIGN; field access; validator; this; "
+        __idKDM="TagPageValidator___Validator__MessageFactory__TagPageDAO___"/>
+    <eoperations
+        name="validateCreationWithTag()"
+        eparameters="tagName:String"
+        etype="boolean"
+        methodBody="return; NOT; method invocation; hasErrors; expression statement; method invocation; showTagPage; method invocation; onErrorRedirectTo; type literal; if; expression statement; method invocation; add; method invocation; build; string literal; string literal; method invocation; existsOfTag; "
+        __idKDM="validateCreationWithTag___String___"/>
+    <eoperations
+        name="validate()"
+        eparameters="tagPage:TagPage"
+        etype="boolean"
+        methodBody="return; NOT; method invocation; hasErrors; expression statement; method invocation; validate; "
+        __idKDM="validate___TagPage___"/>
+    <eoperations
+        name="onErrorRedirectTo()"
+        eparameters="controller:java.lang.Class&lt;T>"
+        etype="T"
+        methodBody="return; method invocation; onErrorRedirectTo; "
+        __idKDM="onErrorRedirectTo___java_lang_Class_T____"/>
+    <diffeattributes
+        diff_kind_Right="DELETE"
+        eType="messageFactory"/>
+    <diffeattributes
+        diff_kind_Right="ADD"
+        eType="messageFactory"/>
+    <diffeattributes
+        diff_kind_Right="DELETE"
+        eType="validator"/>
+    <diffeattributes
+        diff_kind_Right="DELETE"
+        eType="tagPages"/>
+    <diffeoperations
+        diff_kind_Right="DELETE"
+        eType="TagPageValidator()"/>
+    <diffeoperations
+        diff_kind_Right="ADD"
+        eType="TagPageValidator()"/>
+  </eclassifiers>
+  <eclassifiers
+      xsi:type="refactoringDiffMM:DiffEClass"
+      name="RssImageEntry"
+      diff_kind_Left="DELETE"
+      diff_kind_Right="DELETE"
+      changeStatus="CONTRADICTING">
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="url"
+        etype="String"
+        diff_kind_Left="DELETE"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="getUrl()"
+        eparameters=""
+        etype="String"
+        methodBody="return; field access; url; this; "
+        __idKDM="getUrl______"
+        diff_kind_Left="DELETE"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="RssImageEntry()"
+        eparameters="url:String"
+        methodBody="expression statement; ASSIGN; url; field access; url; this; "
+        __idKDM="RssImageEntry___String___"
+        diff_kind_Left="DELETE"/>
+  </eclassifiers>
+  <eclassifiers
+      xsi:type="refactoringDiffMM:DiffEClass"
+      name="RssFeedFactory"
+      diff_kind_Left="DELETE"
+      changeStatus="CONTRADICTING">
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="entryFactory"
+        etype="QuestionRssEntryFactory"
+        diff_kind_Left="DELETE"/>
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="stream"
+        etype="PrintStream"
+        diff_kind_Left="DELETE"/>
+    <eattributes
+        name="home"
+        etype="String"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="build()"
+        eparameters="rssContents:List&lt;RssContent>, output:OutputStream, rssTitle:String, rssDescription:String"
+        etype="void"
+        methodBody="expression statement; method invocation; close; foreach; rssContent; expression statement; method invocation; print; character literal; expression statement; method invocation; writeEntry; expression statement; method invocation; open; expression statement; ASSIGN; stream; class instance creation; PrintStream; "
+        __idKDM="build___List_RssContent___OutputStream__String__String___"
+        diff_kind_Left="DELETE"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="close()"
+        eparameters="output:OutputStream"
+        etype="void"
+        methodBody="expression statement; method invocation; print; string literal; "
+        __idKDM="close___OutputStream___"
+        diff_kind_Left="DELETE"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="open()"
+        eparameters="output:OutputStream, title:String, description:String"
+        etype="void"
+        methodBody="expression statement; method invocation; print; PLUS; title; string literal; string literal; method invocation; print; string literal; string literal; method invocation; print; string literal; string literal; string literal; string literal; string literal; string literal; PLUS; string literal; string literal; string literal; string literal; variable declaration; class instance creation; new DateTime(); dateTime; "
+        __idKDM="open___OutputStream__String__String___"
+        diff_kind_Left="DELETE"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="RssFeedFactory()"
+        eparameters="env:Environment, questionRssEntryFactory:QuestionRssEntryFactory"
+        methodBody="expression statement; ASSIGN; questionRssEntryFactory; field access; entryFactory; this; expression statement; ASSIGN; PLUS; method invocation; get; string literal; method invocation; get; string literal; field access; home; this; "
+        __idKDM="RssFeedFactory___Environment__QuestionRssEntryFactory___"
+        diff_kind_Left="DELETE"
+        diff_kind_Right="DELETE"
+        changeStatus="CONTRADICTING"/>
+    <diffeoperations
+        diff_kind_Right="DELETE"
+        eType="RssFeedFactory()"/>
+    <diffeoperations
+        diff_kind_Right="ADD"
+        eType="RssFeedFactory()"/>
+  </eclassifiers>
+  <eclassifiers
+      xsi:type="refactoringDiffMM:DiffEClass"
+      name="TagPageController"
+      diff_kind_Left="DELETE"
+      changeStatus="CONTRADICTING">
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="tags"
+        etype="TagDAO"
+        diff_kind_Left="DELETE"/>
+    <eattributes
+        name="result"
+        etype="Result"/>
+    <eattributes
+        name="tagPages"
+        etype="TagPageDAO"/>
+    <eattributes
+        name="validator"
+        etype="TagPageValidator"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="editTagPage()"
+        eparameters="tagName:String, about:String"
+        etype="void"
+        methodBody="expression statement; method invocation; showTagPage; method invocation; redirectTo; this; if; return; expression statement; method invocation; editTagPageForm; method invocation; getTagName; method invocation; onErrorRedirectTo; type literal; NOT; method invocation; validate; expression statement; method invocation; setAbout; variable declaration; tagPage; "
+        __idKDM="editTagPage___String__String___"
+        diff_kind_Left="DELETE"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="editTagPageForm()"
+        eparameters="tagName:String"
+        etype="void"
+        methodBody="expression statement; method invocation; include; string literal; variable declaration; tagPage; "
+        __idKDM="editTagPageForm___String___"
+        diff_kind_Left="DELETE"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="tagPageForm()"
+        eparameters="tagName:String"
+        etype="void"
+        methodBody="if; expression statement; method invocation; include; method invocation; findByName; string literal; method invocation; validateCreationWithTag; "
+        __idKDM="tagPageForm___String___"
+        diff_kind_Left="DELETE"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="showTagPage()"
+        eparameters="tagName:String"
+        etype="void"
+        methodBody="expression statement; method invocation; include; variable declaration; tagPage; "
+        __idKDM="showTagPage___String___"
+        diff_kind_Left="DELETE"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="newTagPage()"
+        eparameters="tagName:String, about:String"
+        etype="void"
+        methodBody="expression statement; method invocation; showTagPage; method invocation; getTagName; method invocation; redirectTo; this; expression statement; method invocation; save; if; return; expression statement; method invocation; tagPageForm; method invocation; getTagName; method invocation; onErrorRedirectTo; type literal; NOT; method invocation; validate; variable declaration; class instance creation; Object; tagPage; variable declaration; tag; if; return; NOT; method invocation; validateCreationWithTag; "
+        __idKDM="newTagPage___String__String___"
+        diff_kind_Left="DELETE"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="TagPageController()"
+        eparameters="tags:TagDAO, result:Result, tagPages:TagPageDAO, validator:TagPageValidator"
+        methodBody="expression statement; ASSIGN; validator; field access; validator; this; expression statement; ASSIGN; field access; tagPages; this; expression statement; ASSIGN; field access; result; this; expression statement; ASSIGN; field access; tags; this; "
+        __idKDM="TagPageController___TagDAO__Result__TagPageDAO__TagPageValidator___"
+        diff_kind_Left="DELETE"/>
+    <diffeattributes
+        diff_kind_Left="DELETE"
+        eType="result"/>
+    <diffeattributes
+        diff_kind_Right="ADD"
+        eType="validator"/>
+    <diffeattributes
+        diff_kind_Right="ADD"
+        eType="tagPages"/>
+  </eclassifiers>
+  <eclassifiers
+      xsi:type="refactoringDiffMM:DiffEClass"
+      name="QuestionRssEntryFactory"
+      diff_kind_Left="DELETE"
+      changeStatus="CONTRADICTING">
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="home"
+        etype="String"
+        diff_kind_Left="DELETE"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="writeEntry()"
+        eparameters="rssContent:RssContent, output:OutputStream"
+        etype="void"
+        methodBody="expression statement; method invocation; toXML; expression statement; method invocation; processAnnotations; type literal; variable declaration; xstream; variable declaration; entry; variable declaration; imageEntry; variable declaration; author; "
+        __idKDM="writeEntry___RssContent__OutputStream___"
+        diff_kind_Left="DELETE"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="buildXstream()"
+        eparameters=""
+        etype="XStream"
+        methodBody="return; class instance creation; new XStream(new XppDriver(){&#xA;  public HierarchicalStreamWriter createWriter(  Writer out){&#xA;    return new PrettyPrintWriter(out){&#xA;      List&lt;String> cdataFields=asList(&quot;title&quot;,&quot;author&quot;);&#xA;      boolean cdata=false;&#xA;      public void startNode(      String name,      Class clazz){&#xA;        super.startNode(name,clazz);&#xA;        cdata=cdataFields.contains(name);&#xA;      }&#xA;      protected void writeText(      QuickWriter writer,      String text){&#xA;        if (cdata) {&#xA;          writer.write(&quot;&lt;![CDATA[&quot;);&#xA;          writer.write(text);&#xA;          writer.write(&quot;]]>&quot;);&#xA;        }&#xA; else {&#xA;          writer.write(text);&#xA;        }&#xA;      }&#xA;    }&#xA;;&#xA;  }&#xA;}&#xA;); class instance creation; ; Anonymous type; "
+        __idKDM="buildXstream______"
+        diff_kind_Left="DELETE"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="QuestionRssEntryFactory()"
+        eparameters="env:Environment"
+        methodBody="expression statement; ASSIGN; home; conditional; PLUS; home; string literal; method invocation; endsWith; string literal; expression statement; ASSIGN; PLUS; string literal; method invocation; get; string literal; field access; home; this; "
+        __idKDM="QuestionRssEntryFactory___Environment___"
+        diff_kind_Left="DELETE"
+        diff_kind_Right="DELETE"
+        changeStatus="CONTRADICTING"/>
+    <diffeoperations
+        diff_kind_Right="DELETE"
+        eType="QuestionRssEntryFactory()"/>
+    <diffeoperations
+        diff_kind_Right="ADD"
+        eType="QuestionRssEntryFactory()"/>
+  </eclassifiers>
+  <eclassifiers
+      name="SideBarInfo">
+    <diffeattributes
+        diff_kind_Left="ADD"
+        eType="newses"/>
+  </eclassifiers>
+  <interfaces
+      name="Interceptor"/>
+  <diffeclassifiers
+      diff_kind_Right="DELETE"
+      eType="RssImageEntry"/>
+  <diffeclassifiers
+      diff_kind_Right="ADD"
+      eType="RssImageEntry"/>
+  <diffeclassifiers
+      diff_kind_Left="DELETE"
+      diff_kind_Right="DELETE"/>
+  <diffeclassifiers
+      diff_kind_Left="DELETE"/>
+  <diffinterfaces
+      diff_kind_Left="DELETE"/>
+</refactoringDiffMM:EPackage>

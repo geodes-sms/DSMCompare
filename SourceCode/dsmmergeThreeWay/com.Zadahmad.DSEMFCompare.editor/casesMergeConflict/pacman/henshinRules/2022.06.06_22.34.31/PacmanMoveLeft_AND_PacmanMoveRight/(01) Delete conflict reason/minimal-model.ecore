@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="PacmanMoveLeft_PacmanMoveRight" nsURI="http://cdapackage/PacmanMoveLeft/PacmanMoveRight/DeleteConflictReason"
+    nsPrefix="CDAPackage">
+  <eClassifiers xsi:type="ecore:EClass" name="#n31_n32:DiffPositionableEntity_on#">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left=n31diff_kind_Left _ n32diff_kind_Left->n32diff_kind_Left"
+        unique="false" lowerBound="1" eType="ecore:EEnum ../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//AscDiffKind"
+        defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right=n31diff_kind_Right _ n32diff_kind_Right->n32diff_kind_Right"
+        unique="false" lowerBound="1" eType="ecore:EEnum ../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//AscDiffKind"
+        defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="#eType#" eType="#//n1_n2%3AGridNode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="n3_n3:Pacman">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="#diffon#" eType="#//%23n31_n32%3ADiffPositionableEntity_on%23"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="n1_n2:GridNode"/>
+</ecore:EPackage>

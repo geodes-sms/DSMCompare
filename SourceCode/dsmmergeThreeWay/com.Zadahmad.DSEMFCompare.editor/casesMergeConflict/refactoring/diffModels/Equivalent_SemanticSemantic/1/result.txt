@@ -1,0 +1,83 @@
+Matches count 	:	1
+Diffs count 	:	16
+Conflicts count :	0
+Matched resources :
+Left = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/casesMergeConflict/refactoring/dsModels/V1.xmi
+Right = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/casesMergeConflict/refactoring/dsModels/V2.xmi
+origin = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/casesMergeConflict/refactoring/dsModels/CA.xmi
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| refactoringDiffMM.impl.EPackageImpl@2002348 (name: rfc)| refactoringDiffMM.impl.EPackageImpl@54c62d71 (name: rfc)|
+| |-refactoringDiffMM.impl.EClassImpl@5911e990 (name: cls3)| |-refactoringDiffMM.impl.EClassImpl@65045a87 (name: cls3)|
+| | |-refactoringDiffMM.impl.EAttributeImpl@31000e60 (name: attr1, etype: null)| | |-refactoringDiffMM.impl.EAttributeImpl@47f4e407 (name: attr1, etype: null)|
+| | |-refactoringDiffMM.impl.EAttributeImpl@1d470d0 (name: attr2, etype: null)| | |-refactoringDiffMM.impl.EAttributeImpl@2d1dee39 (name: attr2, etype: null)|
+| |-refactoringDiffMM.impl.EClassImpl@24d09c1 (name: root)| |-refactoringDiffMM.impl.EClassImpl@48d5f34e (name: root)|
+| |                                      | |                                      |
+| |                                      | |                                      |
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+REFERENCE CHANGES
+
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@31000e60 (name: attr1, etype: null) has been moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@5911e990 (name: cls3)
+
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@1d470d0 (name: attr2, etype: null) has been moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@5911e990 (name: cls3)
+
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@47f4e407 (name: attr1, etype: null) has been remotely(RIGHT) moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@5911e990 (name: cls3)
+
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@2d1dee39 (name: attr2, etype: null) has been remotely(RIGHT) moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@5911e990 (name: cls3)
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@24d09c1 (name: root) has been added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@5911e990 (name: cls3)
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@48d5f34e (name: root) has been remotely(RIGHT) added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@5911e990 (name: cls3)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@acdb094 (name: root) has been deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@6ff65192 (name: cls1)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@acdb094 (name: root) has been remotely(RIGHT) deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@6ff65192 (name: cls1)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@acdb094 (name: root) has been deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@4af0df05 (name: cls2)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@acdb094 (name: root) has been remotely(RIGHT) deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@4af0df05 (name: cls2)
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@5911e990 (name: cls3) has been added to reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@2002348 (name: rfc)
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@65045a87 (name: cls3) has been remotely(RIGHT) added to reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@2002348 (name: rfc)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@6ff65192 (name: cls1) has been deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@2002348 (name: rfc)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@6ff65192 (name: cls1) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@2002348 (name: rfc)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@4af0df05 (name: cls2) has been deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@2002348 (name: rfc)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@4af0df05 (name: cls2) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@2002348 (name: rfc)
+
+ATTRIBUTE CHANGES
+
+CONFLICTS
+ComparisonResult: 197 - pseudoConflicts = pseudoConflictsStream.collect(Collectors.toList());
+Exception: java.lang.NullPointerException
+ComparisonResult: 197 - pseudoConflicts = pseudoConflictsStream.collect(Collectors.toList());
+Exception: java.lang.NullPointerException
+ComparisonResult: 197 - pseudoConflicts = pseudoConflictsStream.collect(Collectors.toList());
+Exception: java.lang.NullPointerException
+ComparisonResult: 197 - pseudoConflicts = pseudoConflictsStream.collect(Collectors.toList());
+Exception: java.lang.NullPointerException
+false is deleted!false is deleted!The end of transforming EMF-Diff to DSMC-Diff
+emf-Compare result transformed to Fine-Grained DsmdiffMM!

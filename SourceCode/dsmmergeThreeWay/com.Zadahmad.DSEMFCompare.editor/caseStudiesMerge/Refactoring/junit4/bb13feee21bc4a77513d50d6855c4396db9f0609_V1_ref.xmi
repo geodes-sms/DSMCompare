@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="Enclosed" extends="Suite">
+    <eoperations name="Enclosed()" eparameters="klass:java.lang.Class&lt;?>, builder:RunnerBuilder, null:Throwable" methodBody="super constructor invocation; Object; method invocation; filterAbstractClasses; method invocation; getClasses; " __idKDM="Enclosed___java_lang_Class_____RunnerBuilder__Throwable___"/>
+    <eoperations name="filterAbstractClasses()" eparameters="classes:java.lang.Class&lt;?>[]" etype="java.lang.Class&lt;?>[]" methodBody="return; method invocation; toArray; array creation; java.lang.Class&lt;?>[]; method invocation; size; foreach; clazz; if; expression statement; method invocation; add; NOT; method invocation; isAbstract; method invocation; getModifiers; variable declaration; class instance creation; ArrayList; array length access; filteredList; " __idKDM="filterAbstractClasses___java_lang_Class________"/>
+    <esupertypes href="02fc1f509a670de3632417bbf33168989bfcf872_CA_ref.xmi#Suite"/>
+  </eclassifiers>
+  <eclassifiers name="EnclosedTest">
+    <eoperations name="enclosedRunnerPlansConcreteEnclosedClasses()" eparameters="null:Exception" etype="void" methodBody="expression statement; method invocation; assertEquals; method invocation; testCount; number literal; variable declaration; runner; " __idKDM="enclosedRunnerPlansConcreteEnclosedClasses___Exception___"/>
+    <eoperations name="enclosedRunnerRunsConcreteEnclosedClasses()" eparameters="null:Exception" etype="void" methodBody="expression statement; method invocation; assertEquals; method invocation; getRunCount; number literal; variable declaration; result; " __idKDM="enclosedRunnerRunsConcreteEnclosedClasses___Exception___"/>
+    <eoperations name="enclosedRunnerIsNamedForEnclosingClass()" eparameters="null:Exception" etype="void" methodBody="expression statement; method invocation; assertEquals; method invocation; getDisplayName; method invocation; getDescription; method invocation; getRunner; method invocation; aClass; type literal; method invocation; getName; type literal; " __idKDM="enclosedRunnerIsNamedForEnclosingClass___Exception___"/>
+    <nested_classes name="Enclosing"/>
+    <nested_classes name="A">
+      <eoperations name="a()" eparameters="" etype="void" methodBody="" __idKDM="a______"/>
+      <eoperations name="b()" eparameters="" etype="void" methodBody="" __idKDM="b______"/>
+    </nested_classes>
+    <nested_classes name="B">
+      <eoperations name="a()" eparameters="" etype="void" methodBody="" __idKDM="a______"/>
+      <eoperations name="b()" eparameters="" etype="void" methodBody="" __idKDM="b______"/>
+      <eoperations name="c()" eparameters="" etype="void" methodBody="" __idKDM="c______"/>
+    </nested_classes>
+    <nested_classes name="C">
+      <eoperations name="a()" eparameters="" etype="void" methodBody="" __idKDM="a______"/>
+    </nested_classes>
+  </eclassifiers>
+</refactoring:EPackage>

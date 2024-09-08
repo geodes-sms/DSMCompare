@@ -1,0 +1,731 @@
+ePackageImport  PacmanGoDiffMM
+
+		rule ghostmoves()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Ghost
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 delete				node n32:DiffPositionableEntity_on{
+					delete operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"ghostmoves\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(delete		n3->n31:diffon),
+			  		(delete		n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(delete		n32->n2:eType),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Ghost)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule ghostmovesbottom()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Ghost
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"ghostmovesBottom\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:bottom),
+			  		(preserve	n2->n1:up),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Ghost)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule ghostmovesleft()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Ghost
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"ghostmovesLeft\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:left),
+			  		(preserve	n2->n1:right),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Ghost)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule ghostmovesright()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Ghost
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"GostMovesRight\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:right),
+			  		(preserve	n2->n1:left),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule ghostmovesup()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Ghost
+				 preserve			node n31:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 delete				node n32:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"ghostmovesUp\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:up),
+			  		(preserve	n2->n1:bottom),
+			  		(preserve	n3->n31:diffon),
+			  		(delete		n3->n32:diffon),
+			  		(preserve	n31->n2:eType),
+			  		(delete		n32->n1:eType),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Ghost)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmandies()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:DiffPacman{
+					preserve operation = "DELETE"
+				}
+				 delete				node n21:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n3:Ghost
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"PacmanDies\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:entities),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(delete		n2->n21:diffon),
+			  		(delete		n21->n1:eType),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n2:DomainSpecificDiff_Pacman),
+			  		(create		n4->n3:DomainSpecificDiff_Ghost)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmaneatsfood(VAR n3value:EInt, VAR n3new_value:EInt)
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:DiffScoreboard{
+					preserve operation = "MODIFY"
+					preserve value =  n3value
+					preserve new_value =  n3new_value
+				}
+				 preserve			node n3:Pacman
+				 preserve			node n4:DiffFood{
+					preserve operation = "DELETE"
+				}
+				 delete				node n41:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 create				node n5:DomainSpecificDiff{
+					create name = "\"PacmanEatsFood\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:scoreboard),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n0->n4:entities),
+			  		(create		n0->n5:domainspecificdiffs),
+			  		(delete		n4->n41:diffon),
+			  		(delete		n41->n1:eType),
+			  		(create		n5->n4:DomainSpecificDiff_Food),
+			  		(create		n5->n3:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+			conditions [n3value < n3new_value]
+		}
+//----------------------------------------------------------------------
+
+		rule pacmanmoves()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Pacman
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 delete				node n32:DiffPositionableEntity_on{
+					delete operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"pacmanmoves\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(delete		n3->n31:diffon),
+			  		(delete		n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(delete		n32->n2:eType),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmanmovesbottom()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Pacman
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"pacmanmovesBottom\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:bottom),
+			  		(preserve	n2->n1:up),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmanmovesleft()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Pacman
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"pacmanmovesLeft\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:left),
+			  		(preserve	n2->n1:right),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmanmovesright()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Pacman
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"pacmanmovesRight\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:right),
+			  		(preserve	n2->n1:left),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmanmovesup()
+		{
+			graph
+			{
+				 preserve			node n0:Game
+				 preserve			node n1:GridNode
+				 preserve			node n2:GridNode
+				 preserve			node n3:Pacman
+				 delete				node n31:DiffPositionableEntity_on{
+					delete operation = "DELETE"
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve operation = "ADD"
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"pacmanmovesUp\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:up),
+			  		(preserve	n2->n1:bottom),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n1:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+	//4<->6<->10-2<->9-1<->11-3<->8-0<->5-7	
+	
+	/*
+		0	ghostmoves
+		1	ghostmovesbottom
+		2	ghostmovesleft
+		3	ghostmovesright
+		4	ghostmovesup
+		5	pacmandies
+		6	pacmaneatsfood
+		7	pacmanmoves
+		8	pacmanmovesbottom
+		9	pacmanmovesleft
+		10	pacmanmovesright
+		11	pacmanmovesup
+	 */
+	
+//--------------------------------------------------------------------------------
+//For Pacman, we use the following orders of clusters (not of the rules!):
+//	1 2 3 4 5 6  // our order
+//	6 5 4 3 2 1  // reverse order
+//	5 4 6 2 1 3  // random 1
+//	4 6 1 5 3 2  // random 2
+//	2 3 5 1 6 4  // random 3
+//	3 1 2 6 4 5  // random 4
+
+	unit unitAlgorithmOrderSeq(){
+			loop_ghostmovesbottom() loop_pacmaneatsfood() loop_pacmanmovesright() 	//1
+			loop_ghostmovesup() loop_pacmanmovesleft()								//2
+			loop_ghostmovesleft() loop_pacmanmovesbottom()							//3
+			loop_ghostmovesright() loop_pacmanmovesup()								//4
+			loop_ghostmoves() loop_pacmandies()										//5
+			loop_pacmanmoves()														//6
+	}
+	
+	unit unitReverseOrderSeq(){
+			loop_pacmanmoves()														//6
+			loop_ghostmoves() loop_pacmandies()										//5
+			loop_ghostmovesright() loop_pacmanmovesup()								//4
+			loop_ghostmovesleft() loop_pacmanmovesbottom()							//3
+			loop_ghostmovesup() loop_pacmanmovesleft()								//2
+			loop_ghostmovesbottom() loop_pacmaneatsfood() loop_pacmanmovesright() 	//1
+	}	
+	
+	unit unitRandCluster1(){
+			loop_ghostmoves() loop_pacmandies()										//5
+			loop_ghostmovesright() loop_pacmanmovesup()								//4
+			loop_pacmanmoves()														//6
+			loop_ghostmovesup() loop_pacmanmovesleft()								//2
+			loop_ghostmovesbottom() loop_pacmaneatsfood() loop_pacmanmovesright() 	//1
+			loop_ghostmovesleft() loop_pacmanmovesbottom()							//3
+	}	
+	
+	unit unitRandCluster2(){
+			loop_ghostmovesright() loop_pacmanmovesup()								//4
+			loop_pacmanmoves()														//6
+			loop_ghostmovesbottom() loop_pacmaneatsfood() loop_pacmanmovesright() 	//1
+			loop_ghostmoves() loop_pacmandies()										//5
+			loop_ghostmovesleft() loop_pacmanmovesbottom()							//3
+			loop_ghostmovesup() loop_pacmanmovesleft()								//2
+	}	
+	unit unitRandCluster3(){
+			loop_ghostmovesup() loop_pacmanmovesleft()								//2
+			loop_ghostmovesleft() loop_pacmanmovesbottom()							//3
+			loop_ghostmoves() loop_pacmandies()										//5
+			loop_ghostmovesbottom() loop_pacmaneatsfood() loop_pacmanmovesright() 	//1
+			loop_pacmanmoves()														//6
+			loop_ghostmovesright() loop_pacmanmovesup()								//4
+	}		
+	unit unitRandCluster4(){
+			loop_ghostmovesleft() loop_pacmanmovesbottom()							//3
+			loop_ghostmovesbottom() loop_pacmaneatsfood() loop_pacmanmovesright() 	//1
+			loop_ghostmovesup() loop_pacmanmovesleft()								//2
+			loop_pacmanmoves()														//6
+			loop_ghostmovesright() loop_pacmanmovesup()								//4
+			loop_ghostmoves() loop_pacmandies()										//5
+	}
+//----------------------------------------------------------------------
+
+	unit unitRand1(){
+			loop_ghostmovesbottom()
+			loop_pacmanmoves()
+			loop_pacmandies()
+			loop_ghostmoves() 
+			loop_pacmanmovesright()
+			loop_ghostmovesright()
+			loop_pacmanmovesleft()
+			loop_pacmanmovesup()
+			loop_pacmanmovesbottom()
+			loop_ghostmovesleft() 
+			loop_pacmaneatsfood() 
+			loop_ghostmovesup() 
+	}
+	
+	unit unitRand2(){			
+			loop_pacmanmoves()
+			loop_ghostmovesbottom()
+			loop_pacmaneatsfood() 
+			loop_ghostmovesright()
+			loop_ghostmovesleft() 
+			loop_pacmanmovesright()			
+			loop_pacmandies()
+			loop_pacmanmovesup()
+			loop_pacmanmovesleft()
+			loop_ghostmoves() 
+			loop_pacmanmovesbottom()
+			loop_ghostmovesup() 
+	}	
+
+	unit unitRand3(){
+			loop_ghostmovesleft() 	
+			loop_pacmanmovesup()
+			loop_pacmanmovesleft()			
+			loop_pacmandies()	
+			loop_ghostmoves() 
+			loop_ghostmovesup() 
+			loop_pacmanmoves()
+			loop_pacmanmovesbottom()
+			loop_pacmanmovesright()
+			loop_pacmaneatsfood() 
+			loop_ghostmovesbottom()
+			loop_ghostmovesright()
+	}	
+	
+	unit unitRand4(){	
+			loop_pacmanmovesup() 
+			loop_ghostmovesup() 	
+			loop_ghostmoves()
+			loop_pacmanmovesright()
+			loop_pacmanmovesleft()	 		
+			loop_pacmandies()
+			loop_pacmanmovesbottom()
+			loop_ghostmovesright()
+			loop_pacmanmoves()
+			loop_ghostmovesbottom()
+			loop_ghostmovesleft()
+			loop_pacmaneatsfood() 
+	}	
+	
+	unit unitRand5(){	
+			loop_pacmanmovesleft()	
+			loop_pacmanmovesright()
+			loop_pacmaneatsfood() 
+			loop_pacmanmovesbottom() 
+			loop_ghostmovesup() 
+			loop_ghostmovesleft()
+			loop_ghostmovesbottom()		
+			loop_pacmandies()	
+			loop_ghostmoves() 
+			loop_pacmanmovesup()
+			loop_ghostmovesright()
+			loop_pacmanmoves()
+	}	
+	
+	unit unitRand51(){	
+			loop_pacmanmovesleft()	
+			loop_pacmanmovesright()
+			loop_pacmaneatsfood() 
+			loop_pacmanmovesbottom() 
+			loop_ghostmovesup() 
+			loop_ghostmovesleft()
+			loop_ghostmovesbottom()		
+			loop_pacmandies()	
+			loop_ghostmoves() 			
+			loop_pacmanmoves()
+			loop_pacmanmovesup()
+			loop_ghostmovesright()
+	}	
+
+
+//----------------------------------------------------------------------
+	
+	unit loop_ghostmoves(){
+		while{//0
+			ghostmoves()
+		}
+	}
+	
+	unit loop_ghostmovesbottom(){		
+		while{//1
+			ghostmovesbottom()
+		}
+	}
+	
+	unit loop_ghostmovesleft(){
+		while{//2
+			ghostmovesleft()
+		}
+	}
+	
+	unit loop_ghostmovesright(){		
+		while{//3
+			ghostmovesright()
+		}
+	}
+		
+	unit loop_ghostmovesup(){		
+		while{//4
+			ghostmovesup()
+		}
+	}	
+	
+	unit loop_pacmandies(){
+		while{//5
+			pacmandies()
+		}
+	}	
+	
+	unit loop_pacmaneatsfood(){
+		
+		while{//6
+			pacmaneatsfood()
+		}
+	}
+	
+	unit loop_pacmanmoves(){		
+		while{//7
+			pacmanmoves()
+		}
+	}	
+	
+	unit loop_pacmanmovesbottom(){		
+		while{//8
+			pacmanmovesbottom()
+		}
+	}
+		
+	unit loop_pacmanmovesleft(){
+		while{//9
+			pacmanmovesleft()
+		}
+	}	
+	
+	unit loop_pacmanmovesright(){		
+		while{//10
+			pacmanmovesright()
+		}
+	}	
+	
+	unit loop_pacmanmovesup(){		
+		while{//11
+			pacmanmovesup()
+		}
+	}
+	
+	
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+	
+
+
+	unit unitAlgorithmB(){
+			loop_ghostmovesup() loop_pacmaneatsfood() loop_pacmanmovesright()
+			loop_ghostmovesleft() loop_pacmanmovesleft()
+			loop_ghostmovesbottom() loop_pacmanmovesup()
+			loop_ghostmovesright() loop_pacmanmovesbottom()
+			loop_pacmanmoves() loop_ghostmoves() loop_pacmandies()			
+	}
+			
+	unit loop_OrderIndep(){
+		while{//0
+			unitAlgorithmOrderIndependent()
+		}
+	}
+	
+	unit loop_NoOrderIndep(){
+		while{//0
+			independent[loop_ghostmovesup(), loop_pacmaneatsfood(), loop_pacmanmovesright(),
+			loop_ghostmovesleft(), loop_pacmanmovesleft(),
+			loop_ghostmovesbottom(), loop_pacmanmovesup(),
+			loop_ghostmovesright(), loop_pacmanmovesbottom(),
+			loop_ghostmoves(), loop_pacmandies(),
+			loop_pacmanmoves()]
+		}
+	}	
+	
+	unit unitAlgorithmOrderIndependent(){
+			independent[loop_ghostmovesup(), loop_pacmaneatsfood(), loop_pacmanmovesright()]
+			independent[loop_ghostmovesleft(), loop_pacmanmovesleft()]
+			independent[loop_ghostmovesbottom(), loop_pacmanmovesup()]
+			independent[loop_ghostmovesright(), loop_pacmanmovesbottom()]
+			independent[loop_ghostmoves(), loop_pacmandies()]
+			independent[loop_pacmanmoves()]
+	}
+	
+
+	
+	
+		unit unitM1Best(){
+			loop_ghostmovesup() loop_pacmaneatsfood() loop_pacmanmovesright()
+			loop_ghostmovesleft() loop_pacmanmovesleft()
+			loop_ghostmovesbottom() loop_pacmanmovesup()
+			loop_ghostmovesright() loop_pacmanmovesbottom()
+			loop_ghostmoves() loop_pacmanmoves() 
+			loop_pacmandies()
+	}	
+//----------------------------------------------------------------------
+	
+	unit unitReverseOrderIndependent(){
+			independent[loop_pacmanmoves()]
+			independent[loop_ghostmoves(), loop_pacmandies()]
+			independent[loop_ghostmovesright(), loop_pacmanmovesbottom()]
+			independent[loop_ghostmovesbottom(), loop_pacmanmovesup()]
+			independent[loop_ghostmovesleft(), loop_pacmanmovesleft()]
+			independent[loop_ghostmovesup(), loop_pacmaneatsfood(), loop_pacmanmovesright()]				
+	}
+	
+
+	

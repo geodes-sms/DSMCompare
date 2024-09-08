@@ -1,0 +1,497 @@
+ePackageImport  refactoringDiffMM
+
+	 rule delete_EPackage(){
+		 graph{
+			 delete	node n0:DiffEPackage
+
+		 }
+	 }
+
+	 rule addEPackage_eclassifiers(){
+		 graph{
+			 preserve	node n0:EPackage
+			 create	node n1:DiffEPackage_eclassifiers
+
+		 }
+	 }
+
+	 rule deleteEPackage_eclassifiers(){
+		 graph{
+			 preserve	node n0:EPackage
+			 delete	node n1:DiffEPackage_eclassifiers
+
+		 }
+	 }
+
+	 rule addEPackage_interfaces(){
+		 graph{
+			 preserve	node n0:EPackage
+			 create	node n1:DiffEPackage_interfaces
+
+		 }
+	 }
+
+	 rule deleteEPackage_interfaces(){
+		 graph{
+			 preserve	node n0:EPackage
+			 delete	node n1:DiffEPackage_interfaces
+
+		 }
+	 }
+
+	 rule delete_Interface(){
+		 graph{
+			 preserve	node n0:EPackage
+			 delete	node n1:DiffInterface
+		 edges[
+				 (delete	n0->n1:interfaces)
+			 ]
+
+		 }
+	 }
+
+	 rule changeInterface_extends(VAR n1extends:EString){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:DiffInterface
+			 {
+				preserve extends = "\"CONTRADICTING\""
+			 }
+		 edges[
+				 (delete	n0->n1:interfaces)
+			 ]
+
+		 }
+	 }
+
+	 rule changeInterface_packageName(VAR n1packageName:EString){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:DiffInterface
+			 {
+				preserve packageName = "\"CONTRADICTING\""
+			 }
+		 edges[
+				 (delete	n0->n1:interfaces)
+			 ]
+
+		 }
+	 }
+
+	 rule addInterface_eoperations(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:Interface
+			 create	node n2:DiffInterface_eoperations
+		 edges[
+				 (create	n0->n1:interfaces)
+			 ]
+
+		 }
+	 }
+
+	 rule deleteInterface_eoperations(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:Interface
+			 delete	node n2:DiffInterface_eoperations
+		 edges[
+				 (delete	n0->n1:interfaces)
+			 ]
+
+		 }
+	 }
+
+	 rule addInterface_esupertypes(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:Interface
+			 create	node n2:DiffInterface_esupertypes
+		 edges[
+				 (create	n0->n1:interfaces)
+			 ]
+
+		 }
+	 }
+
+	 rule deleteInterface_esupertypes(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:Interface
+			 delete	node n2:DiffInterface_esupertypes
+		 edges[
+				 (delete	n0->n1:interfaces)
+			 ]
+
+		 }
+	 }
+
+	 rule delete_EOperation(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 delete	node n2:DiffEOperation
+		 edges[
+				 (preserve	n0->n1:eclassifiers),
+				 (delete	n1->n2:eoperations)
+			 ]
+
+		 }
+	 }
+
+	 rule changeEOperation_eparameters(VAR n2eparameters:EString){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 preserve	node n2:DiffEOperation
+			 {
+				preserve eparameters = "\"CONTRADICTING\""
+			 }
+		 edges[
+				 (preserve	n0->n1:eclassifiers),
+				 (delete	n1->n2:eoperations)
+			 ]
+
+		 }
+	 }
+
+	 rule changeEOperation_etype(VAR n2etype:EString){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 preserve	node n2:DiffEOperation
+			 {
+				preserve etype = "\"CONTRADICTING\""
+			 }
+		 edges[
+				 (preserve	n0->n1:eclassifiers),
+				 (delete	n1->n2:eoperations)
+			 ]
+
+		 }
+	 }
+
+	 rule changeEOperation_methodBody(VAR n2methodBody:EString){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 preserve	node n2:DiffEOperation
+			 {
+				preserve methodBody = "\"CONTRADICTING\""
+			 }
+		 edges[
+				 (preserve	n0->n1:eclassifiers),
+				 (delete	n1->n2:eoperations)
+			 ]
+
+		 }
+	 }
+
+	 rule changeEOperation___idKDM(VAR n2__idKDM:EString){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 preserve	node n2:DiffEOperation
+			 {
+				preserve __idKDM = "\"CONTRADICTING\""
+			 }
+		 edges[
+				 (preserve	n0->n1:eclassifiers),
+				 (delete	n1->n2:eoperations)
+			 ]
+
+		 }
+	 }
+
+	 rule delete_EClass(){
+		 graph{
+			 preserve	node n0:EPackage
+			 delete	node n1:DiffEClass
+		 edges[
+				 (delete	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule changeEClass_extends(VAR n3extends:EString){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:DiffEClass
+			 {
+				preserve extends = "\"CONTRADICTING\""
+			 }
+		 edges[
+				 (delete	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule changeEClass_implements(VAR n3implements:EString){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:DiffEClass
+			 {
+				preserve implements = "\"CONTRADICTING\""
+			 }
+		 edges[
+				 (delete	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule changeEClass_isAbstract(VAR n3isAbstract:EBoolean){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:DiffEClass
+			 {
+				preserve isAbstract = n3isAbstract+1
+			 }
+		 edges[
+				 (delete	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule changeEClass_packageName(VAR n3packageName:EString){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:DiffEClass
+			 {
+				preserve packageName = "\"CONTRADICTING\""
+			 }
+		 edges[
+				 (delete	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule addEClass_eattributes(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 create	node n2:DiffEClass_eattributes
+		 edges[
+				 (create	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule deleteEClass_eattributes(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 delete	node n2:DiffEClass_eattributes
+		 edges[
+				 (delete	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule addEClass_eoperations(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 create	node n2:DiffEClass_eoperations
+		 edges[
+				 (create	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule deleteEClass_eoperations(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 delete	node n2:DiffEClass_eoperations
+		 edges[
+				 (delete	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule addEClass_ereferences(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 create	node n2:DiffEClass_ereferences
+		 edges[
+				 (create	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule deleteEClass_ereferences(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 delete	node n2:DiffEClass_ereferences
+		 edges[
+				 (delete	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule addEClass_esupertypes(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 create	node n2:DiffEClass_esupertypes
+		 edges[
+				 (create	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule deleteEClass_esupertypes(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 delete	node n2:DiffEClass_esupertypes
+		 edges[
+				 (delete	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule addEClass_interfaces(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 create	node n2:DiffEClass_interfaces
+		 edges[
+				 (create	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule deleteEClass_interfaces(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 delete	node n2:DiffEClass_interfaces
+		 edges[
+				 (delete	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule addEClass_nested_classes(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 create	node n2:DiffEClass_nested_classes
+		 edges[
+				 (create	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule deleteEClass_nested_classes(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 delete	node n2:DiffEClass_nested_classes
+		 edges[
+				 (delete	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule addEClass_nested_interfaces(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 create	node n2:DiffEClass_nested_interfaces
+		 edges[
+				 (create	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule deleteEClass_nested_interfaces(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 delete	node n2:DiffEClass_nested_interfaces
+		 edges[
+				 (delete	n0->n1:eclassifiers)
+			 ]
+
+		 }
+	 }
+
+	 rule delete_EReference(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 delete	node n2:DiffEReference
+		 edges[
+				 (preserve	n0->n1:eclassifiers),
+				 (delete	n1->n2:ereferences)
+			 ]
+
+		 }
+	 }
+
+	 rule changeEReference_etype(VAR n4etype:EString){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 preserve	node n2:DiffEReference
+			 {
+				preserve etype = "\"CONTRADICTING\""
+			 }
+		 edges[
+				 (preserve	n0->n1:eclassifiers),
+				 (delete	n1->n2:ereferences)
+			 ]
+
+		 }
+	 }
+
+	 rule delete_EAttribute(){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 delete	node n2:DiffEAttribute
+		 edges[
+				 (preserve	n0->n1:eclassifiers),
+				 (delete	n1->n2:eattributes)
+			 ]
+
+		 }
+	 }
+
+	 rule changeEAttribute_etype(VAR n5etype:EString){
+		 graph{
+			 preserve	node n0:EPackage
+			 preserve	node n1:EClass
+			 preserve	node n2:DiffEAttribute
+			 {
+				preserve etype = "\"CONTRADICTING\""
+			 }
+		 edges[
+				 (preserve	n0->n1:eclassifiers),
+				 (delete	n1->n2:eattributes)
+			 ]
+
+		 }
+	 }

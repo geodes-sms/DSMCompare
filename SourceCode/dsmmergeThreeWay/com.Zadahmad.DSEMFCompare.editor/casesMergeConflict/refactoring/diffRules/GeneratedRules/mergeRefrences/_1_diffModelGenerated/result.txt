@@ -1,0 +1,39 @@
+Matches count 	:	1
+Diffs count 	:	3
+Conflicts count :	0
+Matched resources :
+Left = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/casesMergeConflict/refactoring/dsModels/V1.xmi
+Right = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/casesMergeConflict/refactoring/dsModels/V2.xmi
+origin = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/casesMergeConflict/refactoring/dsModels/CA.xmi
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| refactoringDiffMM.impl.EPackageImpl@39a8312f (name: rfc)| refactoringDiffMM.impl.EPackageImpl@31000e60 (name: rfc)|
+| |-refactoringDiffMM.impl.EClassImpl@5f6722d3 (name: cls1)| |-refactoringDiffMM.impl.EClassImpl@1d470d0 (name: cls1)|
+| |-refactoringDiffMM.impl.EClassImpl@2c532cd8 (name: cls2)| |-refactoringDiffMM.impl.EClassImpl@24d09c1 (name: cls2)|
+| |-refactoringDiffMM.impl.EClassImpl@294e5088 (name: root)| |-refactoringDiffMM.impl.EClassImpl@54c62d71 (name: root)|
+| | |-refactoringDiffMM.impl.EReferenceImpl@51972dc7 (name: refC1, etype: cls1)| | |-refactoringDiffMM.impl.EReferenceImpl@65045a87 (name: refC1, etype: cls1)|
+| | |-refactoringDiffMM.impl.EReferenceImpl@3700ec9c (name: refC2, etype: cls2)| | |-refactoringDiffMM.impl.EReferenceImpl@47f4e407 (name: refC2, etype: cls2)|
+| |-refactoringDiffMM.impl.EClassImpl@2002348 (name: superRoot)| |-refactoringDiffMM.impl.EClassImpl@2d1dee39 (name: superRoot)|
+| | |-refactoringDiffMM.impl.EReferenceImpl@5911e990 (name: refRoot, etype: root)| | |                                    |
+| | |                                    | | |-refactoringDiffMM.impl.EReferenceImpl@48d5f34e (name: refSC1, etype: cls1)|
+| | |                                    | | |-refactoringDiffMM.impl.EReferenceImpl@fc258b1 (name: refSC2, etype: cls2)|
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+REFERENCE CHANGES
+
+ [ADD] value refactoringDiffMM.impl.EReferenceImpl@5911e990 (name: refRoot, etype: root) has been added to reference ereferences
+ of object refactoringDiffMM.impl.EClassImpl@2002348 (name: superRoot)
+
+ [DELETE] value refactoringDiffMM.impl.EReferenceImpl@2ceb80a1 (name: refSC1, etype: cls1) has been deleted from reference ereferences
+ of object refactoringDiffMM.impl.EClassImpl@2002348 (name: superRoot)
+
+ [DELETE] value refactoringDiffMM.impl.EReferenceImpl@4b45dcb8 (name: refSC2, etype: cls2) has been deleted from reference ereferences
+ of object refactoringDiffMM.impl.EClassImpl@2002348 (name: superRoot)
+
+ATTRIBUTE CHANGES
+
+CONFLICTS
+false is deleted!false is deleted!The end of transforming EMF-Diff to DSMC-Diff
+emf-Compare result transformed to Fine-Grained DsmdiffMM!

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring2WayRuleMM="www.geodes.UdeM.edu/refactoring2WayRuleMM"
+    name="extractInterface2">
+  <rulePattern_EPackage
+      xsi:type="refactoring2WayRuleMM:Pattern_EPackage">
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        ID_Pattern="1">
+      <diffinterfaces
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_interfaces"
+          diff_kind="ADD"
+          eType="//@rulePattern_EPackage.0/@interfaces.0"
+          ID_Pattern="2"/>
+    </eclassifiers>
+    <interfaces
+        xsi:type="refactoring2WayRuleMM:Pattern_Interface"
+        ID_Pattern="3"/>
+  </rulePattern_EPackage>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="extractInterface"
+      SemanticObject_DiffEClass_interfaces="//@rulePattern_EPackage.0/@eclassifiers.0/@diffinterfaces.0"
+      SemanticObject_EClass="//@rulePattern_EPackage.0/@eclassifiers.0"
+      SemanticObject_Interface="//@rulePattern_EPackage.0/@interfaces.0"
+      ID_Pattern="4"/>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="extractInterface"
+      SemanticObject_DiffEClass_interfaces="//@rulePattern_EPackage.0/@eclassifiers.0/@diffinterfaces.0"
+      SemanticObject_EClass="//@rulePattern_EPackage.0/@eclassifiers.0"
+      SemanticObject_Interface="//@rulePattern_EPackage.0/@interfaces.0"
+      ID_Pattern="5"
+      filter="true"/>
+</refactoring2WayRuleMM:Rule>

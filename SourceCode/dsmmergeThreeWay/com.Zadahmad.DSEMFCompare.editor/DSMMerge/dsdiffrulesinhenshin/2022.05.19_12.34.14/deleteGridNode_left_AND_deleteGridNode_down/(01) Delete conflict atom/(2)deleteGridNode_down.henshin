@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Rule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_hWJikNeREeyEnrzG7GdwSg" name="deleteGridNode_down">
+  <lhs xmi:id="_hWJikdeREeyEnrzG7GdwSg" name="deleteGridNode_down_LHS">
+    <nodes xmi:id="_hWJikteREeyEnrzG7GdwSg" name="n0" outgoing="_hWJildeREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_hWJik9eREeyEnrzG7GdwSg" name="n1" incoming="_hWJildeREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//GridNode"/>
+    </nodes>
+    <nodes xmi:id="_hWJilNeREeyEnrzG7GdwSg" name="n2">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DiffGridNode_down"/>
+    </nodes>
+    <edges xmi:id="_hWJildeREeyEnrzG7GdwSg" source="_hWJikteREeyEnrzG7GdwSg" target="_hWJik9eREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+    </edges>
+  </lhs>
+  <rhs xmi:id="_hWJilteREeyEnrzG7GdwSg" name="deleteGridNode_down_RHS">
+    <nodes xmi:id="_hWJil9eREeyEnrzG7GdwSg" name="n0">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_hWJimNeREeyEnrzG7GdwSg" name="n1">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//GridNode"/>
+    </nodes>
+  </rhs>
+  <mappings xmi:id="_hWJimdeREeyEnrzG7GdwSg" origin="_hWJikteREeyEnrzG7GdwSg" image="_hWJil9eREeyEnrzG7GdwSg"/>
+  <mappings xmi:id="_hWJimteREeyEnrzG7GdwSg" origin="_hWJik9eREeyEnrzG7GdwSg" image="_hWJimNeREeyEnrzG7GdwSg"/>
+</henshin:Rule>

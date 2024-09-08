@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.Zadahmad.DSEMFCompare.editor/src" modelPluginID="com.Zadahmad.DSEMFCompare.editor"
+    modelName="DSSMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>DSSMM.ecore</foreignModel>
+  <genPackages prefix="Dssmm" disposableProviderFactory="true" ecorePackage="DSSMM.ecore#/">
+    <genClasses ecoreClass="DSSMM.ecore#//DecisionSupport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//DecisionSupport/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMM.ecore#//DecisionSupport/model"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMM.ecore#//DecisionSupport/options"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMM.ecore#//DecisionSupport/vendors"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMM.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Model/ModelID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Model/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Model/Goal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Model/Descr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Model/NumFacts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMM.ecore#//Model/rootFactor"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DSSMM.ecore#//Factor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Factor/FactorID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Factor/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Factor/Descr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Factor/GW"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Factor/LW"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Factor/Del"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Factor/HideOnLine"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMM.ecore#//Factor/scores"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Factor/Hierarchy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Factor/MasterFactorID"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMM.ecore#//LeafFactor"/>
+    <genClasses ecoreClass="DSSMM.ecore#//CompositeFactor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMM.ecore#//CompositeFactor/subFactors"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMM.ecore#//Option">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Option/OptionID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Option/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Option/Sort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Option/Cost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Option/NumOtherCosts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMM.ecore#//Option/vendor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Option/Description"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMM.ecore#//Vendor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Vendor/VendorID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Vendor/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Vendor/Description"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMM.ecore#//Score">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Score/SScore"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Score/DScore"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Score/Descr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Score/Comment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMM.ecore#//Score/score_option"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMM.ecore#//Score/MethodID"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

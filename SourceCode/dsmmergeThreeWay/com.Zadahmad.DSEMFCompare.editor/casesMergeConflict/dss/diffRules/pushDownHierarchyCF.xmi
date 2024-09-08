@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dssmm2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dssmm2WayRuleMM="http://www.zadahmad.org/dsvcs/dssmm2WayRuleMM"
+    xsi:schemaLocation="http://www.zadahmad.org/dsvcs/dssmm2WayRuleMM ../metaModels/DSSMM2WayRuleMM.ecore#/1"
+    name="pushDownHierarchyCF">
+  <rulePattern_Factor
+      xsi:type="dssmm2WayRuleMM:Pattern_CompositeFactor"
+      Name="parent"
+      ID_Pattern="10">
+    <subFactors
+        xsi:type="dssmm2WayRuleMM:Pattern_CompositeFactor"
+        Name="child"
+        ID_Pattern="11">
+      <diffsubFactors
+          xsi:type="dssmm2WayRuleMM:Pattern_DiffCompositeFactor_subFactors"
+          diff_kind="ADD"
+          eType="//@rulePattern_Factor.0/@subFactors.1"
+          ID_Pattern="111"/>
+    </subFactors>
+    <subFactors
+        xsi:type="dssmm2WayRuleMM:Pattern_CompositeFactor"
+        Name="12"
+        ID_Pattern="12"/>
+    <diffsubFactors
+        xsi:type="dssmm2WayRuleMM:Pattern_DiffCompositeFactor_subFactors"
+        diff_kind="DELETE"
+        eType="//@rulePattern_Factor.0/@subFactors.1"
+        ID_Pattern="13"
+        filter="true"/>
+  </rulePattern_Factor>
+  <rulePattern_SemanticObject
+      xsi:type="dssmm2WayRuleMM:Pattern_SemanticDiff"
+      name="Push-down hierarchy"
+      SemanticObject_DiffCompositeFactor_subFactors="//@rulePattern_Factor.0/@subFactors.0/@diffsubFactors.0"
+      SemanticObject_Factor="//@rulePattern_Factor.0 //@rulePattern_Factor.0/@subFactors.0"
+      ID_Pattern="20"/>
+</dssmm2WayRuleMM:Rule>

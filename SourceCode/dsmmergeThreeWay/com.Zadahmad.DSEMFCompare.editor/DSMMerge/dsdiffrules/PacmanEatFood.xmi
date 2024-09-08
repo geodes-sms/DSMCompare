@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pacman2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:pacman2WayRuleMM="http://www.zadahmad.org/dsmcompare/pacman2WayRuleMM"
+    xsi:schemaLocation="http://www.zadahmad.org/dsmcompare/pacman2WayRuleMM ../MM/pacman2WayRuleMM.ecore#/1"
+    name="PacmanEatFood">
+  <constraints>Item(0,&quot;score&quot;) &lt; Item(0,&quot;new_score&quot;)</constraints>
+  <pattern xsi:type="pacman2WayRuleMM:Pattern_DiffGame"
+      diff_kind="MODIFY">
+    <gridnodes
+        xsi:type="pacman2WayRuleMM:Pattern_GridNode"
+        id="O"
+        ID_Pattern="1"/>
+    <entities
+        xsi:type="pacman2WayRuleMM:Pattern_Pacman"
+        on="O"
+        id="P"
+        ID_Pattern="2"/>
+    <entities
+        xsi:type="pacman2WayRuleMM:Pattern_DiffFood"
+        id="F"
+        diff_kind="DELETE"
+        ID_Pattern="3">
+      <diffon
+          xsi:type="pacman2WayRuleMM:Pattern_DiffPositionableEntity_on"
+          diff_kind="DELETE"
+          eType="O"
+          ID_Pattern="31"
+          filter="true"/>
+    </entities>
+    <domainspecificdiffs
+        xsi:type="pacman2WayRuleMM:Pattern_DomainSpecificDiff"
+        name="Pacman Eat Food"
+        DomainSpecificDiff_Game="//@pattern"
+        DomainSpecificDiff_PositionableEntity="P F"
+        ID_Pattern="4"/>
+  </pattern>
+</pacman2WayRuleMM:Rule>

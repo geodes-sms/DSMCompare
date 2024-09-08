@@ -1,0 +1,1642 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_84uSsF2_EeyCQIe2YbNudw" name="HenshinDSL">
+  <imports href="../MM/pacmanDiffMM.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_84uSsV2_EeyCQIe2YbNudw" name="PacmanEatFood">
+    <parameters xmi:id="_84uSsl2_EeyCQIe2YbNudw" name="n0diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84uSs12_EeyCQIe2YbNudw" name="n0diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84uStF2_EeyCQIe2YbNudw" name="n3diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84uStV2_EeyCQIe2YbNudw" name="n3diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84uStl2_EeyCQIe2YbNudw" name="n31diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84uSt12_EeyCQIe2YbNudw" name="n31diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84uSuF2_EeyCQIe2YbNudw" name="n0score" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_84uSuV2_EeyCQIe2YbNudw" name="n0new_score_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_84uSul2_EeyCQIe2YbNudw" name="n0new_score_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_84uSu12_EeyCQIe2YbNudw" name="PacmanEatFood_LHS">
+      <nodes xmi:id="_84uSvF2_EeyCQIe2YbNudw" name="n0" outgoing="_84uSyl2_EeyCQIe2YbNudw _84uSy12_EeyCQIe2YbNudw _84uSzF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGame"/>
+        <attributes xmi:id="_84uSvV2_EeyCQIe2YbNudw" value="n0diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffGame/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uSvl2_EeyCQIe2YbNudw" value="n0diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffGame/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_84uSv12_EeyCQIe2YbNudw" value="n0score">
+          <type href="../MM/pacmanDiffMM.ecore#//Game/score"/>
+        </attributes>
+        <attributes xmi:id="_84uSwF2_EeyCQIe2YbNudw" value="n0new_score_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffGame/new_score_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uSwV2_EeyCQIe2YbNudw" value="n0new_score_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffGame/new_score_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84uSwl2_EeyCQIe2YbNudw" name="n1" incoming="_84uSyl2_EeyCQIe2YbNudw _84uSzV2_EeyCQIe2YbNudw _84uSz12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84uSw12_EeyCQIe2YbNudw" name="n2" incoming="_84uSy12_EeyCQIe2YbNudw" outgoing="_84uSzV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_84uSxF2_EeyCQIe2YbNudw" name="n3" incoming="_84uSzF2_EeyCQIe2YbNudw" outgoing="_84uSzl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffFood"/>
+        <attributes xmi:id="_84uSxV2_EeyCQIe2YbNudw" value="n3diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffFood/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uSxl2_EeyCQIe2YbNudw" value="n3diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffFood/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84uSx12_EeyCQIe2YbNudw" name="n31" incoming="_84uSzl2_EeyCQIe2YbNudw" outgoing="_84uSz12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84uSyF2_EeyCQIe2YbNudw" value="n31diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uSyV2_EeyCQIe2YbNudw" value="n31diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84uSyl2_EeyCQIe2YbNudw" source="_84uSvF2_EeyCQIe2YbNudw" target="_84uSwl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84uSy12_EeyCQIe2YbNudw" source="_84uSvF2_EeyCQIe2YbNudw" target="_84uSw12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84uSzF2_EeyCQIe2YbNudw" source="_84uSvF2_EeyCQIe2YbNudw" target="_84uSxF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84uSzV2_EeyCQIe2YbNudw" source="_84uSw12_EeyCQIe2YbNudw" target="_84uSwl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/on"/>
+      </edges>
+      <edges xmi:id="_84uSzl2_EeyCQIe2YbNudw" source="_84uSxF2_EeyCQIe2YbNudw" target="_84uSx12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84uSz12_EeyCQIe2YbNudw" source="_84uSx12_EeyCQIe2YbNudw" target="_84uSwl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_84uS0F2_EeyCQIe2YbNudw" name="PacmanEatFood_RHS">
+      <nodes xmi:id="_84uS0V2_EeyCQIe2YbNudw" name="n0" incoming="_84uS412_EeyCQIe2YbNudw" outgoing="_84uS3l2_EeyCQIe2YbNudw _84uS312_EeyCQIe2YbNudw _84uS4F2_EeyCQIe2YbNudw _84uS4V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGame"/>
+        <attributes xmi:id="_84uS0l2_EeyCQIe2YbNudw" value="n0diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffGame/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uS012_EeyCQIe2YbNudw" value="n0diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffGame/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_84uS1F2_EeyCQIe2YbNudw" value="n0score">
+          <type href="../MM/pacmanDiffMM.ecore#//Game/score"/>
+        </attributes>
+        <attributes xmi:id="_84uS1V2_EeyCQIe2YbNudw" value="n0new_score_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffGame/new_score_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uS1l2_EeyCQIe2YbNudw" value="n0new_score_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffGame/new_score_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84uS112_EeyCQIe2YbNudw" name="n1" incoming="_84uS3l2_EeyCQIe2YbNudw _84uS4l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84uS2F2_EeyCQIe2YbNudw" name="n2" incoming="_84uS312_EeyCQIe2YbNudw _84uS5F2_EeyCQIe2YbNudw" outgoing="_84uS4l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_84uS2V2_EeyCQIe2YbNudw" name="n3" incoming="_84uS4F2_EeyCQIe2YbNudw _84uS5V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffFood"/>
+        <attributes xmi:id="_84uS2l2_EeyCQIe2YbNudw" value="n3diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffFood/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uS212_EeyCQIe2YbNudw" value="n3diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffFood/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84uS3F2_EeyCQIe2YbNudw" name="n4" incoming="_84uS4V2_EeyCQIe2YbNudw" outgoing="_84uS412_EeyCQIe2YbNudw _84uS5F2_EeyCQIe2YbNudw _84uS5V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff"/>
+        <attributes xmi:id="_84uS3V2_EeyCQIe2YbNudw" value="&quot;Pacman Eat Food&quot;">
+          <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84uS3l2_EeyCQIe2YbNudw" source="_84uS0V2_EeyCQIe2YbNudw" target="_84uS112_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84uS312_EeyCQIe2YbNudw" source="_84uS0V2_EeyCQIe2YbNudw" target="_84uS2F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84uS4F2_EeyCQIe2YbNudw" source="_84uS0V2_EeyCQIe2YbNudw" target="_84uS2V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84uS4V2_EeyCQIe2YbNudw" source="_84uS0V2_EeyCQIe2YbNudw" target="_84uS3F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_84uS4l2_EeyCQIe2YbNudw" source="_84uS2F2_EeyCQIe2YbNudw" target="_84uS112_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/on"/>
+      </edges>
+      <edges xmi:id="_84uS412_EeyCQIe2YbNudw" source="_84uS3F2_EeyCQIe2YbNudw" target="_84uS0V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_Game"/>
+      </edges>
+      <edges xmi:id="_84uS5F2_EeyCQIe2YbNudw" source="_84uS3F2_EeyCQIe2YbNudw" target="_84uS2F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+      </edges>
+      <edges xmi:id="_84uS5V2_EeyCQIe2YbNudw" source="_84uS3F2_EeyCQIe2YbNudw" target="_84uS2V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_84uS5l2_EeyCQIe2YbNudw" conditionText="((n0score&lt;n0new_score_Left) &amp;&amp; (n0diff_kind_Left==&quot;MODIFY&quot;) &amp;&amp; (n3diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n31diff_kind_Left==&quot;DELETE&quot;)) || ((n0score&lt;n0new_score_Right) &amp;&amp; (n0diff_kind_Right==&quot;MODIFY&quot;) &amp;&amp; (n3diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n31diff_kind_Right==&quot;DELETE&quot;))"/>
+    <mappings xmi:id="_84uS512_EeyCQIe2YbNudw" origin="_84uSvF2_EeyCQIe2YbNudw" image="_84uS0V2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84uS6F2_EeyCQIe2YbNudw" origin="_84uSwl2_EeyCQIe2YbNudw" image="_84uS112_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84uS6V2_EeyCQIe2YbNudw" origin="_84uSw12_EeyCQIe2YbNudw" image="_84uS2F2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84uS6l2_EeyCQIe2YbNudw" origin="_84uSxF2_EeyCQIe2YbNudw" image="_84uS2V2_EeyCQIe2YbNudw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_84uS612_EeyCQIe2YbNudw" name="PacmanDie">
+    <parameters xmi:id="_84uS7F2_EeyCQIe2YbNudw" name="n3diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84uS7V2_EeyCQIe2YbNudw" name="n3diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84uS7l2_EeyCQIe2YbNudw" name="n31diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84uS712_EeyCQIe2YbNudw" name="n31diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_84uS8F2_EeyCQIe2YbNudw" name="PacmanDie_LHS">
+      <nodes xmi:id="_84uS8V2_EeyCQIe2YbNudw" name="n0" outgoing="_84uS-l2_EeyCQIe2YbNudw _84uS-12_EeyCQIe2YbNudw _84uS_F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84uS8l2_EeyCQIe2YbNudw" name="n1" incoming="_84uS-l2_EeyCQIe2YbNudw _84uS_V2_EeyCQIe2YbNudw _84uS_12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84uS812_EeyCQIe2YbNudw" name="n2" incoming="_84uS-12_EeyCQIe2YbNudw" outgoing="_84uS_V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_84uS9F2_EeyCQIe2YbNudw" name="n3" incoming="_84uS_F2_EeyCQIe2YbNudw" outgoing="_84uS_l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPacman"/>
+        <attributes xmi:id="_84uS9V2_EeyCQIe2YbNudw" value="n3diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPacman/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uS9l2_EeyCQIe2YbNudw" value="n3diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPacman/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84uS912_EeyCQIe2YbNudw" name="n31" incoming="_84uS_l2_EeyCQIe2YbNudw" outgoing="_84uS_12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84uS-F2_EeyCQIe2YbNudw" value="n31diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uS-V2_EeyCQIe2YbNudw" value="n31diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84uS-l2_EeyCQIe2YbNudw" source="_84uS8V2_EeyCQIe2YbNudw" target="_84uS8l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84uS-12_EeyCQIe2YbNudw" source="_84uS8V2_EeyCQIe2YbNudw" target="_84uS812_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84uS_F2_EeyCQIe2YbNudw" source="_84uS8V2_EeyCQIe2YbNudw" target="_84uS9F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84uS_V2_EeyCQIe2YbNudw" source="_84uS812_EeyCQIe2YbNudw" target="_84uS8l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/on"/>
+      </edges>
+      <edges xmi:id="_84uS_l2_EeyCQIe2YbNudw" source="_84uS9F2_EeyCQIe2YbNudw" target="_84uS912_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84uS_12_EeyCQIe2YbNudw" source="_84uS912_EeyCQIe2YbNudw" target="_84uS8l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_84uTAF2_EeyCQIe2YbNudw" name="PacmanDie_RHS">
+      <nodes xmi:id="_84uTAV2_EeyCQIe2YbNudw" name="n0" outgoing="_84uTDF2_EeyCQIe2YbNudw _84uTDV2_EeyCQIe2YbNudw _84uTDl2_EeyCQIe2YbNudw _84uTD12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84uTAl2_EeyCQIe2YbNudw" name="n1" incoming="_84uTDF2_EeyCQIe2YbNudw _84uTEF2_EeyCQIe2YbNudw _84uTEl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84uTA12_EeyCQIe2YbNudw" name="n2" incoming="_84uTDV2_EeyCQIe2YbNudw _84uTE12_EeyCQIe2YbNudw" outgoing="_84uTEF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_84uTBF2_EeyCQIe2YbNudw" name="n3" incoming="_84uTDl2_EeyCQIe2YbNudw" outgoing="_84uTEV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPacman"/>
+        <attributes xmi:id="_84uTBV2_EeyCQIe2YbNudw" value="n3diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPacman/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uTBl2_EeyCQIe2YbNudw" value="n3diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPacman/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84uTB12_EeyCQIe2YbNudw" name="n31" incoming="_84uTEV2_EeyCQIe2YbNudw" outgoing="_84uTEl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84uTCF2_EeyCQIe2YbNudw" value="n31diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uTCV2_EeyCQIe2YbNudw" value="n31diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84uTCl2_EeyCQIe2YbNudw" name="n4" incoming="_84uTD12_EeyCQIe2YbNudw" outgoing="_84uTE12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff"/>
+        <attributes xmi:id="_84uTC12_EeyCQIe2YbNudw" value="&quot;PacmanDie&quot;">
+          <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84uTDF2_EeyCQIe2YbNudw" source="_84uTAV2_EeyCQIe2YbNudw" target="_84uTAl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84uTDV2_EeyCQIe2YbNudw" source="_84uTAV2_EeyCQIe2YbNudw" target="_84uTA12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84uTDl2_EeyCQIe2YbNudw" source="_84uTAV2_EeyCQIe2YbNudw" target="_84uTBF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84uTD12_EeyCQIe2YbNudw" source="_84uTAV2_EeyCQIe2YbNudw" target="_84uTCl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_84uTEF2_EeyCQIe2YbNudw" source="_84uTA12_EeyCQIe2YbNudw" target="_84uTAl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/on"/>
+      </edges>
+      <edges xmi:id="_84uTEV2_EeyCQIe2YbNudw" source="_84uTBF2_EeyCQIe2YbNudw" target="_84uTB12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84uTEl2_EeyCQIe2YbNudw" source="_84uTB12_EeyCQIe2YbNudw" target="_84uTAl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84uTE12_EeyCQIe2YbNudw" source="_84uTCl2_EeyCQIe2YbNudw" target="_84uTA12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_84uTFF2_EeyCQIe2YbNudw" conditionText="((n3diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n31diff_kind_Left==&quot;DELETE&quot;)) || ((n3diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n31diff_kind_Right==&quot;DELETE&quot;))"/>
+    <mappings xmi:id="_84uTFV2_EeyCQIe2YbNudw" origin="_84uS8V2_EeyCQIe2YbNudw" image="_84uTAV2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84uTFl2_EeyCQIe2YbNudw" origin="_84uS8l2_EeyCQIe2YbNudw" image="_84uTAl2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84uTF12_EeyCQIe2YbNudw" origin="_84uS812_EeyCQIe2YbNudw" image="_84uTA12_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84uTGF2_EeyCQIe2YbNudw" origin="_84uS9F2_EeyCQIe2YbNudw" image="_84uTBF2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84uTGV2_EeyCQIe2YbNudw" origin="_84uS912_EeyCQIe2YbNudw" image="_84uTB12_EeyCQIe2YbNudw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_84uTGl2_EeyCQIe2YbNudw" name="GhostMoveRight">
+    <parameters xmi:id="_84uTG12_EeyCQIe2YbNudw" name="n31diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84uTHF2_EeyCQIe2YbNudw" name="n31diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84uTHV2_EeyCQIe2YbNudw" name="n32diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84uTHl2_EeyCQIe2YbNudw" name="n32diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_84uTH12_EeyCQIe2YbNudw" name="GhostMoveRight_LHS">
+      <nodes xmi:id="_84uTIF2_EeyCQIe2YbNudw" name="n0" outgoing="_84uTKl2_EeyCQIe2YbNudw _84uTK12_EeyCQIe2YbNudw _84uTLF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84uTIV2_EeyCQIe2YbNudw" name="n1" incoming="_84uTKl2_EeyCQIe2YbNudw _84uTMF2_EeyCQIe2YbNudw" outgoing="_84uTLV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84uTIl2_EeyCQIe2YbNudw" name="n2" incoming="_84uTK12_EeyCQIe2YbNudw _84uTLV2_EeyCQIe2YbNudw _84uTMV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84uTI12_EeyCQIe2YbNudw" name="n3" incoming="_84uTLF2_EeyCQIe2YbNudw" outgoing="_84uTLl2_EeyCQIe2YbNudw _84uTL12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_84uTJF2_EeyCQIe2YbNudw" name="n32" incoming="_84uTL12_EeyCQIe2YbNudw" outgoing="_84uTMV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84uTJV2_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uTJl2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84uTJ12_EeyCQIe2YbNudw" name="n31" incoming="_84uTLl2_EeyCQIe2YbNudw" outgoing="_84uTMF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84uTKF2_EeyCQIe2YbNudw" value="n31diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uTKV2_EeyCQIe2YbNudw" value="n31diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84uTKl2_EeyCQIe2YbNudw" source="_84uTIF2_EeyCQIe2YbNudw" target="_84uTIV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84uTK12_EeyCQIe2YbNudw" source="_84uTIF2_EeyCQIe2YbNudw" target="_84uTIl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84uTLF2_EeyCQIe2YbNudw" source="_84uTIF2_EeyCQIe2YbNudw" target="_84uTI12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84uTLV2_EeyCQIe2YbNudw" source="_84uTIV2_EeyCQIe2YbNudw" target="_84uTIl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/right"/>
+      </edges>
+      <edges xmi:id="_84uTLl2_EeyCQIe2YbNudw" source="_84uTI12_EeyCQIe2YbNudw" target="_84uTJ12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84uTL12_EeyCQIe2YbNudw" source="_84uTI12_EeyCQIe2YbNudw" target="_84uTJF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84uTMF2_EeyCQIe2YbNudw" source="_84uTJ12_EeyCQIe2YbNudw" target="_84uTIV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84uTMV2_EeyCQIe2YbNudw" source="_84uTJF2_EeyCQIe2YbNudw" target="_84uTIl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_84uTMl2_EeyCQIe2YbNudw" name="GhostMoveRight_RHS">
+      <nodes xmi:id="_84uTM12_EeyCQIe2YbNudw" name="n0" outgoing="_84uTPF2_EeyCQIe2YbNudw _84uTPV2_EeyCQIe2YbNudw _84uTPl2_EeyCQIe2YbNudw _84uTP12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84uTNF2_EeyCQIe2YbNudw" name="n1" incoming="_84uTPF2_EeyCQIe2YbNudw" outgoing="_84uTQF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84uTNV2_EeyCQIe2YbNudw" name="n2" incoming="_84uTPV2_EeyCQIe2YbNudw _84uTQF2_EeyCQIe2YbNudw _84uTQl2_EeyCQIe2YbNudw _84uTQ12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84uTNl2_EeyCQIe2YbNudw" name="n3" incoming="_84uTPl2_EeyCQIe2YbNudw _84uTRF2_EeyCQIe2YbNudw" outgoing="_84uTQV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_84uTN12_EeyCQIe2YbNudw" name="n32" incoming="_84uTQV2_EeyCQIe2YbNudw _84uTRV2_EeyCQIe2YbNudw" outgoing="_84uTQl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84uTOF2_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uTOV2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84uTOl2_EeyCQIe2YbNudw" name="n4" incoming="_84uTP12_EeyCQIe2YbNudw" outgoing="_84uTQ12_EeyCQIe2YbNudw _84uTRF2_EeyCQIe2YbNudw _84uTRV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff"/>
+        <attributes xmi:id="_84uTO12_EeyCQIe2YbNudw" value="&quot;Ghost Move Right&quot;">
+          <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84uTPF2_EeyCQIe2YbNudw" source="_84uTM12_EeyCQIe2YbNudw" target="_84uTNF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84uTPV2_EeyCQIe2YbNudw" source="_84uTM12_EeyCQIe2YbNudw" target="_84uTNV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84uTPl2_EeyCQIe2YbNudw" source="_84uTM12_EeyCQIe2YbNudw" target="_84uTNl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84uTP12_EeyCQIe2YbNudw" source="_84uTM12_EeyCQIe2YbNudw" target="_84uTOl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_84uTQF2_EeyCQIe2YbNudw" source="_84uTNF2_EeyCQIe2YbNudw" target="_84uTNV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/right"/>
+      </edges>
+      <edges xmi:id="_84uTQV2_EeyCQIe2YbNudw" source="_84uTNl2_EeyCQIe2YbNudw" target="_84uTN12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84uTQl2_EeyCQIe2YbNudw" source="_84uTN12_EeyCQIe2YbNudw" target="_84uTNV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84uTQ12_EeyCQIe2YbNudw" source="_84uTOl2_EeyCQIe2YbNudw" target="_84uTNV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_GridNode"/>
+      </edges>
+      <edges xmi:id="_84uTRF2_EeyCQIe2YbNudw" source="_84uTOl2_EeyCQIe2YbNudw" target="_84uTNl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+      </edges>
+      <edges xmi:id="_84uTRV2_EeyCQIe2YbNudw" source="_84uTOl2_EeyCQIe2YbNudw" target="_84uTN12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_DiffPositionableEntity_on"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_84uTRl2_EeyCQIe2YbNudw" conditionText="((n31diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Left==&quot;ADD&quot;)) || ((n31diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_84uTR12_EeyCQIe2YbNudw" origin="_84uTIF2_EeyCQIe2YbNudw" image="_84uTM12_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84uTSF2_EeyCQIe2YbNudw" origin="_84uTIV2_EeyCQIe2YbNudw" image="_84uTNF2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84uTSV2_EeyCQIe2YbNudw" origin="_84uTIl2_EeyCQIe2YbNudw" image="_84uTNV2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84uTSl2_EeyCQIe2YbNudw" origin="_84uTI12_EeyCQIe2YbNudw" image="_84uTNl2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84uTS12_EeyCQIe2YbNudw" origin="_84uTJF2_EeyCQIe2YbNudw" image="_84uTN12_EeyCQIe2YbNudw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_84uTTF2_EeyCQIe2YbNudw" name="GhostMoveLeft">
+    <parameters xmi:id="_84uTTV2_EeyCQIe2YbNudw" name="n31diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84uTTl2_EeyCQIe2YbNudw" name="n31diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84uTT12_EeyCQIe2YbNudw" name="n32diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84uTUF2_EeyCQIe2YbNudw" name="n32diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_84uTUV2_EeyCQIe2YbNudw" name="GhostMoveLeft_LHS">
+      <nodes xmi:id="_84uTUl2_EeyCQIe2YbNudw" name="n0" outgoing="_84uTXF2_EeyCQIe2YbNudw _84u5wF2_EeyCQIe2YbNudw _84u5wV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84uTU12_EeyCQIe2YbNudw" name="n1" incoming="_84uTXF2_EeyCQIe2YbNudw _84u5xV2_EeyCQIe2YbNudw" outgoing="_84u5wl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84uTVF2_EeyCQIe2YbNudw" name="n2" incoming="_84u5wF2_EeyCQIe2YbNudw _84u5wl2_EeyCQIe2YbNudw _84u5xl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84uTVV2_EeyCQIe2YbNudw" name="n3" incoming="_84u5wV2_EeyCQIe2YbNudw" outgoing="_84u5w12_EeyCQIe2YbNudw _84u5xF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_84uTVl2_EeyCQIe2YbNudw" name="n32" incoming="_84u5xF2_EeyCQIe2YbNudw" outgoing="_84u5xl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84uTV12_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uTWF2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84uTWV2_EeyCQIe2YbNudw" name="n31" incoming="_84u5w12_EeyCQIe2YbNudw" outgoing="_84u5xV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84uTWl2_EeyCQIe2YbNudw" value="n31diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84uTW12_EeyCQIe2YbNudw" value="n31diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84uTXF2_EeyCQIe2YbNudw" source="_84uTUl2_EeyCQIe2YbNudw" target="_84uTU12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u5wF2_EeyCQIe2YbNudw" source="_84uTUl2_EeyCQIe2YbNudw" target="_84uTVF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u5wV2_EeyCQIe2YbNudw" source="_84uTUl2_EeyCQIe2YbNudw" target="_84uTVV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u5wl2_EeyCQIe2YbNudw" source="_84uTU12_EeyCQIe2YbNudw" target="_84uTVF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/left"/>
+      </edges>
+      <edges xmi:id="_84u5w12_EeyCQIe2YbNudw" source="_84uTVV2_EeyCQIe2YbNudw" target="_84uTWV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u5xF2_EeyCQIe2YbNudw" source="_84uTVV2_EeyCQIe2YbNudw" target="_84uTVl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u5xV2_EeyCQIe2YbNudw" source="_84uTWV2_EeyCQIe2YbNudw" target="_84uTU12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u5xl2_EeyCQIe2YbNudw" source="_84uTVl2_EeyCQIe2YbNudw" target="_84uTVF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_84u5x12_EeyCQIe2YbNudw" name="GhostMoveLeft_RHS">
+      <nodes xmi:id="_84u5yF2_EeyCQIe2YbNudw" name="n0" outgoing="_84u50V2_EeyCQIe2YbNudw _84u50l2_EeyCQIe2YbNudw _84u5012_EeyCQIe2YbNudw _84u51F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84u5yV2_EeyCQIe2YbNudw" name="n1" incoming="_84u50V2_EeyCQIe2YbNudw" outgoing="_84u51V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u5yl2_EeyCQIe2YbNudw" name="n2" incoming="_84u50l2_EeyCQIe2YbNudw _84u51V2_EeyCQIe2YbNudw _84u5112_EeyCQIe2YbNudw _84u52F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u5y12_EeyCQIe2YbNudw" name="n3" incoming="_84u5012_EeyCQIe2YbNudw _84u52V2_EeyCQIe2YbNudw" outgoing="_84u51l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_84u5zF2_EeyCQIe2YbNudw" name="n32" incoming="_84u51l2_EeyCQIe2YbNudw _84u52l2_EeyCQIe2YbNudw" outgoing="_84u5112_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u5zV2_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u5zl2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84u5z12_EeyCQIe2YbNudw" name="n4" incoming="_84u51F2_EeyCQIe2YbNudw" outgoing="_84u52F2_EeyCQIe2YbNudw _84u52V2_EeyCQIe2YbNudw _84u52l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff"/>
+        <attributes xmi:id="_84u50F2_EeyCQIe2YbNudw" value="&quot;Ghost Move Left&quot;">
+          <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84u50V2_EeyCQIe2YbNudw" source="_84u5yF2_EeyCQIe2YbNudw" target="_84u5yV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u50l2_EeyCQIe2YbNudw" source="_84u5yF2_EeyCQIe2YbNudw" target="_84u5yl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u5012_EeyCQIe2YbNudw" source="_84u5yF2_EeyCQIe2YbNudw" target="_84u5y12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u51F2_EeyCQIe2YbNudw" source="_84u5yF2_EeyCQIe2YbNudw" target="_84u5z12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_84u51V2_EeyCQIe2YbNudw" source="_84u5yV2_EeyCQIe2YbNudw" target="_84u5yl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/left"/>
+      </edges>
+      <edges xmi:id="_84u51l2_EeyCQIe2YbNudw" source="_84u5y12_EeyCQIe2YbNudw" target="_84u5zF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u5112_EeyCQIe2YbNudw" source="_84u5zF2_EeyCQIe2YbNudw" target="_84u5yl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u52F2_EeyCQIe2YbNudw" source="_84u5z12_EeyCQIe2YbNudw" target="_84u5yl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_GridNode"/>
+      </edges>
+      <edges xmi:id="_84u52V2_EeyCQIe2YbNudw" source="_84u5z12_EeyCQIe2YbNudw" target="_84u5y12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+      </edges>
+      <edges xmi:id="_84u52l2_EeyCQIe2YbNudw" source="_84u5z12_EeyCQIe2YbNudw" target="_84u5zF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_DiffPositionableEntity_on"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_84u5212_EeyCQIe2YbNudw" conditionText="((n31diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Left==&quot;ADD&quot;)) || ((n31diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_84u53F2_EeyCQIe2YbNudw" origin="_84uTUl2_EeyCQIe2YbNudw" image="_84u5yF2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u53V2_EeyCQIe2YbNudw" origin="_84uTU12_EeyCQIe2YbNudw" image="_84u5yV2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u53l2_EeyCQIe2YbNudw" origin="_84uTVF2_EeyCQIe2YbNudw" image="_84u5yl2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u5312_EeyCQIe2YbNudw" origin="_84uTVV2_EeyCQIe2YbNudw" image="_84u5y12_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u54F2_EeyCQIe2YbNudw" origin="_84uTVl2_EeyCQIe2YbNudw" image="_84u5zF2_EeyCQIe2YbNudw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_84u54V2_EeyCQIe2YbNudw" name="GhostMoveUp">
+    <parameters xmi:id="_84u54l2_EeyCQIe2YbNudw" name="n31diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u5412_EeyCQIe2YbNudw" name="n31diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u55F2_EeyCQIe2YbNudw" name="n32diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u55V2_EeyCQIe2YbNudw" name="n32diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_84u55l2_EeyCQIe2YbNudw" name="GhostMoveUp_LHS">
+      <nodes xmi:id="_84u5512_EeyCQIe2YbNudw" name="n0" outgoing="_84u58V2_EeyCQIe2YbNudw _84u58l2_EeyCQIe2YbNudw _84u5812_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84u56F2_EeyCQIe2YbNudw" name="n1" incoming="_84u58V2_EeyCQIe2YbNudw _84u5912_EeyCQIe2YbNudw" outgoing="_84u59F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u56V2_EeyCQIe2YbNudw" name="n2" incoming="_84u58l2_EeyCQIe2YbNudw _84u59F2_EeyCQIe2YbNudw _84u5-F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u56l2_EeyCQIe2YbNudw" name="n3" incoming="_84u5812_EeyCQIe2YbNudw" outgoing="_84u59V2_EeyCQIe2YbNudw _84u59l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_84u5612_EeyCQIe2YbNudw" name="n32" incoming="_84u59l2_EeyCQIe2YbNudw" outgoing="_84u5-F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u57F2_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u57V2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84u57l2_EeyCQIe2YbNudw" name="n31" incoming="_84u59V2_EeyCQIe2YbNudw" outgoing="_84u5912_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u5712_EeyCQIe2YbNudw" value="n31diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u58F2_EeyCQIe2YbNudw" value="n31diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84u58V2_EeyCQIe2YbNudw" source="_84u5512_EeyCQIe2YbNudw" target="_84u56F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u58l2_EeyCQIe2YbNudw" source="_84u5512_EeyCQIe2YbNudw" target="_84u56V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u5812_EeyCQIe2YbNudw" source="_84u5512_EeyCQIe2YbNudw" target="_84u56l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u59F2_EeyCQIe2YbNudw" source="_84u56F2_EeyCQIe2YbNudw" target="_84u56V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/up"/>
+      </edges>
+      <edges xmi:id="_84u59V2_EeyCQIe2YbNudw" source="_84u56l2_EeyCQIe2YbNudw" target="_84u57l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u59l2_EeyCQIe2YbNudw" source="_84u56l2_EeyCQIe2YbNudw" target="_84u5612_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u5912_EeyCQIe2YbNudw" source="_84u57l2_EeyCQIe2YbNudw" target="_84u56F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u5-F2_EeyCQIe2YbNudw" source="_84u5612_EeyCQIe2YbNudw" target="_84u56V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_84u5-V2_EeyCQIe2YbNudw" name="GhostMoveUp_RHS">
+      <nodes xmi:id="_84u5-l2_EeyCQIe2YbNudw" name="n0" outgoing="_84u6A12_EeyCQIe2YbNudw _84u6BF2_EeyCQIe2YbNudw _84u6BV2_EeyCQIe2YbNudw _84u6Bl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84u5-12_EeyCQIe2YbNudw" name="n1" incoming="_84u6A12_EeyCQIe2YbNudw" outgoing="_84u6B12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u5_F2_EeyCQIe2YbNudw" name="n2" incoming="_84u6BF2_EeyCQIe2YbNudw _84u6B12_EeyCQIe2YbNudw _84u6CV2_EeyCQIe2YbNudw _84u6Cl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u5_V2_EeyCQIe2YbNudw" name="n3" incoming="_84u6BV2_EeyCQIe2YbNudw _84u6C12_EeyCQIe2YbNudw" outgoing="_84u6CF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_84u5_l2_EeyCQIe2YbNudw" name="n32" incoming="_84u6CF2_EeyCQIe2YbNudw _84u6DF2_EeyCQIe2YbNudw" outgoing="_84u6CV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u5_12_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u6AF2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84u6AV2_EeyCQIe2YbNudw" name="n4" incoming="_84u6Bl2_EeyCQIe2YbNudw" outgoing="_84u6Cl2_EeyCQIe2YbNudw _84u6C12_EeyCQIe2YbNudw _84u6DF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff"/>
+        <attributes xmi:id="_84u6Al2_EeyCQIe2YbNudw" value="&quot;Ghost Move Up&quot;">
+          <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84u6A12_EeyCQIe2YbNudw" source="_84u5-l2_EeyCQIe2YbNudw" target="_84u5-12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6BF2_EeyCQIe2YbNudw" source="_84u5-l2_EeyCQIe2YbNudw" target="_84u5_F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6BV2_EeyCQIe2YbNudw" source="_84u5-l2_EeyCQIe2YbNudw" target="_84u5_V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u6Bl2_EeyCQIe2YbNudw" source="_84u5-l2_EeyCQIe2YbNudw" target="_84u6AV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_84u6B12_EeyCQIe2YbNudw" source="_84u5-12_EeyCQIe2YbNudw" target="_84u5_F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/up"/>
+      </edges>
+      <edges xmi:id="_84u6CF2_EeyCQIe2YbNudw" source="_84u5_V2_EeyCQIe2YbNudw" target="_84u5_l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u6CV2_EeyCQIe2YbNudw" source="_84u5_l2_EeyCQIe2YbNudw" target="_84u5_F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u6Cl2_EeyCQIe2YbNudw" source="_84u6AV2_EeyCQIe2YbNudw" target="_84u5_F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_GridNode"/>
+      </edges>
+      <edges xmi:id="_84u6C12_EeyCQIe2YbNudw" source="_84u6AV2_EeyCQIe2YbNudw" target="_84u5_V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+      </edges>
+      <edges xmi:id="_84u6DF2_EeyCQIe2YbNudw" source="_84u6AV2_EeyCQIe2YbNudw" target="_84u5_l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_DiffPositionableEntity_on"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_84u6DV2_EeyCQIe2YbNudw" conditionText="((n31diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Left==&quot;ADD&quot;)) || ((n31diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_84u6Dl2_EeyCQIe2YbNudw" origin="_84u5512_EeyCQIe2YbNudw" image="_84u5-l2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6D12_EeyCQIe2YbNudw" origin="_84u56F2_EeyCQIe2YbNudw" image="_84u5-12_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6EF2_EeyCQIe2YbNudw" origin="_84u56V2_EeyCQIe2YbNudw" image="_84u5_F2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6EV2_EeyCQIe2YbNudw" origin="_84u56l2_EeyCQIe2YbNudw" image="_84u5_V2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6El2_EeyCQIe2YbNudw" origin="_84u5612_EeyCQIe2YbNudw" image="_84u5_l2_EeyCQIe2YbNudw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_84u6E12_EeyCQIe2YbNudw" name="GhostMoveDown">
+    <parameters xmi:id="_84u6FF2_EeyCQIe2YbNudw" name="n31diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u6FV2_EeyCQIe2YbNudw" name="n31diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u6Fl2_EeyCQIe2YbNudw" name="n32diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u6F12_EeyCQIe2YbNudw" name="n32diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_84u6GF2_EeyCQIe2YbNudw" name="GhostMoveDown_LHS">
+      <nodes xmi:id="_84u6GV2_EeyCQIe2YbNudw" name="n0" outgoing="_84u6I12_EeyCQIe2YbNudw _84u6JF2_EeyCQIe2YbNudw _84u6JV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84u6Gl2_EeyCQIe2YbNudw" name="n1" incoming="_84u6I12_EeyCQIe2YbNudw _84u6KV2_EeyCQIe2YbNudw" outgoing="_84u6Jl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6G12_EeyCQIe2YbNudw" name="n2" incoming="_84u6JF2_EeyCQIe2YbNudw _84u6Jl2_EeyCQIe2YbNudw _84u6Kl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6HF2_EeyCQIe2YbNudw" name="n3" incoming="_84u6JV2_EeyCQIe2YbNudw" outgoing="_84u6J12_EeyCQIe2YbNudw _84u6KF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_84u6HV2_EeyCQIe2YbNudw" name="n32" incoming="_84u6KF2_EeyCQIe2YbNudw" outgoing="_84u6Kl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u6Hl2_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u6H12_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84u6IF2_EeyCQIe2YbNudw" name="n31" incoming="_84u6J12_EeyCQIe2YbNudw" outgoing="_84u6KV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u6IV2_EeyCQIe2YbNudw" value="n31diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u6Il2_EeyCQIe2YbNudw" value="n31diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84u6I12_EeyCQIe2YbNudw" source="_84u6GV2_EeyCQIe2YbNudw" target="_84u6Gl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6JF2_EeyCQIe2YbNudw" source="_84u6GV2_EeyCQIe2YbNudw" target="_84u6G12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6JV2_EeyCQIe2YbNudw" source="_84u6GV2_EeyCQIe2YbNudw" target="_84u6HF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u6Jl2_EeyCQIe2YbNudw" source="_84u6Gl2_EeyCQIe2YbNudw" target="_84u6G12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/down"/>
+      </edges>
+      <edges xmi:id="_84u6J12_EeyCQIe2YbNudw" source="_84u6HF2_EeyCQIe2YbNudw" target="_84u6IF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u6KF2_EeyCQIe2YbNudw" source="_84u6HF2_EeyCQIe2YbNudw" target="_84u6HV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u6KV2_EeyCQIe2YbNudw" source="_84u6IF2_EeyCQIe2YbNudw" target="_84u6Gl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u6Kl2_EeyCQIe2YbNudw" source="_84u6HV2_EeyCQIe2YbNudw" target="_84u6G12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_84u6K12_EeyCQIe2YbNudw" name="GhostMoveDown_RHS">
+      <nodes xmi:id="_84u6LF2_EeyCQIe2YbNudw" name="n0" outgoing="_84u6NV2_EeyCQIe2YbNudw _84u6Nl2_EeyCQIe2YbNudw _84u6N12_EeyCQIe2YbNudw _84u6OF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84u6LV2_EeyCQIe2YbNudw" name="n1" incoming="_84u6NV2_EeyCQIe2YbNudw" outgoing="_84u6OV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6Ll2_EeyCQIe2YbNudw" name="n2" incoming="_84u6Nl2_EeyCQIe2YbNudw _84u6OV2_EeyCQIe2YbNudw _84u6O12_EeyCQIe2YbNudw _84u6PF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6L12_EeyCQIe2YbNudw" name="n3" incoming="_84u6N12_EeyCQIe2YbNudw _84u6PV2_EeyCQIe2YbNudw" outgoing="_84u6Ol2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_84u6MF2_EeyCQIe2YbNudw" name="n32" incoming="_84u6Ol2_EeyCQIe2YbNudw _84u6Pl2_EeyCQIe2YbNudw" outgoing="_84u6O12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u6MV2_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u6Ml2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84u6M12_EeyCQIe2YbNudw" name="n4" incoming="_84u6OF2_EeyCQIe2YbNudw" outgoing="_84u6PF2_EeyCQIe2YbNudw _84u6PV2_EeyCQIe2YbNudw _84u6Pl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff"/>
+        <attributes xmi:id="_84u6NF2_EeyCQIe2YbNudw" value="&quot;Ghost Move Down&quot;">
+          <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84u6NV2_EeyCQIe2YbNudw" source="_84u6LF2_EeyCQIe2YbNudw" target="_84u6LV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6Nl2_EeyCQIe2YbNudw" source="_84u6LF2_EeyCQIe2YbNudw" target="_84u6Ll2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6N12_EeyCQIe2YbNudw" source="_84u6LF2_EeyCQIe2YbNudw" target="_84u6L12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u6OF2_EeyCQIe2YbNudw" source="_84u6LF2_EeyCQIe2YbNudw" target="_84u6M12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_84u6OV2_EeyCQIe2YbNudw" source="_84u6LV2_EeyCQIe2YbNudw" target="_84u6Ll2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/down"/>
+      </edges>
+      <edges xmi:id="_84u6Ol2_EeyCQIe2YbNudw" source="_84u6L12_EeyCQIe2YbNudw" target="_84u6MF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u6O12_EeyCQIe2YbNudw" source="_84u6MF2_EeyCQIe2YbNudw" target="_84u6Ll2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u6PF2_EeyCQIe2YbNudw" source="_84u6M12_EeyCQIe2YbNudw" target="_84u6Ll2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_GridNode"/>
+      </edges>
+      <edges xmi:id="_84u6PV2_EeyCQIe2YbNudw" source="_84u6M12_EeyCQIe2YbNudw" target="_84u6L12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+      </edges>
+      <edges xmi:id="_84u6Pl2_EeyCQIe2YbNudw" source="_84u6M12_EeyCQIe2YbNudw" target="_84u6MF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_DiffPositionableEntity_on"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_84u6P12_EeyCQIe2YbNudw" conditionText="((n31diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Left==&quot;ADD&quot;)) || ((n31diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_84u6QF2_EeyCQIe2YbNudw" origin="_84u6GV2_EeyCQIe2YbNudw" image="_84u6LF2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6QV2_EeyCQIe2YbNudw" origin="_84u6Gl2_EeyCQIe2YbNudw" image="_84u6LV2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6Ql2_EeyCQIe2YbNudw" origin="_84u6G12_EeyCQIe2YbNudw" image="_84u6Ll2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6Q12_EeyCQIe2YbNudw" origin="_84u6HF2_EeyCQIe2YbNudw" image="_84u6L12_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6RF2_EeyCQIe2YbNudw" origin="_84u6HV2_EeyCQIe2YbNudw" image="_84u6MF2_EeyCQIe2YbNudw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_84u6RV2_EeyCQIe2YbNudw" name="GhostMove">
+    <parameters xmi:id="_84u6Rl2_EeyCQIe2YbNudw" name="n31diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u6R12_EeyCQIe2YbNudw" name="n31diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u6SF2_EeyCQIe2YbNudw" name="n32diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u6SV2_EeyCQIe2YbNudw" name="n32diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_84u6Sl2_EeyCQIe2YbNudw" name="GhostMove_LHS">
+      <nodes xmi:id="_84u6S12_EeyCQIe2YbNudw" name="n0" outgoing="_84u6VV2_EeyCQIe2YbNudw _84u6Vl2_EeyCQIe2YbNudw _84u6V12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84u6TF2_EeyCQIe2YbNudw" name="n1" incoming="_84u6VV2_EeyCQIe2YbNudw _84u6Wl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6TV2_EeyCQIe2YbNudw" name="n2" incoming="_84u6Vl2_EeyCQIe2YbNudw _84u6W12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6Tl2_EeyCQIe2YbNudw" name="n3" incoming="_84u6V12_EeyCQIe2YbNudw" outgoing="_84u6WF2_EeyCQIe2YbNudw _84u6WV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_84u6T12_EeyCQIe2YbNudw" name="n32" incoming="_84u6WV2_EeyCQIe2YbNudw" outgoing="_84u6W12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u6UF2_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u6UV2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84u6Ul2_EeyCQIe2YbNudw" name="n31" incoming="_84u6WF2_EeyCQIe2YbNudw" outgoing="_84u6Wl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u6U12_EeyCQIe2YbNudw" value="n31diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u6VF2_EeyCQIe2YbNudw" value="n31diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84u6VV2_EeyCQIe2YbNudw" source="_84u6S12_EeyCQIe2YbNudw" target="_84u6TF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6Vl2_EeyCQIe2YbNudw" source="_84u6S12_EeyCQIe2YbNudw" target="_84u6TV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6V12_EeyCQIe2YbNudw" source="_84u6S12_EeyCQIe2YbNudw" target="_84u6Tl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u6WF2_EeyCQIe2YbNudw" source="_84u6Tl2_EeyCQIe2YbNudw" target="_84u6Ul2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u6WV2_EeyCQIe2YbNudw" source="_84u6Tl2_EeyCQIe2YbNudw" target="_84u6T12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u6Wl2_EeyCQIe2YbNudw" source="_84u6Ul2_EeyCQIe2YbNudw" target="_84u6TF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u6W12_EeyCQIe2YbNudw" source="_84u6T12_EeyCQIe2YbNudw" target="_84u6TV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_84u6XF2_EeyCQIe2YbNudw" name="GhostMove_RHS">
+      <nodes xmi:id="_84u6XV2_EeyCQIe2YbNudw" name="n0" outgoing="_84u6Zl2_EeyCQIe2YbNudw _84u6Z12_EeyCQIe2YbNudw _84u6aF2_EeyCQIe2YbNudw _84u6aV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84u6Xl2_EeyCQIe2YbNudw" name="n1" incoming="_84u6Zl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6X12_EeyCQIe2YbNudw" name="n2" incoming="_84u6Z12_EeyCQIe2YbNudw _84u6a12_EeyCQIe2YbNudw _84u6bF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6YF2_EeyCQIe2YbNudw" name="n3" incoming="_84u6aF2_EeyCQIe2YbNudw _84u6bV2_EeyCQIe2YbNudw" outgoing="_84u6al2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_84u6YV2_EeyCQIe2YbNudw" name="n32" incoming="_84u6al2_EeyCQIe2YbNudw _84u6bl2_EeyCQIe2YbNudw" outgoing="_84u6a12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u6Yl2_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u6Y12_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84u6ZF2_EeyCQIe2YbNudw" name="n4" incoming="_84u6aV2_EeyCQIe2YbNudw" outgoing="_84u6bF2_EeyCQIe2YbNudw _84u6bV2_EeyCQIe2YbNudw _84u6bl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff"/>
+        <attributes xmi:id="_84u6ZV2_EeyCQIe2YbNudw" value="&quot;Ghost Move&quot;">
+          <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84u6Zl2_EeyCQIe2YbNudw" source="_84u6XV2_EeyCQIe2YbNudw" target="_84u6Xl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6Z12_EeyCQIe2YbNudw" source="_84u6XV2_EeyCQIe2YbNudw" target="_84u6X12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6aF2_EeyCQIe2YbNudw" source="_84u6XV2_EeyCQIe2YbNudw" target="_84u6YF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u6aV2_EeyCQIe2YbNudw" source="_84u6XV2_EeyCQIe2YbNudw" target="_84u6ZF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_84u6al2_EeyCQIe2YbNudw" source="_84u6YF2_EeyCQIe2YbNudw" target="_84u6YV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u6a12_EeyCQIe2YbNudw" source="_84u6YV2_EeyCQIe2YbNudw" target="_84u6X12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u6bF2_EeyCQIe2YbNudw" source="_84u6ZF2_EeyCQIe2YbNudw" target="_84u6X12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_GridNode"/>
+      </edges>
+      <edges xmi:id="_84u6bV2_EeyCQIe2YbNudw" source="_84u6ZF2_EeyCQIe2YbNudw" target="_84u6YF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+      </edges>
+      <edges xmi:id="_84u6bl2_EeyCQIe2YbNudw" source="_84u6ZF2_EeyCQIe2YbNudw" target="_84u6YV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_DiffPositionableEntity_on"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_84u6b12_EeyCQIe2YbNudw" conditionText="((n31diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Left==&quot;ADD&quot;)) || ((n31diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_84u6cF2_EeyCQIe2YbNudw" origin="_84u6S12_EeyCQIe2YbNudw" image="_84u6XV2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6cV2_EeyCQIe2YbNudw" origin="_84u6TF2_EeyCQIe2YbNudw" image="_84u6Xl2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6cl2_EeyCQIe2YbNudw" origin="_84u6TV2_EeyCQIe2YbNudw" image="_84u6X12_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6c12_EeyCQIe2YbNudw" origin="_84u6Tl2_EeyCQIe2YbNudw" image="_84u6YF2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6dF2_EeyCQIe2YbNudw" origin="_84u6T12_EeyCQIe2YbNudw" image="_84u6YV2_EeyCQIe2YbNudw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_84u6dV2_EeyCQIe2YbNudw" name="PacmanMoveRight">
+    <parameters xmi:id="_84u6dl2_EeyCQIe2YbNudw" name="n31diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u6d12_EeyCQIe2YbNudw" name="n31diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u6eF2_EeyCQIe2YbNudw" name="n32diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u6eV2_EeyCQIe2YbNudw" name="n32diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_84u6el2_EeyCQIe2YbNudw" name="PacmanMoveRight_LHS">
+      <nodes xmi:id="_84u6e12_EeyCQIe2YbNudw" name="n0" outgoing="_84u6hV2_EeyCQIe2YbNudw _84u6hl2_EeyCQIe2YbNudw _84u6h12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84u6fF2_EeyCQIe2YbNudw" name="n1" incoming="_84u6hV2_EeyCQIe2YbNudw _84u6i12_EeyCQIe2YbNudw" outgoing="_84u6iF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6fV2_EeyCQIe2YbNudw" name="n2" incoming="_84u6hl2_EeyCQIe2YbNudw _84u6iF2_EeyCQIe2YbNudw _84u6jF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6fl2_EeyCQIe2YbNudw" name="n3" incoming="_84u6h12_EeyCQIe2YbNudw" outgoing="_84u6iV2_EeyCQIe2YbNudw _84u6il2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_84u6f12_EeyCQIe2YbNudw" name="n32" incoming="_84u6il2_EeyCQIe2YbNudw" outgoing="_84u6jF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u6gF2_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u6gV2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84u6gl2_EeyCQIe2YbNudw" name="n31" incoming="_84u6iV2_EeyCQIe2YbNudw" outgoing="_84u6i12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u6g12_EeyCQIe2YbNudw" value="n31diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u6hF2_EeyCQIe2YbNudw" value="n31diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84u6hV2_EeyCQIe2YbNudw" source="_84u6e12_EeyCQIe2YbNudw" target="_84u6fF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6hl2_EeyCQIe2YbNudw" source="_84u6e12_EeyCQIe2YbNudw" target="_84u6fV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6h12_EeyCQIe2YbNudw" source="_84u6e12_EeyCQIe2YbNudw" target="_84u6fl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u6iF2_EeyCQIe2YbNudw" source="_84u6fF2_EeyCQIe2YbNudw" target="_84u6fV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/right"/>
+      </edges>
+      <edges xmi:id="_84u6iV2_EeyCQIe2YbNudw" source="_84u6fl2_EeyCQIe2YbNudw" target="_84u6gl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u6il2_EeyCQIe2YbNudw" source="_84u6fl2_EeyCQIe2YbNudw" target="_84u6f12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u6i12_EeyCQIe2YbNudw" source="_84u6gl2_EeyCQIe2YbNudw" target="_84u6fF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u6jF2_EeyCQIe2YbNudw" source="_84u6f12_EeyCQIe2YbNudw" target="_84u6fV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_84u6jV2_EeyCQIe2YbNudw" name="PacmanMoveRight_RHS">
+      <nodes xmi:id="_84u6jl2_EeyCQIe2YbNudw" name="n0" outgoing="_84u6l12_EeyCQIe2YbNudw _84u6mF2_EeyCQIe2YbNudw _84u6mV2_EeyCQIe2YbNudw _84u6ml2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84u6j12_EeyCQIe2YbNudw" name="n1" incoming="_84u6l12_EeyCQIe2YbNudw" outgoing="_84u6m12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6kF2_EeyCQIe2YbNudw" name="n2" incoming="_84u6mF2_EeyCQIe2YbNudw _84u6m12_EeyCQIe2YbNudw _84u6nV2_EeyCQIe2YbNudw _84u6nl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6kV2_EeyCQIe2YbNudw" name="n3" incoming="_84u6mV2_EeyCQIe2YbNudw _84u6n12_EeyCQIe2YbNudw" outgoing="_84u6nF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_84u6kl2_EeyCQIe2YbNudw" name="n32" incoming="_84u6nF2_EeyCQIe2YbNudw _84u6oF2_EeyCQIe2YbNudw" outgoing="_84u6nV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u6k12_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u6lF2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84u6lV2_EeyCQIe2YbNudw" name="n4" incoming="_84u6ml2_EeyCQIe2YbNudw" outgoing="_84u6nl2_EeyCQIe2YbNudw _84u6n12_EeyCQIe2YbNudw _84u6oF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff"/>
+        <attributes xmi:id="_84u6ll2_EeyCQIe2YbNudw" value="&quot;Pacman Move Right&quot;">
+          <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84u6l12_EeyCQIe2YbNudw" source="_84u6jl2_EeyCQIe2YbNudw" target="_84u6j12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6mF2_EeyCQIe2YbNudw" source="_84u6jl2_EeyCQIe2YbNudw" target="_84u6kF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6mV2_EeyCQIe2YbNudw" source="_84u6jl2_EeyCQIe2YbNudw" target="_84u6kV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u6ml2_EeyCQIe2YbNudw" source="_84u6jl2_EeyCQIe2YbNudw" target="_84u6lV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_84u6m12_EeyCQIe2YbNudw" source="_84u6j12_EeyCQIe2YbNudw" target="_84u6kF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/right"/>
+      </edges>
+      <edges xmi:id="_84u6nF2_EeyCQIe2YbNudw" source="_84u6kV2_EeyCQIe2YbNudw" target="_84u6kl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u6nV2_EeyCQIe2YbNudw" source="_84u6kl2_EeyCQIe2YbNudw" target="_84u6kF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u6nl2_EeyCQIe2YbNudw" source="_84u6lV2_EeyCQIe2YbNudw" target="_84u6kF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_GridNode"/>
+      </edges>
+      <edges xmi:id="_84u6n12_EeyCQIe2YbNudw" source="_84u6lV2_EeyCQIe2YbNudw" target="_84u6kV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+      </edges>
+      <edges xmi:id="_84u6oF2_EeyCQIe2YbNudw" source="_84u6lV2_EeyCQIe2YbNudw" target="_84u6kl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_DiffPositionableEntity_on"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_84u6oV2_EeyCQIe2YbNudw" conditionText="((n31diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Left==&quot;ADD&quot;)) || ((n31diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_84u6ol2_EeyCQIe2YbNudw" origin="_84u6e12_EeyCQIe2YbNudw" image="_84u6jl2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6o12_EeyCQIe2YbNudw" origin="_84u6fF2_EeyCQIe2YbNudw" image="_84u6j12_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6pF2_EeyCQIe2YbNudw" origin="_84u6fV2_EeyCQIe2YbNudw" image="_84u6kF2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6pV2_EeyCQIe2YbNudw" origin="_84u6fl2_EeyCQIe2YbNudw" image="_84u6kV2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6pl2_EeyCQIe2YbNudw" origin="_84u6f12_EeyCQIe2YbNudw" image="_84u6kl2_EeyCQIe2YbNudw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_84u6p12_EeyCQIe2YbNudw" name="PacmanMoveLeft">
+    <parameters xmi:id="_84u6qF2_EeyCQIe2YbNudw" name="n31diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u6qV2_EeyCQIe2YbNudw" name="n31diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u6ql2_EeyCQIe2YbNudw" name="n32diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u6q12_EeyCQIe2YbNudw" name="n32diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_84u6rF2_EeyCQIe2YbNudw" name="PacmanMoveLeft_LHS">
+      <nodes xmi:id="_84u6rV2_EeyCQIe2YbNudw" name="n0" outgoing="_84u6t12_EeyCQIe2YbNudw _84u6uF2_EeyCQIe2YbNudw _84u6uV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84u6rl2_EeyCQIe2YbNudw" name="n1" incoming="_84u6t12_EeyCQIe2YbNudw _84u6vV2_EeyCQIe2YbNudw" outgoing="_84u6ul2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6r12_EeyCQIe2YbNudw" name="n2" incoming="_84u6uF2_EeyCQIe2YbNudw _84u6ul2_EeyCQIe2YbNudw _84u6vl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6sF2_EeyCQIe2YbNudw" name="n3" incoming="_84u6uV2_EeyCQIe2YbNudw" outgoing="_84u6u12_EeyCQIe2YbNudw _84u6vF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_84u6sV2_EeyCQIe2YbNudw" name="n32" incoming="_84u6vF2_EeyCQIe2YbNudw" outgoing="_84u6vl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u6sl2_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u6s12_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84u6tF2_EeyCQIe2YbNudw" name="n31" incoming="_84u6u12_EeyCQIe2YbNudw" outgoing="_84u6vV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u6tV2_EeyCQIe2YbNudw" value="n31diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u6tl2_EeyCQIe2YbNudw" value="n31diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84u6t12_EeyCQIe2YbNudw" source="_84u6rV2_EeyCQIe2YbNudw" target="_84u6rl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6uF2_EeyCQIe2YbNudw" source="_84u6rV2_EeyCQIe2YbNudw" target="_84u6r12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6uV2_EeyCQIe2YbNudw" source="_84u6rV2_EeyCQIe2YbNudw" target="_84u6sF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u6ul2_EeyCQIe2YbNudw" source="_84u6rl2_EeyCQIe2YbNudw" target="_84u6r12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/left"/>
+      </edges>
+      <edges xmi:id="_84u6u12_EeyCQIe2YbNudw" source="_84u6sF2_EeyCQIe2YbNudw" target="_84u6tF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u6vF2_EeyCQIe2YbNudw" source="_84u6sF2_EeyCQIe2YbNudw" target="_84u6sV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u6vV2_EeyCQIe2YbNudw" source="_84u6tF2_EeyCQIe2YbNudw" target="_84u6rl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u6vl2_EeyCQIe2YbNudw" source="_84u6sV2_EeyCQIe2YbNudw" target="_84u6r12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_84u6v12_EeyCQIe2YbNudw" name="PacmanMoveLeft_RHS">
+      <nodes xmi:id="_84u6wF2_EeyCQIe2YbNudw" name="n0" outgoing="_84u6yV2_EeyCQIe2YbNudw _84u6yl2_EeyCQIe2YbNudw _84u6y12_EeyCQIe2YbNudw _84u6zF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84u6wV2_EeyCQIe2YbNudw" name="n1" incoming="_84u6yV2_EeyCQIe2YbNudw" outgoing="_84u6zV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6wl2_EeyCQIe2YbNudw" name="n2" incoming="_84u6yl2_EeyCQIe2YbNudw _84u6zV2_EeyCQIe2YbNudw _84u6z12_EeyCQIe2YbNudw _84u60F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u6w12_EeyCQIe2YbNudw" name="n3" incoming="_84u6y12_EeyCQIe2YbNudw _84u60V2_EeyCQIe2YbNudw" outgoing="_84u6zl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_84u6xF2_EeyCQIe2YbNudw" name="n32" incoming="_84u6zl2_EeyCQIe2YbNudw _84u60l2_EeyCQIe2YbNudw" outgoing="_84u6z12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u6xV2_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u6xl2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84u6x12_EeyCQIe2YbNudw" name="n4" incoming="_84u6zF2_EeyCQIe2YbNudw" outgoing="_84u60F2_EeyCQIe2YbNudw _84u60V2_EeyCQIe2YbNudw _84u60l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff"/>
+        <attributes xmi:id="_84u6yF2_EeyCQIe2YbNudw" value="&quot;Pacman Move Left&quot;">
+          <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84u6yV2_EeyCQIe2YbNudw" source="_84u6wF2_EeyCQIe2YbNudw" target="_84u6wV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6yl2_EeyCQIe2YbNudw" source="_84u6wF2_EeyCQIe2YbNudw" target="_84u6wl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6y12_EeyCQIe2YbNudw" source="_84u6wF2_EeyCQIe2YbNudw" target="_84u6w12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u6zF2_EeyCQIe2YbNudw" source="_84u6wF2_EeyCQIe2YbNudw" target="_84u6x12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_84u6zV2_EeyCQIe2YbNudw" source="_84u6wV2_EeyCQIe2YbNudw" target="_84u6wl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/left"/>
+      </edges>
+      <edges xmi:id="_84u6zl2_EeyCQIe2YbNudw" source="_84u6w12_EeyCQIe2YbNudw" target="_84u6xF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u6z12_EeyCQIe2YbNudw" source="_84u6xF2_EeyCQIe2YbNudw" target="_84u6wl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u60F2_EeyCQIe2YbNudw" source="_84u6x12_EeyCQIe2YbNudw" target="_84u6wl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_GridNode"/>
+      </edges>
+      <edges xmi:id="_84u60V2_EeyCQIe2YbNudw" source="_84u6x12_EeyCQIe2YbNudw" target="_84u6w12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+      </edges>
+      <edges xmi:id="_84u60l2_EeyCQIe2YbNudw" source="_84u6x12_EeyCQIe2YbNudw" target="_84u6xF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_DiffPositionableEntity_on"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_84u6012_EeyCQIe2YbNudw" conditionText="((n31diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Left==&quot;ADD&quot;)) || ((n31diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_84u61F2_EeyCQIe2YbNudw" origin="_84u6rV2_EeyCQIe2YbNudw" image="_84u6wF2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u61V2_EeyCQIe2YbNudw" origin="_84u6rl2_EeyCQIe2YbNudw" image="_84u6wV2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u61l2_EeyCQIe2YbNudw" origin="_84u6r12_EeyCQIe2YbNudw" image="_84u6wl2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u6112_EeyCQIe2YbNudw" origin="_84u6sF2_EeyCQIe2YbNudw" image="_84u6w12_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u62F2_EeyCQIe2YbNudw" origin="_84u6sV2_EeyCQIe2YbNudw" image="_84u6xF2_EeyCQIe2YbNudw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_84u62V2_EeyCQIe2YbNudw" name="PacmanMoveUp">
+    <parameters xmi:id="_84u62l2_EeyCQIe2YbNudw" name="n31diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u6212_EeyCQIe2YbNudw" name="n31diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u63F2_EeyCQIe2YbNudw" name="n32diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u63V2_EeyCQIe2YbNudw" name="n32diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_84u63l2_EeyCQIe2YbNudw" name="PacmanMoveUp_LHS">
+      <nodes xmi:id="_84u6312_EeyCQIe2YbNudw" name="n0" outgoing="_84u66V2_EeyCQIe2YbNudw _84u66l2_EeyCQIe2YbNudw _84u6612_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84u64F2_EeyCQIe2YbNudw" name="n1" incoming="_84u66V2_EeyCQIe2YbNudw _84u6712_EeyCQIe2YbNudw" outgoing="_84u67F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u64V2_EeyCQIe2YbNudw" name="n2" incoming="_84u66l2_EeyCQIe2YbNudw _84u67F2_EeyCQIe2YbNudw _84u68F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u64l2_EeyCQIe2YbNudw" name="n3" incoming="_84u6612_EeyCQIe2YbNudw" outgoing="_84u67V2_EeyCQIe2YbNudw _84u67l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_84u6412_EeyCQIe2YbNudw" name="n32" incoming="_84u67l2_EeyCQIe2YbNudw" outgoing="_84u68F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u65F2_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u65V2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84u65l2_EeyCQIe2YbNudw" name="n31" incoming="_84u67V2_EeyCQIe2YbNudw" outgoing="_84u6712_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u6512_EeyCQIe2YbNudw" value="n31diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u66F2_EeyCQIe2YbNudw" value="n31diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84u66V2_EeyCQIe2YbNudw" source="_84u6312_EeyCQIe2YbNudw" target="_84u64F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u66l2_EeyCQIe2YbNudw" source="_84u6312_EeyCQIe2YbNudw" target="_84u64V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6612_EeyCQIe2YbNudw" source="_84u6312_EeyCQIe2YbNudw" target="_84u64l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u67F2_EeyCQIe2YbNudw" source="_84u64F2_EeyCQIe2YbNudw" target="_84u64V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/up"/>
+      </edges>
+      <edges xmi:id="_84u67V2_EeyCQIe2YbNudw" source="_84u64l2_EeyCQIe2YbNudw" target="_84u65l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u67l2_EeyCQIe2YbNudw" source="_84u64l2_EeyCQIe2YbNudw" target="_84u6412_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u6712_EeyCQIe2YbNudw" source="_84u65l2_EeyCQIe2YbNudw" target="_84u64F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u68F2_EeyCQIe2YbNudw" source="_84u6412_EeyCQIe2YbNudw" target="_84u64V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_84u68V2_EeyCQIe2YbNudw" name="PacmanMoveUp_RHS">
+      <nodes xmi:id="_84u68l2_EeyCQIe2YbNudw" name="n0" outgoing="_84u6-12_EeyCQIe2YbNudw _84u6_F2_EeyCQIe2YbNudw _84u6_V2_EeyCQIe2YbNudw _84u6_l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84u6812_EeyCQIe2YbNudw" name="n1" incoming="_84u6-12_EeyCQIe2YbNudw" outgoing="_84u6_12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u69F2_EeyCQIe2YbNudw" name="n2" incoming="_84u6_F2_EeyCQIe2YbNudw _84u6_12_EeyCQIe2YbNudw _84u7AV2_EeyCQIe2YbNudw _84u7Al2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u69V2_EeyCQIe2YbNudw" name="n3" incoming="_84u6_V2_EeyCQIe2YbNudw _84u7A12_EeyCQIe2YbNudw" outgoing="_84u7AF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_84u69l2_EeyCQIe2YbNudw" name="n32" incoming="_84u7AF2_EeyCQIe2YbNudw _84u7BF2_EeyCQIe2YbNudw" outgoing="_84u7AV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u6912_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u6-F2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84u6-V2_EeyCQIe2YbNudw" name="n4" incoming="_84u6_l2_EeyCQIe2YbNudw" outgoing="_84u7Al2_EeyCQIe2YbNudw _84u7A12_EeyCQIe2YbNudw _84u7BF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff"/>
+        <attributes xmi:id="_84u6-l2_EeyCQIe2YbNudw" value="&quot;Pacman Move Up&quot;">
+          <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84u6-12_EeyCQIe2YbNudw" source="_84u68l2_EeyCQIe2YbNudw" target="_84u6812_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6_F2_EeyCQIe2YbNudw" source="_84u68l2_EeyCQIe2YbNudw" target="_84u69F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u6_V2_EeyCQIe2YbNudw" source="_84u68l2_EeyCQIe2YbNudw" target="_84u69V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u6_l2_EeyCQIe2YbNudw" source="_84u68l2_EeyCQIe2YbNudw" target="_84u6-V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_84u6_12_EeyCQIe2YbNudw" source="_84u6812_EeyCQIe2YbNudw" target="_84u69F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/up"/>
+      </edges>
+      <edges xmi:id="_84u7AF2_EeyCQIe2YbNudw" source="_84u69V2_EeyCQIe2YbNudw" target="_84u69l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u7AV2_EeyCQIe2YbNudw" source="_84u69l2_EeyCQIe2YbNudw" target="_84u69F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u7Al2_EeyCQIe2YbNudw" source="_84u6-V2_EeyCQIe2YbNudw" target="_84u69F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_GridNode"/>
+      </edges>
+      <edges xmi:id="_84u7A12_EeyCQIe2YbNudw" source="_84u6-V2_EeyCQIe2YbNudw" target="_84u69V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+      </edges>
+      <edges xmi:id="_84u7BF2_EeyCQIe2YbNudw" source="_84u6-V2_EeyCQIe2YbNudw" target="_84u69l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_DiffPositionableEntity_on"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_84u7BV2_EeyCQIe2YbNudw" conditionText="((n31diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Left==&quot;ADD&quot;)) || ((n31diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_84u7Bl2_EeyCQIe2YbNudw" origin="_84u6312_EeyCQIe2YbNudw" image="_84u68l2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u7B12_EeyCQIe2YbNudw" origin="_84u64F2_EeyCQIe2YbNudw" image="_84u6812_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u7CF2_EeyCQIe2YbNudw" origin="_84u64V2_EeyCQIe2YbNudw" image="_84u69F2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u7CV2_EeyCQIe2YbNudw" origin="_84u64l2_EeyCQIe2YbNudw" image="_84u69V2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u7Cl2_EeyCQIe2YbNudw" origin="_84u6412_EeyCQIe2YbNudw" image="_84u69l2_EeyCQIe2YbNudw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_84u7C12_EeyCQIe2YbNudw" name="PacmanMoveDown">
+    <parameters xmi:id="_84u7DF2_EeyCQIe2YbNudw" name="n31diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u7DV2_EeyCQIe2YbNudw" name="n31diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u7Dl2_EeyCQIe2YbNudw" name="n32diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84u7D12_EeyCQIe2YbNudw" name="n32diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_84u7EF2_EeyCQIe2YbNudw" name="PacmanMoveDown_LHS">
+      <nodes xmi:id="_84u7EV2_EeyCQIe2YbNudw" name="n0" outgoing="_84u7G12_EeyCQIe2YbNudw _84u7HF2_EeyCQIe2YbNudw _84u7HV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84u7El2_EeyCQIe2YbNudw" name="n1" incoming="_84u7G12_EeyCQIe2YbNudw _84u7IV2_EeyCQIe2YbNudw" outgoing="_84u7Hl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u7E12_EeyCQIe2YbNudw" name="n2" incoming="_84u7HF2_EeyCQIe2YbNudw _84u7Hl2_EeyCQIe2YbNudw _84u7Il2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u7FF2_EeyCQIe2YbNudw" name="n3" incoming="_84u7HV2_EeyCQIe2YbNudw" outgoing="_84u7H12_EeyCQIe2YbNudw _84u7IF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_84u7FV2_EeyCQIe2YbNudw" name="n32" incoming="_84u7IF2_EeyCQIe2YbNudw" outgoing="_84u7Il2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u7Fl2_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u7F12_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84u7GF2_EeyCQIe2YbNudw" name="n31" incoming="_84u7H12_EeyCQIe2YbNudw" outgoing="_84u7IV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u7GV2_EeyCQIe2YbNudw" value="n31diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u7Gl2_EeyCQIe2YbNudw" value="n31diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84u7G12_EeyCQIe2YbNudw" source="_84u7EV2_EeyCQIe2YbNudw" target="_84u7El2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u7HF2_EeyCQIe2YbNudw" source="_84u7EV2_EeyCQIe2YbNudw" target="_84u7E12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u7HV2_EeyCQIe2YbNudw" source="_84u7EV2_EeyCQIe2YbNudw" target="_84u7FF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u7Hl2_EeyCQIe2YbNudw" source="_84u7El2_EeyCQIe2YbNudw" target="_84u7E12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/down"/>
+      </edges>
+      <edges xmi:id="_84u7H12_EeyCQIe2YbNudw" source="_84u7FF2_EeyCQIe2YbNudw" target="_84u7GF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u7IF2_EeyCQIe2YbNudw" source="_84u7FF2_EeyCQIe2YbNudw" target="_84u7FV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u7IV2_EeyCQIe2YbNudw" source="_84u7GF2_EeyCQIe2YbNudw" target="_84u7El2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u7Il2_EeyCQIe2YbNudw" source="_84u7FV2_EeyCQIe2YbNudw" target="_84u7E12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_84u7I12_EeyCQIe2YbNudw" name="PacmanMoveDown_RHS">
+      <nodes xmi:id="_84u7JF2_EeyCQIe2YbNudw" name="n0" outgoing="_84u7LV2_EeyCQIe2YbNudw _84u7Ll2_EeyCQIe2YbNudw _84u7L12_EeyCQIe2YbNudw _84u7MF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84u7JV2_EeyCQIe2YbNudw" name="n1" incoming="_84u7LV2_EeyCQIe2YbNudw" outgoing="_84u7MV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u7Jl2_EeyCQIe2YbNudw" name="n2" incoming="_84u7Ll2_EeyCQIe2YbNudw _84u7MV2_EeyCQIe2YbNudw _84u7M12_EeyCQIe2YbNudw _84u7NF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84u7J12_EeyCQIe2YbNudw" name="n3" incoming="_84u7L12_EeyCQIe2YbNudw _84u7NV2_EeyCQIe2YbNudw" outgoing="_84u7Ml2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_84u7KF2_EeyCQIe2YbNudw" name="n32" incoming="_84u7Ml2_EeyCQIe2YbNudw _84u7Nl2_EeyCQIe2YbNudw" outgoing="_84u7M12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84u7KV2_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84u7Kl2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84u7K12_EeyCQIe2YbNudw" name="n4" incoming="_84u7MF2_EeyCQIe2YbNudw" outgoing="_84u7NF2_EeyCQIe2YbNudw _84u7NV2_EeyCQIe2YbNudw _84u7Nl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff"/>
+        <attributes xmi:id="_84u7LF2_EeyCQIe2YbNudw" value="&quot;Pacman Move Down&quot;">
+          <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84u7LV2_EeyCQIe2YbNudw" source="_84u7JF2_EeyCQIe2YbNudw" target="_84u7JV2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u7Ll2_EeyCQIe2YbNudw" source="_84u7JF2_EeyCQIe2YbNudw" target="_84u7Jl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84u7L12_EeyCQIe2YbNudw" source="_84u7JF2_EeyCQIe2YbNudw" target="_84u7J12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84u7MF2_EeyCQIe2YbNudw" source="_84u7JF2_EeyCQIe2YbNudw" target="_84u7K12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_84u7MV2_EeyCQIe2YbNudw" source="_84u7JV2_EeyCQIe2YbNudw" target="_84u7Jl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode/down"/>
+      </edges>
+      <edges xmi:id="_84u7Ml2_EeyCQIe2YbNudw" source="_84u7J12_EeyCQIe2YbNudw" target="_84u7KF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84u7M12_EeyCQIe2YbNudw" source="_84u7KF2_EeyCQIe2YbNudw" target="_84u7Jl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84u7NF2_EeyCQIe2YbNudw" source="_84u7K12_EeyCQIe2YbNudw" target="_84u7Jl2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_GridNode"/>
+      </edges>
+      <edges xmi:id="_84u7NV2_EeyCQIe2YbNudw" source="_84u7K12_EeyCQIe2YbNudw" target="_84u7J12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+      </edges>
+      <edges xmi:id="_84u7Nl2_EeyCQIe2YbNudw" source="_84u7K12_EeyCQIe2YbNudw" target="_84u7KF2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_DiffPositionableEntity_on"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_84u7N12_EeyCQIe2YbNudw" conditionText="((n31diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Left==&quot;ADD&quot;)) || ((n31diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_84u7OF2_EeyCQIe2YbNudw" origin="_84u7EV2_EeyCQIe2YbNudw" image="_84u7JF2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u7OV2_EeyCQIe2YbNudw" origin="_84u7El2_EeyCQIe2YbNudw" image="_84u7JV2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84u7Ol2_EeyCQIe2YbNudw" origin="_84u7E12_EeyCQIe2YbNudw" image="_84u7Jl2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84vg0F2_EeyCQIe2YbNudw" origin="_84u7FF2_EeyCQIe2YbNudw" image="_84u7J12_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84vg0V2_EeyCQIe2YbNudw" origin="_84u7FV2_EeyCQIe2YbNudw" image="_84u7KF2_EeyCQIe2YbNudw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_84vg0l2_EeyCQIe2YbNudw" name="PacmanMove">
+    <parameters xmi:id="_84vg012_EeyCQIe2YbNudw" name="n31diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84vg1F2_EeyCQIe2YbNudw" name="n31diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84vg1V2_EeyCQIe2YbNudw" name="n32diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_84vg1l2_EeyCQIe2YbNudw" name="n32diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_84vg112_EeyCQIe2YbNudw" name="PacmanMove_LHS">
+      <nodes xmi:id="_84vg2F2_EeyCQIe2YbNudw" name="n0" outgoing="_84vg4l2_EeyCQIe2YbNudw _84vg412_EeyCQIe2YbNudw _84vg5F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84vg2V2_EeyCQIe2YbNudw" name="n1" incoming="_84vg4l2_EeyCQIe2YbNudw _84vg512_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84vg2l2_EeyCQIe2YbNudw" name="n2" incoming="_84vg412_EeyCQIe2YbNudw _84vg6F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84vg212_EeyCQIe2YbNudw" name="n3" incoming="_84vg5F2_EeyCQIe2YbNudw" outgoing="_84vg5V2_EeyCQIe2YbNudw _84vg5l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_84vg3F2_EeyCQIe2YbNudw" name="n32" incoming="_84vg5l2_EeyCQIe2YbNudw" outgoing="_84vg6F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84vg3V2_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84vg3l2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84vg312_EeyCQIe2YbNudw" name="n31" incoming="_84vg5V2_EeyCQIe2YbNudw" outgoing="_84vg512_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84vg4F2_EeyCQIe2YbNudw" value="n31diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84vg4V2_EeyCQIe2YbNudw" value="n31diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84vg4l2_EeyCQIe2YbNudw" source="_84vg2F2_EeyCQIe2YbNudw" target="_84vg2V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84vg412_EeyCQIe2YbNudw" source="_84vg2F2_EeyCQIe2YbNudw" target="_84vg2l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84vg5F2_EeyCQIe2YbNudw" source="_84vg2F2_EeyCQIe2YbNudw" target="_84vg212_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84vg5V2_EeyCQIe2YbNudw" source="_84vg212_EeyCQIe2YbNudw" target="_84vg312_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84vg5l2_EeyCQIe2YbNudw" source="_84vg212_EeyCQIe2YbNudw" target="_84vg3F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84vg512_EeyCQIe2YbNudw" source="_84vg312_EeyCQIe2YbNudw" target="_84vg2V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84vg6F2_EeyCQIe2YbNudw" source="_84vg3F2_EeyCQIe2YbNudw" target="_84vg2l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_84vg6V2_EeyCQIe2YbNudw" name="PacmanMove_RHS">
+      <nodes xmi:id="_84vg6l2_EeyCQIe2YbNudw" name="n0" outgoing="_84vg812_EeyCQIe2YbNudw _84vg9F2_EeyCQIe2YbNudw _84vg9V2_EeyCQIe2YbNudw _84vg9l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_84vg612_EeyCQIe2YbNudw" name="n1" incoming="_84vg812_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84vg7F2_EeyCQIe2YbNudw" name="n2" incoming="_84vg9F2_EeyCQIe2YbNudw _84vg-F2_EeyCQIe2YbNudw _84vg-V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_84vg7V2_EeyCQIe2YbNudw" name="n3" incoming="_84vg9V2_EeyCQIe2YbNudw _84vg-l2_EeyCQIe2YbNudw" outgoing="_84vg912_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_84vg7l2_EeyCQIe2YbNudw" name="n32" incoming="_84vg912_EeyCQIe2YbNudw _84vg-12_EeyCQIe2YbNudw" outgoing="_84vg-F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+        <attributes xmi:id="_84vg712_EeyCQIe2YbNudw" value="n32diff_kind_Left">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_84vg8F2_EeyCQIe2YbNudw" value="n32diff_kind_Right">
+          <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_84vg8V2_EeyCQIe2YbNudw" name="n4" incoming="_84vg9l2_EeyCQIe2YbNudw" outgoing="_84vg-V2_EeyCQIe2YbNudw _84vg-l2_EeyCQIe2YbNudw _84vg-12_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff"/>
+        <attributes xmi:id="_84vg8l2_EeyCQIe2YbNudw" value="&quot;Pacman Move&quot;">
+          <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_84vg812_EeyCQIe2YbNudw" source="_84vg6l2_EeyCQIe2YbNudw" target="_84vg612_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84vg9F2_EeyCQIe2YbNudw" source="_84vg6l2_EeyCQIe2YbNudw" target="_84vg7F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_84vg9V2_EeyCQIe2YbNudw" source="_84vg6l2_EeyCQIe2YbNudw" target="_84vg7V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_84vg9l2_EeyCQIe2YbNudw" source="_84vg6l2_EeyCQIe2YbNudw" target="_84vg8V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/domainspecificdiffs"/>
+      </edges>
+      <edges xmi:id="_84vg912_EeyCQIe2YbNudw" source="_84vg7V2_EeyCQIe2YbNudw" target="_84vg7l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_84vg-F2_EeyCQIe2YbNudw" source="_84vg7l2_EeyCQIe2YbNudw" target="_84vg7F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_84vg-V2_EeyCQIe2YbNudw" source="_84vg8V2_EeyCQIe2YbNudw" target="_84vg7F2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_GridNode"/>
+      </edges>
+      <edges xmi:id="_84vg-l2_EeyCQIe2YbNudw" source="_84vg8V2_EeyCQIe2YbNudw" target="_84vg7V2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+      </edges>
+      <edges xmi:id="_84vg-12_EeyCQIe2YbNudw" source="_84vg8V2_EeyCQIe2YbNudw" target="_84vg7l2_EeyCQIe2YbNudw">
+        <type href="../MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_DiffPositionableEntity_on"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_84vg_F2_EeyCQIe2YbNudw" conditionText="((n31diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Left==&quot;ADD&quot;)) || ((n31diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n32diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_84vg_V2_EeyCQIe2YbNudw" origin="_84vg2F2_EeyCQIe2YbNudw" image="_84vg6l2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84vg_l2_EeyCQIe2YbNudw" origin="_84vg2V2_EeyCQIe2YbNudw" image="_84vg612_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84vg_12_EeyCQIe2YbNudw" origin="_84vg2l2_EeyCQIe2YbNudw" image="_84vg7F2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84vhAF2_EeyCQIe2YbNudw" origin="_84vg212_EeyCQIe2YbNudw" image="_84vg7V2_EeyCQIe2YbNudw"/>
+    <mappings xmi:id="_84vhAV2_EeyCQIe2YbNudw" origin="_84vg3F2_EeyCQIe2YbNudw" image="_84vg7l2_EeyCQIe2YbNudw"/>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_84vhAl2_EeyCQIe2YbNudw" name="unitSequntialStar" subUnits="_84vhA12_EeyCQIe2YbNudw _84vhBF2_EeyCQIe2YbNudw _84vhBV2_EeyCQIe2YbNudw _84vhBl2_EeyCQIe2YbNudw _84vhB12_EeyCQIe2YbNudw _84vhCF2_EeyCQIe2YbNudw _84vhCV2_EeyCQIe2YbNudw _84vhCl2_EeyCQIe2YbNudw _84vhC12_EeyCQIe2YbNudw _84vhDF2_EeyCQIe2YbNudw _84vhDV2_EeyCQIe2YbNudw _84vhDl2_EeyCQIe2YbNudw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_84vhA12_EeyCQIe2YbNudw" name="unitPacmanEatFoodStar" subUnit="_84uSsV2_EeyCQIe2YbNudw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_84vhBF2_EeyCQIe2YbNudw" name="unitPacmanDieStar" subUnit="_84uS612_EeyCQIe2YbNudw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_84vhBV2_EeyCQIe2YbNudw" name="unitGhostMoveRightStar" subUnit="_84uTGl2_EeyCQIe2YbNudw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_84vhBl2_EeyCQIe2YbNudw" name="unitGhostMoveLeftStar" subUnit="_84uTTF2_EeyCQIe2YbNudw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_84vhB12_EeyCQIe2YbNudw" name="unitGhostMoveUpStar" subUnit="_84u54V2_EeyCQIe2YbNudw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_84vhCF2_EeyCQIe2YbNudw" name="unitGhostMoveDownStar" subUnit="_84u6E12_EeyCQIe2YbNudw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_84vhCV2_EeyCQIe2YbNudw" name="unitGhostMoveStar" subUnit="_84u6RV2_EeyCQIe2YbNudw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_84vhCl2_EeyCQIe2YbNudw" name="unitPacmanMoveRightStar" subUnit="_84u6dV2_EeyCQIe2YbNudw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_84vhC12_EeyCQIe2YbNudw" name="unitPacmanMoveLeftStar" subUnit="_84u6p12_EeyCQIe2YbNudw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_84vhDF2_EeyCQIe2YbNudw" name="unitPacmanMoveUpStar" subUnit="_84u62V2_EeyCQIe2YbNudw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_84vhDV2_EeyCQIe2YbNudw" name="unitPacmanMoveDownStar" subUnit="_84u7C12_EeyCQIe2YbNudw"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_84vhDl2_EeyCQIe2YbNudw" name="unitPacmanMoveStar" subUnit="_84vg0l2_EeyCQIe2YbNudw"/>
+</henshin:Module>

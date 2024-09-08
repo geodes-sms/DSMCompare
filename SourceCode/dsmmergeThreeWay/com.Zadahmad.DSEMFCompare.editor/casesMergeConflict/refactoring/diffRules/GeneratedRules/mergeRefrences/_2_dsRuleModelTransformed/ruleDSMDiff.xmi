@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring2WayRuleMM:Rule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoring2WayRuleMM="www.geodes.UdeM.edu/refactoring2WayRuleMM" name="ruleDSMDiff">
+  <pattern xsi:type="refactoring2WayRuleMM:Pattern_EPackage">
+    <eclassifiers xsi:type="refactoring2WayRuleMM:Pattern_EClass" name="cls1" esupertypes="root" ID_Pattern="1"/>
+    <eclassifiers xsi:type="refactoring2WayRuleMM:Pattern_EClass" name="cls2" esupertypes="root" ID_Pattern="2"/>
+    <eclassifiers xsi:type="refactoring2WayRuleMM:Pattern_EClass" name="root" ID_Pattern="3">
+      <ereferences xsi:type="refactoring2WayRuleMM:Pattern_EReference" name="refC1" etype="cls1" ID_Pattern="8"/>
+      <ereferences xsi:type="refactoring2WayRuleMM:Pattern_EReference" name="refC2" etype="cls2" ID_Pattern="9"/>
+      <ereferences xsi:type="refactoring2WayRuleMM:Pattern_EReference" name="refC1" etype="cls1" ID_Pattern="10"/>
+      <ereferences xsi:type="refactoring2WayRuleMM:Pattern_EReference" name="refC2" etype="cls2" ID_Pattern="11"/>
+    </eclassifiers>
+    <eclassifiers xsi:type="refactoring2WayRuleMM:Pattern_EClass" name="superRoot" ID_Pattern="4">
+      <ereferences xsi:type="refactoring2WayRuleMM:Pattern_DiffEReference" name="refRoot" etype="root" diff_kind="ADD" ID_Pattern="12"/>
+      <ereferences xsi:type="refactoring2WayRuleMM:Pattern_DiffEReference" name="refSC1" etype="cls1" diff_kind="DELETE" ID_Pattern="13"/>
+      <ereferences xsi:type="refactoring2WayRuleMM:Pattern_DiffEReference" name="refSC2" etype="cls2" diff_kind="DELETE" ID_Pattern="14"/>
+    </eclassifiers>
+    <domainspecificdiffs xsi:type="refactoring2WayRuleMM:Pattern_DomainSpecificDiff" name="ruleDSMDiff" DomainSpecificDiff_EClass="cls1 cls2 root superRoot root root" DomainSpecificDiff_EPackage="//@pattern" DomainSpecificDiff_EReference="refC1 refC2 refC1 refC2 refRoot refSC1 refSC2 refC1 refC2" ID_Pattern="5"/>
+  </pattern>
+</refactoring2WayRuleMM:Rule>

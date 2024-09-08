@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dssmm2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dssmm2WayRuleMM="http://www.zadahmad.org/dsvcs/dssmm2WayRuleMM"
+    xsi:schemaLocation="http://www.zadahmad.org/dsvcs/dssmm2WayRuleMM ../metaModels/DSSMM2WayRuleMM.ecore#/1"
+    name="moveFactorCF">
+  <rulePattern_Factor
+      xsi:type="dssmm2WayRuleMM:Pattern_CompositeFactor"
+      Name="From"
+      ID_Pattern="10">
+    <subFactors
+        xsi:type="dssmm2WayRuleMM:Pattern_CompositeFactor"
+        ID_Pattern="11"/>
+    <diffsubFactors
+        xsi:type="dssmm2WayRuleMM:Pattern_DiffCompositeFactor_subFactors"
+        diff_kind="DELETE"
+        eType="//@rulePattern_Factor.0/@subFactors.0"
+        ID_Pattern="12"
+        filter="true"/>
+  </rulePattern_Factor>
+  <rulePattern_Factor
+      xsi:type="dssmm2WayRuleMM:Pattern_CompositeFactor"
+      Name="To"
+      ID_Pattern="20">
+    <diffsubFactors
+        xsi:type="dssmm2WayRuleMM:Pattern_DiffCompositeFactor_subFactors"
+        diff_kind="ADD"
+        eType="//@rulePattern_Factor.0/@subFactors.0"
+        ID_Pattern="21"/>
+  </rulePattern_Factor>
+  <rulePattern_SemanticObject
+      xsi:type="dssmm2WayRuleMM:Pattern_SemanticDiff"
+      name="Move factor"
+      ID_Pattern="30"/>
+</dssmm2WayRuleMM:Rule>

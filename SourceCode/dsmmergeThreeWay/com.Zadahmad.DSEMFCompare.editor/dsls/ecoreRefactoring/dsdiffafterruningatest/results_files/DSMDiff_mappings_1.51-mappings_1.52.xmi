@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<refactoringDiffMM:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" name="mappings">
+  <eclassifiers name="Mapping">
+    <ereferences name="appearanceStyles" etype="StyleSelector"/>
+    <ereferences name="nodes" etype="TopNodeReference"/>
+    <ereferences name="diagram" etype="CanvasMapping"/>
+    <ereferences name="links" etype="LinkMapping"/>
+    <ereferences name="audits" etype="AuditContainer"/>
+    <ereferences name="metrics" etype="MetricContainer"/>
+  </eclassifiers>
+  <eclassifiers name="MappingEntry">
+    <eoperations name="getDomainContext" etype="EClass"/>
+    <ereferences name="domainMetaElement" etype="EClass"/>
+    <ereferences name="labelMappings" etype="LabelMapping"/>
+    <ereferences name="domainSpecialization" etype="Constraint"/>
+    <ereferences name="domainInitializer" etype="ElementInitializer"/>
+    <ereferences name="relatedDiagrams" etype="CanvasMapping"/>
+  </eclassifiers>
+  <eclassifiers name="NeedsContainment">
+    <ereferences name="containmentFeature" etype="EReference"/>
+  </eclassifiers>
+  <eclassifiers name="NodeReference" esupertypes="//@eclassifiers.2">
+    <ereferences name="childrenFeature" etype="EReference"/>
+    <ereferences name="child" etype="NodeMapping"/>
+  </eclassifiers>
+  <eclassifiers name="ChildReference" esupertypes="//@eclassifiers.3">
+    <ereferences name="compartment" etype="CompartmentMapping"/>
+    <ereferences name="parentNode" etype="NodeMapping"/>
+    <ereferences name="ownedChild" etype="NodeMapping"/>
+    <ereferences name="referencedChild" etype="NodeMapping"/>
+  </eclassifiers>
+  <eclassifiers name="TopNodeReference" esupertypes="//@eclassifiers.3">
+    <ereferences name="ownedChild" etype="NodeMapping"/>
+  </eclassifiers>
+  <eclassifiers name="CompartmentMapping">
+    <ereferences name="compartment" etype="Compartment"/>
+    <ereferences name="children" etype="ChildReference"/>
+    <ereferences name="parentNode" etype="NodeMapping"/>
+  </eclassifiers>
+  <eclassifiers name="CanvasMapping">
+    <ereferences name="diagramCanvas" etype="Canvas"/>
+    <ereferences name="domainModel" etype="EPackage"/>
+    <ereferences name="domainMetaElement" etype="EClass"/>
+    <ereferences name="palette" etype="Palette"/>
+    <ereferences name="menuContributions" etype="MainMenu"/>
+    <ereferences name="toolbarContributions" etype="Toolbar"/>
+  </eclassifiers>
+  <eclassifiers name="LabelMapping">
+    <eattributes name="readOnly" etype="EBoolean"/>
+    <ereferences name="diagramLabel" etype="DiagramLabel"/>
+    <ereferences name="mapEntry" etype="MappingEntry"/>
+  </eclassifiers>
+  <eclassifiers name="LinkConstraints">
+    <ereferences name="sourceEnd" etype="Constraint"/>
+    <ereferences name="targetEnd" etype="Constraint"/>
+    <ereferences name="linkMapping" etype="LinkMapping"/>
+  </eclassifiers>
+  <eclassifiers name="ValueExpression">
+    <eattributes name="body" etype="EString"/>
+    <eattributes name="langName" etype="EString"/>
+    <eattributes name="language" etype="Language"/>
+  </eclassifiers>
+  <eclassifiers name="Constraint" esupertypes="//@eclassifiers.10"/>
+  <eclassifiers name="ElementInitializer">
+    <ereferences name="mappingEntry" etype="MappingEntry"/>
+  </eclassifiers>
+  <eclassifiers name="FeatureSeqInitializer" esupertypes="//@eclassifiers.12">
+    <ereferences name="initializers" etype="FeatureInitializer"/>
+    <ereferences name="creatingInitializer" etype="ReferenceNewElementSpec"/>
+    <ereferences name="elementClass" etype="EClass"/>
+  </eclassifiers>
+  <eclassifiers name="FeatureValueSpec" esupertypes="//@eclassifiers.10 //@eclassifiers.32"/>
+  <eclassifiers name="MenuOwner">
+    <ereferences name="contextMenu" etype="ContextMenu"/>
+  </eclassifiers>
+  <eclassifiers name="ToolOwner">
+    <ereferences name="tool" etype="AbstractTool"/>
+  </eclassifiers>
+  <eclassifiers name="AppearanceSteward">
+    <ereferences name="appearanceStyle" etype="StyleSelector"/>
+  </eclassifiers>
+  <eclassifiers name="NodeMapping" esupertypes="//@eclassifiers.1 //@eclassifiers.15 //@eclassifiers.16 //@eclassifiers.17">
+    <ereferences name="diagramNode" etype="Node"/>
+    <ereferences name="children" etype="ChildReference"/>
+    <ereferences name="compartments" etype="CompartmentMapping"/>
+  </eclassifiers>
+  <eclassifiers name="LinkMapping" esupertypes="//@eclassifiers.1 //@eclassifiers.2 //@eclassifiers.15 //@eclassifiers.16 //@eclassifiers.17">
+    <ereferences name="diagramLink" etype="Connection"/>
+    <ereferences name="sourceMetaFeature" etype="EStructuralFeature"/>
+    <ereferences name="linkMetaFeature" etype="EStructuralFeature"/>
+    <ereferences name="creationConstraints" etype="LinkConstraints"/>
+  </eclassifiers>
+  <eclassifiers name="AuditContainer">
+    <eattributes name="id" etype="EString"/>
+    <eattributes name="name" etype="EString"/>
+    <eattributes name="description" etype="EString"/>
+    <ereferences name="childContainers" etype="AuditContainer"/>
+    <ereferences name="parentContainer" etype="AuditContainer"/>
+    <ereferences name="audits" etype="AuditRule"/>
+  </eclassifiers>
+  <eclassifiers name="RuleBase">
+    <eattributes name="name" etype="EString"/>
+    <eattributes name="description" etype="EString"/>
+  </eclassifiers>
+  <eclassifiers name="AuditRule" esupertypes="//@eclassifiers.21">
+    <eattributes name="id" etype="EString"/>
+    <eattributes name="useInLiveMode" etype="EBoolean"/>
+    <eattributes name="message" etype="EString"/>
+    <eattributes name="severity" etype="Severity"/>
+    <ereferences name="rule" etype="Constraint"/>
+    <ereferences name="container" etype="AuditContainer"/>
+    <ereferences name="target" etype="Auditable"/>
+  </eclassifiers>
+  <eclassifiers name="MetricContainer">
+    <ereferences name="metrics" etype="MetricRule"/>
+  </eclassifiers>
+  <eclassifiers name="MetricRule" esupertypes="//@eclassifiers.21">
+    <eattributes name="key" etype="EString"/>
+    <eattributes name="lowLimit" etype="EDoubleObject"/>
+    <eattributes name="highLimit" etype="EDoubleObject"/>
+    <ereferences name="rule" etype="ValueExpression"/>
+    <ereferences name="container" etype="MetricContainer"/>
+    <ereferences name="target" etype="Measurable"/>
+  </eclassifiers>
+  <eclassifiers name="Auditable"/>
+  <eclassifiers name="DomainAttributeTarget" esupertypes="//@eclassifiers.25">
+    <eattributes name="nullAsError" etype="EBoolean"/>
+    <ereferences name="attribute" etype="EAttribute"/>
+  </eclassifiers>
+  <eclassifiers name="AuditedMetricTarget" esupertypes="//@eclassifiers.25">
+    <ereferences name="metric" etype="MetricRule"/>
+  </eclassifiers>
+  <eclassifiers name="Measurable"/>
+  <eclassifiers name="DomainElementTarget" esupertypes="//@eclassifiers.25 //@eclassifiers.28">
+    <ereferences name="element" etype="EClass"/>
+  </eclassifiers>
+  <eclassifiers name="DiagramElementTarget" esupertypes="//@eclassifiers.25 //@eclassifiers.28">
+    <ereferences name="element" etype="MappingEntry"/>
+  </eclassifiers>
+  <eclassifiers name="NotationElementTarget" esupertypes="//@eclassifiers.25 //@eclassifiers.28">
+    <ereferences name="element" etype="EClass"/>
+  </eclassifiers>
+  <eclassifiers name="FeatureInitializer">
+    <ereferences name="feature" etype="EStructuralFeature"/>
+    <ereferences name="featureSeqInitializer" etype="FeatureSeqInitializer"/>
+  </eclassifiers>
+  <eclassifiers name="ReferenceNewElementSpec" esupertypes="//@eclassifiers.32">
+    <ereferences name="newElementInitializers" etype="FeatureSeqInitializer"/>
+  </eclassifiers>
+  <eclassifiers name="FeatureLabelMapping" esupertypes="//@eclassifiers.8">
+    <eattributes name="editPattern" etype="EString"/>
+    <eattributes name="viewPattern" etype="EString"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="editMethod" etype="LabelEditMethod" operation="MODIFY" new_name="editMethod" new_etype="LabelTextAccessMethod"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="viewMethod" etype="LabelViewMethod" operation="MODIFY" new_name="viewMethod" new_etype="LabelTextAccessMethod"/>
+    <ereferences name="features" etype="EAttribute"/>
+  </eclassifiers>
+  <eclassifiers name="DesignLabelMapping" esupertypes="//@eclassifiers.8"/>
+</refactoringDiffMM:EPackage>

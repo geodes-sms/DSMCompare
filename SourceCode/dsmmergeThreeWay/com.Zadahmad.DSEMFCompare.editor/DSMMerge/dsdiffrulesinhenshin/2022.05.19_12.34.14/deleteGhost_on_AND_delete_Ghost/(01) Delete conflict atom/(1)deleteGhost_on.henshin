@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Rule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_hT78ENeREeyEnrzG7GdwSg" name="deleteGhost_on">
+  <lhs xmi:id="_hT78EdeREeyEnrzG7GdwSg" name="deleteGhost_on_LHS">
+    <nodes xmi:id="_hT78EteREeyEnrzG7GdwSg" name="n0" outgoing="_hT78FdeREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_hT78E9eREeyEnrzG7GdwSg" name="n1" incoming="_hT78FdeREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Ghost"/>
+    </nodes>
+    <nodes xmi:id="_hT78FNeREeyEnrzG7GdwSg" name="n2">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+    </nodes>
+    <edges xmi:id="_hT78FdeREeyEnrzG7GdwSg" source="_hT78EteREeyEnrzG7GdwSg" target="_hT78E9eREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game/entities"/>
+    </edges>
+  </lhs>
+  <rhs xmi:id="_hT78FteREeyEnrzG7GdwSg" name="deleteGhost_on_RHS">
+    <nodes xmi:id="_hT78F9eREeyEnrzG7GdwSg" name="n0">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_hT78GNeREeyEnrzG7GdwSg" name="n1">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Ghost"/>
+    </nodes>
+  </rhs>
+  <mappings xmi:id="_hT78GdeREeyEnrzG7GdwSg" origin="_hT78EteREeyEnrzG7GdwSg" image="_hT78F9eREeyEnrzG7GdwSg"/>
+  <mappings xmi:id="_hT78GteREeyEnrzG7GdwSg" origin="_hT78E9eREeyEnrzG7GdwSg" image="_hT78GNeREeyEnrzG7GdwSg"/>
+</henshin:Rule>

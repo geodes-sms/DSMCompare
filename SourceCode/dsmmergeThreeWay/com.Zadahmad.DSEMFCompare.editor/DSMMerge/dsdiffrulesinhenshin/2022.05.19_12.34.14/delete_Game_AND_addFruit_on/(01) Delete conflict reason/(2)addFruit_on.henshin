@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Rule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_hWruENeREeyEnrzG7GdwSg" name="addFruit_on">
+  <lhs xmi:id="_hWruEdeREeyEnrzG7GdwSg" name="addFruit_on_LHS">
+    <nodes xmi:id="_hWruEteREeyEnrzG7GdwSg" name="n0">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_hWruE9eREeyEnrzG7GdwSg" name="n1">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Fruit"/>
+    </nodes>
+  </lhs>
+  <rhs xmi:id="_hWruFNeREeyEnrzG7GdwSg" name="addFruit_on_RHS">
+    <nodes xmi:id="_hWruFdeREeyEnrzG7GdwSg" name="n0" outgoing="_hWruGNeREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_hWruFteREeyEnrzG7GdwSg" name="n1" incoming="_hWruGNeREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Fruit"/>
+    </nodes>
+    <nodes xmi:id="_hWruF9eREeyEnrzG7GdwSg" name="n2">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+    </nodes>
+    <edges xmi:id="_hWruGNeREeyEnrzG7GdwSg" source="_hWruFdeREeyEnrzG7GdwSg" target="_hWruFteREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game/entities"/>
+    </edges>
+  </rhs>
+  <mappings xmi:id="_hWruGdeREeyEnrzG7GdwSg" origin="_hWruEteREeyEnrzG7GdwSg" image="_hWruFdeREeyEnrzG7GdwSg"/>
+  <mappings xmi:id="_hWruGteREeyEnrzG7GdwSg" origin="_hWruE9eREeyEnrzG7GdwSg" image="_hWruFteREeyEnrzG7GdwSg"/>
+</henshin:Rule>

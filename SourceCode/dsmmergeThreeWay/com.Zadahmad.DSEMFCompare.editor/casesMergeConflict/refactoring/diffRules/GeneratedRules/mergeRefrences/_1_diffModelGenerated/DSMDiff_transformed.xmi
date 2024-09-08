@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoringDiffMM:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" xsi:schemaLocation="www.geodes.UdeM.edu/refactoringDiffMM ../metaModels/refactoringDiffMM.ecore" name="rfc">
+  <eclassifiers name="cls1" esupertypes="root"/>
+  <eclassifiers name="cls2" esupertypes="root"/>
+  <eclassifiers name="root">
+    <ereferences name="refC1" etype="cls1"/>
+    <ereferences name="refC2" etype="cls2"/>
+  </eclassifiers>
+  <eclassifiers name="superRoot">
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="refRoot" etype="root" diff_kind_Left="ADD"/>
+  </eclassifiers>
+  <domainspecificdiffs name="mergeRefrences" DomainSpecificDiff_EClass="cls2 cls1 superRoot" DomainSpecificDiff_EPackage="rfc" DomainSpecificDiff_EReference="refC2 refC1 refRoot"/>
+</refactoringDiffMM:EPackage>

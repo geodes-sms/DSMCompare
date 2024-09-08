@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring2WayRuleMM="www.geodes.UdeM.edu/refactoring2WayRuleMM"
+    name="moveMethod2">
+  <constraints>Item(2,&quot;name&quot;) == Item(4,&quot;name&quot;)</constraints>
+  <constraints>Item(2,&quot;eparameters&quot;) == Item(4,&quot;eparameters&quot;)</constraints>
+  <constraints>Item(2,&quot;methodBody&quot;) == Item(4,&quot;methodBody&quot;)</constraints>
+  <rulePattern_EPackage xsi:type="refactoring2WayRuleMM:Pattern_EPackage">
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="cls1"
+        ID_Pattern="1">
+      <eoperations
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEOperation"
+          diff_kind="DELETE"
+          ID_Pattern="2"
+          filter="true"/>
+    </eclassifiers>
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="cls2"
+        ID_Pattern="3">
+      <eoperations
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEOperation"
+          name=""
+          diff_kind="ADD"
+          ID_Pattern="4"/>
+    </eclassifiers>
+  </rulePattern_EPackage>
+    <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+        name="moveMethod"
+        SemanticObject_EClass="cls1 cls2"
+        SemanticObject_EOperation=""
+        SemanticObject_EPackage="//@rulePattern_EPackage.0"
+        ID_Pattern="5"/>
+</refactoring2WayRuleMM:Rule>

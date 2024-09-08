@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" xsi:schemaLocation="www.geodes.UdeM.edu/refactoringDiffMM ../../metaModels/refactoringDiffMM.ecore">
+  <refactoringDiffMM:EPackage name="rfc">
+    <eclassifiers name="super">
+      <diffeattributes diff_kind_Left="ADD" eType="attr"/>
+    </eclassifiers>
+    <eclassifiers name="sub" esupertypes="super">
+      <eattributes name="attr"/>
+    </eclassifiers>
+    <eclassifiers name="cls">
+      <diffeattributes diff_kind_Right="ADD" eType="attr"/>
+    </eclassifiers>
+  </refactoringDiffMM:EPackage>
+  <refactoringDiffMM:SemanticDiff name="pullUpAttribute" SemanticObject_DiffEClass_eattributes="/0/@eclassifiers.0/@diffeattributes.0" SemanticObject_EAttribute="attr" SemanticObject_EClass="super sub" SemanticObject_EPackage="rfc"/>
+  <refactoringDiffMM:SemanticDiff name="moveAttribute" SemanticObject_DiffEClass_eattributes="/0/@eclassifiers.2/@diffeattributes.0" SemanticObject_EAttribute="attr" SemanticObject_EClass="sub cls" SemanticObject_EPackage="rfc"/>
+</xmi:XMI>

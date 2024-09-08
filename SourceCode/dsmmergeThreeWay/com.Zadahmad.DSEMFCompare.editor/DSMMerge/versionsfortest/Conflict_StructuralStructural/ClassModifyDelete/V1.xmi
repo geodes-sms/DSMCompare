@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pacman:Game
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:pacman="http://www.zadahmad.org/dsmcompare/pacman"
+    xsi:schemaLocation="http://www.zadahmad.org/dsmcompare/pacman ../MM/pacman.ecore"
+    id="1" score="1">
+  <gridnodes
+      right="O"
+      id="L"/>
+  <gridnodes
+      left="L"
+      right="R"
+      id="O"/>
+  <gridnodes
+      left="O"
+      id="R"/>
+  <entities
+      xsi:type="pacman:Pacman"
+      on="O"
+      id="P"/>
+  <entities
+      xsi:type="pacman:Energizer"
+      on="O"
+      id="E"
+      value="3">
+    <durations>1</durations>
+    <durations>2</durations>
+    <durations>3</durations>
+  </entities>
+</pacman:Game>

@@ -1,0 +1,622 @@
+ePackageImport  dssmmDiffMM
+
+		rule splitChildren(VAR n11diff_kind_Left:EString,VAR n11diff_kind_Right:EString,VAR n20diff_kind_Left:EString,VAR n20diff_kind_Right:EString,VAR n21diff_kind_Left:EString,VAR n21diff_kind_Right:EString,VAR n22diff_kind_Left:EString,VAR n22diff_kind_Right:EString,VAR n23diff_kind_Left:EString,VAR n23diff_kind_Right:EString,VAR n24diff_kind_Left:EString,VAR n24diff_kind_Right:EString,VAR n31diff_kind_Left:EString,VAR n31diff_kind_Right:EString,VAR n40diff_kind_Left:EString,VAR n40diff_kind_Right:EString,VAR n2FactorID:EInt,VAR n4FactorID:EInt)
+		{
+			graph
+			{
+				 preserve			node n10:CompositeFactor			      		
+				 preserve			node n11:DiffCompositeFactor_subFactors{
+					preserve diff_kind_Left = n11diff_kind_Left
+					preserve diff_kind_Right = n11diff_kind_Right
+				}			      		
+				 preserve			node n20:DiffCompositeFactor{
+					preserve diff_kind_Left = n20diff_kind_Left
+					preserve diff_kind_Right = n20diff_kind_Right
+				}			      		
+				 preserve			node n21:DiffLeafFactor{
+					preserve diff_kind_Left = n21diff_kind_Left
+					preserve diff_kind_Right = n21diff_kind_Right
+				}			      		
+				 preserve			node n22:DiffLeafFactor{
+					preserve diff_kind_Left = n22diff_kind_Left
+					preserve diff_kind_Right = n22diff_kind_Right
+				}			      		
+				 delete				node n23:DiffCompositeFactor_subFactors{
+					delete diff_kind_Left = n23diff_kind_Left
+					delete diff_kind_Right = n23diff_kind_Right
+				}
+				 delete				node n24:DiffCompositeFactor_subFactors{
+					delete diff_kind_Left = n24diff_kind_Left
+					delete diff_kind_Right = n24diff_kind_Right
+				}
+				 preserve			node n30:CompositeFactor			      		
+				 preserve			node n31:DiffCompositeFactor_subFactors{
+					preserve diff_kind_Left = n31diff_kind_Left
+					preserve diff_kind_Right = n31diff_kind_Right
+				}			      		
+				 preserve			node n40:DiffLeafFactor{
+					preserve diff_kind_Left = n40diff_kind_Left
+					preserve diff_kind_Right = n40diff_kind_Right
+				}			      		
+				 create				node n50:SemanticDiff{
+					create name = "\"Split children\""
+				}
+			edges[
+			  		(preserve	n10->n11:diffsubFactors),
+			  		(preserve	n11->n21:eType),
+			  		(preserve	n20->n21:subFactors),
+			  		(preserve	n20->n22:subFactors),
+			  		(delete		n20->n23:diffsubFactors),
+			  		(delete		n20->n24:diffsubFactors),
+			  		(delete		n23->n21:eType),
+			  		(delete		n24->n22:eType),
+			  		(preserve	n30->n31:diffsubFactors),
+			  		(preserve	n31->n22:eType),
+			  		(create		n50->n11:SemanticObject_DiffCompositeFactor_subFactors),
+			  		(create		n50->n31:SemanticObject_DiffCompositeFactor_subFactors),
+			  		(create		n50->n10:SemanticObject_Factor),
+			  		(create		n50->n30:SemanticObject_Factor),
+			  		(create		n50->n20:SemanticObject_Factor),
+			  		(create		n50->n40:SemanticObject_Factor),
+			  		(create		n50->n21:SemanticObject_Factor),
+			  		(create		n50->n22:SemanticObject_Factor)
+	      		 ]
+			}
+			conditions [((n2FactorID == n4FactorID) AND (n11diff_kind_Left == "\"ADD\"") AND (n20diff_kind_Left == "\"DELETE\"") AND (n21diff_kind_Left == "\"DELETE\"") AND (n22diff_kind_Left == "\"DELETE\"") AND (n23diff_kind_Left == "\"DELETE\"") AND (n24diff_kind_Left == "\"DELETE\"") AND (n31diff_kind_Left == "\"ADD\"") AND (n40diff_kind_Left == "\"ADD\"")) OR ((n2FactorID == n4FactorID) AND (n11diff_kind_Right == "\"ADD\"") AND (n20diff_kind_Right == "\"DELETE\"") AND (n21diff_kind_Right == "\"DELETE\"") AND (n22diff_kind_Right == "\"DELETE\"") AND (n23diff_kind_Right == "\"DELETE\"") AND (n24diff_kind_Right == "\"DELETE\"") AND (n31diff_kind_Right == "\"ADD\"") AND (n40diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule splitChildrenCF(VAR n11diff_kind_Left:EString,VAR n11diff_kind_Right:EString,VAR n20diff_kind_Left:EString,VAR n20diff_kind_Right:EString,VAR n23diff_kind_Left:EString,VAR n23diff_kind_Right:EString,VAR n24diff_kind_Left:EString,VAR n24diff_kind_Right:EString,VAR n31diff_kind_Left:EString,VAR n31diff_kind_Right:EString,VAR n40diff_kind_Left:EString,VAR n40diff_kind_Right:EString,VAR n2FactorID:EInt,VAR n4FactorID:EInt)
+		{
+			graph
+			{
+				 preserve			node n10:CompositeFactor			      		
+				 preserve			node n11:DiffCompositeFactor_subFactors{
+					preserve diff_kind_Left = n11diff_kind_Left
+					preserve diff_kind_Right = n11diff_kind_Right
+				}			      		
+				 preserve			node n20:DiffCompositeFactor{
+					preserve diff_kind_Left = n20diff_kind_Left
+					preserve diff_kind_Right = n20diff_kind_Right
+				}			      		
+				 preserve			node n21:CompositeFactor			      		
+				 preserve			node n22:CompositeFactor			      		
+				 delete				node n23:DiffCompositeFactor_subFactors{
+					delete diff_kind_Left = n23diff_kind_Left
+					delete diff_kind_Right = n23diff_kind_Right
+				}
+				 delete				node n24:DiffCompositeFactor_subFactors{
+					delete diff_kind_Left = n24diff_kind_Left
+					delete diff_kind_Right = n24diff_kind_Right
+				}
+				 preserve			node n30:CompositeFactor			      		
+				 preserve			node n31:DiffCompositeFactor_subFactors{
+					preserve diff_kind_Left = n31diff_kind_Left
+					preserve diff_kind_Right = n31diff_kind_Right
+				}			      		
+				 preserve			node n40:DiffLeafFactor{
+					preserve diff_kind_Left = n40diff_kind_Left
+					preserve diff_kind_Right = n40diff_kind_Right
+				}			      		
+				 create				node n50:SemanticDiff{
+					create name = "\"Split children\""
+				}
+			edges[
+			  		(preserve	n10->n11:diffsubFactors),
+			  		(preserve	n11->n21:eType),
+			  		(preserve	n20->n21:subFactors),
+			  		(preserve	n20->n22:subFactors),
+			  		(delete		n20->n23:diffsubFactors),
+			  		(delete		n20->n24:diffsubFactors),
+			  		(delete		n23->n21:eType),
+			  		(delete		n24->n22:eType),
+			  		(preserve	n30->n31:diffsubFactors),
+			  		(preserve	n31->n22:eType),
+			  		(create		n50->n11:SemanticObject_DiffCompositeFactor_subFactors),
+			  		(create		n50->n31:SemanticObject_DiffCompositeFactor_subFactors),
+			  		(create		n50->n10:SemanticObject_Factor),
+			  		(create		n50->n30:SemanticObject_Factor),
+			  		(create		n50->n20:SemanticObject_Factor),
+			  		(create		n50->n40:SemanticObject_Factor)
+	      		 ]
+			}
+			conditions [((n2FactorID == n4FactorID) AND (n11diff_kind_Left == "\"ADD\"") AND (n20diff_kind_Left == "\"DELETE\"") AND (n23diff_kind_Left == "\"DELETE\"") AND (n24diff_kind_Left == "\"DELETE\"") AND (n31diff_kind_Left == "\"ADD\"") AND (n40diff_kind_Left == "\"ADD\"")) OR ((n2FactorID == n4FactorID) AND (n11diff_kind_Right == "\"ADD\"") AND (n20diff_kind_Right == "\"DELETE\"") AND (n23diff_kind_Right == "\"DELETE\"") AND (n24diff_kind_Right == "\"DELETE\"") AND (n31diff_kind_Right == "\"ADD\"") AND (n40diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule mergeFactors(VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n20diff_kind_Left:EString,VAR n20diff_kind_Right:EString,VAR n21diff_kind_Left:EString,VAR n21diff_kind_Right:EString,VAR n22diff_kind_Left:EString,VAR n22diff_kind_Right:EString,VAR n32diff_kind_Left:EString,VAR n32diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n10:CompositeFactor			      		
+				 preserve			node n11:LeafFactor			      		
+				 delete				node n12:DiffCompositeFactor_subFactors{
+					delete diff_kind_Left = n12diff_kind_Left
+					delete diff_kind_Right = n12diff_kind_Right
+				}
+				 preserve			node n20:DiffCompositeFactor{
+					preserve diff_kind_Left = n20diff_kind_Left
+					preserve diff_kind_Right = n20diff_kind_Right
+				}			      		
+				 preserve			node n21:DiffCompositeFactor_subFactors{
+					preserve diff_kind_Left = n21diff_kind_Left
+					preserve diff_kind_Right = n21diff_kind_Right
+				}			      		
+				 preserve			node n22:DiffCompositeFactor_subFactors{
+					preserve diff_kind_Left = n22diff_kind_Left
+					preserve diff_kind_Right = n22diff_kind_Right
+				}			      		
+				 preserve			node n30:CompositeFactor			      		
+				 preserve			node n31:LeafFactor			      		
+				 delete				node n32:DiffCompositeFactor_subFactors{
+					delete diff_kind_Left = n32diff_kind_Left
+					delete diff_kind_Right = n32diff_kind_Right
+				}
+				 create				node n40:SemanticDiff{
+					create name = "\"Merge factors\""
+				}
+			edges[
+			  		(preserve	n10->n11:subFactors),
+			  		(delete		n10->n12:diffsubFactors),
+			  		(delete		n12->n11:eType),
+			  		(preserve	n20->n21:diffsubFactors),
+			  		(preserve	n20->n22:diffsubFactors),
+			  		(preserve	n21->n11:eType),
+			  		(preserve	n22->n31:eType),
+			  		(preserve	n30->n31:subFactors),
+			  		(delete		n30->n32:diffsubFactors),
+			  		(delete		n32->n31:eType),
+			  		(create		n40->n21:SemanticObject_DiffCompositeFactor_subFactors),
+			  		(create		n40->n22:SemanticObject_DiffCompositeFactor_subFactors),
+			  		(create		n40->n10:SemanticObject_Factor),
+			  		(create		n40->n30:SemanticObject_Factor),
+			  		(create		n40->n11:SemanticObject_Factor),
+			  		(create		n40->n31:SemanticObject_Factor),
+			  		(create		n40->n20:SemanticObject_Factor)
+	      		 ]
+			}
+			conditions [((n12diff_kind_Left == "\"DELETE\"") AND (n20diff_kind_Left == "\"ADD\"") AND (n21diff_kind_Left == "\"ADD\"") AND (n22diff_kind_Left == "\"ADD\"") AND (n32diff_kind_Left == "\"DELETE\"")) OR ((n12diff_kind_Right == "\"DELETE\"") AND (n20diff_kind_Right == "\"ADD\"") AND (n21diff_kind_Right == "\"ADD\"") AND (n22diff_kind_Right == "\"ADD\"") AND (n32diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule mergeFactorsCF(VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n20diff_kind_Left:EString,VAR n20diff_kind_Right:EString,VAR n21diff_kind_Left:EString,VAR n21diff_kind_Right:EString,VAR n22diff_kind_Left:EString,VAR n22diff_kind_Right:EString,VAR n32diff_kind_Left:EString,VAR n32diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n10:CompositeFactor			      		
+				 preserve			node n11:CompositeFactor			      		
+				 delete				node n12:DiffCompositeFactor_subFactors{
+					delete diff_kind_Left = n12diff_kind_Left
+					delete diff_kind_Right = n12diff_kind_Right
+				}
+				 preserve			node n20:DiffCompositeFactor{
+					preserve diff_kind_Left = n20diff_kind_Left
+					preserve diff_kind_Right = n20diff_kind_Right
+				}			      		
+				 preserve			node n21:DiffCompositeFactor_subFactors{
+					preserve diff_kind_Left = n21diff_kind_Left
+					preserve diff_kind_Right = n21diff_kind_Right
+				}			      		
+				 preserve			node n22:DiffCompositeFactor_subFactors{
+					preserve diff_kind_Left = n22diff_kind_Left
+					preserve diff_kind_Right = n22diff_kind_Right
+				}			      		
+				 preserve			node n30:CompositeFactor			      		
+				 preserve			node n31:CompositeFactor			      		
+				 delete				node n32:DiffCompositeFactor_subFactors{
+					delete diff_kind_Left = n32diff_kind_Left
+					delete diff_kind_Right = n32diff_kind_Right
+				}
+				 create				node n40:SemanticDiff{
+					create name = "\"Merge factors\""
+				}
+			edges[
+			  		(preserve	n10->n11:subFactors),
+			  		(delete		n10->n12:diffsubFactors),
+			  		(delete		n12->n11:eType),
+			  		(preserve	n20->n21:diffsubFactors),
+			  		(preserve	n20->n22:diffsubFactors),
+			  		(preserve	n21->n11:eType),
+			  		(preserve	n22->n31:eType),
+			  		(preserve	n30->n31:subFactors),
+			  		(delete		n30->n32:diffsubFactors),
+			  		(delete		n32->n31:eType),
+			  		(create		n40->n21:SemanticObject_DiffCompositeFactor_subFactors),
+			  		(create		n40->n22:SemanticObject_DiffCompositeFactor_subFactors),
+			  		(create		n40->n10:SemanticObject_Factor),
+			  		(create		n40->n30:SemanticObject_Factor),
+			  		(create		n40->n20:SemanticObject_Factor)
+	      		 ]
+			}
+			conditions [((n12diff_kind_Left == "\"DELETE\"") AND (n20diff_kind_Left == "\"ADD\"") AND (n21diff_kind_Left == "\"ADD\"") AND (n22diff_kind_Left == "\"ADD\"") AND (n32diff_kind_Left == "\"DELETE\"")) OR ((n12diff_kind_Right == "\"DELETE\"") AND (n20diff_kind_Right == "\"ADD\"") AND (n21diff_kind_Right == "\"ADD\"") AND (n22diff_kind_Right == "\"ADD\"") AND (n32diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpHierarchy(VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n112diff_kind_Left:EString,VAR n112diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n10:CompositeFactor			      		
+				 preserve			node n11:CompositeFactor			      		
+				 preserve			node n12:DiffCompositeFactor_subFactors{
+					preserve diff_kind_Left = n12diff_kind_Left
+					preserve diff_kind_Right = n12diff_kind_Right
+				}			      		
+				 create				node n20:SemanticDiff{
+					create name = "\"Pull-up hierarchy\""
+				}
+				 preserve			node n111:LeafFactor			      		
+				 delete				node n112:DiffCompositeFactor_subFactors{
+					delete diff_kind_Left = n112diff_kind_Left
+					delete diff_kind_Right = n112diff_kind_Right
+				}
+			edges[
+			  		(preserve	n10->n11:subFactors),
+			  		(preserve	n10->n12:diffsubFactors),
+			  		(preserve	n11->n111:subFactors),
+			  		(delete		n11->n112:diffsubFactors),
+			  		(preserve	n12->n111:eType),
+			  		(create		n20->n12:SemanticObject_DiffCompositeFactor_subFactors),
+			  		(create		n20->n10:SemanticObject_Factor),
+			  		(create		n20->n11:SemanticObject_Factor),
+			  		(create		n20->n111:SemanticObject_Factor),
+			  		(delete		n112->n111:eType)
+	      		 ]
+			}
+			conditions [((n12diff_kind_Left == "\"ADD\"") AND (n112diff_kind_Left == "\"DELETE\"")) OR ((n12diff_kind_Right == "\"ADD\"") AND (n112diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pullUpHierarchyCF(VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n112diff_kind_Left:EString,VAR n112diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n10:CompositeFactor			      		
+				 preserve			node n11:CompositeFactor			      		
+				 preserve			node n12:DiffCompositeFactor_subFactors{
+					preserve diff_kind_Left = n12diff_kind_Left
+					preserve diff_kind_Right = n12diff_kind_Right
+				}			      		
+				 create				node n20:SemanticDiff{
+					create name = "\"Pull-up hierarchy\""
+				}
+				 preserve			node n111:CompositeFactor			      		
+				 delete				node n112:DiffCompositeFactor_subFactors{
+					delete diff_kind_Left = n112diff_kind_Left
+					delete diff_kind_Right = n112diff_kind_Right
+				}
+			edges[
+			  		(preserve	n10->n11:subFactors),
+			  		(preserve	n10->n12:diffsubFactors),
+			  		(preserve	n11->n111:subFactors),
+			  		(delete		n11->n112:diffsubFactors),
+			  		(preserve	n12->n111:eType),
+			  		(create		n20->n12:SemanticObject_DiffCompositeFactor_subFactors),
+			  		(create		n20->n10:SemanticObject_Factor),
+			  		(create		n20->n11:SemanticObject_Factor),
+			  		(delete		n112->n111:eType)
+	      		 ]
+			}
+			conditions [((n12diff_kind_Left == "\"ADD\"") AND (n112diff_kind_Left == "\"DELETE\"")) OR ((n12diff_kind_Right == "\"ADD\"") AND (n112diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownHierarchy(VAR n13diff_kind_Left:EString,VAR n13diff_kind_Right:EString,VAR n111diff_kind_Left:EString,VAR n111diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n10:CompositeFactor			      		
+				 preserve			node n11:CompositeFactor			      		
+				 preserve			node n12:LeafFactor			      		
+				 delete				node n13:DiffCompositeFactor_subFactors{
+					delete diff_kind_Left = n13diff_kind_Left
+					delete diff_kind_Right = n13diff_kind_Right
+				}
+				 create				node n20:SemanticDiff{
+					create name = "\"Push-down hierarchy\""
+				}
+				 preserve			node n111:DiffCompositeFactor_subFactors{
+					preserve diff_kind_Left = n111diff_kind_Left
+					preserve diff_kind_Right = n111diff_kind_Right
+				}			      		
+			edges[
+			  		(preserve	n10->n11:subFactors),
+			  		(preserve	n10->n12:subFactors),
+			  		(delete		n10->n13:diffsubFactors),
+			  		(preserve	n11->n111:diffsubFactors),
+			  		(delete		n13->n12:eType),
+			  		(create		n20->n111:SemanticObject_DiffCompositeFactor_subFactors),
+			  		(create		n20->n10:SemanticObject_Factor),
+			  		(create		n20->n11:SemanticObject_Factor),
+			  		(create		n20->n12:SemanticObject_Factor),
+			  		(preserve	n111->n12:eType)
+	      		 ]
+			}
+			conditions [((n13diff_kind_Left == "\"DELETE\"") AND (n111diff_kind_Left == "\"ADD\"")) OR ((n13diff_kind_Right == "\"DELETE\"") AND (n111diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule pushDownHierarchyCF(VAR n13diff_kind_Left:EString,VAR n13diff_kind_Right:EString,VAR n111diff_kind_Left:EString,VAR n111diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n10:CompositeFactor			      		
+				 preserve			node n11:CompositeFactor			      		
+				 preserve			node n12:CompositeFactor			      		
+				 delete				node n13:DiffCompositeFactor_subFactors{
+					delete diff_kind_Left = n13diff_kind_Left
+					delete diff_kind_Right = n13diff_kind_Right
+				}
+				 create				node n20:SemanticDiff{
+					create name = "\"Push-down hierarchy\""
+				}
+				 preserve			node n111:DiffCompositeFactor_subFactors{
+					preserve diff_kind_Left = n111diff_kind_Left
+					preserve diff_kind_Right = n111diff_kind_Right
+				}			      		
+			edges[
+			  		(preserve	n10->n11:subFactors),
+			  		(preserve	n10->n12:subFactors),
+			  		(delete		n10->n13:diffsubFactors),
+			  		(preserve	n11->n111:diffsubFactors),
+			  		(delete		n13->n12:eType),
+			  		(create		n20->n111:SemanticObject_DiffCompositeFactor_subFactors),
+			  		(create		n20->n10:SemanticObject_Factor),
+			  		(create		n20->n11:SemanticObject_Factor),
+			  		(preserve	n111->n12:eType)
+	      		 ]
+			}
+			conditions [((n13diff_kind_Left == "\"DELETE\"") AND (n111diff_kind_Left == "\"ADD\"")) OR ((n13diff_kind_Right == "\"DELETE\"") AND (n111diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule moveFactor(VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n21diff_kind_Left:EString,VAR n21diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n10:CompositeFactor			      		
+				 preserve			node n11:LeafFactor			      		
+				 delete				node n12:DiffCompositeFactor_subFactors{
+					delete diff_kind_Left = n12diff_kind_Left
+					delete diff_kind_Right = n12diff_kind_Right
+				}
+				 preserve			node n20:CompositeFactor			      		
+				 preserve			node n21:DiffCompositeFactor_subFactors{
+					preserve diff_kind_Left = n21diff_kind_Left
+					preserve diff_kind_Right = n21diff_kind_Right
+				}			      		
+				 create				node n30:SemanticDiff{
+					create name = "\"Move factor\""
+				}
+			edges[
+			  		(preserve	n10->n11:subFactors),
+			  		(delete		n10->n12:diffsubFactors),
+			  		(delete		n12->n11:eType),
+			  		(preserve	n20->n21:diffsubFactors),
+			  		(preserve	n21->n11:eType)
+	      		 ]
+			}
+			conditions [((n12diff_kind_Left == "\"DELETE\"") AND (n21diff_kind_Left == "\"ADD\"")) OR ((n12diff_kind_Right == "\"DELETE\"") AND (n21diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule moveFactorCF(VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n21diff_kind_Left:EString,VAR n21diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n10:CompositeFactor			      		
+				 preserve			node n11:CompositeFactor			      		
+				 delete				node n12:DiffCompositeFactor_subFactors{
+					delete diff_kind_Left = n12diff_kind_Left
+					delete diff_kind_Right = n12diff_kind_Right
+				}
+				 preserve			node n20:CompositeFactor			      		
+				 preserve			node n21:DiffCompositeFactor_subFactors{
+					preserve diff_kind_Left = n21diff_kind_Left
+					preserve diff_kind_Right = n21diff_kind_Right
+				}			      		
+				 create				node n30:SemanticDiff{
+					create name = "\"Move factor\""
+				}
+			edges[
+			  		(preserve	n10->n11:subFactors),
+			  		(delete		n10->n12:diffsubFactors),
+			  		(delete		n12->n11:eType),
+			  		(preserve	n20->n21:diffsubFactors),
+			  		(preserve	n21->n11:eType)
+	      		 ]
+			}
+			conditions [((n12diff_kind_Left == "\"DELETE\"") AND (n21diff_kind_Left == "\"ADD\"")) OR ((n12diff_kind_Right == "\"DELETE\"") AND (n21diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule renameFactor(VAR n10diff_kind_Left:EString,VAR n10diff_kind_Right:EString,VAR n10new_Name_Left:EString,VAR n10Name:EString,VAR n10new_Name_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n10:DiffLeafFactor{
+					preserve diff_kind_Left = n10diff_kind_Left
+					preserve diff_kind_Right = n10diff_kind_Right
+					preserve new_Name_Left =  n10new_Name_Left
+					preserve Name =  n10Name
+					preserve new_Name_Right =  n10new_Name_Right
+				}			      		
+				 create				node n20:SemanticDiff{
+					create name = "\"Rename factor\""
+				}
+				 forbid			node n30:SemanticDiff{
+					forbid name = "\"Rename factor\""
+				}					
+			edges[
+			  		(create		n20->n10:SemanticObject_Factor),
+			  		(forbid		n30->n10:SemanticObject_Factor)
+	      		 ]
+			}
+			conditions [((n10new_Name_Left  != "null" ) AND (n10new_Name_Left  != "\"\"" ) AND (n10Name != n10new_Name_Left) AND (n10diff_kind_Left == "\"NON\"")) OR ((n10new_Name_Right  != "null" ) AND (n10new_Name_Right  != "\"\"" ) AND (n10Name != n10new_Name_Right) AND (n10diff_kind_Right == "\"NON\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule renameFactorCF(VAR n10diff_kind_Left:EString,VAR n10diff_kind_Right:EString,VAR n10new_Name_Left:EString,VAR n10Name:EString,VAR n10new_Name_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n10:DiffCompositeFactor{
+					preserve diff_kind_Left = n10diff_kind_Left
+					preserve diff_kind_Right = n10diff_kind_Right
+					preserve new_Name_Left =  n10new_Name_Left
+					preserve Name =  n10Name
+					preserve new_Name_Right =  n10new_Name_Right
+				}			      		
+				 create				node n20:SemanticDiff{
+					create name = "\"Rename factor\""
+				}
+				 forbid			node n30:SemanticDiff{
+					forbid name = "\"Rename factor\""
+				}					
+			edges[
+			  		(create		n20->n10:SemanticObject_Factor),
+			  		(forbid		n30->n10:SemanticObject_Factor)
+	      		 ]
+			}
+			conditions [((n10new_Name_Left  != "null" ) AND (n10new_Name_Left  != "\"\"" ) AND (n10Name != n10new_Name_Left) AND (n10diff_kind_Left == "\"MODIFY\"")) OR ((n10new_Name_Right  != "null" ) AND (n10new_Name_Right  != "\"\"" ) AND (n10Name != n10new_Name_Right) AND (n10diff_kind_Right == "\"MODIFY\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule scoreEnhanced(VAR n10diff_kind_Left:EString,VAR n10diff_kind_Right:EString,VAR n10Descr:EString,VAR n10new_Descr_Left:EString,VAR n10new_Descr_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n10:DiffScore{
+					preserve diff_kind_Left = n10diff_kind_Left
+					preserve diff_kind_Right = n10diff_kind_Right
+					preserve Descr =  n10Descr
+					preserve new_Descr_Left =  n10new_Descr_Left
+					preserve new_Descr_Right =  n10new_Descr_Right
+				}			      		
+				 create				node n20:SemanticDiff{
+					create name = "\"Score enhanced\""
+				}
+				 forbid			node n30:SemanticDiff{
+					forbid name = "\"Score enhanced\""
+				}					
+			edges[
+			  		(create		n20->n10:SemanticObject_Score),
+			  		(forbid		n30->n10:SemanticObject_Score)
+	      		 ]
+			}
+			conditions [((n10Descr < n10new_Descr_Left) AND (n10diff_kind_Left == "\"MODIFY\"")) OR ((n10Descr < n10new_Descr_Right) AND (n10diff_kind_Right == "\"MODIFY\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule scoreDegraded(VAR n10diff_kind_Left:EString,VAR n10diff_kind_Right:EString,VAR n10Descr:EString,VAR n10new_Descr_Left:EString,VAR n10new_Descr_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n10:DiffScore{
+					preserve diff_kind_Left = n10diff_kind_Left
+					preserve diff_kind_Right = n10diff_kind_Right
+					preserve Descr =  n10Descr
+					preserve new_Descr_Left =  n10new_Descr_Left
+					preserve new_Descr_Right =  n10new_Descr_Right
+				}			      		
+				 create				node n20:SemanticDiff{
+					create name = "\"Score degraded\""
+				}
+				 forbid			node n30:SemanticDiff{
+					forbid name = "\"Score degraded\""
+				}					
+			edges[
+			  		(create		n20->n10:SemanticObject_Score),
+			  		(forbid		n30->n10:SemanticObject_Score)
+	      		 ]
+			}
+			conditions [((n10Descr > n10new_Descr_Left) AND (n10diff_kind_Left == "\"MODIFY\"")) OR ((n10Descr > n10new_Descr_Right) AND (n10diff_kind_Right == "\"MODIFY\""))] 
+		}
+//----------------------------------------------------------------------
+
+	unit unitSequntialStar(){
+		unitsplitChildrenStar()
+		unitsplitChildrenCFStar()
+		unitmergeFactorsStar()
+		unitmergeFactorsCFStar()
+		unitpullUpHierarchyStar()
+		unitpullUpHierarchyCFStar()
+		unitpushDownHierarchyStar()
+		unitpushDownHierarchyCFStar()
+		unitmoveFactorStar()
+		unitmoveFactorCFStar()
+		unitrenameFactorStar()
+		unitrenameFactorCFStar()
+		unitscoreEnhancedStar()
+		unitscoreDegradedStar()
+	}
+	unit unitsplitChildrenStar(){
+		while{
+			splitChildren()
+		}
+	}
+	unit unitsplitChildrenCFStar(){
+		while{
+			splitChildrenCF()
+		}
+	}
+	unit unitmergeFactorsStar(){
+		while{
+			mergeFactors()
+		}
+	}
+	unit unitmergeFactorsCFStar(){
+		while{
+			mergeFactorsCF()
+		}
+	}
+	unit unitpullUpHierarchyStar(){
+		while{
+			pullUpHierarchy()
+		}
+	}
+	unit unitpullUpHierarchyCFStar(){
+		while{
+			pullUpHierarchyCF()
+		}
+	}
+	unit unitpushDownHierarchyStar(){
+		while{
+			pushDownHierarchy()
+		}
+	}
+	unit unitpushDownHierarchyCFStar(){
+		while{
+			pushDownHierarchyCF()
+		}
+	}
+	unit unitmoveFactorStar(){
+		while{
+			moveFactor()
+		}
+	}
+	unit unitmoveFactorCFStar(){
+		while{
+			moveFactorCF()
+		}
+	}
+	unit unitrenameFactorStar(){
+		while{
+			renameFactor()
+		}
+	}
+	unit unitrenameFactorCFStar(){
+		while{
+			renameFactorCF()
+		}
+	}
+	unit unitscoreEnhancedStar(){
+		while{
+			scoreEnhanced()
+		}
+	}
+	unit unitscoreDegradedStar(){
+		while{
+			scoreDegraded()
+		}
+	}

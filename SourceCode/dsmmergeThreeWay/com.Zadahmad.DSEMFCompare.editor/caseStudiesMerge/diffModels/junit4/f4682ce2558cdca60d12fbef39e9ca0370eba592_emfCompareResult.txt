@@ -1,0 +1,323 @@
+Matches count 	:	1
+Diffs count 	:	52
+Conflicts count :	6
+Matched resources :
+Left = file:/E:/srcCode/dsmmerge/com.Zadahmad.DSEMFCompare.editor/caseStudiesMerge/Refactoring/junit4/f4682ce2558cdca60d12fbef39e9ca0370eba592_V1_ref.xmi
+Right = file:/E:/srcCode/dsmmerge/com.Zadahmad.DSEMFCompare.editor/caseStudiesMerge/Refactoring/junit4/f4682ce2558cdca60d12fbef39e9ca0370eba592_V2_ref.xmi
+origin = file:/E:/srcCode/dsmmerge/com.Zadahmad.DSEMFCompare.editor/caseStudiesMerge/Refactoring/junit4/f4682ce2558cdca60d12fbef39e9ca0370eba592_CA_ref.xmi
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| refactoringDiffMM.impl.EPackageImpl@696b4a95 (name: pkg)| refactoringDiffMM.impl.EPackageImpl@3a8d467e (name: pkg)|
+| |-refactoringDiffMM.impl.EClassImpl@6c1cfa53 (name: ParentRunnerTest, extends: null, implements: null, isAbstract: false, packageName: null)| |-refactoringDiffMM.impl.EClassImpl@141d3d43 (name: ParentRunnerTest, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | |-refactoringDiffMM.impl.EAttributeImpl@4d68b571 (name: log, etype: String)| | |-refactoringDiffMM.impl.EAttributeImpl@6ca372ef (name: log, etype: String)|
+| | |-refactoringDiffMM.impl.EOperationImpl@52b06bef (name: useChildHarvester(), eparameters: null:InitializationError, etype: void, methodBody: expression statement; method invocation; assertEquals; string literal; expression statement; method invocation; run; class instance creation; new RunNotifier(); expression statement; method invocation; setScheduler; class instance creation; ; Anonymous type; variable declaration; class instance creation; new BlockJUnit4ClassRunner(FruitTest.class); type literal; runner; expression statement; ASSIGN; log; string literal; , __idKDM: useChildHarvester___InitializationError___)| | |-refactoringDiffMM.impl.EOperationImpl@3ebe4ccc (name: useChildHarvester(), eparameters: null:InitializationError, etype: void, methodBody: expression statement; method invocation; assertEquals; string literal; expression statement; method invocation; run; class instance creation; new RunNotifier(); expression statement; method invocation; setScheduler; class instance creation; ; Anonymous type; variable declaration; class instance creation; new BlockJUnit4ClassRunner(FruitTest.class); type literal; runner; expression statement; ASSIGN; log; string literal; , __idKDM: useChildHarvester___InitializationError___)|
+| | |-refactoringDiffMM.impl.EOperationImpl@61bcbcce (name: testMultipleFilters(), eparameters: null:Exception, etype: void, methodBody: expression statement; method invocation; assertEquals; method invocation; getRunCount; number literal; expression statement; method invocation; assertThat; method invocation; isEmpty; method invocation; getFailures; variable declaration; result; variable declaration; requestFilteredFiltered; variable declaration; requestFiltered; variable declaration; request; variable declaration; class instance creation; new JUnitCore(); junitCore; , __idKDM: testMultipleFilters___Exception___)| | |-refactoringDiffMM.impl.EOperationImpl@6ed043d3 (name: testMultipleFilters(), eparameters: null:Exception, etype: void, methodBody: expression statement; method invocation; assertEquals; method invocation; getRunCount; number literal; expression statement; method invocation; assertThat; method invocation; isEmpty; method invocation; getFailures; variable declaration; result; variable declaration; requestFilteredFiltered; variable declaration; requestFiltered; variable declaration; request; variable declaration; class instance creation; new JUnitCore(); junitCore; , __idKDM: testMultipleFilters___Exception___)|
+| | |-refactoringDiffMM.impl.EOperationImpl@6af91cc8 (name: isEmpty(), eparameters: , etype: Matcher<List<?>>, methodBody: return; class instance creation; ; Anonymous type; , __idKDM: isEmpty______)| | |-refactoringDiffMM.impl.EOperationImpl@135a8c6f (name: isEmpty(), eparameters: , etype: Matcher<List<?>>, methodBody: return; class instance creation; ; Anonymous type; , __idKDM: isEmpty______)|
+| | |-refactoringDiffMM.impl.EOperationImpl@6232ffdb (name: failWithHelpfulMessageForProtectedClassRule(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertClassHasFailureMessage; string literal; type literal; , __idKDM: failWithHelpfulMessageForProtectedClassRule______)| | |-refactoringDiffMM.impl.EOperationImpl@6419a0e1 (name: failWithHelpfulMessageForProtectedClassRule(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertClassHasFailureMessage; string literal; type literal; , __idKDM: failWithHelpfulMessageForProtectedClassRule______)|
+| | |-refactoringDiffMM.impl.EOperationImpl@330c1f61 (name: failWithHelpfulMessageForNonStaticClassRule(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertClassHasFailureMessage; string literal; type literal; , __idKDM: failWithHelpfulMessageForNonStaticClassRule______)| | |-refactoringDiffMM.impl.EOperationImpl@280d4882 (name: failWithHelpfulMessageForNonStaticClassRule(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertClassHasFailureMessage; string literal; type literal; , __idKDM: failWithHelpfulMessageForNonStaticClassRule______)|
+| | |-refactoringDiffMM.impl.EOperationImpl@37d28f02 (name: assertClassHasFailureMessage(), eparameters: klass:java.lang.Class<?>, message:String, etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasItem; foreach; failure; expression statement; method invocation; add; method invocation; getMessage; method invocation; getFailures; variable declaration; class instance creation; ArrayList; messages; variable declaration; result; variable declaration; request; variable declaration; class instance creation; new JUnitCore(); junitCore; , __idKDM: assertClassHasFailureMessage___java_lang_Class_____String___)| | |-refactoringDiffMM.impl.EOperationImpl@44af588b (name: assertClassHasFailureMessage(), eparameters: klass:java.lang.Class<?>, message:String, etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; method invocation; equalTo; method invocation; getMessage; method invocation; get; number literal; method invocation; getFailures; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; getFailureCount; variable declaration; result; variable declaration; request; variable declaration; class instance creation; new JUnitCore(); junitCore; , __idKDM: assertClassHasFailureMessage___java_lang_Class_____String___)|
+| | |-refactoringDiffMM.impl.EOperationImpl@15efda6c (name: validatorIsCalledForAClass(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertClassHasFailureMessage; type literal; , __idKDM: validatorIsCalledForAClass______)| | |                                    |
+| | |-refactoringDiffMM.impl.EOperationImpl@6056232d (name: validatorIsCalledForAMethod(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertClassHasFailureMessage; type literal; , __idKDM: validatorIsCalledForAMethod______)| | |                                    |
+| | |-refactoringDiffMM.impl.EOperationImpl@33f2df51 (name: validatorIsCalledForAField(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertClassHasFailureMessage; type literal; , __idKDM: validatorIsCalledForAField______)| | |                                    |
+| | |-refactoringDiffMM.impl.EClassImpl@107bfcb2 (name: FruitTest, extends: null, implements: null, isAbstract: false, packageName: null)| | |-refactoringDiffMM.impl.EClassImpl@3d19d85 (name: FruitTest, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | | |-refactoringDiffMM.impl.EOperationImpl@7bac686b (name: apple(), eparameters: , etype: void, methodBody: expression statement; PLUS_ASSIGN; log; string literal; , __idKDM: apple______)| | | |-refactoringDiffMM.impl.EOperationImpl@2ae62bb6 (name: apple(), eparameters: , etype: void, methodBody: expression statement; PLUS_ASSIGN; log; string literal; , __idKDM: apple______)|
+| | | |-refactoringDiffMM.impl.EOperationImpl@2ab26378 (name: Banana(), eparameters: , etype: void, methodBody: expression statement; PLUS_ASSIGN; log; string literal; , __idKDM: Banana______)| | | |-refactoringDiffMM.impl.EOperationImpl@68ed3f30 (name: Banana(), eparameters: , etype: void, methodBody: expression statement; PLUS_ASSIGN; log; string literal; , __idKDM: Banana______)|
+| | |-refactoringDiffMM.impl.EClassImpl@f9f3928 (name: Exclude, extends: Filter, implements: null, isAbstract: false, packageName: null)| | |-refactoringDiffMM.impl.EClassImpl@56b859a6 (name: Exclude, extends: Filter, implements: null, isAbstract: false, packageName: null)|
+| | | |-refactoringDiffMM.impl.EAttributeImpl@404eca05 (name: methodName, etype: String)| | | |-refactoringDiffMM.impl.EAttributeImpl@590adb41 (name: methodName, etype: String)|
+| | | |-refactoringDiffMM.impl.EOperationImpl@58b91d57 (name: Exclude(), eparameters: methodName:String, etype: null, methodBody: expression statement; ASSIGN; methodName; field access; methodName; this; , __idKDM: Exclude___String___)| | | |-refactoringDiffMM.impl.EOperationImpl@42aae04d (name: Exclude(), eparameters: methodName:String, etype: null, methodBody: expression statement; ASSIGN; methodName; field access; methodName; this; , __idKDM: Exclude___String___)|
+| | | |-refactoringDiffMM.impl.EOperationImpl@61a91c9b (name: shouldRun(), eparameters: description:Description, etype: boolean, methodBody: return; NOT; method invocation; equals; method invocation; getMethodName; , __idKDM: shouldRun___Description___)| | | |-refactoringDiffMM.impl.EOperationImpl@43bf5397 (name: shouldRun(), eparameters: description:Description, etype: boolean, methodBody: return; NOT; method invocation; equals; method invocation; getMethodName; , __idKDM: shouldRun___Description___)|
+| | | |-refactoringDiffMM.impl.EOperationImpl@17092fff (name: describe(), eparameters: , etype: String, methodBody: return; PLUS; methodName; string literal; , __idKDM: describe______)| | | |-refactoringDiffMM.impl.EOperationImpl@575e572f (name: describe(), eparameters: , etype: String, methodBody: return; PLUS; methodName; string literal; , __idKDM: describe______)|
+| | |-refactoringDiffMM.impl.EClassImpl@2121d1f9 (name: ExampleTest, extends: null, implements: null, isAbstract: false, packageName: null)| | |-refactoringDiffMM.impl.EClassImpl@58015e56 (name: ExampleTest, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | | |-refactoringDiffMM.impl.EOperationImpl@31e2232f (name: test1(), eparameters: null:Exception, etype: void, methodBody: , __idKDM: test1___Exception___)| | | |-refactoringDiffMM.impl.EOperationImpl@4d3c6593 (name: test1(), eparameters: null:Exception, etype: void, methodBody: , __idKDM: test1___Exception___)|
+| | | |-refactoringDiffMM.impl.EOperationImpl@1806bc4c (name: test2(), eparameters: null:Exception, etype: void, methodBody: , __idKDM: test2___Exception___)| | | |-refactoringDiffMM.impl.EOperationImpl@7426a448 (name: test2(), eparameters: null:Exception, etype: void, methodBody: , __idKDM: test2___Exception___)|
+| | | |-refactoringDiffMM.impl.EOperationImpl@462e1e64 (name: test3(), eparameters: null:Exception, etype: void, methodBody: , __idKDM: test3___Exception___)| | | |-refactoringDiffMM.impl.EOperationImpl@516462cc (name: test3(), eparameters: null:Exception, etype: void, methodBody: , __idKDM: test3___Exception___)|
+| | |-refactoringDiffMM.impl.EClassImpl@69afa141 (name: ExampleAnnotationValidator, extends: AnnotationValidator, implements: null, isAbstract: false, packageName: null)| | |                                    |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@49f40c00 (name: ANNOTATED_METHOD_CALLED, etype: String)| | |                                    |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@643d2dae (name: ANNOTATED_FIELD_CALLED, etype: String)| | |                                    |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@52d6d273 (name: ANNOTATED_CLASS_CALLED, etype: String)| | |                                    |
+| | | |-refactoringDiffMM.impl.EOperationImpl@4667c4c1 (name: validateAnnotatedClass(), eparameters: testClass:TestClass, etype: java.util.List<java.lang.Exception>, methodBody: return; method invocation; asList; class instance creation; Exception; , __idKDM: validateAnnotatedClass___TestClass___)| | |                                    |
+| | | |-refactoringDiffMM.impl.EOperationImpl@2f9a4401 (name: validateAnnotatedField(), eparameters: field:FrameworkField, etype: java.util.List<java.lang.Exception>, methodBody: return; method invocation; asList; class instance creation; Exception; , __idKDM: validateAnnotatedField___FrameworkField___)| | |                                    |
+| | | |-refactoringDiffMM.impl.EOperationImpl@22c75c01 (name: validateAnnotatedMethod(), eparameters: method:FrameworkMethod, etype: java.util.List<java.lang.Exception>, methodBody: return; method invocation; asList; class instance creation; Exception; , __idKDM: validateAnnotatedMethod___FrameworkMethod___)| | |                                    |
+| | |-refactoringDiffMM.impl.EClassImpl@46e64760 (name: AnnotationValidatorMethodTest, extends: null, implements: null, isAbstract: false, packageName: null)| | |                                    |
+| | | |-refactoringDiffMM.impl.EOperationImpl@3e5fd2b1 (name: test(), eparameters: , etype: void, methodBody: , __idKDM: test______)| | |                                    |
+| | |-refactoringDiffMM.impl.EClassImpl@43982337 (name: AnnotationValidatorFieldTest, extends: null, implements: null, isAbstract: false, packageName: null)| | |                                    |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@5b275811 (name: field, etype: String)| | |                                    |
+| | | |-refactoringDiffMM.impl.EOperationImpl@2f0ed952 (name: test(), eparameters: , etype: void, methodBody: , __idKDM: test______)| | |                                    |
+| | |-refactoringDiffMM.impl.EClassImpl@6f044c58 (name: AnnotationValidatorClassTest, extends: null, implements: null, isAbstract: false, packageName: null)| | |                                    |
+| | | |-refactoringDiffMM.impl.EOperationImpl@6d074b14 (name: test(), eparameters: , etype: void, methodBody: , __idKDM: test______)| | |                                    |
+| | |-refactoringDiffMM.impl.InterfaceImpl@c017175 (name: ExampleAnnotationWithValidator, extends: null, packageName: null)| | |                                    |
+| |-refactoringDiffMM.impl.EClassImpl@559cedee (name: TestClassTest, extends: null, implements: null, isAbstract: false, packageName: null)| |-refactoringDiffMM.impl.EClassImpl@3456558 (name: TestClassTest, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | |-refactoringDiffMM.impl.EAttributeImpl@18371d89 (name: exception, etype: ExpectedException)| | |-refactoringDiffMM.impl.EAttributeImpl@2dfb885e (name: exception, etype: ExpectedException)|
+| | |-refactoringDiffMM.impl.EOperationImpl@4f3faa70 (name: complainIfMultipleConstructors(), eparameters: , etype: void, methodBody: expression statement; class instance creation; new TestClass(TwoConstructors.class); type literal; , __idKDM: complainIfMultipleConstructors______)| | |-refactoringDiffMM.impl.EOperationImpl@6cbe7d4d (name: complainIfMultipleConstructors(), eparameters: , etype: void, methodBody: expression statement; class instance creation; new TestClass(TwoConstructors.class); type literal; , __idKDM: complainIfMultipleConstructors______)|
+| | |-refactoringDiffMM.impl.EOperationImpl@4832f03b (name: fieldsOnSubclassesShadowSuperclasses(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; method invocation; getAnnotatedFields; type literal; class instance creation; new TestClass(SubclassWithField.class); type literal; , __idKDM: fieldsOnSubclassesShadowSuperclasses______)| | |-refactoringDiffMM.impl.EOperationImpl@1e3e1014 (name: fieldsOnSubclassesShadowSuperclasses(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; method invocation; getAnnotatedFields; type literal; class instance creation; new TestClass(SubclassWithField.class); type literal; , __idKDM: fieldsOnSubclassesShadowSuperclasses______)|
+| | |-refactoringDiffMM.impl.EOperationImpl@7af3874e (name: identifyNonStaticInnerClass(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; boolean literal; method invocation; isANonStaticInnerClass; class instance creation; new TestClass(OuterClass.NonStaticInnerClass.class); type literal; , __idKDM: identifyNonStaticInnerClass______)| | |-refactoringDiffMM.impl.EOperationImpl@3679d92e (name: identifyNonStaticInnerClass(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; boolean literal; method invocation; isANonStaticInnerClass; class instance creation; new TestClass(OuterClass.NonStaticInnerClass.class); type literal; , __idKDM: identifyNonStaticInnerClass______)|
+| | |-refactoringDiffMM.impl.EOperationImpl@5a8816cc (name: dontMarkStaticInnerClassAsNonStatic(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; boolean literal; method invocation; isANonStaticInnerClass; class instance creation; new TestClass(OuterClass2.StaticInnerClass.class); type literal; , __idKDM: dontMarkStaticInnerClassAsNonStatic______)| | |-refactoringDiffMM.impl.EOperationImpl@47b11ec7 (name: dontMarkStaticInnerClassAsNonStatic(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; boolean literal; method invocation; isANonStaticInnerClass; class instance creation; new TestClass(OuterClass2.StaticInnerClass.class); type literal; , __idKDM: dontMarkStaticInnerClassAsNonStatic______)|
+| | |-refactoringDiffMM.impl.EOperationImpl@68565bc7 (name: dontMarkNonInnerClassAsInnerClass(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; boolean literal; method invocation; isANonStaticInnerClass; class instance creation; new TestClass(SimpleClass.class); type literal; , __idKDM: dontMarkNonInnerClassAsInnerClass______)| | |-refactoringDiffMM.impl.EOperationImpl@58fa5769 (name: dontMarkNonInnerClassAsInnerClass(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; boolean literal; method invocation; isANonStaticInnerClass; class instance creation; new TestClass(SimpleClass.class); type literal; , __idKDM: dontMarkNonInnerClassAsInnerClass______)|
+| | |-refactoringDiffMM.impl.EOperationImpl@37baddde (name: annotatedFieldValues(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; expression statement; method invocation; assertThat; method invocation; hasItem; string literal; variable declaration; values; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; , __idKDM: annotatedFieldValues______)| | |-refactoringDiffMM.impl.EOperationImpl@4ee25d80 (name: annotatedFieldValues(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; expression statement; method invocation; assertThat; method invocation; hasItem; string literal; variable declaration; values; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; , __idKDM: annotatedFieldValues______)|
+| | |-refactoringDiffMM.impl.EOperationImpl@5115f590 (name: annotatedMethodValues(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; expression statement; method invocation; assertThat; method invocation; hasItem; string literal; variable declaration; values; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; , __idKDM: annotatedMethodValues______)| | |-refactoringDiffMM.impl.EOperationImpl@ba17be6 (name: annotatedMethodValues(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; expression statement; method invocation; assertThat; method invocation; hasItem; string literal; variable declaration; values; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; , __idKDM: annotatedMethodValues______)|
+| | |-refactoringDiffMM.impl.EOperationImpl@4b31a708 (name: annotationToMethods(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; variable declaration; methods; variable declaration; annotationToMethods; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; , __idKDM: annotationToMethods______)| | |                                    |
+| | |-refactoringDiffMM.impl.EOperationImpl@11e355ca (name: annotationToMethodsReturnsUnmodifiableMap(), eparameters: , etype: void, methodBody: expression statement; method invocation; put; null; type literal; expression statement; method invocation; expect; type literal; variable declaration; annotationToMethods; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; , __idKDM: annotationToMethodsReturnsUnmodifiableMap______)| | |                                    |
+| | |-refactoringDiffMM.impl.EOperationImpl@70d63e05 (name: annotationToMethodsReturnsValuesInTheMapThatAreUnmodifiable(), eparameters: , etype: void, methodBody: expression statement; method invocation; add; null; expression statement; method invocation; expect; type literal; variable declaration; methods; variable declaration; annotationToMethods; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; , __idKDM: annotationToMethodsReturnsValuesInTheMapThatAreUnmodifiable______)| | |                                    |
+| | |-refactoringDiffMM.impl.EOperationImpl@e11ecfa (name: annotationToFields(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; variable declaration; fields; variable declaration; annotationToFields; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; , __idKDM: annotationToFields______)| | |                                    |
+| | |-refactoringDiffMM.impl.EOperationImpl@485e13d7 (name: annotationToFieldsReturnsUnmodifiableMap(), eparameters: , etype: void, methodBody: expression statement; method invocation; put; null; type literal; expression statement; method invocation; expect; type literal; variable declaration; annotationToFields; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; , __idKDM: annotationToFieldsReturnsUnmodifiableMap______)| | |                                    |
+| | |-refactoringDiffMM.impl.EOperationImpl@43984213 (name: annotationToFieldsReturnsValuesInTheMapThatAreUnmodifiable(), eparameters: , etype: void, methodBody: expression statement; method invocation; add; null; expression statement; method invocation; expect; type literal; variable declaration; fields; variable declaration; annotationToFields; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; , __idKDM: annotationToFieldsReturnsValuesInTheMapThatAreUnmodifiable______)| | |                                    |
+| | |-refactoringDiffMM.impl.EOperationImpl@2ff7a73 (name: annotationToFieldsReturnsKeysInADeterministicOrder(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; type literal; method invocation; get; number literal; expression statement; method invocation; assertThat; method invocation; is; type literal; method invocation; get; number literal; foreach; annotation; expression statement; method invocation; add; method invocation; keySet; variable declaration; class instance creation; ArrayList; keys; variable declaration; annotationToFields; variable declaration; class instance creation; new TestClass(MultipleFieldsAnnotated.class); type literal; tc; , __idKDM: annotationToFieldsReturnsKeysInADeterministicOrder______)| | |                                    |
+| | |-refactoringDiffMM.impl.EClassImpl@38830ea (name: TwoConstructors, extends: null, implements: null, isAbstract: false, packageName: null)| | |-refactoringDiffMM.impl.EClassImpl@6f798482 (name: TwoConstructors, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | | |-refactoringDiffMM.impl.EOperationImpl@3b705be7 (name: TwoConstructors(), eparameters: , etype: null, methodBody: , __idKDM: TwoConstructors______)| | | |                                  |
+| | | |-refactoringDiffMM.impl.EOperationImpl@3a790e40 (name: TwoConstructors(), eparameters: x:int, etype: null, methodBody: , __idKDM: TwoConstructors___int___)| | | |-refactoringDiffMM.impl.EOperationImpl@633cc6b5 (name: TwoConstructors(), eparameters: x:int, etype: null, methodBody: , __idKDM: TwoConstructors___int___)|
+| | |-refactoringDiffMM.impl.EClassImpl@43acd79e (name: SuperclassWithField, extends: null, implements: null, isAbstract: false, packageName: null)| | |-refactoringDiffMM.impl.EClassImpl@6342ff7f (name: SuperclassWithField, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | | |-refactoringDiffMM.impl.EAttributeImpl@1e1b061 (name: x, etype: TestRule)| | | |                                  |
+| | |-refactoringDiffMM.impl.EClassImpl@38f77cd9 (name: SubclassWithField, extends: SuperclassWithField, implements: null, isAbstract: false, packageName: null)| | |-refactoringDiffMM.impl.EClassImpl@2daf06fc (name: SubclassWithField, extends: SuperclassWithField, implements: null, isAbstract: false, packageName: null)|
+| | | |-refactoringDiffMM.impl.EAttributeImpl@4a8e6e89 (name: x, etype: TestRule)| | | |-refactoringDiffMM.impl.EAttributeImpl@28237492 (name: x, etype: TestRule)|
+| | |-refactoringDiffMM.impl.EClassImpl@6fbb4061 (name: OuterClass, extends: null, implements: null, isAbstract: false, packageName: null)| | |-refactoringDiffMM.impl.EClassImpl@5ceecfee (name: OuterClass, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | |-refactoringDiffMM.impl.EClassImpl@63d5874f (name: NonStaticInnerClass, extends: null, implements: null, isAbstract: false, packageName: null)| | |-refactoringDiffMM.impl.EClassImpl@7da31a40 (name: NonStaticInnerClass, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | |-refactoringDiffMM.impl.EClassImpl@60c73e58 (name: OuterClass2, extends: null, implements: null, isAbstract: false, packageName: null)| | |-refactoringDiffMM.impl.EClassImpl@28ee7bee (name: OuterClass2, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | |-refactoringDiffMM.impl.EClassImpl@5984feef (name: StaticInnerClass, extends: null, implements: null, isAbstract: false, packageName: null)| | |-refactoringDiffMM.impl.EClassImpl@1b5a1d85 (name: StaticInnerClass, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | |-refactoringDiffMM.impl.EClassImpl@6c0905f6 (name: SimpleClass, extends: null, implements: null, isAbstract: false, packageName: null)| | |-refactoringDiffMM.impl.EClassImpl@31e130bf (name: SimpleClass, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | |-refactoringDiffMM.impl.EClassImpl@23a918c7 (name: FieldAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)| | |-refactoringDiffMM.impl.EClassImpl@54755dd9 (name: FieldAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | | |-refactoringDiffMM.impl.EAttributeImpl@7a45d714 (name: fieldThatShouldBeMatched, etype: String)| | | |                                  |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@4483d35 (name: fieldThatShouldNotBeMachted, etype: boolean)| | | |                                  |
+| | | |-refactoringDiffMM.impl.EOperationImpl@204abeff (name: FieldAnnotated(), eparameters: , etype: null, methodBody: , __idKDM: FieldAnnotated______)| | | |-refactoringDiffMM.impl.EOperationImpl@2db4ad1 (name: FieldAnnotated(), eparameters: , etype: null, methodBody: , __idKDM: FieldAnnotated______)|
+| | | |                                  | | | |-refactoringDiffMM.impl.EAttributeImpl@f1f7db2 (name: fieldC, etype: String)|
+| | | |                                  | | | |-refactoringDiffMM.impl.EAttributeImpl@4462efe1 (name: fieldA, etype: boolean)|
+| | | |                                  | | | |-refactoringDiffMM.impl.EAttributeImpl@7c3e4b1a (name: fieldB, etype: boolean)|
+| | |-refactoringDiffMM.impl.EClassImpl@4b4ee511 (name: MethodsAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)| | |-refactoringDiffMM.impl.EClassImpl@765d55d5 (name: MethodsAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | | |-refactoringDiffMM.impl.EOperationImpl@1f67761b (name: methodToBeMatched(), eparameters: , etype: String, methodBody: return; string literal; , __idKDM: methodToBeMatched______)| | | |                                  |
+| | | |-refactoringDiffMM.impl.EOperationImpl@5a034157 (name: methodOfWrongType(), eparameters: , etype: int, methodBody: return; number literal; , __idKDM: methodOfWrongType______)| | | |                                  |
+| | | |-refactoringDiffMM.impl.EOperationImpl@2f4ba1ae (name: MethodsAnnotated(), eparameters: , etype: null, methodBody: , __idKDM: MethodsAnnotated______)| | | |-refactoringDiffMM.impl.EOperationImpl@6fc1020a (name: MethodsAnnotated(), eparameters: , etype: null, methodBody: , __idKDM: MethodsAnnotated______)|
+| | | |                                  | | | |-refactoringDiffMM.impl.EOperationImpl@2513a118 (name: methodC(), eparameters: , etype: int, methodBody: return; number literal; , __idKDM: methodC______)|
+| | | |                                  | | | |-refactoringDiffMM.impl.EOperationImpl@2bfb583b (name: methodA(), eparameters: , etype: String, methodBody: return; string literal; , __idKDM: methodA______)|
+| | | |                                  | | | |-refactoringDiffMM.impl.EOperationImpl@73ae0257 (name: methodB(), eparameters: , etype: int, methodBody: return; number literal; , __idKDM: methodB______)|
+| | |-refactoringDiffMM.impl.EClassImpl@1391af3b (name: MultipleFieldsAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)| | |                                    |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@3762c4fc (name: a, etype: String)| | |                                    |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@77ab22be (name: b, etype: boolean)| | |                                    |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@59fbb34 (name: c, etype: String)| | |                                    |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@1b6924cb (name: d, etype: boolean)| | |                                    |
+| | |                                    | | |-refactoringDiffMM.impl.EOperationImpl@36aa52d2 (name: providesAnnotatedFieldsSortedByName(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; string literal; method invocation; getName; method invocation; next; method invocation; iterator; string literal; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; string literal; variable declaration; annotatedFields; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; , __idKDM: providesAnnotatedFieldsSortedByName______)|
+| | |                                    | | |-refactoringDiffMM.impl.EOperationImpl@16a35bd (name: providesAnnotatedMethodsSortedByName(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; string literal; method invocation; getName; method invocation; next; method invocation; iterator; string literal; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; string literal; variable declaration; annotatedMethods; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; , __idKDM: providesAnnotatedMethodsSortedByName______)|
+| |                                      | |                                      |
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+REFERENCE CHANGES
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@8cc8cdb (name: ANNOTATED_METHOD_CALLED, etype: String) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@69afa141 (name: ExampleAnnotationValidator, extends: AnnotationValidator, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@1e236278 (name: ANNOTATED_FIELD_CALLED, etype: String) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@69afa141 (name: ExampleAnnotationValidator, extends: AnnotationValidator, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@44fff386 (name: ANNOTATED_CLASS_CALLED, etype: String) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@69afa141 (name: ExampleAnnotationValidator, extends: AnnotationValidator, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@1fc713c9 (name: validateAnnotatedClass(), eparameters: testClass:TestClass, etype: java.util.List<java.lang.Exception>, methodBody: return; method invocation; asList; class instance creation; Exception; , __idKDM: validateAnnotatedClass___TestClass___) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@69afa141 (name: ExampleAnnotationValidator, extends: AnnotationValidator, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@7301eebe (name: validateAnnotatedField(), eparameters: field:FrameworkField, etype: java.util.List<java.lang.Exception>, methodBody: return; method invocation; asList; class instance creation; Exception; , __idKDM: validateAnnotatedField___FrameworkField___) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@69afa141 (name: ExampleAnnotationValidator, extends: AnnotationValidator, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@76b47204 (name: validateAnnotatedMethod(), eparameters: method:FrameworkMethod, etype: java.util.List<java.lang.Exception>, methodBody: return; method invocation; asList; class instance creation; Exception; , __idKDM: validateAnnotatedMethod___FrameworkMethod___) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@69afa141 (name: ExampleAnnotationValidator, extends: AnnotationValidator, implements: null, isAbstract: false, packageName: null)
+Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@329548d0 (eProxyURI: file:/E:/srcCode/dsmmerge/com.Zadahmad.DSEMFCompare.editor/caseStudiesMerge/Refactoring/junit4/f4682ce2558cdca60d12fbef39e9ca0370eba592_CA_ref.xmi#AnnotationValidator) has been added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@69afa141 (name: ExampleAnnotationValidator, extends: AnnotationValidator, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@3dc95b8b (name: AnnotationValidator, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@69afa141 (name: ExampleAnnotationValidator, extends: AnnotationValidator, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@3dc95b8b (name: AnnotationValidator, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@69afa141 (name: ExampleAnnotationValidator, extends: AnnotationValidator, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@3e5fd2b1 (name: test(), eparameters: , etype: void, methodBody: , __idKDM: test______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@46e64760 (name: AnnotationValidatorMethodTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@436bd4df (name: field, etype: String) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@43982337 (name: AnnotationValidatorFieldTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@2f0ed952 (name: test(), eparameters: , etype: void, methodBody: , __idKDM: test______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@43982337 (name: AnnotationValidatorFieldTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@5740ff5e (name: test(), eparameters: , etype: void, methodBody: , __idKDM: test______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@6f044c58 (name: AnnotationValidatorClassTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@28f4f300 (name: validatorIsCalledForAClass(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertClassHasFailureMessage; type literal; , __idKDM: validatorIsCalledForAClass______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@6c1cfa53 (name: ParentRunnerTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@2b5c4f17 (name: validatorIsCalledForAMethod(), eparameters: null:InitializationError, etype: void, methodBody: expression statement; method invocation; assertClassHasFailureMessage; type literal; , __idKDM: validatorIsCalledForAMethod___InitializationError___) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@6c1cfa53 (name: ParentRunnerTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@6ca8fcf3 (name: validatorIsCalledForAField(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertClassHasFailureMessage; type literal; , __idKDM: validatorIsCalledForAField______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@6c1cfa53 (name: ParentRunnerTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@11f9535b (name: ExampleAnnotationValidator, extends: AnnotationValidator, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@6c1cfa53 (name: ParentRunnerTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@4d6ccc97 (name: AnnotationValidatorMethodTest, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@6c1cfa53 (name: ParentRunnerTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@161aa04a (name: AnnotationValidatorFieldTest, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@6c1cfa53 (name: ParentRunnerTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@149b0577 (name: AnnotationValidatorClassTest, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@6c1cfa53 (name: ParentRunnerTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.InterfaceImpl@4a901445 (name: ExampleAnnotationWithValidator, extends: null, packageName: null) has been remotely(RIGHT) deleted from reference nested_interfaces
+ of object refactoringDiffMM.impl.EClassImpl@6c1cfa53 (name: ParentRunnerTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@3b705be7 (name: TwoConstructors(), eparameters: , etype: null, methodBody: , __idKDM: TwoConstructors______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@38830ea (name: TwoConstructors, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@1e1b061 (name: x, etype: TestRule) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@43acd79e (name: SuperclassWithField, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@f1f7db2 (name: fieldC, etype: String) has been remotely(RIGHT) added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@23a918c7 (name: FieldAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@4462efe1 (name: fieldA, etype: boolean) has been remotely(RIGHT) added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@23a918c7 (name: FieldAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@7c3e4b1a (name: fieldB, etype: boolean) has been remotely(RIGHT) added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@23a918c7 (name: FieldAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@48eb001a (name: fieldThatShouldBeMatched, etype: String) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@23a918c7 (name: FieldAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@34332b8d (name: fieldThatShouldNotBeMachted, etype: boolean) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@23a918c7 (name: FieldAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@2513a118 (name: methodC(), eparameters: , etype: int, methodBody: return; number literal; , __idKDM: methodC______) has been remotely(RIGHT) added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@4b4ee511 (name: MethodsAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@2bfb583b (name: methodA(), eparameters: , etype: String, methodBody: return; string literal; , __idKDM: methodA______) has been remotely(RIGHT) added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@4b4ee511 (name: MethodsAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@73ae0257 (name: methodB(), eparameters: , etype: int, methodBody: return; number literal; , __idKDM: methodB______) has been remotely(RIGHT) added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@4b4ee511 (name: MethodsAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@7ff19c33 (name: methodToBeMatched(), eparameters: , etype: String, methodBody: return; string literal; , __idKDM: methodToBeMatched______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@4b4ee511 (name: MethodsAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@52b3bf03 (name: methodOfWrongType(), eparameters: , etype: int, methodBody: return; number literal; , __idKDM: methodOfWrongType______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@4b4ee511 (name: MethodsAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@35c9a231 (name: a, etype: String) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@1391af3b (name: MultipleFieldsAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@7a4d582c (name: b, etype: boolean) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@1391af3b (name: MultipleFieldsAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@5626d18c (name: c, etype: String) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@1391af3b (name: MultipleFieldsAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@45e9b12d (name: d, etype: boolean) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@1391af3b (name: MultipleFieldsAnnotated, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@36aa52d2 (name: providesAnnotatedFieldsSortedByName(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; string literal; method invocation; getName; method invocation; next; method invocation; iterator; string literal; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; string literal; variable declaration; annotatedFields; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; , __idKDM: providesAnnotatedFieldsSortedByName______) has been remotely(RIGHT) added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@559cedee (name: TestClassTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@16a35bd (name: providesAnnotatedMethodsSortedByName(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; string literal; method invocation; getName; method invocation; next; method invocation; iterator; string literal; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; string literal; variable declaration; annotatedMethods; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; , __idKDM: providesAnnotatedMethodsSortedByName______) has been remotely(RIGHT) added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@559cedee (name: TestClassTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@2ddb3ae8 (name: annotationToMethods(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; variable declaration; methods; variable declaration; annotationToMethods; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; , __idKDM: annotationToMethods______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@559cedee (name: TestClassTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@79518e00 (name: annotationToMethodsReturnsUnmodifiableMap(), eparameters: , etype: void, methodBody: expression statement; method invocation; put; null; type literal; expression statement; method invocation; expect; type literal; variable declaration; annotationToMethods; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; , __idKDM: annotationToMethodsReturnsUnmodifiableMap______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@559cedee (name: TestClassTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@3c91530d (name: annotationToMethodsReturnsValuesInTheMapThatAreUnmodifiable(), eparameters: , etype: void, methodBody: expression statement; method invocation; add; null; expression statement; method invocation; expect; type literal; variable declaration; methods; variable declaration; annotationToMethods; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; , __idKDM: annotationToMethodsReturnsValuesInTheMapThatAreUnmodifiable______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@559cedee (name: TestClassTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@7d70638 (name: annotationToFields(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; variable declaration; fields; variable declaration; annotationToFields; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; , __idKDM: annotationToFields______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@559cedee (name: TestClassTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@732f6050 (name: annotationToFieldsReturnsUnmodifiableMap(), eparameters: , etype: void, methodBody: expression statement; method invocation; put; null; type literal; expression statement; method invocation; expect; type literal; variable declaration; annotationToFields; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; , __idKDM: annotationToFieldsReturnsUnmodifiableMap______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@559cedee (name: TestClassTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@6fbc1bb (name: annotationToFieldsReturnsValuesInTheMapThatAreUnmodifiable(), eparameters: , etype: void, methodBody: expression statement; method invocation; add; null; expression statement; method invocation; expect; type literal; variable declaration; fields; variable declaration; annotationToFields; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; , __idKDM: annotationToFieldsReturnsValuesInTheMapThatAreUnmodifiable______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@559cedee (name: TestClassTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@30c4e352 (name: annotationToFieldsReturnsKeysInADeterministicOrder(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; type literal; method invocation; get; number literal; expression statement; method invocation; assertThat; method invocation; is; type literal; method invocation; get; number literal; foreach; annotation; expression statement; method invocation; add; method invocation; keySet; variable declaration; class instance creation; ArrayList; keys; variable declaration; annotationToFields; variable declaration; class instance creation; new TestClass(MultipleFieldsAnnotated.class); type literal; tc; , __idKDM: annotationToFieldsReturnsKeysInADeterministicOrder______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@559cedee (name: TestClassTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@462abec3 (name: MultipleFieldsAnnotated, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@559cedee (name: TestClassTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@3dc95b8b (name: AnnotationValidator, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@696b4a95 (name: pkg)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@3dc95b8b (name: AnnotationValidator, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@696b4a95 (name: pkg)
+
+ATTRIBUTE CHANGES
+
+ value expression statement; method invocation; assertThat; method invocation; is; method invocation; equalTo; method invocation; getMessage; method invocation; get; number literal; method invocation; getFailures; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; getFailureCount; variable declaration; result; variable declaration; request; variable declaration; class instance creation; new JUnitCore(); junitCore;  has been remotely(RIGHT) changed from attribute methodBody
+ of object refactoringDiffMM.impl.EOperationImpl@37d28f02 (name: assertClassHasFailureMessage(), eparameters: klass:java.lang.Class<?>, message:String, etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasItem; foreach; failure; expression statement; method invocation; add; method invocation; getMessage; method invocation; getFailures; variable declaration; class instance creation; ArrayList; messages; variable declaration; result; variable declaration; request; variable declaration; class instance creation; new JUnitCore(); junitCore; , __idKDM: assertClassHasFailureMessage___java_lang_Class_____String___)
+
+ value null:InitializationError has been changed from attribute eparameters
+ of object refactoringDiffMM.impl.EOperationImpl@6056232d (name: validatorIsCalledForAMethod(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertClassHasFailureMessage; type literal; , __idKDM: validatorIsCalledForAMethod______)
+
+ value validatorIsCalledForAMethod______ has been changed from attribute __idKDM
+ of object refactoringDiffMM.impl.EOperationImpl@6056232d (name: validatorIsCalledForAMethod(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertClassHasFailureMessage; type literal; , __idKDM: validatorIsCalledForAMethod______)
+
+CONFLICTS
+PSEUDO conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@3dc95b8b (name: AnnotationValidator, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@69afa141 (name: ExampleAnnotationValidator, extends: AnnotationValidator, implements: null, isAbstract: false, packageName: null)
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@3dc95b8b (name: AnnotationValidator, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@69afa141 (name: ExampleAnnotationValidator, extends: AnnotationValidator, implements: null, isAbstract: false, packageName: null)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@2b5c4f17 (name: validatorIsCalledForAMethod(), eparameters: null:InitializationError, etype: void, methodBody: expression statement; method invocation; assertClassHasFailureMessage; type literal; , __idKDM: validatorIsCalledForAMethod___InitializationError___) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@6c1cfa53 (name: ParentRunnerTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ value validatorIsCalledForAMethod______ has been changed from attribute __idKDM
+ of object refactoringDiffMM.impl.EOperationImpl@6056232d (name: validatorIsCalledForAMethod(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertClassHasFailureMessage; type literal; , __idKDM: validatorIsCalledForAMethod______)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@11f9535b (name: ExampleAnnotationValidator, extends: AnnotationValidator, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@6c1cfa53 (name: ParentRunnerTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@329548d0 (eProxyURI: file:/E:/srcCode/dsmmerge/com.Zadahmad.DSEMFCompare.editor/caseStudiesMerge/Refactoring/junit4/f4682ce2558cdca60d12fbef39e9ca0370eba592_CA_ref.xmi#AnnotationValidator) has been added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@69afa141 (name: ExampleAnnotationValidator, extends: AnnotationValidator, implements: null, isAbstract: false, packageName: null)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@4d6ccc97 (name: AnnotationValidatorMethodTest, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@6c1cfa53 (name: ParentRunnerTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@3e5fd2b1 (name: test(), eparameters: , etype: void, methodBody: , __idKDM: test______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@46e64760 (name: AnnotationValidatorMethodTest, extends: null, implements: null, isAbstract: false, packageName: null)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@161aa04a (name: AnnotationValidatorFieldTest, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@6c1cfa53 (name: ParentRunnerTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@2f0ed952 (name: test(), eparameters: , etype: void, methodBody: , __idKDM: test______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@43982337 (name: AnnotationValidatorFieldTest, extends: null, implements: null, isAbstract: false, packageName: null)
+PSEUDO conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@3dc95b8b (name: AnnotationValidator, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@696b4a95 (name: pkg)
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@3dc95b8b (name: AnnotationValidator, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@696b4a95 (name: pkg)
+The end of transforming EMF-Diff to DSMC-Diff
+
+Create all DsDiff Models. Exception: null
+f4682ce2558cdca60d12fbef39e9ca0370eba592
+
+End of Creating all DsDiff Models for evaluation!

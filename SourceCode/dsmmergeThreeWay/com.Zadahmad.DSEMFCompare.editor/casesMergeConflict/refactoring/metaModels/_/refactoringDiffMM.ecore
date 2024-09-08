@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="refactoringDiffMM" nsURI="www.geodes.UdeM.edu/refactoringDiffMM"
+    nsPrefix="refactoringDiffMM">
+  <eClassifiers xsi:type="ecore:EClass" name="EAttribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="etype" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EClass">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extends" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="packageName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eattributes" ordered="false"
+        upperBound="-1" eType="#//EAttribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eoperations" ordered="false"
+        upperBound="-1" eType="#//EOperation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ereferences" ordered="false"
+        upperBound="-1" eType="#//EReference" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="esupertypes" ordered="false"
+        upperBound="-1" eType="#//EClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" ordered="false"
+        upperBound="-1" eType="#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nested_classes" ordered="false"
+        upperBound="-1" eType="#//EClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nested_interfaces" ordered="false"
+        upperBound="-1" eType="#//Interface" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffeattributes" upperBound="-1"
+        eType="#//DiffEClass_eattributes" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffeoperations" upperBound="-1"
+        eType="#//DiffEClass_eoperations" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="differeferences" upperBound="-1"
+        eType="#//DiffEClass_ereferences" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffesupertypes" upperBound="-1"
+        eType="#//DiffEClass_esupertypes" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffinterfaces" upperBound="-1"
+        eType="#//DiffEClass_interfaces" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffnested_classes" upperBound="-1"
+        eType="#//DiffEClass_nested_classes" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffnested_interfaces"
+        upperBound="-1" eType="#//DiffEClass_nested_interfaces" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EOperation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eparameters" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="etype" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="methodBody" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="__idKDM" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EPackage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eclassifiers" ordered="false"
+        upperBound="-1" eType="#//EClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" ordered="false"
+        upperBound="-1" eType="#//Interface" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffeclassifiers" upperBound="-1"
+        eType="#//DiffEPackage_eclassifiers" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffinterfaces" upperBound="-1"
+        eType="#//DiffEPackage_interfaces" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EReference">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="etype" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Interface">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extends" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="packageName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eoperations" ordered="false"
+        upperBound="-1" eType="#//EOperation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="esupertypes" ordered="false"
+        upperBound="-1" eType="#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffeoperations" upperBound="-1"
+        eType="#//DiffInterface_eoperations" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffesupertypes" upperBound="-1"
+        eType="#//DiffInterface_esupertypes" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DiffKind">
+    <eLiterals name="ADD" literal="ADD"/>
+    <eLiterals name="DELETE" value="1" literal="DELETE"/>
+    <eLiterals name="MODIFY" value="2" literal="MODIFY"/>
+    <eLiterals name="NON" value="3" literal="NON"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AUTHOR">
+    <eLiterals name="LEFT" literal="LEFT"/>
+    <eLiterals name="RIGHT" value="1" literal="RIGHT"/>
+    <eLiterals name="EQUAL" value="2" literal="EQUAL"/>
+    <eLiterals name="MIXED" value="3" literal="MIXED"/>
+    <eLiterals name="NON" value="4" literal="NON"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ChangeStatus">
+    <eLiterals name="EQUIVALENT" literal="EQUIVALENT"/>
+    <eLiterals name="CONTRADICTING" value="1" literal="CONTRADICTING"/>
+    <eLiterals name="NON" value="2" literal="NON"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SemanticObject" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffEAttribute"
+        ordered="false" upperBound="-1" eType="#//DiffEAttribute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffEClass"
+        ordered="false" upperBound="-1" eType="#//DiffEClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffEClass_eattributes"
+        ordered="false" upperBound="-1" eType="#//DiffEClass_eattributes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffEClass_eoperations"
+        ordered="false" upperBound="-1" eType="#//DiffEClass_eoperations"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffEClass_ereferences"
+        ordered="false" upperBound="-1" eType="#//DiffEClass_ereferences"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffEClass_esupertypes"
+        ordered="false" upperBound="-1" eType="#//DiffEClass_esupertypes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffEClass_interfaces"
+        ordered="false" upperBound="-1" eType="#//DiffEClass_interfaces"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffEClass_nested_classes"
+        ordered="false" upperBound="-1" eType="#//DiffEClass_nested_classes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffEClass_nested_interfaces"
+        ordered="false" upperBound="-1" eType="#//DiffEClass_nested_interfaces"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffEOperation"
+        ordered="false" upperBound="-1" eType="#//DiffEOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffEPackage"
+        ordered="false" upperBound="-1" eType="#//DiffEPackage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffEPackage_eclassifiers"
+        ordered="false" upperBound="-1" eType="#//DiffEPackage_eclassifiers"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffEPackage_interfaces"
+        ordered="false" upperBound="-1" eType="#//DiffEPackage_interfaces"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffEReference"
+        ordered="false" upperBound="-1" eType="#//DiffEReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffInterface"
+        ordered="false" upperBound="-1" eType="#//DiffInterface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffInterface_eoperations"
+        ordered="false" upperBound="-1" eType="#//DiffInterface_eoperations"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffInterface_esupertypes"
+        ordered="false" upperBound="-1" eType="#//DiffInterface_esupertypes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_EAttribute"
+        ordered="false" upperBound="-1" eType="#//EAttribute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_EClass"
+        ordered="false" upperBound="-1" eType="#//EClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_EOperation"
+        ordered="false" upperBound="-1" eType="#//EOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_EPackage"
+        ordered="false" upperBound="-1" eType="#//EPackage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_EReference"
+        ordered="false" upperBound="-1" eType="#//EReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_Interface"
+        ordered="false" upperBound="-1" eType="#//Interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SemanticDiff" eSuperTypes="#//SemanticObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" unique="false"
+        lowerBound="1" eType="#//AUTHOR" defaultValueLiteral="NON"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SemanticConflict" eSuperTypes="#//SemanticObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semanticdiffs" ordered="false"
+        upperBound="-1" eType="#//SemanticDiff" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffEAttribute" eSuperTypes="#//EAttribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name_Right" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameChangeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_etype_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_etype_Right" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="etypeChangeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffEClass" eSuperTypes="#//EClass">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name_Right" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameChangeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_extends_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_extends_Right" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extendsChangeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_implements_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_implements_Right" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implementsChangeStatus"
+        unique="false" lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_isAbstract_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_isAbstract_Right" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstractChangeStatus"
+        unique="false" lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_packageName_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_packageName_Right"
+        unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="packageNameChangeStatus"
+        unique="false" lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffEClass_eattributes">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//EAttribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffEClass_eoperations">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//EOperation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffEClass_ereferences">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//EReference"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffEClass_esupertypes">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//EClass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffEClass_interfaces">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//Interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffEClass_nested_classes">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//EClass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffEClass_nested_interfaces">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//Interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffEOperation" eSuperTypes="#//EOperation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name_Right" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameChangeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_eparameters_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_eparameters_Right"
+        unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eparametersChangeStatus"
+        unique="false" lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_etype_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_etype_Right" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="etypeChangeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_methodBody_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_methodBody_Right" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="methodBodyChangeStatus"
+        unique="false" lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffEPackage" eSuperTypes="#//EPackage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name_Right" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameChangeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffEPackage_eclassifiers">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//EClass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffEPackage_interfaces">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//Interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffEReference" eSuperTypes="#//EReference">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name_Right" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameChangeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_etype_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_etype_Right" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="etypeChangeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffInterface" eSuperTypes="#//Interface">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name_Right" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameChangeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_extends_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_extends_Right" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extendsChangeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_packageName_Left" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_packageName_Right"
+        unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="packageNameChangeStatus"
+        unique="false" lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffInterface_eoperations">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//EOperation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffInterface_esupertypes">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeStatus" unique="false"
+        lowerBound="1" eType="#//ChangeStatus" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//Interface"/>
+  </eClassifiers>
+</ecore:EPackage>

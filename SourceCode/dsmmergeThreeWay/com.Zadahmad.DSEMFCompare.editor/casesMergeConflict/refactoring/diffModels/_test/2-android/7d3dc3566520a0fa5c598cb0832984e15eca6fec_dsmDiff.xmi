@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoringDiffMM:EPackage
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM"
+    name="pkg">
+  <eclassifiers
+      xsi:type="refactoringDiffMM:DiffEClass"
+      name="CreateGistActivity"
+      extends="BaseActivity"
+      esupertypes="BaseActivity"
+      diff_kind_Right="DELETE"
+      changeStatus="CONTRADICTING">
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="contentText"
+        etype="EditText"
+        diff_kind_Right="DELETE"/>
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="publicCheckBox"
+        etype="CheckBox"
+        diff_kind_Right="DELETE"/>
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="descriptionText"
+        etype="EditText"
+        diff_kind_Right="DELETE"/>
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="createItem"
+        etype="MenuItem"
+        diff_kind_Left="DELETE"
+        diff_kind_Right="DELETE"
+        changeStatus="EQUIVALENT"/>
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="nameText"
+        etype="EditText"
+        diff_kind_Right="DELETE"/>
+    <eattributes
+        xsi:type="refactoringDiffMM:DiffEAttribute"
+        name="menuItem"
+        etype="MenuItem"
+        diff_kind_Left="ADD"
+        changeStatus="CONTRADICTING"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="onOptionsItemSelected()"
+        eparameters="item:MenuItem"
+        etype="boolean"
+        methodBody="switch; return; super method invocation; onOptionsItemSelected; case; return; boolean literal; expression statement; method invocation; startActivity; expression statement; method invocation; addFlags; OR; variable declaration; class instance creation; new Intent(this,MainActivity.class); type literal; this; intent; expression statement; method invocation; finish; case; return; boolean literal; expression statement; method invocation; createGist; case; method invocation; getItemId; "
+        __idKDM="onOptionsItemSelected___MenuItem___"
+        diff_kind_Left="MODIFY"
+        diff_kind_Right="DELETE"
+        changeStatus="CONTRADICTING"
+        new_methodBody_Left="switch; return; super method invocation; onOptionsItemSelected; case; return; boolean literal; expression statement; method invocation; createGist; case; method invocation; getItemId; "/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="createGist()"
+        eparameters=""
+        etype="void"
+        methodBody="expression statement; method invocation; create; class instance creation; ; Anonymous type; this; variable declaration; content; variable declaration; name; variable declaration; enteredName; variable declaration; description; variable declaration; enteredDescription; variable declaration; isPublic; "
+        __idKDM="createGist______"
+        diff_kind_Right="DELETE"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="updateCreateMenu()"
+        eparameters="text:CharSequence"
+        etype="void"
+        methodBody="if; expression statement; method invocation; setEnabled; NOT; method invocation; isEmpty; NOT_EQUALS; null; "
+        __idKDM="updateCreateMenu___CharSequence___"
+        diff_kind_Left="DELETE"
+        diff_kind_Right="DELETE"
+        changeStatus="CONTRADICTING"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="onCreate()"
+        eparameters="savedInstanceState:Bundle"
+        etype="void"
+        methodBody="expression statement; method invocation; updateCreateMenu; expression statement; method invocation; addTextChangedListener; class instance creation; ; Anonymous type; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; subject; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; text; expression statement; method invocation; setDisplayHomeAsUpEnabled; boolean literal; expression statement; method invocation; setIcon; expression statement; method invocation; setTitle; variable declaration; actionBar; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; method invocation; setSupportActionBar; cast; method invocation; findViewById; expression statement; method invocation; setContentView; expression statement; super method invocation; onCreate; "
+        __idKDM="onCreate___Bundle___"
+        diff_kind_Left="MODIFY"
+        diff_kind_Right="DELETE"
+        changeStatus="CONTRADICTING"
+        new_methodBody_Left="expression statement; method invocation; updateCreateMenu; expression statement; method invocation; addTextChangedListener; class instance creation; ; Anonymous type; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; subject; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; text; expression statement; method invocation; setDisplayHomeAsUpEnabled; boolean literal; variable declaration; actionBar; expression statement; method invocation; setOnCheckedChangeListener; class instance creation; ; Anonymous type; expression statement; method invocation; addTextChangedListener; expression statement; method invocation; addTextChangedListener; expression statement; method invocation; addTextChangedListener; variable declaration; class instance creation; ; Anonymous type; expandAppBarTextWatcher; expression statement; method invocation; setOnFocusChangeListener; expression statement; method invocation; setOnFocusChangeListener; expression statement; method invocation; setOnFocusChangeListener; variable declaration; class instance creation; ; Anonymous type; expandAppBarOnFocusChangeListener; variable declaration; appBarLayout; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; method invocation; setSupportActionBar; cast; method invocation; findViewById; expression statement; method invocation; setContentView; expression statement; super method invocation; onCreate; "/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="onCreateOptionsMenu()"
+        eparameters="options:Menu"
+        etype="boolean"
+        methodBody="return; boolean literal; expression statement; method invocation; updateCreateMenu; expression statement; ASSIGN; method invocation; findItem; expression statement; method invocation; inflate; method invocation; getMenuInflater; "
+        __idKDM="onCreateOptionsMenu___Menu___"
+        diff_kind_Left="MODIFY"
+        diff_kind_Right="DELETE"
+        changeStatus="CONTRADICTING"
+        new_eparameters_Left="menu:Menu"
+        new_methodBody_Left="return; boolean literal; expression statement; method invocation; updateCreateMenu; expression statement; ASSIGN; method invocation; findItem; expression statement; method invocation; inflate; method invocation; getMenuInflater; expression statement; super method invocation; onCreateOptionsMenu; "/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="updateCreateMenu()"
+        eparameters=""
+        etype="void"
+        methodBody="if; expression statement; method invocation; updateCreateMenu; method invocation; getText; NOT_EQUALS; null; "
+        __idKDM="updateCreateMenu______"
+        diff_kind_Left="DELETE"
+        changeStatus="CONTRADICTING"/>
+    <diffeoperations
+        diff_kind_Left="DELETE"
+        eType="updateCreateMenu()"/>
+  </eclassifiers>
+  <eclassifiers
+      xsi:type="refactoringDiffMM:DiffEClass"
+      name="BaseActivity"
+      diff_kind_Left="DELETE"
+      diff_kind_Right="DELETE"
+      changeStatus="EQUIVALENT">
+    <diffeoperations
+        diff_kind_Left="ADD"
+        eType="updateCreateMenu()"/>
+  </eclassifiers>
+</refactoringDiffMM:EPackage>

@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoringDiffMM:EPackage
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM"
+    name="pkg">
+  <eclassifiers
+      name="Assert">
+    <eoperations
+        name="Assert()"
+        eparameters=""
+        methodBody=""
+        __idKDM="Assert______"/>
+    <eoperations
+        name="assertTrue()"
+        eparameters="message:String, condition:boolean"
+        etype="void"
+        methodBody="if; expression statement; method invocation; fail; NOT; "
+        __idKDM="assertTrue___String__boolean___"/>
+    <eoperations
+        name="assertTrue()"
+        eparameters="condition:boolean"
+        etype="void"
+        methodBody="expression statement; method invocation; assertTrue; null; "
+        __idKDM="assertTrue___boolean___"/>
+    <eoperations
+        name="assertFalse()"
+        eparameters="message:String, condition:boolean"
+        etype="void"
+        methodBody="expression statement; method invocation; assertTrue; NOT; "
+        __idKDM="assertFalse___String__boolean___"/>
+    <eoperations
+        name="assertFalse()"
+        eparameters="condition:boolean"
+        etype="void"
+        methodBody="expression statement; method invocation; assertFalse; null; "
+        __idKDM="assertFalse___boolean___"/>
+    <eoperations
+        name="fail()"
+        eparameters="message:String"
+        etype="void"
+        methodBody="throw; class instance creation; AssertionError; if; throw; class instance creation; AssertionError; EQUALS; message; null; "
+        __idKDM="fail___String___"/>
+    <eoperations
+        name="fail()"
+        eparameters=""
+        etype="void"
+        methodBody="expression statement; method invocation; fail; null; "
+        __idKDM="fail______"/>
+    <eoperations
+        name="assertEquals()"
+        eparameters="message:String, expected:Object, actual:Object"
+        etype="void"
+        methodBody="if; if; expression statement; method invocation; failNotEquals; throw; class instance creation; new ComparisonFailure(cleanMessage,(String)expected,(String)actual); cast; String; cast; String; variable declaration; cleanMessage; CONDITIONAL_AND; instanceof; String; instanceof; String; return; CONDITIONAL_AND; method invocation; isEquals; NOT_EQUALS; expected; null; if; return; CONDITIONAL_AND; EQUALS; actual; null; EQUALS; expected; null; "
+        __idKDM="assertEquals___String__Object__Object___"/>
+    <eoperations
+        name="isEquals()"
+        eparameters="expected:Object, actual:Object"
+        etype="boolean"
+        methodBody="return; method invocation; equals; "
+        __idKDM="isEquals___Object__Object___"/>
+    <eoperations
+        name="assertEquals()"
+        eparameters="expected:Object, actual:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; assertEquals; null; "
+        __idKDM="assertEquals___Object__Object___"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:java.lang.Object[], actuals:java.lang.Object[], null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; internalArrayEquals; "
+        __idKDM="assertArrayEquals___String__java_lang_Object____java_lang_Object____ArrayComparisonFailure___"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="expecteds:java.lang.Object[], actuals:java.lang.Object[]"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; null; "
+        __idKDM="assertArrayEquals___java_lang_Object____java_lang_Object_____"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:byte[], actuals:byte[], null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; internalArrayEquals; "
+        __idKDM="assertArrayEquals___String__byte____byte____ArrayComparisonFailure___"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="expecteds:byte[], actuals:byte[]"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; null; "
+        __idKDM="assertArrayEquals___byte____byte_____"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:char[], actuals:char[], null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; internalArrayEquals; "
+        __idKDM="assertArrayEquals___String__char____char____ArrayComparisonFailure___"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="expecteds:char[], actuals:char[]"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; null; "
+        __idKDM="assertArrayEquals___char____char_____"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:short[], actuals:short[], null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; internalArrayEquals; "
+        __idKDM="assertArrayEquals___String__short____short____ArrayComparisonFailure___"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="expecteds:short[], actuals:short[]"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; null; "
+        __idKDM="assertArrayEquals___short____short_____"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:int[], actuals:int[], null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; internalArrayEquals; "
+        __idKDM="assertArrayEquals___String__int____int____ArrayComparisonFailure___"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="expecteds:int[], actuals:int[]"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; null; "
+        __idKDM="assertArrayEquals___int____int_____"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:long[], actuals:long[], null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; internalArrayEquals; "
+        __idKDM="assertArrayEquals___String__long____long____ArrayComparisonFailure___"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="expecteds:long[], actuals:long[]"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; null; "
+        __idKDM="assertArrayEquals___long____long_____"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:double[], actuals:double[], delta:double, null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; arrayEquals; class instance creation; new InexactComparisonCriteria(delta); "
+        __idKDM="assertArrayEquals___String__double____double____double__ArrayComparisonFailure___"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="expecteds:double[], actuals:double[], delta:double"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; null; "
+        __idKDM="assertArrayEquals___double____double____double___"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:float[], actuals:float[], delta:float, null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; arrayEquals; class instance creation; new InexactComparisonCriteria(delta); "
+        __idKDM="assertArrayEquals___String__float____float____float__ArrayComparisonFailure___"/>
+    <eoperations
+        name="assertArrayEquals()"
+        eparameters="expecteds:float[], actuals:float[], delta:float"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; null; "
+        __idKDM="assertArrayEquals___float____float____float___"/>
+    <eoperations
+        name="internalArrayEquals()"
+        eparameters="message:String, expecteds:Object, actuals:Object, null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; arrayEquals; class instance creation; new ExactComparisonCriteria(); "
+        __idKDM="internalArrayEquals___String__Object__Object__ArrayComparisonFailure___"/>
+    <eoperations
+        name="assertEquals()"
+        eparameters="message:String, expected:double, actual:double, delta:double"
+        etype="void"
+        methodBody="if; expression statement; method invocation; failNotEquals; class instance creation; Double; class instance creation; Double; NOT; parenthesized; LESS_EQUALS; delta; method invocation; abs; MINUS; expected; if; return; EQUALS; number literal; method invocation; compare; "
+        __idKDM="assertEquals___String__double__double__double___"/>
+    <eoperations
+        name="assertEquals()"
+        eparameters="expected:long, actual:long"
+        etype="void"
+        methodBody="expression statement; method invocation; assertEquals; null; "
+        __idKDM="assertEquals___long__long___"/>
+    <eoperations
+        name="assertEquals()"
+        eparameters="message:String, expected:long, actual:long"
+        etype="void"
+        methodBody="expression statement; method invocation; assertEquals; cast; Long; cast; Long; "
+        __idKDM="assertEquals___String__long__long___"/>
+    <eoperations
+        name="assertEquals()"
+        eparameters="expected:double, actual:double"
+        etype="void"
+        methodBody="expression statement; method invocation; assertEquals; null; "
+        __idKDM="assertEquals___double__double___"/>
+    <eoperations
+        name="assertEquals()"
+        eparameters="message:String, expected:double, actual:double"
+        etype="void"
+        methodBody="expression statement; method invocation; fail; string literal; "
+        __idKDM="assertEquals___String__double__double___"/>
+    <eoperations
+        name="assertEquals()"
+        eparameters="expected:double, actual:double, delta:double"
+        etype="void"
+        methodBody="expression statement; method invocation; assertEquals; null; "
+        __idKDM="assertEquals___double__double__double___"/>
+    <eoperations
+        name="assertNotNull()"
+        eparameters="message:String, object:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; assertTrue; NOT_EQUALS; object; null; "
+        __idKDM="assertNotNull___String__Object___"/>
+    <eoperations
+        name="assertNotNull()"
+        eparameters="object:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; assertNotNull; null; "
+        __idKDM="assertNotNull___Object___"/>
+    <eoperations
+        name="assertNull()"
+        eparameters="message:String, object:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; assertTrue; EQUALS; object; null; "
+        __idKDM="assertNull___String__Object___"/>
+    <eoperations
+        name="assertNull()"
+        eparameters="object:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; assertNull; null; "
+        __idKDM="assertNull___Object___"/>
+    <eoperations
+        name="assertSame()"
+        eparameters="message:String, expected:Object, actual:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; failNotSame; if; return; EQUALS; expected; "
+        __idKDM="assertSame___String__Object__Object___"/>
+    <eoperations
+        name="assertSame()"
+        eparameters="expected:Object, actual:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; assertSame; null; "
+        __idKDM="assertSame___Object__Object___"/>
+    <eoperations
+        name="assertNotSame()"
+        eparameters="message:String, unexpected:Object, actual:Object"
+        etype="void"
+        methodBody="if; expression statement; method invocation; failSame; EQUALS; unexpected; "
+        __idKDM="assertNotSame___String__Object__Object___"/>
+    <eoperations
+        name="assertNotSame()"
+        eparameters="unexpected:Object, actual:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; assertNotSame; null; "
+        __idKDM="assertNotSame___Object__Object___"/>
+    <eoperations
+        name="failSame()"
+        eparameters="message:String"
+        etype="void"
+        methodBody="expression statement; method invocation; fail; PLUS; formatted; string literal; if; expression statement; ASSIGN; formatted; PLUS; message; string literal; NOT_EQUALS; message; null; variable declaration; formatted; "
+        __idKDM="failSame___String___"/>
+    <eoperations
+        name="failNotSame()"
+        eparameters="message:String, expected:Object, actual:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; fail; PLUS; formatted; string literal; string literal; string literal; if; expression statement; ASSIGN; formatted; PLUS; message; string literal; NOT_EQUALS; message; null; variable declaration; formatted; "
+        __idKDM="failNotSame___String__Object__Object___"/>
+    <eoperations
+        name="failNotEquals()"
+        eparameters="message:String, expected:Object, actual:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; fail; method invocation; format; "
+        __idKDM="failNotEquals___String__Object__Object___"/>
+    <eoperations
+        name="format()"
+        eparameters="message:String, expected:Object, actual:Object"
+        etype="String"
+        methodBody="if; return; PLUS; formatted; string literal; string literal; string literal; return; PLUS; formatted; method invocation; formatClassAndValue; string literal; method invocation; formatClassAndValue; string literal; method invocation; equals; variable declaration; actualString; variable declaration; expectedString; if; expression statement; ASSIGN; formatted; PLUS; message; string literal; CONDITIONAL_AND; NOT; method invocation; equals; string literal; NOT_EQUALS; message; null; variable declaration; formatted; "
+        __idKDM="format___String__Object__Object___"/>
+    <eoperations
+        name="formatClassAndValue()"
+        eparameters="value:Object, valueString:String"
+        etype="String"
+        methodBody="return; PLUS; className; string literal; string literal; variable declaration; className; "
+        __idKDM="formatClassAndValue___Object__String___"/>
+    <eoperations
+        name="assertEquals()"
+        eparameters="message:String, expecteds:java.lang.Object[], actuals:java.lang.Object[]"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; "
+        __idKDM="assertEquals___String__java_lang_Object____java_lang_Object_____"/>
+    <eoperations
+        name="assertEquals()"
+        eparameters="expecteds:java.lang.Object[], actuals:java.lang.Object[]"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; "
+        __idKDM="assertEquals___java_lang_Object____java_lang_Object_____"/>
+    <eoperations
+        name="assertThat()"
+        eparameters="actual:T, matcher:Matcher&lt;? super T>"
+        etype="void"
+        methodBody="expression statement; method invocation; assertThat; string literal; "
+        __idKDM="assertThat___T__Matcher___super_T____"/>
+    <eoperations
+        name="assertThat()"
+        eparameters="reason:String, actual:T, matcher:Matcher&lt;? super T>"
+        etype="void"
+        methodBody="if; throw; class instance creation; Error; method invocation; toString; expression statement; method invocation; appendText; string literal; expression statement; method invocation; appendValue; expression statement; method invocation; appendText; string literal; expression statement; method invocation; appendDescriptionOf; expression statement; method invocation; appendText; string literal; expression statement; method invocation; appendText; variable declaration; class instance creation; new StringDescription(); description; NOT; method invocation; matches; "
+        __idKDM="assertThat___String__T__Matcher___super_T____"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertTrue()"
+        eparameters="message:String, condition:boolean"
+        etype="void"
+        methodBody="if; expression statement; method invocation; fail; NOT; "
+        __idKDM="assertTrue___String__boolean___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertNotEquals()"
+        eparameters="first:double, second:double, delta:double"
+        etype="void"
+        methodBody="expression statement; method invocation; assertNotEquals; null; "
+        __idKDM="assertNotEquals___double__double__double___"
+        diff_kind_Right="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertEquals()"
+        eparameters="expected:double, actual:double, delta:double"
+        etype="void"
+        methodBody="expression statement; method invocation; assertEquals; null; "
+        __idKDM="assertEquals___double__double__double___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="failEquals()"
+        eparameters="message:String, actual:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; fail; expression statement; PLUS_ASSIGN; formatted; PLUS; actual; string literal; if; expression statement; ASSIGN; formatted; PLUS; message; string literal; NOT_EQUALS; message; null; variable declaration; formatted; "
+        __idKDM="failEquals___String__Object___"
+        diff_kind_Right="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertEquals()"
+        eparameters="message:String, expected:long, actual:long"
+        etype="void"
+        methodBody="expression statement; method invocation; assertEquals; cast; Long; cast; Long; "
+        __idKDM="assertEquals___String__long__long___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertNotNull()"
+        eparameters="message:String, object:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; assertTrue; NOT_EQUALS; object; null; "
+        __idKDM="assertNotNull___String__Object___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertEquals()"
+        eparameters="expected:float, actual:float, delta:float"
+        etype="void"
+        methodBody="expression statement; method invocation; assertEquals; null; "
+        __idKDM="assertEquals___float__float__float___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:double[], actuals:double[], delta:double, null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; arrayEquals; class instance creation; new InexactComparisonCriteria(delta); "
+        __idKDM="assertArrayEquals___String__double____double____double__ArrayComparisonFailure___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:char[], actuals:char[], null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; internalArrayEquals; "
+        __idKDM="assertArrayEquals___String__char____char____ArrayComparisonFailure___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="fail()"
+        eparameters="message:String"
+        etype="void"
+        methodBody="throw; class instance creation; AssertionError; if; throw; class instance creation; AssertionError; EQUALS; message; null; "
+        __idKDM="fail___String___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertArrayEquals()"
+        eparameters="expecteds:double[], actuals:double[], delta:double"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; null; "
+        __idKDM="assertArrayEquals___double____double____double___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="equalsRegardingNull()"
+        eparameters="expected:Object, actual:Object"
+        etype="boolean"
+        methodBody="return; method invocation; isEquals; if; return; EQUALS; actual; null; EQUALS; expected; null; "
+        __idKDM="equalsRegardingNull___Object__Object___"
+        diff_kind_Right="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertEquals()"
+        eparameters="message:String, expected:double, actual:double"
+        etype="void"
+        methodBody="expression statement; method invocation; fail; string literal; "
+        __idKDM="assertEquals___String__double__double___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertEquals()"
+        eparameters="message:String, expecteds:java.lang.Object[], actuals:java.lang.Object[]"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; "
+        __idKDM="assertEquals___String__java_lang_Object____java_lang_Object_____"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:long[], actuals:long[], null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; internalArrayEquals; "
+        __idKDM="assertArrayEquals___String__long____long____ArrayComparisonFailure___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertEquals()"
+        eparameters="expected:double, actual:double"
+        etype="void"
+        methodBody="expression statement; method invocation; assertEquals; null; "
+        __idKDM="assertEquals___double__double___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertArrayEquals()"
+        eparameters="expecteds:byte[], actuals:byte[]"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; null; "
+        __idKDM="assertArrayEquals___byte____byte_____"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertEquals()"
+        eparameters="message:String, expected:float, actual:float, delta:float"
+        etype="void"
+        methodBody="if; expression statement; method invocation; failNotEquals; class instance creation; Float; class instance creation; Float; NOT; parenthesized; LESS_EQUALS; delta; method invocation; abs; MINUS; expected; if; return; EQUALS; number literal; method invocation; compare; "
+        __idKDM="assertEquals___String__float__float__float___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:java.lang.Object[], actuals:java.lang.Object[], null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; internalArrayEquals; "
+        __idKDM="assertArrayEquals___String__java_lang_Object____java_lang_Object____ArrayComparisonFailure___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:float[], actuals:float[], delta:float, null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; arrayEquals; class instance creation; new InexactComparisonCriteria(delta); "
+        __idKDM="assertArrayEquals___String__float____float____float__ArrayComparisonFailure___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertEquals()"
+        eparameters="expected:Object, actual:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; assertEquals; null; "
+        __idKDM="assertEquals___Object__Object___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:short[], actuals:short[], null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; internalArrayEquals; "
+        __idKDM="assertArrayEquals___String__short____short____ArrayComparisonFailure___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertArrayEquals()"
+        eparameters="expecteds:long[], actuals:long[]"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; null; "
+        __idKDM="assertArrayEquals___long____long_____"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertArrayEquals()"
+        eparameters="expecteds:char[], actuals:char[]"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; null; "
+        __idKDM="assertArrayEquals___char____char_____"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertEquals()"
+        eparameters="expected:long, actual:long"
+        etype="void"
+        methodBody="expression statement; method invocation; assertEquals; null; "
+        __idKDM="assertEquals___long__long___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertThat()"
+        eparameters="actual:T, matcher:Matcher&lt;? super T>"
+        etype="void"
+        methodBody="expression statement; method invocation; assertThat; string literal; "
+        __idKDM="assertThat___T__Matcher___super_T____"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:byte[], actuals:byte[], null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; internalArrayEquals; "
+        __idKDM="assertArrayEquals___String__byte____byte____ArrayComparisonFailure___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="failNotNull()"
+        eparameters="message:String, actual:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; fail; PLUS; formatted; string literal; string literal; if; expression statement; ASSIGN; formatted; PLUS; message; string literal; NOT_EQUALS; message; null; variable declaration; formatted; "
+        __idKDM="failNotNull___String__Object___"
+        diff_kind_Right="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertNotSame()"
+        eparameters="message:String, unexpected:Object, actual:Object"
+        etype="void"
+        methodBody="if; expression statement; method invocation; failSame; EQUALS; unexpected; "
+        __idKDM="assertNotSame___String__Object__Object___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertArrayEquals()"
+        eparameters="expecteds:int[], actuals:int[]"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; null; "
+        __idKDM="assertArrayEquals___int____int_____"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertSame()"
+        eparameters="message:String, expected:Object, actual:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; failNotSame; if; return; EQUALS; expected; "
+        __idKDM="assertSame___String__Object__Object___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="doubleIsDifferent()"
+        eparameters="d1:double, d2:double, delta:double"
+        etype="boolean"
+        methodBody="expression statement; method invocation; assertEquals;"
+        __idKDM="doubleIsDifferent___double__double__double___"
+        diff_kind_Right="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertArrayEquals()"
+        eparameters="expecteds:short[], actuals:short[]"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; null; "
+        __idKDM="assertArrayEquals___short____short_____"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertEquals()"
+        eparameters="message:String, expected:double, actual:double, delta:double"
+        etype="void"
+        methodBody="if; expression statement; method invocation; failNotEquals; class instance creation; Double; class instance creation; Double; NOT; parenthesized; LESS_EQUALS; delta; method invocation; abs; MINUS; expected; if; return; EQUALS; number literal; method invocation; compare; "
+        __idKDM="assertEquals___String__double__double__double___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertArrayEquals()"
+        eparameters="message:String, expecteds:int[], actuals:int[], null:ArrayComparisonFailure"
+        etype="void"
+        methodBody="expression statement; method invocation; internalArrayEquals; "
+        __idKDM="assertArrayEquals___String__int____int____ArrayComparisonFailure___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertNull()"
+        eparameters="message:String, object:Object"
+        etype="void"
+        methodBody="expression statement; method invocation; assertTrue; EQUALS; object; null; "
+        __idKDM="assertNull___String__Object___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertArrayEquals()"
+        eparameters="expecteds:java.lang.Object[], actuals:java.lang.Object[]"
+        etype="void"
+        methodBody="expression statement; method invocation; assertArrayEquals; null; "
+        __idKDM="assertArrayEquals___java_lang_Object____java_lang_Object_____"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertEquals()"
+        eparameters="message:String, expected:Object, actual:Object"
+        etype="void"
+        methodBody="if; if; expression statement; method invocation; failNotEquals; throw; class instance creation; new ComparisonFailure(cleanMessage,(String)expected,(String)actual); cast; String; cast; String; variable declaration; cleanMessage; CONDITIONAL_AND; instanceof; String; instanceof; String; return; CONDITIONAL_AND; method invocation; isEquals; NOT_EQUALS; expected; null; if; return; CONDITIONAL_AND; EQUALS; actual; null; EQUALS; expected; null; "
+        __idKDM="assertEquals___String__Object__Object___"
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringDiffMM:DiffEOperation"
+        name="assertFalse()"
+        eparameters="message:String, condition:boolean"
+        etype="void"
+        methodBody="expression statement; method invocation; assertTrue; NOT; "
+        __idKDM="assertFalse___String__boolean___"
+        diff_kind_Left="ADD"/>
+    <diffeoperations
+        diff_kind_Right="DELETE"
+        eType="assertArrayEquals()"/>
+    <diffeoperations
+        diff_kind_Right="ADD"
+        eType="assertArrayEquals()"/>
+    <diffeoperations
+        diff_kind_Right="DELETE"
+        eType="assertSame()"/>
+    <diffeoperations
+        diff_kind_Right="ADD"
+        eType="assertSame()"/>
+    <diffeoperations
+        diff_kind_Right="DELETE"
+        eType="internalArrayEquals()"/>
+    <diffeoperations
+        diff_kind_Right="ADD"
+        eType="internalArrayEquals()"/>
+    <diffeoperations
+        diff_kind_Right="DELETE"
+        eType="assertNull()"/>
+    <diffeoperations
+        diff_kind_Right="ADD"
+        eType="assertNull()"/>
+    <diffeoperations
+        diff_kind_Right="DELETE"
+        eType="assertNotNull()"/>
+    <diffeoperations
+        diff_kind_Right="ADD"
+        eType="assertNotNull()"/>
+  </eclassifiers>
+</refactoringDiffMM:EPackage>

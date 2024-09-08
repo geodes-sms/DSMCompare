@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pacman2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:pacman2WayRuleMM="http://www.zadahmad.org/dsmcompare/pacman2WayRuleMM"
+    xsi:schemaLocation="http://www.zadahmad.org/dsmcompare/pacman2WayRuleMM ../MM/pacman2WayRuleMM.ecore#/1"
+    name="GhostMoveDown">
+  <pattern xsi:type="pacman2WayRuleMM:Pattern_Game">
+    <gridnodes
+        xsi:type="pacman2WayRuleMM:Pattern_GridNode"
+        down="D"
+        id="O"
+        ID_Pattern="1"/>
+    <gridnodes
+        xsi:type="pacman2WayRuleMM:Pattern_GridNode"
+        id="D"
+        ID_Pattern="2"/>
+    <entities
+        xsi:type="pacman2WayRuleMM:Pattern_Ghost"
+        id="G"
+        ID_Pattern="3">
+      <diffon
+          xsi:type="pacman2WayRuleMM:Pattern_DiffPositionableEntity_on"
+          diff_kind="DELETE"
+          eType="O"
+          ID_Pattern="31"
+          filter="true"/>
+      <diffon
+          xsi:type="pacman2WayRuleMM:Pattern_DiffPositionableEntity_on"
+          diff_kind="ADD"
+          eType="D"
+          ID_Pattern="32"/>
+    </entities>
+    <domainspecificdiffs
+        xsi:type="pacman2WayRuleMM:Pattern_DomainSpecificDiff"
+        name="Ghost Move Down"
+        DomainSpecificDiff_GridNode="D"
+        DomainSpecificDiff_PositionableEntity="G"
+        DomainSpecificDiff_DiffPositionableEntity_on="//@pattern/@entities.0/@diffon.1"
+        ID_Pattern="4"/>
+  </pattern>
+</pacman2WayRuleMM:Rule>

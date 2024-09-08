@@ -1,0 +1,17 @@
+/**
+ */
+package pacmanDiffMM;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Fruit</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see pacmanDiffMM.PacmanDiffMMPackage#getFruit()
+ * @model
+ * @generated
+ */
+public interface Fruit extends Food {
+} // Fruit

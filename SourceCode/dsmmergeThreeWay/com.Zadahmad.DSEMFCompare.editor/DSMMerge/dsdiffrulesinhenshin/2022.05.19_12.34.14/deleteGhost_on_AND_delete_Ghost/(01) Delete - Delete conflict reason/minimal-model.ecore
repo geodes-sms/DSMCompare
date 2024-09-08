@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore">
+  <ecore:EPackage name="deleteGhost_on_delete_Ghost" nsURI="http://cdapackage/deleteGhost_on/delete_Ghost/SymmetricReason"
+      nsPrefix="CDAPackage">
+    <eClassifiers xsi:type="ecore:EClass" name="n0_n0:Game">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="#entities#" eType="#/0/n1_n1%3ADiffGhost"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="n1_n1:DiffGhost"/>
+  </ecore:EPackage>
+  <ecore:EPackage name="delete_Ghost_deleteGhost_on" nsURI="http://cdapackage/delete_Ghost/deleteGhost_on/DeleteConflictReason"
+      nsPrefix="CDAPackage">
+    <eClassifiers xsi:type="ecore:EClass" name="#n1_n1:DiffGhost#"/>
+    <eClassifiers xsi:type="ecore:EClass" name="n0_n0:Game">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="#entities#" eType="#/1/%23n1_n1%3ADiffGhost%23"/>
+    </eClassifiers>
+  </ecore:EPackage>
+</xmi:XMI>

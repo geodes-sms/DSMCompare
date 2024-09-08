@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring2WayRuleMM="www.geodes.UdeM.edu/refactoring2WayRuleMM"
+    name="pullUpRefrence">
+  <rulePattern_EPackage xsi:type="refactoring2WayRuleMM:Pattern_EPackage">
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="super"
+        ID_Pattern="1">
+      <differeferences
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_ereferences"
+          diff_kind="ADD"
+          eType="ref"
+          ID_Pattern="4"/>
+    </eclassifiers>
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="sub"
+        esupertypes="super"
+        ID_Pattern="2">
+      <ereferences
+          xsi:type="refactoring2WayRuleMM:Pattern_EReference"
+          name="ref"
+          ID_Pattern="6"/>
+      <differeferences
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_ereferences"
+          diff_kind="DELETE"
+          eType="ref"
+          ID_Pattern="8"
+          filter="true"/>
+    </eclassifiers>
+  </rulePattern_EPackage>
+   <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+        name="pullUpRefrence"
+        SemanticObject_EClass="super sub"
+        SemanticObject_EPackage="//@rulePattern_EPackage.0"
+        SemanticObject_EReference="ref"
+        SemanticObject_DiffEClass_ereferences="//@rulePattern_EPackage.0/@eclassifiers.0/@differeferences.0"
+        ID_Pattern="3"/>
+</refactoring2WayRuleMM:Rule>

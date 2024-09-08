@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore">
+  <ecore:EPackage name="deleteGridNode_right_deleteGridNode_up" nsURI="http://cdapackage/deleteGridNode_right/deleteGridNode_up/SymmetricReason"
+      nsPrefix="CDAPackage">
+    <eClassifiers xsi:type="ecore:EClass" name="n0_n0:Game">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="#gridnodes#" eType="#/0/n1_n1%3AGridNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="n1_n1:GridNode"/>
+  </ecore:EPackage>
+  <ecore:EPackage name="deleteGridNode_up_deleteGridNode_right" nsURI="http://cdapackage/deleteGridNode_up/deleteGridNode_right/DeleteConflictReason"
+      nsPrefix="CDAPackage">
+    <eClassifiers xsi:type="ecore:EClass" name="n0_n0:Game">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="#gridnodes#" eType="#/1/n1_n1%3AGridNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="n1_n1:GridNode"/>
+  </ecore:EPackage>
+</xmi:XMI>

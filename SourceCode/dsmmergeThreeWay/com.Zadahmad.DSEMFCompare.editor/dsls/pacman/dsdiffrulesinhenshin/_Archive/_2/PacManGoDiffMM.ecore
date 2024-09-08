@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="PacmanGoDiffMM" nsURI="http://www.zadahmad.org/dsmcompare/PacmanGoDiffMM"
+    nsPrefix="PacmanGoDiffMM">
+  <eClassifiers xsi:type="ecore:EClass" name="GridNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="up" eType="#//GridNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bottom" eType="#//GridNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//GridNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//GridNode"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffup" upperBound="2"
+        eType="#//DiffGridNode_up" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffbottom" upperBound="2"
+        eType="#//DiffGridNode_bottom" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffleft" upperBound="2"
+        eType="#//DiffGridNode_left" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffright" upperBound="2"
+        eType="#//DiffGridNode_right" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Food" eSuperTypes="#//PositionableEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Pacman" eSuperTypes="#//PositionableEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Ghost" eSuperTypes="#//PositionableEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Scoreboard">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Game">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gridnodes" upperBound="-1"
+        eType="#//GridNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scoreboard" lowerBound="1"
+        eType="#//Scoreboard" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//PositionableEntity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domainspecificdiffs" upperBound="-1"
+        eType="#//DomainSpecificDiff" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffgridnodes" upperBound="-1"
+        eType="#//DiffGame_gridnodes" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffscoreboard" upperBound="2"
+        eType="#//DiffGame_scoreboard" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffentities" upperBound="-1"
+        eType="#//DiffGame_entities" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffdomainspecificdiffs"
+        upperBound="-1" eType="#//DiffGame_domainspecificdiffs" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PositionableEntity" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="on" lowerBound="1" eType="#//GridNode"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffon" upperBound="2"
+        eType="#//DiffPositionableEntity_on" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ClassOp">
+    <eLiterals name="ADD" literal="ADD"/>
+    <eLiterals name="DELETE" value="1" literal="DELETE"/>
+    <eLiterals name="MODIFY" value="2" literal="MODIFY"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AscOp">
+    <eLiterals name="ADD" literal="ADD"/>
+    <eLiterals name="DELETE" value="1" literal="DELETE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainSpecificDiff">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_GridNode"
+        upperBound="-1" eType="#//GridNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_Food"
+        upperBound="-1" eType="#//Food"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_Pacman"
+        upperBound="-1" eType="#//Pacman"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_Ghost"
+        upperBound="-1" eType="#//Ghost"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_Scoreboard"
+        upperBound="-1" eType="#//Scoreboard"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DomainSpecificDiff_PositionableEntity"
+        upperBound="-1" eType="#//PositionableEntity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffGridNode" eSuperTypes="#//GridNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//ClassOp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffGridNode_up">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//AscOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//GridNode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffGridNode_bottom">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//AscOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//GridNode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffGridNode_left">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//AscOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//GridNode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffGridNode_right">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//AscOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//GridNode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffFood" eSuperTypes="#//Food">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//ClassOp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffPacman" eSuperTypes="#//Pacman">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//ClassOp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffGhost" eSuperTypes="#//Ghost">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//ClassOp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffScoreboard" eSuperTypes="#//Scoreboard">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//ClassOp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffGame" eSuperTypes="#//Game">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//ClassOp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffGame_gridnodes">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//AscOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//GridNode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffGame_scoreboard">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//AscOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//Scoreboard"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffGame_entities">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//AscOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//PositionableEntity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffGame_domainspecificdiffs">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//AscOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//DomainSpecificDiff"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffPositionableEntity_on">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
+        eType="#//AscOp"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//GridNode"/>
+  </eClassifiers>
+</ecore:EPackage>

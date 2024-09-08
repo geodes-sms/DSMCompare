@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore">
+  <ecore:EPackage name="PacmanEatFood2_PacmanEatFood2" nsURI="http://cdapackage/PacmanEatFood2/PacmanEatFood2/SymmetricReason"
+      nsPrefix="CDAPackage">
+    <eClassifiers xsi:type="ecore:EClass" name="#n31_n31:DiffPositionableEntity_on#">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left=n31diff_kind_Left _ n31diff_kind_Left"
+          unique="false" lowerBound="1" eType="ecore:EEnum ../../../../MM/pacmanDiffMM.ecore#//AscDiffKind"
+          defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right=n31diff_kind_Right _ n31diff_kind_Right"
+          unique="false" lowerBound="1" eType="ecore:EEnum ../../../../MM/pacmanDiffMM.ecore#//AscDiffKind"
+          defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="#eType#" eType="#/0/n1_n1%3AGridNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="n3_n3:DiffFood">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left=n3diff_kind_Left _ n3diff_kind_Left"
+          unique="false" lowerBound="1" eType="ecore:EEnum ../../../../MM/pacmanDiffMM.ecore#//ClassDiffKind"
+          defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right=n3diff_kind_Right _ n3diff_kind_Right"
+          unique="false" lowerBound="1" eType="ecore:EEnum ../../../../MM/pacmanDiffMM.ecore#//ClassDiffKind"
+          defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="#diffon#" eType="#/0/%23n31_n31%3ADiffPositionableEntity_on%23"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="n1_n1:GridNode"/>
+  </ecore:EPackage>
+  <ecore:EPackage name="PacmanEatFood2_PacmanEatFood2" nsURI="http://cdapackage/PacmanEatFood2/PacmanEatFood2/DeleteConflictReason"
+      nsPrefix="CDAPackage">
+    <eClassifiers xsi:type="ecore:EClass" name="#n31_n31:DiffPositionableEntity_on#">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left=n31diff_kind_Left _ n31diff_kind_Left"
+          unique="false" lowerBound="1" eType="ecore:EEnum ../../../../MM/pacmanDiffMM.ecore#//AscDiffKind"
+          defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right=n31diff_kind_Right _ n31diff_kind_Right"
+          unique="false" lowerBound="1" eType="ecore:EEnum ../../../../MM/pacmanDiffMM.ecore#//AscDiffKind"
+          defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="#eType#" eType="#/1/n1_n1%3AGridNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="n1_n1:GridNode"/>
+    <eClassifiers xsi:type="ecore:EClass" name="n3_n3:DiffFood">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Left=n3diff_kind_Left _ n3diff_kind_Left"
+          unique="false" lowerBound="1" eType="ecore:EEnum ../../../../MM/pacmanDiffMM.ecore#//ClassDiffKind"
+          defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind_Right=n3diff_kind_Right _ n3diff_kind_Right"
+          unique="false" lowerBound="1" eType="ecore:EEnum ../../../../MM/pacmanDiffMM.ecore#//ClassDiffKind"
+          defaultValueLiteral="NON"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="#diffon#" eType="#/1/%23n31_n31%3ADiffPositionableEntity_on%23"/>
+    </eClassifiers>
+  </ecore:EPackage>
+</xmi:XMI>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Rule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_hVc_ANeREeyEnrzG7GdwSg" name="deleteFruit_on">
+  <lhs xmi:id="_hVc_AdeREeyEnrzG7GdwSg" name="deleteFruit_on_LHS">
+    <nodes xmi:id="_hVc_AteREeyEnrzG7GdwSg" name="n0" outgoing="_hVc_BdeREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_hVc_A9eREeyEnrzG7GdwSg" name="n1" incoming="_hVc_BdeREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Fruit"/>
+    </nodes>
+    <nodes xmi:id="_hVc_BNeREeyEnrzG7GdwSg" name="n2">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+    </nodes>
+    <edges xmi:id="_hVc_BdeREeyEnrzG7GdwSg" source="_hVc_AteREeyEnrzG7GdwSg" target="_hVc_A9eREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game/entities"/>
+    </edges>
+  </lhs>
+  <rhs xmi:id="_hVc_BteREeyEnrzG7GdwSg" name="deleteFruit_on_RHS">
+    <nodes xmi:id="_hVc_B9eREeyEnrzG7GdwSg" name="n0">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_hVc_CNeREeyEnrzG7GdwSg" name="n1">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Fruit"/>
+    </nodes>
+  </rhs>
+  <mappings xmi:id="_hVc_CdeREeyEnrzG7GdwSg" origin="_hVc_AteREeyEnrzG7GdwSg" image="_hVc_B9eREeyEnrzG7GdwSg"/>
+  <mappings xmi:id="_hVc_CteREeyEnrzG7GdwSg" origin="_hVc_A9eREeyEnrzG7GdwSg" image="_hVc_CNeREeyEnrzG7GdwSg"/>
+</henshin:Rule>

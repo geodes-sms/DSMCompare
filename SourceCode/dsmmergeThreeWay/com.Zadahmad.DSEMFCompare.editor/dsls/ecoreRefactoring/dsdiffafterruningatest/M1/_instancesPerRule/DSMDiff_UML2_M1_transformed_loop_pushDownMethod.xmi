@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoringDiffMM:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" xsi:schemaLocation="www.geodes.UdeM.edu/refactoringDiffMM ../../metamodels/refactoringRuleMM.ecore#/0" name="UML_14">
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="PackageableElement">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="body" etype="EString"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="owningPackage" etype="Package"/>
+  </eclassifiers>
+  <eclassifiers name="Namespace" esupertypes="//@eclassifiers.3">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="visibility" etype="VisibilityKind" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="importedMember" etype="PackageableElement"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="packageImport" etype="PackageImport"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="ownedElement" etype="NamedElement"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="elementImport" etype="ElementImport"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="ownedRule" etype="Constraint"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="namespace" etype="Namespace" operation="DELETE"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.42"/>
+    <diffesupertypes eType="//@eclassifiers.42"/>
+  </eclassifiers>
+  <eclassifiers name="NamedElement" esupertypes="//@eclassifiers.4">
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op11" operation="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op21" operation="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op31" operation="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op41" operation="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op51" operation="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op61" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="clientDependency" etype="Dependency"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="NamedElement" esupertypes="//@eclassifiers.4">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="visibility" etype="VisibilityKind"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="namespace" etype="Namespace"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="supplierDependency" etype="Dependency"/>
+  </eclassifiers>
+  <eclassifiers name="Element" esupertypes="//@eclassifiers.3">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="visibility" etype="VisibilityKind" operation="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op11"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op21"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op31"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op41"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op51"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op61"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="ownedComment" etype="Comment"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="owner" etype="Element"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="ownedElement" etype="Element"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="namespace" etype="Namespace" operation="DELETE"/>
+  </eclassifiers>
+  <eclassifiers name="Comment" esupertypes="//@eclassifiers.7">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="body" etype="EString" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isQuery" etype="EBoolean" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="annotatedElement" etype="ModelElement" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="owningElement" etype="Element"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="parameter" etype="Parameter" operation="DELETE"/>
+  </eclassifiers>
+  <eclassifiers name="Relationship" esupertypes="//@eclassifiers.4">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isDerived" etype="EBoolean" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="relatedElement" etype="Element"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.42"/>
+    <diffesupertypes eType="//@eclassifiers.4"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="DirectRelationship">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isQuery" etype="EBoolean"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="target" etype="Element"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="source" etype="Element"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="parameter" etype="Parameter"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="ElementImport">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="visibility" etype="VisibilityKind"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="importedElement" etype="PackageableElement"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="importingNamespace" etype="Namespace"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="PackageImport">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="visibility" etype="VisibilityKind"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="importedPackage" etype="Package"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="importingNamespace" etype="Namespace"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="Package" esupertypes="//@eclassifiers.0 //@eclassifiers.1">
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="nestingPackage" etype="Package"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="nestedPackage" etype="Package"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="packagedElement" etype="PackageableElement"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="packageMerge" etype="PackageMerge"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="MultiplicityElement" esupertypes="//@eclassifiers.4">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isOrdered" etype="EBoolean"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isUnique" etype="EBoolean"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="lowerValue" etype="ValueSpecification"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="lowerValue" etype="ValueSpecification"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="ValueSpecification" esupertypes="//@eclassifiers.13 //@eclassifiers.0">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="defaultValue" etype="EString" new_name=""/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="owningLower" etype="MultiplicityElement"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="owningUpper" etype="MultiplicityElement"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="owningConstraint" etype="Constraint"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="owningParameter" etype="Parameter"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="owningProperty" etype="Property"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="feature" etype="BehavioralFeature"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="TypedElement" esupertypes="//@eclassifiers.2">
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="type" etype="Type"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="Type" esupertypes="//@eclassifiers.0"/>
+  <eclassifiers name="Constraint" esupertypes="//@eclassifiers.0">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="body" etype="EString" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="annotatedElement" etype="ModelElement" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="constrainedElement" etype="Element"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="specification" etype="ValueSpecification"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="context" etype="Namespace"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="owningPackage" etype="Package" operation="DELETE"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.42"/>
+    <diffesupertypes eType="//@eclassifiers.0"/>
+  </eclassifiers>
+  <eclassifiers name="Generalization" esupertypes="//@eclassifiers.6">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isSubstitutable" etype="EBoolean"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="discriminator" etype="EString" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="general" etype="Classifier"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="specific" etype="Classifier"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="generalizationSet" etype="GeneralizationSet"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="child" etype="GeneralizableElement" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="parent" etype="GeneralizableElement" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="powertype" etype="Classifier" operation="DELETE"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.6"/>
+    <diffesupertypes eType="//@eclassifiers.7"/>
+  </eclassifiers>
+  <eclassifiers name="Classifier" esupertypes="//@eclassifiers.1">
+    <eattributes name="feature" etype="Feature"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isAbstract" etype="EBoolean"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="generalization" etype="Generalization"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="Class" etype="Class"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="powertypeExtent" etype="GeneralizationSet"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="substitution" etype="Substitution"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="typedParameter" etype="Parameter" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="typedFeature" etype="StructuralFeature" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="powertypeRange" etype="Generalization" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="association" etype="AssociationEnd" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="specifiedEnd" etype="AssociationEnd" operation="DELETE"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.18"/>
+    <diffesupertypes eType="//@eclassifiers.14"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="GeneralizableElement" operation="DELETE">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isRoot" etype="EBoolean"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isLeaf" etype="EBoolean"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isAbstract" etype="EBoolean"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="ownerScope" etype="ScopeKind"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isQuery" etype="EBoolean" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="generalization" etype="Generalization"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="specialization" etype="Generalization"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="redefinedOperation" etype="Operation" operation="DELETE"/>
+  </eclassifiers>
+  <eclassifiers name="Feature" esupertypes="//@eclassifiers.18">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isStatic" etype="EBoolean"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="ownerScope" etype="ScopeKind" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="visibility" etype="VisibilityKind" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="owner" etype="Classifier" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="featuringClassifier" etype="Classifier"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="generalization" etype="Generalization" operation="DELETE"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.42"/>
+  </eclassifiers>
+  <eclassifiers name="StructuralFeature" esupertypes="//@eclassifiers.19">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isReadOnly" etype="EBoolean"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="changeability" etype="ChangeableKind"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="targetScope" etype="ScopeKind"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="ordering" etype="OrderingKind"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="ownerScope" etype="ScopeKind"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="visibility" etype="VisibilityKind"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="owner" etype="Classifier"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="type" etype="Classifier"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="multiplicity" etype="Multiplicity"/>
+    <diffesupertypes eType="//@eclassifiers.13"/>
+    <diffesupertypes eType="//@eclassifiers.11"/>
+  </eclassifiers>
+  <eclassifiers name="BehavioralFeature" esupertypes="//@eclassifiers.7">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isQuery" etype="EBoolean" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isNavigable" etype="EBoolean"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="ownedParameter" etype="Parameter"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="raisedException" etype="Type"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="parameter" etype="Parameter" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="association" etype="Association"/>
+    <diffesupertypes eType="//@eclassifiers.1"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.46"/>
+  </eclassifiers>
+  <eclassifiers name="Parameter" esupertypes="//@eclassifiers.12">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="kind" etype="ParameterDirectionKind" operation="MODIFY" new_name="direction"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="defaultValue" etype="EString" operation="DELETE" new_name=""/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="type" etype="Classifier" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="feature" etype="BehavioralFeature" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="ownerFormalParam" etype="BehavioralFeature"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="defaultValue" etype="ValueSpecification"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.42"/>
+    <diffesupertypes eType="//@eclassifiers.13"/>
+    <diffesupertypes eType="//@eclassifiers.11"/>
+  </eclassifiers>
+  <eclassifiers name="Operation" esupertypes="//@eclassifiers.21">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isQuery" etype="EBoolean"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isRoot" etype="EBoolean" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isLeaf" etype="EBoolean" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isAbstract" etype="EBoolean" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="specification" etype="EString" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="redefinedOperation" etype="Operation"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="Class" etype="Class"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.18"/>
+  </eclassifiers>
+  <eclassifiers name="Class" esupertypes="//@eclassifiers.17">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isActive" etype="EBoolean" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="superClass" etype="Class"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="nestedClassifier" etype="Classifier"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="ownedOperation" etype="Operation"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="ownedAttribute" etype="Property"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="literal" etype="EnumerationLiteral" new_name="ownedLiteral"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="typedParameter" etype="Parameter"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="typedFeature" etype="StructuralFeature"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="powertypeRange" etype="Generalization"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="association" etype="AssociationEnd"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="specifiedEnd" etype="AssociationEnd"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.29"/>
+  </eclassifiers>
+  <eclassifiers name="DataType" esupertypes="//@eclassifiers.17">
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op111"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op211"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op311"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op411"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op511"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op611"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="Property">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isDerived" etype="EBoolean"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="aggregation" etype="AggregationKind"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="defaultValue" etype="ValueSpecification"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="Class" etype="Class"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="association" etype="Association"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="owningAssociation" etype="Association"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="qualifier" etype="Property"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="owningAssociation" etype="Property"/>
+  </eclassifiers>
+  <eclassifiers name="Association" esupertypes="//@eclassifiers.6">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isDerived" etype="EBoolean"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="connection" etype="AssociationEnd" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="memberEnd" etype="Property"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="ownedEnd" etype="Property"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.18"/>
+    <diffesupertypes eType="//@eclassifiers.17"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.28"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="PrimitiveType" esupertypes="//@eclassifiers.25" operation="DELETE">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isDerived" etype="EBoolean" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="memberEnd" etype="Property" operation="DELETE"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="Primitive" esupertypes="//@eclassifiers.25" operation="DELETE">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isDerived" etype="EBoolean" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="nestedClassifier" etype="Classifier"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="literal" etype="EnumerationLiteral" operation="DELETE" new_name="ownedLiteral"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="memberEnd" etype="Property" operation="DELETE"/>
+  </eclassifiers>
+  <eclassifiers name="Enumeration" esupertypes="//@eclassifiers.25">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="lower" etype="EInt"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="upper" etype="EInt"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isDerived" etype="EBoolean"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op6"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="literal" etype="EnumerationLiteral" operation="MODIFY" new_name="ownedLiteral"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="multiplicity" etype="Multiplicity"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="memberEnd" etype="Property"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.43"/>
+  </eclassifiers>
+  <eclassifiers name="EnumerationLiteral" esupertypes="//@eclassifiers.13">
+    <eattributes name="enumeration" etype="Enumeration"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="name" etype="EString"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op5" operation="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op6" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="constraint" etype="Constraint"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.42"/>
+    <diffesupertypes eType="//@eclassifiers.12"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="PackageMerge" esupertypes="//@eclassifiers.7">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="body" etype="EString"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="receivingPackage" etype="Package"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="mergedPackage" etype="Package"/>
+  </eclassifiers>
+  <eclassifiers name="Dependency" esupertypes="//@eclassifiers.38">
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op5"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="supplier" etype="ModelElement" operation="MODIFY" new_etype="NamedElement"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="client" etype="ModelElement" operation="MODIFY" new_etype="NamedElement"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.6"/>
+    <diffesupertypes eType="//@eclassifiers.7"/>
+    <diffesupertypes eType="//@eclassifiers.0"/>
+  </eclassifiers>
+  <eclassifiers name="Abstraction" esupertypes="//@eclassifiers.33">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="initialValue" etype="EString" operation="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op3" operation="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op4"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="associationEnd" etype="AssociationEnd" operation="DELETE"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.45"/>
+  </eclassifiers>
+  <eclassifiers name="Usage" esupertypes="//@eclassifiers.33">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="body" etype="EString" operation="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op2" operation="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op3"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="operation" etype="Operation" operation="DELETE"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.44"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="Realization" esupertypes="//@eclassifiers.34"/>
+  <eclassifiers name="Interface" esupertypes="//@eclassifiers.17">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="upper" etype="EInt"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op1" operation="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op2"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="redefinedInterface" etype="Interface"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="multiplicity" etype="Multiplicity"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.43"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="InterfaceRealization" esupertypes="//@eclassifiers.36">
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="contract" etype="Interface"/>
+  </eclassifiers>
+  <eclassifiers name="AssociationClass" esupertypes="//@eclassifiers.34 //@eclassifiers.24">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="name" etype="EString"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op1"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="constraint" etype="Constraint"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.42"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="GeneralizationSet">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isCovering" etype="EBoolean"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isDisjoint" etype="EBoolean"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isLeaf" etype="EBoolean"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="body" etype="EString"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="generalization" etype="Generalization"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="powertype" etype="Classifier"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="redefinedElement" etype="RedefinableElement"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="operation" etype="Operation"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="multiplicity" etype="Multiplicity"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="RedefinableElement">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isLeaf" etype="EBoolean"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isSpecification" etype="EBoolean"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="redefinedElement" etype="RedefinableElement"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="ModelElement" operation="DELETE">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="name" etype="EString" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isLeaf" etype="EBoolean" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="constraint" etype="Constraint" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="comments" etype="Comment" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="supplierDependency" etype="Dependency" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="clientDependency" etype="Dependency" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="redefinedElement" etype="RedefinableElement" operation="DELETE"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="MultiplicityRange" operation="DELETE">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="lower" etype="EInt" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="upper" etype="EInt" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="body" etype="EString" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isDisjoint" etype="EBoolean" operation="MODIFY"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isLeaf" etype="EBoolean" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="multiplicity" etype="Multiplicity" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="operation" etype="Operation" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="generalization" etype="Generalization" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="powertype" etype="Classifier" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="redefinedElement" etype="RedefinableElement" operation="DELETE"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="Method" esupertypes="//@eclassifiers.21" operation="DELETE">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="body" etype="EString" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isDisjoint" etype="EBoolean" operation="MODIFY"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isLeaf" etype="EBoolean" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="operation" etype="Operation" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="generalization" etype="Generalization" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="powertype" etype="Classifier" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="redefinedElement" etype="RedefinableElement" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="multiplicity" etype="Multiplicity" operation="DELETE"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="Attribute" esupertypes="//@eclassifiers.20" operation="DELETE">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="initialValue" etype="EString" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="associationEnd" etype="AssociationEnd" operation="DELETE"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="AssociationEnd" esupertypes="//@eclassifiers.42" operation="DELETE">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isNavigable" etype="EBoolean" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="aggregation" etype="AggregationKind" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="visibility" etype="VisibilityKind" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="targetScope" etype="ScopeKind" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="changeability" etype="ChangeableKind" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="association" etype="Association" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="participant" etype="Classifier" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="specification" etype="Classifier" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="multiplicity" etype="Multiplicity" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="qualifier" etype="Attribute" operation="DELETE"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="Binding" esupertypes="//@eclassifiers.33" operation="DELETE">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="ordering" etype="OrderingKind" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="type" etype="Classifier" operation="DELETE"/>
+    <diffesupertypes operation="DELETE" eType="//@eclassifiers.20"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="Permission" esupertypes="//@eclassifiers.33" operation="DELETE">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="body" etype="EString" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isSpecification" etype="EBoolean" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="receivingPackage" etype="Package" operation="DELETE"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="ElementOwnership" operation="DELETE">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="visibility" etype="VisibilityKind" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="isSpecification" etype="EBoolean" operation="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="body" etype="EString" operation="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="receivingPackage" etype="Package" operation="DELETE"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="rnm1" operation="MODIFY">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="A1" operation="MODIFY" new_name="A2"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="A11" operation="MODIFY" new_name="A22"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="A111" operation="MODIFY" new_name="A333"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op1" operation="MODIFY" new_name="op11"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op2" operation="MODIFY" new_name="op11"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op3" operation="MODIFY" new_name="op11"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op4" operation="MODIFY" new_name="op11"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op5" operation="MODIFY" new_name="op11"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="op6" operation="MODIFY" new_name="op11"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="r1" operation="MODIFY" new_name="r11"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="r2" operation="MODIFY" new_name="r11"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="r3" operation="MODIFY" new_name="r11"/>
+  </eclassifiers>
+  <domainspecificdiffs name="pushDownMethod" DomainSpecificDiff_EClass="//@eclassifiers.33" DomainSpecificDiff_EOperation="//@eclassifiers.34/@eoperations.1"/>
+  <domainspecificdiffs name="pushDownMethod" DomainSpecificDiff_EClass="//@eclassifiers.17" DomainSpecificDiff_EOperation="//@eclassifiers.25/@eoperations.5"/>
+  <domainspecificdiffs name="pushDownMethod" DomainSpecificDiff_EClass="//@eclassifiers.17" DomainSpecificDiff_EOperation="//@eclassifiers.25/@eoperations.4"/>
+  <domainspecificdiffs name="pushDownMethod" DomainSpecificDiff_EClass="//@eclassifiers.17" DomainSpecificDiff_EOperation="//@eclassifiers.25/@eoperations.3"/>
+  <domainspecificdiffs name="pushDownMethod" DomainSpecificDiff_EClass="//@eclassifiers.17" DomainSpecificDiff_EOperation="//@eclassifiers.25/@eoperations.2"/>
+  <domainspecificdiffs name="pushDownMethod" DomainSpecificDiff_EClass="//@eclassifiers.17" DomainSpecificDiff_EOperation="//@eclassifiers.25/@eoperations.1"/>
+  <domainspecificdiffs name="pushDownMethod" DomainSpecificDiff_EClass="//@eclassifiers.17" DomainSpecificDiff_EOperation="//@eclassifiers.25/@eoperations.0"/>
+</refactoringDiffMM:EPackage>

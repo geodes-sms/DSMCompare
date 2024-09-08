@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Rule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_hWjLMNeREeyEnrzG7GdwSg" name="addPacman_on">
+  <lhs xmi:id="_hWjLMdeREeyEnrzG7GdwSg" name="addPacman_on_LHS">
+    <nodes xmi:id="_hWjLMteREeyEnrzG7GdwSg" name="n0">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_hWjLM9eREeyEnrzG7GdwSg" name="n1">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Pacman"/>
+    </nodes>
+  </lhs>
+  <rhs xmi:id="_hWjLNNeREeyEnrzG7GdwSg" name="addPacman_on_RHS">
+    <nodes xmi:id="_hWjLNdeREeyEnrzG7GdwSg" name="n0" outgoing="_hWjLONeREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_hWjLNteREeyEnrzG7GdwSg" name="n1" incoming="_hWjLONeREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Pacman"/>
+    </nodes>
+    <nodes xmi:id="_hWjLN9eREeyEnrzG7GdwSg" name="n2">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+    </nodes>
+    <edges xmi:id="_hWjLONeREeyEnrzG7GdwSg" source="_hWjLNdeREeyEnrzG7GdwSg" target="_hWjLNteREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game/entities"/>
+    </edges>
+  </rhs>
+  <mappings xmi:id="_hWjLOdeREeyEnrzG7GdwSg" origin="_hWjLMteREeyEnrzG7GdwSg" image="_hWjLNdeREeyEnrzG7GdwSg"/>
+  <mappings xmi:id="_hWjLOteREeyEnrzG7GdwSg" origin="_hWjLM9eREeyEnrzG7GdwSg" image="_hWjLNteREeyEnrzG7GdwSg"/>
+</henshin:Rule>

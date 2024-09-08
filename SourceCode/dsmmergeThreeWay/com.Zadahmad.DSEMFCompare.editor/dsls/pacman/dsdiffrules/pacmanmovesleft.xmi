@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PacmanGoRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:PacmanGoRuleMM="http://www.zadahmad.org/dsmcompare/PacmanGoRuleMM"
+    xsi:schemaLocation="http://www.zadahmad.org/dsmcompare/PacmanGoRuleMM ../metamodels/PacManGoRuleMM.ecore#/1"
+    name="pacmanmovesleft">
+  <pattern>
+    <gridnodes
+        xsi:type="PacmanGoRuleMM:Pattern_GridNode"
+        left="2"
+        id=""
+        ID_Pattern="1"/>
+    <gridnodes
+        xsi:type="PacmanGoRuleMM:Pattern_GridNode"
+        right="1"
+        id=""
+        ID_Pattern="2"/>
+    <entities
+        xsi:type="PacmanGoRuleMM:Pattern_Pacman"
+        ID_Pattern="3">
+      <diffon
+          xsi:type="PacmanGoRuleMM:Pattern_DiffPositionableEntity_on"
+          operation="DELETE"
+          eType="1"
+          ID_Pattern="31"
+          filter="true"/>
+      <diffon
+          xsi:type="PacmanGoRuleMM:Pattern_DiffPositionableEntity_on"
+          eType="2"
+          ID_Pattern="32"/>
+    </entities>
+    <domainspecificdiffs
+        xsi:type="PacmanGoRuleMM:Pattern_DomainSpecificDiff"
+        name="PacmanMovesLeft"
+        DomainSpecificDiff_GridNode="1 2"
+        DomainSpecificDiff_Pacman="3"
+        ID_Pattern="4"/>
+  </pattern>
+</PacmanGoRuleMM:Rule>

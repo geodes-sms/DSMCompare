@@ -1,0 +1,206 @@
+Matches count 	:	2
+Diffs count 	:	28
+Conflicts count :	7
+Matched resources :
+Left = null
+Right = file:/E:/srcCode/dsmmerge/com.Zadahmad.DSEMFCompare.editor/caseStudiesMerge/Refactoring/android/7d3dc3566520a0fa5c598cb0832984e15eca6fec_V2_ref.xmi
+origin = file:/E:/srcCode/dsmmerge/com.Zadahmad.DSEMFCompare.editor/caseStudiesMerge/Refactoring/android/7d3dc3566520a0fa5c598cb0832984e15eca6fec_CA_ref.xmi
+Matched resources :
+Left = file:/E:/srcCode/dsmmerge/com.Zadahmad.DSEMFCompare.editor/caseStudiesMerge/Refactoring/android/7d3dc3566520a0fa5c598cb0832984e15eca6fec_V1_ref.xmi
+Right = null
+origin = null
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| refactoringDiffMM.impl.EPackageImpl@1a7288a3 (name: com.github.pockethub.android.ui.gist.CreateGistActivity)|                                        |
+| |-refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)|                                        |
+| | |-refactoringDiffMM.impl.EAttributeImpl@58fe0499 (name: descriptionText, etype: EditText)|                                        |
+| | |-refactoringDiffMM.impl.EAttributeImpl@686449f9 (name: nameText, etype: EditText)|                                        |
+| | |-refactoringDiffMM.impl.EAttributeImpl@665df3c6 (name: contentText, etype: EditText)|                                        |
+| | |-refactoringDiffMM.impl.EAttributeImpl@68b6f0d6 (name: publicCheckBox, etype: CheckBox)|                                        |
+| | |-refactoringDiffMM.impl.EAttributeImpl@4044fb95 (name: menuItem, etype: MenuItem)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@aa549e5 (name: onCreate(), eparameters: savedInstanceState:Bundle, etype: void, methodBody: expression statement; method invocation; updateCreateMenu; expression statement; method invocation; addTextChangedListener; class instance creation; ; Anonymous type; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; subject; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; text; expression statement; method invocation; setDisplayHomeAsUpEnabled; boolean literal; variable declaration; actionBar; expression statement; method invocation; setOnCheckedChangeListener; class instance creation; ; Anonymous type; expression statement; method invocation; addTextChangedListener; expression statement; method invocation; addTextChangedListener; expression statement; method invocation; addTextChangedListener; variable declaration; class instance creation; ; Anonymous type; expandAppBarTextWatcher; expression statement; method invocation; setOnFocusChangeListener; expression statement; method invocation; setOnFocusChangeListener; expression statement; method invocation; setOnFocusChangeListener; variable declaration; class instance creation; ; Anonymous type; expandAppBarOnFocusChangeListener; variable declaration; appBarLayout; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; method invocation; setSupportActionBar; cast; method invocation; findViewById; expression statement; method invocation; setContentView; expression statement; super method invocation; onCreate; , __idKDM: onCreate___Bundle___)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@36f48b4 (name: onCreateOptionsMenu(), eparameters: menu:Menu, etype: boolean, methodBody: return; boolean literal; expression statement; method invocation; updateCreateMenu; expression statement; ASSIGN; method invocation; findItem; expression statement; method invocation; inflate; method invocation; getMenuInflater; expression statement; super method invocation; onCreateOptionsMenu; , __idKDM: onCreateOptionsMenu___Menu___)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@5c00384f (name: onOptionsItemSelected(), eparameters: item:MenuItem, etype: boolean, methodBody: switch; return; super method invocation; onOptionsItemSelected; case; return; boolean literal; expression statement; method invocation; createGist; case; method invocation; getItemId; , __idKDM: onOptionsItemSelected___MenuItem___)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@3b7ff809 (name: updateCreateMenu(), eparameters: , etype: void, methodBody: if; expression statement; method invocation; updateCreateMenu; method invocation; getText; NOT_EQUALS; null; , __idKDM: updateCreateMenu______)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@4b20ca2b (name: updateCreateMenu(), eparameters: text:CharSequence, etype: void, methodBody: if; expression statement; method invocation; setEnabled; NOT; method invocation; isEmpty; NOT_EQUALS; null; , __idKDM: updateCreateMenu___CharSequence___)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@1cbf6e72 (name: createGist(), eparameters: , etype: void, methodBody: expression statement; method invocation; create; class instance creation; ; Anonymous type; this; variable declaration; content; variable declaration; name; variable declaration; enteredName; variable declaration; description; variable declaration; enteredDescription; variable declaration; isPublic; , __idKDM: createGist______)|                                        |
+| | |                                    |                                        |
+| |-refactoringDiffMM.impl.EClassImpl@6aecbb8d (name: BaseActivity, extends: null, implements: null, isAbstract: false, packageName: null)|                                        |
+|                                        | refactoringDiffMM.impl.EPackageImpl@4da602fc (name: com.github.pockethub.ui.gist.CreateGistActivity)|
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+REFERENCE CHANGES
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@4044fb95 (name: menuItem, etype: MenuItem) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@72758afa (name: descriptionText, etype: EditText) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@fb9c7aa (name: nameText, etype: EditText) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@4c398c80 (name: contentText, etype: EditText) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@7fc6de5b (name: publicCheckBox, etype: CheckBox) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@21baa903 (name: createItem, etype: MenuItem) has been deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@21baa903 (name: createItem, etype: MenuItem) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@3b7ff809 (name: updateCreateMenu(), eparameters: , etype: void, methodBody: if; expression statement; method invocation; updateCreateMenu; method invocation; getText; NOT_EQUALS; null; , __idKDM: updateCreateMenu______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [MOVE] value refactoringDiffMM.impl.EOperationImpl@4b20ca2b (name: updateCreateMenu(), eparameters: text:CharSequence, etype: void, methodBody: if; expression statement; method invocation; setEnabled; NOT; method invocation; isEmpty; NOT_EQUALS; null; , __idKDM: updateCreateMenu___CharSequence___) has been moved from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@607fbe09 (name: onCreate(), eparameters: savedInstanceState:Bundle, etype: void, methodBody: expression statement; method invocation; updateCreateMenu; expression statement; method invocation; addTextChangedListener; class instance creation; ; Anonymous type; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; subject; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; text; expression statement; method invocation; setDisplayHomeAsUpEnabled; boolean literal; expression statement; method invocation; setIcon; expression statement; method invocation; setTitle; variable declaration; actionBar; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; method invocation; setSupportActionBar; cast; method invocation; findViewById; expression statement; method invocation; setContentView; expression statement; super method invocation; onCreate; , __idKDM: onCreate___Bundle___) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@29df4d43 (name: updateCreateMenu(), eparameters: text:CharSequence, etype: void, methodBody: if; expression statement; method invocation; setEnabled; NOT; method invocation; isEmpty; NOT_EQUALS; null; , __idKDM: updateCreateMenu___CharSequence___) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@5dd91bca (name: onCreateOptionsMenu(), eparameters: options:Menu, etype: boolean, methodBody: return; boolean literal; expression statement; method invocation; updateCreateMenu; expression statement; ASSIGN; method invocation; findItem; expression statement; method invocation; inflate; method invocation; getMenuInflater; , __idKDM: onCreateOptionsMenu___Menu___) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@40cb698e (name: onOptionsItemSelected(), eparameters: item:MenuItem, etype: boolean, methodBody: switch; return; super method invocation; onOptionsItemSelected; case; return; boolean literal; expression statement; method invocation; startActivity; expression statement; method invocation; addFlags; OR; variable declaration; class instance creation; new Intent(this,MainActivity.class); type literal; this; intent; expression statement; method invocation; finish; case; return; boolean literal; expression statement; method invocation; createGist; case; method invocation; getItemId; , __idKDM: onOptionsItemSelected___MenuItem___) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@3382f8ae (name: createGist(), eparameters: , etype: void, methodBody: expression statement; method invocation; create; class instance creation; ; Anonymous type; this; variable declaration; content; variable declaration; name; variable declaration; enteredName; variable declaration; description; variable declaration; enteredDescription; variable declaration; isPublic; , __idKDM: createGist______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@44828f6b (eProxyURI: file:/E:/srcCode/dsmmerge/com.Zadahmad.DSEMFCompare.editor/caseStudiesMerge/Refactoring/android/7d3dc3566520a0fa5c598cb0832984e15eca6fec_CA_ref.xmi#BaseActivity) has been added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@60641ec8 (name: BaseActivity, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@60641ec8 (name: BaseActivity, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [MOVE] value refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity) has been moved from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@1a7288a3 (name: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [MOVE] value refactoringDiffMM.impl.EClassImpl@6aecbb8d (name: BaseActivity, extends: null, implements: null, isAbstract: false, packageName: null) has been moved from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@1a7288a3 (name: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@25b2cfcb (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@4da602fc (name: com.github.pockethub.ui.gist.CreateGistActivity)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@60641ec8 (name: BaseActivity, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@4da602fc (name: com.github.pockethub.ui.gist.CreateGistActivity)
+
+ATTRIBUTE CHANGES
+
+ value expression statement; method invocation; updateCreateMenu; expression statement; method invocation; addTextChangedListener; class instance creation; ; Anonymous type; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; subject; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; text; expression statement; method invocation; setDisplayHomeAsUpEnabled; boolean literal; variable declaration; actionBar; expression statement; method invocation; setOnCheckedChangeListener; class instance creation; ; Anonymous type; expression statement; method invocation; addTextChangedListener; expression statement; method invocation; addTextChangedListener; expression statement; method invocation; addTextChangedListener; variable declaration; class instance creation; ; Anonymous type; expandAppBarTextWatcher; expression statement; method invocation; setOnFocusChangeListener; expression statement; method invocation; setOnFocusChangeListener; expression statement; method invocation; setOnFocusChangeListener; variable declaration; class instance creation; ; Anonymous type; expandAppBarOnFocusChangeListener; variable declaration; appBarLayout; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; method invocation; setSupportActionBar; cast; method invocation; findViewById; expression statement; method invocation; setContentView; expression statement; super method invocation; onCreate;  has been changed from attribute methodBody
+ of object refactoringDiffMM.impl.EOperationImpl@aa549e5 (name: onCreate(), eparameters: savedInstanceState:Bundle, etype: void, methodBody: expression statement; method invocation; updateCreateMenu; expression statement; method invocation; addTextChangedListener; class instance creation; ; Anonymous type; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; subject; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; text; expression statement; method invocation; setDisplayHomeAsUpEnabled; boolean literal; variable declaration; actionBar; expression statement; method invocation; setOnCheckedChangeListener; class instance creation; ; Anonymous type; expression statement; method invocation; addTextChangedListener; expression statement; method invocation; addTextChangedListener; expression statement; method invocation; addTextChangedListener; variable declaration; class instance creation; ; Anonymous type; expandAppBarTextWatcher; expression statement; method invocation; setOnFocusChangeListener; expression statement; method invocation; setOnFocusChangeListener; expression statement; method invocation; setOnFocusChangeListener; variable declaration; class instance creation; ; Anonymous type; expandAppBarOnFocusChangeListener; variable declaration; appBarLayout; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; method invocation; setSupportActionBar; cast; method invocation; findViewById; expression statement; method invocation; setContentView; expression statement; super method invocation; onCreate; , __idKDM: onCreate___Bundle___)
+
+ value menu:Menu has been changed from attribute eparameters
+ of object refactoringDiffMM.impl.EOperationImpl@36f48b4 (name: onCreateOptionsMenu(), eparameters: menu:Menu, etype: boolean, methodBody: return; boolean literal; expression statement; method invocation; updateCreateMenu; expression statement; ASSIGN; method invocation; findItem; expression statement; method invocation; inflate; method invocation; getMenuInflater; expression statement; super method invocation; onCreateOptionsMenu; , __idKDM: onCreateOptionsMenu___Menu___)
+
+ value return; boolean literal; expression statement; method invocation; updateCreateMenu; expression statement; ASSIGN; method invocation; findItem; expression statement; method invocation; inflate; method invocation; getMenuInflater; expression statement; super method invocation; onCreateOptionsMenu;  has been changed from attribute methodBody
+ of object refactoringDiffMM.impl.EOperationImpl@36f48b4 (name: onCreateOptionsMenu(), eparameters: menu:Menu, etype: boolean, methodBody: return; boolean literal; expression statement; method invocation; updateCreateMenu; expression statement; ASSIGN; method invocation; findItem; expression statement; method invocation; inflate; method invocation; getMenuInflater; expression statement; super method invocation; onCreateOptionsMenu; , __idKDM: onCreateOptionsMenu___Menu___)
+
+ value switch; return; super method invocation; onOptionsItemSelected; case; return; boolean literal; expression statement; method invocation; createGist; case; method invocation; getItemId;  has been changed from attribute methodBody
+ of object refactoringDiffMM.impl.EOperationImpl@5c00384f (name: onOptionsItemSelected(), eparameters: item:MenuItem, etype: boolean, methodBody: switch; return; super method invocation; onOptionsItemSelected; case; return; boolean literal; expression statement; method invocation; createGist; case; method invocation; getItemId; , __idKDM: onOptionsItemSelected___MenuItem___)
+
+ value com.github.pockethub.android.ui.gist.CreateGistActivity has been changed from attribute packageName
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+
+CONFLICTS
+PSEUDO conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@21baa903 (name: createItem, etype: MenuItem) has been deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+	
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@21baa903 (name: createItem, etype: MenuItem) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@607fbe09 (name: onCreate(), eparameters: savedInstanceState:Bundle, etype: void, methodBody: expression statement; method invocation; updateCreateMenu; expression statement; method invocation; addTextChangedListener; class instance creation; ; Anonymous type; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; subject; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; text; expression statement; method invocation; setDisplayHomeAsUpEnabled; boolean literal; expression statement; method invocation; setIcon; expression statement; method invocation; setTitle; variable declaration; actionBar; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; method invocation; setSupportActionBar; cast; method invocation; findViewById; expression statement; method invocation; setContentView; expression statement; super method invocation; onCreate; , __idKDM: onCreate___Bundle___) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+	
+ value expression statement; method invocation; updateCreateMenu; expression statement; method invocation; addTextChangedListener; class instance creation; ; Anonymous type; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; subject; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; text; expression statement; method invocation; setDisplayHomeAsUpEnabled; boolean literal; variable declaration; actionBar; expression statement; method invocation; setOnCheckedChangeListener; class instance creation; ; Anonymous type; expression statement; method invocation; addTextChangedListener; expression statement; method invocation; addTextChangedListener; expression statement; method invocation; addTextChangedListener; variable declaration; class instance creation; ; Anonymous type; expandAppBarTextWatcher; expression statement; method invocation; setOnFocusChangeListener; expression statement; method invocation; setOnFocusChangeListener; expression statement; method invocation; setOnFocusChangeListener; variable declaration; class instance creation; ; Anonymous type; expandAppBarOnFocusChangeListener; variable declaration; appBarLayout; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; method invocation; setSupportActionBar; cast; method invocation; findViewById; expression statement; method invocation; setContentView; expression statement; super method invocation; onCreate;  has been changed from attribute methodBody
+ of object refactoringDiffMM.impl.EOperationImpl@aa549e5 (name: onCreate(), eparameters: savedInstanceState:Bundle, etype: void, methodBody: expression statement; method invocation; updateCreateMenu; expression statement; method invocation; addTextChangedListener; class instance creation; ; Anonymous type; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; subject; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; text; expression statement; method invocation; setDisplayHomeAsUpEnabled; boolean literal; variable declaration; actionBar; expression statement; method invocation; setOnCheckedChangeListener; class instance creation; ; Anonymous type; expression statement; method invocation; addTextChangedListener; expression statement; method invocation; addTextChangedListener; expression statement; method invocation; addTextChangedListener; variable declaration; class instance creation; ; Anonymous type; expandAppBarTextWatcher; expression statement; method invocation; setOnFocusChangeListener; expression statement; method invocation; setOnFocusChangeListener; expression statement; method invocation; setOnFocusChangeListener; variable declaration; class instance creation; ; Anonymous type; expandAppBarOnFocusChangeListener; variable declaration; appBarLayout; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; method invocation; setSupportActionBar; cast; method invocation; findViewById; expression statement; method invocation; setContentView; expression statement; super method invocation; onCreate; , __idKDM: onCreate___Bundle___)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@5dd91bca (name: onCreateOptionsMenu(), eparameters: options:Menu, etype: boolean, methodBody: return; boolean literal; expression statement; method invocation; updateCreateMenu; expression statement; ASSIGN; method invocation; findItem; expression statement; method invocation; inflate; method invocation; getMenuInflater; , __idKDM: onCreateOptionsMenu___Menu___) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+	
+ value menu:Menu has been changed from attribute eparameters
+ of object refactoringDiffMM.impl.EOperationImpl@36f48b4 (name: onCreateOptionsMenu(), eparameters: menu:Menu, etype: boolean, methodBody: return; boolean literal; expression statement; method invocation; updateCreateMenu; expression statement; ASSIGN; method invocation; findItem; expression statement; method invocation; inflate; method invocation; getMenuInflater; expression statement; super method invocation; onCreateOptionsMenu; , __idKDM: onCreateOptionsMenu___Menu___)
+	
+ value return; boolean literal; expression statement; method invocation; updateCreateMenu; expression statement; ASSIGN; method invocation; findItem; expression statement; method invocation; inflate; method invocation; getMenuInflater; expression statement; super method invocation; onCreateOptionsMenu;  has been changed from attribute methodBody
+ of object refactoringDiffMM.impl.EOperationImpl@36f48b4 (name: onCreateOptionsMenu(), eparameters: menu:Menu, etype: boolean, methodBody: return; boolean literal; expression statement; method invocation; updateCreateMenu; expression statement; ASSIGN; method invocation; findItem; expression statement; method invocation; inflate; method invocation; getMenuInflater; expression statement; super method invocation; onCreateOptionsMenu; , __idKDM: onCreateOptionsMenu___Menu___)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@40cb698e (name: onOptionsItemSelected(), eparameters: item:MenuItem, etype: boolean, methodBody: switch; return; super method invocation; onOptionsItemSelected; case; return; boolean literal; expression statement; method invocation; startActivity; expression statement; method invocation; addFlags; OR; variable declaration; class instance creation; new Intent(this,MainActivity.class); type literal; this; intent; expression statement; method invocation; finish; case; return; boolean literal; expression statement; method invocation; createGist; case; method invocation; getItemId; , __idKDM: onOptionsItemSelected___MenuItem___) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+	
+ value switch; return; super method invocation; onOptionsItemSelected; case; return; boolean literal; expression statement; method invocation; createGist; case; method invocation; getItemId;  has been changed from attribute methodBody
+ of object refactoringDiffMM.impl.EOperationImpl@5c00384f (name: onOptionsItemSelected(), eparameters: item:MenuItem, etype: boolean, methodBody: switch; return; super method invocation; onOptionsItemSelected; case; return; boolean literal; expression statement; method invocation; createGist; case; method invocation; getItemId; , __idKDM: onOptionsItemSelected___MenuItem___)
+PSEUDO conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@60641ec8 (name: BaseActivity, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@60641ec8 (name: BaseActivity, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@25b2cfcb (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@4da602fc (name: com.github.pockethub.ui.gist.CreateGistActivity)
+	
+ [MOVE] value refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity) has been moved from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@1a7288a3 (name: com.github.pockethub.android.ui.gist.CreateGistActivity)
+	
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@4044fb95 (name: menuItem, etype: MenuItem) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+	
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@3b7ff809 (name: updateCreateMenu(), eparameters: , etype: void, methodBody: if; expression statement; method invocation; updateCreateMenu; method invocation; getText; NOT_EQUALS; null; , __idKDM: updateCreateMenu______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+	
+ [MOVE] value refactoringDiffMM.impl.EOperationImpl@4b20ca2b (name: updateCreateMenu(), eparameters: text:CharSequence, etype: void, methodBody: if; expression statement; method invocation; setEnabled; NOT; method invocation; isEmpty; NOT_EQUALS; null; , __idKDM: updateCreateMenu___CharSequence___) has been moved from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+	
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@29df4d43 (name: updateCreateMenu(), eparameters: text:CharSequence, etype: void, methodBody: if; expression statement; method invocation; setEnabled; NOT; method invocation; isEmpty; NOT_EQUALS; null; , __idKDM: updateCreateMenu___CharSequence___) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+	Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@44828f6b (eProxyURI: file:/E:/srcCode/dsmmerge/com.Zadahmad.DSEMFCompare.editor/caseStudiesMerge/Refactoring/android/7d3dc3566520a0fa5c598cb0832984e15eca6fec_CA_ref.xmi#BaseActivity) has been added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+	
+ value com.github.pockethub.android.ui.gist.CreateGistActivity has been changed from attribute packageName
+ of object refactoringDiffMM.impl.EClassImpl@2974f221 (name: CreateGistActivity, extends: BaseActivity, implements: null, isAbstract: false, packageName: com.github.pockethub.android.ui.gist.CreateGistActivity)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@60641ec8 (name: BaseActivity, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@4da602fc (name: com.github.pockethub.ui.gist.CreateGistActivity)
+	
+ [MOVE] value refactoringDiffMM.impl.EClassImpl@6aecbb8d (name: BaseActivity, extends: null, implements: null, isAbstract: false, packageName: null) has been moved from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@1a7288a3 (name: com.github.pockethub.android.ui.gist.CreateGistActivity)
+MOVE1: java.lang.NullPointerException
+MOVE1: java.lang.NullPointerException
+The end of transforming EMF-Diff to DSMC-Diff
+
+Create all DsDiff Models. Exception: null
+7d3dc3566520a0fa5c598cb0832984e15eca6fec
+
+End of Creating all DsDiff Models for evaluation!

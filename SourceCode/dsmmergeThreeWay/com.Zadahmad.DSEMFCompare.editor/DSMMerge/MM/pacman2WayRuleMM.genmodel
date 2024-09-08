@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.Zadahmad.DSEMFCompare.editor/src" modelPluginID="com.Zadahmad.DSEMFCompare.editor"
+    modelName="Pacman2WayRuleMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>pacman2WayRuleMM.ecore</foreignModel>
+  <genPackages prefix="Pacman2WayDiffMM" disposableProviderFactory="true" ecorePackage="pacman2WayRuleMM.ecore#/0">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="pacman2WayRuleMM.ecore#/0/GhostStrategy">
+      <genEnumLiterals ecoreEnumLiteral="pacman2WayRuleMM.ecore#/0/GhostStrategy/Blinky"/>
+      <genEnumLiterals ecoreEnumLiteral="pacman2WayRuleMM.ecore#/0/GhostStrategy/Pinky"/>
+      <genEnumLiterals ecoreEnumLiteral="pacman2WayRuleMM.ecore#/0/GhostStrategy/Inky"/>
+      <genEnumLiterals ecoreEnumLiteral="pacman2WayRuleMM.ecore#/0/GhostStrategy/Clyde"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="pacman2WayRuleMM.ecore#/0/ClassDiffKind">
+      <genEnumLiterals ecoreEnumLiteral="pacman2WayRuleMM.ecore#/0/ClassDiffKind/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="pacman2WayRuleMM.ecore#/0/ClassDiffKind/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="pacman2WayRuleMM.ecore#/0/ClassDiffKind/MODIFY"/>
+      <genEnumLiterals ecoreEnumLiteral="pacman2WayRuleMM.ecore#/0/ClassDiffKind/NON"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="pacman2WayRuleMM.ecore#/0/AscDiffKind">
+      <genEnumLiterals ecoreEnumLiteral="pacman2WayRuleMM.ecore#/0/AscDiffKind/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="pacman2WayRuleMM.ecore#/0/AscDiffKind/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="pacman2WayRuleMM.ecore#/0/AscDiffKind/NON"/>
+    </genEnums>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/GridNode">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/GridNode/up"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/GridNode/down"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/GridNode/left"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/GridNode/right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/GridNode/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/GridNode/diffup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/GridNode/diffdown"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/GridNode/diffleft"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/GridNode/diffright"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/Food">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/Food/value"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/Pacman">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/Pacman/initialPosition"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/Ghost">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/Ghost/strategy"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/Game">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/Game/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/Game/lives"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/Game/score"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/Game/gridnodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/Game/entities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/Game/domainspecificdiffs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/Game/semanticconflicts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/Game/diffgridnodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/Game/diffentities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/Game/diffdomainspecificdiffs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/Game/diffsemanticconflicts"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="pacman2WayRuleMM.ecore#/0/PositionableEntity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/PositionableEntity/on"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/PositionableEntity/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/PositionableEntity/diffon"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/Fruit"/>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/Energizer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/Energizer/durations"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DomainSpecificDiff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DomainSpecificDiff/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_GridNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_Game"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_DiffGridNode_up"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_DiffGridNode_down"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_DiffGridNode_left"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_DiffGridNode_right"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_DiffGame_gridnodes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_DiffGame_entities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_DiffGame_domainspecificdiffs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_DiffGame_semanticconflicts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DomainSpecificDiff/DomainSpecificDiff_DiffPositionableEntity_on"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/SemanticConflict">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/SemanticConflict/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffGridNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffGridNode_up"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffGridNode_down"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffGridNode_left"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffGridNode_right"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffFood"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffPacman"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffGhost"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffGame"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffGame_gridnodes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffGame_entities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffGame_domainspecificdiffs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffGame_semanticconflicts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffPositionableEntity_on"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffFruit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DiffEnergizer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/SemanticConflict/SemanticConflict_DomainSpecificDiff"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffGridNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffGridNode/diff_kind"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffGridNode_up">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffGridNode_up/diff_kind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DiffGridNode_up/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffGridNode_down">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffGridNode_down/diff_kind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DiffGridNode_down/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffGridNode_left">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffGridNode_left/diff_kind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DiffGridNode_left/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffGridNode_right">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffGridNode_right/diff_kind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DiffGridNode_right/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffFood">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffFood/diff_kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffFood/new_value"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffPacman">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffPacman/diff_kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffPacman/new_initialPosition"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffGhost">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffGhost/diff_kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffGhost/new_strategy"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffGame">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffGame/diff_kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffGame/new_lives"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffGame/new_score"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffGame_gridnodes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffGame_gridnodes/diff_kind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DiffGame_gridnodes/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffGame_entities">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffGame_entities/diff_kind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DiffGame_entities/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffGame_domainspecificdiffs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffGame_domainspecificdiffs/diff_kind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DiffGame_domainspecificdiffs/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffGame_semanticconflicts">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffGame_semanticconflicts/diff_kind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DiffGame_semanticconflicts/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffPositionableEntity_on">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffPositionableEntity_on/diff_kind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DiffPositionableEntity_on/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffFruit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffFruit/diff_kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffFruit/new_value"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/DiffEnergizer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffEnergizer/diff_kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/DiffEnergizer/new_value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/0/DiffEnergizer/new_durations"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/0/_ListEInt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/0/_ListEInt/value"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Pacman2WayRuleMM" disposableProviderFactory="true" ecorePackage="pacman2WayRuleMM.ecore#/1">
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_GridNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_GridNode/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_GridNode/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_GridNode/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_Food">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Food/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Food/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Food/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_Pacman">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Pacman/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Pacman/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Pacman/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_Ghost">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Ghost/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Ghost/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Ghost/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_Game">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Game/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Game/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Game/isForbidden"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_PositionableEntity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_PositionableEntity/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_PositionableEntity/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_PositionableEntity/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_Fruit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Fruit/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Fruit/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Fruit/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_Energizer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Energizer/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Energizer/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_Energizer/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DomainSpecificDiff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DomainSpecificDiff/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DomainSpecificDiff/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DomainSpecificDiff/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_SemanticConflict">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_SemanticConflict/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_SemanticConflict/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_SemanticConflict/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_up">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_up/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_up/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_up/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_down">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_down/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_down/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_down/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_left">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_left/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_left/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_left/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_right">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_right/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_right/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGridNode_right/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffFood">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffFood/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffFood/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffFood/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffPacman">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffPacman/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffPacman/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffPacman/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffGhost">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGhost/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGhost/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGhost/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffGame">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGame/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGame/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGame/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_gridnodes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_gridnodes/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_gridnodes/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_gridnodes/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_entities">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_entities/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_entities/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_entities/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_domainspecificdiffs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_domainspecificdiffs/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_domainspecificdiffs/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_domainspecificdiffs/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_semanticconflicts">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_semanticconflicts/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_semanticconflicts/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffGame_semanticconflicts/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffPositionableEntity_on">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffPositionableEntity_on/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffPositionableEntity_on/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffPositionableEntity_on/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffFruit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffFruit/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffFruit/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffFruit/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern_DiffEnergizer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffEnergizer/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffEnergizer/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern_DiffEnergizer/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Pattern__ListEInt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern__ListEInt/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern__ListEInt/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Pattern__ListEInt/isForbidden"/>
+    </genClasses>
+    <genClasses ecoreClass="pacman2WayRuleMM.ecore#/1/Rule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Rule/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pacman2WayRuleMM.ecore#/1/Rule/constraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pacman2WayRuleMM.ecore#/1/Rule/pattern"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

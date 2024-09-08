@@ -1,0 +1,75 @@
+unit unitSequntialStar(){
+	
+			
+		while{//Rule 3
+			flattenHierarchyRef()
+		}
+		
+		
+		
+		while{//Rule 5
+			mergeMetaclassRef()
+		}
+		while{//Rule 9
+			moveReference()
+		}
+		while{//Rule 1
+			extractSuperclassRef()
+		}		
+		while{//Rule 2
+			flattenHierarchyAttr()
+		}
+		while{//Rule 6
+			mergeReference()
+		}
+		while{//Rule 12
+			pullUpReference()
+		}
+		while{//Rule 15
+			pushDownReference()
+		}
+		while{//Rule 16
+			removeMiddleMan()
+		}
+		
+
+		
+		while{//Rule 0
+			extractSuperclassAttr()
+		}
+		while{//Rule 4
+			mergeMetaclassAttr()
+		}
+		while{//Rule 7
+			moveAttribute()
+		}
+		while{//Rule 10
+			pullUpAttribute()
+		}
+		while{//Rule 13
+			pushDownAttribute()
+		}
+		
+		
+		
+		while{//Rule 8
+			moveMethod()
+		}
+		while{//Rule 11
+			pullUpMethod()
+		}
+		while{//Rule 14
+			pushDownMethod()
+		}	
+		
+		/*
+		while{//Rule 17
+			renameAttribute()
+		}
+		while{//Rule 18
+			renameMethod()
+		}
+		while{//Rule 19
+			renameReference()
+		}*/
+	}

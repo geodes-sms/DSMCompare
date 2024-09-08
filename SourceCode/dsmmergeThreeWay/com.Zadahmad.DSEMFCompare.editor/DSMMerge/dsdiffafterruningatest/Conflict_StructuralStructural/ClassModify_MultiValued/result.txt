@@ -1,0 +1,58 @@
+Matches count 	:	1
+Diffs count 	:	6
+Conflicts count :	2
+Matched resources :
+Left = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/DSMMerge/versionsfortest/V1.xmi
+Right = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/DSMMerge/versionsfortest/V2.xmi
+origin = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/com.Zadahmad.DSEMFCompare.editor/DSMMerge/versionsfortest/CA.xmi
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| pacmanDiffMM.impl.GameImpl@333dd51e (id: 1, lives: 1, score: 1)| pacmanDiffMM.impl.GameImpl@52d645b1 (id: 1, lives: 1, score: 1)|
+| |-pacmanDiffMM.impl.GridNodeImpl@2cc3ad05 (id: L)| |-pacmanDiffMM.impl.GridNodeImpl@710b18a6 (id: L)|
+| |-pacmanDiffMM.impl.GridNodeImpl@3d9f6567 (id: O)| |-pacmanDiffMM.impl.GridNodeImpl@c055c54 (id: O)|
+| |-pacmanDiffMM.impl.GridNodeImpl@35e5d0e5 (id: R)| |-pacmanDiffMM.impl.GridNodeImpl@73173f63 (id: R)|
+| |-pacmanDiffMM.impl.PacmanImpl@655ef322 (id: P) (initialPosition: null)| |-pacmanDiffMM.impl.PacmanImpl@7e276594 (id: P) (initialPosition: null)|
+| |-pacmanDiffMM.impl.EnergizerImpl@5066d65f (id: E) (value: 2) (durations: [3, 4, 1])| |-pacmanDiffMM.impl.EnergizerImpl@4233e892 (id: E) (value: 2) (durations: [6, 1, 4])|
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+REFERENCE CHANGES
+
+ATTRIBUTE CHANGES
+
+ value 3 has been added to attribute durations
+ of object pacmanDiffMM.impl.EnergizerImpl@5066d65f (id: E) (value: 2) (durations: [3, 4, 1])
+
+ value 4 has been added to attribute durations
+ of object pacmanDiffMM.impl.EnergizerImpl@5066d65f (id: E) (value: 2) (durations: [3, 4, 1])
+
+ value 2 has been deleted from attribute durations
+ of object pacmanDiffMM.impl.EnergizerImpl@5066d65f (id: E) (value: 2) (durations: [3, 4, 1])
+
+ value 6 has been remotely(RIGHT) added to attribute durations
+ of object pacmanDiffMM.impl.EnergizerImpl@5066d65f (id: E) (value: 2) (durations: [3, 4, 1])
+
+ value 4 has been remotely(RIGHT) added to attribute durations
+ of object pacmanDiffMM.impl.EnergizerImpl@5066d65f (id: E) (value: 2) (durations: [3, 4, 1])
+
+ value 2 has been remotely(RIGHT) deleted from attribute durations
+ of object pacmanDiffMM.impl.EnergizerImpl@5066d65f (id: E) (value: 2) (durations: [3, 4, 1])
+
+CONFLICTS
+REAL conflict:
+	
+ value 4 has been added to attribute durations
+ of object pacmanDiffMM.impl.EnergizerImpl@5066d65f (id: E) (value: 2) (durations: [3, 4, 1])
+	
+ value 4 has been remotely(RIGHT) added to attribute durations
+ of object pacmanDiffMM.impl.EnergizerImpl@5066d65f (id: E) (value: 2) (durations: [3, 4, 1])
+PSEUDO conflict:
+	
+ value 2 has been deleted from attribute durations
+ of object pacmanDiffMM.impl.EnergizerImpl@5066d65f (id: E) (value: 2) (durations: [3, 4, 1])
+	
+ value 2 has been remotely(RIGHT) deleted from attribute durations
+ of object pacmanDiffMM.impl.EnergizerImpl@5066d65f (id: E) (value: 2) (durations: [3, 4, 1])
+The end of transforming EMF-Diff to DSMC-Diff
+emf-Compare result transformed to Fine-Grained DsmdiffMM!

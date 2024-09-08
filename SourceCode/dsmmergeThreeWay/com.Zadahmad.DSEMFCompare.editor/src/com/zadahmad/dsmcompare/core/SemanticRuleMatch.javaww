@@ -1,0 +1,1007 @@
+package com.zadahmad.dsmcompare.core;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Map.Entry;
+import java.util.regex.MatchResult;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EFactory;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.EStructuralFeature.Setting;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.util.EcoreUtil.UsageCrossReferencer;
+
+import com.zadahmad.dsmcompare.core.twoWayRuleMatch.ConstraintChecker;
+import com.zadahmad.dsmcompare.core.twoWayRuleMatch.DSRuleMatched;
+import com.zadahmad.dsmcompare.core.twoWayRuleMatch.DSRuleSpec;
+import com.zadahmad.dsmcompare.core.twoWayRuleMatch.MRN;
+import com.zadahmad.dsmcompare.core.twoWayRuleMatch.MVItem;
+import com.zadahmad.dsmcompare.core.twoWayRuleMatch.MatchVariant;
+import com.zadahmad.dsmcompare.core.DsEMFComparator;
+import com.zadahmad.dsmcompare.core.DsmComparatorController;
+
+public class SemanticRuleMatch {
+	
+	 //*************MATCHING***********	
+	
+	DsmComparatorController dsmComparatorController= new DsmComparatorController();
+ 	String MMPackageName			= 	"";	 	
+ 	String DiffMMPackageName		= 	""; 
+ 	String DiffMM_eNSURI 			= 	"";  	
+ 	Object DiffMM_eIN	 			=	null;
+ 	EFactory DiffMM_Factory			= 	null; 
+ 	
+ 	String RuleMMPackageName		= 	""; 
+ 	String RuleMM_eNSURI 			= 	""; 	
+ 	Object RuleMM_eIN	 			=	null;
+ 	EFactory RuleMM_Factory			=	null;
+ 	List<MRN>			visitedMRN	= 	new ArrayList<MRN>();
+ 	
+ 	/*
+	 private List<EObject> getReferencingObjects(EObject target) {
+		    LinkedList<EObject> result = new LinkedList<EObject>();
+		    Collection<EStructuralFeature.Setting> settings = null;
+		    try {//%%%%%%%%%%%Need a review
+			     settings = UsageCrossReferencer.find(target, target.eResource().getResourceSet());
+
+		    }
+			catch(Exception ex)
+			{
+				settings =null;
+			}
+		    //Same as above //CrossReferencer.find(target.eResource().getContents()).get(target);
+		    //same as above//UsageCrossReferencer.find(source.eResource().getContents()).get(source);
+		    
+		    if (settings == null) {
+		        return Collections.emptyList();
+		    }
+		    
+		    for (Setting setting : settings) {
+		        result.add(setting.getEObject());
+		        //System.out.println("setting.getEStructuralFeature: "+setting.getEStructuralFeature().toString());
+		    }
+		    return result;
+		}
+	 */
+	 public DSRuleSpec ruleMatcher(String RulePath, Resource dsDiffRes)
+	 {
+		 Resource 	ruleRes		= dsmComparatorController.retPackResouceM(RulePath, RuleMM_eNSURI, RuleMM_eIN);			 
+		 
+		 //Test equality of root eclass in both rule and diff element
+		 EObject 	rootDSDiff 	= dsDiffRes.getContents().get(0);	
+		 //All elements in rule package are inherited from diff package: 
+		 //	=>	ruleRes.eClass().getESuperTypes().contains(rootDSDiff.eClass())
+		 EObject 	rootRule 	= ruleRes.getContents().get(0).eContents().stream()
+				 					.filter(c -> c.eClass().getESuperTypes()
+				 							.contains(rootDSDiff.eClass()))
+				 					.findFirst().get();	
+		 
+		 if(rootRule==null)
+		 {
+			 System.out.println("Eclass are not equal: ");
+			 return null;
+		 }			 
+		 
+		 System.out.println("Eclass are equal: ");
+		 System.out.println(ruleRes.getContents());
+		 System.out.println(rootRule);
+		 System.out.println(rootDSDiff);	
+		 
+		 EObject dsdiffElement= rootRule.eContents().stream().filter(r -> r.eClass().getName().toLowerCase().equals("Pattern_DomainSpecificDiff".toLowerCase())).findFirst().get();
+		 EAttribute nameEAttribute= dsmComparatorController.getEAttributeByName(dsdiffElement,"name"); 
+		 System.out.println("dsdiffElement: ");		 		 
+		 System.out.println(dsdiffElement);
+		 System.out.println(dsdiffElement.eGet(nameEAttribute));	
+		 dsdiffElement.eContents().forEach(e ->System.out.println(e));		 
+		 
+		 DSRuleSpec dSRuleSpec= new DSRuleSpec();	
+		 dSRuleSpec.filePath= RulePath;
+		 //Doc// R:/Thesis/DSMCompare/com.Zadahmad.DSEMFCompare.editor/model/Pacman/PacmanEatFood/Rule.xmi
+		 dSRuleSpec.EClassName=dsdiffElement.eGet(nameEAttribute).toString();
+		 //Doc// PacmanEatFood
+		 dsdiffElement.eContents().forEach(e ->dSRuleSpec.dsDiffReqs.add(e));
+		 dsdiffElement.eContents().forEach(e ->dSRuleSpec.dsDiffReqEClassifiers.add(e.eClass().getESuperTypes().get(0)));	
+		 //Doc//  org.eclipse.emf.ecore.impl.EClassImpl@6acdbdf5 (name: DiffFood) (instanceClassName: null) (abstract: false, interface: false)
+		 //Doc//  org.eclipse.emf.ecore.impl.EClassImpl@79be0360 (name: Pacman) (instanceClassName: null) (abstract: false, interface: false)
+		 		  
+		 DSRuleMatched dsRuleMatched= new DSRuleMatched();
+		 dsRuleMatched.dsRuleSpec=dSRuleSpec;	
+		
+		if(matchRoots(rootDSDiff,rootRule))
+		{
+			dsRuleMatched.RootD=rootDSDiff;
+			dsRuleMatched.RootR=rootRule;
+			
+			MRN rootM= new 	MRN();
+			rootM.Ref=null;
+			rootM.Clas=rootRule.getClass();
+			rootM.ruleNode=rootRule;
+			//RootM.matchedNodes.add(rootDSDiff);
+			rootM.matchedNode=rootDSDiff;
+			
+			dsRuleMatched.RootM=rootM;
+			
+			dsRuleMatched.isMached=partialRuleMatcher(dsRuleMatched.RootM); 
+			
+			visitedMRN.clear();
+				
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			dsmComparatorController.PrintMRN(dsRuleMatched.RootM, "########################>>FINAL---> MatchedRN: ");	
+
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			exactRuleMatcher(dsRuleMatched);
+			
+			if(dsRuleMatched.isMached)
+			{
+				dsRuleMatched.ruleRes=ruleRes;
+				CheckForConstraints(dsRuleMatched);
+				CreateRHS(dsRuleMatched);
+			}
+			else
+				System.out.println("There is not a match for " + dsRuleMatched.RootR);
+			
+			/*
+			
+			if(dsRuleMatched.isMached)
+			{
+				CreateRHS(dsRuleMatched);
+			}
+			else
+				System.out.println("There is not a match for " + dsRuleMatched.RootR);
+			*/
+			
+		}
+			
+		//!!!!!!!!!!!!!!!!!!!!!!!!! Should be set
+		//dsRuleMatched.matchedRuleNode 
+		 	 
+		 return dSRuleSpec;		 
+	 }
+	  
+	//---
+	 
+	 boolean partialRuleMatcher(MRN RootM)
+	 {		 
+		 System.out.println("Match EReferences: ");
+		 visitedMRN.add(RootM);
+		 if(!refMatcher(RootM))
+			 return false;
+		 System.out.println(".............................  EReferences  are matched!");
+		 
+		 return true;		 
+	 }
+	 
+	 //---
+	 public void notFoundExactMatchInMVariantAction(DSRuleMatched dsRuleMatched,EObject ruleNode)
+	 {
+		 dsRuleMatched.matchVariant.clear();
+			System.out.println("No match found for" + ruleNode);
+			dsRuleMatched.isMached=false;
+			dsRuleMatched.countOfMatchs=0;
+	 }
+	  
+	 //--- 
+	 public void exactRuleMatcher(DSRuleMatched dsRuleMatched)
+	 {		 
+		 
+		MRN 		rootM = dsRuleMatched.RootM;	
+		EObject 	rootR = dsRuleMatched.RootR;
+	 
+		//MRN 		rmNode=rootM;
+		//EObject 	rrNode=rootR;
+		
+		
+		MatchVariant newMV= new MatchVariant();
+		MVItem mvRoot= new MVItem();
+		mvRoot.parentRule = null;
+		mvRoot.parentDSD  = null;
+		mvRoot.nodeRule   = rootM.ruleNode;
+		mvRoot.nodeDSD    = rootM.matchedNode;
+		newMV.matchList.add(mvRoot);
+		dsRuleMatched.matchVariant.add(newMV);
+		
+		System.out.println(rootM.ruleNode + " :: " + rootM.matchedNode);
+		//node.visited = true;
+		
+		dsRuleMatched.isMached	= true;
+		dsRuleMatched.countOfMatchs=1;		
+		
+		ArrayList<MRN> Mrns= new ArrayList<MRN>();
+		Mrns.add(rootM);
+		ArrayList<EObject> rNodes= new ArrayList<EObject>();
+		rNodes.add(rootR);
+		
+		int rnSize=rNodes.size();
+		
+		for(int index=0; index < rnSize; index++) {
+			EObject ruleNode = rNodes.get(index);//(EObject)	rootR;
+			MRN 	mrnNode=null;
+			try
+			{
+				mrnNode = Mrns.get(index);//rootM;
+			}
+			catch(Exception ex)
+			{
+				notFoundExactMatchInMVariantAction(dsRuleMatched,ruleNode);
+				return;
+			}
+			
+			if(mrnNode.ruleNode!=ruleNode)
+			{
+				notFoundExactMatchInMVariantAction(dsRuleMatched,ruleNode);
+				return;
+			}
+			
+			ArrayList<EObject> rPatterns= new ArrayList<EObject>();
+			EObject dsdPattern=null;
+			
+			for(EObject p:ruleNode.eContents())
+			{
+				List<MRN> pMatchs= mrnNode.refMRN.stream().filter(m->m.ruleNode==p).collect(Collectors.toList());
+				if(pMatchs.size()==0 && !p.toString().toLowerCase().contains("domainspecificdiff"))
+				{
+					notFoundExactMatchInMVariantAction(dsRuleMatched,ruleNode);
+					return;
+				}
+				
+				if(!p.toString().toLowerCase().contains("domainspecificdiff"))
+					rPatterns.add(p);
+				else
+					dsdPattern=p;
+			}
+			
+			//For the current node
+			dsRuleMatched.isMached = true;			
+			
+			for(EObject p:rPatterns)
+			{
+				List<MRN> rmObj= mrnNode.refMRN.stream().filter(m->m.ruleNode==p).collect(Collectors.toList());
+				p.eContents();
+				p.eCrossReferences();
+				
+				ArrayList<MatchVariant> newMatchVariants= new  ArrayList<MatchVariant>();
+				for(MRN mrn:rmObj)
+				{				
+					MVItem mvItemX= null;
+					mvItemX= new MVItem();
+					mvItemX.parentRule = mrnNode.ruleNode;
+					mvItemX.parentDSD  = mrnNode.matchedNode;
+					mvItemX.nodeRule   = mrn.ruleNode;		//p;
+					mvItemX.nodeDSD    = mrn.matchedNode;
+					
+					EAttribute attrID_Pattern 	= dsmComparatorController.getEAttributeByName(mvItemX.nodeRule,"ID_Pattern");
+					Object     valID_Pattern  	= mvItemX.nodeRule.eGet(attrID_Pattern);
+					
+					
+					ArrayList<EObject> linkedObjects= new ArrayList<EObject>();
+					mvItemX.nodeDSD.eContents().forEach(n->linkedObjects.add(n));
+					mvItemX.nodeDSD.eCrossReferences().forEach(n->linkedObjects.add(n));
+					//TBC %%% //getReferencingObjects(mvItemX.nodeDSD).forEach(n->linkedObjects.add(n));
+					
+					boolean isAdded=false;
+					if(linkedObjects.size() > 0)
+						for(MatchVariant m:dsRuleMatched.matchVariant)
+						{
+							if(m.matchList.stream()
+									.filter(n->linkedObjects.contains(n.nodeDSD))
+									.collect(Collectors.toList()).size() > 0)
+							{
+								m.matchList.add(mvItemX);
+								isAdded=true;
+								break;
+							}
+						}
+					
+					if(isAdded==false)
+					{
+						//Find deep links
+						//Such as diffFood.diffOn.gridnode(1)
+						ArrayList<EObject> deepLinkedObjects= new ArrayList<EObject>();
+						linkedObjects.forEach(l->deepLinkedObjects.add(l));
+						
+						if(deepLinkedObjects.size() > 0)
+						{
+							int S=deepLinkedObjects.size();
+							for(int i=0;i<S;i++)
+							{
+								EObject lnkObj=deepLinkedObjects.get(i);
+								for(EObject n:lnkObj.eContents())
+								{
+									if(n!=mrn.matchedNode && !deepLinkedObjects.contains(n))
+									{
+										deepLinkedObjects.add(n);
+										S++;
+									}
+										
+								}//mvItemX.nodeDSD
+								for(EObject n:lnkObj.eCrossReferences())
+								{
+									if(n!=mrn.matchedNode && !deepLinkedObjects.contains(n))
+									{
+										deepLinkedObjects.add(n);
+										S++;
+									}
+								}
+							}
+						}
+						
+						deepLinkedObjects.removeAll(linkedObjects);
+						
+						if(deepLinkedObjects.size() > 0)
+							for(MatchVariant m:dsRuleMatched.matchVariant)
+							{
+								if(m.matchList.stream()
+										.filter(n->deepLinkedObjects.contains(n.nodeDSD))
+										.collect(Collectors.toList()).size() > 0)
+								{
+									m.matchList.add(mvItemX);
+									isAdded=true;
+									break;
+								}
+							}						
+					}
+					
+					if(isAdded==false)	
+					{
+						for(MatchVariant m:dsRuleMatched.matchVariant)
+						{
+							List<MVItem> ps= m.matchList.stream()
+									.filter(i-> i.nodeRule
+											.eGet(dsmComparatorController.getEAttributeByName(i.nodeRule,"ID_Pattern" ))
+											.equals(valID_Pattern))
+									.collect(Collectors.toList());
+							
+							if(ps.size()==0)
+								m.matchList.add(mvItemX);
+							else
+							{
+								MatchVariant newV= new MatchVariant();
+								m.matchList.forEach(a ->{
+									if(!ps.contains(a))
+										newV.matchList.add(a);
+								});	
+								newMatchVariants.add(newV);
+							}
+						}
+					}
+					
+					for(MatchVariant n: newMatchVariants)
+					{
+						n.matchList.add(mvItemX);
+						dsRuleMatched.matchVariant.add(n);
+					}
+					
+					if(mvItemX.nodeRule.eContents().size() > 0)
+					{
+						for(EObject nxtRNode:mvItemX.nodeRule.eContents())
+						{//mvItemX.nodeDSD
+							List<MRN> mrns = mrnNode.refMRN.stream()
+									.filter(m->m.matchedNode == mrn.matchedNode && m.refMRN.stream()
+											.filter(c->c.ruleNode==nxtRNode)
+											.collect(Collectors.toList()).size() > 0)
+									.collect(Collectors.toList());
+							
+							if(mrns.size() == 0)
+							{
+								notFoundExactMatchInMVariantAction(dsRuleMatched,nxtRNode);
+								return;
+							}
+							
+							for(MRN mr:mrns)
+							{
+								rNodes.add(mvItemX.nodeRule); //mrn.ruleNode // nxtRNode
+								Mrns.add(mr);
+								rnSize++;
+							}
+						
+						}						
+					}			
+					
+				}
+			}						
+		}	
+	 }
+	 
+	 //---CONSTRAINTS CHECKER 
+	 public void CheckForConstraints(DSRuleMatched dsRuleMatched) 
+	 {
+		 System.out.println("There are " + dsRuleMatched.matchVariant.size() +" matches before applying constraints!");
+		 dsRuleMatched.matchVariant.forEach(v->{
+			 System.out.println("___________"+v);
+			 v.matchList.forEach(i->{
+				 System.out.println(i.parentDSD + " =====> "+ i.nodeDSD);
+			 });
+		 });
+		 System.out.println("___________");
+
+		 EObject ruleParent=dsRuleMatched.ruleRes.getContents().get(0);	
+		 EAttribute attrConstraints=dsmComparatorController.getEAttributeByName(ruleParent,"constraints");		 
+		 ArrayList<String> Constraints= new ArrayList<String>();
+		 if(Constraints.size()==0)
+		 {
+			 System.out.println("Applied!");
+		 	return;
+		 }
+		 ((List<Object>) ruleParent.eGet(attrConstraints)).forEach(o->Constraints.add((String) o));
+
+		 ArrayList<String>   NSsPackage	= new 	ArrayList<String>();
+		 NSsPackage.add("com.zadahmad.dsemfcompare.editor.tests");
+		 ArrayList<String>   NSsClass	= new 	ArrayList<String>();
+		 NSsClass.add("org.eclipse.emf.ecore.EObject");
+		 NSsClass.add("org.eclipse.emf.ecore.EAttribute");
+		 ConstraintChecker cc= new ConstraintChecker(NSsPackage, NSsClass, Constraints);
+		 ArrayList<MatchVariant> mvToRemove= new ArrayList<MatchVariant>();
+		 for(int j=0; j< dsRuleMatched.matchVariant.size();j++)
+		 {
+			 System.out.println("___________________________________________________________________________");
+			 System.out.println("**************Check "+ (j+1) +"'s match out of "+  dsRuleMatched.matchVariant.size() +" candidate againes constraints");
+			 
+			 MatchVariant mVar	=	dsRuleMatched.matchVariant.get(j);
+
+			 cc.matchVariant	= 	mVar;
+			 boolean mResult=cc.checkByBeanShell();
+			 if(!mResult)
+			 {
+				 mvToRemove.add(mVar);
+				 System.out.println("Not Applied!");
+			 }
+			 else
+				 System.out.println("Applied!");
+		 }
+		 
+		 mvToRemove.forEach(r->dsRuleMatched.matchVariant.remove(r));	
+		 
+		 System.out.println("\nThere are " + dsRuleMatched.matchVariant.size() +" matches after applying constraints!");
+		 dsRuleMatched.matchVariant.forEach(v->{
+			 System.out.println("___________"+v);
+			 v.matchList.forEach(i->{
+				 System.out.println(i.parentDSD + " =====> "+ i.nodeDSD);
+			 });
+		 });
+		 System.out.println("___________");
+	 }
+	 		  
+	 
+	 //---CREATE RIGHT-HAND-SIDE (DSD)
+	 public void CreateRHS(DSRuleMatched dsRuleMatched)
+	 {
+		 System.out.println();
+		 System.out.println("There are " + dsRuleMatched.matchVariant.size() +" matches after applying constraints!");
+		 System.out.println();
+		 
+		 if(dsRuleMatched.matchVariant.size()>0)
+		 {
+			 
+			 ResourceSet rsetDSMDiff=dsmComparatorController.setResourceSet(dsmComparatorController.getDSMDiffPath(),DiffMM_eNSURI, DiffMM_eIN);
+			 Resource rsourceDSMDiff=rsetDSMDiff.getResource(URI.createFileURI(dsmComparatorController.getDSMDiffPath()) , true); 
+				
+			 EObject 	rootR = dsRuleMatched.RootR;
+			 
+			 EObject 	rootD = dsRuleMatched.RootD;
+			 
+			 EObject    rootDRes=  rsourceDSMDiff.getContents().get(0);			 
+			 
+			 List<EObject> rDsdHeads=rootR.eContents().stream()
+									 .filter(p->p.toString().toLowerCase()
+											 .contains("domainspecificdiff"))
+									 .collect(Collectors.toList());
+			 
+			 EObject rDsdHead=rDsdHeads.get(0);
+			 List<EObject> rRHSObjs= rDsdHead.eCrossReferences();   
+			 
+			 System.out.println(rDsdHead.eClass());
+			 System.out.println(rDsdHead.eClass().getESuperTypes().get(0));
+			 
+			 EClass dsdEClass= rDsdHead.eClass().getESuperTypes().get(0);
+
+			 System.out.println("rDsdHead: " + rDsdHead);
+			 System.out.println("rRHSObjs: " + rRHSObjs);
+			 
+			  
+			 EReference dsdEReference= (EReference) dsRuleMatched.RootD
+					 .eClass().eCrossReferences().stream()
+					 .filter(r->((EReference)r).getEType() == dsdEClass)
+					 .collect(Collectors.toList()).get(0);
+			 
+			 System.out.println("dsdEReference: " + dsdEReference.getName());
+					 
+			 
+			 EAttribute attrNameRule 	= dsmComparatorController.getEAttributeByName(rDsdHead,"Name");
+			 Object     valAttrName = rDsdHead.eGet(attrNameRule);	
+			 
+			 
+			 System.out.println("*****rootDRes.eContents(): "+rootDRes.eContents());
+			 
+			 List<EObject> toRemoveDSD= rootDRes.eContents().stream().filter(f->f.eClass().toString().toLowerCase().contains("domainspecificdiff")).collect(Collectors.toList());
+			 
+			 System.out.println(toRemoveDSD);
+			 
+			//%%%%%%%%%%%%%%%%% Need a Hard review
+			 //It should be done once 
+			 //EcoreUtil.removeAll(toRemoveDSD);
+			 
+			 System.out.println(dsdEReference.getEType());			 
+			 
+			 for(MatchVariant v:dsRuleMatched.matchVariant)
+			 {				 
+				 System.out.println("----------");				 
+				 List<MVItem> pMtchs=  v.matchList.stream().filter(p-> rRHSObjs.contains(p.nodeRule)).collect(Collectors.toList());			 
+				 			 
+				 
+				 EObject 	DSDiffObject	= DiffMM_Factory.create((EClass) dsdEReference.getEType());// PacmanGoDiffMMFactory.eINSTANCE.create((EClass) dsdEReference.getEType()); 
+				 								// ArduinoDiffMMFactory, PacmanGoDiffMMFactory.eINSTANCE.create((EClass) dsdEReference.getEType());
+				 
+				 EAttribute attrNameDsd 	= dsmComparatorController.getEAttributeByName(DSDiffObject,"name");
+				 
+				 DSDiffObject.eSet(attrNameDsd, valAttrName);
+				 
+				 dsmComparatorController.SetEFeature(rootDRes, dsdEReference, DSDiffObject);
+				 
+				 for(MVItem m: pMtchs)
+				 {
+					 System.out.println("---->" + m.nodeRule);
+					 System.out.println("====>" + m.nodeDSD);
+					 String Name=m.nodeDSD.eClass().getName();
+					 System.out.println("====>" + Name);
+					 //System.out.println(m.nodeDSD.eClass().eContents().get(0));
+					 
+					 //System.out.println(DSDiffObject.eClass().getEAllReferences());
+					 
+					 EReference ref=null;
+					 
+					 try
+					 {
+						 ref = dsmComparatorController.getEReferenceByName(DSDiffObject,Name);
+					 }
+					 catch(Exception ex)
+					 {
+						 
+					 }
+					 
+					 if(ref==null) 
+					 {
+						 try
+						 {
+							 Name=m.nodeDSD.eClass().getESuperTypes().get(0).getName();
+							 ref = dsmComparatorController.getEReferenceByName(DSDiffObject,Name);
+						 }
+						 catch(Exception ex)
+						 {
+							 
+						 }
+					 }
+					 
+					 dsmComparatorController.SetEFeature(DSDiffObject, ref, m.nodeDSD);
+					
+					 System.out.println(ref);
+					 System.out.println();
+				 }
+				 
+			 }
+			 try {
+				rsourceDSMDiff.save(null);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		 }
+	 }
+	 	 
+	 
+		
+	public static Iterable<MatchResult> allMatches(
+		      final Pattern p, final CharSequence input) {
+		  return new Iterable<MatchResult>() {
+		    public Iterator<MatchResult> iterator() {
+		      return new Iterator<MatchResult>() {
+		        // Use a matcher internally.
+		        final Matcher matcher = p.matcher(input);
+		        // Keep a match around that supports any interleaving of hasNext/next calls.
+		        MatchResult pending;
+
+		        public boolean hasNext() {
+		          // Lazily fill pending, and avoid calling find() multiple times if the
+		          // clients call hasNext() repeatedly before sampling via next().
+		          if (pending == null && matcher.find()) {
+		            pending = matcher.toMatchResult();
+		          }
+		          return pending != null;
+		        }
+
+		        public MatchResult next() {
+		          // Fill pending if necessary (as when clients call next() without
+		          // checking hasNext()), throw if not possible.
+		          if (!hasNext()) { throw new NoSuchElementException(); }
+		          // Consume pending so next call to hasNext() does a find().
+		          MatchResult next = pending;
+		          pending = null;
+		          return next;
+		        }
+
+		        /** Required to satisfy the interface, but unsupported. */
+		        public void remove() { throw new UnsupportedOperationException(); }
+		      };
+		    }
+		  };
+		}
+			 
+	
+	
+	 //*******MATCHING UTILITIES********
+	 boolean matchRoots(EObject DiffModelObject, EObject RuleObject)
+	 {
+	     System.out.println("***************Root Match");
+	     System.out.println(DiffModelObject.eClass().getName() + " -|vs|- " +RuleObject.eClass().getName());
+		 if(!classTypeMatcher(DiffModelObject,RuleObject))
+			 return false;
+		 //We  checked the modified attribute values and checked for
+		 // equality of objects which are not modified
+		 if(!attributeMatcher(DiffModelObject,RuleObject))
+			 return false;		
+		
+		 return true;
+	 }
+	 
+	 //***
+	 boolean classTypeMatcher(EObject DiffModelObject, EObject RuleObject)
+	 {
+	     System.out.println(">>>Match EClass Type: ");
+		 if(DiffModelObject.eClass().getESuperTypes().contains(RuleObject.eClass()))
+			 return false;
+		 System.out.println(".............................  EClass Types are matched!");		 
+		 return true;
+	 }
+	 
+	 //****
+	 boolean attributeMatcher(EObject DiffModelObject, EObject RuleObject)
+	 {
+		 System.out.println(">>>Match EAttributes: " + DiffModelObject + " --|--"+ RuleObject);
+		 final List<EAttribute> allEAttrR = RuleObject.eClass().getEAllAttributes();
+		 
+		 if(allEAttrR!=null)	
+		 {
+			 //The constraints will be applied in the final
+			 return attrMatchAllForEquality(DiffModelObject, RuleObject, allEAttrR);
+		 }			 	 
+
+		 System.out.println(".............................  EAttributes  are matched!");
+		 return true;
+	 }
+	 
+	 //***
+	 boolean attrMatchAllForEquality(EObject DiffModelObject, EObject RuleObject, List<EAttribute> allEAttrR)
+	 {
+		 allEAttrR= allEAttrR.stream()
+				 .filter(a -> !a.getName().toLowerCase().startsWith("id_pattern") 
+						 && !a.getName().toLowerCase().startsWith("new_") 
+						 && !a.getName().toLowerCase().equals(("id"))
+						 && !a.getName().toLowerCase().equals(("filter"))
+						 && !a.getName().toLowerCase().equals(("diff_kind"))
+						 )
+				 .collect(Collectors.toList());
+		 				//We do not have post anymore: Removed=>; !a.getName().toLowerCase().startsWith("post_") 
+		 
+		 for(EAttribute attOrgR : allEAttrR)
+		 {
+			 // *****
+			 System.out.println(attOrgR);
+			 
+			 final Object valAttOrgR  = RuleObject.eGet(attOrgR);
+			 if(valAttOrgR==null)
+				 continue;
+			 			 			 
+			 String attrName=attOrgR.getName();
+			 EAttribute attOrgD= DiffModelObject.eClass().getEAllAttributes().stream().filter(a -> a.getName().equals(attrName)).findFirst().get();
+			 if(attOrgD==null)
+				 return false;
+			 final Object valAttOrgD  = RuleObject.eGet(attOrgD);
+			 if(valAttOrgD==null)
+				 return false;
+			 if(!(valAttOrgR == valAttOrgD))
+				 return false;
+		 }	
+		 System.out.println(".............................  EAttributes  are matched!");
+		 return true;
+	 }
+	 	 
+	 //***
+	 //boolean noMatch=false;
+	 boolean refMatcher(MRN MatchedRN)
+	 {
+		 //if(!noMatch)
+		 {
+			 EObject DiffModelObject = MatchedRN.matchedNode;
+			 EObject RuleObject      = MatchedRN.ruleNode;
+			 if(RuleObject.eContents().size()==0 &&  RuleObject.eCrossReferences().size()==0)
+				 return true;
+		 
+			 List<EObject> objsInR = null; //TBC %%% //getReferencingObjects(RuleObject);
+			 
+			 List<EObject> toRemoveInRs= objsInR.stream()
+			 .filter(r->r.eClass().getName()
+					 .toLowerCase().contains("DomainSpecificDiff".toLowerCase()))
+			 .collect(Collectors.toList());
+			 
+			 objsInR.removeAll(toRemoveInRs);
+			 
+			 
+			 List<EObject> objsInD = null; //TBC %%% //getReferencingObjects(DiffModelObject);
+		 
+			 int sizeRefsInR=objsInR.size();
+			 int sizeRefsInD=objsInD.size();
+			 
+			 System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&");
+			 System.out.println("&&&&---> "+RuleObject + " : "+ DiffModelObject);
+			 System.out.println("&&&& sizeRefsInR: "+sizeRefsInR+ " : " + "sizeRefsInD: "+sizeRefsInD);
+			 
+			 
+			 if(sizeRefsInD < sizeRefsInR)
+			 {
+				 System.out.println("***RETURNED");
+				 return false;
+			 }
+			 
+			 while(objsInR!=null && objsInR.size() > 0)  
+			 {
+				 EObject objInR=objsInR.get(0);
+				 Class  classObjInR=objInR.getClass().getSuperclass();
+				 boolean found=false;
+				 
+				 for(int j= 0;j < objsInD.size();j++ )
+				 {
+					 EObject objInD=objsInD.get(j);
+					 Class  classObjInD=objInD.getClass();
+					 // ** // eclassObjInR==eclassObjInD &&
+					 if(classObjInR==classObjInD && attributeMatcher(DiffModelObject,RuleObject))
+					 {					 
+						 objsInD.remove(objInD);
+						 objsInR.remove(objInR);
+						 found=true;
+						 break;
+					 }					 
+				 }
+	
+				 if(found==false)
+				 {
+					 return false;
+				 }
+			 }		 
+			 
+			 EList<EReference> refsOutEClassR = RuleObject.eClass().getEAllReferences();
+			 //System.out.println("--- "+RuleObject+"---> refsOutEClassR: "+ refsOutEClassR);
+			 //refsOutEClassR.forEach(r ->  System.out.println(r));
+			 //System.out.println("-----------------------------");
+			 //ArrayList<DSRuleMatched> dsrMatchs= new ArrayList<DSRuleMatched>();	
+			 		 
+			 for(EReference refOutEClassR:refsOutEClassR)
+			 {
+				 
+				 if(refOutEClassR.getName().toLowerCase().contains("domainspecificdiffs"))
+					 continue;
+				 
+				 
+				 MRN matchedRuleNode= new MRN();
+				 matchedRuleNode.ruleNode=RuleObject;
+				 matchedRuleNode.matchedNode=DiffModelObject;
+				 //*//RefObjPer	refObjPer= null;
+				 MRN	refObjPer= null;
+						 
+				 List<EObject> refsOutRObjects = new ArrayList<EObject>();				 
+				 try
+				 {
+				    refsOutRObjects= (List<EObject>) RuleObject.eGet(refOutEClassR);
+				 }
+				 catch(Exception ex1)
+				 {				 
+					 refsOutRObjects.add((EObject) RuleObject.eGet(refOutEClassR));
+				 }
+				 
+					 
+				 List<EObject> refsOutDObjects = new ArrayList<EObject>();;
+				 try
+				 {
+					 refsOutDObjects= (List<EObject>) DiffModelObject.eGet(refOutEClassR);
+				 }
+				 catch(Exception ex2)
+				 {
+					 refsOutDObjects.add((EObject) DiffModelObject.eGet(refOutEClassR));
+				 }	
+				 
+			 	int sizeOutR=0, sizeOutD=0;
+			 	
+				try 
+				{				
+				 sizeOutR  = refsOutRObjects.size();
+				}
+				catch(Exception ex2)
+				{
+					sizeOutR=0;
+				}	 			 
+	
+				try 
+				{	
+				 sizeOutD  = refsOutDObjects.size();			 
+				}
+				catch(Exception ex2)
+				{
+					sizeOutD=0;
+				}
+				
+				 System.out.println("&&&& sizeOutR: " + sizeOutR + " : " +  "sizeOutD: "+  sizeOutD); 
+				 if(sizeOutR==0)
+					 continue;
+					 //return true;
+				 
+				 if(sizeOutD < sizeOutR)
+				 {
+					 System.out.println("***RETURNED");
+					 return false;	
+				 }					 
+				 
+				 Map<Object,List<EObject>> RR=refsOutRObjects.stream().collect(Collectors.groupingBy(p -> p.getClass()));				 
+				 //System.out.println("RR: ");
+				 //RR.forEach((k,vs) -> System.out.println(k+ " : "+vs));
+				 //System.out.println("--------");				 
+				 Map<Object,List<EObject>> DD=refsOutDObjects.stream().collect(Collectors.groupingBy(p -> p.getClass()));
+				 
+				 for(Entry<Object, List<EObject>> R:RR.entrySet())
+				 {
+					 for(int i=0; i<R.getValue().size();i++)
+					 {
+						 EObject refsOutRObject=R.getValue().get(i);
+						 boolean found=false;
+						 
+						 System.out.println("((Class)R.getKey())                     : " + ((Class)R.getKey()));
+						 
+						 Class superClassR=((Class)R.getKey()).getSuperclass();
+						 
+						 Object keyObjectD=null;
+							
+						 for(Entry<Object, List<EObject>> d:DD.entrySet())
+						 {
+							Class KeyD=((Class)d.getKey());
+							if(KeyD.equals(superClassR))
+							{
+								keyObjectD=d.getKey();
+							}
+						 }						 
+						 
+						 List<EObject> ds=DD.get(keyObjectD); // ***//DD.get(R.getKey());
+						 System.out.println("DD.get(keyObjectD): " + ds);
+						 System.out.println("refsOutRObject    : " +refsOutRObject);
+						 
+						 
+						 List<EObject> dsMatched=null;
+						 try {//%%%%%%%%%%%%%%%%% Need a Hard review
+		 						 dsMatched= ds.stream().filter(d -> attributeMatcher(d,refsOutRObject)).collect(Collectors.toList());
+
+						 }catch(Exception ex) {
+							 dsMatched=null;
+						 }
+						 if(dsMatched!=null && dsMatched.size()>0)
+						 {
+							 found=true;
+							
+							 
+							 for(EObject mch:dsMatched)
+							 {						  
+								 //*//refObjPer= new 	RefObjPer();	
+								 refObjPer= new 	MRN();
+								 refObjPer.Ref=refOutEClassR;
+								 refObjPer.ruleNode=refsOutRObject;
+								 
+								 //System.out.println(R.getKey());
+								 
+								 refObjPer.Clas=(Class) R.getKey();
+								 refObjPer.matchedNode=refsOutRObject;
+								 refObjPer.matchedNode=mch;
+								 //!!!!!!!!!!!!
+								 MatchedRN.refMRN.add(refObjPer);
+							 }
+								 
+							//*//refObjPer.refObjPer.addAll(dsMatched);
+						 }
+						 
+						 if(found==false)
+						 {
+							 System.out.println("######Matching Attribute####: "+refsOutRObject +"--Not found in---: " + ds);
+							 System.out.println("*********NNNNN************* ");
+							 return false;
+						 }						 			 
+					 }
+				 }
+				 System.out.println();
+			 }
+			 
+			 
+			 System.out.println();
+			 System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>> MatchedRN: " );
+			 System.out.println("Rule   Ref :--- "+MatchedRN.Ref);
+			 System.out.println("Rule   Clas:--- "+MatchedRN.Clas);	
+			 System.out.println("Rule   Node:--- "+MatchedRN.ruleNode.toString());
+			 System.out.println("DSDiff Node:--- "+MatchedRN.matchedNode.toString());	
+			 for(MRN d: MatchedRN.refMRN)
+			 {
+				 System.out.println("---------------------> MatchedRN.refMRN: " );
+				 System.out.println("Rule   Ref : "+d.Ref);
+				 System.out.println("Rule   Clas: "+d.Clas);	
+				 System.out.println("Rule   Node: "+d.ruleNode);
+				 System.out.println("DSDiff Node: "+d.matchedNode);				 
+			 }
+	
+			 
+			 List<MRN> toRemoveObjs=new ArrayList<MRN>();
+			 for(MRN m: MatchedRN.refMRN)
+			 {
+				 Boolean visited=false;
+				 for(MRN v: visitedMRN)
+					 if(v.matchedNode == m.matchedNode) {
+						 visited=true;
+						 break;
+					 }
+				 if( visited==true) {
+					 continue;
+				 }						 
+				 visitedMRN.add(m);
+				 boolean mtch= refMatcher(m);
+				 if(mtch==false)
+					 toRemoveObjs.add(m);	 
+			 }
+			 if(toRemoveObjs!=null && toRemoveObjs.size()>0)
+			 {
+				 MatchedRN.refMRN.removeAll(toRemoveObjs);
+	
+				 System.out.println("====Removed in Root===> ");
+				 System.out.println("Rule   Node:--- "+MatchedRN.ruleNode.eClass());
+				 System.out.println("DSDiff Node:--- "+MatchedRN.matchedNode.eClass());
+				 
+				 for(MRN r: toRemoveObjs)
+				 {
+					 System.out.println("====Removes===> ");
+					 System.out.println("Rule   Ref : "+r.Ref);
+					 System.out.println("Rule   Clas: "+r.Clas);	
+					 System.out.println("Rule   Node: "+r.ruleNode.eClass());
+					 System.out.println("DSDiff Node: "+r.matchedNode.eClass());	
+				 }
+					 
+			 }
+			 
+			 if(toRemoveObjs!=null && toRemoveObjs.size()>0 && MatchedRN.refMRN !=null && MatchedRN.refMRN.size()==0)
+			 {
+				 System.out.println("*********NNNNN************* ");
+				 System.out.println("@@@@@@@@@@ return false @@@@@:  MatchedRN.refMRN.size()==0");
+				 System.out.println("MatchedRN: "+ MatchedRN.matchedNode);				 
+				 return false;
+			 }		 
+			 System.out.println("<-Eref Matched for-> " + DiffModelObject+" /-- and --/ "+RuleObject);
+			 return true;
+			 
+			 //Manoel rimer's work to look
+			 //All possible match
+			 //Conflicts!!!
+		 }
+	 }
+
+	 
+}

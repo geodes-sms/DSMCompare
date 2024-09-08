@@ -1,0 +1,119 @@
+
+Rules:
+Id,	Name,					Filter#,				Element#	#Instances	#Overlaps
+							[Associations/Class]
+
+0  	extractSuperclassAttr		0/1						7			0			6
+1	extractSuperclassRef		1/0						7			0			8
+2	flattenHierarchyAttr		1/1						8			0			7
+3	flattenHierarchyRef			2/0						8			0			9
+4	mergeMetaclassAttr			0/2						9			1			6
+5	mergeMetaclassRef			2/0						9			0			8
+6	mergeReference				1/0						8			2			8
+7	moveAttribute				0/1						7		   10			6
+8	moveMethod					0/1						7			0			3	
+9	moveReference				1/0						7		   10			8
+10	pullUpAttribute				0/1						7			0			7
+11	pullUpMethod				0/1						7			0			3						
+12	pullUpReference				1/0						7			0			8
+13	pushDownAttribute			0/1						7			1			6
+14	pushDownMethod				0/1						7			0			3
+15	pushDownReference			1/0						7			0			8
+16	removeMiddleMan				2/0						9		   13			8
+17	renameAttribute				0/0						5			1			0
+18	renameMethod				0/0						5			0			0
+19	renameReference				0/0						5			3			0
+------------------------------------------------------------------------------------
+Maximum Matches														41
+Found Matches by Order												28
+------------------------------------------------------------------------------------
+
+
+[MultiCDA] Computing initial conflict reasons-computeResultsFine:
+2, 0, 2, 0,  3,  0,  0, 2, 0, 0, 2, 0, 0, 2, 0, 0,  0, 1, 0, 0,    | extractSuperclassAttr
+0, 2, 0, 2,  0,  3,  3, 0, 0, 2, 0, 0, 2, 0, 0, 2,  3, 0, 0, 1,    | extractSuperclassRef
+2, 0, 4, 1,  3,  0,  0, 2, 0, 0, 2, 0, 0, 2, 0, 0,  0, 1, 0, 0,    | flattenHierarchyAttr
+0, 2, 1, 4,  0,  3,  3, 0, 0, 2, 0, 0, 2, 0, 0, 2,  3, 0, 0, 1,    | flattenHierarchyRef
+6, 0, 6, 0, 12,  0,  0, 6, 0, 0, 6, 0, 0, 6, 0, 0,  0, 2, 0, 0,    | mergeMetaclassAttr
+0, 6, 0, 6,  0, 12, 10, 0, 0, 6, 0, 0, 6, 0, 0, 6, 10, 0, 0, 2,    | mergeMetaclassRef
+0, 2, 0, 2,  0,  3,  3, 0, 0, 2, 0, 0, 2, 0, 0, 2,  3, 0, 0, 1,    | mergeReference
+2, 0, 2, 0,  3,  0,  0, 2, 0, 0, 2, 0, 0, 2, 0, 0,  0, 1, 0, 0,    | moveAttribute
+0, 0, 0, 0,  0,  0,  0, 0, 2, 0, 0, 2, 0, 0, 2, 0,  0, 0, 1, 0,    | moveMethod
+0, 2, 0, 2,  0,  3,  3, 0, 0, 2, 0, 0, 2, 0, 0, 2,  3, 0, 0, 1,    | moveReference
+2, 0, 2, 0,  3,  0,  0, 2, 0, 0, 2, 0, 0, 2, 0, 0,  0, 1, 0, 0,    | pullUpAttribute
+0, 0, 0, 0,  0,  0,  0, 0, 2, 0, 0, 2, 0, 0, 2, 0,  0, 0, 1, 0,    | pullUpMethod
+0, 2, 0, 2,  0,  3,  3, 0, 0, 2, 0, 0, 2, 0, 0, 2,  3, 0, 0, 1,    | pullUpReference
+2, 0, 2, 0,  3,  0,  0, 2, 0, 0, 2, 0, 0, 2, 0, 0,  0, 1, 0, 0,    | pushDownAttribute
+0, 0, 0, 0,  0,  0,  0, 0, 2, 0, 0, 2, 0, 0, 2, 0,  0, 0, 1, 0,    | pushDownMethod
+0, 2, 0, 2,  0,  3,  3, 0, 0, 2, 0, 0, 2, 0, 0, 2,  3, 0, 0, 1,    | pushDownReference
+0, 6, 0, 6,  0, 12, 10, 0, 0, 6, 0, 0, 6, 0, 0, 6, 10, 0, 0, 2,    | removeMiddleMan
+0, 0, 0, 0,  0,  0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,  0, 0, 0, 0,    | renameAttribute
+0, 0, 0, 0,  0,  0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,  0, 0, 0, 0,    | renameMethod
+0, 0, 0, 0,  0,  0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,  0, 0, 0, 0,    | renameReference
+
+-----------------------------------------------------------------------------------------
+//Filters need to be revised
+uml = Graph(20, [   (1,7),(1,7),(2,8),(2,8),(2,9),
+                    (2,9),(2,8),(2,7),(2,7),(1,7),
+                    (1,7),(1,7),(1,7),(1,7),(1,7),
+                    (1,7),(2,9),(0,5),(0,5),(0,5)], True, 
+                    ["extractSuperclassAttr", "extractSuperclassRef", 
+                    "flattenHierarchyAttr", "flattenHierarchyRef","mergeMetaclassAttr",
+                    "mergeMetaclassRef", "mergeReference","moveAttribute","moveMethod",
+                    "moveReference","pullUpAttribute","pullUpMethod","pullUpReference",
+                    "pushDownAttribute","pushDownMethod","pushDownReference",
+                    "removeMiddleMan","renameAttribute","renameMethod","renameReference"], 
+                    name='UML')
+
+
+
+uml.set_adjacency_matrix([
+	[0, 0, 2, 0,  3,  0,  0, 2, 0, 0, 2, 0, 0, 2, 0, 0,  0, 1, 0, 0],
+	[0, 0, 0, 2,  0,  3,  3, 0, 0, 2, 0, 0, 2, 0, 0, 2,  3, 0, 0, 1],
+	[2, 0, 0, 1,  3,  0,  0, 2, 0, 0, 2, 0, 0, 2, 0, 0,  0, 1, 0, 0],
+	[0, 2, 1, 0,  0,  3,  3, 0, 0, 2, 0, 0, 2, 0, 0, 2,  3, 0, 0, 1],
+	[6, 0, 6, 0,  0,  0,  0, 6, 0, 0, 6, 0, 0, 6, 0, 0,  0, 2, 0, 0],
+	[0, 6, 0, 6,  0,  0, 10, 0, 0, 6, 0, 0, 6, 0, 0, 6, 10, 0, 0, 2],
+	[0, 2, 0, 2,  0,  3,  0, 0, 0, 2, 0, 0, 2, 0, 0, 2,  3, 0, 0, 1],
+	[2, 0, 2, 0,  3,  0,  0, 0, 0, 0, 2, 0, 0, 2, 0, 0,  0, 1, 0, 0],
+	[0, 0, 0, 0,  0,  0,  0, 0, 0, 0, 0, 2, 0, 0, 2, 0,  0, 0, 1, 0],
+	[0, 2, 0, 2,  0,  3,  3, 0, 0, 0, 0, 0, 2, 0, 0, 2,  3, 0, 0, 1],
+	[2, 0, 2, 0,  3,  0,  0, 2, 0, 0, 0, 0, 0, 2, 0, 0,  0, 1, 0, 0],
+	[0, 0, 0, 0,  0,  0,  0, 0, 2, 0, 0, 0, 0, 0, 2, 0,  0, 0, 1, 0],
+	[0, 2, 0, 2,  0,  3,  3, 0, 0, 2, 0, 0, 0, 0, 0, 2,  3, 0, 0, 1],
+	[2, 0, 2, 0,  3,  0,  0, 2, 0, 0, 2, 0, 0, 0, 0, 0,  0, 1, 0, 0],
+	[0, 0, 0, 0,  0,  0,  0, 0, 2, 0, 0, 2, 0, 0, 0, 0,  0, 0, 1, 0],
+	[0, 2, 0, 2,  0,  3,  3, 0, 0, 2, 0, 0, 2, 0, 0, 0,  3, 0, 0, 1],
+	[0, 6, 0, 6,  0, 12, 10, 0, 0, 6, 0, 0, 6, 0, 0, 6,  0, 0, 0, 2],
+	[0, 0, 0, 0,  0,  0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,  0, 0, 0, 0],
+	[0, 0, 0, 0,  0,  0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,  0, 0, 0, 0],
+	[0, 0, 0, 0,  0,  0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,  0, 0, 0, 0]
+    ])
+
+------------------------------------------------------------------------------------
+Ordering result: 17<->18<->19-6<->7<->8-1<->2<->11-3<->10<->14-13<->15-0<->9-4<->12-5-16
+
+UML-Refactoring
+Ordering result: 
+
+Id      Vertex  				Order
+19      renameReference 		1
+17      renameAttribute 		1
+18      renameMethod    		1
+6       mergeReference  		2
+7       moveAttribute   		2
+8       moveMethod      		2
+2       flattenHierarchyAttr    3
+1       extractSuperclassRef    3
+11      pullUpMethod    		3
+3       flattenHierarchyRef     4
+10      pullUpAttribute 		4
+14      pushDownMethod  		4
+13      pushDownAttribute       5
+15      pushDownReference       5
+0       extractSuperclassAttr   6
+9       moveReference   		6
+4       mergeMetaclassAttr      7
+12      pullUpReference 		7
+5       mergeMetaclassRef       8
+16      removeMiddleMan 		9

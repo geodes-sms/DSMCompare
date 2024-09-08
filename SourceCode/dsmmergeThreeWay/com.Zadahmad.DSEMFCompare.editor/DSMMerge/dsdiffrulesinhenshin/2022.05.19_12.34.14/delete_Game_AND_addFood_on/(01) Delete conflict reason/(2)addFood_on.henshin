@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Rule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_hTsEcNeREeyEnrzG7GdwSg" name="addFood_on">
+  <lhs xmi:id="_hTsEcdeREeyEnrzG7GdwSg" name="addFood_on_LHS">
+    <nodes xmi:id="_hTsEcteREeyEnrzG7GdwSg" name="n0">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_hTsEc9eREeyEnrzG7GdwSg" name="n1">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Food"/>
+    </nodes>
+  </lhs>
+  <rhs xmi:id="_hTsEdNeREeyEnrzG7GdwSg" name="addFood_on_RHS">
+    <nodes xmi:id="_hTsEddeREeyEnrzG7GdwSg" name="n0" outgoing="_hTsEeNeREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_hTsEdteREeyEnrzG7GdwSg" name="n1" incoming="_hTsEeNeREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Food"/>
+    </nodes>
+    <nodes xmi:id="_hTsEd9eREeyEnrzG7GdwSg" name="n2">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+    </nodes>
+    <edges xmi:id="_hTsEeNeREeyEnrzG7GdwSg" source="_hTsEddeREeyEnrzG7GdwSg" target="_hTsEdteREeyEnrzG7GdwSg">
+      <type href="../../../../MM/pacmanDiffMM.ecore#//Game/entities"/>
+    </edges>
+  </rhs>
+  <mappings xmi:id="_hTsEedeREeyEnrzG7GdwSg" origin="_hTsEcteREeyEnrzG7GdwSg" image="_hTsEddeREeyEnrzG7GdwSg"/>
+  <mappings xmi:id="_hTsEeteREeyEnrzG7GdwSg" origin="_hTsEc9eREeyEnrzG7GdwSg" image="_hTsEdteREeyEnrzG7GdwSg"/>
+</henshin:Rule>

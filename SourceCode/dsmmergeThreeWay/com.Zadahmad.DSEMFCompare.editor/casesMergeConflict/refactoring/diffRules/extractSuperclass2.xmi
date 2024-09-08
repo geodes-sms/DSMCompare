@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring2WayRuleMM="www.geodes.UdeM.edu/refactoring2WayRuleMM"
+    name="extractSuperclass2">
+  <rulePattern_EPackage xsi:type="refactoring2WayRuleMM:Pattern_EPackage">
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="cls"
+        ID_Pattern="1">
+      <diffesupertypes
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_esupertypes"
+          diff_kind="ADD"
+          eType="clsP"
+          ID_Pattern="2"
+          filter="true"/>
+    </eclassifiers>
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="clsP"
+        ID_Pattern="3"/>
+  </rulePattern_EPackage>
+  
+    <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+        name="extractSuperclass"
+        SemanticObject_EClass="cls"
+        SemanticObject_EPackage="//@rulePattern_EPackage.0"
+        ID_Pattern="4"/>
+</refactoring2WayRuleMM:Rule>

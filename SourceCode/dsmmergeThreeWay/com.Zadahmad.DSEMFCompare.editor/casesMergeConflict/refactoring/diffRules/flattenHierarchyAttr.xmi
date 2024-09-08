@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring2WayRuleMM="www.geodes.UdeM.edu/refactoring2WayRuleMM"
+    name="flattenHierarchyAttr">
+  <rulePattern_EPackage xsi:type="refactoring2WayRuleMM:Pattern_EPackage">
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="sub"
+        ID_Pattern="1">
+      <diffeattributes
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_eattributes"
+          diff_kind="ADD"
+          eType="attr"
+          ID_Pattern="4"/>
+      <diffesupertypes
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_esupertypes"
+          diff_kind="DELETE"
+          eType="super"
+          ID_Pattern="5"
+          filter="true"/>
+    </eclassifiers>
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass"
+        name="super"
+        diff_kind="DELETE"
+        ID_Pattern="2">
+      <eattributes
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEAttribute"
+          name="attr"
+          diff_kind="DELETE"
+          ID_Pattern="6"/>
+      <diffeattributes
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_eattributes"
+          diff_kind="DELETE"
+          eType="attr"
+          ID_Pattern="7"
+          filter="true"/>
+    </eclassifiers>
+  </rulePattern_EPackage>
+  
+     <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+        name="flattenHierarchyAttr"
+        SemanticObject_EAttribute="attr"
+        SemanticObject_EClass="sub super"
+        SemanticObject_EPackage="//@rulePattern_EPackage.0"
+        SemanticObject_DiffEClass_eattributes="//@rulePattern_EPackage.0/@eclassifiers.0/@diffeattributes.0"
+        ID_Pattern="3"/>
+</refactoring2WayRuleMM:Rule>

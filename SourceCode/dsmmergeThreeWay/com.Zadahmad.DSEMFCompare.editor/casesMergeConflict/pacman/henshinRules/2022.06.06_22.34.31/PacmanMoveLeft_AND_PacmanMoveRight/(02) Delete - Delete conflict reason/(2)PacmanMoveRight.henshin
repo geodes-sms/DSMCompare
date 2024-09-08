@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Rule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_XJWQ0OYKEeyMIoL8fp7gzg" name="PacmanMoveRight">
+  <parameters xmi:id="_XJWQ0eYKEeyMIoL8fp7gzg" name="n31diff_kind_Left" kind="VAR">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </parameters>
+  <parameters xmi:id="_XJWQ0uYKEeyMIoL8fp7gzg" name="n31diff_kind_Right" kind="VAR">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </parameters>
+  <parameters xmi:id="_XJWQ0-YKEeyMIoL8fp7gzg" name="n32diff_kind_Left" kind="VAR">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </parameters>
+  <parameters xmi:id="_XJWQ1OYKEeyMIoL8fp7gzg" name="n32diff_kind_Right" kind="VAR">
+    <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </parameters>
+  <lhs xmi:id="_XJWQ1eYKEeyMIoL8fp7gzg" name="PacmanMoveRight_LHS">
+    <nodes xmi:id="_XJWQ1uYKEeyMIoL8fp7gzg" name="n0" outgoing="_XJWQ4OYKEeyMIoL8fp7gzg _XJWQ4eYKEeyMIoL8fp7gzg _XJWQ4uYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_XJWQ1-YKEeyMIoL8fp7gzg" name="n1" incoming="_XJWQ4OYKEeyMIoL8fp7gzg _XJWQ5uYKEeyMIoL8fp7gzg" outgoing="_XJWQ4-YKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//GridNode"/>
+    </nodes>
+    <nodes xmi:id="_XJWQ2OYKEeyMIoL8fp7gzg" name="n2" incoming="_XJWQ4eYKEeyMIoL8fp7gzg _XJWQ4-YKEeyMIoL8fp7gzg _XJWQ5-YKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//GridNode"/>
+    </nodes>
+    <nodes xmi:id="_XJWQ2eYKEeyMIoL8fp7gzg" name="n3" incoming="_XJWQ4uYKEeyMIoL8fp7gzg" outgoing="_XJWQ5OYKEeyMIoL8fp7gzg _XJWQ5eYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//Pacman"/>
+    </nodes>
+    <nodes xmi:id="_XJWQ2uYKEeyMIoL8fp7gzg" name="n32" incoming="_XJWQ5eYKEeyMIoL8fp7gzg" outgoing="_XJWQ5-YKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      <attributes xmi:id="_XJWQ2-YKEeyMIoL8fp7gzg" value="n32diff_kind_Left">
+        <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+      </attributes>
+      <attributes xmi:id="_XJWQ3OYKEeyMIoL8fp7gzg" value="n32diff_kind_Right">
+        <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+      </attributes>
+    </nodes>
+    <nodes xmi:id="_XJWQ3eYKEeyMIoL8fp7gzg" name="n31" incoming="_XJWQ5OYKEeyMIoL8fp7gzg" outgoing="_XJWQ5uYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      <attributes xmi:id="_XJWQ3uYKEeyMIoL8fp7gzg" value="n31diff_kind_Left">
+        <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+      </attributes>
+      <attributes xmi:id="_XJWQ3-YKEeyMIoL8fp7gzg" value="n31diff_kind_Right">
+        <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+      </attributes>
+    </nodes>
+    <edges xmi:id="_XJWQ4OYKEeyMIoL8fp7gzg" source="_XJWQ1uYKEeyMIoL8fp7gzg" target="_XJWQ1-YKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+    </edges>
+    <edges xmi:id="_XJWQ4eYKEeyMIoL8fp7gzg" source="_XJWQ1uYKEeyMIoL8fp7gzg" target="_XJWQ2OYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+    </edges>
+    <edges xmi:id="_XJWQ4uYKEeyMIoL8fp7gzg" source="_XJWQ1uYKEeyMIoL8fp7gzg" target="_XJWQ2eYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//Game/entities"/>
+    </edges>
+    <edges xmi:id="_XJWQ4-YKEeyMIoL8fp7gzg" source="_XJWQ1-YKEeyMIoL8fp7gzg" target="_XJWQ2OYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//GridNode/right"/>
+    </edges>
+    <edges xmi:id="_XJWQ5OYKEeyMIoL8fp7gzg" source="_XJWQ2eYKEeyMIoL8fp7gzg" target="_XJWQ3eYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+    </edges>
+    <edges xmi:id="_XJWQ5eYKEeyMIoL8fp7gzg" source="_XJWQ2eYKEeyMIoL8fp7gzg" target="_XJWQ2uYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+    </edges>
+    <edges xmi:id="_XJWQ5uYKEeyMIoL8fp7gzg" source="_XJWQ3eYKEeyMIoL8fp7gzg" target="_XJWQ1-YKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+    </edges>
+    <edges xmi:id="_XJWQ5-YKEeyMIoL8fp7gzg" source="_XJWQ2uYKEeyMIoL8fp7gzg" target="_XJWQ2OYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+    </edges>
+  </lhs>
+  <rhs xmi:id="_XJWQ6OYKEeyMIoL8fp7gzg" name="PacmanMoveRight_RHS">
+    <nodes xmi:id="_XJWQ6eYKEeyMIoL8fp7gzg" name="n0" outgoing="_XJWQ8uYKEeyMIoL8fp7gzg _XJWQ8-YKEeyMIoL8fp7gzg _XJWQ9OYKEeyMIoL8fp7gzg _XJWQ9eYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//Game"/>
+    </nodes>
+    <nodes xmi:id="_XJWQ6uYKEeyMIoL8fp7gzg" name="n1" incoming="_XJWQ8uYKEeyMIoL8fp7gzg" outgoing="_XJWQ9uYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//GridNode"/>
+    </nodes>
+    <nodes xmi:id="_XJWQ6-YKEeyMIoL8fp7gzg" name="n2" incoming="_XJWQ8-YKEeyMIoL8fp7gzg _XJWQ9uYKEeyMIoL8fp7gzg _XJWQ-OYKEeyMIoL8fp7gzg _XJWQ-eYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//GridNode"/>
+    </nodes>
+    <nodes xmi:id="_XJWQ7OYKEeyMIoL8fp7gzg" name="n3" incoming="_XJWQ9OYKEeyMIoL8fp7gzg _XJWQ-uYKEeyMIoL8fp7gzg" outgoing="_XJWQ9-YKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//Pacman"/>
+    </nodes>
+    <nodes xmi:id="_XJWQ7eYKEeyMIoL8fp7gzg" name="n32" incoming="_XJWQ9-YKEeyMIoL8fp7gzg _XJWQ--YKEeyMIoL8fp7gzg" outgoing="_XJWQ-OYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      <attributes xmi:id="_XJWQ7uYKEeyMIoL8fp7gzg" value="n32diff_kind_Left">
+        <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Left"/>
+      </attributes>
+      <attributes xmi:id="_XJWQ7-YKEeyMIoL8fp7gzg" value="n32diff_kind_Right">
+        <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/diff_kind_Right"/>
+      </attributes>
+    </nodes>
+    <nodes xmi:id="_XJWQ8OYKEeyMIoL8fp7gzg" name="n4" incoming="_XJWQ9eYKEeyMIoL8fp7gzg" outgoing="_XJWQ-eYKEeyMIoL8fp7gzg _XJWQ-uYKEeyMIoL8fp7gzg _XJWQ--YKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DomainSpecificDiff"/>
+      <attributes xmi:id="_XJWQ8eYKEeyMIoL8fp7gzg" value="&quot;Pacman Move Right&quot;">
+        <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DomainSpecificDiff/name"/>
+      </attributes>
+    </nodes>
+    <edges xmi:id="_XJWQ8uYKEeyMIoL8fp7gzg" source="_XJWQ6eYKEeyMIoL8fp7gzg" target="_XJWQ6uYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+    </edges>
+    <edges xmi:id="_XJWQ8-YKEeyMIoL8fp7gzg" source="_XJWQ6eYKEeyMIoL8fp7gzg" target="_XJWQ6-YKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+    </edges>
+    <edges xmi:id="_XJWQ9OYKEeyMIoL8fp7gzg" source="_XJWQ6eYKEeyMIoL8fp7gzg" target="_XJWQ7OYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//Game/entities"/>
+    </edges>
+    <edges xmi:id="_XJWQ9eYKEeyMIoL8fp7gzg" source="_XJWQ6eYKEeyMIoL8fp7gzg" target="_XJWQ8OYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//Game/domainspecificdiffs"/>
+    </edges>
+    <edges xmi:id="_XJWQ9uYKEeyMIoL8fp7gzg" source="_XJWQ6uYKEeyMIoL8fp7gzg" target="_XJWQ6-YKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//GridNode/right"/>
+    </edges>
+    <edges xmi:id="_XJWQ9-YKEeyMIoL8fp7gzg" source="_XJWQ7OYKEeyMIoL8fp7gzg" target="_XJWQ7eYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+    </edges>
+    <edges xmi:id="_XJWQ-OYKEeyMIoL8fp7gzg" source="_XJWQ7eYKEeyMIoL8fp7gzg" target="_XJWQ6-YKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+    </edges>
+    <edges xmi:id="_XJWQ-eYKEeyMIoL8fp7gzg" source="_XJWQ8OYKEeyMIoL8fp7gzg" target="_XJWQ6-YKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_GridNode"/>
+    </edges>
+    <edges xmi:id="_XJWQ-uYKEeyMIoL8fp7gzg" source="_XJWQ8OYKEeyMIoL8fp7gzg" target="_XJWQ7OYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_PositionableEntity"/>
+    </edges>
+    <edges xmi:id="_XJWQ--YKEeyMIoL8fp7gzg" source="_XJWQ8OYKEeyMIoL8fp7gzg" target="_XJWQ7eYKEeyMIoL8fp7gzg">
+      <type href="../../../../../../DSMMerge/MM/pacmanDiffMM.ecore#//DomainSpecificDiff/DomainSpecificDiff_DiffPositionableEntity_on"/>
+    </edges>
+  </rhs>
+  <mappings xmi:id="_XJWQ_OYKEeyMIoL8fp7gzg" origin="_XJWQ1uYKEeyMIoL8fp7gzg" image="_XJWQ6eYKEeyMIoL8fp7gzg"/>
+  <mappings xmi:id="_XJWQ_eYKEeyMIoL8fp7gzg" origin="_XJWQ1-YKEeyMIoL8fp7gzg" image="_XJWQ6uYKEeyMIoL8fp7gzg"/>
+  <mappings xmi:id="_XJWQ_uYKEeyMIoL8fp7gzg" origin="_XJWQ2OYKEeyMIoL8fp7gzg" image="_XJWQ6-YKEeyMIoL8fp7gzg"/>
+  <mappings xmi:id="_XJWQ_-YKEeyMIoL8fp7gzg" origin="_XJWQ2eYKEeyMIoL8fp7gzg" image="_XJWQ7OYKEeyMIoL8fp7gzg"/>
+  <mappings xmi:id="_XJWRAOYKEeyMIoL8fp7gzg" origin="_XJWQ2uYKEeyMIoL8fp7gzg" image="_XJWQ7eYKEeyMIoL8fp7gzg"/>
+</henshin:Rule>
