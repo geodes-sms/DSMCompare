@@ -1,0 +1,3542 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:refactoring="www.geodes.UdeM.edu/refactoring"
+    name="pkg">
+  <eclassifiers
+      name="RealmObject">
+    <eattributes
+        name="row"
+        etype="Row"/>
+    <eattributes
+        name="realm"
+        etype="BaseRealm"/>
+    <eattributes
+        name="listeners"
+        etype="List&lt;RealmChangeListener>"/>
+    <eattributes
+        name="pendingQuery"
+        etype="java.util.concurrent.Future&lt;java.lang.Long>"/>
+    <eattributes
+        name="isCompleted"
+        etype="boolean"/>
+    <eattributes
+        name="currentTableVersion"
+        etype="long"/>
+    <eoperations
+        name="removeFromRealm()"
+        eparameters=""
+        etype="void"
+        methodBody="expression statement; ASSIGN; expression statement; method invocation; moveLastOver; method invocation; getIndex; method invocation; getTable; expression statement; method invocation; checkIfValid; if; throw; class instance creation; IllegalStateException; string literal; EQUALS; null; if; throw; class instance creation; IllegalStateException; string literal; EQUALS; null; "
+        __idKDM="removeFromRealm______"/>
+    <eoperations
+        name="isValid()"
+        eparameters=""
+        etype="boolean"
+        methodBody="return; CONDITIONAL_AND; method invocation; isAttached; NOT_EQUALS; null; "
+        __idKDM="isValid______"/>
+    <eoperations
+        name="getTable()"
+        eparameters=""
+        etype="Table"
+        methodBody="return; method invocation; getTable; method invocation; getClass; "
+        __idKDM="getTable______"/>
+    <eoperations
+        name="setPendingQuery()"
+        eparameters="pendingQuery:java.util.concurrent.Future&lt;java.lang.Long>"
+        etype="void"
+        methodBody="if; expression statement; method invocation; onCompleted; method invocation; isLoaded; expression statement; ASSIGN; pendingQuery; field access; pendingQuery; this; "
+        __idKDM="setPendingQuery___java_util_concurrent_Future_java_lang_Long____"/>
+    <eoperations
+        name="isLoaded()"
+        eparameters=""
+        etype="boolean"
+        methodBody="return; CONDITIONAL_OR; isCompleted; EQUALS; pendingQuery; null; expression statement; method invocation; checkIfValid; if; return; boolean literal; EQUALS; null; "
+        __idKDM="isLoaded______"/>
+    <eoperations
+        name="load()"
+        eparameters=""
+        etype="boolean"
+        methodBody="if; return; method invocation; onCompleted; return; boolean literal; method invocation; isLoaded; "
+        __idKDM="load______"/>
+    <eoperations
+        name="onCompleted()"
+        eparameters=""
+        etype="boolean"
+        methodBody="return; boolean literal; try; catch; catch; e; return; boolean literal; expression statement; method invocation; d; method invocation; getMessage; if; expression statement; ASSIGN; isCompleted; boolean literal; expression statement; method invocation; notifyChangeListeners; expression statement; method invocation; onCompleted; NOT_EQUALS; handoverResult; number literal; variable declaration; handoverResult; "
+        __idKDM="onCompleted______"/>
+    <eoperations
+        name="onCompleted()"
+        eparameters="handoverRowPointer:Long"
+        etype="void"
+        methodBody="if; if; expression statement; ASSIGN; method invocation; getUncheckedRowByPointer; field access; row; this; variable declaration; table; variable declaration; nativeRowPointer; expression statement; ASSIGN; isCompleted; boolean literal; CONDITIONAL_OR; EQUALS; NOT; expression statement; ASSIGN; isCompleted; boolean literal; EQUALS; handoverRowPointer; number literal; "
+        __idKDM="onCompleted___Long___"/>
+    <eoperations
+        name="addChangeListener()"
+        eparameters="listener:RealmChangeListener"
+        etype="void"
+        methodBody="if; expression statement; method invocation; add; NOT; method invocation; contains; if; throw; class instance creation; IllegalStateException; string literal; EQUALS; null; if; throw; class instance creation; IllegalArgumentException; string literal; expression statement; method invocation; checkIfValid; NOT_EQUALS; null; if; throw; class instance creation; IllegalArgumentException; string literal; EQUALS; null; "
+        __idKDM="addChangeListener___RealmChangeListener___"/>
+    <eoperations
+        name="removeChangeListener()"
+        eparameters="listener:RealmChangeListener"
+        etype="void"
+        methodBody="expression statement; method invocation; remove; if; throw; class instance creation; IllegalArgumentException; string literal; expression statement; method invocation; checkIfValid; NOT_EQUALS; null; if; throw; class instance creation; IllegalArgumentException; string literal; EQUALS; null; "
+        __idKDM="removeChangeListener___RealmChangeListener___"/>
+    <eoperations
+        name="removeChangeListeners()"
+        eparameters=""
+        etype="void"
+        methodBody="expression statement; method invocation; clear; if; throw; class instance creation; IllegalArgumentException; string literal; expression statement; method invocation; checkIfValid; NOT_EQUALS; null; "
+        __idKDM="removeChangeListeners______"/>
+    <eoperations
+        name="notifyChangeListeners()"
+        eparameters=""
+        etype="void"
+        methodBody="if; if; foreach; listener; expression statement; method invocation; onChange; expression statement; ASSIGN; currentTableVersion; NOT_EQUALS; currentTableVersion; variable declaration; version; if; return; EQUALS; null; method invocation; getTable; CONDITIONAL_AND; NOT; method invocation; isEmpty; NOT_EQUALS; null; "
+        __idKDM="notifyChangeListeners______"/>
+    <eoperations
+        name="setTableVersion()"
+        eparameters=""
+        etype="void"
+        methodBody="if; expression statement; ASSIGN; currentTableVersion; method invocation; version; method invocation; getTable; NOT_EQUALS; null; method invocation; getTable; "
+        __idKDM="setTableVersion______"/>
+  </eclassifiers>
+  <eclassifiers
+      name="Table"
+      implements="TableOrView, TableSchema, Closeable"
+      interfaces="TableOrView TableSchema Closeable">
+    <eattributes
+        name="TABLE_MAX_LENGTH"
+        etype="int"/>
+    <eattributes
+        name="TABLE_PREFIX"
+        etype="String"/>
+    <eattributes
+        name="INFINITE"
+        etype="long"/>
+    <eattributes
+        name="STRING_DEFAULT_VALUE"
+        etype="String"/>
+    <eattributes
+        name="INTEGER_DEFAULT_VALUE"
+        etype="long"/>
+    <eattributes
+        name="METADATA_TABLE_NAME"
+        etype="String"/>
+    <eattributes
+        name="NULLABLE"
+        etype="boolean"/>
+    <eattributes
+        name="NOT_NULLABLE"
+        etype="boolean"/>
+    <eattributes
+        name="PRIMARY_KEY_TABLE_NAME"
+        etype="String"/>
+    <eattributes
+        name="PRIMARY_KEY_CLASS_COLUMN_NAME"
+        etype="String"/>
+    <eattributes
+        name="PRIMARY_KEY_CLASS_COLUMN_INDEX"
+        etype="long"/>
+    <eattributes
+        name="PRIMARY_KEY_FIELD_COLUMN_NAME"
+        etype="String"/>
+    <eattributes
+        name="PRIMARY_KEY_FIELD_COLUMN_INDEX"
+        etype="long"/>
+    <eattributes
+        name="NO_PRIMARY_KEY"
+        etype="long"/>
+    <eattributes
+        name="nativePtr"
+        etype="long"/>
+    <eattributes
+        name="parent"
+        etype="Object"/>
+    <eattributes
+        name="context"
+        etype="Context"/>
+    <eattributes
+        name="cachedPrimaryKeyColumnIndex"
+        etype="long"/>
+    <eattributes
+        name="tableNo"
+        etype="int"/>
+    <eattributes
+        name="DEBUG"
+        etype="boolean"/>
+    <eattributes
+        name="tableCount"
+        etype="AtomicInteger"/>
+    <eoperations
+        name="Table()"
+        eparameters=""
+        methodBody="if; expression statement; method invocation; println; PLUS; tableNo; string literal; string literal; expression statement; ASSIGN; tableNo; method invocation; incrementAndGet; if; throw; class instance creation; OutOfMemoryError; string literal; EQUALS; nativePtr; number literal; expression statement; ASSIGN; method invocation; createNative; field access; nativePtr; this; expression statement; ASSIGN; class instance creation; new Context(); field access; context; this; expression statement; ASSIGN; null; field access; parent; this; "
+        __idKDM="Table______"/>
+    <eoperations
+        name="createNative()"
+        eparameters=""
+        etype="long"
+        methodBody=""
+        __idKDM="createNative______"/>
+    <eoperations
+        name="Table()"
+        eparameters="context:Context, parent:Object, nativePointer:long"
+        methodBody="if; expression statement; method invocation; println; PLUS; tableNo; string literal; string literal; expression statement; ASSIGN; tableNo; method invocation; incrementAndGet; expression statement; ASSIGN; nativePointer; field access; nativePtr; this; expression statement; ASSIGN; parent; field access; parent; this; expression statement; ASSIGN; field access; context; this; "
+        __idKDM="Table___Context__Object__long___"/>
+    <eoperations
+        name="getTable()"
+        eparameters=""
+        etype="Table"
+        methodBody="return; this; "
+        __idKDM="getTable______"/>
+    <eoperations
+        name="close()"
+        eparameters=""
+        etype="void"
+        methodBody="synchronized; if; expression statement; ASSIGN; nativePtr; number literal; if; expression statement; method invocation; println; PLUS; tableNo; method invocation; get; string literal; string literal; string literal; expression statement; method invocation; decrementAndGet; expression statement; method invocation; nativeClose; NOT_EQUALS; nativePtr; number literal; "
+        __idKDM="close______"/>
+    <eoperations
+        name="nativeClose()"
+        eparameters="nativeTablePtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeClose___long___"/>
+    <eoperations
+        name="finalize()"
+        eparameters=""
+        etype="void"
+        methodBody="if; expression statement; method invocation; println; PLUS; tableNo; string literal; string literal; synchronized; if; expression statement; ASSIGN; nativePtr; number literal; expression statement; method invocation; asyncDisposeTable; variable declaration; isRoot; NOT_EQUALS; nativePtr; number literal; "
+        __idKDM="finalize______"/>
+    <eoperations
+        name="isValid()"
+        eparameters=""
+        etype="boolean"
+        methodBody="return; CONDITIONAL_AND; method invocation; nativeIsValid; NOT_EQUALS; nativePtr; number literal; "
+        __idKDM="isValid______"/>
+    <eoperations
+        name="nativeIsValid()"
+        eparameters="nativeTablePtr:long"
+        etype="boolean"
+        methodBody=""
+        __idKDM="nativeIsValid___long___"/>
+    <eoperations
+        name="verifyColumnName()"
+        eparameters="name:String"
+        etype="void"
+        methodBody="if; throw; class instance creation; IllegalArgumentException; string literal; GREATER; number literal; method invocation; length; "
+        __idKDM="verifyColumnName___String___"/>
+    <eoperations
+        name="getSubtableSchema()"
+        eparameters="columnIndex:long"
+        etype="TableSchema"
+        methodBody="return; class instance creation; new SubtableSchema(nativePtr,newPath); expression statement; ASSIGN; columnIndex; array access; newPath; number literal; variable declaration; newPath; if; throw; class instance creation; UnsupportedOperationException; string literal; NOT; method invocation; nativeIsRootTable; "
+        __idKDM="getSubtableSchema___long___"/>
+    <eoperations
+        name="nativeIsRootTable()"
+        eparameters="nativeTablePtr:long"
+        etype="boolean"
+        methodBody=""
+        __idKDM="nativeIsRootTable___long___"/>
+    <eoperations
+        name="addColumn()"
+        eparameters="type:RealmFieldType, name:String, isNullable:boolean"
+        etype="long"
+        methodBody="return; method invocation; nativeAddColumn; method invocation; getNativeValue; expression statement; method invocation; verifyColumnName; "
+        __idKDM="addColumn___RealmFieldType__String__boolean___"/>
+    <eoperations
+        name="addColumn()"
+        eparameters="type:RealmFieldType, name:String"
+        etype="long"
+        methodBody="return; method invocation; addColumn; boolean literal; "
+        __idKDM="addColumn___RealmFieldType__String___"/>
+    <eoperations
+        name="nativeAddColumn()"
+        eparameters="nativeTablePtr:long, type:int, name:String, isNullable:boolean"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeAddColumn___long__int__String__boolean___"/>
+    <eoperations
+        name="addColumnLink()"
+        eparameters="type:RealmFieldType, name:String, table:Table"
+        etype="long"
+        methodBody="return; method invocation; nativeAddColumnLink; method invocation; getNativeValue; expression statement; method invocation; verifyColumnName; "
+        __idKDM="addColumnLink___RealmFieldType__String__Table___"/>
+    <eoperations
+        name="nativeAddColumnLink()"
+        eparameters="nativeTablePtr:long, type:int, name:String, targetTablePtr:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeAddColumnLink___long__int__String__long___"/>
+    <eoperations
+        name="removeColumn()"
+        eparameters="columnIndex:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeRemoveColumn; "
+        __idKDM="removeColumn___long___"/>
+    <eoperations
+        name="nativeRemoveColumn()"
+        eparameters="nativeTablePtr:long, columnIndex:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeRemoveColumn___long__long___"/>
+    <eoperations
+        name="renameColumn()"
+        eparameters="columnIndex:long, newName:String"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeRenameColumn; expression statement; method invocation; verifyColumnName; "
+        __idKDM="renameColumn___long__String___"/>
+    <eoperations
+        name="nativeRenameColumn()"
+        eparameters="nativeTablePtr:long, columnIndex:long, name:String"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeRenameColumn___long__long__String___"/>
+    <eoperations
+        name="isColumnNullable()"
+        eparameters="columnIndex:long"
+        etype="boolean"
+        methodBody="return; method invocation; nativeIsColumnNullable; "
+        __idKDM="isColumnNullable___long___"/>
+    <eoperations
+        name="nativeIsColumnNullable()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="boolean"
+        methodBody=""
+        __idKDM="nativeIsColumnNullable___long__long___"/>
+    <eoperations
+        name="convertColumnToNullable()"
+        eparameters="columnIndex:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeConvertColumnToNullable; "
+        __idKDM="convertColumnToNullable___long___"/>
+    <eoperations
+        name="nativeConvertColumnToNullable()"
+        eparameters="nativeTablePtr:long, columnIndex:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeConvertColumnToNullable___long__long___"/>
+    <eoperations
+        name="convertColumnToNotNullable()"
+        eparameters="columnIndex:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeConvertColumnToNotNullable; "
+        __idKDM="convertColumnToNotNullable___long___"/>
+    <eoperations
+        name="nativeConvertColumnToNotNullable()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeConvertColumnToNotNullable___long__long___"/>
+    <eoperations
+        name="updateFromSpec()"
+        eparameters="tableSpec:TableSpec"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeUpdateFromSpec; expression statement; method invocation; checkImmutable; "
+        __idKDM="updateFromSpec___TableSpec___"/>
+    <eoperations
+        name="nativeUpdateFromSpec()"
+        eparameters="nativeTablePtr:long, tableSpec:TableSpec"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeUpdateFromSpec___long__TableSpec___"/>
+    <eoperations
+        name="size()"
+        eparameters=""
+        etype="long"
+        methodBody="return; method invocation; nativeSize; "
+        __idKDM="size______"/>
+    <eoperations
+        name="nativeSize()"
+        eparameters="nativeTablePtr:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeSize___long___"/>
+    <eoperations
+        name="isEmpty()"
+        eparameters=""
+        etype="boolean"
+        methodBody="return; EQUALS; number literal; method invocation; size; "
+        __idKDM="isEmpty______"/>
+    <eoperations
+        name="clear()"
+        eparameters=""
+        etype="void"
+        methodBody="expression statement; method invocation; nativeClear; expression statement; method invocation; checkImmutable; "
+        __idKDM="clear______"/>
+    <eoperations
+        name="nativeClear()"
+        eparameters="nativeTablePtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeClear___long___"/>
+    <eoperations
+        name="getColumnCount()"
+        eparameters=""
+        etype="long"
+        methodBody="return; method invocation; nativeGetColumnCount; "
+        __idKDM="getColumnCount______"/>
+    <eoperations
+        name="nativeGetColumnCount()"
+        eparameters="nativeTablePtr:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetColumnCount___long___"/>
+    <eoperations
+        name="getTableSpec()"
+        eparameters=""
+        etype="TableSpec"
+        methodBody="return; method invocation; nativeGetTableSpec; "
+        __idKDM="getTableSpec______"/>
+    <eoperations
+        name="nativeGetTableSpec()"
+        eparameters="nativeTablePtr:long"
+        etype="TableSpec"
+        methodBody=""
+        __idKDM="nativeGetTableSpec___long___"/>
+    <eoperations
+        name="getColumnName()"
+        eparameters="columnIndex:long"
+        etype="String"
+        methodBody="return; method invocation; nativeGetColumnName; "
+        __idKDM="getColumnName___long___"/>
+    <eoperations
+        name="nativeGetColumnName()"
+        eparameters="nativeTablePtr:long, columnIndex:long"
+        etype="String"
+        methodBody=""
+        __idKDM="nativeGetColumnName___long__long___"/>
+    <eoperations
+        name="getColumnIndex()"
+        eparameters="columnName:String"
+        etype="long"
+        methodBody="return; method invocation; nativeGetColumnIndex; if; throw; class instance creation; IllegalArgumentException; string literal; EQUALS; columnName; null; "
+        __idKDM="getColumnIndex___String___"/>
+    <eoperations
+        name="nativeGetColumnIndex()"
+        eparameters="nativeTablePtr:long, columnName:String"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetColumnIndex___long__String___"/>
+    <eoperations
+        name="getColumnType()"
+        eparameters="columnIndex:long"
+        etype="RealmFieldType"
+        methodBody="return; method invocation; fromNativeValue; method invocation; nativeGetColumnType; "
+        __idKDM="getColumnType___long___"/>
+    <eoperations
+        name="nativeGetColumnType()"
+        eparameters="nativeTablePtr:long, columnIndex:long"
+        etype="int"
+        methodBody=""
+        __idKDM="nativeGetColumnType___long__long___"/>
+    <eoperations
+        name="remove()"
+        eparameters="rowIndex:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeRemove; expression statement; method invocation; checkImmutable; "
+        __idKDM="remove___long___"/>
+    <eoperations
+        name="nativeRemove()"
+        eparameters="nativeTablePtr:long, rowIndex:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeRemove___long__long___"/>
+    <eoperations
+        name="removeLast()"
+        eparameters=""
+        etype="void"
+        methodBody="expression statement; method invocation; nativeRemoveLast; expression statement; method invocation; checkImmutable; "
+        __idKDM="removeLast______"/>
+    <eoperations
+        name="nativeRemoveLast()"
+        eparameters="nativeTablePtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeRemoveLast___long___"/>
+    <eoperations
+        name="moveLastOver()"
+        eparameters="rowIndex:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeMoveLastOver; expression statement; method invocation; checkImmutable; "
+        __idKDM="moveLastOver___long___"/>
+    <eoperations
+        name="nativeMoveLastOver()"
+        eparameters="nativeTablePtr:long, rowIndex:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeMoveLastOver___long__long___"/>
+    <eoperations
+        name="addEmptyRow()"
+        eparameters=""
+        etype="long"
+        methodBody="return; method invocation; nativeAddEmptyRow; number literal; if; switch; throw; class instance creation; Object; PLUS; string literal; case; if; expression statement; method invocation; throwDuplicatePrimaryKeyException; NOT_EQUALS; method invocation; findFirstLong; case; if; expression statement; method invocation; throwDuplicatePrimaryKeyException; NOT_EQUALS; method invocation; findFirstString; case; variable declaration; type; variable declaration; primaryKeyColumnIndex; method invocation; hasPrimaryKey; expression statement; method invocation; checkImmutable; "
+        __idKDM="addEmptyRow______"/>
+    <eoperations
+        name="addEmptyRowWithPrimaryKey()"
+        eparameters="primaryKeyValue:Object"
+        etype="long"
+        methodBody="return; switch; throw; class instance creation; Object; PLUS; string literal; case; expression statement; method invocation; setLong; expression statement; ASSIGN; method invocation; getUncheckedRow; expression statement; ASSIGN; rowIndex; method invocation; nativeAddEmptyRow; number literal; if; expression statement; method invocation; throwDuplicatePrimaryKeyException; NOT_EQUALS; method invocation; findFirstLong; try; catch; catch; e; throw; class instance creation; IllegalArgumentException; PLUS; primaryKeyValue; string literal; expression statement; ASSIGN; pkValue; method invocation; parseLong; method invocation; toString; variable declaration; pkValue; case; expression statement; method invocation; setString; cast; String; expression statement; ASSIGN; method invocation; getUncheckedRow; expression statement; ASSIGN; rowIndex; method invocation; nativeAddEmptyRow; number literal; if; expression statement; method invocation; throwDuplicatePrimaryKeyException; NOT_EQUALS; method invocation; findFirstString; cast; String; if; throw; class instance creation; IllegalArgumentException; PLUS; primaryKeyValue; string literal; NOT; parenthesized; instanceof; String; case; variable declaration; row; variable declaration; rowIndex; variable declaration; type; variable declaration; primaryKeyColumnIndex; expression statement; method invocation; checkHasPrimaryKey; expression statement; method invocation; checkImmutable; "
+        __idKDM="addEmptyRowWithPrimaryKey___Object___"/>
+    <eoperations
+        name="addEmptyRows()"
+        eparameters="rows:long"
+        etype="long"
+        methodBody="return; method invocation; nativeAddEmptyRow; if; return; method invocation; addEmptyRow; if; throw; class instance creation; new RealmException(&quot;Multiple empty rows cannot be created if a primary key is defined for the table.&quot;); string literal; GREATER; rows; number literal; method invocation; hasPrimaryKey; if; throw; class instance creation; IllegalArgumentException; string literal; LESS; rows; number literal; expression statement; method invocation; checkImmutable; "
+        __idKDM="addEmptyRows___long___"/>
+    <eoperations
+        name="nativeAddEmptyRow()"
+        eparameters="nativeTablePtr:long, rows:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeAddEmptyRow___long__long___"/>
+    <eoperations
+        name="add()"
+        eparameters="values:Object"
+        etype="long"
+        methodBody="return; for; switch; throw; class instance creation; RuntimeException; PLUS; method invocation; valueOf; array access; cast; int; string literal; case; expression statement; method invocation; insertSubTable; case; expression statement; method invocation; nativeSetByteArray; cast; byte[]; if; throw; class instance creation; IllegalArgumentException; string literal; EQUALS; value; null; case; expression statement; method invocation; nativeSetMixed; method invocation; mixedValue; if; throw; class instance creation; IllegalArgumentException; string literal; EQUALS; value; null; case; expression statement; method invocation; nativeSetDate; DIVIDE; number literal; method invocation; getTime; parenthesized; cast; Date; if; throw; class instance creation; IllegalArgumentException; string literal; EQUALS; value; null; case; expression statement; method invocation; nativeSetString; cast; String; expression statement; method invocation; checkStringValueIsLegal; variable declaration; stringValue; case; expression statement; method invocation; nativeSetDouble; cast; Double; case; expression statement; method invocation; nativeSetFloat; cast; Float; case; expression statement; method invocation; nativeSetLong; expression statement; method invocation; checkIntValueIsLegal; variable declaration; intValue; case; expression statement; method invocation; nativeSetBoolean; cast; Boolean; case; array access; cast; int; variable declaration; value; INCREMENT; variable declaration; long; columnIndex; LESS; columnIndex; for; if; throw; class instance creation; IllegalArgumentException; PLUS; string literal; string literal; string literal; method invocation; valueOf; PLUS; columnIndex; number literal; string literal; if; expression statement; ASSIGN; providedType; method invocation; toString; method invocation; getClass; expression statement; ASSIGN; providedType; string literal; EQUALS; value; null; variable declaration; providedType; NOT; method invocation; isValid; expression statement; ASSIGN; array access; variable declaration; colType; variable declaration; value; INCREMENT; variable declaration; int; columnIndex; LESS; columnIndex; variable declaration; colTypes; if; throw; class instance creation; IllegalArgumentException; PLUS; string literal; method invocation; valueOf; string literal; method invocation; valueOf; array length access; string literal; NOT_EQUALS; columns; array length access; variable declaration; columns; expression statement; method invocation; checkImmutable; variable declaration; rowIndex; "
+        __idKDM="add___Object___"/>
+    <eoperations
+        name="isPrimaryKeyColumn()"
+        eparameters="columnIndex:long"
+        etype="boolean"
+        methodBody="return; EQUALS; columnIndex; method invocation; getPrimaryKey; "
+        __idKDM="isPrimaryKeyColumn___long___"/>
+    <eoperations
+        name="getSortedView()"
+        eparameters="columnIndex:long, sortOrder:Sort"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this,nativeViewPtr); this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="getSortedView___long__Sort___"/>
+    <eoperations
+        name="getSortedView()"
+        eparameters="columnIndex:long"
+        etype="TableView"
+        methodBody="return; class instance creation; new TableView(this.context,this,nativeViewPtr); this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="getSortedView___long___"/>
+    <eoperations
+        name="nativeGetSortedView()"
+        eparameters="nativeTableViewPtr:long, columnIndex:long, ascending:boolean"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetSortedView___long__long__boolean___"/>
+    <eoperations
+        name="getSortedView()"
+        eparameters="columnIndices:long, sortOrders:Sort"
+        etype="TableView"
+        methodBody="return; class instance creation; new TableView(this.context,this,nativeViewPtr); this; field access; context; this; variable declaration; nativeViewPtr; for; expression statement; ASSIGN; method invocation; getValue; array access; array access; nativeSortOrder; INCREMENT; variable declaration; int; i; LESS; i; variable declaration; nativeSortOrder; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="getSortedView___long__Sort___"/>
+    <eoperations
+        name="nativeGetSortedViewMulti()"
+        eparameters="nativeTableViewPtr:long, columnIndices:long[], ascending:boolean[]"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetSortedViewMulti___long__long____boolean_____"/>
+    <eoperations
+        name="getPrimaryKey()"
+        eparameters=""
+        etype="long"
+        methodBody="if; return; if; expression statement; ASSIGN; cachedPrimaryKeyColumnIndex; expression statement; ASSIGN; cachedPrimaryKeyColumnIndex; method invocation; getColumnIndex; variable declaration; pkColumnName; NOT_EQUALS; rowIndex; variable declaration; rowIndex; if; expression statement; ASSIGN; tableName; method invocation; substring; method invocation; length; method invocation; startsWith; variable declaration; tableName; if; return; EQUALS; pkTable; null; variable declaration; pkTable; return; CONDITIONAL_OR; EQUALS; cachedPrimaryKeyColumnIndex; GREATER_EQUALS; cachedPrimaryKeyColumnIndex; number literal; "
+        __idKDM="getPrimaryKey______"/>
+    <eoperations
+        name="isPrimaryKey()"
+        eparameters="columnIndex:long"
+        etype="boolean"
+        methodBody="return; CONDITIONAL_AND; EQUALS; columnIndex; method invocation; getPrimaryKey; GREATER_EQUALS; columnIndex; number literal; "
+        __idKDM="isPrimaryKey___long___"/>
+    <eoperations
+        name="hasPrimaryKey()"
+        eparameters=""
+        etype="boolean"
+        methodBody="return; GREATER_EQUALS; number literal; method invocation; getPrimaryKey; "
+        __idKDM="hasPrimaryKey______"/>
+    <eoperations
+        name="checkStringValueIsLegal()"
+        eparameters="columnIndex:long, rowToUpdate:long, value:String"
+        etype="void"
+        methodBody="if; if; expression statement; method invocation; throwDuplicatePrimaryKeyException; CONDITIONAL_AND; NOT_EQUALS; rowIndex; NOT_EQUALS; rowIndex; variable declaration; rowIndex; method invocation; isPrimaryKey; "
+        __idKDM="checkStringValueIsLegal___long__long__String___"/>
+    <eoperations
+        name="checkIntValueIsLegal()"
+        eparameters="columnIndex:long, rowToUpdate:long, value:long"
+        etype="void"
+        methodBody="if; if; expression statement; method invocation; throwDuplicatePrimaryKeyException; CONDITIONAL_AND; NOT_EQUALS; rowIndex; NOT_EQUALS; rowIndex; variable declaration; rowIndex; method invocation; isPrimaryKeyColumn; "
+        __idKDM="checkIntValueIsLegal___long__long__long___"/>
+    <eoperations
+        name="throwDuplicatePrimaryKeyException()"
+        eparameters="value:Object"
+        etype="void"
+        methodBody="throw; class instance creation; new RealmPrimaryKeyConstraintException(&quot;Value already exists: &quot; + value); PLUS; value; string literal; "
+        __idKDM="throwDuplicatePrimaryKeyException___Object___"/>
+    <eoperations
+        name="getLong()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody="return; method invocation; nativeGetLong; "
+        __idKDM="getLong___long__long___"/>
+    <eoperations
+        name="nativeGetLong()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetLong___long__long__long___"/>
+    <eoperations
+        name="getBoolean()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="boolean"
+        methodBody="return; method invocation; nativeGetBoolean; "
+        __idKDM="getBoolean___long__long___"/>
+    <eoperations
+        name="nativeGetBoolean()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long"
+        etype="boolean"
+        methodBody=""
+        __idKDM="nativeGetBoolean___long__long__long___"/>
+    <eoperations
+        name="getFloat()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="float"
+        methodBody="return; method invocation; nativeGetFloat; "
+        __idKDM="getFloat___long__long___"/>
+    <eoperations
+        name="nativeGetFloat()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long"
+        etype="float"
+        methodBody=""
+        __idKDM="nativeGetFloat___long__long__long___"/>
+    <eoperations
+        name="getDouble()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeGetDouble; "
+        __idKDM="getDouble___long__long___"/>
+    <eoperations
+        name="nativeGetDouble()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeGetDouble___long__long__long___"/>
+    <eoperations
+        name="getDate()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="Date"
+        methodBody="return; class instance creation; Date; TIMES; number literal; method invocation; nativeGetDateTime; "
+        __idKDM="getDate___long__long___"/>
+    <eoperations
+        name="nativeGetDateTime()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetDateTime___long__long__long___"/>
+    <eoperations
+        name="getString()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="String"
+        methodBody="return; method invocation; nativeGetString; "
+        __idKDM="getString___long__long___"/>
+    <eoperations
+        name="nativeGetString()"
+        eparameters="nativePtr:long, columnIndex:long, rowIndex:long"
+        etype="String"
+        methodBody=""
+        __idKDM="nativeGetString___long__long__long___"/>
+    <eoperations
+        name="getBinaryByteArray()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="byte[]"
+        methodBody="return; method invocation; nativeGetByteArray; "
+        __idKDM="getBinaryByteArray___long__long___"/>
+    <eoperations
+        name="nativeGetByteArray()"
+        eparameters="nativePtr:long, columnIndex:long, rowIndex:long"
+        etype="byte[]"
+        methodBody=""
+        __idKDM="nativeGetByteArray___long__long__long___"/>
+    <eoperations
+        name="getMixed()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="Mixed"
+        methodBody="return; method invocation; nativeGetMixed; "
+        __idKDM="getMixed___long__long___"/>
+    <eoperations
+        name="getMixedType()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="RealmFieldType"
+        methodBody="return; method invocation; fromNativeValue; method invocation; nativeGetMixedType; "
+        __idKDM="getMixedType___long__long___"/>
+    <eoperations
+        name="nativeGetMixedType()"
+        eparameters="nativePtr:long, columnIndex:long, rowIndex:long"
+        etype="int"
+        methodBody=""
+        __idKDM="nativeGetMixedType___long__long__long___"/>
+    <eoperations
+        name="nativeGetMixed()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long"
+        etype="Mixed"
+        methodBody=""
+        __idKDM="nativeGetMixed___long__long__long___"/>
+    <eoperations
+        name="getLink()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody="return; method invocation; nativeGetLink; "
+        __idKDM="getLink___long__long___"/>
+    <eoperations
+        name="nativeGetLink()"
+        eparameters="nativePtr:long, columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetLink___long__long__long___"/>
+    <eoperations
+        name="getLinkTarget()"
+        eparameters="columnIndex:long"
+        etype="Table"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new Table(context,this.parent,nativeTablePointer); field access; parent; this; variable declaration; nativeTablePointer; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="getLinkTarget___long___"/>
+    <eoperations
+        name="nativeGetLinkTarget()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetLinkTarget___long__long___"/>
+    <eoperations
+        name="getSubtable()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="Table"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new Table(context,this,nativeSubtablePtr); this; variable declaration; nativeSubtablePtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="getSubtable___long__long___"/>
+    <eoperations
+        name="nativeGetSubtable()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetSubtable___long__long__long___"/>
+    <eoperations
+        name="getSubtableDuringInsert()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="Table"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new Table(context,this,nativeSubtablePtr); this; variable declaration; nativeSubtablePtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="getSubtableDuringInsert___long__long___"/>
+    <eoperations
+        name="nativeGetSubtableDuringInsert()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetSubtableDuringInsert___long__long__long___"/>
+    <eoperations
+        name="getSubtableSize()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody="return; method invocation; nativeGetSubtableSize; "
+        __idKDM="getSubtableSize___long__long___"/>
+    <eoperations
+        name="nativeGetSubtableSize()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetSubtableSize___long__long__long___"/>
+    <eoperations
+        name="clearSubtable()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeClearSubtable; expression statement; method invocation; checkImmutable; "
+        __idKDM="clearSubtable___long__long___"/>
+    <eoperations
+        name="nativeClearSubtable()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeClearSubtable___long__long__long___"/>
+    <eoperations
+        name="getUncheckedRow()"
+        eparameters="index:long"
+        etype="UncheckedRow"
+        methodBody="return; method invocation; getByRowIndex; this; "
+        __idKDM="getUncheckedRow___long___"/>
+    <eoperations
+        name="getUncheckedRowByPointer()"
+        eparameters="nativeRowPointer:long"
+        etype="UncheckedRow"
+        methodBody="return; method invocation; getByRowPointer; this; "
+        __idKDM="getUncheckedRowByPointer___long___"/>
+    <eoperations
+        name="getCheckedRow()"
+        eparameters="index:long"
+        etype="CheckedRow"
+        methodBody="return; method invocation; get; this; "
+        __idKDM="getCheckedRow___long___"/>
+    <eoperations
+        name="nativeGetRowPtr()"
+        eparameters="nativePtr:long, index:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetRowPtr___long__long___"/>
+    <eoperations
+        name="setLong()"
+        eparameters="columnIndex:long, rowIndex:long, value:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetLong; expression statement; method invocation; checkIntValueIsLegal; expression statement; method invocation; checkImmutable; "
+        __idKDM="setLong___long__long__long___"/>
+    <eoperations
+        name="nativeSetLong()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetLong___long__long__long__long___"/>
+    <eoperations
+        name="setBoolean()"
+        eparameters="columnIndex:long, rowIndex:long, value:boolean"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetBoolean; expression statement; method invocation; checkImmutable; "
+        __idKDM="setBoolean___long__long__boolean___"/>
+    <eoperations
+        name="nativeSetBoolean()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long, value:boolean"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetBoolean___long__long__long__boolean___"/>
+    <eoperations
+        name="setFloat()"
+        eparameters="columnIndex:long, rowIndex:long, value:float"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetFloat; expression statement; method invocation; checkImmutable; "
+        __idKDM="setFloat___long__long__float___"/>
+    <eoperations
+        name="nativeSetFloat()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long, value:float"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetFloat___long__long__long__float___"/>
+    <eoperations
+        name="setDouble()"
+        eparameters="columnIndex:long, rowIndex:long, value:double"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetDouble; expression statement; method invocation; checkImmutable; "
+        __idKDM="setDouble___long__long__double___"/>
+    <eoperations
+        name="nativeSetDouble()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long, value:double"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetDouble___long__long__long__double___"/>
+    <eoperations
+        name="setDate()"
+        eparameters="columnIndex:long, rowIndex:long, date:Date"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetDate; DIVIDE; number literal; method invocation; getTime; expression statement; method invocation; checkImmutable; if; throw; class instance creation; IllegalArgumentException; string literal; EQUALS; date; null; "
+        __idKDM="setDate___long__long__Date___"/>
+    <eoperations
+        name="nativeSetDate()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long, dateTimeValue:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetDate___long__long__long__long___"/>
+    <eoperations
+        name="setString()"
+        eparameters="columnIndex:long, rowIndex:long, value:String"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetString; expression statement; method invocation; checkStringValueIsLegal; expression statement; method invocation; checkImmutable; "
+        __idKDM="setString___long__long__String___"/>
+    <eoperations
+        name="nativeSetString()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long, value:String"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetString___long__long__long__String___"/>
+    <eoperations
+        name="setBinaryByteArray()"
+        eparameters="columnIndex:long, rowIndex:long, data:byte[]"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetByteArray; expression statement; method invocation; checkImmutable; "
+        __idKDM="setBinaryByteArray___long__long__byte_____"/>
+    <eoperations
+        name="nativeSetByteArray()"
+        eparameters="nativePtr:long, columnIndex:long, rowIndex:long, data:byte[]"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetByteArray___long__long__long__byte_____"/>
+    <eoperations
+        name="setMixed()"
+        eparameters="columnIndex:long, rowIndex:long, data:Mixed"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetMixed; if; throw; class instance creation; IllegalArgumentException; EQUALS; null; expression statement; method invocation; checkImmutable; "
+        __idKDM="setMixed___long__long__Mixed___"/>
+    <eoperations
+        name="nativeSetMixed()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long, data:Mixed"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetMixed___long__long__long__Mixed___"/>
+    <eoperations
+        name="setLink()"
+        eparameters="columnIndex:long, rowIndex:long, value:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetLink; expression statement; method invocation; checkImmutable; "
+        __idKDM="setLink___long__long__long___"/>
+    <eoperations
+        name="nativeSetLink()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetLink___long__long__long__long___"/>
+    <eoperations
+        name="insertSubTable()"
+        eparameters="columnIndex:long, rowIndex:long, value:Object"
+        etype="void"
+        methodBody="if; for; expression statement; method invocation; add; cast; java.lang.Object[]; variable declaration; rowArr; INCREMENT; variable declaration; int; i; LESS; i; variable declaration; rows; variable declaration; subtable; NOT_EQUALS; value; null; expression statement; method invocation; checkImmutable; "
+        __idKDM="insertSubTable___long__long__Object___"/>
+    <eoperations
+        name="addSearchIndex()"
+        eparameters="columnIndex:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeAddSearchIndex; expression statement; method invocation; checkImmutable; "
+        __idKDM="addSearchIndex___long___"/>
+    <eoperations
+        name="removeSearchIndex()"
+        eparameters="columnIndex:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeRemoveSearchIndex; expression statement; method invocation; checkImmutable; "
+        __idKDM="removeSearchIndex___long___"/>
+    <eoperations
+        name="setPrimaryKey()"
+        eparameters="columnName:String"
+        etype="void"
+        methodBody="expression statement; ASSIGN; cachedPrimaryKeyColumnIndex; method invocation; nativeSetPrimaryKey; if; throw; class instance creation; new RealmException(&quot;Primary keys are only supported if Table is part of a Group&quot;); string literal; EQUALS; pkTable; null; variable declaration; pkTable; "
+        __idKDM="setPrimaryKey___String___"/>
+    <eoperations
+        name="setPrimaryKey()"
+        eparameters="columnIndex:long"
+        etype="void"
+        methodBody="expression statement; method invocation; setPrimaryKey; method invocation; nativeGetColumnName; "
+        __idKDM="setPrimaryKey___long___"/>
+    <eoperations
+        name="nativeSetPrimaryKey()"
+        eparameters="privateKeyTableNativePtr:long, nativePtr:long, columnName:String"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeSetPrimaryKey___long__long__String___"/>
+    <eoperations
+        name="getPrimaryKeyTable()"
+        eparameters=""
+        etype="Table"
+        methodBody="return; if; expression statement; method invocation; migratePrimaryKeyTableIfNeeded; expression statement; method invocation; addColumn; expression statement; method invocation; addColumn; EQUALS; number literal; method invocation; getColumnCount; variable declaration; pkTable; if; return; null; EQUALS; null; variable declaration; group; "
+        __idKDM="getPrimaryKeyTable______"/>
+    <eoperations
+        name="migratePrimaryKeyTableIfNeeded()"
+        eparameters="group:Group, pkTable:Table"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeMigratePrimaryKeyTableIfNeeded; "
+        __idKDM="migratePrimaryKeyTableIfNeeded___Group__Table___"/>
+    <eoperations
+        name="nativeMigratePrimaryKeyTableIfNeeded()"
+        eparameters="groupNativePtr:long, primaryKeyTableNativePtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeMigratePrimaryKeyTableIfNeeded___long__long___"/>
+    <eoperations
+        name="getTableGroup()"
+        eparameters=""
+        etype="Group"
+        methodBody="if; if; return; null; return; method invocation; getTableGroup; parenthesized; cast; Table; instanceof; Table; return; cast; instanceof; "
+        __idKDM="getTableGroup______"/>
+    <eoperations
+        name="nativeAddSearchIndex()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeAddSearchIndex___long__long___"/>
+    <eoperations
+        name="nativeRemoveSearchIndex()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeRemoveSearchIndex___long__long___"/>
+    <eoperations
+        name="hasSearchIndex()"
+        eparameters="columnIndex:long"
+        etype="boolean"
+        methodBody="return; method invocation; nativeHasSearchIndex; "
+        __idKDM="hasSearchIndex___long___"/>
+    <eoperations
+        name="nativeHasSearchIndex()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="boolean"
+        methodBody=""
+        __idKDM="nativeHasSearchIndex___long__long___"/>
+    <eoperations
+        name="isNullLink()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="boolean"
+        methodBody="return; method invocation; nativeIsNullLink; "
+        __idKDM="isNullLink___long__long___"/>
+    <eoperations
+        name="nativeIsNullLink()"
+        eparameters="nativePtr:long, columnIndex:long, rowIndex:long"
+        etype="boolean"
+        methodBody=""
+        __idKDM="nativeIsNullLink___long__long__long___"/>
+    <eoperations
+        name="nullifyLink()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeNullifyLink; "
+        __idKDM="nullifyLink___long__long___"/>
+    <eoperations
+        name="nativeNullifyLink()"
+        eparameters="nativePtr:long, columnIndex:long, rowIndex:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeNullifyLink___long__long__long___"/>
+    <eoperations
+        name="isImmutable()"
+        eparameters=""
+        etype="boolean"
+        methodBody="if; return; method invocation; isImmutable; parenthesized; cast; Table; return; CONDITIONAL_AND; field access; immutable; parenthesized; cast; NOT_EQUALS; parent; null; NOT; parenthesized; instanceof; Table; "
+        __idKDM="isImmutable______"/>
+    <eoperations
+        name="checkImmutable()"
+        eparameters=""
+        etype="void"
+        methodBody="if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; "
+        __idKDM="checkImmutable______"/>
+    <eoperations
+        name="checkHasPrimaryKey()"
+        eparameters=""
+        etype="void"
+        methodBody="if; throw; class instance creation; IllegalStateException; PLUS; string literal; method invocation; getName; NOT; method invocation; hasPrimaryKey; "
+        __idKDM="checkHasPrimaryKey______"/>
+    <eoperations
+        name="sumLong()"
+        eparameters="columnIndex:long"
+        etype="long"
+        methodBody="return; method invocation; nativeSumInt; "
+        __idKDM="sumLong___long___"/>
+    <eoperations
+        name="nativeSumInt()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeSumInt___long__long___"/>
+    <eoperations
+        name="maximumLong()"
+        eparameters="columnIndex:long"
+        etype="Long"
+        methodBody="return; method invocation; nativeMaximumInt; "
+        __idKDM="maximumLong___long___"/>
+    <eoperations
+        name="nativeMaximumInt()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeMaximumInt___long__long___"/>
+    <eoperations
+        name="minimumLong()"
+        eparameters="columnIndex:long"
+        etype="Long"
+        methodBody="return; method invocation; nativeMinimumInt; "
+        __idKDM="minimumLong___long___"/>
+    <eoperations
+        name="nativeMinimumInt()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeMinimumInt___long__long___"/>
+    <eoperations
+        name="averageLong()"
+        eparameters="columnIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeAverageInt; "
+        __idKDM="averageLong___long___"/>
+    <eoperations
+        name="nativeAverageInt()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeAverageInt___long__long___"/>
+    <eoperations
+        name="sumFloat()"
+        eparameters="columnIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeSumFloat; "
+        __idKDM="sumFloat___long___"/>
+    <eoperations
+        name="nativeSumFloat()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeSumFloat___long__long___"/>
+    <eoperations
+        name="maximumFloat()"
+        eparameters="columnIndex:long"
+        etype="Float"
+        methodBody="return; method invocation; nativeMaximumFloat; "
+        __idKDM="maximumFloat___long___"/>
+    <eoperations
+        name="nativeMaximumFloat()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="float"
+        methodBody=""
+        __idKDM="nativeMaximumFloat___long__long___"/>
+    <eoperations
+        name="minimumFloat()"
+        eparameters="columnIndex:long"
+        etype="Float"
+        methodBody="return; method invocation; nativeMinimumFloat; "
+        __idKDM="minimumFloat___long___"/>
+    <eoperations
+        name="nativeMinimumFloat()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="float"
+        methodBody=""
+        __idKDM="nativeMinimumFloat___long__long___"/>
+    <eoperations
+        name="averageFloat()"
+        eparameters="columnIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeAverageFloat; "
+        __idKDM="averageFloat___long___"/>
+    <eoperations
+        name="nativeAverageFloat()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeAverageFloat___long__long___"/>
+    <eoperations
+        name="sumDouble()"
+        eparameters="columnIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeSumDouble; "
+        __idKDM="sumDouble___long___"/>
+    <eoperations
+        name="nativeSumDouble()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeSumDouble___long__long___"/>
+    <eoperations
+        name="maximumDouble()"
+        eparameters="columnIndex:long"
+        etype="Double"
+        methodBody="return; method invocation; nativeMaximumDouble; "
+        __idKDM="maximumDouble___long___"/>
+    <eoperations
+        name="nativeMaximumDouble()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeMaximumDouble___long__long___"/>
+    <eoperations
+        name="minimumDouble()"
+        eparameters="columnIndex:long"
+        etype="Double"
+        methodBody="return; method invocation; nativeMinimumDouble; "
+        __idKDM="minimumDouble___long___"/>
+    <eoperations
+        name="nativeMinimumDouble()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeMinimumDouble___long__long___"/>
+    <eoperations
+        name="averageDouble()"
+        eparameters="columnIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeAverageDouble; "
+        __idKDM="averageDouble___long___"/>
+    <eoperations
+        name="nativeAverageDouble()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeAverageDouble___long__long___"/>
+    <eoperations
+        name="maximumDate()"
+        eparameters="columnIndex:long"
+        etype="Date"
+        methodBody="return; class instance creation; Date; TIMES; number literal; method invocation; nativeMaximumDate; "
+        __idKDM="maximumDate___long___"/>
+    <eoperations
+        name="nativeMaximumDate()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeMaximumDate___long__long___"/>
+    <eoperations
+        name="minimumDate()"
+        eparameters="columnIndex:long"
+        etype="Date"
+        methodBody="return; class instance creation; Date; TIMES; number literal; method invocation; nativeMinimumDate; "
+        __idKDM="minimumDate___long___"/>
+    <eoperations
+        name="nativeMinimumDate()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeMinimumDate___long__long___"/>
+    <eoperations
+        name="count()"
+        eparameters="columnIndex:long, value:long"
+        etype="long"
+        methodBody="return; method invocation; nativeCountLong; "
+        __idKDM="count___long__long___"/>
+    <eoperations
+        name="nativeCountLong()"
+        eparameters="nativePtr:long, columnIndex:long, value:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeCountLong___long__long__long___"/>
+    <eoperations
+        name="count()"
+        eparameters="columnIndex:long, value:float"
+        etype="long"
+        methodBody="return; method invocation; nativeCountFloat; "
+        __idKDM="count___long__float___"/>
+    <eoperations
+        name="nativeCountFloat()"
+        eparameters="nativePtr:long, columnIndex:long, value:float"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeCountFloat___long__long__float___"/>
+    <eoperations
+        name="count()"
+        eparameters="columnIndex:long, value:double"
+        etype="long"
+        methodBody="return; method invocation; nativeCountDouble; "
+        __idKDM="count___long__double___"/>
+    <eoperations
+        name="nativeCountDouble()"
+        eparameters="nativePtr:long, columnIndex:long, value:double"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeCountDouble___long__long__double___"/>
+    <eoperations
+        name="count()"
+        eparameters="columnIndex:long, value:String"
+        etype="long"
+        methodBody="return; method invocation; nativeCountString; "
+        __idKDM="count___long__String___"/>
+    <eoperations
+        name="nativeCountString()"
+        eparameters="nativePtr:long, columnIndex:long, value:String"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeCountString___long__long__String___"/>
+    <eoperations
+        name="where()"
+        eparameters=""
+        etype="TableQuery"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableQuery(this.context,this,nativeQueryPtr); this; field access; context; this; variable declaration; nativeQueryPtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="where______"/>
+    <eoperations
+        name="nativeWhere()"
+        eparameters="nativeTablePtr:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeWhere___long___"/>
+    <eoperations
+        name="findFirstLong()"
+        eparameters="columnIndex:long, value:long"
+        etype="long"
+        methodBody="return; method invocation; nativeFindFirstInt; "
+        __idKDM="findFirstLong___long__long___"/>
+    <eoperations
+        name="nativeFindFirstInt()"
+        eparameters="nativeTablePtr:long, columnIndex:long, value:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindFirstInt___long__long__long___"/>
+    <eoperations
+        name="findFirstBoolean()"
+        eparameters="columnIndex:long, value:boolean"
+        etype="long"
+        methodBody="return; method invocation; nativeFindFirstBool; "
+        __idKDM="findFirstBoolean___long__boolean___"/>
+    <eoperations
+        name="nativeFindFirstBool()"
+        eparameters="nativePtr:long, columnIndex:long, value:boolean"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindFirstBool___long__long__boolean___"/>
+    <eoperations
+        name="findFirstFloat()"
+        eparameters="columnIndex:long, value:float"
+        etype="long"
+        methodBody="return; method invocation; nativeFindFirstFloat; "
+        __idKDM="findFirstFloat___long__float___"/>
+    <eoperations
+        name="nativeFindFirstFloat()"
+        eparameters="nativePtr:long, columnIndex:long, value:float"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindFirstFloat___long__long__float___"/>
+    <eoperations
+        name="findFirstDouble()"
+        eparameters="columnIndex:long, value:double"
+        etype="long"
+        methodBody="return; method invocation; nativeFindFirstDouble; "
+        __idKDM="findFirstDouble___long__double___"/>
+    <eoperations
+        name="nativeFindFirstDouble()"
+        eparameters="nativePtr:long, columnIndex:long, value:double"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindFirstDouble___long__long__double___"/>
+    <eoperations
+        name="findFirstDate()"
+        eparameters="columnIndex:long, date:Date"
+        etype="long"
+        methodBody="return; method invocation; nativeFindFirstDate; DIVIDE; number literal; method invocation; getTime; if; throw; class instance creation; IllegalArgumentException; string literal; EQUALS; date; null; "
+        __idKDM="findFirstDate___long__Date___"/>
+    <eoperations
+        name="nativeFindFirstDate()"
+        eparameters="nativeTablePtr:long, columnIndex:long, dateTimeValue:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindFirstDate___long__long__long___"/>
+    <eoperations
+        name="findFirstString()"
+        eparameters="columnIndex:long, value:String"
+        etype="long"
+        methodBody="return; method invocation; nativeFindFirstString; if; throw; class instance creation; IllegalArgumentException; string literal; EQUALS; value; null; "
+        __idKDM="findFirstString___long__String___"/>
+    <eoperations
+        name="nativeFindFirstString()"
+        eparameters="nativeTablePtr:long, columnIndex:long, value:String"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindFirstString___long__long__String___"/>
+    <eoperations
+        name="findAllLong()"
+        eparameters="columnIndex:long, value:long"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this,nativeViewPtr); this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="findAllLong___long__long___"/>
+    <eoperations
+        name="nativeFindAllInt()"
+        eparameters="nativePtr:long, columnIndex:long, value:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAllInt___long__long__long___"/>
+    <eoperations
+        name="findAllBoolean()"
+        eparameters="columnIndex:long, value:boolean"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this,nativeViewPtr); this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="findAllBoolean___long__boolean___"/>
+    <eoperations
+        name="nativeFindAllBool()"
+        eparameters="nativePtr:long, columnIndex:long, value:boolean"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAllBool___long__long__boolean___"/>
+    <eoperations
+        name="findAllFloat()"
+        eparameters="columnIndex:long, value:float"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this,nativeViewPtr); this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="findAllFloat___long__float___"/>
+    <eoperations
+        name="nativeFindAllFloat()"
+        eparameters="nativePtr:long, columnIndex:long, value:float"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAllFloat___long__long__float___"/>
+    <eoperations
+        name="findAllDouble()"
+        eparameters="columnIndex:long, value:double"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this,nativeViewPtr); this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="findAllDouble___long__double___"/>
+    <eoperations
+        name="nativeFindAllDouble()"
+        eparameters="nativePtr:long, columnIndex:long, value:double"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAllDouble___long__long__double___"/>
+    <eoperations
+        name="findAllDate()"
+        eparameters="columnIndex:long, date:Date"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this,nativeViewPtr); this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="findAllDate___long__Date___"/>
+    <eoperations
+        name="nativeFindAllDate()"
+        eparameters="nativePtr:long, columnIndex:long, dateTimeValue:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAllDate___long__long__long___"/>
+    <eoperations
+        name="findAllString()"
+        eparameters="columnIndex:long, value:String"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this,nativeViewPtr); this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="findAllString___long__String___"/>
+    <eoperations
+        name="nativeFindAllString()"
+        eparameters="nativePtr:long, columnIndex:long, value:String"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAllString___long__long__String___"/>
+    <eoperations
+        name="lowerBoundLong()"
+        eparameters="columnIndex:long, value:long"
+        etype="long"
+        methodBody="return; method invocation; nativeLowerBoundInt; "
+        __idKDM="lowerBoundLong___long__long___"/>
+    <eoperations
+        name="upperBoundLong()"
+        eparameters="columnIndex:long, value:long"
+        etype="long"
+        methodBody="return; method invocation; nativeUpperBoundInt; "
+        __idKDM="upperBoundLong___long__long___"/>
+    <eoperations
+        name="nativeLowerBoundInt()"
+        eparameters="nativePtr:long, columnIndex:long, value:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeLowerBoundInt___long__long__long___"/>
+    <eoperations
+        name="nativeUpperBoundInt()"
+        eparameters="nativePtr:long, columnIndex:long, value:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeUpperBoundInt___long__long__long___"/>
+    <eoperations
+        name="pivot()"
+        eparameters="stringCol:long, intCol:long, pivotType:PivotType"
+        etype="Table"
+        methodBody="return; expression statement; method invocation; nativePivot; variable declaration; class instance creation; Table; result; if; throw; class instance creation; UnsupportedOperationException; string literal; NOT; method invocation; equals; method invocation; getColumnType; this; if; throw; class instance creation; UnsupportedOperationException; string literal; NOT; method invocation; equals; method invocation; getColumnType; this; "
+        __idKDM="pivot___long__long__PivotType___"/>
+    <eoperations
+        name="nativePivot()"
+        eparameters="nativeTablePtr:long, stringCol:long, intCol:long, pivotType:int, resultPtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativePivot___long__long__long__int__long___"/>
+    <eoperations
+        name="getDistinctView()"
+        eparameters="columnIndex:long"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this,nativeViewPtr); this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; field access; context; this; "
+        __idKDM="getDistinctView___long___"/>
+    <eoperations
+        name="nativeGetDistinctView()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetDistinctView___long__long___"/>
+    <eoperations
+        name="getName()"
+        eparameters=""
+        etype="String"
+        methodBody="return; method invocation; nativeGetName; "
+        __idKDM="getName______"/>
+    <eoperations
+        name="nativeGetName()"
+        eparameters="nativeTablePtr:long"
+        etype="String"
+        methodBody=""
+        __idKDM="nativeGetName___long___"/>
+    <eoperations
+        name="optimize()"
+        eparameters=""
+        etype="void"
+        methodBody="expression statement; method invocation; nativeOptimize; expression statement; method invocation; checkImmutable; "
+        __idKDM="optimize______"/>
+    <eoperations
+        name="nativeOptimize()"
+        eparameters="nativeTablePtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeOptimize___long___"/>
+    <eoperations
+        name="toJson()"
+        eparameters=""
+        etype="String"
+        methodBody="return; method invocation; nativeToJson; "
+        __idKDM="toJson______"/>
+    <eoperations
+        name="nativeToJson()"
+        eparameters="nativeTablePtr:long"
+        etype="String"
+        methodBody=""
+        __idKDM="nativeToJson___long___"/>
+    <eoperations
+        name="toString()"
+        eparameters=""
+        etype="String"
+        methodBody="return; method invocation; nativeToString; "
+        __idKDM="toString______"/>
+    <eoperations
+        name="toString()"
+        eparameters="maxRows:long"
+        etype="String"
+        methodBody="return; method invocation; nativeToString; "
+        __idKDM="toString___long___"/>
+    <eoperations
+        name="nativeToString()"
+        eparameters="nativeTablePtr:long, maxRows:long"
+        etype="String"
+        methodBody=""
+        __idKDM="nativeToString___long__long___"/>
+    <eoperations
+        name="rowToString()"
+        eparameters="rowIndex:long"
+        etype="String"
+        methodBody="return; method invocation; nativeRowToString; "
+        __idKDM="rowToString___long___"/>
+    <eoperations
+        name="nativeRowToString()"
+        eparameters="nativeTablePtr:long, rowIndex:long"
+        etype="String"
+        methodBody=""
+        __idKDM="nativeRowToString___long__long___"/>
+    <eoperations
+        name="sync()"
+        eparameters=""
+        etype="long"
+        methodBody="throw; class instance creation; RuntimeException; string literal; "
+        __idKDM="sync______"/>
+    <eoperations
+        name="throwImmutable()"
+        eparameters=""
+        etype="void"
+        methodBody="throw; class instance creation; IllegalStateException; string literal; "
+        __idKDM="throwImmutable______"/>
+    <eoperations
+        name="hasSameSchema()"
+        eparameters="table:Table"
+        etype="boolean"
+        methodBody="return; method invocation; nativeHasSameSchema; field access; nativePtr; this; if; throw; class instance creation; IllegalArgumentException; string literal; EQUALS; table; null; "
+        __idKDM="hasSameSchema___Table___"/>
+    <eoperations
+        name="nativeHasSameSchema()"
+        eparameters="thisTable:long, otherTable:long"
+        etype="boolean"
+        methodBody=""
+        __idKDM="nativeHasSameSchema___long__long___"/>
+    <eoperations
+        name="isMetaTable()"
+        eparameters="tableName:String"
+        etype="boolean"
+        methodBody="return; parenthesized; CONDITIONAL_OR; method invocation; equals; method invocation; equals; "
+        __idKDM="isMetaTable___String___"/>
+    <eoperations
+        name="version()"
+        eparameters=""
+        etype="long"
+        methodBody="return; method invocation; nativeVersion; "
+        __idKDM="version______"/>
+    <eoperations
+        name="nativeVersion()"
+        eparameters="nativeTablePtr:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeVersion___long___"/>
+  </eclassifiers>
+  <eclassifiers
+      name="TableView"
+      implements="TableOrView, Closeable"
+      interfaces="TableOrView Closeable">
+    <eattributes
+        name="DEBUG"
+        etype="boolean"/>
+    <eattributes
+        name="query"
+        etype="TableQuery"/>
+    <eattributes
+        name="nativePtr"
+        etype="long"/>
+    <eattributes
+        name="parent"
+        etype="Table"/>
+    <eattributes
+        name="context"
+        etype="Context"/>
+    <eoperations
+        name="TableView()"
+        eparameters="context:Context, parent:Table, nativePtr:long"
+        methodBody="expression statement; ASSIGN; null; field access; query; this; expression statement; ASSIGN; nativePtr; field access; nativePtr; this; expression statement; ASSIGN; parent; field access; parent; this; expression statement; ASSIGN; field access; context; this; "
+        __idKDM="TableView___Context__Table__long___"/>
+    <eoperations
+        name="TableView()"
+        eparameters="context:Context, parent:Table, nativePtr:long, query:TableQuery"
+        methodBody="expression statement; ASSIGN; query; field access; query; this; expression statement; ASSIGN; nativePtr; field access; nativePtr; this; expression statement; ASSIGN; parent; field access; parent; this; expression statement; ASSIGN; field access; context; this; "
+        __idKDM="TableView___Context__Table__long__TableQuery___"/>
+    <eoperations
+        name="getTable()"
+        eparameters=""
+        etype="Table"
+        methodBody="return; "
+        __idKDM="getTable______"/>
+    <eoperations
+        name="close()"
+        eparameters=""
+        etype="void"
+        methodBody="synchronized; if; expression statement; ASSIGN; nativePtr; number literal; if; expression statement; method invocation; println; PLUS; nativePtr; string literal; expression statement; method invocation; nativeClose; NOT_EQUALS; nativePtr; number literal; "
+        __idKDM="close______"/>
+    <eoperations
+        name="finalize()"
+        eparameters=""
+        etype="void"
+        methodBody="synchronized; if; expression statement; ASSIGN; nativePtr; number literal; expression statement; method invocation; asyncDisposeTableView; NOT_EQUALS; nativePtr; number literal; "
+        __idKDM="finalize______"/>
+    <eoperations
+        name="nativeClose()"
+        eparameters="nativeViewPtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeClose___long___"/>
+    <eoperations
+        name="isEmpty()"
+        eparameters=""
+        etype="boolean"
+        methodBody="return; EQUALS; number literal; method invocation; size; "
+        __idKDM="isEmpty______"/>
+    <eoperations
+        name="size()"
+        eparameters=""
+        etype="long"
+        methodBody="return; method invocation; nativeSize; "
+        __idKDM="size______"/>
+    <eoperations
+        name="nativeSize()"
+        eparameters="nativeViewPtr:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeSize___long___"/>
+    <eoperations
+        name="getSourceRowIndex()"
+        eparameters="rowIndex:long"
+        etype="long"
+        methodBody="return; method invocation; nativeGetSourceRowIndex; "
+        __idKDM="getSourceRowIndex___long___"/>
+    <eoperations
+        name="nativeGetSourceRowIndex()"
+        eparameters="nativeViewPtr:long, rowIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetSourceRowIndex___long__long___"/>
+    <eoperations
+        name="getColumnCount()"
+        eparameters=""
+        etype="long"
+        methodBody="return; method invocation; nativeGetColumnCount; "
+        __idKDM="getColumnCount______"/>
+    <eoperations
+        name="nativeGetColumnCount()"
+        eparameters="nativeViewPtr:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetColumnCount___long___"/>
+    <eoperations
+        name="getColumnName()"
+        eparameters="columnIndex:long"
+        etype="String"
+        methodBody="return; method invocation; nativeGetColumnName; "
+        __idKDM="getColumnName___long___"/>
+    <eoperations
+        name="nativeGetColumnName()"
+        eparameters="nativeViewPtr:long, columnIndex:long"
+        etype="String"
+        methodBody=""
+        __idKDM="nativeGetColumnName___long__long___"/>
+    <eoperations
+        name="getColumnIndex()"
+        eparameters="columnName:String"
+        etype="long"
+        methodBody="return; method invocation; nativeGetColumnIndex; if; throw; class instance creation; IllegalArgumentException; string literal; EQUALS; columnName; null; "
+        __idKDM="getColumnIndex___String___"/>
+    <eoperations
+        name="nativeGetColumnIndex()"
+        eparameters="nativeViewPtr:long, columnName:String"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetColumnIndex___long__String___"/>
+    <eoperations
+        name="getColumnType()"
+        eparameters="columnIndex:long"
+        etype="RealmFieldType"
+        methodBody="return; method invocation; fromNativeValue; method invocation; nativeGetColumnType; "
+        __idKDM="getColumnType___long___"/>
+    <eoperations
+        name="nativeGetColumnType()"
+        eparameters="nativeViewPtr:long, columnIndex:long"
+        etype="int"
+        methodBody=""
+        __idKDM="nativeGetColumnType___long__long___"/>
+    <eoperations
+        name="getLong()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody="return; method invocation; nativeGetLong; "
+        __idKDM="getLong___long__long___"/>
+    <eoperations
+        name="nativeGetLong()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetLong___long__long__long___"/>
+    <eoperations
+        name="getBoolean()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="boolean"
+        methodBody="return; method invocation; nativeGetBoolean; "
+        __idKDM="getBoolean___long__long___"/>
+    <eoperations
+        name="nativeGetBoolean()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long"
+        etype="boolean"
+        methodBody=""
+        __idKDM="nativeGetBoolean___long__long__long___"/>
+    <eoperations
+        name="getFloat()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="float"
+        methodBody="return; method invocation; nativeGetFloat; "
+        __idKDM="getFloat___long__long___"/>
+    <eoperations
+        name="nativeGetFloat()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long"
+        etype="float"
+        methodBody=""
+        __idKDM="nativeGetFloat___long__long__long___"/>
+    <eoperations
+        name="getDouble()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeGetDouble; "
+        __idKDM="getDouble___long__long___"/>
+    <eoperations
+        name="nativeGetDouble()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeGetDouble___long__long__long___"/>
+    <eoperations
+        name="getDate()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="Date"
+        methodBody="return; class instance creation; Date; TIMES; number literal; method invocation; nativeGetDateTimeValue; "
+        __idKDM="getDate___long__long___"/>
+    <eoperations
+        name="nativeGetDateTimeValue()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetDateTimeValue___long__long__long___"/>
+    <eoperations
+        name="getString()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="String"
+        methodBody="return; method invocation; nativeGetString; "
+        __idKDM="getString___long__long___"/>
+    <eoperations
+        name="nativeGetString()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long"
+        etype="String"
+        methodBody=""
+        __idKDM="nativeGetString___long__long__long___"/>
+    <eoperations
+        name="getBinaryByteArray()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="byte[]"
+        methodBody="return; method invocation; nativeGetByteArray; "
+        __idKDM="getBinaryByteArray___long__long___"/>
+    <eoperations
+        name="nativeGetByteArray()"
+        eparameters="nativePtr:long, columnIndex:long, rowIndex:long"
+        etype="byte[]"
+        methodBody=""
+        __idKDM="nativeGetByteArray___long__long__long___"/>
+    <eoperations
+        name="getMixedType()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="RealmFieldType"
+        methodBody="return; method invocation; fromNativeValue; method invocation; nativeGetMixedType; "
+        __idKDM="getMixedType___long__long___"/>
+    <eoperations
+        name="nativeGetMixedType()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long"
+        etype="int"
+        methodBody=""
+        __idKDM="nativeGetMixedType___long__long__long___"/>
+    <eoperations
+        name="getMixed()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="Mixed"
+        methodBody="return; method invocation; nativeGetMixed; "
+        __idKDM="getMixed___long__long___"/>
+    <eoperations
+        name="nativeGetMixed()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long"
+        etype="Mixed"
+        methodBody=""
+        __idKDM="nativeGetMixed___long__long__long___"/>
+    <eoperations
+        name="getLink()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody="return; method invocation; nativeGetLink; "
+        __idKDM="getLink___long__long___"/>
+    <eoperations
+        name="nativeGetLink()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetLink___long__long__long___"/>
+    <eoperations
+        name="getSubtable()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="Table"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new Table(context,this.parent,nativeSubtablePtr); field access; parent; this; variable declaration; nativeSubtablePtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="getSubtable___long__long___"/>
+    <eoperations
+        name="nativeGetSubtable()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetSubtable___long__long__long___"/>
+    <eoperations
+        name="getSubtableSize()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody="return; method invocation; nativeGetSubtableSize; "
+        __idKDM="getSubtableSize___long__long___"/>
+    <eoperations
+        name="nativeGetSubtableSize()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetSubtableSize___long__long__long___"/>
+    <eoperations
+        name="clearSubtable()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeClearSubtable; if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; "
+        __idKDM="clearSubtable___long__long___"/>
+    <eoperations
+        name="nativeClearSubtable()"
+        eparameters="nativeTablePtr:long, columnIndex:long, rowIndex:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeClearSubtable___long__long__long___"/>
+    <eoperations
+        name="setLong()"
+        eparameters="columnIndex:long, rowIndex:long, value:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetLong; if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; "
+        __idKDM="setLong___long__long__long___"/>
+    <eoperations
+        name="nativeSetLong()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetLong___long__long__long__long___"/>
+    <eoperations
+        name="setBoolean()"
+        eparameters="columnIndex:long, rowIndex:long, value:boolean"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetBoolean; if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; "
+        __idKDM="setBoolean___long__long__boolean___"/>
+    <eoperations
+        name="nativeSetBoolean()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long, value:boolean"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetBoolean___long__long__long__boolean___"/>
+    <eoperations
+        name="setFloat()"
+        eparameters="columnIndex:long, rowIndex:long, value:float"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetFloat; if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; "
+        __idKDM="setFloat___long__long__float___"/>
+    <eoperations
+        name="nativeSetFloat()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long, value:float"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetFloat___long__long__long__float___"/>
+    <eoperations
+        name="setDouble()"
+        eparameters="columnIndex:long, rowIndex:long, value:double"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetDouble; if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; "
+        __idKDM="setDouble___long__long__double___"/>
+    <eoperations
+        name="nativeSetDouble()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long, value:double"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetDouble___long__long__long__double___"/>
+    <eoperations
+        name="setDate()"
+        eparameters="columnIndex:long, rowIndex:long, value:Date"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetDateTimeValue; DIVIDE; number literal; method invocation; getTime; if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; "
+        __idKDM="setDate___long__long__Date___"/>
+    <eoperations
+        name="nativeSetDateTimeValue()"
+        eparameters="nativePtr:long, columnIndex:long, rowIndex:long, dateTimeValue:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetDateTimeValue___long__long__long__long___"/>
+    <eoperations
+        name="setString()"
+        eparameters="columnIndex:long, rowIndex:long, value:String"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetString; if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; "
+        __idKDM="setString___long__long__String___"/>
+    <eoperations
+        name="nativeSetString()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long, value:String"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetString___long__long__long__String___"/>
+    <eoperations
+        name="setBinaryByteArray()"
+        eparameters="columnIndex:long, rowIndex:long, data:byte[]"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetByteArray; if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; "
+        __idKDM="setBinaryByteArray___long__long__byte_____"/>
+    <eoperations
+        name="nativeSetByteArray()"
+        eparameters="nativePtr:long, columnIndex:long, rowIndex:long, data:byte[]"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetByteArray___long__long__long__byte_____"/>
+    <eoperations
+        name="setMixed()"
+        eparameters="columnIndex:long, rowIndex:long, data:Mixed"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetMixed; if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; "
+        __idKDM="setMixed___long__long__Mixed___"/>
+    <eoperations
+        name="nativeSetMixed()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long, value:Mixed"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetMixed___long__long__long__Mixed___"/>
+    <eoperations
+        name="setLink()"
+        eparameters="columnIndex:long, rowIndex:long, value:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSetLink; if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; "
+        __idKDM="setLink___long__long__long___"/>
+    <eoperations
+        name="nativeSetLink()"
+        eparameters="nativeViewPtr:long, columnIndex:long, rowIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSetLink___long__long__long__long___"/>
+    <eoperations
+        name="isNullLink()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="boolean"
+        methodBody="return; method invocation; nativeIsNullLink; "
+        __idKDM="isNullLink___long__long___"/>
+    <eoperations
+        name="nativeIsNullLink()"
+        eparameters="nativePtr:long, columnIndex:long, rowIndex:long"
+        etype="boolean"
+        methodBody=""
+        __idKDM="nativeIsNullLink___long__long__long___"/>
+    <eoperations
+        name="nullifyLink()"
+        eparameters="columnIndex:long, rowIndex:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeNullifyLink; "
+        __idKDM="nullifyLink___long__long___"/>
+    <eoperations
+        name="nativeNullifyLink()"
+        eparameters="nativePtr:long, columnIndex:long, rowIndex:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeNullifyLink___long__long__long___"/>
+    <eoperations
+        name="clear()"
+        eparameters=""
+        etype="void"
+        methodBody="expression statement; method invocation; nativeClear; if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; "
+        __idKDM="clear______"/>
+    <eoperations
+        name="nativeClear()"
+        eparameters="nativeViewPtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeClear___long___"/>
+    <eoperations
+        name="remove()"
+        eparameters="rowIndex:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeRemoveRow; if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; "
+        __idKDM="remove___long___"/>
+    <eoperations
+        name="nativeRemoveRow()"
+        eparameters="nativeViewPtr:long, rowIndex:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeRemoveRow___long__long___"/>
+    <eoperations
+        name="removeLast()"
+        eparameters=""
+        etype="void"
+        methodBody="if; expression statement; method invocation; nativeRemoveRow; MINUS; number literal; method invocation; size; NOT; method invocation; isEmpty; if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; "
+        __idKDM="removeLast______"/>
+    <eoperations
+        name="findFirstLong()"
+        eparameters="columnIndex:long, value:long"
+        etype="long"
+        methodBody="return; method invocation; nativeFindFirstInt; "
+        __idKDM="findFirstLong___long__long___"/>
+    <eoperations
+        name="nativeFindFirstInt()"
+        eparameters="nativeTableViewPtr:long, columnIndex:long, value:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindFirstInt___long__long__long___"/>
+    <eoperations
+        name="findFirstBoolean()"
+        eparameters="columnIndex:long, value:boolean"
+        etype="long"
+        methodBody="return; method invocation; nativeFindFirstBool; "
+        __idKDM="findFirstBoolean___long__boolean___"/>
+    <eoperations
+        name="nativeFindFirstBool()"
+        eparameters="nativePtr:long, columnIndex:long, value:boolean"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindFirstBool___long__long__boolean___"/>
+    <eoperations
+        name="findFirstFloat()"
+        eparameters="columnIndex:long, value:float"
+        etype="long"
+        methodBody="return; method invocation; nativeFindFirstFloat; "
+        __idKDM="findFirstFloat___long__float___"/>
+    <eoperations
+        name="nativeFindFirstFloat()"
+        eparameters="nativePtr:long, columnIndex:long, value:float"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindFirstFloat___long__long__float___"/>
+    <eoperations
+        name="findFirstDouble()"
+        eparameters="columnIndex:long, value:double"
+        etype="long"
+        methodBody="return; method invocation; nativeFindFirstDouble; "
+        __idKDM="findFirstDouble___long__double___"/>
+    <eoperations
+        name="nativeFindFirstDouble()"
+        eparameters="nativePtr:long, columnIndex:long, value:double"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindFirstDouble___long__long__double___"/>
+    <eoperations
+        name="findFirstDate()"
+        eparameters="columnIndex:long, date:Date"
+        etype="long"
+        methodBody="return; method invocation; nativeFindFirstDate; DIVIDE; number literal; method invocation; getTime; "
+        __idKDM="findFirstDate___long__Date___"/>
+    <eoperations
+        name="nativeFindFirstDate()"
+        eparameters="nativeTablePtr:long, columnIndex:long, dateTimeValue:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindFirstDate___long__long__long___"/>
+    <eoperations
+        name="findFirstString()"
+        eparameters="columnIndex:long, value:String"
+        etype="long"
+        methodBody="return; method invocation; nativeFindFirstString; "
+        __idKDM="findFirstString___long__String___"/>
+    <eoperations
+        name="nativeFindFirstString()"
+        eparameters="nativePtr:long, columnIndex:long, value:String"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindFirstString___long__long__String___"/>
+    <eoperations
+        name="lowerBoundLong()"
+        eparameters="columnIndex:long, value:long"
+        etype="long"
+        methodBody="throw; class instance creation; RuntimeException; string literal; "
+        __idKDM="lowerBoundLong___long__long___"/>
+    <eoperations
+        name="upperBoundLong()"
+        eparameters="columnIndex:long, value:long"
+        etype="long"
+        methodBody="throw; class instance creation; RuntimeException; string literal; "
+        __idKDM="upperBoundLong___long__long___"/>
+    <eoperations
+        name="findAllLong()"
+        eparameters="columnIndex:long, value:long"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this.parent,nativeViewPtr); field access; parent; this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="findAllLong___long__long___"/>
+    <eoperations
+        name="nativeFindAllInt()"
+        eparameters="nativePtr:long, columnIndex:long, value:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAllInt___long__long__long___"/>
+    <eoperations
+        name="findAllBoolean()"
+        eparameters="columnIndex:long, value:boolean"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this.parent,nativeViewPtr); field access; parent; this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="findAllBoolean___long__boolean___"/>
+    <eoperations
+        name="nativeFindAllBool()"
+        eparameters="nativePtr:long, columnIndex:long, value:boolean"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAllBool___long__long__boolean___"/>
+    <eoperations
+        name="findAllFloat()"
+        eparameters="columnIndex:long, value:float"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this.parent,nativeViewPtr); field access; parent; this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="findAllFloat___long__float___"/>
+    <eoperations
+        name="nativeFindAllFloat()"
+        eparameters="nativePtr:long, columnIndex:long, value:float"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAllFloat___long__long__float___"/>
+    <eoperations
+        name="findAllDouble()"
+        eparameters="columnIndex:long, value:double"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this.parent,nativeViewPtr); field access; parent; this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="findAllDouble___long__double___"/>
+    <eoperations
+        name="nativeFindAllDouble()"
+        eparameters="nativePtr:long, columnIndex:long, value:double"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAllDouble___long__long__double___"/>
+    <eoperations
+        name="findAllDate()"
+        eparameters="columnIndex:long, date:Date"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this.parent,nativeViewPtr); field access; parent; this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="findAllDate___long__Date___"/>
+    <eoperations
+        name="nativeFindAllDate()"
+        eparameters="nativePtr:long, columnIndex:long, dateTimeValue:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAllDate___long__long__long___"/>
+    <eoperations
+        name="findAllString()"
+        eparameters="columnIndex:long, value:String"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this.parent,nativeViewPtr); field access; parent; this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; "
+        __idKDM="findAllString___long__String___"/>
+    <eoperations
+        name="nativeFindAllString()"
+        eparameters="nativePtr:long, columnIndex:long, value:String"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAllString___long__long__String___"/>
+    <eoperations
+        name="sumLong()"
+        eparameters="columnIndex:long"
+        etype="long"
+        methodBody="return; method invocation; nativeSumInt; "
+        __idKDM="sumLong___long___"/>
+    <eoperations
+        name="nativeSumInt()"
+        eparameters="nativeViewPtr:long, columnIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeSumInt___long__long___"/>
+    <eoperations
+        name="maximumLong()"
+        eparameters="columnIndex:long"
+        etype="Long"
+        methodBody="return; method invocation; nativeMaximumInt; "
+        __idKDM="maximumLong___long___"/>
+    <eoperations
+        name="nativeMaximumInt()"
+        eparameters="nativeViewPtr:long, columnIndex:long"
+        etype="Long"
+        methodBody=""
+        __idKDM="nativeMaximumInt___long__long___"/>
+    <eoperations
+        name="minimumLong()"
+        eparameters="columnIndex:long"
+        etype="Long"
+        methodBody="return; method invocation; nativeMinimumInt; "
+        __idKDM="minimumLong___long___"/>
+    <eoperations
+        name="nativeMinimumInt()"
+        eparameters="nativeViewPtr:long, columnIndex:long"
+        etype="Long"
+        methodBody=""
+        __idKDM="nativeMinimumInt___long__long___"/>
+    <eoperations
+        name="averageLong()"
+        eparameters="columnIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeAverageInt; "
+        __idKDM="averageLong___long___"/>
+    <eoperations
+        name="nativeAverageInt()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeAverageInt___long__long___"/>
+    <eoperations
+        name="sumFloat()"
+        eparameters="columnIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeSumFloat; "
+        __idKDM="sumFloat___long___"/>
+    <eoperations
+        name="nativeSumFloat()"
+        eparameters="nativeViewPtr:long, columnIndex:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeSumFloat___long__long___"/>
+    <eoperations
+        name="maximumFloat()"
+        eparameters="columnIndex:long"
+        etype="Float"
+        methodBody="return; method invocation; nativeMaximumFloat; "
+        __idKDM="maximumFloat___long___"/>
+    <eoperations
+        name="nativeMaximumFloat()"
+        eparameters="nativeViewPtr:long, columnIndex:long"
+        etype="Float"
+        methodBody=""
+        __idKDM="nativeMaximumFloat___long__long___"/>
+    <eoperations
+        name="minimumFloat()"
+        eparameters="columnIndex:long"
+        etype="Float"
+        methodBody="return; method invocation; nativeMinimumFloat; "
+        __idKDM="minimumFloat___long___"/>
+    <eoperations
+        name="nativeMinimumFloat()"
+        eparameters="nativeViewPtr:long, columnIndex:long"
+        etype="Float"
+        methodBody=""
+        __idKDM="nativeMinimumFloat___long__long___"/>
+    <eoperations
+        name="averageFloat()"
+        eparameters="columnIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeAverageFloat; "
+        __idKDM="averageFloat___long___"/>
+    <eoperations
+        name="nativeAverageFloat()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeAverageFloat___long__long___"/>
+    <eoperations
+        name="sumDouble()"
+        eparameters="columnIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeSumDouble; "
+        __idKDM="sumDouble___long___"/>
+    <eoperations
+        name="nativeSumDouble()"
+        eparameters="nativeViewPtr:long, columnIndex:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeSumDouble___long__long___"/>
+    <eoperations
+        name="maximumDouble()"
+        eparameters="columnIndex:long"
+        etype="Double"
+        methodBody="return; method invocation; nativeMaximumDouble; "
+        __idKDM="maximumDouble___long___"/>
+    <eoperations
+        name="nativeMaximumDouble()"
+        eparameters="nativeViewPtr:long, columnIndex:long"
+        etype="Double"
+        methodBody=""
+        __idKDM="nativeMaximumDouble___long__long___"/>
+    <eoperations
+        name="minimumDouble()"
+        eparameters="columnIndex:long"
+        etype="Double"
+        methodBody="return; method invocation; nativeMinimumDouble; "
+        __idKDM="minimumDouble___long___"/>
+    <eoperations
+        name="nativeMinimumDouble()"
+        eparameters="nativeViewPtr:long, columnIndex:long"
+        etype="Double"
+        methodBody=""
+        __idKDM="nativeMinimumDouble___long__long___"/>
+    <eoperations
+        name="averageDouble()"
+        eparameters="columnIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeAverageDouble; "
+        __idKDM="averageDouble___long___"/>
+    <eoperations
+        name="nativeAverageDouble()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeAverageDouble___long__long___"/>
+    <eoperations
+        name="maximumDate()"
+        eparameters="columnIndex:long"
+        etype="Date"
+        methodBody="return; class instance creation; Date; TIMES; result; number literal; if; return; null; EQUALS; result; null; variable declaration; result; "
+        __idKDM="maximumDate___long___"/>
+    <eoperations
+        name="nativeMaximumDate()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="Long"
+        methodBody=""
+        __idKDM="nativeMaximumDate___long__long___"/>
+    <eoperations
+        name="minimumDate()"
+        eparameters="columnIndex:long"
+        etype="Date"
+        methodBody="return; class instance creation; Date; TIMES; result; number literal; if; return; null; EQUALS; result; null; variable declaration; result; "
+        __idKDM="minimumDate___long___"/>
+    <eoperations
+        name="nativeMinimumDate()"
+        eparameters="nativePtr:long, columnIndex:long"
+        etype="Long"
+        methodBody=""
+        __idKDM="nativeMinimumDate___long__long___"/>
+    <eoperations
+        name="sort()"
+        eparameters="columnIndex:long, sortOrder:Sort"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSort; method invocation; getValue; "
+        __idKDM="sort___long__Sort___"/>
+    <eoperations
+        name="sort()"
+        eparameters="columnIndex:long"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSort; boolean literal; "
+        __idKDM="sort___long___"/>
+    <eoperations
+        name="nativeSort()"
+        eparameters="nativeTableViewPtr:long, columnIndex:long, sortOrder:boolean"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSort___long__long__boolean___"/>
+    <eoperations
+        name="sort()"
+        eparameters="columnIndices:java.util.List&lt;java.lang.Long>, sortOrders:Sort[]"
+        etype="void"
+        methodBody="expression statement; method invocation; nativeSortMulti; variable declaration; nativeSortOrder; for; expression statement; ASSIGN; method invocation; get; array access; indices; INCREMENT; variable declaration; int; i; LESS; i; method invocation; size; variable declaration; indices; "
+        __idKDM="sort___java_util_List_java_lang_Long___Sort_____"/>
+    <eoperations
+        name="nativeSortMulti()"
+        eparameters="nativeTableViewPtr:long, columnIndices:long, ascending:boolean"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSortMulti___long__long__boolean___"/>
+    <eoperations
+        name="createNativeTableView()"
+        eparameters="table:Table, nativeTablePtr:long"
+        etype="long"
+        methodBody=""
+        __idKDM="createNativeTableView___Table__long___"/>
+    <eoperations
+        name="toJson()"
+        eparameters=""
+        etype="String"
+        methodBody="return; method invocation; nativeToJson; "
+        __idKDM="toJson______"/>
+    <eoperations
+        name="nativeToJson()"
+        eparameters="nativeViewPtr:long"
+        etype="String"
+        methodBody=""
+        __idKDM="nativeToJson___long___"/>
+    <eoperations
+        name="toString()"
+        eparameters=""
+        etype="String"
+        methodBody="return; method invocation; nativeToString; number literal; "
+        __idKDM="toString______"/>
+    <eoperations
+        name="toString()"
+        eparameters="maxRows:long"
+        etype="String"
+        methodBody="return; method invocation; nativeToString; "
+        __idKDM="toString___long___"/>
+    <eoperations
+        name="nativeToString()"
+        eparameters="nativeTablePtr:long, maxRows:long"
+        etype="String"
+        methodBody=""
+        __idKDM="nativeToString___long__long___"/>
+    <eoperations
+        name="rowToString()"
+        eparameters="rowIndex:long"
+        etype="String"
+        methodBody="return; method invocation; nativeRowToString; "
+        __idKDM="rowToString___long___"/>
+    <eoperations
+        name="nativeRowToString()"
+        eparameters="nativeTablePtr:long, rowIndex:long"
+        etype="String"
+        methodBody=""
+        __idKDM="nativeRowToString___long__long___"/>
+    <eoperations
+        name="where()"
+        eparameters=""
+        etype="TableQuery"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableQuery(this.context,this.parent,nativeQueryPtr,this); this; field access; parent; this; field access; context; this; variable declaration; nativeQueryPtr; expression statement; method invocation; executeDelayedDisposal; field access; context; this; "
+        __idKDM="where______"/>
+    <eoperations
+        name="nativeWhere()"
+        eparameters="nativeViewPtr:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeWhere___long___"/>
+    <eoperations
+        name="throwImmutable()"
+        eparameters=""
+        etype="void"
+        methodBody="throw; class instance creation; IllegalStateException; string literal; "
+        __idKDM="throwImmutable______"/>
+    <eoperations
+        name="count()"
+        eparameters="columnIndex:long, value:String"
+        etype="long"
+        methodBody="throw; class instance creation; RuntimeException; string literal; "
+        __idKDM="count___long__String___"/>
+    <eoperations
+        name="pivot()"
+        eparameters="stringCol:long, intCol:long, pivotType:PivotType"
+        etype="Table"
+        methodBody="return; expression statement; method invocation; nativePivot; variable declaration; class instance creation; Table; result; if; throw; class instance creation; UnsupportedOperationException; string literal; NOT; method invocation; equals; method invocation; getColumnType; this; if; throw; class instance creation; UnsupportedOperationException; string literal; NOT; method invocation; equals; method invocation; getColumnType; this; "
+        __idKDM="pivot___long__long__PivotType___"/>
+    <eoperations
+        name="nativePivot()"
+        eparameters="nativeTablePtr:long, stringCol:long, intCol:long, pivotType:int, result:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativePivot___long__long__long__int__long___"/>
+    <eoperations
+        name="sync()"
+        eparameters=""
+        etype="long"
+        methodBody="return; method invocation; nativeSync; "
+        __idKDM="sync______"/>
+    <eoperations
+        name="nativeSync()"
+        eparameters="nativeTablePtr:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeSync___long___"/>
+  </eclassifiers>
+  <eclassifiers
+      name="TableQuery"
+      implements="Closeable"
+      interfaces="Closeable">
+    <eattributes
+        name="DEBUG"
+        etype="boolean"/>
+    <eattributes
+        name="nativePtr"
+        etype="long"/>
+    <eattributes
+        name="table"
+        etype="Table"/>
+    <eattributes
+        name="origin"
+        etype="TableOrView"/>
+    <eattributes
+        name="context"
+        etype="Context"/>
+    <eattributes
+        name="queryValidated"
+        etype="boolean"/>
+    <eattributes
+        name="DATE_NULL_ERROR_MESSAGE"
+        etype="String"/>
+    <eattributes
+        name="STRING_NULL_ERROR_MESSAGE"
+        etype="String"/>
+    <eoperations
+        name="TableQuery()"
+        eparameters="context:Context, table:Table, nativeQueryPtr:long"
+        methodBody="expression statement; ASSIGN; null; field access; origin; this; expression statement; ASSIGN; nativeQueryPtr; field access; nativePtr; this; expression statement; ASSIGN; table; field access; table; this; expression statement; ASSIGN; field access; context; this; if; expression statement; method invocation; println; PLUS; nativeQueryPtr; string literal; "
+        __idKDM="TableQuery___Context__Table__long___"/>
+    <eoperations
+        name="TableQuery()"
+        eparameters="context:Context, table:Table, nativeQueryPtr:long, origin:TableOrView"
+        methodBody="expression statement; ASSIGN; field access; origin; this; expression statement; ASSIGN; nativeQueryPtr; field access; nativePtr; this; expression statement; ASSIGN; table; field access; table; this; expression statement; ASSIGN; field access; context; this; if; expression statement; method invocation; println; PLUS; nativeQueryPtr; string literal; "
+        __idKDM="TableQuery___Context__Table__long__TableOrView___"/>
+    <eoperations
+        name="close()"
+        eparameters=""
+        etype="void"
+        methodBody="synchronized; if; expression statement; ASSIGN; nativePtr; number literal; if; expression statement; method invocation; println; PLUS; nativePtr; string literal; expression statement; method invocation; nativeClose; NOT_EQUALS; nativePtr; number literal; "
+        __idKDM="close______"/>
+    <eoperations
+        name="finalize()"
+        eparameters=""
+        etype="void"
+        methodBody="synchronized; if; expression statement; ASSIGN; nativePtr; number literal; expression statement; method invocation; asyncDisposeQuery; NOT_EQUALS; nativePtr; number literal; "
+        __idKDM="finalize______"/>
+    <eoperations
+        name="validateQuery()"
+        eparameters=""
+        etype="void"
+        methodBody="if; if; throw; class instance creation; UnsupportedOperationException; expression statement; ASSIGN; queryValidated; boolean literal; method invocation; equals; string literal; variable declaration; invalidMessage; NOT; "
+        __idKDM="validateQuery______"/>
+    <eoperations
+        name="tableview()"
+        eparameters="tv:TableView"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; method invocation; nativeTableview; "
+        __idKDM="tableview___TableView___"/>
+    <eoperations
+        name="group()"
+        eparameters=""
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeGroup; "
+        __idKDM="group______"/>
+    <eoperations
+        name="endGroup()"
+        eparameters=""
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeEndGroup; "
+        __idKDM="endGroup______"/>
+    <eoperations
+        name="subtable()"
+        eparameters="columnIndex:long"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeSubtable; "
+        __idKDM="subtable___long___"/>
+    <eoperations
+        name="endSubtable()"
+        eparameters=""
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeParent; "
+        __idKDM="endSubtable______"/>
+    <eoperations
+        name="or()"
+        eparameters=""
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeOr; "
+        __idKDM="or______"/>
+    <eoperations
+        name="not()"
+        eparameters=""
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeNot; "
+        __idKDM="not______"/>
+    <eoperations
+        name="equalTo()"
+        eparameters="columnIndexes:long, value:long"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeEqual; "
+        __idKDM="equalTo___long__long___"/>
+    <eoperations
+        name="notEqualTo()"
+        eparameters="columnIndex:long, value:long"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeNotEqual; "
+        __idKDM="notEqualTo___long__long___"/>
+    <eoperations
+        name="greaterThan()"
+        eparameters="columnIndex:long, value:long"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeGreater; "
+        __idKDM="greaterThan___long__long___"/>
+    <eoperations
+        name="greaterThanOrEqual()"
+        eparameters="columnIndex:long, value:long"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeGreaterEqual; "
+        __idKDM="greaterThanOrEqual___long__long___"/>
+    <eoperations
+        name="lessThan()"
+        eparameters="columnIndex:long, value:long"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeLess; "
+        __idKDM="lessThan___long__long___"/>
+    <eoperations
+        name="lessThanOrEqual()"
+        eparameters="columnIndex:long, value:long"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeLessEqual; "
+        __idKDM="lessThanOrEqual___long__long___"/>
+    <eoperations
+        name="between()"
+        eparameters="columnIndex:long, value1:long, value2:long"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeBetween; "
+        __idKDM="between___long__long__long___"/>
+    <eoperations
+        name="equalTo()"
+        eparameters="columnIndex:long, value:float"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeEqual; "
+        __idKDM="equalTo___long__float___"/>
+    <eoperations
+        name="notEqualTo()"
+        eparameters="columnIndex:long, value:float"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeNotEqual; "
+        __idKDM="notEqualTo___long__float___"/>
+    <eoperations
+        name="greaterThan()"
+        eparameters="columnIndex:long, value:float"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeGreater; "
+        __idKDM="greaterThan___long__float___"/>
+    <eoperations
+        name="greaterThanOrEqual()"
+        eparameters="columnIndex:long, value:float"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeGreaterEqual; "
+        __idKDM="greaterThanOrEqual___long__float___"/>
+    <eoperations
+        name="lessThan()"
+        eparameters="columnIndex:long, value:float"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeLess; "
+        __idKDM="lessThan___long__float___"/>
+    <eoperations
+        name="lessThanOrEqual()"
+        eparameters="columnIndex:long, value:float"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeLessEqual; "
+        __idKDM="lessThanOrEqual___long__float___"/>
+    <eoperations
+        name="between()"
+        eparameters="columnIndex:long, value1:float, value2:float"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeBetween; "
+        __idKDM="between___long__float__float___"/>
+    <eoperations
+        name="equalTo()"
+        eparameters="columnIndex:long, value:double"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeEqual; "
+        __idKDM="equalTo___long__double___"/>
+    <eoperations
+        name="notEqualTo()"
+        eparameters="columnIndex:long, value:double"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeNotEqual; "
+        __idKDM="notEqualTo___long__double___"/>
+    <eoperations
+        name="greaterThan()"
+        eparameters="columnIndex:long, value:double"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeGreater; "
+        __idKDM="greaterThan___long__double___"/>
+    <eoperations
+        name="greaterThanOrEqual()"
+        eparameters="columnIndex:long, value:double"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeGreaterEqual; "
+        __idKDM="greaterThanOrEqual___long__double___"/>
+    <eoperations
+        name="lessThan()"
+        eparameters="columnIndex:long, value:double"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeLess; "
+        __idKDM="lessThan___long__double___"/>
+    <eoperations
+        name="lessThanOrEqual()"
+        eparameters="columnIndex:long, value:double"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeLessEqual; "
+        __idKDM="lessThanOrEqual___long__double___"/>
+    <eoperations
+        name="between()"
+        eparameters="columnIndex:long, value1:double, value2:double"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeBetween; "
+        __idKDM="between___long__double__double___"/>
+    <eoperations
+        name="equalTo()"
+        eparameters="columnIndex:long, value:boolean"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeEqual; "
+        __idKDM="equalTo___long__boolean___"/>
+    <eoperations
+        name="equalTo()"
+        eparameters="columnIndex:long, value:Date"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; if; expression statement; method invocation; nativeEqualDateTime; DIVIDE; number literal; method invocation; getTime; expression statement; method invocation; nativeIsNull; EQUALS; value; null; "
+        __idKDM="equalTo___long__Date___"/>
+    <eoperations
+        name="notEqualTo()"
+        eparameters="columnIndex:long, value:Date"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeNotEqualDateTime; DIVIDE; number literal; method invocation; getTime; if; throw; class instance creation; IllegalArgumentException; EQUALS; value; null; "
+        __idKDM="notEqualTo___long__Date___"/>
+    <eoperations
+        name="greaterThan()"
+        eparameters="columnIndex:long, value:Date"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeGreaterDateTime; DIVIDE; number literal; method invocation; getTime; if; throw; class instance creation; IllegalArgumentException; EQUALS; value; null; "
+        __idKDM="greaterThan___long__Date___"/>
+    <eoperations
+        name="greaterThanOrEqual()"
+        eparameters="columnIndex:long, value:Date"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeGreaterEqualDateTime; DIVIDE; number literal; method invocation; getTime; if; throw; class instance creation; IllegalArgumentException; EQUALS; value; null; "
+        __idKDM="greaterThanOrEqual___long__Date___"/>
+    <eoperations
+        name="lessThan()"
+        eparameters="columnIndex:long, value:Date"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeLessDateTime; DIVIDE; number literal; method invocation; getTime; if; throw; class instance creation; IllegalArgumentException; EQUALS; value; null; "
+        __idKDM="lessThan___long__Date___"/>
+    <eoperations
+        name="lessThanOrEqual()"
+        eparameters="columnIndex:long, value:Date"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeLessEqualDateTime; DIVIDE; number literal; method invocation; getTime; if; throw; class instance creation; IllegalArgumentException; EQUALS; value; null; "
+        __idKDM="lessThanOrEqual___long__Date___"/>
+    <eoperations
+        name="between()"
+        eparameters="columnIndex:long, value1:Date, value2:Date"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeBetweenDateTime; DIVIDE; number literal; method invocation; getTime; DIVIDE; number literal; method invocation; getTime; if; throw; class instance creation; IllegalArgumentException; string literal; CONDITIONAL_OR; EQUALS; value2; null; EQUALS; value1; null; "
+        __idKDM="between___long__Date__Date___"/>
+    <eoperations
+        name="equalTo()"
+        eparameters="columnIndexes:long[], value:String, caseSensitive:Case"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeEqual; method invocation; getValue; "
+        __idKDM="equalTo___long____String__Case___"/>
+    <eoperations
+        name="equalTo()"
+        eparameters="columnIndexes:long[], value:String"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeEqual; boolean literal; "
+        __idKDM="equalTo___long____String___"/>
+    <eoperations
+        name="notEqualTo()"
+        eparameters="columnIndex:long, value:String, caseSensitive:Case"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeNotEqual; method invocation; getValue; "
+        __idKDM="notEqualTo___long__String__Case___"/>
+    <eoperations
+        name="notEqualTo()"
+        eparameters="columnIndex:long, value:String"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeNotEqual; boolean literal; "
+        __idKDM="notEqualTo___long__String___"/>
+    <eoperations
+        name="beginsWith()"
+        eparameters="columnIndices:long, value:String, caseSensitive:Case"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeBeginsWith; method invocation; getValue; "
+        __idKDM="beginsWith___long__String__Case___"/>
+    <eoperations
+        name="beginsWith()"
+        eparameters="columnIndices:long, value:String"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeBeginsWith; boolean literal; "
+        __idKDM="beginsWith___long__String___"/>
+    <eoperations
+        name="endsWith()"
+        eparameters="columnIndices:long, value:String, caseSensitive:Case"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeEndsWith; method invocation; getValue; "
+        __idKDM="endsWith___long__String__Case___"/>
+    <eoperations
+        name="endsWith()"
+        eparameters="columnIndices:long, value:String"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeEndsWith; boolean literal; "
+        __idKDM="endsWith___long__String___"/>
+    <eoperations
+        name="contains()"
+        eparameters="columnIndices:long, value:String, caseSensitive:Case"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeContains; method invocation; getValue; "
+        __idKDM="contains___long__String__Case___"/>
+    <eoperations
+        name="contains()"
+        eparameters="columnIndices:long, value:String"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeContains; boolean literal; "
+        __idKDM="contains___long__String___"/>
+    <eoperations
+        name="isEmpty()"
+        eparameters="columnIndices:long[]"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeIsEmpty; "
+        __idKDM="isEmpty___long_____"/>
+    <eoperations
+        name="find()"
+        eparameters="fromTableRow:long"
+        etype="long"
+        methodBody="return; method invocation; nativeFind; expression statement; method invocation; validateQuery; "
+        __idKDM="find___long___"/>
+    <eoperations
+        name="find()"
+        eparameters=""
+        etype="long"
+        methodBody="return; method invocation; nativeFind; number literal; expression statement; method invocation; validateQuery; "
+        __idKDM="find______"/>
+    <eoperations
+        name="findWithHandover()"
+        eparameters="bgSharedGroupPtr:long, nativeReplicationPtr:long, ptrQuery:long"
+        etype="long"
+        methodBody="return; method invocation; nativeFindWithHandover; number literal; expression statement; method invocation; executeDelayedDisposal; expression statement; method invocation; validateQuery; "
+        __idKDM="findWithHandover___long__long__long___"/>
+    <eoperations
+        name="findAll()"
+        eparameters="start:long, end:long, limit:long"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this.table,nativeViewPtr,this); this; field access; table; this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; expression statement; method invocation; validateQuery; "
+        __idKDM="findAll___long__long__long___"/>
+    <eoperations
+        name="findAll()"
+        eparameters=""
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; class instance creation; new TableView(this.context,this.table,nativeViewPtr,this); this; field access; table; this; field access; context; this; variable declaration; nativeViewPtr; expression statement; method invocation; executeDelayedDisposal; expression statement; method invocation; validateQuery; "
+        __idKDM="findAll______"/>
+    <eoperations
+        name="findAllWithHandover()"
+        eparameters="bgSharedGroupPtr:long, nativeReplicationPtr:long, ptrQuery:long"
+        etype="long"
+        methodBody="return; method invocation; nativeFindAllWithHandover; number literal; expression statement; method invocation; executeDelayedDisposal; expression statement; method invocation; validateQuery; "
+        __idKDM="findAllWithHandover___long__long__long___"/>
+    <eoperations
+        name="findDistinctWithHandover()"
+        eparameters="bgSharedGroupPtr:long, nativeReplicationPtr:long, ptrQuery:long, columnIndex:long"
+        etype="long"
+        methodBody="return; method invocation; nativeGetDistinctViewWithHandover; expression statement; method invocation; executeDelayedDisposal; expression statement; method invocation; validateQuery; "
+        __idKDM="findDistinctWithHandover___long__long__long__long___"/>
+    <eoperations
+        name="findAllSortedWithHandover()"
+        eparameters="bgSharedGroupPtr:long, nativeReplicationPtr:long, ptrQuery:long, columnIndex:long, sortOrder:Sort"
+        etype="long"
+        methodBody="return; method invocation; nativeFindAllSortedWithHandover; method invocation; getValue; number literal; expression statement; method invocation; executeDelayedDisposal; expression statement; method invocation; validateQuery; "
+        __idKDM="findAllSortedWithHandover___long__long__long__long__Sort___"/>
+    <eoperations
+        name="findAllMultiSortedWithHandover()"
+        eparameters="bgSharedGroupPtr:long, nativeReplicationPtr:long, ptrQuery:long, columnIndices:long[], sortOrders:Sort[]"
+        etype="long"
+        methodBody="return; method invocation; nativeFindAllMultiSortedWithHandover; number literal; variable declaration; ascendings; expression statement; method invocation; executeDelayedDisposal; expression statement; method invocation; validateQuery; "
+        __idKDM="findAllMultiSortedWithHandover___long__long__long__long____Sort_____"/>
+    <eoperations
+        name="importHandoverTableView()"
+        eparameters="handoverPtr:long, callerSharedGroupPtr:long"
+        etype="TableView"
+        methodBody="try; catch; catch; e; throw; if; expression statement; method invocation; nativeClose; NOT_EQUALS; nativeTvPtr; number literal; return; class instance creation; new TableView(this.context,this.table,nativeTvPtr); field access; table; this; field access; context; this; expression statement; ASSIGN; nativeTvPtr; method invocation; nativeImportHandoverTableViewIntoSharedGroup; variable declaration; nativeTvPtr; "
+        __idKDM="importHandoverTableView___long__long___"/>
+    <eoperations
+        name="handoverQuery()"
+        eparameters="callerSharedGroupPtr:long"
+        etype="long"
+        methodBody="return; method invocation; nativeHandoverQuery; "
+        __idKDM="handoverQuery___long___"/>
+    <eoperations
+        name="sumInt()"
+        eparameters="columnIndex:long, start:long, end:long, limit:long"
+        etype="long"
+        methodBody="return; method invocation; nativeSumInt; expression statement; method invocation; validateQuery; "
+        __idKDM="sumInt___long__long__long__long___"/>
+    <eoperations
+        name="sumInt()"
+        eparameters="columnIndex:long"
+        etype="long"
+        methodBody="return; method invocation; nativeSumInt; number literal; expression statement; method invocation; validateQuery; "
+        __idKDM="sumInt___long___"/>
+    <eoperations
+        name="maximumInt()"
+        eparameters="columnIndex:long, start:long, end:long, limit:long"
+        etype="Long"
+        methodBody="return; method invocation; nativeMaximumInt; expression statement; method invocation; validateQuery; "
+        __idKDM="maximumInt___long__long__long__long___"/>
+    <eoperations
+        name="maximumInt()"
+        eparameters="columnIndex:long"
+        etype="Long"
+        methodBody="return; method invocation; nativeMaximumInt; number literal; expression statement; method invocation; validateQuery; "
+        __idKDM="maximumInt___long___"/>
+    <eoperations
+        name="minimumInt()"
+        eparameters="columnIndex:long, start:long, end:long, limit:long"
+        etype="Long"
+        methodBody="return; method invocation; nativeMinimumInt; expression statement; method invocation; validateQuery; "
+        __idKDM="minimumInt___long__long__long__long___"/>
+    <eoperations
+        name="minimumInt()"
+        eparameters="columnIndex:long"
+        etype="Long"
+        methodBody="return; method invocation; nativeMinimumInt; number literal; expression statement; method invocation; validateQuery; "
+        __idKDM="minimumInt___long___"/>
+    <eoperations
+        name="averageInt()"
+        eparameters="columnIndex:long, start:long, end:long, limit:long"
+        etype="double"
+        methodBody="return; method invocation; nativeAverageInt; expression statement; method invocation; validateQuery; "
+        __idKDM="averageInt___long__long__long__long___"/>
+    <eoperations
+        name="averageInt()"
+        eparameters="columnIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeAverageInt; number literal; expression statement; method invocation; validateQuery; "
+        __idKDM="averageInt___long___"/>
+    <eoperations
+        name="sumFloat()"
+        eparameters="columnIndex:long, start:long, end:long, limit:long"
+        etype="double"
+        methodBody="return; method invocation; nativeSumFloat; expression statement; method invocation; validateQuery; "
+        __idKDM="sumFloat___long__long__long__long___"/>
+    <eoperations
+        name="sumFloat()"
+        eparameters="columnIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeSumFloat; number literal; expression statement; method invocation; validateQuery; "
+        __idKDM="sumFloat___long___"/>
+    <eoperations
+        name="maximumFloat()"
+        eparameters="columnIndex:long, start:long, end:long, limit:long"
+        etype="Float"
+        methodBody="return; method invocation; nativeMaximumFloat; expression statement; method invocation; validateQuery; "
+        __idKDM="maximumFloat___long__long__long__long___"/>
+    <eoperations
+        name="maximumFloat()"
+        eparameters="columnIndex:long"
+        etype="Float"
+        methodBody="return; method invocation; nativeMaximumFloat; number literal; expression statement; method invocation; validateQuery; "
+        __idKDM="maximumFloat___long___"/>
+    <eoperations
+        name="minimumFloat()"
+        eparameters="columnIndex:long, start:long, end:long, limit:long"
+        etype="Float"
+        methodBody="return; method invocation; nativeMinimumFloat; expression statement; method invocation; validateQuery; "
+        __idKDM="minimumFloat___long__long__long__long___"/>
+    <eoperations
+        name="minimumFloat()"
+        eparameters="columnIndex:long"
+        etype="Float"
+        methodBody="return; method invocation; nativeMinimumFloat; number literal; expression statement; method invocation; validateQuery; "
+        __idKDM="minimumFloat___long___"/>
+    <eoperations
+        name="averageFloat()"
+        eparameters="columnIndex:long, start:long, end:long, limit:long"
+        etype="double"
+        methodBody="return; method invocation; nativeAverageFloat; expression statement; method invocation; validateQuery; "
+        __idKDM="averageFloat___long__long__long__long___"/>
+    <eoperations
+        name="averageFloat()"
+        eparameters="columnIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeAverageFloat; number literal; expression statement; method invocation; validateQuery; "
+        __idKDM="averageFloat___long___"/>
+    <eoperations
+        name="sumDouble()"
+        eparameters="columnIndex:long, start:long, end:long, limit:long"
+        etype="double"
+        methodBody="return; method invocation; nativeSumDouble; expression statement; method invocation; validateQuery; "
+        __idKDM="sumDouble___long__long__long__long___"/>
+    <eoperations
+        name="sumDouble()"
+        eparameters="columnIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeSumDouble; number literal; expression statement; method invocation; validateQuery; "
+        __idKDM="sumDouble___long___"/>
+    <eoperations
+        name="maximumDouble()"
+        eparameters="columnIndex:long, start:long, end:long, limit:long"
+        etype="Double"
+        methodBody="return; method invocation; nativeMaximumDouble; expression statement; method invocation; validateQuery; "
+        __idKDM="maximumDouble___long__long__long__long___"/>
+    <eoperations
+        name="maximumDouble()"
+        eparameters="columnIndex:long"
+        etype="Double"
+        methodBody="return; method invocation; nativeMaximumDouble; number literal; expression statement; method invocation; validateQuery; "
+        __idKDM="maximumDouble___long___"/>
+    <eoperations
+        name="minimumDouble()"
+        eparameters="columnIndex:long, start:long, end:long, limit:long"
+        etype="Double"
+        methodBody="return; method invocation; nativeMinimumDouble; expression statement; method invocation; validateQuery; "
+        __idKDM="minimumDouble___long__long__long__long___"/>
+    <eoperations
+        name="minimumDouble()"
+        eparameters="columnIndex:long"
+        etype="Double"
+        methodBody="return; method invocation; nativeMinimumDouble; number literal; expression statement; method invocation; validateQuery; "
+        __idKDM="minimumDouble___long___"/>
+    <eoperations
+        name="averageDouble()"
+        eparameters="columnIndex:long, start:long, end:long, limit:long"
+        etype="double"
+        methodBody="return; method invocation; nativeAverageDouble; expression statement; method invocation; validateQuery; "
+        __idKDM="averageDouble___long__long__long__long___"/>
+    <eoperations
+        name="averageDouble()"
+        eparameters="columnIndex:long"
+        etype="double"
+        methodBody="return; method invocation; nativeAverageDouble; number literal; expression statement; method invocation; validateQuery; "
+        __idKDM="averageDouble___long___"/>
+    <eoperations
+        name="maximumDate()"
+        eparameters="columnIndex:long, start:long, end:long, limit:long"
+        etype="Date"
+        methodBody="return; null; if; return; class instance creation; Date; TIMES; result; number literal; NOT_EQUALS; result; null; variable declaration; result; expression statement; method invocation; validateQuery; "
+        __idKDM="maximumDate___long__long__long__long___"/>
+    <eoperations
+        name="maximumDate()"
+        eparameters="columnIndex:long"
+        etype="Date"
+        methodBody="return; null; if; return; class instance creation; Date; TIMES; result; number literal; NOT_EQUALS; result; null; variable declaration; result; expression statement; method invocation; validateQuery; "
+        __idKDM="maximumDate___long___"/>
+    <eoperations
+        name="minimumDate()"
+        eparameters="columnIndex:long, start:long, end:long, limit:long"
+        etype="Date"
+        methodBody="return; null; if; return; class instance creation; Date; TIMES; result; number literal; NOT_EQUALS; result; null; variable declaration; result; expression statement; method invocation; validateQuery; "
+        __idKDM="minimumDate___long__long__long__long___"/>
+    <eoperations
+        name="minimumDate()"
+        eparameters="columnIndex:long"
+        etype="Date"
+        methodBody="return; null; if; return; class instance creation; Date; TIMES; result; number literal; NOT_EQUALS; result; null; variable declaration; result; expression statement; method invocation; validateQuery; "
+        __idKDM="minimumDate___long___"/>
+    <eoperations
+        name="isNull()"
+        eparameters="columnIndices:long"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeIsNull; "
+        __idKDM="isNull___long___"/>
+    <eoperations
+        name="isNotNull()"
+        eparameters="columnIndices:long"
+        etype="TableQuery"
+        methodBody="return; this; expression statement; ASSIGN; queryValidated; boolean literal; expression statement; method invocation; nativeIsNotNull; "
+        __idKDM="isNotNull___long___"/>
+    <eoperations
+        name="count()"
+        eparameters="start:long, end:long, limit:long"
+        etype="long"
+        methodBody="return; method invocation; nativeCount; expression statement; method invocation; validateQuery; "
+        __idKDM="count___long__long__long___"/>
+    <eoperations
+        name="count()"
+        eparameters=""
+        etype="long"
+        methodBody="return; method invocation; nativeCount; number literal; expression statement; method invocation; validateQuery; "
+        __idKDM="count______"/>
+    <eoperations
+        name="remove()"
+        eparameters="start:long, end:long"
+        etype="long"
+        methodBody="return; method invocation; nativeRemove; if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; expression statement; method invocation; validateQuery; "
+        __idKDM="remove___long__long___"/>
+    <eoperations
+        name="remove()"
+        eparameters=""
+        etype="long"
+        methodBody="return; method invocation; nativeRemove; number literal; if; expression statement; method invocation; throwImmutable; method invocation; isImmutable; expression statement; method invocation; validateQuery; "
+        __idKDM="remove______"/>
+    <eoperations
+        name="getNativeSortOrderValues()"
+        eparameters="sortOrders:Sort[]"
+        etype="boolean[]"
+        methodBody="return; for; expression statement; ASSIGN; method invocation; getValue; array access; array access; nativeValues; INCREMENT; variable declaration; int; i; LESS; i; variable declaration; nativeValues; "
+        __idKDM="getNativeSortOrderValues___Sort_____"/>
+    <eoperations
+        name="throwImmutable()"
+        eparameters=""
+        etype="void"
+        methodBody="throw; class instance creation; IllegalStateException; string literal; "
+        __idKDM="throwImmutable______"/>
+    <eoperations
+        name="nativeClose()"
+        eparameters="nativeQueryPtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeClose___long___"/>
+    <eoperations
+        name="nativeValidateQuery()"
+        eparameters="nativeQueryPtr:long"
+        etype="String"
+        methodBody=""
+        __idKDM="nativeValidateQuery___long___"/>
+    <eoperations
+        name="nativeTableview()"
+        eparameters="nativeQueryPtr:long, nativeTableViewPtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeTableview___long__long___"/>
+    <eoperations
+        name="nativeGroup()"
+        eparameters="nativeQueryPtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeGroup___long___"/>
+    <eoperations
+        name="nativeEndGroup()"
+        eparameters="nativeQueryPtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeEndGroup___long___"/>
+    <eoperations
+        name="nativeSubtable()"
+        eparameters="nativeQueryPtr:long, columnIndex:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeSubtable___long__long___"/>
+    <eoperations
+        name="nativeParent()"
+        eparameters="nativeQueryPtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeParent___long___"/>
+    <eoperations
+        name="nativeOr()"
+        eparameters="nativeQueryPtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeOr___long___"/>
+    <eoperations
+        name="nativeNot()"
+        eparameters="nativeQueryPtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeNot___long___"/>
+    <eoperations
+        name="nativeEqual()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeEqual___long__long__long___"/>
+    <eoperations
+        name="nativeNotEqual()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeNotEqual___long__long__long___"/>
+    <eoperations
+        name="nativeGreater()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeGreater___long__long__long___"/>
+    <eoperations
+        name="nativeGreaterEqual()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeGreaterEqual___long__long__long___"/>
+    <eoperations
+        name="nativeLess()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeLess___long__long__long___"/>
+    <eoperations
+        name="nativeLessEqual()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeLessEqual___long__long__long___"/>
+    <eoperations
+        name="nativeBetween()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value1:long, value2:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeBetween___long__long__long__long___"/>
+    <eoperations
+        name="nativeEqual()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:float"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeEqual___long__long__float___"/>
+    <eoperations
+        name="nativeNotEqual()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:float"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeNotEqual___long__long__float___"/>
+    <eoperations
+        name="nativeGreater()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:float"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeGreater___long__long__float___"/>
+    <eoperations
+        name="nativeGreaterEqual()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:float"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeGreaterEqual___long__long__float___"/>
+    <eoperations
+        name="nativeLess()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:float"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeLess___long__long__float___"/>
+    <eoperations
+        name="nativeLessEqual()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:float"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeLessEqual___long__long__float___"/>
+    <eoperations
+        name="nativeBetween()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value1:float, value2:float"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeBetween___long__long__float__float___"/>
+    <eoperations
+        name="nativeEqual()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:double"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeEqual___long__long__double___"/>
+    <eoperations
+        name="nativeNotEqual()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:double"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeNotEqual___long__long__double___"/>
+    <eoperations
+        name="nativeGreater()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:double"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeGreater___long__long__double___"/>
+    <eoperations
+        name="nativeGreaterEqual()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:double"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeGreaterEqual___long__long__double___"/>
+    <eoperations
+        name="nativeLess()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:double"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeLess___long__long__double___"/>
+    <eoperations
+        name="nativeLessEqual()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:double"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeLessEqual___long__long__double___"/>
+    <eoperations
+        name="nativeBetween()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value1:double, value2:double"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeBetween___long__long__double__double___"/>
+    <eoperations
+        name="nativeEqual()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:boolean"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeEqual___long__long__boolean___"/>
+    <eoperations
+        name="nativeEqualDateTime()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeEqualDateTime___long__long__long___"/>
+    <eoperations
+        name="nativeNotEqualDateTime()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeNotEqualDateTime___long__long__long___"/>
+    <eoperations
+        name="nativeGreaterDateTime()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeGreaterDateTime___long__long__long___"/>
+    <eoperations
+        name="nativeGreaterEqualDateTime()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeGreaterEqualDateTime___long__long__long___"/>
+    <eoperations
+        name="nativeLessDateTime()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeLessDateTime___long__long__long___"/>
+    <eoperations
+        name="nativeLessEqualDateTime()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeLessEqualDateTime___long__long__long___"/>
+    <eoperations
+        name="nativeBetweenDateTime()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value1:long, value2:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeBetweenDateTime___long__long__long__long___"/>
+    <eoperations
+        name="nativeEqual()"
+        eparameters="nativeQueryPtr:long, columnIndexes:long[], value:String, caseSensitive:boolean"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeEqual___long__long____String__boolean___"/>
+    <eoperations
+        name="nativeNotEqual()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, value:String, caseSensitive:boolean"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeNotEqual___long__long__String__boolean___"/>
+    <eoperations
+        name="nativeBeginsWith()"
+        eparameters="nativeQueryPtr:long, columnIndices:long, value:String, caseSensitive:boolean"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeBeginsWith___long__long__String__boolean___"/>
+    <eoperations
+        name="nativeEndsWith()"
+        eparameters="nativeQueryPtr:long, columnIndices:long, value:String, caseSensitive:boolean"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeEndsWith___long__long__String__boolean___"/>
+    <eoperations
+        name="nativeContains()"
+        eparameters="nativeQueryPtr:long, columnIndices:long, value:String, caseSensitive:boolean"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeContains___long__long__String__boolean___"/>
+    <eoperations
+        name="nativeIsEmpty()"
+        eparameters="nativePtr:long, columnIndices:long[]"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeIsEmpty___long__long_____"/>
+    <eoperations
+        name="nativeFind()"
+        eparameters="nativeQueryPtr:long, fromTableRow:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFind___long__long___"/>
+    <eoperations
+        name="nativeFindAll()"
+        eparameters="nativeQueryPtr:long, start:long, end:long, limit:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAll___long__long__long__long___"/>
+    <eoperations
+        name="nativeSumInt()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, start:long, end:long, limit:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeSumInt___long__long__long__long__long___"/>
+    <eoperations
+        name="nativeMaximumInt()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, start:long, end:long, limit:long"
+        etype="Long"
+        methodBody=""
+        __idKDM="nativeMaximumInt___long__long__long__long__long___"/>
+    <eoperations
+        name="nativeMinimumInt()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, start:long, end:long, limit:long"
+        etype="Long"
+        methodBody=""
+        __idKDM="nativeMinimumInt___long__long__long__long__long___"/>
+    <eoperations
+        name="nativeAverageInt()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, start:long, end:long, limit:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeAverageInt___long__long__long__long__long___"/>
+    <eoperations
+        name="nativeSumFloat()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, start:long, end:long, limit:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeSumFloat___long__long__long__long__long___"/>
+    <eoperations
+        name="nativeMaximumFloat()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, start:long, end:long, limit:long"
+        etype="Float"
+        methodBody=""
+        __idKDM="nativeMaximumFloat___long__long__long__long__long___"/>
+    <eoperations
+        name="nativeMinimumFloat()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, start:long, end:long, limit:long"
+        etype="Float"
+        methodBody=""
+        __idKDM="nativeMinimumFloat___long__long__long__long__long___"/>
+    <eoperations
+        name="nativeAverageFloat()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, start:long, end:long, limit:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeAverageFloat___long__long__long__long__long___"/>
+    <eoperations
+        name="nativeSumDouble()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, start:long, end:long, limit:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeSumDouble___long__long__long__long__long___"/>
+    <eoperations
+        name="nativeMaximumDouble()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, start:long, end:long, limit:long"
+        etype="Double"
+        methodBody=""
+        __idKDM="nativeMaximumDouble___long__long__long__long__long___"/>
+    <eoperations
+        name="nativeMinimumDouble()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, start:long, end:long, limit:long"
+        etype="Double"
+        methodBody=""
+        __idKDM="nativeMinimumDouble___long__long__long__long__long___"/>
+    <eoperations
+        name="nativeAverageDouble()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, start:long, end:long, limit:long"
+        etype="double"
+        methodBody=""
+        __idKDM="nativeAverageDouble___long__long__long__long__long___"/>
+    <eoperations
+        name="nativeMaximumDate()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, start:long, end:long, limit:long"
+        etype="Long"
+        methodBody=""
+        __idKDM="nativeMaximumDate___long__long__long__long__long___"/>
+    <eoperations
+        name="nativeMinimumDate()"
+        eparameters="nativeQueryPtr:long, columnIndex:long, start:long, end:long, limit:long"
+        etype="Long"
+        methodBody=""
+        __idKDM="nativeMinimumDate___long__long__long__long__long___"/>
+    <eoperations
+        name="nativeIsNull()"
+        eparameters="nativePtr:long, columnIndices:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeIsNull___long__long___"/>
+    <eoperations
+        name="nativeIsNotNull()"
+        eparameters="nativePtr:long, columnIndices:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeIsNotNull___long__long___"/>
+    <eoperations
+        name="nativeCount()"
+        eparameters="nativeQueryPtr:long, start:long, end:long, limit:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeCount___long__long__long__long___"/>
+    <eoperations
+        name="nativeRemove()"
+        eparameters="nativeQueryPtr:long, start:long, end:long, limit:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeRemove___long__long__long__long___"/>
+    <eoperations
+        name="nativeImportHandoverTableViewIntoSharedGroup()"
+        eparameters="handoverTableViewPtr:long, callerSharedGroupPtr:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeImportHandoverTableViewIntoSharedGroup___long__long___"/>
+    <eoperations
+        name="nativeHandoverQuery()"
+        eparameters="callerSharedGroupPtr:long, nativeQueryPtr:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeHandoverQuery___long__long___"/>
+    <eoperations
+        name="nativeFindAllSortedWithHandover()"
+        eparameters="bgSharedGroupPtr:long, nativeReplicationPtr:long, nativeQueryPtr:long, start:long, end:long, limit:long, columnIndex:long, ascending:boolean"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAllSortedWithHandover___long__long__long__long__long__long__long__boolean___"/>
+    <eoperations
+        name="nativeFindAllWithHandover()"
+        eparameters="bgSharedGroupPtr:long, nativeReplicationPtr:long, nativeQueryPtr:long, start:long, end:long, limit:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAllWithHandover___long__long__long__long__long__long___"/>
+    <eoperations
+        name="nativeGetDistinctViewWithHandover()"
+        eparameters="bgSharedGroupPtr:long, nativeReplicationPtr:long, nativeQueryPtr:long, columnIndex:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeGetDistinctViewWithHandover___long__long__long__long___"/>
+    <eoperations
+        name="nativeFindWithHandover()"
+        eparameters="bgSharedGroupPtr:long, nativeReplicationPtr:long, nativeQueryPtr:long, fromTableRow:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindWithHandover___long__long__long__long___"/>
+    <eoperations
+        name="nativeFindAllMultiSortedWithHandover()"
+        eparameters="bgSharedGroupPtr:long, nativeReplicationPtr:long, nativeQueryPtr:long, start:long, end:long, limit:long, columnIndices:long[], ascending:boolean[]"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeFindAllMultiSortedWithHandover___long__long__long__long__long__long__long____boolean_____"/>
+    <eoperations
+        name="nativeImportHandoverRowIntoSharedGroup()"
+        eparameters="handoverRowPtr:long, callerSharedGroupPtr:long"
+        etype="long"
+        methodBody=""
+        __idKDM="nativeImportHandoverRowIntoSharedGroup___long__long___"/>
+    <eoperations
+        name="nativeCloseQueryHandover()"
+        eparameters="nativePtr:long"
+        etype="void"
+        methodBody=""
+        __idKDM="nativeCloseQueryHandover___long___"/>
+    <eoperations
+        name="nativeBatchUpdateQueries()"
+        eparameters="bgSharedGroupPtr:long, nativeReplicationPtr:long, handoverQueries:long[], parameters:long[][], queriesParameters:long[][], multiSortOrder:boolean[][]"
+        etype="long[]"
+        methodBody=""
+        __idKDM="nativeBatchUpdateQueries___long__long__long____long______long______boolean_______"/>
+  </eclassifiers>
+  <eclassifiers
+      name="Realm">
+    <eoperations
+        name="close()"
+        etype="void"
+        __idKDM="close__"/>
+    <eoperations
+        name="setAutoRefresh()"
+        eparameters="autoRefresh:boolean"
+        __idKDM="setAutoRefresh__boolean__"/>
+  </eclassifiers>
+  <eclassifiers
+      name="RealmCore">
+    <eoperations
+        name="loadLibrary()"
+        etype="void"
+        __idKDM="loadLibrary__"/>
+  </eclassifiers>
+  <eclassifiers
+      name="SetValueOperator"/>
+  <eclassifiers
+      name="ManagedSetManager">
+    <eoperations
+        name="clear()"
+        etype="void"
+        __idKDM="clear__"/>
+  </eclassifiers>
+  <interfaces
+      name="TableOrView"/>
+  <interfaces
+      name="TableSchema"/>
+  <interfaces
+      name="Closeable"
+      extends="AutoCloseable"
+      esupertypes="AutoCloseable"/>
+  <interfaces
+      name="AutoCloseable"/>
+</refactoring:EPackage>

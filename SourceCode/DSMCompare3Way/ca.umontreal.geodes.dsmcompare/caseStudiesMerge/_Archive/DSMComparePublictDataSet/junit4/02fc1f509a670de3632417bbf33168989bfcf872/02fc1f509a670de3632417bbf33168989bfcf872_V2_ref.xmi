@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="JUnit4TestAdapterCache">
+    <eattributes name="serialVersionUID" etype="long"/>
+    <eattributes name="fInstance" etype="JUnit4TestAdapterCache"/>
+    <eoperations name="getDefault()" eparameters="" etype="JUnit4TestAdapterCache" methodBody="return; " __idKDM="getDefault______"/>
+    <eoperations name="asTestList()" eparameters="plan:Plan" etype="List&lt;Test>" methodBody="if; return; foreach; child; expression statement; method invocation; add; method invocation; asTest; method invocation; getChildren; variable declaration; class instance creation; new ArrayList&lt;Test>(); returnThis; return; method invocation; asList; method invocation; asTestCase; method invocation; isTest; variable declaration; description; " __idKDM="asTestList___Plan___"/>
+    <eoperations name="asTest()" eparameters="plan:Plan" etype="Test" methodBody="if; return; method invocation; asTestCase; return; method invocation; asTestSuite; method invocation; isSuite; variable declaration; description; " __idKDM="asTest___Plan___"/>
+    <eoperations name="asTestSuite()" eparameters="plan:Plan" etype="Test" methodBody="return; method invocation; createTestSuite; " __idKDM="asTestSuite___Plan___"/>
+    <eoperations name="createTestSuite()" eparameters="plan:Plan" etype="Test" methodBody="return; foreach; child; expression statement; method invocation; addTest; method invocation; asTest; method invocation; getChildren; variable declaration; class instance creation; Object; method invocation; getDisplayName; method invocation; getDescription; suite; " __idKDM="createTestSuite___Plan___"/>
+    <eoperations name="asTestCase()" eparameters="description:Description" etype="Test" methodBody="return; method invocation; get; if; expression statement; method invocation; put; method invocation; createTestCase; NOT; method invocation; containsKey; " __idKDM="asTestCase___Description___"/>
+    <eoperations name="createTestCase()" eparameters="description:Description" etype="Test" methodBody="return; class instance creation; Object; " __idKDM="createTestCase___Description___"/>
+    <eoperations name="getNotifier()" eparameters="result:TestResult, adapter:JUnit4TestAdapter" etype="RunNotifier" methodBody="return; expression statement; method invocation; addListener; class instance creation; ; Anonymous type; variable declaration; class instance creation; new RunNotifier(); notifier; " __idKDM="getNotifier___TestResult__JUnit4TestAdapter___"/>
+    <eoperations name="JUnit4TestAdapterCache()" eparameters="" methodBody="" __idKDM="JUnit4TestAdapterCache______"/>
+  </eclassifiers>
+  <eclassifiers name="Categories" extends="Suite">
+    <eoperations name="Categories()" eparameters="klass:java.lang.Class&lt;?>, builder:RunnerBuilder, null:InitializationError" methodBody="try; catch; catch; e; throw; class instance creation; Object; expression statement; method invocation; filter; class instance creation; CategoryFilter; method invocation; getExcludedCategory; method invocation; getIncludedCategory; super constructor invocation; Object; " __idKDM="Categories___java_lang_Class_____RunnerBuilder__InitializationError___"/>
+    <eoperations name="getIncludedCategory()" eparameters="klass:java.lang.Class&lt;?>" etype="java.lang.Class&lt;?>" methodBody="return; conditional; method invocation; null; EQUALS; annotation; null; variable declaration; annotation; " __idKDM="getIncludedCategory___java_lang_Class______"/>
+    <eoperations name="getExcludedCategory()" eparameters="klass:java.lang.Class&lt;?>" etype="java.lang.Class&lt;?>" methodBody="return; conditional; method invocation; null; EQUALS; annotation; null; variable declaration; annotation; " __idKDM="getExcludedCategory___java_lang_Class______"/>
+    <esupertypes href="02fc1f509a670de3632417bbf33168989bfcf872_CA_ref.xmi#Suite"/>
+    <nested_classes name="CategoryFilter" extends="Filter" esupertypes="Filter">
+      <eattributes name="fIncluded" etype="java.lang.Class&lt;?>"/>
+      <eattributes name="fExcluded" etype="java.lang.Class&lt;?>"/>
+      <eoperations name="include()" eparameters="categoryType:java.lang.Class&lt;?>" etype="CategoryFilter" methodBody="return; class instance creation; CategoryFilter; null; " __idKDM="include___java_lang_Class______"/>
+      <eoperations name="CategoryFilter()" eparameters="includedCategory:java.lang.Class&lt;?>, excludedCategory:java.lang.Class&lt;?>" methodBody="expression statement; ASSIGN; fExcluded; expression statement; ASSIGN; fIncluded; " __idKDM="CategoryFilter___java_lang_Class_____java_lang_Class______"/>
+      <eoperations name="describe()" eparameters="" etype="String" methodBody="return; PLUS; fIncluded; string literal; " __idKDM="describe______"/>
+      <eoperations name="shouldRun()" eparameters="description:Description" etype="boolean" methodBody="return; method invocation; isIncludedMethod; if; return; boolean literal; method invocation; isSuite; if; return; boolean literal; method invocation; isExcluded; " __idKDM="shouldRun___Description___"/>
+      <eoperations name="isExcluded()" eparameters="description:Description" etype="boolean" methodBody="return; boolean literal; foreach; each; if; return; boolean literal; method invocation; isAssignableFrom; method invocation; categories; if; return; boolean literal; EQUALS; fExcluded; null; " __idKDM="isExcluded___Description___"/>
+      <eoperations name="isIncludedMethod()" eparameters="description:Description" etype="boolean" methodBody="return; boolean literal; foreach; each; if; return; boolean literal; CONDITIONAL_OR; method invocation; isAssignableFrom; EQUALS; fIncluded; null; if; return; EQUALS; fIncluded; null; method invocation; isEmpty; variable declaration; categories; " __idKDM="isIncludedMethod___Description___"/>
+      <eoperations name="categories()" eparameters="description:Description" etype="java.util.List&lt;java.lang.Class&lt;?>>" methodBody="return; expression statement; method invocation; addAll; method invocation; asList; method invocation; directCategories; method invocation; parentDescription; expression statement; method invocation; addAll; method invocation; asList; method invocation; directCategories; variable declaration; class instance creation; ArrayList; categories; " __idKDM="categories___Description___"/>
+      <eoperations name="parentDescription()" eparameters="description:Description" etype="Description" methodBody="return; method invocation; createSuiteDescription; method invocation; getTestClass; " __idKDM="parentDescription___Description___"/>
+      <eoperations name="directCategories()" eparameters="description:Description" etype="java.lang.Class&lt;?>[]" methodBody="return; method invocation; value; if; return; array creation; java.lang.Class&lt;?>[]; number literal; EQUALS; null; variable declaration; annotation; " __idKDM="directCategories___Description___"/>
+    </nested_classes>
+    <nested_interfaces name="IncludeCategory"/>
+    <nested_interfaces name="ExcludeCategory"/>
+  </eclassifiers>
+  <eclassifiers name="Filter">
+    <eattributes name="ALL" etype="Filter"/>
+    <eoperations name="matchMethodDescription()" eparameters="desiredDescription:Description" etype="Filter" methodBody="return; class instance creation; ; Anonymous type; " __idKDM="matchMethodDescription___Description___"/>
+    <eoperations name="shouldRun()" eparameters="description:Description" etype="boolean" methodBody="" __idKDM="shouldRun___Description___"/>
+    <eoperations name="describe()" eparameters="" etype="String" methodBody="" __idKDM="describe______"/>
+    <eoperations name="apply()" eparameters="child:Object, null:NoTestsRemainException" etype="void" methodBody="expression statement; method invocation; filter; this; variable declaration; filterable; if; return; NOT; parenthesized; instanceof; " __idKDM="apply___Object__NoTestsRemainException___"/>
+  </eclassifiers>
+  <eclassifiers name="ParentRunner" extends="Runner" implements="Filterable, Sortable" esupertypes="Runner" interfaces="Filterable Sortable">
+    <eattributes name="fTestClass" etype="TestClass"/>
+    <eattributes name="fCachedChildren" etype="java.util.List&lt;T>"/>
+    <eattributes name="fScheduler" etype="RunnerScheduler"/>
+    <eoperations name="ParentRunner()" eparameters="testClass:java.lang.Class&lt;?>, null:InitializationError" methodBody="expression statement; method invocation; validate; expression statement; ASSIGN; class instance creation; new TestClass(testClass); " __idKDM="ParentRunner___java_lang_Class_____InitializationError___"/>
+    <eoperations name="getChildren()" eparameters="" etype="java.util.List&lt;T>" methodBody="" __idKDM="getChildren______"/>
+    <eoperations name="describeChild()" eparameters="child:T" etype="Description" methodBody="" __idKDM="describeChild___T___"/>
+    <eoperations name="runChild()" eparameters="child:T, notifier:RunNotifier" etype="void" methodBody="" __idKDM="runChild___T__RunNotifier___"/>
+    <eoperations name="collectInitializationErrors()" eparameters="errors:java.util.List&lt;java.lang.Throwable>" etype="void" methodBody="expression statement; method invocation; validatePublicVoidNoArgMethods; boolean literal; type literal; expression statement; method invocation; validatePublicVoidNoArgMethods; boolean literal; type literal; " __idKDM="collectInitializationErrors___java_util_List_java_lang_Throwable____"/>
+    <eoperations name="validatePublicVoidNoArgMethods()" eparameters="annotation:java.lang.Class&lt;? extends java.lang.annotation.Annotation>, isStatic:boolean, errors:java.util.List&lt;java.lang.Throwable>" etype="void" methodBody="foreach; eachTestMethod; expression statement; method invocation; validatePublicVoidNoArg; variable declaration; methods; " __idKDM="validatePublicVoidNoArgMethods___java_lang_Class___extends_java_lang_annotation_Annotation___boolean__java_util_List_java_lang_Throwable____"/>
+    <eoperations name="classBlock()" eparameters="notifier:RunNotifier" etype="Statement" methodBody="return; expression statement; ASSIGN; method invocation; withAfterClasses; expression statement; ASSIGN; method invocation; withBeforeClasses; variable declaration; statement; " __idKDM="classBlock___RunNotifier___"/>
+    <eoperations name="withBeforeClasses()" eparameters="statement:Statement" etype="Statement" methodBody="return; conditional; class instance creation; Object; null; method invocation; isEmpty; variable declaration; befores; " __idKDM="withBeforeClasses___Statement___"/>
+    <eoperations name="withAfterClasses()" eparameters="statement:Statement" etype="Statement" methodBody="return; conditional; class instance creation; Object; null; method invocation; isEmpty; variable declaration; afters; " __idKDM="withAfterClasses___Statement___"/>
+    <eoperations name="childrenInvoker()" eparameters="notifier:RunNotifier" etype="Statement" methodBody="return; class instance creation; ; Anonymous type; " __idKDM="childrenInvoker___RunNotifier___"/>
+    <eoperations name="runChildren()" eparameters="notifier:RunNotifier" etype="void" methodBody="expression statement; method invocation; finished; foreach; each; expression statement; method invocation; schedule; class instance creation; ; Anonymous type; method invocation; getCachedChildren; " __idKDM="runChildren___RunNotifier___"/>
+    <eoperations name="getName()" eparameters="" etype="String" methodBody="return; method invocation; getName; " __idKDM="getName______"/>
+    <eoperations name="getTestClass()" eparameters="" etype="TestClass" methodBody="return; " __idKDM="getTestClass______"/>
+    <eoperations name="getDescription()" eparameters="" etype="Description" methodBody="return; foreach; child; expression statement; method invocation; addChild; method invocation; describeChild; method invocation; getCachedChildren; variable declaration; description; " __idKDM="getDescription______"/>
+    <eoperations name="run()" eparameters="notifier:RunNotifier" etype="void" methodBody="try; catch; catch; e; expression statement; method invocation; addFailure; catch; catch; e; throw; catch; catch; e; expression statement; method invocation; fireTestIgnored; expression statement; method invocation; evaluate; variable declaration; statement; variable declaration; class instance creation; Object; method invocation; getDescription; testNotifier; " __idKDM="run___RunNotifier___"/>
+    <eoperations name="filter()" eparameters="filter:Filter, null:NoTestsRemainException" etype="void" methodBody="if; throw; class instance creation; new NoTestsRemainException(); method invocation; isEmpty; method invocation; getCachedChildren; for; if; try; catch; catch; e; expression statement; method invocation; remove; expression statement; method invocation; apply; expression statement; method invocation; remove; NOT; method invocation; shouldRun; method invocation; describeChild; variable declaration; each; variable declaration; java.util.Iterator&lt;T>; iter; method invocation; hasNext; " __idKDM="filter___Filter__NoTestsRemainException___"/>
+    <eoperations name="sort()" eparameters="sorter:Sorter" etype="void" methodBody="foreach; each; expression statement; method invocation; apply; method invocation; getCachedChildren; expression statement; method invocation; sort; method invocation; comparator; method invocation; getCachedChildren; " __idKDM="sort___Sorter___"/>
+    <eoperations name="validate()" eparameters="null:InitializationError" etype="void" methodBody="if; throw; class instance creation; new InitializationError(errors); NOT; method invocation; isEmpty; expression statement; method invocation; collectInitializationErrors; variable declaration; class instance creation; ArrayList; errors; " __idKDM="validate___InitializationError___"/>
+    <eoperations name="getCachedChildren()" eparameters="" etype="java.util.List&lt;T>" methodBody="return; if; expression statement; ASSIGN; fCachedChildren; method invocation; getChildren; EQUALS; fCachedChildren; null; " __idKDM="getCachedChildren______"/>
+    <eoperations name="comparator()" eparameters="sorter:Sorter" etype="java.util.Comparator&lt;? super T>" methodBody="return; class instance creation; ; Anonymous type; " __idKDM="comparator___Sorter___"/>
+    <eoperations name="setScheduler()" eparameters="scheduler:RunnerScheduler" etype="void" methodBody="expression statement; ASSIGN; field access; fScheduler; this; " __idKDM="setScheduler___RunnerScheduler___"/>
+  </eclassifiers>
+  <eclassifiers name="Runner" implements="Describable" interfaces="Describable">
+    <eoperations name="getDescription()" eparameters="" etype="Description" methodBody="" __idKDM="getDescription______"/>
+    <eoperations name="run()" eparameters="notifier:RunNotifier" etype="void" methodBody="" __idKDM="run___RunNotifier___"/>
+    <eoperations name="testCount()" eparameters="" etype="int" methodBody="return; method invocation; testCount; method invocation; getDescription; " __idKDM="testCount______"/>
+    <eoperations name="getPlan()" eparameters="" etype="Plan" methodBody="return; method invocation; fromDescription; method invocation; getDescription; " __idKDM="getPlan______"/>
+  </eclassifiers>
+  <eclassifiers name="MaxCore">
+    <eattributes name="MALFORMED_JUNIT_3_TEST_CLASS_PREFIX" etype="String"/>
+    <eattributes name="fHistory" etype="MaxHistory"/>
+    <eoperations name="forFolder()" eparameters="folderName:String" etype="MaxCore" methodBody="return; method invocation; storedLocally; class instance creation; File; " __idKDM="forFolder___String___"/>
+    <eoperations name="storedLocally()" eparameters="storedResults:File" etype="MaxCore" methodBody="return; class instance creation; MaxCore; " __idKDM="storedLocally___File___"/>
+    <eoperations name="MaxCore()" eparameters="storedResults:File" methodBody="expression statement; ASSIGN; method invocation; forFolder; " __idKDM="MaxCore___File___"/>
+    <eoperations name="run()" eparameters="testClass:java.lang.Class&lt;?>" etype="Result" methodBody="return; method invocation; run; method invocation; aClass; " __idKDM="run___java_lang_Class______"/>
+    <eoperations name="run()" eparameters="request:Request" etype="Result" methodBody="return; method invocation; run; class instance creation; new JUnitCore(); " __idKDM="run___Request___"/>
+    <eoperations name="run()" eparameters="request:Request, core:JUnitCore" etype="Result" methodBody="return; method invocation; run; method invocation; getRunner; method invocation; sortRequest; expression statement; method invocation; addListener; method invocation; listener; " __idKDM="run___Request__JUnitCore___"/>
+    <eoperations name="sortRequest()" eparameters="request:Request" etype="Request" methodBody="return; method invocation; constructLeafRequest; expression statement; method invocation; sort; method invocation; testComparator; variable declaration; leaves; if; return; instanceof; " __idKDM="sortRequest___Request___"/>
+    <eoperations name="constructLeafRequest()" eparameters="leaves:List&lt;Description>" etype="Request" methodBody="return; class instance creation; ; Anonymous type; foreach; each; expression statement; method invocation; add; method invocation; buildRunner; variable declaration; class instance creation; ArrayList; runners; " __idKDM="constructLeafRequest___List_Description____"/>
+    <eoperations name="buildRunner()" eparameters="each:Description" etype="Runner" methodBody="return; method invocation; getRunner; method invocation; method; if; return; method invocation; getRunner; method invocation; aClass; EQUALS; methodName; null; variable declaration; methodName; if; throw; class instance creation; RuntimeException; PLUS; string literal; string literal; EQUALS; type; null; variable declaration; type; if; return; class instance creation; new JUnit38ClassRunner(new TestSuite(getMalformedTestClass(each))); class instance creation; Object; method invocation; getMalformedTestClass; method invocation; startsWith; method invocation; toString; if; return; method invocation; emptySuite; method invocation; equals; string literal; method invocation; toString; " __idKDM="buildRunner___Description___"/>
+    <eoperations name="getMalformedTestClass()" eparameters="each:Description" etype="java.lang.Class&lt;?>" methodBody="try; catch; catch; e; return; null; return; method invocation; forName; method invocation; replace; string literal; method invocation; toString; " __idKDM="getMalformedTestClass___Description___"/>
+    <eoperations name="sortedLeavesForTest()" eparameters="request:Request" etype="List&lt;Description>" methodBody="return; method invocation; findLeaves; method invocation; sortRequest; " __idKDM="sortedLeavesForTest___Request___"/>
+    <eoperations name="findLeaves()" eparameters="request:Request" etype="List&lt;Description>" methodBody="return; expression statement; method invocation; findLeaves; method invocation; getPlan; method invocation; getRunner; null; variable declaration; class instance creation; new ArrayList&lt;Description>(); results; " __idKDM="findLeaves___Request___"/>
+    <eoperations name="findLeaves()" eparameters="parent:Description, plan:Plan, results:List&lt;Description>" etype="void" methodBody="if; foreach; each; expression statement; method invocation; findLeaves; method invocation; getChildren; if; expression statement; method invocation; add; expression statement; method invocation; add; method invocation; createSuiteDescription; PLUS; MALFORMED_JUNIT_3_TEST_CLASS_PREFIX; method invocation; equals; string literal; method invocation; toString; method invocation; isEmpty; method invocation; getChildren; variable declaration; description; " __idKDM="findLeaves___Description__Plan__List_Description____"/>
+  </eclassifiers>
+  <eclassifiers name="SuiteMethodTest">
+    <eattributes name="wasRun" etype="boolean"/>
+    <eoperations name="makeSureSuiteIsCalled()" eparameters="" etype="void" methodBody="expression statement; method invocation; assertTrue; expression statement; method invocation; runClasses; type literal; expression statement; ASSIGN; wasRun; boolean literal; " __idKDM="makeSureSuiteIsCalled______"/>
+    <eoperations name="makeSureSuiteWorksWithJUnit4Classes()" eparameters="" etype="void" methodBody="expression statement; method invocation; assertTrue; expression statement; method invocation; runClasses; type literal; expression statement; ASSIGN; wasRun; boolean literal; " __idKDM="makeSureSuiteWorksWithJUnit4Classes______"/>
+    <eoperations name="descriptionAndRunNotificationsAreConsistent()" eparameters="" etype="void" methodBody="expression statement; method invocation; assertEquals; method invocation; getMethodName; method invocation; get; number literal; method invocation; getChildren; string literal; expression statement; method invocation; assertEquals; method invocation; size; method invocation; getChildren; number literal; variable declaration; description; variable declaration; runner; expression statement; method invocation; assertEquals; method invocation; getIgnoreCount; number literal; variable declaration; result; " __idKDM="descriptionAndRunNotificationsAreConsistent______"/>
+    <eoperations name="suiteIsUsedWithJUnit4Classes()" eparameters="" etype="void" methodBody="expression statement; method invocation; assertFalse; expression statement; method invocation; assertEquals; method invocation; getFailureCount; number literal; variable declaration; result; expression statement; ASSIGN; wasRun; boolean literal; " __idKDM="suiteIsUsedWithJUnit4Classes______"/>
+    <eoperations name="makeSureSuiteNotUsedWithJUnit4Classes2()" eparameters="" etype="void" methodBody="expression statement; method invocation; assertEquals; method invocation; getIgnoreCount; number literal; expression statement; method invocation; assertEquals; method invocation; getRunCount; number literal; expression statement; method invocation; assertEquals; method invocation; getFailureCount; number literal; expression statement; method invocation; assertFalse; expression statement; method invocation; assertTrue; variable declaration; res; expression statement; ASSIGN; wasIgnoredRun; boolean literal; expression statement; ASSIGN; wasRun; boolean literal; " __idKDM="makeSureSuiteNotUsedWithJUnit4Classes2______"/>
+    <nested_classes name="OldTest" extends="TestCase">
+      <eoperations name="OldTest()" eparameters="name:String" methodBody="super constructor invocation; super(name);&#xA;; " __idKDM="OldTest___String___"/>
+      <eoperations name="suite()" eparameters="" etype="Test" methodBody="return; expression statement; method invocation; addTest; class instance creation; OldTest; string literal; variable declaration; class instance creation; new TestSuite(); result; " __idKDM="suite______"/>
+      <eoperations name="notObviouslyATest()" eparameters="" etype="void" methodBody="expression statement; ASSIGN; wasRun; boolean literal; " __idKDM="notObviouslyATest______"/>
+      <esupertypes href="02fc1f509a670de3632417bbf33168989bfcf872_CA_ref.xmi#TestCase"/>
+    </nested_classes>
+    <nested_classes name="NewTest">
+      <eoperations name="sample()" eparameters="" etype="void" methodBody="expression statement; ASSIGN; wasRun; boolean literal; " __idKDM="sample______"/>
+      <eoperations name="suite()" eparameters="" etype="Test" methodBody="return; class instance creation; new JUnit4TestAdapter(NewTest.class); type literal; " __idKDM="suite______"/>
+    </nested_classes>
+    <nested_classes name="CompatibilityTest">
+      <eoperations name="ignored()" eparameters="" etype="void" methodBody="" __idKDM="ignored______"/>
+      <eoperations name="suite()" eparameters="" etype="Test" methodBody="return; class instance creation; new JUnit4TestAdapter(CompatibilityTest.class); type literal; " __idKDM="suite______"/>
+    </nested_classes>
+    <nested_classes name="NewTestSuiteFails">
+      <eoperations name="sample()" eparameters="" etype="void" methodBody="expression statement; ASSIGN; wasRun; boolean literal; " __idKDM="sample______"/>
+      <eoperations name="suite()" eparameters="" etype="Test" methodBody="return; null; expression statement; method invocation; fail; string literal; " __idKDM="suite______"/>
+    </nested_classes>
+    <nested_classes name="NewTestSuiteNotUsed">
+      <eattributes name="wasIgnoredRun" etype="boolean"/>
+      <eoperations name="sample()" eparameters="" etype="void" methodBody="expression statement; ASSIGN; wasRun; boolean literal; " __idKDM="sample______"/>
+      <eoperations name="ignore()" eparameters="" etype="void" methodBody="expression statement; ASSIGN; wasIgnoredRun; boolean literal; " __idKDM="ignore______"/>
+      <eoperations name="suite()" eparameters="" etype="Test" methodBody="return; class instance creation; new JUnit4TestAdapter(NewTestSuiteNotUsed.class); type literal; " __idKDM="suite______"/>
+    </nested_classes>
+  </eclassifiers>
+  <interfaces name="Filterable"/>
+  <interfaces name="Sortable"/>
+  <interfaces name="Describable"/>
+</refactoring:EPackage>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" xsi:schemaLocation="www.geodes.UdeM.edu/refactoringDiffMM ../../../casesMergeConflict/refactoring/metaModels/refactoringDiffMM.ecore">
+  <refactoringDiffMM:EPackage name="pkg">
+    <eclassifiers name="ManagedSetManager" implements="ManageableObject" interfaces="ManageableObject">
+      <eattributes name="setValueOperator" etype="pkg.SetValueOperator&lt;E>"/>
+      <eoperations name="ManagedSetManager()" eparameters="setValueOperator:pkg.SetValueOperator&lt;E>" methodBody="expression statement; ASSIGN; setValueOperator; field access; setValueOperator; this; " __idKDM="ManagedSetManager___pkg_SetValueOperator_E____"/>
+      <eoperations name="isManaged()" etype="boolean" methodBody="return; boolean literal; " __idKDM="isManaged______"/>
+      <eoperations name="isValid()" etype="boolean" methodBody="return; method invocation; isValid; " __idKDM="isValid______"/>
+      <eoperations name="isFrozen()" etype="boolean" methodBody="return; method invocation; isFrozen; " __idKDM="isFrozen______"/>
+      <eoperations name="size()" etype="int" methodBody="return; method invocation; size; " __idKDM="size______"/>
+      <eoperations name="isEmpty()" etype="boolean" methodBody="return; method invocation; isEmpty; " __idKDM="isEmpty______"/>
+      <eoperations name="contains()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; contains; " __idKDM="contains___Object___"/>
+      <eoperations name="iterator()" etype="java.util.Iterator&lt;E>" methodBody="return; method invocation; iterator; " __idKDM="iterator______"/>
+      <eoperations name="toArray()" etype="java.lang.Object[]" methodBody="return; method invocation; toArray; " __idKDM="toArray______"/>
+      <eoperations name="toArray()" eparameters="a:T[]" etype="T[]" methodBody="return; method invocation; toArray; " __idKDM="toArray___T_____"/>
+      <eoperations name="add()" eparameters="e:E" etype="boolean" methodBody="return; method invocation; add; " __idKDM="add___E___"/>
+      <eoperations name="remove()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; remove; " __idKDM="remove___Object___"/>
+      <eoperations name="containsAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; containsAll; " __idKDM="containsAll___java_util_Collection______"/>
+      <eoperations name="addAll()" eparameters="c:java.util.Collection&lt;? extends E>" etype="boolean" methodBody="return; method invocation; addAll; " __idKDM="addAll___java_util_Collection___extends_E____"/>
+      <eoperations name="retainAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="" __idKDM="retainAll___java_util_Collection______"/>
+      <eoperations name="retainAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="" __idKDM="retainAll___java_util_Collection______"/>
+      <eoperations name="retainAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="" __idKDM="retainAll___java_util_Collection______"/>
+      <eoperations name="removeAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; removeAll; " __idKDM="removeAll___java_util_Collection______"/>
+      <eoperations name="clear()" etype="void" methodBody="expression statement; method invocation; clear; " __idKDM="clear______"/>
+      <eoperations name="freeze()" etype="pkg.RealmSet&lt;E>" methodBody="return; method invocation; freeze; " __idKDM="freeze______"/>
+      <eoperations name="getOsSet()" etype="OsSet" methodBody="return; " __idKDM="getOsSet______"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="retainAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="" __idKDM="retainAll___java_util_Collection______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="remove()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; remove; " __idKDM="remove___Object___" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="toArray()" etype="java.lang.Object[]" methodBody="return; method invocation; toArray; " __idKDM="toArray______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="size()" etype="int" methodBody="return; method invocation; size; " __idKDM="size______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="containsAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; containsAll; " __idKDM="containsAll___java_util_Collection______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="freeze()" etype="pkg.RealmSet&lt;E>" methodBody="return; method invocation; freeze; " __idKDM="freeze______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="add()" eparameters="e:E" etype="boolean" methodBody="return; method invocation; add; " __idKDM="add___E___" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="removeAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; removeAll; " __idKDM="removeAll___java_util_Collection______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="retainAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="" __idKDM="retainAll___java_util_Collection______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="clear()" etype="void" methodBody="expression statement; method invocation; clear; " __idKDM="clear______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="toArray()" eparameters="a:T[]" etype="T[]" methodBody="return; method invocation; toArray; " __idKDM="toArray___T_____" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="contains()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; contains; " __idKDM="contains___Object___" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="isManaged()" etype="boolean" methodBody="return; boolean literal; " __idKDM="isManaged______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="isValid()" etype="boolean" methodBody="return; method invocation; isValid; " __idKDM="isValid______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addAll()" eparameters="c:java.util.Collection&lt;? extends E>" etype="boolean" methodBody="return; method invocation; addAll; " __idKDM="addAll___java_util_Collection___extends_E____" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="iterator()" etype="java.util.Iterator&lt;E>" methodBody="return; method invocation; iterator; " __idKDM="iterator______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="getOsSet()" etype="OsSet" methodBody="return; " __idKDM="getOsSet______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="isEmpty()" etype="boolean" methodBody="return; method invocation; isEmpty; " __idKDM="isEmpty______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="isFrozen()" etype="boolean" methodBody="return; method invocation; isFrozen; " __idKDM="isFrozen______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="retainAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="" __idKDM="retainAll___java_util_Collection______" diff_kind_Left="ADD"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-26" eType="isManaged()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-30" eType="getOsSet()"/>
+    </eclassifiers>
+    <eclassifiers name="SetValueOperator">
+      <eattributes name="baseRealm" etype="BaseRealm"/>
+      <eattributes name="osSet" etype="OsSet"/>
+      <eattributes name="valueClass" etype="java.lang.Class&lt;E>"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="osSet" etype="OsSet" diff_kind_Left="ADD"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="baseRealm" etype="BaseRealm" diff_kind_Left="ADD"/>
+      <eoperations name="SetValueOperator()" eparameters="baseRealm:BaseRealm, osSet:OsSet, valueClass:java.lang.Class&lt;E>" methodBody="expression statement; ASSIGN; valueClass; field access; valueClass; this; expression statement; ASSIGN; osSet; field access; osSet; this; expression statement; ASSIGN; field access; baseRealm; this; " __idKDM="SetValueOperator___BaseRealm__OsSet__java_lang_Class_E____"/>
+      <eoperations name="add()" eparameters="e:E" etype="boolean" methodBody="" __idKDM="add___E___"/>
+      <eoperations name="isValid()" etype="boolean" methodBody="return; method invocation; isValid; if; return; boolean literal; method invocation; isClosed; " __idKDM="isValid______"/>
+      <eoperations name="isFrozen()" etype="boolean" methodBody="return; method invocation; isFrozen; " __idKDM="isFrozen______"/>
+      <eoperations name="size()" etype="int" methodBody="return; method invocation; intValue; method invocation; valueOf; method invocation; size; " __idKDM="size______"/>
+      <eoperations name="isEmpty()" etype="boolean" methodBody="return; EQUALS; number literal; method invocation; size; " __idKDM="isEmpty______"/>
+      <eoperations name="contains()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; contains; " __idKDM="contains___Object___"/>
+      <eoperations name="iterator()" etype="java.util.Iterator&lt;E>" methodBody="return; class instance creation; new SetIterator&lt;>(osSet,baseRealm); " __idKDM="iterator______"/>
+      <eoperations name="toArray()" etype="java.lang.Object[]" methodBody="return; array creation; java.lang.Object[]; number literal; " __idKDM="toArray______"/>
+      <eoperations name="toArray()" eparameters="a:T[]" etype="T[]" methodBody="return; null; " __idKDM="toArray___T_____"/>
+      <eoperations name="remove()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; remove; " __idKDM="remove___Object___"/>
+      <eoperations name="containsAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; containsAll; if; return; method invocation; isSubSetOf; method invocation; getNativePtr; variable declaration; otherOsSet; variable declaration; setFromCollection; CONDITIONAL_AND; method invocation; isManaged; parenthesized; cast; pkg.RealmSet&lt;?>; instanceof; RealmSet&lt;E>; " __idKDM="containsAll___java_util_Collection______"/>
+      <eoperations name="addAll()" eparameters="c:java.util.Collection&lt;? extends E>" etype="boolean" methodBody="return; method invocation; collectionFunnel; " __idKDM="addAll___java_util_Collection___extends_E____"/>
+      <eoperations name="retainAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="" __idKDM="retainAll___java_util_Collection______"/>
+      <eoperations name="retainAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="" __idKDM="retainAll___java_util_Collection______"/>
+      <eoperations name="removeAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; collectionFunnel; " __idKDM="removeAll___java_util_Collection______"/>
+      <eoperations name="collectionFunnel()" eparameters="c:java.util.Collection&lt;?>, operation:ExternalCollectionOperation" etype="boolean" methodBody="switch; operation; throw; class instance creation; IllegalStateException; PLUS; operation; string literal; case; return; method invocation; retainAll; case; return; method invocation; removeAll; case; return; method invocation; addAll; case; if; switch; operation; return; method invocation; intersect; case; return; method invocation; asymmetricDifference; case; return; method invocation; union; case; if; switch; operation; return; boolean literal; case; return; boolean literal; expression statement; method invocation; clear; case; return; boolean literal; case; EQUALS; method invocation; getNativePtr; method invocation; getNativePtr; variable declaration; otherOsSet; CONDITIONAL_AND; method invocation; isManaged; parenthesized; cast; pkg.RealmSet&lt;? extends E>; instanceof; RealmSet&lt;E>; " __idKDM="collectionFunnel___java_util_Collection_____ExternalCollectionOperation___"/>
+      <eoperations name="clear()" etype="void" methodBody="" __idKDM="clear______"/>
+      <eoperations name="freeze()" etype="pkg.RealmSet&lt;E>" methodBody="return; class instance creation; new RealmSet&lt;>(frozenRealm,frozenOsSet,valueClass); variable declaration; frozenOsSet; variable declaration; frozenRealm; " __idKDM="freeze______"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="retainAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="" __idKDM="retainAll___java_util_Collection______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="toArray()" eparameters="a:T[]" etype="T[]" methodBody="return; null; " __idKDM="toArray___T_____" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="size()" etype="int" methodBody="return; method invocation; intValue; method invocation; valueOf; method invocation; size; " __idKDM="size______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="removeAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; collectionFunnel; " __idKDM="removeAll___java_util_Collection______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="freeze()" etype="pkg.RealmSet&lt;E>" methodBody="return; class instance creation; new RealmSet&lt;>(frozenRealm,frozenOsSet,valueClass); variable declaration; frozenOsSet; variable declaration; frozenRealm; " __idKDM="freeze______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="toArray()" etype="java.lang.Object[]" methodBody="return; array creation; java.lang.Object[]; number literal; " __idKDM="toArray______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="remove()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; remove; " __idKDM="remove___Object___" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="collectionFunnel()" eparameters="c:java.util.Collection&lt;?>, operation:ExternalCollectionOperation" etype="boolean" methodBody="switch; operation; throw; class instance creation; IllegalStateException; PLUS; operation; string literal; case; return; method invocation; retainAll; case; return; method invocation; removeAll; case; return; method invocation; addAll; case; if; switch; operation; return; method invocation; intersect; case; return; method invocation; asymmetricDifference; case; return; method invocation; union; case; if; switch; operation; return; boolean literal; case; return; boolean literal; expression statement; method invocation; clear; case; return; boolean literal; case; EQUALS; method invocation; getNativePtr; method invocation; getNativePtr; variable declaration; otherOsSet; CONDITIONAL_AND; method invocation; isManaged; parenthesized; cast; pkg.RealmSet&lt;? extends E>; instanceof; RealmSet&lt;E>; " __idKDM="collectionFunnel___java_util_Collection_____ExternalCollectionOperation___" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="contains()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; contains; " __idKDM="contains___Object___" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addAll()" eparameters="c:java.util.Collection&lt;? extends E>" etype="boolean" methodBody="return; method invocation; collectionFunnel; " __idKDM="addAll___java_util_Collection___extends_E____" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="isValid()" etype="boolean" methodBody="return; method invocation; isValid; if; return; boolean literal; method invocation; isClosed; " __idKDM="isValid______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="isFrozen()" etype="boolean" methodBody="return; method invocation; isFrozen; " __idKDM="isFrozen______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="clear()" etype="void" methodBody="" __idKDM="clear______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="containsAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; containsAll; if; return; method invocation; isSubSetOf; method invocation; getNativePtr; variable declaration; otherOsSet; variable declaration; setFromCollection; CONDITIONAL_AND; method invocation; isManaged; parenthesized; cast; pkg.RealmSet&lt;?>; instanceof; RealmSet&lt;E>; " __idKDM="containsAll___java_util_Collection______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="isEmpty()" etype="boolean" methodBody="return; EQUALS; number literal; method invocation; size; " __idKDM="isEmpty______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="retainAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="" __idKDM="retainAll___java_util_Collection______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="iterator()" etype="java.util.Iterator&lt;E>" methodBody="return; class instance creation; new SetIterator&lt;>(osSet,baseRealm); " __idKDM="iterator______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="reatainAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="" __idKDM="reatainAll___java_util_Collection______" diff_kind_Right="DELETE"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="add()" eparameters="e:E" etype="boolean" methodBody="" __idKDM="add___E___" diff_kind_Left="ADD"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-1" eType="clear()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-3" eType="toArray()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-7" eType="freeze()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-8" eType="removeAll()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-9" eType="retainAll()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-13" eType="remove()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-14" eType="isEmpty()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-17" eType="isValid()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-18" eType="addAll()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-20" eType="containsAll()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-23" eType="contains()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-27" eType="isFrozen()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-29" eType="size()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-32" eType="collectionFunnel()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-33" eType="add()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-36" eType="iterator()"/>
+    </eclassifiers>
+    <eclassifiers name="SetIterator">
+      <eattributes name="osSet" etype="OsSet"/>
+      <eattributes name="baseRealm" etype="BaseRealm"/>
+      <eattributes name="pos" etype="int"/>
+      <eoperations name="SetIterator()" eparameters="osSet:OsSet, baseRealm:BaseRealm" methodBody="expression statement; ASSIGN; field access; baseRealm; this; expression statement; ASSIGN; osSet; field access; osSet; this; " __idKDM="SetIterator___OsSet__BaseRealm___"/>
+      <eoperations name="hasNext()" etype="boolean" methodBody="return; LESS; method invocation; size; PLUS; pos; number literal; " __idKDM="hasNext______"/>
+      <eoperations name="next()" etype="E" methodBody="return; method invocation; getValueAtIndex; if; throw; class instance creation; NoSuchElementException; PLUS; pos; string literal; string literal; string literal; GREATER_EQUALS; pos; variable declaration; size; expression statement; INCREMENT; " __idKDM="next______"/>
+      <eoperations name="getValueAtIndex()" eparameters="position:int" etype="E" methodBody="" __idKDM="getValueAtIndex___int___"/>
+    </eclassifiers>
+    <eclassifiers name="SetIterator">
+      <eattributes name="osSet" etype="OsSet"/>
+      <eattributes name="baseRealm" etype="BaseRealm"/>
+      <eattributes name="pos" etype="int"/>
+      <eoperations name="getValueAtIndex()" eparameters="position:int" etype="E" methodBody="" __idKDM="getValueAtIndex___int___"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="getValueAtIndex()" eparameters="position:int" etype="E" methodBody="" __idKDM="getValueAtIndex___int___" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="hasNext()" etype="boolean" methodBody="return; LESS; method invocation; size; PLUS; number literal; " __idKDM="hasNext______" diff_kind_Right="MODIFY" new_methodBody_Right="return; LESS; method invocation; size; PLUS; pos; number literal; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="next()" etype="E" methodBody="return; method invocation; getValueAtIndex; if; throw; class instance creation; new NoSuchElementException(&quot;Cannot access index &quot; + pos + &quot; when size is &quot;+ size+ &quot;. Remember to check hasNext() before using next().&quot;); PLUS; string literal; string literal; string literal; GREATER_EQUALS; variable declaration; size; expression statement; INCREMENT; " __idKDM="next______" diff_kind_Right="MODIFY" new_methodBody_Right="return; method invocation; getValueAtIndex; if; throw; class instance creation; NoSuchElementException; PLUS; pos; string literal; string literal; string literal; GREATER_EQUALS; pos; variable declaration; size; expression statement; INCREMENT; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="SetIterator()" eparameters="osSet:OsSet, baseRealm:BaseRealm" methodBody="expression statement; ASSIGN; field access; baseRealm; this; expression statement; ASSIGN; field access; osSet; this; " __idKDM="SetIterator___OsSet__BaseRealm___" diff_kind_Right="MODIFY" new_methodBody_Right="expression statement; ASSIGN; field access; baseRealm; this; expression statement; ASSIGN; osSet; field access; osSet; this; "/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-16" eType="getValueAtIndex()"/>
+    </eclassifiers>
+    <eclassifiers name="RealmSet" implements="ManageableObject" interfaces="ManageableObject">
+      <eattributes name="setStrategy" etype="pkg.RealmSet.SetStrategy&lt;E>"/>
+      <eattributes name="OsSet" etype="ours"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="OsSet" etype="ours" diff_kind_Left="ADD"/>
+      <eoperations name="RealmSet()" methodBody="expression statement; ASSIGN; class instance creation; UnmanagedSetStrategy; field access; setStrategy; this; " __idKDM="RealmSet______"/>
+      <eoperations name="RealmSet()" eparameters="baseRealm:BaseRealm, osSet:OsSet, valueClass:java.lang.Class&lt;E>" methodBody="expression statement; ASSIGN; method invocation; getStrategy; field access; setStrategy; this; " __idKDM="RealmSet___BaseRealm__OsSet__java_lang_Class_E____"/>
+      <eoperations name="isValid()" etype="boolean" methodBody="return; method invocation; isValid; " __idKDM="isValid______"/>
+      <eoperations name="isFrozen()" etype="boolean" methodBody="return; method invocation; isFrozen; " __idKDM="isFrozen______"/>
+      <eoperations name="size()" etype="int" methodBody="return; method invocation; size; " __idKDM="size______"/>
+      <eoperations name="contains()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; contains; " __idKDM="contains___Object___"/>
+      <eoperations name="toArray()" etype="java.lang.Object[]" methodBody="return; method invocation; toArray; " __idKDM="toArray______"/>
+      <eoperations name="add()" eparameters="e:E" etype="boolean" methodBody="return; method invocation; add; " __idKDM="add___E___"/>
+      <eoperations name="remove()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; remove; " __idKDM="remove___Object___"/>
+      <eoperations name="containsAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; containsAll; " __idKDM="containsAll___java_util_Collection______"/>
+      <eoperations name="addAll()" eparameters="c:java.util.Collection&lt;? extends E>" etype="boolean" methodBody="return; method invocation; addAll; " __idKDM="addAll___java_util_Collection___extends_E____"/>
+      <eoperations name="retainAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; retainAll; " __idKDM="retainAll___java_util_Collection______"/>
+      <eoperations name="removeAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; removeAll; " __idKDM="removeAll___java_util_Collection______"/>
+      <eoperations name="clear()" etype="void" methodBody="expression statement; method invocation; clear; " __idKDM="clear______"/>
+      <eoperations name="freeze()" etype="pkg.RealmSet&lt;E>" methodBody="return; method invocation; freeze; " __idKDM="freeze______"/>
+      <eoperations name="getStrategy()" eparameters="baseRealm:BaseRealm, osSet:OsSet, valueClass:java.lang.Class&lt;T>" etype="pkg.RealmSet.ManagedSetStrategy&lt;T>" methodBody="return; class instance creation; ManagedSetStrategy; if; throw; class instance creation; UnsupportedOperationException; PLUS; string literal; method invocation; getSimpleName; string literal; expression statement; ASSIGN; manager; class instance creation; ManagedSetManager; cast; pkg.SetValueOperator&lt;T>; class instance creation; new SetValueOperator&lt;>(baseRealm,osSet,String.class); type literal; variable declaration; __packageName; variable declaration; __packageName; EQUALS; valueClass; type literal; variable declaration; manager; if; return; null; method invocation; isClassForRealmModel; " __idKDM="getStrategy___BaseRealm__OsSet__java_lang_Class_T____"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="retainAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; retainAll; " __idKDM="retainAll___java_util_Collection______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="toArray()" eparameters="a:T[]" etype="T[]" methodBody="return; method invocation; toArray; " __idKDM="toArray___T_____" diff_kind_Right="DELETE" new_methodBody_Right="return; null; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addAll()" eparameters="c:java.util.Collection&lt;? extends E>" etype="boolean" methodBody="return; method invocation; addAll; " __idKDM="addAll___java_util_Collection___extends_E____" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="size()" etype="int" methodBody="return; method invocation; size; " __idKDM="size______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="RealmSet()" methodBody="expression statement; ASSIGN; class instance creation; UnmanagedSetStrategy; field access; setStrategy; this; " __idKDM="RealmSet______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="containsAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; containsAll; " __idKDM="containsAll___java_util_Collection______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="removeAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; removeAll; " __idKDM="removeAll___java_util_Collection______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="toArray()" etype="java.lang.Object[]" methodBody="return; method invocation; toArray; " __idKDM="toArray______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="getOsSet()" methodBody="return; method invocation; getOsSet; " __idKDM="getOsSet______" diff_kind_Right="DELETE" new_etype_Right="OsSet" new_methodBody_Right="return; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="freeze()" etype="pkg.RealmSet&lt;E>" methodBody="return; method invocation; freeze; " __idKDM="freeze______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="getStrategy()" eparameters="baseRealm:BaseRealm, osSet:OsSet, valueClass:java.lang.Class&lt;T>" etype="pkg.RealmSet.ManagedSetStrategy&lt;T>" methodBody="return; class instance creation; ManagedSetStrategy; if; throw; class instance creation; UnsupportedOperationException; PLUS; string literal; method invocation; getSimpleName; string literal; expression statement; ASSIGN; manager; class instance creation; ManagedSetManager; cast; pkg.SetValueOperator&lt;T>; class instance creation; new SetValueOperator&lt;String>(baseRealm,osSet); variable declaration; __packageName; variable declaration; __packageName; EQUALS; valueClass; type literal; variable declaration; manager; if; return; null; method invocation; isClassForRealmModel; " __idKDM="getStrategy___BaseRealm__OsSet__java_lang_Class_T____" diff_kind_Right="DELETE" new_methodBody_Right="return; class instance creation; ManagedSetStrategy; if; throw; class instance creation; UnsupportedOperationException; PLUS; string literal; method invocation; getSimpleName; string literal; expression statement; ASSIGN; manager; class instance creation; ManagedSetManager; cast; pkg.SetValueOperator&lt;T>; class instance creation; new SetValueOperator&lt;>(baseRealm,osSet,String.class); type literal; variable declaration; __packageName; EQUALS; valueClass; type literal; variable declaration; manager; if; return; null; method invocation; isClassForRealmModel; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="isEmpty()" etype="boolean" methodBody="return; method invocation; isEmpty; " __idKDM="isEmpty______" diff_kind_Right="DELETE" new_methodBody_Right="return; EQUALS; number literal; method invocation; size; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="contains()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; contains; " __idKDM="contains___Object___" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="add()" eparameters="e:E" etype="boolean" methodBody="return; method invocation; add; " __idKDM="add___E___" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="isManaged()" etype="boolean" methodBody="return; method invocation; isManaged; " __idKDM="isManaged______" diff_kind_Right="DELETE" new_methodBody_Right="return; boolean literal; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="remove()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; remove; " __idKDM="remove___Object___" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="getStrategy()" eparameters="baseRealm:BaseRealm, osSet:OsSet, valueClass:java.lang.Class&lt;T>" etype="pkg.RealmSet.ManagedSetStrategy&lt;T>" methodBody="return; class instance creation; ManagedSetStrategy; if; throw; class instance creation; UnsupportedOperationException; PLUS; string literal; method invocation; getSimpleName; string literal; expression statement; ASSIGN; manager; class instance creation; ManagedSetManager; cast; pkg.SetValueOperator&lt;T>; class instance creation; new SetValueOperator&lt;>(baseRealm,osSet,String.class); type literal; variable declaration; __packageName; variable declaration; __packageName; EQUALS; valueClass; type literal; variable declaration; manager; if; return; null; method invocation; isClassForRealmModel; " __idKDM="getStrategy___BaseRealm__OsSet__java_lang_Class_T____" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="isValid()" etype="boolean" methodBody="return; method invocation; isValid; " __idKDM="isValid______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="clear()" etype="void" methodBody="expression statement; method invocation; clear; " __idKDM="clear______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="iterator()" etype="java.util.Iterator&lt;E>" methodBody="return; method invocation; iterator; " __idKDM="iterator______" diff_kind_Right="DELETE" new_methodBody_Right="return; class instance creation; new SetIterator&lt;>(osSet,baseRealm); "/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-3" eType="toArray()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-4" eType="getStrategy()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-4" eType="getStrategy()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-14" eType="isEmpty()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-26" eType="isManaged()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-27" eType="isFrozen()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-30" eType="getOsSet()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-36" eType="iterator()"/>
+    </eclassifiers>
+    <eclassifiers name="OsSet" implements="NativeObject" interfaces="NativeObject">
+      <eattributes name="VALUE_FOUND" etype="int"/>
+      <eattributes name="VALUE_NOT_FOUND" etype="int"/>
+      <eattributes name="VALUE_FOUND" etype="int"/>
+      <eattributes name="VALUE_NOT_FOUND" etype="int"/>
+      <eattributes name="nativeFinalizerPtr" etype="long"/>
+      <eattributes name="nativePtr" etype="long"/>
+      <eattributes name="context" etype="NativeContext"/>
+      <eattributes name="osSharedRealm" etype="OsSharedRealm"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="VALUE_NOT_FOUND" etype="int" diff_kind_Left="ADD"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="VALUE_FOUND" etype="int" diff_kind_Left="ADD"/>
+      <eoperations name="OsSet()" eparameters="row:UncheckedRow, columnKey:long" methodBody="expression statement; method invocation; addReference; this; expression statement; ASSIGN; field access; context; this; expression statement; ASSIGN; method invocation; nativeCreate; method invocation; getNativePtr; method invocation; getNativePtr; field access; nativePtr; this; expression statement; ASSIGN; method invocation; getSharedRealm; method invocation; getTable; field access; osSharedRealm; this; " __idKDM="OsSet___UncheckedRow__long___"/>
+      <eoperations name="OsSet()" eparameters="osSharedRealm:OsSharedRealm, nativePtr:long" methodBody="expression statement; method invocation; addReference; this; expression statement; ASSIGN; field access; context; this; expression statement; ASSIGN; nativePtr; field access; nativePtr; this; expression statement; ASSIGN; field access; osSharedRealm; this; " __idKDM="OsSet___OsSharedRealm__long___"/>
+      <eoperations name="getNativePtr()" etype="long" methodBody="return; " __idKDM="getNativePtr______"/>
+      <eoperations name="getNativeFinalizerPtr()" etype="long" methodBody="return; " __idKDM="getNativeFinalizerPtr______"/>
+      <eoperations name="isSubSetOf()" eparameters="otherSetNativePtr:long" etype="boolean" methodBody="return; method invocation; nativeIsSubSetOf; field access; nativePtr; this; " __idKDM="isSubSetOf___long___"/>
+      <eoperations name="union()" eparameters="otherRealmSet:OsSet" etype="boolean" methodBody="return; method invocation; nativeUnion; method invocation; getNativePtr; " __idKDM="union___OsSet___"/>
+      <eoperations name="asymmetricDifference()" eparameters="otherSet:OsSet" etype="boolean" methodBody="return; method invocation; nativeAsymmetricDifference; method invocation; getNativePtr; " __idKDM="asymmetricDifference___OsSet___"/>
+      <eoperations name="intersect()" eparameters="otherSet:OsSet" etype="boolean" methodBody="return; method invocation; nativeIntersect; method invocation; getNativePtr; " __idKDM="intersect___OsSet___"/>
+      <eoperations name="clear()" etype="void" methodBody="expression statement; method invocation; nativeClear; " __idKDM="clear______"/>
+      <eoperations name="nativeGetFinalizerPtr()" etype="long" methodBody="" __idKDM="nativeGetFinalizerPtr______"/>
+      <eoperations name="nativeCreate()" eparameters="sharedRealmPtr:long, nativeRowPtr:long, columnKey:long" etype="long" methodBody="" __idKDM="nativeCreate___long__long__long___"/>
+      <eoperations name="nativeIsValid()" eparameters="nativePtr:long" etype="boolean" methodBody="" __idKDM="nativeIsValid___long___"/>
+      <eoperations name="nativeGetValueAtIndex()" eparameters="nativePtr:long, position:int" etype="Object" methodBody="" __idKDM="nativeGetValueAtIndex___long__int___"/>
+      <eoperations name="nativeSize()" eparameters="nativePtr:long" etype="long" methodBody="" __idKDM="nativeSize___long___"/>
+      <eoperations name="nativeContainsNull()" eparameters="nativePtr:long" etype="boolean" methodBody="" __idKDM="nativeContainsNull___long___"/>
+      <eoperations name="nativeContainsString()" eparameters="nativePtr:long, value:String" etype="boolean" methodBody="" __idKDM="nativeContainsString___long__String___"/>
+      <eoperations name="nativeAddNull()" eparameters="nativePtr:long" etype="long[]" methodBody="" __idKDM="nativeAddNull___long___"/>
+      <eoperations name="nativeAddString()" eparameters="nativePtr:long, value:String" etype="long[]" methodBody="" __idKDM="nativeAddString___long__String___"/>
+      <eoperations name="nativeRemoveNull()" eparameters="nativePtr:long" etype="long[]" methodBody="" __idKDM="nativeRemoveNull___long___"/>
+      <eoperations name="nativeRemoveString()" eparameters="nativePtr:long, value:String" etype="long[]" methodBody="" __idKDM="nativeRemoveString___long__String___"/>
+      <eoperations name="nativeIsSubSetOf()" eparameters="nativePtr:long, otherSetNativePtr:long" etype="boolean" methodBody="" __idKDM="nativeIsSubSetOf___long__long___"/>
+      <eoperations name="nativeContainsAllString()" eparameters="nativePtr:long, otherSet:java.lang.String[]" etype="boolean" methodBody="" __idKDM="nativeContainsAllString___long__java_lang_String_____"/>
+      <eoperations name="nativeUnion()" eparameters="nativePtr:long, otherRealmSetNativePtr:long" etype="boolean" methodBody="" __idKDM="nativeUnion___long__long___"/>
+      <eoperations name="nativeAddAllString()" eparameters="nativePtr:long, otherSet:java.lang.String[]" etype="boolean" methodBody="" __idKDM="nativeAddAllString___long__java_lang_String_____"/>
+      <eoperations name="nativeAsymmetricDifference()" eparameters="nativePtr:long, otherRealmSetNativePtr:long" etype="boolean" methodBody="" __idKDM="nativeAsymmetricDifference___long__long___"/>
+      <eoperations name="nativeRemoveAllString()" eparameters="nativePtr:long, otherSet:java.lang.String[]" etype="boolean" methodBody="" __idKDM="nativeRemoveAllString___long__java_lang_String_____"/>
+      <eoperations name="nativeIntersect()" eparameters="nativePtr:long, otherRealmSetNativePtr:long" etype="boolean" methodBody="" __idKDM="nativeIntersect___long__long___"/>
+      <eoperations name="nativeRetainAllString()" eparameters="nativePtr:long, otherSet:java.lang.String[]" etype="boolean" methodBody="" __idKDM="nativeRetainAllString___long__java_lang_String_____"/>
+      <eoperations name="nativeClear()" eparameters="nativePtr:long" etype="void" methodBody="" __idKDM="nativeClear___long___"/>
+      <eoperations name="nativeFreeze()" eparameters="nativePtr:long, frozenRealmPtr:long" etype="long" methodBody="" __idKDM="nativeFreeze___long__long___"/>
+      <eoperations name="nativeClear()" eparameters="nativePtr:long" etype="void" methodBody="" __idKDM="nativeClear___long___"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addMixed()" eparameters="value:Mixed" etype="void" methodBody="" __idKDM="addMixed___Mixed___" diff_kind_Right="DELETE"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="contains()" eparameters="value:Object" etype="boolean" methodBody="if; if; throw; class instance creation; UnsupportedOperationException; string literal; return; method invocation; nativeContainsString; cast; String; variable declaration; __packageName; variable declaration; __packageName; variable declaration; __packageName; variable declaration; __packageName; variable declaration; __packageName; EQUALS; type literal; method invocation; getClass; return; method invocation; nativeContainsNull; EQUALS; value; null; " __idKDM="contains___Object___" diff_kind_Right="DELETE" new_eparameters_Right="o:Object" new_methodBody_Right="return; method invocation; contains; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="collectionFunnel()" eparameters="collection:java.util.Collection&lt;? extends E>, valueClass:java.lang.Class&lt;?>, operation:ExternalCollectionOperation" etype="boolean" methodBody="" __idKDM="collectionFunnel___java_util_Collection___extends_E___java_lang_Class_____ExternalCollectionOperation___" diff_kind_Right="DELETE" new_eparameters_Right="c:java.util.Collection&lt;?>, operation:ExternalCollectionOperation" new_methodBody_Right="switch; operation; throw; class instance creation; IllegalStateException; PLUS; operation; string literal; case; return; method invocation; retainAll; case; return; method invocation; removeAll; case; return; method invocation; addAll; case; if; switch; operation; return; method invocation; intersect; case; return; method invocation; asymmetricDifference; case; return; method invocation; union; case; if; switch; operation; return; boolean literal; case; return; boolean literal; expression statement; method invocation; clear; case; return; boolean literal; case; EQUALS; method invocation; getNativePtr; method invocation; getNativePtr; variable declaration; otherOsSet; CONDITIONAL_AND; method invocation; isManaged; parenthesized; cast; pkg.RealmSet&lt;? extends E>; instanceof; RealmSet&lt;E>; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="add()" eparameters="value:Object" etype="boolean" methodBody="return; NOT_EQUALS; VALUE_NOT_FOUND; array access; indexAndFound; number literal; if; if; throw; class instance creation; UnsupportedOperationException; string literal; expression statement; ASSIGN; indexAndFound; method invocation; nativeAddString; cast; String; variable declaration; __packageName; variable declaration; __packageName; variable declaration; __packageName; variable declaration; __packageName; variable declaration; __packageName; EQUALS; type literal; method invocation; getClass; expression statement; ASSIGN; indexAndFound; method invocation; nativeAddNull; EQUALS; value; null; variable declaration; indexAndFound; " __idKDM="add___Object___" diff_kind_Right="DELETE" new_eparameters_Right="e:E" new_methodBody_Right="return; method invocation; add; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="freeze()" eparameters="frozenSharedRealm:OsSharedRealm" etype="OsSet" methodBody="return; class instance creation; new OsSet(frozenSharedRealm,frozenNativePtr); variable declaration; frozenNativePtr; " __idKDM="freeze___OsSharedRealm___" diff_kind_Right="DELETE" new_eparameters_Right="frozenSharedRealm:OsSharedRealm" new_etype_Right="pkg.RealmSet&lt;E>" new_methodBody_Right="return; class instance creation; new RealmSet&lt;>(frozenRealm,frozenOsSet,valueClass); variable declaration; frozenOsSet; variable declaration; frozenRealm; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="OsSet()" eparameters="row:UncheckedRow, columnKey:long" methodBody="expression statement; method invocation; addReference; this; expression statement; ASSIGN; field access; context; this; expression statement; ASSIGN; method invocation; nativeCreate; method invocation; getNativePtr; method invocation; getNativePtr; field access; nativePtr; this; expression statement; ASSIGN; method invocation; getSharedRealm; method invocation; getTable; field access; osSharedRealm; this; " __idKDM="OsSet___UncheckedRow__long___" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addAll()" eparameters="collection:java.util.Collection&lt;? extends E>, valueClass:java.lang.Class&lt;?>" etype="boolean" methodBody="return; method invocation; collectionFunnel; " __idKDM="addAll___java_util_Collection___extends_E___java_lang_Class______" diff_kind_Right="DELETE" new_eparameters_Right="c:java.util.Collection&lt;? extends E>"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="containsAll()" eparameters="collection:java.util.Collection&lt;?>, valueClass:java.lang.Class&lt;?>" etype="boolean" methodBody="if; throw; class instance creation; UnsupportedOperationException; string literal; return; method invocation; nativeContainsAllString; variable declaration; values; variable declaration; __packageName; variable declaration; __packageName; variable declaration; __packageName; variable declaration; __packageName; variable declaration; __packageName; EQUALS; valueClass; type literal; if; return; boolean literal; CONDITIONAL_OR; NOT_EQUALS; valueClass; method invocation; getClass; array access; objects; number literal; EQUALS; number literal; method invocation; size; variable declaration; objects; " __idKDM="containsAll___java_util_Collection_____java_lang_Class______" diff_kind_Right="DELETE" new_eparameters_Right="c:java.util.Collection&lt;?>" new_methodBody_Right="return; method invocation; containsAll; if; return; method invocation; isSubSetOf; method invocation; getNativePtr; variable declaration; otherOsSet; variable declaration; setFromCollection; CONDITIONAL_AND; method invocation; isManaged; parenthesized; cast; pkg.RealmSet&lt;?>; instanceof; RealmSet&lt;E>; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="size()" etype="long" methodBody="return; method invocation; nativeSize; " __idKDM="size______" diff_kind_Right="DELETE" new_etype_Right="int" new_methodBody_Right="return; method invocation; intValue; method invocation; valueOf; method invocation; size; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="clear()" etype="void" methodBody="" __idKDM="clear______" diff_kind_Right="DELETE" new_methodBody_Right="expression statement; method invocation; clear; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="clear()" etype="void" methodBody="expression statement; method invocation; nativeClear; " __idKDM="clear______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="remove()" eparameters="value:Object" etype="boolean" methodBody="" __idKDM="remove___Object___" diff_kind_Right="DELETE" new_eparameters_Right="o:Object" new_methodBody_Right="return; method invocation; remove; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="nativeClear()" eparameters="nativePtr:long" etype="void" methodBody="" __idKDM="nativeClear___long___" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="getValueAtIndex()" eparameters="position:int" etype="Object" methodBody="return; method invocation; nativeGetValueAtIndex; " __idKDM="getValueAtIndex___int___" diff_kind_Right="DELETE" new_etype_Right="E" new_methodBody_Right="return; cast; E; method invocation; getValueAtIndex; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="isValid()" etype="boolean" methodBody="return; method invocation; nativeIsValid; " __idKDM="isValid______" diff_kind_Right="DELETE" new_methodBody_Right="return; method invocation; isValid; if; return; boolean literal; method invocation; isClosed; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="removeAll()" eparameters="collection:java.util.Collection&lt;? extends E>, valueClass:java.lang.Class&lt;?>" etype="boolean" methodBody="return; method invocation; collectionFunnel; " __idKDM="removeAll___java_util_Collection___extends_E___java_lang_Class______" diff_kind_Right="DELETE" new_eparameters_Right="c:java.util.Collection&lt;?>"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="retainAll()" eparameters="collection:java.util.Collection&lt;? extends E>, valueClass:java.lang.Class&lt;?>" etype="boolean" methodBody="return; method invocation; collectionFunnel; " __idKDM="retainAll___java_util_Collection___extends_E___java_lang_Class______" diff_kind_Right="DELETE" new_eparameters_Right="c:java.util.Collection&lt;?>"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-1" eType="clear()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-5" eType="nativeSize()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-5" eType="nativeSize()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-6" eType="nativeFreeze()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-6" eType="nativeFreeze()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-7" eType="freeze()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-8" eType="removeAll()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-9" eType="retainAll()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-10" eType="nativeAddNull()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-10" eType="nativeAddNull()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-11" eType="nativeContainsString()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-11" eType="nativeContainsString()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-12" eType="nativeGetValueAtIndex()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-12" eType="nativeGetValueAtIndex()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-13" eType="remove()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-15" eType="intersect()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-15" eType="intersect()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-16" eType="getValueAtIndex()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-17" eType="isValid()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-18" eType="addAll()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-19" eType="nativeIsValid()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-19" eType="nativeIsValid()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-20" eType="containsAll()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-21" eType="nativeGetFinalizerPtr()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-21" eType="nativeGetFinalizerPtr()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-22" eType="asymmetricDifference()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-22" eType="asymmetricDifference()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-23" eType="contains()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-25" eType="union()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-25" eType="union()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-29" eType="size()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-31" eType="isSubSetOf()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-31" eType="isSubSetOf()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-32" eType="collectionFunnel()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-33" eType="add()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-34" eType="nativeCreate()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-34" eType="nativeCreate()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-35" eType="nativeContainsNull()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-35" eType="nativeContainsNull()"/>
+    </eclassifiers>
+    <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="SetIterator" diff_kind_Left="ADD">
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="baseRealm" etype="BaseRealm" diff_kind_Left="ADD"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="osSet" etype="OsSet" diff_kind_Left="ADD"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="pos" etype="int" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="hasNext()" etype="boolean" methodBody="return; LESS; method invocation; size; PLUS; pos; number literal; " __idKDM="hasNext______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="next()" etype="E" methodBody="return; method invocation; getValueAtIndex; if; throw; class instance creation; NoSuchElementException; PLUS; pos; string literal; string literal; string literal; GREATER_EQUALS; pos; variable declaration; size; expression statement; INCREMENT; " __idKDM="next______" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="SetIterator()" eparameters="osSet:OsSet, baseRealm:BaseRealm" methodBody="expression statement; ASSIGN; field access; baseRealm; this; expression statement; ASSIGN; osSet; field access; osSet; this; " __idKDM="SetIterator___OsSet__BaseRealm___" diff_kind_Left="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="getValueAtIndex()" eparameters="position:int" etype="E" methodBody="" __idKDM="getValueAtIndex___int___" diff_kind_Left="ADD"/>
+    </eclassifiers>
+    <interfaces name="ManageableObject"/>
+    <interfaces name="NativeObject"/>
+    <diffeclassifiers diff_kind_Right="DELETE" diff_Group="DG-Move-24" eType="RealmSet"/>
+    <diffeclassifiers diff_kind_Right="ADD" diff_Group="DG-Move-24" eType="RealmSet"/>
+    <diffeclassifiers diff_kind_Right="DELETE" diff_Group="DG-Move-28"/>
+    <diffeclassifiers diff_kind_Right="ADD" diff_Group="DG-Move-28"/>
+    <diffinterfaces diff_kind_Right="DELETE" diff_Group="DG-Move-2" eType="ManageableObject"/>
+    <diffinterfaces diff_kind_Right="ADD" diff_Group="DG-Move-2" eType="ManageableObject"/>
+  </refactoringDiffMM:EPackage>
+  <refactoringDiffMM:SemanticDiff name="Inline Method" SemanticObject_EOperation="getValueAtIndex() next()" author="RIGHT"/>
+  <refactoringDiffMM:SemanticDiff name="Inline Method" SemanticObject_EOperation="size() hasNext()" author="RIGHT"/>
+</xmi:XMI>

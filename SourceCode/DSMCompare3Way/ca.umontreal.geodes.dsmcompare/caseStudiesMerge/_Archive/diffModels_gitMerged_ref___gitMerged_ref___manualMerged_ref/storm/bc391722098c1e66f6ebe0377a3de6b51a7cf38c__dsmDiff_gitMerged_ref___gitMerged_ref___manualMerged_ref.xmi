@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoringDiffMM:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" name="pkg">
+  <eclassifiers name="ShellBolt" implements="IBolt" interfaces="IBolt">
+    <eattributes name="LOG" etype="Logger"/>
+    <eattributes name="_subprocess" etype="Process"/>
+    <eattributes name="_collector" etype="OutputCollector"/>
+    <eattributes name="_inputs" etype="Map&lt;String,Tuple>"/>
+    <eattributes name="_command" etype="java.lang.String[]"/>
+    <eattributes name="_process" etype="ShellProcess"/>
+    <eattributes name="_running" etype="boolean"/>
+    <eattributes name="_exception" etype="Throwable"/>
+    <eattributes name="_pendingWrites" etype="LinkedBlockingQueue&lt;E>"/>
+    <eattributes name="_rand" etype="Random"/>
+    <eattributes name="_readerThread" etype="Thread"/>
+    <eattributes name="_writerThread" etype="Thread"/>
+    <eattributes name="_context" etype="TopologyContext"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="LOG" etype="Logger" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="_collector" etype="OutputCollector" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="_process" etype="ShellProcess" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="_context" etype="TopologyContext" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="_command" etype="java.lang.String[]" diff_kind_Left="ADD"/>
+    <eoperations name="ShellBolt()" eparameters="component:ShellComponent" methodBody="ShellBolt; method invocation; get_script; method invocation; get_execution_command; " __idKDM="ShellBolt___ShellComponent___"/>
+    <eoperations name="ShellBolt()" eparameters="command:String" methodBody="expression statement; ASSIGN; _command; " __idKDM="ShellBolt___String___"/>
+    <eoperations name="prepare()" eparameters="stormConf:Map&lt;K, V>, context:TopologyContext, collector:OutputCollector" etype="void" methodBody="" __idKDM="prepare___Map_K__V___TopologyContext__OutputCollector___"/>
+    <eoperations name="execute()" eparameters="input:Tuple" etype="void" methodBody="try; catch; catch; e; throw; class instance creation; RuntimeException; string literal; expression statement; method invocation; put; expression statement; method invocation; setTuple; method invocation; getValues; expression statement; method invocation; setTask; method invocation; getSourceTask; expression statement; method invocation; setStream; method invocation; getSourceStreamId; expression statement; method invocation; setComp; method invocation; getSourceComponent; expression statement; method invocation; setId; variable declaration; class instance creation; new BoltMsg(); boltMsg; expression statement; method invocation; put; variable declaration; genId; if; throw; class instance creation; RuntimeException; NOT_EQUALS; _exception; null; " __idKDM="execute___Tuple___"/>
+    <eoperations name="cleanup()" etype="void" methodBody="expression statement; method invocation; clear; expression statement; method invocation; destroy; expression statement; ASSIGN; _running; boolean literal; " __idKDM="cleanup______"/>
+    <eoperations name="handleAck()" eparameters="action:Map&lt;K, V>" etype="void" methodBody="" __idKDM="handleAck___Map_K__V____"/>
+    <eoperations name="handleAck()" eparameters="action:Map&lt;K, V>" etype="void" methodBody="" __idKDM="handleAck___Map_K__V____"/>
+    <eoperations name="handleAck()" eparameters="id:Object" etype="void" methodBody="" __idKDM="handleAck___Object___"/>
+    <eoperations name="handleFail()" eparameters="id:Object" etype="void" methodBody="expression statement; method invocation; fail; if; throw; class instance creation; RuntimeException; PLUS; id; string literal; EQUALS; null; variable declaration; failed; " __idKDM="handleFail___Object___"/>
+    <eoperations name="handleError()" eparameters="msg:String" etype="void" methodBody="expression statement; method invocation; reportError; class instance creation; Exception; PLUS; msg; string literal; " __idKDM="handleError___String___"/>
+    <eoperations name="handleEmit()" eparameters="shellMsg:ShellMsg, null:InterruptedException" etype="void" methodBody="if; expression statement; method invocation; emitDirect; method invocation; getTuple; method invocation; getStream; cast; int; method invocation; getTask; if; expression statement; method invocation; put; method invocation; areTaskIdsNeeded; variable declaration; outtasks; EQUALS; number literal; method invocation; getTask; if; foreach; anchor; expression statement; method invocation; add; if; throw; class instance creation; RuntimeException; PLUS; anchor; string literal; string literal; EQUALS; null; variable declaration; t; NOT_EQUALS; recvAnchors; null; variable declaration; recvAnchors; variable declaration; class instance creation; new ArrayList&lt;Tuple>(); anchors; " __idKDM="handleEmit___ShellMsg__InterruptedException___"/>
+    <eoperations name="handleMetrics()" eparameters="action:Map&lt;K, V>" etype="void" methodBody="try; catch; catch; e; throw; class instance creation; RuntimeException; catch; catch; re; throw; expression statement; method invocation; updateMetricFromRPC; variable declaration; paramsObj; variable declaration; iShellMetric; if; throw; class instance creation; RuntimeException; PLUS; name; string literal; string literal; NOT; parenthesized; instanceof; if; throw; class instance creation; RuntimeException; PLUS; name; string literal; string literal; EQUALS; null; variable declaration; iMetric; if; throw; class instance creation; RuntimeException; string literal; method invocation; isEmpty; variable declaration; name; if; throw; class instance creation; RuntimeException; string literal; CONDITIONAL_OR; NOT; parenthesized; instanceof; String; EQUALS; nameObj; null; variable declaration; nameObj; " __idKDM="handleMetrics___Map_K__V____"/>
+    <eoperations name="die()" eparameters="exception:Throwable" etype="void" methodBody="expression statement; ASSIGN; _exception; " __idKDM="die___Throwable___"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="handleMetrics()" eparameters="action:Map&lt;K, V>" etype="void" methodBody="try; catch; catch; e; throw; class instance creation; RuntimeException; catch; catch; re; throw; expression statement; method invocation; updateMetricFromRPC; variable declaration; paramsObj; variable declaration; iShellMetric; if; throw; class instance creation; RuntimeException; PLUS; name; string literal; string literal; NOT; parenthesized; instanceof; if; throw; class instance creation; RuntimeException; PLUS; name; string literal; string literal; EQUALS; null; variable declaration; iMetric; if; throw; class instance creation; RuntimeException; string literal; method invocation; isEmpty; variable declaration; name; if; throw; class instance creation; RuntimeException; string literal; CONDITIONAL_OR; NOT; parenthesized; instanceof; String; EQUALS; nameObj; null; variable declaration; nameObj; " __idKDM="handleMetrics___Map_K__V____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="ShellBolt()" eparameters="component:ShellComponent" methodBody="ShellBolt; method invocation; get_script; method invocation; get_execution_command; " __idKDM="ShellBolt___ShellComponent___" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="handleAck()" eparameters="action:Map&lt;K, V>" etype="void" methodBody="" __idKDM="handleAck___Map_K__V____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="handleAck()" eparameters="action:Map&lt;K, V>" etype="void" methodBody="" __idKDM="handleAck___Map_K__V____" diff_kind_Left="ADD"/>
+    <diffeattributes diff_kind_Right="ADD" diff_Group="DG-Move-1" eType="_context"/>
+    <diffeattributes diff_kind_Right="ADD" diff_Group="DG-Move-2" eType="_collector"/>
+    <diffeattributes diff_kind_Right="ADD" diff_Group="DG-Move-4" eType="_process"/>
+    <diffeattributes diff_kind_Right="ADD" diff_Group="DG-Move-8" eType="_command"/>
+    <diffeattributes diff_kind_Right="ADD" diff_Group="DG-Move-10" eType="LOG"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-6" eType="handleMetrics()"/>
+  </eclassifiers>
+  <eclassifiers name="ShellSpout" implements="ISpout" interfaces="ISpout">
+    <eattributes name="LOG" etype="Logger"/>
+    <eattributes name="_command" etype="java.lang.String[]"/>
+    <eattributes name="_process" etype="ShellProcess"/>
+    <eattributes name="_context" etype="TopologyContext"/>
+    <eattributes name="_spoutMsg" etype="SpoutMsg"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="_collector" etype="SpoutOutputCollector" diff_kind_Right="DELETE" new_etype_Right="OutputCollector"/>
+    <eoperations name="ShellSpout()" eparameters="component:ShellComponent" methodBody="ShellSpout; method invocation; get_script; method invocation; get_execution_command; " __idKDM="ShellSpout___ShellComponent___"/>
+    <eoperations name="ShellSpout()" eparameters="command:String" methodBody="expression statement; ASSIGN; _command; " __idKDM="ShellSpout___String___"/>
+    <eoperations name="open()" eparameters="stormConf:Map&lt;K, V>, context:TopologyContext, collector:SpoutOutputCollector" etype="void" methodBody="expression statement; method invocation; info; PLUS; subpid; string literal; variable declaration; subpid; expression statement; ASSIGN; class instance creation; new ShellProcess(_command); expression statement; ASSIGN; expression statement; ASSIGN; " __idKDM="open___Map_K__V___TopologyContext__SpoutOutputCollector___"/>
+    <eoperations name="close()" etype="void" methodBody="expression statement; method invocation; destroy; " __idKDM="close______"/>
+    <eoperations name="nextTuple()" etype="void" methodBody="expression statement; method invocation; querySubprocess; expression statement; method invocation; setId; string literal; expression statement; method invocation; setCommand; string literal; if; expression statement; ASSIGN; class instance creation; new SpoutMsg(); EQUALS; null; " __idKDM="nextTuple______"/>
+    <eoperations name="ack()" eparameters="msgId:Object" etype="void" methodBody="expression statement; method invocation; querySubprocess; expression statement; method invocation; setId; expression statement; method invocation; setCommand; string literal; if; expression statement; ASSIGN; class instance creation; new SpoutMsg(); EQUALS; null; " __idKDM="ack___Object___"/>
+    <eoperations name="fail()" eparameters="msgId:Object" etype="void" methodBody="expression statement; method invocation; querySubprocess; expression statement; method invocation; setId; expression statement; method invocation; setCommand; string literal; if; expression statement; ASSIGN; class instance creation; new SpoutMsg(); EQUALS; null; " __idKDM="fail___Object___"/>
+    <eoperations name="handleMetrics()" eparameters="action:Map&lt;K, V>" etype="void" methodBody="try; catch; catch; e; throw; class instance creation; RuntimeException; catch; catch; re; throw; expression statement; method invocation; updateMetricFromRPC; variable declaration; paramsObj; variable declaration; iShellMetric; if; throw; class instance creation; RuntimeException; PLUS; name; string literal; string literal; NOT; parenthesized; instanceof; if; throw; class instance creation; RuntimeException; PLUS; name; string literal; string literal; EQUALS; null; variable declaration; iMetric; if; throw; class instance creation; RuntimeException; string literal; method invocation; isEmpty; variable declaration; name; if; throw; class instance creation; RuntimeException; string literal; CONDITIONAL_OR; NOT; parenthesized; instanceof; String; EQUALS; nameObj; null; variable declaration; nameObj; " __idKDM="handleMetrics___Map_K__V____"/>
+    <eoperations name="activate()" etype="void" methodBody="" __idKDM="activate______"/>
+    <eoperations name="deactivate()" etype="void" methodBody="" __idKDM="deactivate______"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="querySubprocess()" etype="void" methodBody="" __idKDM="querySubprocess______" diff_kind_Right="DELETE" new_methodBody_Right="try; catch; catch; e; throw; class instance creation; RuntimeException; while; if; if; if; if; throw; class instance creation; RuntimeException; PLUS; command; string literal; expression statement; method invocation; handleMetrics; method invocation; equals; string literal; if; expression statement; method invocation; emitDirect; cast; int; method invocation; longValue; if; expression statement; method invocation; writeTaskIds; method invocation; areTaskIdsNeeded; variable declaration; outtasks; EQUALS; task; number literal; variable declaration; messageId; variable declaration; tuple; variable declaration; task; variable declaration; stream; method invocation; equals; string literal; expression statement; method invocation; info; PLUS; msg; string literal; variable declaration; msg; method invocation; equals; string literal; return; method invocation; equals; string literal; variable declaration; command; variable declaration; shellMsg; boolean literal; expression statement; method invocation; writeSpoutMsg; "/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="ShellSpout()" eparameters="component:ShellComponent" methodBody="ShellSpout; method invocation; get_script; method invocation; get_execution_command; " __idKDM="ShellSpout___ShellComponent___" diff_kind_Left="ADD"/>
+    <diffeattributes diff_kind_Right="DELETE" diff_Group="DG-Move-1" eType="_context"/>
+    <diffeattributes diff_kind_Right="DELETE" diff_Group="DG-Move-2" eType="_collector"/>
+    <diffeattributes diff_kind_Right="DELETE" diff_Group="DG-Move-4" eType="_process"/>
+    <diffeattributes diff_kind_Right="DELETE" diff_Group="DG-Move-7" eType="_spoutMsg"/>
+    <diffeattributes diff_kind_Right="ADD" diff_Group="DG-Move-7" eType="_spoutMsg"/>
+    <diffeattributes diff_kind_Right="DELETE" diff_Group="DG-Move-8" eType="_command"/>
+    <diffeattributes diff_kind_Right="DELETE" diff_Group="DG-Move-10" eType="LOG"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-3" eType="querySubprocess()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-3" eType="querySubprocess()"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-6" eType="handleMetrics()"/>
+  </eclassifiers>
+  <interfaces name="IBolt"/>
+  <interfaces name="ISpout"/>
+  <diffeclassifiers diff_kind_Right="DELETE" diff_Group="DG-Move-9" eType="ShellBolt"/>
+  <diffeclassifiers diff_kind_Right="ADD" diff_Group="DG-Move-9" eType="ShellBolt"/>
+  <diffinterfaces diff_kind_Right="DELETE" diff_Group="DG-Move-5" eType="IBolt"/>
+  <diffinterfaces diff_kind_Right="ADD" diff_Group="DG-Move-5" eType="IBolt"/>
+</refactoringDiffMM:EPackage>

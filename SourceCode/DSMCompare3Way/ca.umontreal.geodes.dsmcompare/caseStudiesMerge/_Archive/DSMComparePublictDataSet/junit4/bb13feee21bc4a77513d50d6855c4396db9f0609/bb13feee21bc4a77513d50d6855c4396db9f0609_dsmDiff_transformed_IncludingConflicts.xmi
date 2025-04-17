@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM">
+  <refactoringDiffMM:EPackage name="pkg">
+    <eclassifiers name="EnclosedTest">
+      <eoperations name="enclosedRunnerIsNamedForEnclosingClass()" eparameters="null:Exception" etype="void" methodBody="expression statement; method invocation; assertEquals; method invocation; getDisplayName; method invocation; getDescription; method invocation; getRunner; method invocation; aClass; type literal; method invocation; getName; type literal; " __idKDM="enclosedRunnerIsNamedForEnclosingClass___Exception___"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="enclosedRunnerPlansEnclosedClasses()" eparameters="null:Exception" etype="void" methodBody="expression statement; method invocation; assertEquals; method invocation; testCount; number literal; variable declaration; runner; " __idKDM="enclosedRunnerPlansEnclosedClasses___Exception___" diff_kind_Left="MODIFY" diff_kind_Right="MODIFY" new_name_Left="enclosedRunnerPlansConcreteEnclosedClasses()" new_name_Right="enclosedRunnerPlansConcreteEnclosedClasses()" new_eparameters_Left="" new_eparameters_Right=""/>
+      <nested_classes name="Enclosing"/>
+      <nested_classes name="A">
+        <eoperations name="a()" eparameters="" etype="void" methodBody="" __idKDM="a______"/>
+        <eoperations name="b()" eparameters="" etype="void" methodBody="" __idKDM="b______"/>
+        <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="b()" eparameters="" etype="void" methodBody="" __idKDM="b______" diff_kind_Left="ADD"/>
+        <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="a()" eparameters="" etype="void" methodBody="" __idKDM="a______" diff_kind_Left="ADD"/>
+      </nested_classes>
+      <nested_classes name="B">
+        <eoperations name="a()" eparameters="" etype="void" methodBody="" __idKDM="a______"/>
+        <eoperations name="b()" eparameters="" etype="void" methodBody="" __idKDM="b______"/>
+        <eoperations name="c()" eparameters="" etype="void" methodBody="" __idKDM="c______"/>
+        <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="a()" eparameters="" etype="void" methodBody="" __idKDM="a______" diff_kind_Left="ADD"/>
+        <diffeoperations diff_kind_Left="DELETE"/>
+      </nested_classes>
+      <nested_classes xsi:type="refactoringDiffMM:DiffEClass" name="C" diff_kind_Left="ADD"/>
+    </eclassifiers>
+    <eclassifiers name="Enclosed" extends="Suite">
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="filterAbstractClasses()" eparameters="classes:java.lang.Class&lt;?>[]" etype="java.lang.Class&lt;?>[]" methodBody="return; method invocation; toArray; array creation; java.lang.Class&lt;?>[]; method invocation; size; foreach; clazz; if; expression statement; method invocation; add; NOT; method invocation; isAbstract; method invocation; getModifiers; variable declaration; class instance creation; ArrayList; array length access; filteredList; " __idKDM="filterAbstractClasses___java_lang_Class________" diff_kind_Left="MODIFY" diff_kind_Right="MODIFY" new_name_Left="filterOutAbstractClasses()" new_name_Right="filterOutAbstractClasses()" new_etype_Left="" new_etype_Right=""/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="Enclosed()" eparameters="klass:java.lang.Class&lt;?>, builder:RunnerBuilder, null:Throwable" methodBody="super constructor invocation; Object; method invocation; getClasses; " __idKDM="Enclosed___java_lang_Class_____RunnerBuilder__Throwable___" diff_kind_Left="MODIFY" new_methodBody_Left="super constructor invocation; Object; method invocation; filterAbstractClasses; method invocation; getClasses; "/>
+      <esupertypes href="02fc1f509a670de3632417bbf33168989bfcf872_CA_ref.xmi#Suite"/>
+    </eclassifiers>
+  </refactoringDiffMM:EPackage>
+  <refactoringDiffMM:SemanticDiff name="extractMethod" SemanticObject_EOperation="filterAbstractClasses() Enclosed()" author="LEFT"/>
+  <refactoringDiffMM:SemanticDiff name="moveClass" SemanticObject_EClass="EnclosedTest" SemanticObject_EPackage="pkg" author="LEFT"/>
+  <refactoringDiffMM:SemanticDiff name="moveClass" SemanticObject_EClass="EnclosedTest" SemanticObject_EPackage="pkg" author="LEFT"/>
+  <refactoringDiffMM:SemanticDiff name="renameMethod" SemanticObject_EOperation="filterAbstractClasses()" author="LEFT"/>
+  <refactoringDiffMM:SemanticDiff name="renameMethod" SemanticObject_EOperation="enclosedRunnerPlansEnclosedClasses()" author="LEFT"/>
+  <refactoringDiffMM:SemanticConflict name="moveClass - moveClass[EnclosedTest| pkg] - CONTRADICTING" semanticdiffs="/2"/>
+</xmi:XMI>
