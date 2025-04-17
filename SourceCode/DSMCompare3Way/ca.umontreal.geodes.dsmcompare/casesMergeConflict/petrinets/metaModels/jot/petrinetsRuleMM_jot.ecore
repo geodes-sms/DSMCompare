@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="petrinetsRuleMM_jot" nsURI="www.geodes.UdeM.edu/petrinetsRuleMM_jot"
+    nsPrefix="petrinetsRuleMM_jot">
+  <eClassifiers xsi:type="ecore:EEnum" name="AUTHOR">
+    <eLiterals name="NIL" literal="NIL"/>
+    <eLiterals name="LEFT" value="1" literal="LEFT"/>
+    <eLiterals name="RIGHT" value="2" literal="RIGHT"/>
+    <eLiterals name="BOTH" value="3" literal="BOTH"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ConflictKind">
+    <eLiterals name="NIL" literal="NIL"/>
+    <eLiterals name="EQUIVALENT" value="1" literal="EQUIVALENT"/>
+    <eLiterals name="CONTRADICTING" value="2" literal="CONTRADICTING"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DiffKind">
+    <eLiterals name="NIL" literal="NIL"/>
+    <eLiterals name="ADD" value="1" literal="ADD"/>
+    <eLiterals name="DELETE" value="2" literal="DELETE"/>
+    <eLiterals name="MODIFY" value="3" literal="MODIFY"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffPlace" eSuperTypes="#//Pattern_Place">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conflictKind" unique="false"
+        lowerBound="1" eType="#//ConflictKind" defaultValueLiteral="NIL"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diffKind" unique="false"
+        lowerBound="1" upperBound="2" eType="#//DiffKind" defaultValueLiteral="NIL"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameConflictKind" unique="false"
+        lowerBound="1" eType="#//ConflictKind" defaultValueLiteral="NIL"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name" unique="false"
+        lowerBound="1" upperBound="2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_tokens" unique="false"
+        lowerBound="1" upperBound="2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tokensConflictKind" unique="false"
+        lowerBound="1" eType="#//ConflictKind" defaultValueLiteral="NIL"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pattern_DiffPlace_transitions">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conflictGroup" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conflictKind" unique="false"
+        lowerBound="1" eType="#//ConflictKind" defaultValueLiteral="NIL"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diffKind" unique="false"
+        lowerBound="1" upperBound="2" eType="#//DiffKind" defaultValueLiteral="NIL"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pattern_NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pattern_Place" eSuperTypes="#//Pattern_NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tokens" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="difftransitions" upperBound="-1"
+        eType="#//Pattern_DiffPlace_transitions" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pattern_SemanticObject" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semanticobject_diffplace_transitions"
+        ordered="false" upperBound="-1" eType="#//Pattern_DiffPlace_transitions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semanticobject_namedelement"
+        ordered="false" upperBound="-1" eType="#//Pattern_NamedElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rule">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constraints" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pattern_semanticobject"
+        upperBound="-1" eType="#//Pattern_SemanticObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pattern_namedelement" upperBound="-1"
+        eType="#//Pattern_NamedElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pattern_diffplace_transitions"
+        upperBound="-1" eType="#//Pattern_DiffPlace_transitions"/>
+  </eClassifiers>
+</ecore:EPackage>

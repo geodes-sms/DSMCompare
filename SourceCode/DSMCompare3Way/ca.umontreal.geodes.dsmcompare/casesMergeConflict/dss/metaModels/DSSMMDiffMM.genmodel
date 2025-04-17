@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.Zadahmad.DSEMFCompare.editor/src" modelPluginID="com.Zadahmad.DSEMFCompare.editor"
+    modelName="DSSMMDiffMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>DSSMMDiffMM.ecore</foreignModel>
+  <genPackages prefix="DssmmDiffMM" disposableProviderFactory="true" ecorePackage="DSSMMDiffMM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSSMMDiffMM.ecore#//ClassDiffKind">
+      <genEnumLiterals ecoreEnumLiteral="DSSMMDiffMM.ecore#//ClassDiffKind/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="DSSMMDiffMM.ecore#//ClassDiffKind/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="DSSMMDiffMM.ecore#//ClassDiffKind/MODIFY"/>
+      <genEnumLiterals ecoreEnumLiteral="DSSMMDiffMM.ecore#//ClassDiffKind/NON"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSSMMDiffMM.ecore#//AscDiffKind">
+      <genEnumLiterals ecoreEnumLiteral="DSSMMDiffMM.ecore#//AscDiffKind/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="DSSMMDiffMM.ecore#//AscDiffKind/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="DSSMMDiffMM.ecore#//AscDiffKind/NON"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSSMMDiffMM.ecore#//AUTHOR">
+      <genEnumLiterals ecoreEnumLiteral="DSSMMDiffMM.ecore#//AUTHOR/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="DSSMMDiffMM.ecore#//AUTHOR/RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="DSSMMDiffMM.ecore#//AUTHOR/EQUAL"/>
+      <genEnumLiterals ecoreEnumLiteral="DSSMMDiffMM.ecore#//AUTHOR/MIXED"/>
+      <genEnumLiterals ecoreEnumLiteral="DSSMMDiffMM.ecore#//AUTHOR/NON"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DSSMMDiffMM.ecore#//ChangeStatus">
+      <genEnumLiterals ecoreEnumLiteral="DSSMMDiffMM.ecore#//ChangeStatus/EQUIVALENT"/>
+      <genEnumLiterals ecoreEnumLiteral="DSSMMDiffMM.ecore#//ChangeStatus/CONTRADICTING"/>
+      <genEnumLiterals ecoreEnumLiteral="DSSMMDiffMM.ecore#//ChangeStatus/NON"/>
+    </genEnums>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DecisionSupport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DecisionSupport/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//DecisionSupport/model"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//DecisionSupport/options"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//DecisionSupport/vendors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//DecisionSupport/diffmodel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//DecisionSupport/diffoptions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//DecisionSupport/diffvendors"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Model/ModelID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Model/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Model/Goal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Model/Descr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Model/NumFacts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//Model/rootFactor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//Model/diffrootFactor"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DSSMMDiffMM.ecore#//Factor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Factor/FactorID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Factor/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Factor/Descr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Factor/GW"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Factor/LW"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Factor/Del"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Factor/HideOnLine"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//Factor/scores"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Factor/Hierarchy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Factor/MasterFactorID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//Factor/diffscores"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//LeafFactor"/>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//CompositeFactor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//CompositeFactor/subFactors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//CompositeFactor/diffsubFactors"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//Option">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Option/OptionID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Option/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Option/Sort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Option/Cost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Option/NumOtherCosts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//Option/vendor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Option/Description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//Option/diffvendor"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//Vendor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Vendor/VendorID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Vendor/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Vendor/Description"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//Score">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Score/SScore"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Score/DScore"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Score/Descr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Score/Comment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//Score/score_option"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//Score/MethodID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//Score/diffscore_option"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DSSMMDiffMM.ecore#//SemanticObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//SemanticObject/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//SemanticObject/SemanticObject_DecisionSupport"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//SemanticObject/SemanticObject_DiffCompositeFactor_subFactors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//SemanticObject/SemanticObject_DiffDecisionSupport_model"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//SemanticObject/SemanticObject_DiffDecisionSupport_options"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//SemanticObject/SemanticObject_DiffDecisionSupport_vendors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//SemanticObject/SemanticObject_DiffFactor_scores"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//SemanticObject/SemanticObject_DiffModel_rootFactor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//SemanticObject/SemanticObject_DiffOption_vendor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//SemanticObject/SemanticObject_DiffScore_score_option"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//SemanticObject/SemanticObject_Factor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//SemanticObject/SemanticObject_Model"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//SemanticObject/SemanticObject_Option"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//SemanticObject/SemanticObject_Score"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//SemanticObject/SemanticObject_Vendor"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//SemanticDiff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//SemanticDiff/author"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//SemanticConflict">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//SemanticConflict/semanticdiffs"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DiffDecisionSupport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffDecisionSupport/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffDecisionSupport/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffDecisionSupport/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffDecisionSupport/new_Name_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffDecisionSupport/new_Name_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffDecisionSupport/NameChangeStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DiffDecisionSupport_model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffDecisionSupport_model/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffDecisionSupport_model/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffDecisionSupport_model/changeStatus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//DiffDecisionSupport_model/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DiffDecisionSupport_options">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffDecisionSupport_options/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffDecisionSupport_options/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffDecisionSupport_options/changeStatus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//DiffDecisionSupport_options/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DiffDecisionSupport_vendors">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffDecisionSupport_vendors/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffDecisionSupport_vendors/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffDecisionSupport_vendors/changeStatus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//DiffDecisionSupport_vendors/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DiffModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/new_ModelID_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/new_ModelID_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/ModelIDChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/new_Name_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/new_Name_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/NameChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/new_Goal_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/new_Goal_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/GoalChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/new_Descr_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/new_Descr_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/DescrChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/new_NumFacts_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/new_NumFacts_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel/NumFactsChangeStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DiffModel_rootFactor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel_rootFactor/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel_rootFactor/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffModel_rootFactor/changeStatus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//DiffModel_rootFactor/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DiffFactor_scores">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffFactor_scores/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffFactor_scores/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffFactor_scores/changeStatus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//DiffFactor_scores/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DiffLeafFactor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_FactorID_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_FactorID_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/FactorIDChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_Name_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_Name_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/NameChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_Descr_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_Descr_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/DescrChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_GW_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_GW_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/GWChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_LW_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_LW_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/LWChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_Del_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_Del_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/DelChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_HideOnLine_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_HideOnLine_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/HideOnLineChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_Hierarchy_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_Hierarchy_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/HierarchyChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_MasterFactorID_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/new_MasterFactorID_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffLeafFactor/MasterFactorIDChangeStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DiffCompositeFactor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_FactorID_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_FactorID_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/FactorIDChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_Name_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_Name_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/NameChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_Descr_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_Descr_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/DescrChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_GW_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_GW_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/GWChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_LW_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_LW_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/LWChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_Del_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_Del_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/DelChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_HideOnLine_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_HideOnLine_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/HideOnLineChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_Hierarchy_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_Hierarchy_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/HierarchyChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_MasterFactorID_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/new_MasterFactorID_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor/MasterFactorIDChangeStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DiffCompositeFactor_subFactors">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor_subFactors/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor_subFactors/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffCompositeFactor_subFactors/changeStatus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//DiffCompositeFactor_subFactors/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DiffOption">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/new_OptionID_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/new_OptionID_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/OptionIDChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/new_Name_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/new_Name_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/NameChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/new_Sort_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/new_Sort_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/SortChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/new_Cost_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/new_Cost_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/CostChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/new_NumOtherCosts_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/new_NumOtherCosts_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/NumOtherCostsChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/new_Description_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/new_Description_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption/DescriptionChangeStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DiffOption_vendor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption_vendor/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption_vendor/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffOption_vendor/changeStatus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//DiffOption_vendor/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DiffVendor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffVendor/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffVendor/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffVendor/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffVendor/new_VendorID_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffVendor/new_VendorID_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffVendor/VendorIDChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffVendor/new_Name_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffVendor/new_Name_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffVendor/NameChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffVendor/new_Description_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffVendor/new_Description_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffVendor/DescriptionChangeStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DiffScore">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/new_SScore_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/new_SScore_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/SScoreChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/new_DScore_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/new_DScore_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/DScoreChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/new_Descr_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/new_Descr_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/DescrChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/new_Comment_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/new_Comment_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/CommentChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/new_MethodID_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/new_MethodID_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore/MethodIDChangeStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="DSSMMDiffMM.ecore#//DiffScore_score_option">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore_score_option/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore_score_option/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DSSMMDiffMM.ecore#//DiffScore_score_option/changeStatus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DSSMMDiffMM.ecore#//DiffScore_score_option/eType"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

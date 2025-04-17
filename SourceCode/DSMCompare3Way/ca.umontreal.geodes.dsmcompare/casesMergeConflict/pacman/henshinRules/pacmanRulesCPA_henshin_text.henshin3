@@ -1,0 +1,1688 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_zLuiQJeaEe2H8pIyhRi0wA" name="HenshinDSL">
+  <imports href="../metaModels/pacmanDiffMM.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_zLuiQZeaEe2H8pIyhRi0wA" name="PacmanEatFood">
+    <parameters xmi:id="_zLuiQpeaEe2H8pIyhRi0wA" name="n0diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuiQ5eaEe2H8pIyhRi0wA" name="n0diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuiRJeaEe2H8pIyhRi0wA" name="n3diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuiRZeaEe2H8pIyhRi0wA" name="n3diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuiRpeaEe2H8pIyhRi0wA" name="n4diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuiR5eaEe2H8pIyhRi0wA" name="n4diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuiSJeaEe2H8pIyhRi0wA" name="n0score" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_zLuiSZeaEe2H8pIyhRi0wA" name="n0new_score_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_zLuiSpeaEe2H8pIyhRi0wA" name="n0new_score_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_zLuiS5eaEe2H8pIyhRi0wA" name="PacmanEatFood_LHS">
+      <nodes xmi:id="_zLuiTJeaEe2H8pIyhRi0wA" name="n1">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLuiTZeaEe2H8pIyhRi0wA" name="n2">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_zLuiTpeaEe2H8pIyhRi0wA" name="n3" outgoing="_zLuiUJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffFood"/>
+      </nodes>
+      <nodes xmi:id="_zLuiT5eaEe2H8pIyhRi0wA" name="n4" incoming="_zLuiUJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_zLuiUJeaEe2H8pIyhRi0wA" source="_zLuiTpeaEe2H8pIyhRi0wA" target="_zLuiT5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_zLuiUZeaEe2H8pIyhRi0wA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_zLuiUpeaEe2H8pIyhRi0wA">
+          <conclusion xmi:id="_zLuiU5eaEe2H8pIyhRi0wA" name="forbid">
+            <nodes xmi:id="_zLuiVJeaEe2H8pIyhRi0wA" name="n6" outgoing="_zLuiWZeaEe2H8pIyhRi0wA _zLuiWpeaEe2H8pIyhRi0wA _zLuiW5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+              <attributes xmi:id="_zLuiVZeaEe2H8pIyhRi0wA" value="&quot;Pacman Eat Food&quot;">
+                <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_zLuiVpeaEe2H8pIyhRi0wA" name="n1" incoming="_zLuiWZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLuiV5eaEe2H8pIyhRi0wA" name="n2" incoming="_zLuiWpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+            </nodes>
+            <nodes xmi:id="_zLuiWJeaEe2H8pIyhRi0wA" name="n3" incoming="_zLuiW5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//DiffFood"/>
+            </nodes>
+            <edges xmi:id="_zLuiWZeaEe2H8pIyhRi0wA" source="_zLuiVJeaEe2H8pIyhRi0wA" target="_zLuiVpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLuiWpeaEe2H8pIyhRi0wA" source="_zLuiVJeaEe2H8pIyhRi0wA" target="_zLuiV5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+            </edges>
+            <edges xmi:id="_zLuiW5eaEe2H8pIyhRi0wA" source="_zLuiVJeaEe2H8pIyhRi0wA" target="_zLuiWJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_zLuiXJeaEe2H8pIyhRi0wA" origin="_zLuiTJeaEe2H8pIyhRi0wA" image="_zLuiVpeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLuiXZeaEe2H8pIyhRi0wA" origin="_zLuiTZeaEe2H8pIyhRi0wA" image="_zLuiV5eaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLuiXpeaEe2H8pIyhRi0wA" origin="_zLuiTpeaEe2H8pIyhRi0wA" image="_zLuiWJeaEe2H8pIyhRi0wA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_zLuiX5eaEe2H8pIyhRi0wA" name="PacmanEatFood_RHS">
+      <nodes xmi:id="_zLuiYJeaEe2H8pIyhRi0wA" name="n1" incoming="_zLuiaJeaEe2H8pIyhRi0wA _zLuia5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLuiYZeaEe2H8pIyhRi0wA" name="n2" incoming="_zLuiaZeaEe2H8pIyhRi0wA _zLuibJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_zLuiYpeaEe2H8pIyhRi0wA" name="n0" incoming="_zLuiapeaEe2H8pIyhRi0wA" outgoing="_zLuiaJeaEe2H8pIyhRi0wA _zLuiaZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffGame"/>
+        <attributes xmi:id="_zLuiY5eaEe2H8pIyhRi0wA" value="n0score">
+          <type href="../metaModels/pacmanDiffMM.ecore#//Game/score"/>
+        </attributes>
+        <attributes xmi:id="_zLuiZJeaEe2H8pIyhRi0wA" value="n0new_score_Left">
+          <type href="../metaModels/pacmanDiffMM.ecore#//DiffGame/new_score_Left"/>
+        </attributes>
+        <attributes xmi:id="_zLuiZZeaEe2H8pIyhRi0wA" value="n0new_score_Right">
+          <type href="../metaModels/pacmanDiffMM.ecore#//DiffGame/new_score_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_zLuiZpeaEe2H8pIyhRi0wA" name="n5" outgoing="_zLuiapeaEe2H8pIyhRi0wA _zLuia5eaEe2H8pIyhRi0wA _zLuibJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_zLuiZ5eaEe2H8pIyhRi0wA" value="&quot;Pacman Eat Food&quot;">
+          <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_zLuiaJeaEe2H8pIyhRi0wA" source="_zLuiYpeaEe2H8pIyhRi0wA" target="_zLuiYJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLuiaZeaEe2H8pIyhRi0wA" source="_zLuiYpeaEe2H8pIyhRi0wA" target="_zLuiYZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLuiapeaEe2H8pIyhRi0wA" source="_zLuiZpeaEe2H8pIyhRi0wA" target="_zLuiYpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+      </edges>
+      <edges xmi:id="_zLuia5eaEe2H8pIyhRi0wA" source="_zLuiZpeaEe2H8pIyhRi0wA" target="_zLuiYJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLuibJeaEe2H8pIyhRi0wA" source="_zLuiZpeaEe2H8pIyhRi0wA" target="_zLuiYZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_zLuibZeaEe2H8pIyhRi0wA" conditionText="((n0score&lt;n0new_score_Left) &amp;&amp; (n0diff_kind_Left==&quot;MODIFY&quot;) &amp;&amp; (n3diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n4diff_kind_Left==&quot;DELETE&quot;)) || ((n0score&lt;n0new_score_Right) &amp;&amp; (n0diff_kind_Right==&quot;MODIFY&quot;) &amp;&amp; (n3diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n4diff_kind_Right==&quot;DELETE&quot;))"/>
+    <mappings xmi:id="_zLuibpeaEe2H8pIyhRi0wA" origin="_zLuiTJeaEe2H8pIyhRi0wA" image="_zLuiYJeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLuib5eaEe2H8pIyhRi0wA" origin="_zLuiTZeaEe2H8pIyhRi0wA" image="_zLuiYZeaEe2H8pIyhRi0wA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_zLuicJeaEe2H8pIyhRi0wA" name="PacmanDie">
+    <parameters xmi:id="_zLuicZeaEe2H8pIyhRi0wA" name="n3diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuicpeaEe2H8pIyhRi0wA" name="n3diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuic5eaEe2H8pIyhRi0wA" name="n4diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuidJeaEe2H8pIyhRi0wA" name="n4diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_zLuidZeaEe2H8pIyhRi0wA" name="PacmanDie_LHS">
+      <nodes xmi:id="_zLuidpeaEe2H8pIyhRi0wA" name="n0" outgoing="_zLuie5eaEe2H8pIyhRi0wA _zLuifJeaEe2H8pIyhRi0wA _zLuifZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLuid5eaEe2H8pIyhRi0wA" name="n1" incoming="_zLuie5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLuieJeaEe2H8pIyhRi0wA" name="n2" incoming="_zLuifJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_zLuieZeaEe2H8pIyhRi0wA" name="n3" incoming="_zLuifZeaEe2H8pIyhRi0wA" outgoing="_zLuifpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPacman"/>
+      </nodes>
+      <nodes xmi:id="_zLuiepeaEe2H8pIyhRi0wA" name="n4" incoming="_zLuifpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_zLuie5eaEe2H8pIyhRi0wA" source="_zLuidpeaEe2H8pIyhRi0wA" target="_zLuid5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLuifJeaEe2H8pIyhRi0wA" source="_zLuidpeaEe2H8pIyhRi0wA" target="_zLuieJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLuifZeaEe2H8pIyhRi0wA" source="_zLuidpeaEe2H8pIyhRi0wA" target="_zLuieZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLuifpeaEe2H8pIyhRi0wA" source="_zLuieZeaEe2H8pIyhRi0wA" target="_zLuiepeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_zLuif5eaEe2H8pIyhRi0wA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_zLuigJeaEe2H8pIyhRi0wA">
+          <conclusion xmi:id="_zLuigZeaEe2H8pIyhRi0wA" name="forbid">
+            <nodes xmi:id="_zLuigpeaEe2H8pIyhRi0wA" name="n6" outgoing="_zLuiiJeaEe2H8pIyhRi0wA _zLuiiZeaEe2H8pIyhRi0wA _zLuiipeaEe2H8pIyhRi0wA _zLuii5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+              <attributes xmi:id="_zLuig5eaEe2H8pIyhRi0wA" value="&quot;Pacman Die&quot;">
+                <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_zLuihJeaEe2H8pIyhRi0wA" name="n0" incoming="_zLuiiJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+            </nodes>
+            <nodes xmi:id="_zLuihZeaEe2H8pIyhRi0wA" name="n1" incoming="_zLuiiZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLuihpeaEe2H8pIyhRi0wA" name="n3" incoming="_zLuiipeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//DiffPacman"/>
+            </nodes>
+            <nodes xmi:id="_zLuih5eaEe2H8pIyhRi0wA" name="n2" incoming="_zLuii5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+            </nodes>
+            <edges xmi:id="_zLuiiJeaEe2H8pIyhRi0wA" source="_zLuigpeaEe2H8pIyhRi0wA" target="_zLuihJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+            </edges>
+            <edges xmi:id="_zLuiiZeaEe2H8pIyhRi0wA" source="_zLuigpeaEe2H8pIyhRi0wA" target="_zLuihZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLuiipeaEe2H8pIyhRi0wA" source="_zLuigpeaEe2H8pIyhRi0wA" target="_zLuihpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+            </edges>
+            <edges xmi:id="_zLuii5eaEe2H8pIyhRi0wA" source="_zLuigpeaEe2H8pIyhRi0wA" target="_zLuih5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_zLuijJeaEe2H8pIyhRi0wA" origin="_zLuidpeaEe2H8pIyhRi0wA" image="_zLuihJeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLuijZeaEe2H8pIyhRi0wA" origin="_zLuid5eaEe2H8pIyhRi0wA" image="_zLuihZeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLuijpeaEe2H8pIyhRi0wA" origin="_zLuieZeaEe2H8pIyhRi0wA" image="_zLuihpeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLuij5eaEe2H8pIyhRi0wA" origin="_zLuieJeaEe2H8pIyhRi0wA" image="_zLuih5eaEe2H8pIyhRi0wA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_zLuikJeaEe2H8pIyhRi0wA" name="PacmanDie_RHS">
+      <nodes xmi:id="_zLuikZeaEe2H8pIyhRi0wA" name="n0" incoming="_zLuimJeaEe2H8pIyhRi0wA" outgoing="_zLuilpeaEe2H8pIyhRi0wA _zLuil5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLuikpeaEe2H8pIyhRi0wA" name="n1" incoming="_zLuilpeaEe2H8pIyhRi0wA _zLuimZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLuik5eaEe2H8pIyhRi0wA" name="n2" incoming="_zLuil5eaEe2H8pIyhRi0wA _zLuimpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_zLuilJeaEe2H8pIyhRi0wA" name="n5" outgoing="_zLuimJeaEe2H8pIyhRi0wA _zLuimZeaEe2H8pIyhRi0wA _zLuimpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_zLuilZeaEe2H8pIyhRi0wA" value="&quot;Pacman Die&quot;">
+          <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_zLuilpeaEe2H8pIyhRi0wA" source="_zLuikZeaEe2H8pIyhRi0wA" target="_zLuikpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLuil5eaEe2H8pIyhRi0wA" source="_zLuikZeaEe2H8pIyhRi0wA" target="_zLuik5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLuimJeaEe2H8pIyhRi0wA" source="_zLuilJeaEe2H8pIyhRi0wA" target="_zLuikZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+      </edges>
+      <edges xmi:id="_zLuimZeaEe2H8pIyhRi0wA" source="_zLuilJeaEe2H8pIyhRi0wA" target="_zLuikpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLuimpeaEe2H8pIyhRi0wA" source="_zLuilJeaEe2H8pIyhRi0wA" target="_zLuik5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_zLuim5eaEe2H8pIyhRi0wA" conditionText="((n3diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n4diff_kind_Left==&quot;DELETE&quot;)) || ((n3diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n4diff_kind_Right==&quot;DELETE&quot;))"/>
+    <mappings xmi:id="_zLuinJeaEe2H8pIyhRi0wA" origin="_zLuidpeaEe2H8pIyhRi0wA" image="_zLuikZeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLuinZeaEe2H8pIyhRi0wA" origin="_zLuid5eaEe2H8pIyhRi0wA" image="_zLuikpeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLuinpeaEe2H8pIyhRi0wA" origin="_zLuieJeaEe2H8pIyhRi0wA" image="_zLuik5eaEe2H8pIyhRi0wA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_zLuin5eaEe2H8pIyhRi0wA" name="PacmanMoveUp">
+    <parameters xmi:id="_zLuioJeaEe2H8pIyhRi0wA" name="n4diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuioZeaEe2H8pIyhRi0wA" name="n4diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuiopeaEe2H8pIyhRi0wA" name="n5diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuio5eaEe2H8pIyhRi0wA" name="n5diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_zLuipJeaEe2H8pIyhRi0wA" name="PacmanMoveUp_LHS">
+      <nodes xmi:id="_zLuipZeaEe2H8pIyhRi0wA" name="n0" outgoing="_zLuiqpeaEe2H8pIyhRi0wA _zLuiq5eaEe2H8pIyhRi0wA _zLuirJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLuippeaEe2H8pIyhRi0wA" name="n1" incoming="_zLuiqpeaEe2H8pIyhRi0wA _zLuir5eaEe2H8pIyhRi0wA" outgoing="_zLuirZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLuip5eaEe2H8pIyhRi0wA" name="n2" incoming="_zLuiq5eaEe2H8pIyhRi0wA _zLuirZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLuiqJeaEe2H8pIyhRi0wA" name="n3" incoming="_zLuirJeaEe2H8pIyhRi0wA" outgoing="_zLuirpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_zLuiqZeaEe2H8pIyhRi0wA" name="n4" incoming="_zLuirpeaEe2H8pIyhRi0wA" outgoing="_zLuir5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_zLuiqpeaEe2H8pIyhRi0wA" source="_zLuipZeaEe2H8pIyhRi0wA" target="_zLuippeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLuiq5eaEe2H8pIyhRi0wA" source="_zLuipZeaEe2H8pIyhRi0wA" target="_zLuip5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLuirJeaEe2H8pIyhRi0wA" source="_zLuipZeaEe2H8pIyhRi0wA" target="_zLuiqJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLuirZeaEe2H8pIyhRi0wA" source="_zLuippeaEe2H8pIyhRi0wA" target="_zLuip5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode/up"/>
+      </edges>
+      <edges xmi:id="_zLuirpeaEe2H8pIyhRi0wA" source="_zLuiqJeaEe2H8pIyhRi0wA" target="_zLuiqZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLuir5eaEe2H8pIyhRi0wA" source="_zLuiqZeaEe2H8pIyhRi0wA" target="_zLuippeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_zLuisJeaEe2H8pIyhRi0wA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_zLuisZeaEe2H8pIyhRi0wA">
+          <conclusion xmi:id="_zLuispeaEe2H8pIyhRi0wA" name="forbid">
+            <nodes xmi:id="_zLuis5eaEe2H8pIyhRi0wA" name="n7" outgoing="_zLuiuZeaEe2H8pIyhRi0wA _zLuiupeaEe2H8pIyhRi0wA _zLuiu5eaEe2H8pIyhRi0wA _zLuivJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+              <attributes xmi:id="_zLuitJeaEe2H8pIyhRi0wA" value="&quot;Ghost Move Left&quot;">
+                <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_zLuitZeaEe2H8pIyhRi0wA" name="n0" incoming="_zLuiuZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+            </nodes>
+            <nodes xmi:id="_zLuitpeaEe2H8pIyhRi0wA" name="n2" incoming="_zLuiupeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLuit5eaEe2H8pIyhRi0wA" name="n1" incoming="_zLuiu5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLuiuJeaEe2H8pIyhRi0wA" name="n3" incoming="_zLuivJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+            </nodes>
+            <edges xmi:id="_zLuiuZeaEe2H8pIyhRi0wA" source="_zLuis5eaEe2H8pIyhRi0wA" target="_zLuitZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+            </edges>
+            <edges xmi:id="_zLuiupeaEe2H8pIyhRi0wA" source="_zLuis5eaEe2H8pIyhRi0wA" target="_zLuitpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLuiu5eaEe2H8pIyhRi0wA" source="_zLuis5eaEe2H8pIyhRi0wA" target="_zLuit5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLuivJeaEe2H8pIyhRi0wA" source="_zLuis5eaEe2H8pIyhRi0wA" target="_zLuiuJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_zLuivZeaEe2H8pIyhRi0wA" origin="_zLuipZeaEe2H8pIyhRi0wA" image="_zLuitZeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLuivpeaEe2H8pIyhRi0wA" origin="_zLuip5eaEe2H8pIyhRi0wA" image="_zLuitpeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLuiv5eaEe2H8pIyhRi0wA" origin="_zLuippeaEe2H8pIyhRi0wA" image="_zLuit5eaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLuiwJeaEe2H8pIyhRi0wA" origin="_zLuiqJeaEe2H8pIyhRi0wA" image="_zLuiuJeaEe2H8pIyhRi0wA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_zLuiwZeaEe2H8pIyhRi0wA" name="PacmanMoveUp_RHS">
+      <nodes xmi:id="_zLuiwpeaEe2H8pIyhRi0wA" name="n0" incoming="_zLuiz5eaEe2H8pIyhRi0wA" outgoing="_zLuiyZeaEe2H8pIyhRi0wA _zLuiypeaEe2H8pIyhRi0wA _zLuiy5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLuiw5eaEe2H8pIyhRi0wA" name="n1" incoming="_zLuiyZeaEe2H8pIyhRi0wA _zLui0ZeaEe2H8pIyhRi0wA" outgoing="_zLuizJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLuixJeaEe2H8pIyhRi0wA" name="n2" incoming="_zLuiypeaEe2H8pIyhRi0wA _zLuizJeaEe2H8pIyhRi0wA _zLuizpeaEe2H8pIyhRi0wA _zLui0JeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLuixZeaEe2H8pIyhRi0wA" name="n3" incoming="_zLuiy5eaEe2H8pIyhRi0wA _zLui0peaEe2H8pIyhRi0wA" outgoing="_zLuizZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_zLuixpeaEe2H8pIyhRi0wA" name="n5" incoming="_zLuizZeaEe2H8pIyhRi0wA" outgoing="_zLuizpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <nodes xmi:id="_zLuix5eaEe2H8pIyhRi0wA" name="n6" outgoing="_zLuiz5eaEe2H8pIyhRi0wA _zLui0JeaEe2H8pIyhRi0wA _zLui0ZeaEe2H8pIyhRi0wA _zLui0peaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_zLuiyJeaEe2H8pIyhRi0wA" value="&quot;Ghost Move Left&quot;">
+          <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_zLuiyZeaEe2H8pIyhRi0wA" source="_zLuiwpeaEe2H8pIyhRi0wA" target="_zLuiw5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLuiypeaEe2H8pIyhRi0wA" source="_zLuiwpeaEe2H8pIyhRi0wA" target="_zLuixJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLuiy5eaEe2H8pIyhRi0wA" source="_zLuiwpeaEe2H8pIyhRi0wA" target="_zLuixZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLuizJeaEe2H8pIyhRi0wA" source="_zLuiw5eaEe2H8pIyhRi0wA" target="_zLuixJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode/up"/>
+      </edges>
+      <edges xmi:id="_zLuizZeaEe2H8pIyhRi0wA" source="_zLuixZeaEe2H8pIyhRi0wA" target="_zLuixpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLuizpeaEe2H8pIyhRi0wA" source="_zLuixpeaEe2H8pIyhRi0wA" target="_zLuixJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_zLuiz5eaEe2H8pIyhRi0wA" source="_zLuix5eaEe2H8pIyhRi0wA" target="_zLuiwpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+      </edges>
+      <edges xmi:id="_zLui0JeaEe2H8pIyhRi0wA" source="_zLuix5eaEe2H8pIyhRi0wA" target="_zLuixJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLui0ZeaEe2H8pIyhRi0wA" source="_zLuix5eaEe2H8pIyhRi0wA" target="_zLuiw5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLui0peaEe2H8pIyhRi0wA" source="_zLuix5eaEe2H8pIyhRi0wA" target="_zLuixZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_zLui05eaEe2H8pIyhRi0wA" conditionText="((n4diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Left==&quot;ADD&quot;)) || ((n4diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_zLui1JeaEe2H8pIyhRi0wA" origin="_zLuipZeaEe2H8pIyhRi0wA" image="_zLuiwpeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLui1ZeaEe2H8pIyhRi0wA" origin="_zLuippeaEe2H8pIyhRi0wA" image="_zLuiw5eaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLui1peaEe2H8pIyhRi0wA" origin="_zLuip5eaEe2H8pIyhRi0wA" image="_zLuixJeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLui15eaEe2H8pIyhRi0wA" origin="_zLuiqJeaEe2H8pIyhRi0wA" image="_zLuixZeaEe2H8pIyhRi0wA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_zLui2JeaEe2H8pIyhRi0wA" name="GhostMoveUp">
+    <parameters xmi:id="_zLui2ZeaEe2H8pIyhRi0wA" name="n4diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLui2peaEe2H8pIyhRi0wA" name="n4diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLui25eaEe2H8pIyhRi0wA" name="n5diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLui3JeaEe2H8pIyhRi0wA" name="n5diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_zLui3ZeaEe2H8pIyhRi0wA" name="GhostMoveUp_LHS">
+      <nodes xmi:id="_zLui3peaEe2H8pIyhRi0wA" name="n0" outgoing="_zLui45eaEe2H8pIyhRi0wA _zLui5JeaEe2H8pIyhRi0wA _zLui5ZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLui35eaEe2H8pIyhRi0wA" name="n1" incoming="_zLui45eaEe2H8pIyhRi0wA _zLui6JeaEe2H8pIyhRi0wA" outgoing="_zLui5peaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLui4JeaEe2H8pIyhRi0wA" name="n2" incoming="_zLui5JeaEe2H8pIyhRi0wA _zLui5peaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLui4ZeaEe2H8pIyhRi0wA" name="n3" incoming="_zLui5ZeaEe2H8pIyhRi0wA" outgoing="_zLui55eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_zLui4peaEe2H8pIyhRi0wA" name="n4" incoming="_zLui55eaEe2H8pIyhRi0wA" outgoing="_zLui6JeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_zLui45eaEe2H8pIyhRi0wA" source="_zLui3peaEe2H8pIyhRi0wA" target="_zLui35eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLui5JeaEe2H8pIyhRi0wA" source="_zLui3peaEe2H8pIyhRi0wA" target="_zLui4JeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLui5ZeaEe2H8pIyhRi0wA" source="_zLui3peaEe2H8pIyhRi0wA" target="_zLui4ZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLui5peaEe2H8pIyhRi0wA" source="_zLui35eaEe2H8pIyhRi0wA" target="_zLui4JeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode/up"/>
+      </edges>
+      <edges xmi:id="_zLui55eaEe2H8pIyhRi0wA" source="_zLui4ZeaEe2H8pIyhRi0wA" target="_zLui4peaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLui6JeaEe2H8pIyhRi0wA" source="_zLui4peaEe2H8pIyhRi0wA" target="_zLui35eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_zLui6ZeaEe2H8pIyhRi0wA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_zLui6peaEe2H8pIyhRi0wA">
+          <conclusion xmi:id="_zLui65eaEe2H8pIyhRi0wA" name="forbid">
+            <nodes xmi:id="_zLui7JeaEe2H8pIyhRi0wA" name="n7" outgoing="_zLui8ZeaEe2H8pIyhRi0wA _zLui8peaEe2H8pIyhRi0wA _zLui85eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+              <attributes xmi:id="_zLui7ZeaEe2H8pIyhRi0wA" value="&quot;Ghost Move Up&quot;">
+                <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_zLui7peaEe2H8pIyhRi0wA" name="n1" incoming="_zLui8ZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLui75eaEe2H8pIyhRi0wA" name="n2" incoming="_zLui8peaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLui8JeaEe2H8pIyhRi0wA" name="n3" incoming="_zLui85eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+            </nodes>
+            <edges xmi:id="_zLui8ZeaEe2H8pIyhRi0wA" source="_zLui7JeaEe2H8pIyhRi0wA" target="_zLui7peaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLui8peaEe2H8pIyhRi0wA" source="_zLui7JeaEe2H8pIyhRi0wA" target="_zLui75eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLui85eaEe2H8pIyhRi0wA" source="_zLui7JeaEe2H8pIyhRi0wA" target="_zLui8JeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_zLui9JeaEe2H8pIyhRi0wA" origin="_zLui35eaEe2H8pIyhRi0wA" image="_zLui7peaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLui9ZeaEe2H8pIyhRi0wA" origin="_zLui4JeaEe2H8pIyhRi0wA" image="_zLui75eaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLui9peaEe2H8pIyhRi0wA" origin="_zLui4ZeaEe2H8pIyhRi0wA" image="_zLui8JeaEe2H8pIyhRi0wA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_zLui95eaEe2H8pIyhRi0wA" name="GhostMoveUp_RHS">
+      <nodes xmi:id="_zLui-JeaEe2H8pIyhRi0wA" name="n0" outgoing="_zLui_5eaEe2H8pIyhRi0wA _zLujAJeaEe2H8pIyhRi0wA _zLujAZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLui-ZeaEe2H8pIyhRi0wA" name="n1" incoming="_zLui_5eaEe2H8pIyhRi0wA _zLujBZeaEe2H8pIyhRi0wA" outgoing="_zLujApeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLui-peaEe2H8pIyhRi0wA" name="n2" incoming="_zLujAJeaEe2H8pIyhRi0wA _zLujApeaEe2H8pIyhRi0wA _zLujBJeaEe2H8pIyhRi0wA _zLujBpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLui-5eaEe2H8pIyhRi0wA" name="n3" incoming="_zLujAZeaEe2H8pIyhRi0wA _zLujB5eaEe2H8pIyhRi0wA" outgoing="_zLujA5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_zLui_JeaEe2H8pIyhRi0wA" name="n5" incoming="_zLujA5eaEe2H8pIyhRi0wA" outgoing="_zLujBJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <nodes xmi:id="_zLui_ZeaEe2H8pIyhRi0wA" name="n6" outgoing="_zLujBZeaEe2H8pIyhRi0wA _zLujBpeaEe2H8pIyhRi0wA _zLujB5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_zLui_peaEe2H8pIyhRi0wA" value="&quot;Ghost Move Up&quot;">
+          <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_zLui_5eaEe2H8pIyhRi0wA" source="_zLui-JeaEe2H8pIyhRi0wA" target="_zLui-ZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLujAJeaEe2H8pIyhRi0wA" source="_zLui-JeaEe2H8pIyhRi0wA" target="_zLui-peaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLujAZeaEe2H8pIyhRi0wA" source="_zLui-JeaEe2H8pIyhRi0wA" target="_zLui-5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLujApeaEe2H8pIyhRi0wA" source="_zLui-ZeaEe2H8pIyhRi0wA" target="_zLui-peaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode/up"/>
+      </edges>
+      <edges xmi:id="_zLujA5eaEe2H8pIyhRi0wA" source="_zLui-5eaEe2H8pIyhRi0wA" target="_zLui_JeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLujBJeaEe2H8pIyhRi0wA" source="_zLui_JeaEe2H8pIyhRi0wA" target="_zLui-peaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_zLujBZeaEe2H8pIyhRi0wA" source="_zLui_ZeaEe2H8pIyhRi0wA" target="_zLui-ZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLujBpeaEe2H8pIyhRi0wA" source="_zLui_ZeaEe2H8pIyhRi0wA" target="_zLui-peaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLujB5eaEe2H8pIyhRi0wA" source="_zLui_ZeaEe2H8pIyhRi0wA" target="_zLui-5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_zLujCJeaEe2H8pIyhRi0wA" conditionText="((n4diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Left==&quot;ADD&quot;)) || ((n4diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_zLujCZeaEe2H8pIyhRi0wA" origin="_zLui3peaEe2H8pIyhRi0wA" image="_zLui-JeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLujCpeaEe2H8pIyhRi0wA" origin="_zLui35eaEe2H8pIyhRi0wA" image="_zLui-ZeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLujC5eaEe2H8pIyhRi0wA" origin="_zLui4JeaEe2H8pIyhRi0wA" image="_zLui-peaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLujDJeaEe2H8pIyhRi0wA" origin="_zLui4ZeaEe2H8pIyhRi0wA" image="_zLui-5eaEe2H8pIyhRi0wA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_zLujDZeaEe2H8pIyhRi0wA" name="PacmanMoveDown">
+    <parameters xmi:id="_zLujDpeaEe2H8pIyhRi0wA" name="n4diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLujD5eaEe2H8pIyhRi0wA" name="n4diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLujEJeaEe2H8pIyhRi0wA" name="n5diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLujEZeaEe2H8pIyhRi0wA" name="n5diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_zLujEpeaEe2H8pIyhRi0wA" name="PacmanMoveDown_LHS">
+      <nodes xmi:id="_zLujE5eaEe2H8pIyhRi0wA" name="n0" outgoing="_zLujGJeaEe2H8pIyhRi0wA _zLujGZeaEe2H8pIyhRi0wA _zLujGpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLujFJeaEe2H8pIyhRi0wA" name="n1" incoming="_zLujGJeaEe2H8pIyhRi0wA _zLujHZeaEe2H8pIyhRi0wA" outgoing="_zLujG5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLujFZeaEe2H8pIyhRi0wA" name="n2" incoming="_zLujGZeaEe2H8pIyhRi0wA _zLujG5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLujFpeaEe2H8pIyhRi0wA" name="n3" incoming="_zLujGpeaEe2H8pIyhRi0wA" outgoing="_zLujHJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_zLujF5eaEe2H8pIyhRi0wA" name="n4" incoming="_zLujHJeaEe2H8pIyhRi0wA" outgoing="_zLujHZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_zLujGJeaEe2H8pIyhRi0wA" source="_zLujE5eaEe2H8pIyhRi0wA" target="_zLujFJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLujGZeaEe2H8pIyhRi0wA" source="_zLujE5eaEe2H8pIyhRi0wA" target="_zLujFZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLujGpeaEe2H8pIyhRi0wA" source="_zLujE5eaEe2H8pIyhRi0wA" target="_zLujFpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLujG5eaEe2H8pIyhRi0wA" source="_zLujFJeaEe2H8pIyhRi0wA" target="_zLujFZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode/down"/>
+      </edges>
+      <edges xmi:id="_zLujHJeaEe2H8pIyhRi0wA" source="_zLujFpeaEe2H8pIyhRi0wA" target="_zLujF5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLujHZeaEe2H8pIyhRi0wA" source="_zLujF5eaEe2H8pIyhRi0wA" target="_zLujFJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_zLujHpeaEe2H8pIyhRi0wA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_zLujH5eaEe2H8pIyhRi0wA">
+          <conclusion xmi:id="_zLujIJeaEe2H8pIyhRi0wA" name="forbid">
+            <nodes xmi:id="_zLujIZeaEe2H8pIyhRi0wA" name="n7" outgoing="_zLujJ5eaEe2H8pIyhRi0wA _zLujKJeaEe2H8pIyhRi0wA _zLujKZeaEe2H8pIyhRi0wA _zLujKpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+              <attributes xmi:id="_zLujIpeaEe2H8pIyhRi0wA" value="&quot;Ghost Move Down&quot;">
+                <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_zLujI5eaEe2H8pIyhRi0wA" name="n0" incoming="_zLujJ5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+            </nodes>
+            <nodes xmi:id="_zLujJJeaEe2H8pIyhRi0wA" name="n2" incoming="_zLujKJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLujJZeaEe2H8pIyhRi0wA" name="n1" incoming="_zLujKZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLujJpeaEe2H8pIyhRi0wA" name="n3" incoming="_zLujKpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+            </nodes>
+            <edges xmi:id="_zLujJ5eaEe2H8pIyhRi0wA" source="_zLujIZeaEe2H8pIyhRi0wA" target="_zLujI5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+            </edges>
+            <edges xmi:id="_zLujKJeaEe2H8pIyhRi0wA" source="_zLujIZeaEe2H8pIyhRi0wA" target="_zLujJJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLujKZeaEe2H8pIyhRi0wA" source="_zLujIZeaEe2H8pIyhRi0wA" target="_zLujJZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLujKpeaEe2H8pIyhRi0wA" source="_zLujIZeaEe2H8pIyhRi0wA" target="_zLujJpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_zLujK5eaEe2H8pIyhRi0wA" origin="_zLujE5eaEe2H8pIyhRi0wA" image="_zLujI5eaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLujLJeaEe2H8pIyhRi0wA" origin="_zLujFZeaEe2H8pIyhRi0wA" image="_zLujJJeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLujLZeaEe2H8pIyhRi0wA" origin="_zLujFJeaEe2H8pIyhRi0wA" image="_zLujJZeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLujLpeaEe2H8pIyhRi0wA" origin="_zLujFpeaEe2H8pIyhRi0wA" image="_zLujJpeaEe2H8pIyhRi0wA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_zLujL5eaEe2H8pIyhRi0wA" name="PacmanMoveDown_RHS">
+      <nodes xmi:id="_zLujMJeaEe2H8pIyhRi0wA" name="n0" incoming="_zLujPZeaEe2H8pIyhRi0wA" outgoing="_zLujN5eaEe2H8pIyhRi0wA _zLujOJeaEe2H8pIyhRi0wA _zLujOZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLujMZeaEe2H8pIyhRi0wA" name="n1" incoming="_zLujN5eaEe2H8pIyhRi0wA _zLujP5eaEe2H8pIyhRi0wA" outgoing="_zLujOpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLujMpeaEe2H8pIyhRi0wA" name="n2" incoming="_zLujOJeaEe2H8pIyhRi0wA _zLujOpeaEe2H8pIyhRi0wA _zLujPJeaEe2H8pIyhRi0wA _zLujPpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLujM5eaEe2H8pIyhRi0wA" name="n3" incoming="_zLujOZeaEe2H8pIyhRi0wA _zLujQJeaEe2H8pIyhRi0wA" outgoing="_zLujO5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_zLujNJeaEe2H8pIyhRi0wA" name="n5" incoming="_zLujO5eaEe2H8pIyhRi0wA" outgoing="_zLujPJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <nodes xmi:id="_zLujNZeaEe2H8pIyhRi0wA" name="n6" outgoing="_zLujPZeaEe2H8pIyhRi0wA _zLujPpeaEe2H8pIyhRi0wA _zLujP5eaEe2H8pIyhRi0wA _zLujQJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_zLujNpeaEe2H8pIyhRi0wA" value="&quot;Ghost Move Down&quot;">
+          <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_zLujN5eaEe2H8pIyhRi0wA" source="_zLujMJeaEe2H8pIyhRi0wA" target="_zLujMZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLujOJeaEe2H8pIyhRi0wA" source="_zLujMJeaEe2H8pIyhRi0wA" target="_zLujMpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLujOZeaEe2H8pIyhRi0wA" source="_zLujMJeaEe2H8pIyhRi0wA" target="_zLujM5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLujOpeaEe2H8pIyhRi0wA" source="_zLujMZeaEe2H8pIyhRi0wA" target="_zLujMpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode/down"/>
+      </edges>
+      <edges xmi:id="_zLujO5eaEe2H8pIyhRi0wA" source="_zLujM5eaEe2H8pIyhRi0wA" target="_zLujNJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLujPJeaEe2H8pIyhRi0wA" source="_zLujNJeaEe2H8pIyhRi0wA" target="_zLujMpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_zLujPZeaEe2H8pIyhRi0wA" source="_zLujNZeaEe2H8pIyhRi0wA" target="_zLujMJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+      </edges>
+      <edges xmi:id="_zLujPpeaEe2H8pIyhRi0wA" source="_zLujNZeaEe2H8pIyhRi0wA" target="_zLujMpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLujP5eaEe2H8pIyhRi0wA" source="_zLujNZeaEe2H8pIyhRi0wA" target="_zLujMZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLujQJeaEe2H8pIyhRi0wA" source="_zLujNZeaEe2H8pIyhRi0wA" target="_zLujM5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_zLujQZeaEe2H8pIyhRi0wA" conditionText="((n4diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Left==&quot;ADD&quot;)) || ((n4diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_zLujQpeaEe2H8pIyhRi0wA" origin="_zLujE5eaEe2H8pIyhRi0wA" image="_zLujMJeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLujQ5eaEe2H8pIyhRi0wA" origin="_zLujFJeaEe2H8pIyhRi0wA" image="_zLujMZeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLujRJeaEe2H8pIyhRi0wA" origin="_zLujFZeaEe2H8pIyhRi0wA" image="_zLujMpeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLujRZeaEe2H8pIyhRi0wA" origin="_zLujFpeaEe2H8pIyhRi0wA" image="_zLujM5eaEe2H8pIyhRi0wA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_zLujRpeaEe2H8pIyhRi0wA" name="GhostMoveDown">
+    <parameters xmi:id="_zLujR5eaEe2H8pIyhRi0wA" name="n4diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLujSJeaEe2H8pIyhRi0wA" name="n4diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLujSZeaEe2H8pIyhRi0wA" name="n5diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLujSpeaEe2H8pIyhRi0wA" name="n5diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_zLujS5eaEe2H8pIyhRi0wA" name="GhostMoveDown_LHS">
+      <nodes xmi:id="_zLujTJeaEe2H8pIyhRi0wA" name="n0" outgoing="_zLujUZeaEe2H8pIyhRi0wA _zLujUpeaEe2H8pIyhRi0wA _zLujU5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLujTZeaEe2H8pIyhRi0wA" name="n1" incoming="_zLujUZeaEe2H8pIyhRi0wA _zLujVpeaEe2H8pIyhRi0wA" outgoing="_zLujVJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLujTpeaEe2H8pIyhRi0wA" name="n2" incoming="_zLujUpeaEe2H8pIyhRi0wA _zLujVJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLujT5eaEe2H8pIyhRi0wA" name="n3" incoming="_zLujU5eaEe2H8pIyhRi0wA" outgoing="_zLujVZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_zLujUJeaEe2H8pIyhRi0wA" name="n4" incoming="_zLujVZeaEe2H8pIyhRi0wA" outgoing="_zLujVpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_zLujUZeaEe2H8pIyhRi0wA" source="_zLujTJeaEe2H8pIyhRi0wA" target="_zLujTZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLujUpeaEe2H8pIyhRi0wA" source="_zLujTJeaEe2H8pIyhRi0wA" target="_zLujTpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLujU5eaEe2H8pIyhRi0wA" source="_zLujTJeaEe2H8pIyhRi0wA" target="_zLujT5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLujVJeaEe2H8pIyhRi0wA" source="_zLujTZeaEe2H8pIyhRi0wA" target="_zLujTpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode/down"/>
+      </edges>
+      <edges xmi:id="_zLujVZeaEe2H8pIyhRi0wA" source="_zLujT5eaEe2H8pIyhRi0wA" target="_zLujUJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLujVpeaEe2H8pIyhRi0wA" source="_zLujUJeaEe2H8pIyhRi0wA" target="_zLujTZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_zLujV5eaEe2H8pIyhRi0wA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_zLujWJeaEe2H8pIyhRi0wA">
+          <conclusion xmi:id="_zLujWZeaEe2H8pIyhRi0wA" name="forbid">
+            <nodes xmi:id="_zLujWpeaEe2H8pIyhRi0wA" name="n7" outgoing="_zLujYJeaEe2H8pIyhRi0wA _zLujYZeaEe2H8pIyhRi0wA _zLujYpeaEe2H8pIyhRi0wA _zLujY5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+              <attributes xmi:id="_zLujW5eaEe2H8pIyhRi0wA" value="&quot;Ghost Move Down&quot;">
+                <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_zLujXJeaEe2H8pIyhRi0wA" name="n0" incoming="_zLujYJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+            </nodes>
+            <nodes xmi:id="_zLujXZeaEe2H8pIyhRi0wA" name="n2" incoming="_zLujYZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLujXpeaEe2H8pIyhRi0wA" name="n1" incoming="_zLujYpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLujX5eaEe2H8pIyhRi0wA" name="n3" incoming="_zLujY5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+            </nodes>
+            <edges xmi:id="_zLujYJeaEe2H8pIyhRi0wA" source="_zLujWpeaEe2H8pIyhRi0wA" target="_zLujXJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+            </edges>
+            <edges xmi:id="_zLujYZeaEe2H8pIyhRi0wA" source="_zLujWpeaEe2H8pIyhRi0wA" target="_zLujXZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLujYpeaEe2H8pIyhRi0wA" source="_zLujWpeaEe2H8pIyhRi0wA" target="_zLujXpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLujY5eaEe2H8pIyhRi0wA" source="_zLujWpeaEe2H8pIyhRi0wA" target="_zLujX5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_zLujZJeaEe2H8pIyhRi0wA" origin="_zLujTJeaEe2H8pIyhRi0wA" image="_zLujXJeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLujZZeaEe2H8pIyhRi0wA" origin="_zLujTpeaEe2H8pIyhRi0wA" image="_zLujXZeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLujZpeaEe2H8pIyhRi0wA" origin="_zLujTZeaEe2H8pIyhRi0wA" image="_zLujXpeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLujZ5eaEe2H8pIyhRi0wA" origin="_zLujT5eaEe2H8pIyhRi0wA" image="_zLujX5eaEe2H8pIyhRi0wA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_zLujaJeaEe2H8pIyhRi0wA" name="GhostMoveDown_RHS">
+      <nodes xmi:id="_zLujaZeaEe2H8pIyhRi0wA" name="n0" incoming="_zLujdpeaEe2H8pIyhRi0wA" outgoing="_zLujcJeaEe2H8pIyhRi0wA _zLujcZeaEe2H8pIyhRi0wA _zLujcpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLujapeaEe2H8pIyhRi0wA" name="n1" incoming="_zLujcJeaEe2H8pIyhRi0wA _zLujeJeaEe2H8pIyhRi0wA" outgoing="_zLujc5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLuja5eaEe2H8pIyhRi0wA" name="n2" incoming="_zLujcZeaEe2H8pIyhRi0wA _zLujc5eaEe2H8pIyhRi0wA _zLujdZeaEe2H8pIyhRi0wA _zLujd5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLujbJeaEe2H8pIyhRi0wA" name="n3" incoming="_zLujcpeaEe2H8pIyhRi0wA _zLujeZeaEe2H8pIyhRi0wA" outgoing="_zLujdJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_zLujbZeaEe2H8pIyhRi0wA" name="n5" incoming="_zLujdJeaEe2H8pIyhRi0wA" outgoing="_zLujdZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <nodes xmi:id="_zLujbpeaEe2H8pIyhRi0wA" name="n6" outgoing="_zLujdpeaEe2H8pIyhRi0wA _zLujd5eaEe2H8pIyhRi0wA _zLujeJeaEe2H8pIyhRi0wA _zLujeZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_zLujb5eaEe2H8pIyhRi0wA" value="&quot;Ghost Move Down&quot;">
+          <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_zLujcJeaEe2H8pIyhRi0wA" source="_zLujaZeaEe2H8pIyhRi0wA" target="_zLujapeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLujcZeaEe2H8pIyhRi0wA" source="_zLujaZeaEe2H8pIyhRi0wA" target="_zLuja5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLujcpeaEe2H8pIyhRi0wA" source="_zLujaZeaEe2H8pIyhRi0wA" target="_zLujbJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLujc5eaEe2H8pIyhRi0wA" source="_zLujapeaEe2H8pIyhRi0wA" target="_zLuja5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode/down"/>
+      </edges>
+      <edges xmi:id="_zLujdJeaEe2H8pIyhRi0wA" source="_zLujbJeaEe2H8pIyhRi0wA" target="_zLujbZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLujdZeaEe2H8pIyhRi0wA" source="_zLujbZeaEe2H8pIyhRi0wA" target="_zLuja5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_zLujdpeaEe2H8pIyhRi0wA" source="_zLujbpeaEe2H8pIyhRi0wA" target="_zLujaZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+      </edges>
+      <edges xmi:id="_zLujd5eaEe2H8pIyhRi0wA" source="_zLujbpeaEe2H8pIyhRi0wA" target="_zLuja5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLujeJeaEe2H8pIyhRi0wA" source="_zLujbpeaEe2H8pIyhRi0wA" target="_zLujapeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLujeZeaEe2H8pIyhRi0wA" source="_zLujbpeaEe2H8pIyhRi0wA" target="_zLujbJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_zLujepeaEe2H8pIyhRi0wA" conditionText="((n4diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Left==&quot;ADD&quot;)) || ((n4diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_zLuje5eaEe2H8pIyhRi0wA" origin="_zLujTJeaEe2H8pIyhRi0wA" image="_zLujaZeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLujfJeaEe2H8pIyhRi0wA" origin="_zLujTZeaEe2H8pIyhRi0wA" image="_zLujapeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLujfZeaEe2H8pIyhRi0wA" origin="_zLujTpeaEe2H8pIyhRi0wA" image="_zLuja5eaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLujfpeaEe2H8pIyhRi0wA" origin="_zLujT5eaEe2H8pIyhRi0wA" image="_zLujbJeaEe2H8pIyhRi0wA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_zLujf5eaEe2H8pIyhRi0wA" name="PacmanMoveRight">
+    <parameters xmi:id="_zLujgJeaEe2H8pIyhRi0wA" name="n4diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLujgZeaEe2H8pIyhRi0wA" name="n4diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLujgpeaEe2H8pIyhRi0wA" name="n5diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLujg5eaEe2H8pIyhRi0wA" name="n5diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_zLujhJeaEe2H8pIyhRi0wA" name="PacmanMoveRight_LHS">
+      <nodes xmi:id="_zLujhZeaEe2H8pIyhRi0wA" name="n0" outgoing="_zLujipeaEe2H8pIyhRi0wA _zLuji5eaEe2H8pIyhRi0wA _zLujjJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLujhpeaEe2H8pIyhRi0wA" name="n1" incoming="_zLujipeaEe2H8pIyhRi0wA _zLujj5eaEe2H8pIyhRi0wA" outgoing="_zLujjZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLujh5eaEe2H8pIyhRi0wA" name="n2" incoming="_zLuji5eaEe2H8pIyhRi0wA _zLujjZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLujiJeaEe2H8pIyhRi0wA" name="n3" incoming="_zLujjJeaEe2H8pIyhRi0wA" outgoing="_zLujjpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_zLujiZeaEe2H8pIyhRi0wA" name="n4" incoming="_zLujjpeaEe2H8pIyhRi0wA" outgoing="_zLujj5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_zLujipeaEe2H8pIyhRi0wA" source="_zLujhZeaEe2H8pIyhRi0wA" target="_zLujhpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLuji5eaEe2H8pIyhRi0wA" source="_zLujhZeaEe2H8pIyhRi0wA" target="_zLujh5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLujjJeaEe2H8pIyhRi0wA" source="_zLujhZeaEe2H8pIyhRi0wA" target="_zLujiJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLujjZeaEe2H8pIyhRi0wA" source="_zLujhpeaEe2H8pIyhRi0wA" target="_zLujh5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode/right"/>
+      </edges>
+      <edges xmi:id="_zLujjpeaEe2H8pIyhRi0wA" source="_zLujiJeaEe2H8pIyhRi0wA" target="_zLujiZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLujj5eaEe2H8pIyhRi0wA" source="_zLujiZeaEe2H8pIyhRi0wA" target="_zLujhpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_zLujkJeaEe2H8pIyhRi0wA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_zLujkZeaEe2H8pIyhRi0wA">
+          <conclusion xmi:id="_zLujkpeaEe2H8pIyhRi0wA" name="forbid">
+            <nodes xmi:id="_zLujk5eaEe2H8pIyhRi0wA" name="n7" outgoing="_zLujmZeaEe2H8pIyhRi0wA _zLujmpeaEe2H8pIyhRi0wA _zLujm5eaEe2H8pIyhRi0wA _zLujnJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+              <attributes xmi:id="_zLujlJeaEe2H8pIyhRi0wA" value="&quot;Ghost Move Left&quot;">
+                <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_zLujlZeaEe2H8pIyhRi0wA" name="n0" incoming="_zLujmZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+            </nodes>
+            <nodes xmi:id="_zLujlpeaEe2H8pIyhRi0wA" name="n2" incoming="_zLujmpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLujl5eaEe2H8pIyhRi0wA" name="n1" incoming="_zLujm5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLujmJeaEe2H8pIyhRi0wA" name="n3" incoming="_zLujnJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+            </nodes>
+            <edges xmi:id="_zLujmZeaEe2H8pIyhRi0wA" source="_zLujk5eaEe2H8pIyhRi0wA" target="_zLujlZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+            </edges>
+            <edges xmi:id="_zLujmpeaEe2H8pIyhRi0wA" source="_zLujk5eaEe2H8pIyhRi0wA" target="_zLujlpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLujm5eaEe2H8pIyhRi0wA" source="_zLujk5eaEe2H8pIyhRi0wA" target="_zLujl5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLujnJeaEe2H8pIyhRi0wA" source="_zLujk5eaEe2H8pIyhRi0wA" target="_zLujmJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_zLujnZeaEe2H8pIyhRi0wA" origin="_zLujhZeaEe2H8pIyhRi0wA" image="_zLujlZeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLujnpeaEe2H8pIyhRi0wA" origin="_zLujh5eaEe2H8pIyhRi0wA" image="_zLujlpeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLujn5eaEe2H8pIyhRi0wA" origin="_zLujhpeaEe2H8pIyhRi0wA" image="_zLujl5eaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLujoJeaEe2H8pIyhRi0wA" origin="_zLujiJeaEe2H8pIyhRi0wA" image="_zLujmJeaEe2H8pIyhRi0wA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_zLujoZeaEe2H8pIyhRi0wA" name="PacmanMoveRight_RHS">
+      <nodes xmi:id="_zLujopeaEe2H8pIyhRi0wA" name="n0" incoming="_zLujr5eaEe2H8pIyhRi0wA" outgoing="_zLujqZeaEe2H8pIyhRi0wA _zLujqpeaEe2H8pIyhRi0wA _zLujq5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLujo5eaEe2H8pIyhRi0wA" name="n1" incoming="_zLujqZeaEe2H8pIyhRi0wA _zLujsZeaEe2H8pIyhRi0wA" outgoing="_zLujrJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLujpJeaEe2H8pIyhRi0wA" name="n2" incoming="_zLujqpeaEe2H8pIyhRi0wA _zLujrJeaEe2H8pIyhRi0wA _zLujrpeaEe2H8pIyhRi0wA _zLujsJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLujpZeaEe2H8pIyhRi0wA" name="n3" incoming="_zLujq5eaEe2H8pIyhRi0wA _zLujspeaEe2H8pIyhRi0wA" outgoing="_zLujrZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_zLujppeaEe2H8pIyhRi0wA" name="n5" incoming="_zLujrZeaEe2H8pIyhRi0wA" outgoing="_zLujrpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <nodes xmi:id="_zLujp5eaEe2H8pIyhRi0wA" name="n6" outgoing="_zLujr5eaEe2H8pIyhRi0wA _zLujsJeaEe2H8pIyhRi0wA _zLujsZeaEe2H8pIyhRi0wA _zLujspeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_zLujqJeaEe2H8pIyhRi0wA" value="&quot;Ghost Move Left&quot;">
+          <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_zLujqZeaEe2H8pIyhRi0wA" source="_zLujopeaEe2H8pIyhRi0wA" target="_zLujo5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLujqpeaEe2H8pIyhRi0wA" source="_zLujopeaEe2H8pIyhRi0wA" target="_zLujpJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLujq5eaEe2H8pIyhRi0wA" source="_zLujopeaEe2H8pIyhRi0wA" target="_zLujpZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLujrJeaEe2H8pIyhRi0wA" source="_zLujo5eaEe2H8pIyhRi0wA" target="_zLujpJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode/right"/>
+      </edges>
+      <edges xmi:id="_zLujrZeaEe2H8pIyhRi0wA" source="_zLujpZeaEe2H8pIyhRi0wA" target="_zLujppeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLujrpeaEe2H8pIyhRi0wA" source="_zLujppeaEe2H8pIyhRi0wA" target="_zLujpJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_zLujr5eaEe2H8pIyhRi0wA" source="_zLujp5eaEe2H8pIyhRi0wA" target="_zLujopeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+      </edges>
+      <edges xmi:id="_zLujsJeaEe2H8pIyhRi0wA" source="_zLujp5eaEe2H8pIyhRi0wA" target="_zLujpJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLujsZeaEe2H8pIyhRi0wA" source="_zLujp5eaEe2H8pIyhRi0wA" target="_zLujo5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLujspeaEe2H8pIyhRi0wA" source="_zLujp5eaEe2H8pIyhRi0wA" target="_zLujpZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_zLujs5eaEe2H8pIyhRi0wA" conditionText="((n4diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Left==&quot;ADD&quot;)) || ((n4diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_zLujtJeaEe2H8pIyhRi0wA" origin="_zLujhZeaEe2H8pIyhRi0wA" image="_zLujopeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLujtZeaEe2H8pIyhRi0wA" origin="_zLujhpeaEe2H8pIyhRi0wA" image="_zLujo5eaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLujtpeaEe2H8pIyhRi0wA" origin="_zLujh5eaEe2H8pIyhRi0wA" image="_zLujpJeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLujt5eaEe2H8pIyhRi0wA" origin="_zLujiJeaEe2H8pIyhRi0wA" image="_zLujpZeaEe2H8pIyhRi0wA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_zLujuJeaEe2H8pIyhRi0wA" name="GhostMoveRight">
+    <parameters xmi:id="_zLujuZeaEe2H8pIyhRi0wA" name="n4diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLujupeaEe2H8pIyhRi0wA" name="n4diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuju5eaEe2H8pIyhRi0wA" name="n5diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLujvJeaEe2H8pIyhRi0wA" name="n5diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_zLujvZeaEe2H8pIyhRi0wA" name="GhostMoveRight_LHS">
+      <nodes xmi:id="_zLujvpeaEe2H8pIyhRi0wA" name="n0" outgoing="_zLujw5eaEe2H8pIyhRi0wA _zLujxJeaEe2H8pIyhRi0wA _zLujxZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLujv5eaEe2H8pIyhRi0wA" name="n1" incoming="_zLujw5eaEe2H8pIyhRi0wA _zLujyJeaEe2H8pIyhRi0wA" outgoing="_zLujxpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLujwJeaEe2H8pIyhRi0wA" name="n2" incoming="_zLujxJeaEe2H8pIyhRi0wA _zLujxpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLujwZeaEe2H8pIyhRi0wA" name="n3" incoming="_zLujxZeaEe2H8pIyhRi0wA" outgoing="_zLujx5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_zLujwpeaEe2H8pIyhRi0wA" name="n4" incoming="_zLujx5eaEe2H8pIyhRi0wA" outgoing="_zLujyJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_zLujw5eaEe2H8pIyhRi0wA" source="_zLujvpeaEe2H8pIyhRi0wA" target="_zLujv5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLujxJeaEe2H8pIyhRi0wA" source="_zLujvpeaEe2H8pIyhRi0wA" target="_zLujwJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLujxZeaEe2H8pIyhRi0wA" source="_zLujvpeaEe2H8pIyhRi0wA" target="_zLujwZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLujxpeaEe2H8pIyhRi0wA" source="_zLujv5eaEe2H8pIyhRi0wA" target="_zLujwJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode/right"/>
+      </edges>
+      <edges xmi:id="_zLujx5eaEe2H8pIyhRi0wA" source="_zLujwZeaEe2H8pIyhRi0wA" target="_zLujwpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLujyJeaEe2H8pIyhRi0wA" source="_zLujwpeaEe2H8pIyhRi0wA" target="_zLujv5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_zLujyZeaEe2H8pIyhRi0wA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_zLujypeaEe2H8pIyhRi0wA">
+          <conclusion xmi:id="_zLujy5eaEe2H8pIyhRi0wA" name="forbid">
+            <nodes xmi:id="_zLujzJeaEe2H8pIyhRi0wA" name="n7" outgoing="_zLuj0peaEe2H8pIyhRi0wA _zLuj05eaEe2H8pIyhRi0wA _zLuj1JeaEe2H8pIyhRi0wA _zLuj1ZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+              <attributes xmi:id="_zLujzZeaEe2H8pIyhRi0wA" value="&quot;Ghost Move Right&quot;">
+                <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_zLujzpeaEe2H8pIyhRi0wA" name="n0" incoming="_zLuj0peaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+            </nodes>
+            <nodes xmi:id="_zLujz5eaEe2H8pIyhRi0wA" name="n2" incoming="_zLuj05eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLuj0JeaEe2H8pIyhRi0wA" name="n1" incoming="_zLuj1JeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLuj0ZeaEe2H8pIyhRi0wA" name="n3" incoming="_zLuj1ZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+            </nodes>
+            <edges xmi:id="_zLuj0peaEe2H8pIyhRi0wA" source="_zLujzJeaEe2H8pIyhRi0wA" target="_zLujzpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+            </edges>
+            <edges xmi:id="_zLuj05eaEe2H8pIyhRi0wA" source="_zLujzJeaEe2H8pIyhRi0wA" target="_zLujz5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLuj1JeaEe2H8pIyhRi0wA" source="_zLujzJeaEe2H8pIyhRi0wA" target="_zLuj0JeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLuj1ZeaEe2H8pIyhRi0wA" source="_zLujzJeaEe2H8pIyhRi0wA" target="_zLuj0ZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_zLuj1peaEe2H8pIyhRi0wA" origin="_zLujvpeaEe2H8pIyhRi0wA" image="_zLujzpeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLuj15eaEe2H8pIyhRi0wA" origin="_zLujwJeaEe2H8pIyhRi0wA" image="_zLujz5eaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLuj2JeaEe2H8pIyhRi0wA" origin="_zLujv5eaEe2H8pIyhRi0wA" image="_zLuj0JeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLuj2ZeaEe2H8pIyhRi0wA" origin="_zLujwZeaEe2H8pIyhRi0wA" image="_zLuj0ZeaEe2H8pIyhRi0wA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_zLuj2peaEe2H8pIyhRi0wA" name="GhostMoveRight_RHS">
+      <nodes xmi:id="_zLuj25eaEe2H8pIyhRi0wA" name="n0" incoming="_zLuj6JeaEe2H8pIyhRi0wA" outgoing="_zLuj4peaEe2H8pIyhRi0wA _zLuj45eaEe2H8pIyhRi0wA _zLuj5JeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLuj3JeaEe2H8pIyhRi0wA" name="n1" incoming="_zLuj4peaEe2H8pIyhRi0wA _zLuj6peaEe2H8pIyhRi0wA" outgoing="_zLuj5ZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLuj3ZeaEe2H8pIyhRi0wA" name="n2" incoming="_zLuj45eaEe2H8pIyhRi0wA _zLuj5ZeaEe2H8pIyhRi0wA _zLuj55eaEe2H8pIyhRi0wA _zLuj6ZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLuj3peaEe2H8pIyhRi0wA" name="n3" incoming="_zLuj5JeaEe2H8pIyhRi0wA _zLuj65eaEe2H8pIyhRi0wA" outgoing="_zLuj5peaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_zLuj35eaEe2H8pIyhRi0wA" name="n5" incoming="_zLuj5peaEe2H8pIyhRi0wA" outgoing="_zLuj55eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <nodes xmi:id="_zLuj4JeaEe2H8pIyhRi0wA" name="n6" outgoing="_zLuj6JeaEe2H8pIyhRi0wA _zLuj6ZeaEe2H8pIyhRi0wA _zLuj6peaEe2H8pIyhRi0wA _zLuj65eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_zLuj4ZeaEe2H8pIyhRi0wA" value="&quot;Ghost Move Right&quot;">
+          <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_zLuj4peaEe2H8pIyhRi0wA" source="_zLuj25eaEe2H8pIyhRi0wA" target="_zLuj3JeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLuj45eaEe2H8pIyhRi0wA" source="_zLuj25eaEe2H8pIyhRi0wA" target="_zLuj3ZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLuj5JeaEe2H8pIyhRi0wA" source="_zLuj25eaEe2H8pIyhRi0wA" target="_zLuj3peaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLuj5ZeaEe2H8pIyhRi0wA" source="_zLuj3JeaEe2H8pIyhRi0wA" target="_zLuj3ZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode/right"/>
+      </edges>
+      <edges xmi:id="_zLuj5peaEe2H8pIyhRi0wA" source="_zLuj3peaEe2H8pIyhRi0wA" target="_zLuj35eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLuj55eaEe2H8pIyhRi0wA" source="_zLuj35eaEe2H8pIyhRi0wA" target="_zLuj3ZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_zLuj6JeaEe2H8pIyhRi0wA" source="_zLuj4JeaEe2H8pIyhRi0wA" target="_zLuj25eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+      </edges>
+      <edges xmi:id="_zLuj6ZeaEe2H8pIyhRi0wA" source="_zLuj4JeaEe2H8pIyhRi0wA" target="_zLuj3ZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLuj6peaEe2H8pIyhRi0wA" source="_zLuj4JeaEe2H8pIyhRi0wA" target="_zLuj3JeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLuj65eaEe2H8pIyhRi0wA" source="_zLuj4JeaEe2H8pIyhRi0wA" target="_zLuj3peaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_zLuj7JeaEe2H8pIyhRi0wA" conditionText="((n4diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Left==&quot;ADD&quot;)) || ((n4diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_zLuj7ZeaEe2H8pIyhRi0wA" origin="_zLujvpeaEe2H8pIyhRi0wA" image="_zLuj25eaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLuj7peaEe2H8pIyhRi0wA" origin="_zLujv5eaEe2H8pIyhRi0wA" image="_zLuj3JeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLuj75eaEe2H8pIyhRi0wA" origin="_zLujwJeaEe2H8pIyhRi0wA" image="_zLuj3ZeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLuj8JeaEe2H8pIyhRi0wA" origin="_zLujwZeaEe2H8pIyhRi0wA" image="_zLuj3peaEe2H8pIyhRi0wA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_zLuj8ZeaEe2H8pIyhRi0wA" name="PacmanMoveLeft">
+    <parameters xmi:id="_zLuj8peaEe2H8pIyhRi0wA" name="n4diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuj85eaEe2H8pIyhRi0wA" name="n4diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuj9JeaEe2H8pIyhRi0wA" name="n5diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuj9ZeaEe2H8pIyhRi0wA" name="n5diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_zLuj9peaEe2H8pIyhRi0wA" name="PacmanMoveLeft_LHS">
+      <nodes xmi:id="_zLuj95eaEe2H8pIyhRi0wA" name="n0" outgoing="_zLuj_JeaEe2H8pIyhRi0wA _zLuj_ZeaEe2H8pIyhRi0wA _zLuj_peaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLuj-JeaEe2H8pIyhRi0wA" name="n1" incoming="_zLuj_JeaEe2H8pIyhRi0wA _zLukAJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLuj-ZeaEe2H8pIyhRi0wA" name="n2" incoming="_zLuj_ZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLuj-peaEe2H8pIyhRi0wA" name="n3" incoming="_zLuj_peaEe2H8pIyhRi0wA" outgoing="_zLuj_5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_zLuj-5eaEe2H8pIyhRi0wA" name="n4" incoming="_zLuj_5eaEe2H8pIyhRi0wA" outgoing="_zLukAJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_zLuj_JeaEe2H8pIyhRi0wA" source="_zLuj95eaEe2H8pIyhRi0wA" target="_zLuj-JeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLuj_ZeaEe2H8pIyhRi0wA" source="_zLuj95eaEe2H8pIyhRi0wA" target="_zLuj-ZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLuj_peaEe2H8pIyhRi0wA" source="_zLuj95eaEe2H8pIyhRi0wA" target="_zLuj-peaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLuj_5eaEe2H8pIyhRi0wA" source="_zLuj-peaEe2H8pIyhRi0wA" target="_zLuj-5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLukAJeaEe2H8pIyhRi0wA" source="_zLuj-5eaEe2H8pIyhRi0wA" target="_zLuj-JeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_zLukAZeaEe2H8pIyhRi0wA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_zLukApeaEe2H8pIyhRi0wA">
+          <conclusion xmi:id="_zLukA5eaEe2H8pIyhRi0wA" name="forbid">
+            <nodes xmi:id="_zLukBJeaEe2H8pIyhRi0wA" name="n7" outgoing="_zLukCpeaEe2H8pIyhRi0wA _zLukC5eaEe2H8pIyhRi0wA _zLukDJeaEe2H8pIyhRi0wA _zLukDZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+              <attributes xmi:id="_zLukBZeaEe2H8pIyhRi0wA" value="&quot;Pacman Move Left&quot;">
+                <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_zLukBpeaEe2H8pIyhRi0wA" name="n0" incoming="_zLukCpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+            </nodes>
+            <nodes xmi:id="_zLukB5eaEe2H8pIyhRi0wA" name="n1" incoming="_zLukC5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLukCJeaEe2H8pIyhRi0wA" name="n2" incoming="_zLukDJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLukCZeaEe2H8pIyhRi0wA" name="n3" incoming="_zLukDZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+            </nodes>
+            <edges xmi:id="_zLukCpeaEe2H8pIyhRi0wA" source="_zLukBJeaEe2H8pIyhRi0wA" target="_zLukBpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+            </edges>
+            <edges xmi:id="_zLukC5eaEe2H8pIyhRi0wA" source="_zLukBJeaEe2H8pIyhRi0wA" target="_zLukB5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLukDJeaEe2H8pIyhRi0wA" source="_zLukBJeaEe2H8pIyhRi0wA" target="_zLukCJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLukDZeaEe2H8pIyhRi0wA" source="_zLukBJeaEe2H8pIyhRi0wA" target="_zLukCZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_zLukDpeaEe2H8pIyhRi0wA" origin="_zLuj95eaEe2H8pIyhRi0wA" image="_zLukBpeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLukD5eaEe2H8pIyhRi0wA" origin="_zLuj-JeaEe2H8pIyhRi0wA" image="_zLukB5eaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLukEJeaEe2H8pIyhRi0wA" origin="_zLuj-ZeaEe2H8pIyhRi0wA" image="_zLukCJeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLukEZeaEe2H8pIyhRi0wA" origin="_zLuj-peaEe2H8pIyhRi0wA" image="_zLukCZeaEe2H8pIyhRi0wA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_zLukEpeaEe2H8pIyhRi0wA" name="PacmanMoveLeft_RHS">
+      <nodes xmi:id="_zLukE5eaEe2H8pIyhRi0wA" name="n0" incoming="_zLukH5eaEe2H8pIyhRi0wA" outgoing="_zLukGpeaEe2H8pIyhRi0wA _zLukG5eaEe2H8pIyhRi0wA _zLukHJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLukFJeaEe2H8pIyhRi0wA" name="n1" incoming="_zLukGpeaEe2H8pIyhRi0wA _zLukIJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLukFZeaEe2H8pIyhRi0wA" name="n2" incoming="_zLukG5eaEe2H8pIyhRi0wA _zLukHpeaEe2H8pIyhRi0wA _zLukIZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLukFpeaEe2H8pIyhRi0wA" name="n3" incoming="_zLukHJeaEe2H8pIyhRi0wA _zLukIpeaEe2H8pIyhRi0wA" outgoing="_zLukHZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_zLukF5eaEe2H8pIyhRi0wA" name="n5" incoming="_zLukHZeaEe2H8pIyhRi0wA" outgoing="_zLukHpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <nodes xmi:id="_zLukGJeaEe2H8pIyhRi0wA" name="n6" outgoing="_zLukH5eaEe2H8pIyhRi0wA _zLukIJeaEe2H8pIyhRi0wA _zLukIZeaEe2H8pIyhRi0wA _zLukIpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_zLukGZeaEe2H8pIyhRi0wA" value="&quot;Pacman Move Left&quot;">
+          <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_zLukGpeaEe2H8pIyhRi0wA" source="_zLukE5eaEe2H8pIyhRi0wA" target="_zLukFJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLukG5eaEe2H8pIyhRi0wA" source="_zLukE5eaEe2H8pIyhRi0wA" target="_zLukFZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLukHJeaEe2H8pIyhRi0wA" source="_zLukE5eaEe2H8pIyhRi0wA" target="_zLukFpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLukHZeaEe2H8pIyhRi0wA" source="_zLukFpeaEe2H8pIyhRi0wA" target="_zLukF5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLukHpeaEe2H8pIyhRi0wA" source="_zLukF5eaEe2H8pIyhRi0wA" target="_zLukFZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_zLukH5eaEe2H8pIyhRi0wA" source="_zLukGJeaEe2H8pIyhRi0wA" target="_zLukE5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+      </edges>
+      <edges xmi:id="_zLukIJeaEe2H8pIyhRi0wA" source="_zLukGJeaEe2H8pIyhRi0wA" target="_zLukFJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLukIZeaEe2H8pIyhRi0wA" source="_zLukGJeaEe2H8pIyhRi0wA" target="_zLukFZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLukIpeaEe2H8pIyhRi0wA" source="_zLukGJeaEe2H8pIyhRi0wA" target="_zLukFpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_zLukI5eaEe2H8pIyhRi0wA" conditionText="((n4diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Left==&quot;ADD&quot;)) || ((n4diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_zLukJJeaEe2H8pIyhRi0wA" origin="_zLuj95eaEe2H8pIyhRi0wA" image="_zLukE5eaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLukJZeaEe2H8pIyhRi0wA" origin="_zLuj-JeaEe2H8pIyhRi0wA" image="_zLukFJeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLukJpeaEe2H8pIyhRi0wA" origin="_zLuj-ZeaEe2H8pIyhRi0wA" image="_zLukFZeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLukJ5eaEe2H8pIyhRi0wA" origin="_zLuj-peaEe2H8pIyhRi0wA" image="_zLukFpeaEe2H8pIyhRi0wA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_zLukKJeaEe2H8pIyhRi0wA" name="GhostMoveLeft">
+    <parameters xmi:id="_zLukKZeaEe2H8pIyhRi0wA" name="n4diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLukKpeaEe2H8pIyhRi0wA" name="n4diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLukK5eaEe2H8pIyhRi0wA" name="n5diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLukLJeaEe2H8pIyhRi0wA" name="n5diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_zLukLZeaEe2H8pIyhRi0wA" name="GhostMoveLeft_LHS">
+      <nodes xmi:id="_zLukLpeaEe2H8pIyhRi0wA" name="n0" outgoing="_zLukM5eaEe2H8pIyhRi0wA _zLukNJeaEe2H8pIyhRi0wA _zLukNZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLukL5eaEe2H8pIyhRi0wA" name="n1" incoming="_zLukM5eaEe2H8pIyhRi0wA _zLukOJeaEe2H8pIyhRi0wA" outgoing="_zLukNpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLukMJeaEe2H8pIyhRi0wA" name="n2" incoming="_zLukNJeaEe2H8pIyhRi0wA _zLukNpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLukMZeaEe2H8pIyhRi0wA" name="n3" incoming="_zLukNZeaEe2H8pIyhRi0wA" outgoing="_zLukN5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_zLukMpeaEe2H8pIyhRi0wA" name="n4" incoming="_zLukN5eaEe2H8pIyhRi0wA" outgoing="_zLukOJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_zLukM5eaEe2H8pIyhRi0wA" source="_zLukLpeaEe2H8pIyhRi0wA" target="_zLukL5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLukNJeaEe2H8pIyhRi0wA" source="_zLukLpeaEe2H8pIyhRi0wA" target="_zLukMJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLukNZeaEe2H8pIyhRi0wA" source="_zLukLpeaEe2H8pIyhRi0wA" target="_zLukMZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLukNpeaEe2H8pIyhRi0wA" source="_zLukL5eaEe2H8pIyhRi0wA" target="_zLukMJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode/left"/>
+      </edges>
+      <edges xmi:id="_zLukN5eaEe2H8pIyhRi0wA" source="_zLukMZeaEe2H8pIyhRi0wA" target="_zLukMpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLukOJeaEe2H8pIyhRi0wA" source="_zLukMpeaEe2H8pIyhRi0wA" target="_zLukL5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_zLukOZeaEe2H8pIyhRi0wA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_zLukOpeaEe2H8pIyhRi0wA">
+          <conclusion xmi:id="_zLukO5eaEe2H8pIyhRi0wA" name="forbid">
+            <nodes xmi:id="_zLukPJeaEe2H8pIyhRi0wA" name="n7" outgoing="_zLukQpeaEe2H8pIyhRi0wA _zLukQ5eaEe2H8pIyhRi0wA _zLukRJeaEe2H8pIyhRi0wA _zLukRZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+              <attributes xmi:id="_zLukPZeaEe2H8pIyhRi0wA" value="&quot;Ghost Move Left&quot;">
+                <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_zLukPpeaEe2H8pIyhRi0wA" name="n0" incoming="_zLukQpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+            </nodes>
+            <nodes xmi:id="_zLukP5eaEe2H8pIyhRi0wA" name="n2" incoming="_zLukQ5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLukQJeaEe2H8pIyhRi0wA" name="n1" incoming="_zLukRJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLukQZeaEe2H8pIyhRi0wA" name="n3" incoming="_zLukRZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+            </nodes>
+            <edges xmi:id="_zLukQpeaEe2H8pIyhRi0wA" source="_zLukPJeaEe2H8pIyhRi0wA" target="_zLukPpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+            </edges>
+            <edges xmi:id="_zLukQ5eaEe2H8pIyhRi0wA" source="_zLukPJeaEe2H8pIyhRi0wA" target="_zLukP5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLukRJeaEe2H8pIyhRi0wA" source="_zLukPJeaEe2H8pIyhRi0wA" target="_zLukQJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLukRZeaEe2H8pIyhRi0wA" source="_zLukPJeaEe2H8pIyhRi0wA" target="_zLukQZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_zLukRpeaEe2H8pIyhRi0wA" origin="_zLukLpeaEe2H8pIyhRi0wA" image="_zLukPpeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLukR5eaEe2H8pIyhRi0wA" origin="_zLukMJeaEe2H8pIyhRi0wA" image="_zLukP5eaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLukSJeaEe2H8pIyhRi0wA" origin="_zLukL5eaEe2H8pIyhRi0wA" image="_zLukQJeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLukSZeaEe2H8pIyhRi0wA" origin="_zLukMZeaEe2H8pIyhRi0wA" image="_zLukQZeaEe2H8pIyhRi0wA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_zLukSpeaEe2H8pIyhRi0wA" name="GhostMoveLeft_RHS">
+      <nodes xmi:id="_zLukS5eaEe2H8pIyhRi0wA" name="n0" incoming="_zLukWJeaEe2H8pIyhRi0wA" outgoing="_zLukUpeaEe2H8pIyhRi0wA _zLukU5eaEe2H8pIyhRi0wA _zLukVJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLukTJeaEe2H8pIyhRi0wA" name="n1" incoming="_zLukUpeaEe2H8pIyhRi0wA _zLukWpeaEe2H8pIyhRi0wA" outgoing="_zLukVZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLukTZeaEe2H8pIyhRi0wA" name="n2" incoming="_zLukU5eaEe2H8pIyhRi0wA _zLukVZeaEe2H8pIyhRi0wA _zLukV5eaEe2H8pIyhRi0wA _zLukWZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLukTpeaEe2H8pIyhRi0wA" name="n3" incoming="_zLukVJeaEe2H8pIyhRi0wA _zLukW5eaEe2H8pIyhRi0wA" outgoing="_zLukVpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_zLukT5eaEe2H8pIyhRi0wA" name="n5" incoming="_zLukVpeaEe2H8pIyhRi0wA" outgoing="_zLukV5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <nodes xmi:id="_zLukUJeaEe2H8pIyhRi0wA" name="n6" outgoing="_zLukWJeaEe2H8pIyhRi0wA _zLukWZeaEe2H8pIyhRi0wA _zLukWpeaEe2H8pIyhRi0wA _zLukW5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_zLukUZeaEe2H8pIyhRi0wA" value="&quot;Ghost Move Left&quot;">
+          <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_zLukUpeaEe2H8pIyhRi0wA" source="_zLukS5eaEe2H8pIyhRi0wA" target="_zLukTJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLukU5eaEe2H8pIyhRi0wA" source="_zLukS5eaEe2H8pIyhRi0wA" target="_zLukTZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLukVJeaEe2H8pIyhRi0wA" source="_zLukS5eaEe2H8pIyhRi0wA" target="_zLukTpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLukVZeaEe2H8pIyhRi0wA" source="_zLukTJeaEe2H8pIyhRi0wA" target="_zLukTZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode/left"/>
+      </edges>
+      <edges xmi:id="_zLukVpeaEe2H8pIyhRi0wA" source="_zLukTpeaEe2H8pIyhRi0wA" target="_zLukT5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLukV5eaEe2H8pIyhRi0wA" source="_zLukT5eaEe2H8pIyhRi0wA" target="_zLukTZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_zLukWJeaEe2H8pIyhRi0wA" source="_zLukUJeaEe2H8pIyhRi0wA" target="_zLukS5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+      </edges>
+      <edges xmi:id="_zLukWZeaEe2H8pIyhRi0wA" source="_zLukUJeaEe2H8pIyhRi0wA" target="_zLukTZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLukWpeaEe2H8pIyhRi0wA" source="_zLukUJeaEe2H8pIyhRi0wA" target="_zLukTJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLukW5eaEe2H8pIyhRi0wA" source="_zLukUJeaEe2H8pIyhRi0wA" target="_zLukTpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_zLukXJeaEe2H8pIyhRi0wA" conditionText="((n4diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Left==&quot;ADD&quot;)) || ((n4diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_zLukXZeaEe2H8pIyhRi0wA" origin="_zLukLpeaEe2H8pIyhRi0wA" image="_zLukS5eaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLukXpeaEe2H8pIyhRi0wA" origin="_zLukL5eaEe2H8pIyhRi0wA" image="_zLukTJeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLukX5eaEe2H8pIyhRi0wA" origin="_zLukMJeaEe2H8pIyhRi0wA" image="_zLukTZeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLukYJeaEe2H8pIyhRi0wA" origin="_zLukMZeaEe2H8pIyhRi0wA" image="_zLukTpeaEe2H8pIyhRi0wA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_zLukYZeaEe2H8pIyhRi0wA" name="PacmanMove">
+    <parameters xmi:id="_zLukYpeaEe2H8pIyhRi0wA" name="n4diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLukY5eaEe2H8pIyhRi0wA" name="n4diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLukZJeaEe2H8pIyhRi0wA" name="n5diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLukZZeaEe2H8pIyhRi0wA" name="n5diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_zLukZpeaEe2H8pIyhRi0wA" name="PacmanMove_LHS">
+      <nodes xmi:id="_zLukZ5eaEe2H8pIyhRi0wA" name="n0" outgoing="_zLukbJeaEe2H8pIyhRi0wA _zLukbZeaEe2H8pIyhRi0wA _zLukbpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLukaJeaEe2H8pIyhRi0wA" name="n1" incoming="_zLukbJeaEe2H8pIyhRi0wA _zLukcJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLukaZeaEe2H8pIyhRi0wA" name="n2" incoming="_zLukbZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLukapeaEe2H8pIyhRi0wA" name="n3" incoming="_zLukbpeaEe2H8pIyhRi0wA" outgoing="_zLukb5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_zLuka5eaEe2H8pIyhRi0wA" name="n4" incoming="_zLukb5eaEe2H8pIyhRi0wA" outgoing="_zLukcJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_zLukbJeaEe2H8pIyhRi0wA" source="_zLukZ5eaEe2H8pIyhRi0wA" target="_zLukaJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLukbZeaEe2H8pIyhRi0wA" source="_zLukZ5eaEe2H8pIyhRi0wA" target="_zLukaZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLukbpeaEe2H8pIyhRi0wA" source="_zLukZ5eaEe2H8pIyhRi0wA" target="_zLukapeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLukb5eaEe2H8pIyhRi0wA" source="_zLukapeaEe2H8pIyhRi0wA" target="_zLuka5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLukcJeaEe2H8pIyhRi0wA" source="_zLuka5eaEe2H8pIyhRi0wA" target="_zLukaJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_zLukcZeaEe2H8pIyhRi0wA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_zLukcpeaEe2H8pIyhRi0wA">
+          <conclusion xmi:id="_zLukc5eaEe2H8pIyhRi0wA" name="forbid">
+            <nodes xmi:id="_zLukdJeaEe2H8pIyhRi0wA" name="n7" outgoing="_zLukepeaEe2H8pIyhRi0wA _zLuke5eaEe2H8pIyhRi0wA _zLukfJeaEe2H8pIyhRi0wA _zLukfZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+              <attributes xmi:id="_zLukdZeaEe2H8pIyhRi0wA" value="&quot;Pacman Move&quot;">
+                <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_zLukdpeaEe2H8pIyhRi0wA" name="n0" incoming="_zLukepeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+            </nodes>
+            <nodes xmi:id="_zLukd5eaEe2H8pIyhRi0wA" name="n1" incoming="_zLuke5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLukeJeaEe2H8pIyhRi0wA" name="n2" incoming="_zLukfJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLukeZeaEe2H8pIyhRi0wA" name="n3" incoming="_zLukfZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+            </nodes>
+            <edges xmi:id="_zLukepeaEe2H8pIyhRi0wA" source="_zLukdJeaEe2H8pIyhRi0wA" target="_zLukdpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+            </edges>
+            <edges xmi:id="_zLuke5eaEe2H8pIyhRi0wA" source="_zLukdJeaEe2H8pIyhRi0wA" target="_zLukd5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLukfJeaEe2H8pIyhRi0wA" source="_zLukdJeaEe2H8pIyhRi0wA" target="_zLukeJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLukfZeaEe2H8pIyhRi0wA" source="_zLukdJeaEe2H8pIyhRi0wA" target="_zLukeZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_zLukfpeaEe2H8pIyhRi0wA" origin="_zLukZ5eaEe2H8pIyhRi0wA" image="_zLukdpeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLukf5eaEe2H8pIyhRi0wA" origin="_zLukaJeaEe2H8pIyhRi0wA" image="_zLukd5eaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLukgJeaEe2H8pIyhRi0wA" origin="_zLukaZeaEe2H8pIyhRi0wA" image="_zLukeJeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLukgZeaEe2H8pIyhRi0wA" origin="_zLukapeaEe2H8pIyhRi0wA" image="_zLukeZeaEe2H8pIyhRi0wA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_zLukgpeaEe2H8pIyhRi0wA" name="PacmanMove_RHS">
+      <nodes xmi:id="_zLukg5eaEe2H8pIyhRi0wA" name="n0" incoming="_zLukj5eaEe2H8pIyhRi0wA" outgoing="_zLukipeaEe2H8pIyhRi0wA _zLuki5eaEe2H8pIyhRi0wA _zLukjJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLukhJeaEe2H8pIyhRi0wA" name="n1" incoming="_zLukipeaEe2H8pIyhRi0wA _zLukkJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLukhZeaEe2H8pIyhRi0wA" name="n2" incoming="_zLuki5eaEe2H8pIyhRi0wA _zLukjpeaEe2H8pIyhRi0wA _zLukkZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLukhpeaEe2H8pIyhRi0wA" name="n3" incoming="_zLukjJeaEe2H8pIyhRi0wA _zLukkpeaEe2H8pIyhRi0wA" outgoing="_zLukjZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_zLukh5eaEe2H8pIyhRi0wA" name="n5" incoming="_zLukjZeaEe2H8pIyhRi0wA" outgoing="_zLukjpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <nodes xmi:id="_zLukiJeaEe2H8pIyhRi0wA" name="n6" outgoing="_zLukj5eaEe2H8pIyhRi0wA _zLukkJeaEe2H8pIyhRi0wA _zLukkZeaEe2H8pIyhRi0wA _zLukkpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_zLukiZeaEe2H8pIyhRi0wA" value="&quot;Pacman Move&quot;">
+          <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_zLukipeaEe2H8pIyhRi0wA" source="_zLukg5eaEe2H8pIyhRi0wA" target="_zLukhJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLuki5eaEe2H8pIyhRi0wA" source="_zLukg5eaEe2H8pIyhRi0wA" target="_zLukhZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLukjJeaEe2H8pIyhRi0wA" source="_zLukg5eaEe2H8pIyhRi0wA" target="_zLukhpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLukjZeaEe2H8pIyhRi0wA" source="_zLukhpeaEe2H8pIyhRi0wA" target="_zLukh5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLukjpeaEe2H8pIyhRi0wA" source="_zLukh5eaEe2H8pIyhRi0wA" target="_zLukhZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_zLukj5eaEe2H8pIyhRi0wA" source="_zLukiJeaEe2H8pIyhRi0wA" target="_zLukg5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+      </edges>
+      <edges xmi:id="_zLukkJeaEe2H8pIyhRi0wA" source="_zLukiJeaEe2H8pIyhRi0wA" target="_zLukhJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLukkZeaEe2H8pIyhRi0wA" source="_zLukiJeaEe2H8pIyhRi0wA" target="_zLukhZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLukkpeaEe2H8pIyhRi0wA" source="_zLukiJeaEe2H8pIyhRi0wA" target="_zLukhpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_zLukk5eaEe2H8pIyhRi0wA" conditionText="((n4diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Left==&quot;ADD&quot;)) || ((n4diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_zLuklJeaEe2H8pIyhRi0wA" origin="_zLukZ5eaEe2H8pIyhRi0wA" image="_zLukg5eaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLuklZeaEe2H8pIyhRi0wA" origin="_zLukaJeaEe2H8pIyhRi0wA" image="_zLukhJeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLuklpeaEe2H8pIyhRi0wA" origin="_zLukaZeaEe2H8pIyhRi0wA" image="_zLukhZeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLukl5eaEe2H8pIyhRi0wA" origin="_zLukapeaEe2H8pIyhRi0wA" image="_zLukhpeaEe2H8pIyhRi0wA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_zLukmJeaEe2H8pIyhRi0wA" name="GhostMove">
+    <parameters xmi:id="_zLukmZeaEe2H8pIyhRi0wA" name="n4diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLukmpeaEe2H8pIyhRi0wA" name="n4diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLukm5eaEe2H8pIyhRi0wA" name="n5diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_zLuknJeaEe2H8pIyhRi0wA" name="n5diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_zLuknZeaEe2H8pIyhRi0wA" name="GhostMove_LHS">
+      <nodes xmi:id="_zLuknpeaEe2H8pIyhRi0wA" name="n0" outgoing="_zLuko5eaEe2H8pIyhRi0wA _zLukpJeaEe2H8pIyhRi0wA _zLukpZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLukn5eaEe2H8pIyhRi0wA" name="n1" incoming="_zLuko5eaEe2H8pIyhRi0wA _zLukp5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLukoJeaEe2H8pIyhRi0wA" name="n2" incoming="_zLukpJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLukoZeaEe2H8pIyhRi0wA" name="n3" incoming="_zLukpZeaEe2H8pIyhRi0wA" outgoing="_zLukppeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_zLukopeaEe2H8pIyhRi0wA" name="n4" incoming="_zLukppeaEe2H8pIyhRi0wA" outgoing="_zLukp5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_zLuko5eaEe2H8pIyhRi0wA" source="_zLuknpeaEe2H8pIyhRi0wA" target="_zLukn5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLukpJeaEe2H8pIyhRi0wA" source="_zLuknpeaEe2H8pIyhRi0wA" target="_zLukoJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLukpZeaEe2H8pIyhRi0wA" source="_zLuknpeaEe2H8pIyhRi0wA" target="_zLukoZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLukppeaEe2H8pIyhRi0wA" source="_zLukoZeaEe2H8pIyhRi0wA" target="_zLukopeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLukp5eaEe2H8pIyhRi0wA" source="_zLukopeaEe2H8pIyhRi0wA" target="_zLukn5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_zLukqJeaEe2H8pIyhRi0wA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_zLukqZeaEe2H8pIyhRi0wA">
+          <conclusion xmi:id="_zLukqpeaEe2H8pIyhRi0wA" name="forbid">
+            <nodes xmi:id="_zLukq5eaEe2H8pIyhRi0wA" name="n7" outgoing="_zLuksZeaEe2H8pIyhRi0wA _zLukspeaEe2H8pIyhRi0wA _zLuks5eaEe2H8pIyhRi0wA _zLuktJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+              <attributes xmi:id="_zLukrJeaEe2H8pIyhRi0wA" value="&quot;Ghost Move&quot;">
+                <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_zLukrZeaEe2H8pIyhRi0wA" name="n0" incoming="_zLuksZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+            </nodes>
+            <nodes xmi:id="_zLukrpeaEe2H8pIyhRi0wA" name="n1" incoming="_zLukspeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLukr5eaEe2H8pIyhRi0wA" name="n2" incoming="_zLuks5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_zLuksJeaEe2H8pIyhRi0wA" name="n3" incoming="_zLuktJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+            </nodes>
+            <edges xmi:id="_zLuksZeaEe2H8pIyhRi0wA" source="_zLukq5eaEe2H8pIyhRi0wA" target="_zLukrZeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+            </edges>
+            <edges xmi:id="_zLukspeaEe2H8pIyhRi0wA" source="_zLukq5eaEe2H8pIyhRi0wA" target="_zLukrpeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLuks5eaEe2H8pIyhRi0wA" source="_zLukq5eaEe2H8pIyhRi0wA" target="_zLukr5eaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+            </edges>
+            <edges xmi:id="_zLuktJeaEe2H8pIyhRi0wA" source="_zLukq5eaEe2H8pIyhRi0wA" target="_zLuksJeaEe2H8pIyhRi0wA">
+              <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_zLuktZeaEe2H8pIyhRi0wA" origin="_zLuknpeaEe2H8pIyhRi0wA" image="_zLukrZeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLuktpeaEe2H8pIyhRi0wA" origin="_zLukn5eaEe2H8pIyhRi0wA" image="_zLukrpeaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLukt5eaEe2H8pIyhRi0wA" origin="_zLukoJeaEe2H8pIyhRi0wA" image="_zLukr5eaEe2H8pIyhRi0wA"/>
+          <mappings xmi:id="_zLukuJeaEe2H8pIyhRi0wA" origin="_zLukoZeaEe2H8pIyhRi0wA" image="_zLuksJeaEe2H8pIyhRi0wA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_zLukuZeaEe2H8pIyhRi0wA" name="GhostMove_RHS">
+      <nodes xmi:id="_zLukupeaEe2H8pIyhRi0wA" name="n0" incoming="_zLukxpeaEe2H8pIyhRi0wA" outgoing="_zLukwZeaEe2H8pIyhRi0wA _zLukwpeaEe2H8pIyhRi0wA _zLukw5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_zLuku5eaEe2H8pIyhRi0wA" name="n1" incoming="_zLukwZeaEe2H8pIyhRi0wA _zLukx5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLukvJeaEe2H8pIyhRi0wA" name="n2" incoming="_zLukwpeaEe2H8pIyhRi0wA _zLukxZeaEe2H8pIyhRi0wA _zLukyJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_zLukvZeaEe2H8pIyhRi0wA" name="n3" incoming="_zLukw5eaEe2H8pIyhRi0wA _zLukyZeaEe2H8pIyhRi0wA" outgoing="_zLukxJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_zLukvpeaEe2H8pIyhRi0wA" name="n5" incoming="_zLukxJeaEe2H8pIyhRi0wA" outgoing="_zLukxZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <nodes xmi:id="_zLukv5eaEe2H8pIyhRi0wA" name="n6" outgoing="_zLukxpeaEe2H8pIyhRi0wA _zLukx5eaEe2H8pIyhRi0wA _zLukyJeaEe2H8pIyhRi0wA _zLukyZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_zLukwJeaEe2H8pIyhRi0wA" value="&quot;Ghost Move&quot;">
+          <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_zLukwZeaEe2H8pIyhRi0wA" source="_zLukupeaEe2H8pIyhRi0wA" target="_zLuku5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLukwpeaEe2H8pIyhRi0wA" source="_zLukupeaEe2H8pIyhRi0wA" target="_zLukvJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+      <edges xmi:id="_zLukw5eaEe2H8pIyhRi0wA" source="_zLukupeaEe2H8pIyhRi0wA" target="_zLukvZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+      <edges xmi:id="_zLukxJeaEe2H8pIyhRi0wA" source="_zLukvZeaEe2H8pIyhRi0wA" target="_zLukvpeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//PositionableEntity/diffon"/>
+      </edges>
+      <edges xmi:id="_zLukxZeaEe2H8pIyhRi0wA" source="_zLukvpeaEe2H8pIyhRi0wA" target="_zLukvJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//DiffPositionableEntity_on/eType"/>
+      </edges>
+      <edges xmi:id="_zLukxpeaEe2H8pIyhRi0wA" source="_zLukv5eaEe2H8pIyhRi0wA" target="_zLukupeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_Game"/>
+      </edges>
+      <edges xmi:id="_zLukx5eaEe2H8pIyhRi0wA" source="_zLukv5eaEe2H8pIyhRi0wA" target="_zLuku5eaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLukyJeaEe2H8pIyhRi0wA" source="_zLukv5eaEe2H8pIyhRi0wA" target="_zLukvJeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_GridNode"/>
+      </edges>
+      <edges xmi:id="_zLukyZeaEe2H8pIyhRi0wA" source="_zLukv5eaEe2H8pIyhRi0wA" target="_zLukvZeaEe2H8pIyhRi0wA">
+        <type href="../metaModels/pacmanDiffMM.ecore#//SemanticObject/SemanticObject_PositionableEntity"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_zLukypeaEe2H8pIyhRi0wA" conditionText="((n4diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Left==&quot;ADD&quot;)) || ((n4diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_zLuky5eaEe2H8pIyhRi0wA" origin="_zLuknpeaEe2H8pIyhRi0wA" image="_zLukupeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLukzJeaEe2H8pIyhRi0wA" origin="_zLukn5eaEe2H8pIyhRi0wA" image="_zLuku5eaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLukzZeaEe2H8pIyhRi0wA" origin="_zLukoJeaEe2H8pIyhRi0wA" image="_zLukvJeaEe2H8pIyhRi0wA"/>
+    <mappings xmi:id="_zLukzpeaEe2H8pIyhRi0wA" origin="_zLukoZeaEe2H8pIyhRi0wA" image="_zLukvZeaEe2H8pIyhRi0wA"/>
+  </units>
+</henshin:Module>

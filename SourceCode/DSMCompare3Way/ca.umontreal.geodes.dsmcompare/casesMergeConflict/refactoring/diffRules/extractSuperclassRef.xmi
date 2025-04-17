@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring2WayRuleMM="www.geodes.UdeM.edu/refactoring2WayRuleMM"
+    name="extractSuperclassRef">
+  <rulePattern_DiffEClass
+      xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass"
+      name="clsP"
+      diff_kind="ADD"
+      ID_Pattern="5">
+    <differeferences
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_ereferences"
+        diff_kind="ADD"
+        eType="ref1"
+        ID_Pattern="6"/>
+  </rulePattern_DiffEClass>
+  <rulePattern_EClass
+      xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+      name="cls1"
+      esupertypes="clsP"
+      ID_Pattern="1">
+    <ereferences
+        xsi:type="refactoring2WayRuleMM:Pattern_EReference"
+        name="ref1"
+        ID_Pattern="2"/>
+    <differeferences
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_ereferences"
+        diff_kind="DELETE"
+        eType="ref1"
+        ID_Pattern="3"
+        filter="true"/>
+    <diffesupertypes
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_esupertypes"
+        diff_kind="ADD"
+        eType="clsP"
+        ID_Pattern="4"/>
+  </rulePattern_EClass>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="Extract Superclass Reference"
+      SemanticObject_DiffEClass_ereferences="//@rulePattern_DiffEClass.0/@differeferences.0 //@rulePattern_EClass.0/@differeferences.0"
+      SemanticObject_DiffEClass_esupertypes="//@rulePattern_EClass.0/@diffesupertypes.0"
+      SemanticObject_EClass="cls1 clsP"
+      SemanticObject_EReference="ref1"
+      ID_Pattern="7"/>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="Extract Superclass Reference"
+      SemanticObject_DiffEClass_ereferences="//@rulePattern_DiffEClass.0/@differeferences.0 //@rulePattern_EClass.0/@differeferences.0"
+      SemanticObject_DiffEClass_esupertypes="//@rulePattern_EClass.0/@diffesupertypes.0"
+      SemanticObject_EClass="cls1 clsP"
+      SemanticObject_EReference="ref1"
+      ID_Pattern="8"
+      isForbidden="true"/>
+</refactoring2WayRuleMM:Rule>

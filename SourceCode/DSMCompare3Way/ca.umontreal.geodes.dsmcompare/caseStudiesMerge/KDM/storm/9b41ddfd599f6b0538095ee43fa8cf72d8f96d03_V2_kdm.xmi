@@ -1,0 +1,1431 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:action="http://www.eclipse.org/MoDisco/kdm/action" xmlns:code="http://www.eclipse.org/MoDisco/kdm/code" xmlns:kdm="http://www.eclipse.org/MoDisco/kdm/kdm" xmlns:source="http://www.eclipse.org/MoDisco/kdm/source">
+  <kdm:Segment>
+    <model xsi:type="code:CodeModel" name="9b41ddfd599f6b0538095ee43fa8cf72d8f96d03_V2">
+      <codeElement xsi:type="code:Package" name="pkg">
+        <codeElement xsi:type="code:ClassUnit" name="SimpleACLAuthorizer" isAbstract="false">
+          <attribute tag="export" value="public"/>
+          <source language="java">
+            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+          </source>
+          <comment text="/**&#xA; * An authorization implementation that simply checks if a user is allowed to perform specific&#xA; * operations.&#xA; */"/>
+          <comment text="/**&#xA; * Licensed to the Apache Software Foundation (ASF) under one&#xA; * or more contributor license agreements.  See the NOTICE file&#xA; * distributed with this work for additional information&#xA; * regarding copyright ownership.  The ASF licenses this file&#xA; * to you under the Apache License, Version 2.0 (the&#xA; * &quot;License&quot;); you may not use this file except in compliance&#xA; * with the License.  You may obtain a copy of the License at&#xA; *&#xA; * http://www.apache.org/licenses/LICENSE-2.0&#xA; *&#xA; * Unless required by applicable law or agreed to in writing, software&#xA; * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,&#xA; * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#xA; * See the License for the specific language governing permissions and&#xA; * limitations under the License.&#xA; */"/>
+          <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.0" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
+          <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
+          <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
+          <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.4" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
+          <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.3" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
+          <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.0/@codeElement.2/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
+          <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.25" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
+          <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.26" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
+          <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.27" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
+          <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.28" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
+          <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.29" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
+          <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.30" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
+          <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.31" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
+          <codeRelation xsi:type="code:Imports" to="/0/@model.1/@codeElement.32" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
+          <codeRelation xsi:type="code:Implements" to="/0/@model.1/@codeElement.24" from="/0/@model.0/@codeElement.0/@codeElement.0"/>
+          <codeElement xsi:type="code:StorableUnit" name="LOG" type="/0/@model.1/@codeElement.34" kind="static">
+            <attribute tag="export" value="private final"/>
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+            <codeRelation xsi:type="code:HasValue" to="/0/@model.1/@codeElement.5" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.0"/>
+          </codeElement>
+          <codeElement xsi:type="code:StorableUnit" name="_userCommands" type="/0/@model.1/@codeElement.1">
+            <attribute tag="export" value="protected"/>
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+            <codeRelation xsi:type="code:HasValue" to="/0/@model.1/@codeElement.6" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.1"/>
+          </codeElement>
+          <codeElement xsi:type="code:StorableUnit" name="_supervisorCommands" type="/0/@model.1/@codeElement.1">
+            <attribute tag="export" value="protected"/>
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+            <codeRelation xsi:type="code:HasValue" to="/0/@model.1/@codeElement.7" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.2"/>
+          </codeElement>
+          <codeElement xsi:type="code:StorableUnit" name="_topoCommands" type="/0/@model.1/@codeElement.1">
+            <attribute tag="export" value="protected"/>
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+            <codeRelation xsi:type="code:HasValue" to="/0/@model.1/@codeElement.8" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.3"/>
+          </codeElement>
+          <codeElement xsi:type="code:StorableUnit" name="_admins" type="/0/@model.1/@codeElement.1">
+            <attribute tag="export" value="protected"/>
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:StorableUnit" name="_supervisors" type="/0/@model.1/@codeElement.1">
+            <attribute tag="export" value="protected"/>
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:StorableUnit" name="_ptol" type="/0/@model.1/@codeElement.35">
+            <attribute tag="export" value="protected"/>
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:StorableUnit" name="_groupMappingProvider" type="/0/@model.1/@codeElement.36">
+            <attribute tag="export" value="protected"/>
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:MethodUnit" name="prepare" type="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.0">
+            <attribute tag="export" value="public"/>
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+            <comment text="/**&#xA;     * Invoked once immediately after construction&#xA;     * @param conf Storm configuration&#xA;     */"/>
+            <codeRelation xsi:type="code:HasValue" to="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.8" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8">
+              <annotation text="annotation"/>
+            </codeRelation>
+            <codeElement xsi:type="code:Signature" name="prepare">
+              <parameterUnit type="/0/@model.0/@codeElement.1/@codeElement.5" kind="return">
+                <source language="java">
+                  <region language="java"/>
+                </source>
+              </parameterUnit>
+              <parameterUnit name="conf" type="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.1" kind="unknown">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+              </parameterUnit>
+            </codeElement>
+            <codeElement xsi:type="action:BlockUnit">
+              <source language="java">
+                <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+              </source>
+              <codeElement xsi:type="action:ActionElement" name="expression statement" kind="expression statement">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+                <codeElement xsi:type="action:ActionElement" name="ASSIGN" kind="assignment">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <codeElement xsi:type="action:ActionElement" name="class instance creation" kind="class instance creation">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.1/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0"/>
+                    <actionRelation xsi:type="action:Creates" to="/0/@model.1/@codeElement.2" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0"/>
+                  </codeElement>
+                  <actionRelation xsi:type="action:Writes" to="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.4" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.0/@codeElement.0"/>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="action:ActionElement" name="expression statement" kind="expression statement">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+                <codeElement xsi:type="action:ActionElement" name="ASSIGN" kind="assignment">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <codeElement xsi:type="action:ActionElement" name="class instance creation" kind="class instance creation">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.1/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.1/@codeElement.0/@codeElement.0"/>
+                    <actionRelation xsi:type="action:Creates" to="/0/@model.1/@codeElement.2" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.1/@codeElement.0/@codeElement.0"/>
+                  </codeElement>
+                  <actionRelation xsi:type="action:Writes" to="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.5" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.1/@codeElement.0"/>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="action:ActionElement" name="if" kind="if">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+                <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.1/@codeElement.2/@codeElement.0" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.2/@codeElement.0"/>
+                </codeElement>
+                <codeElement xsi:type="action:BlockUnit">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <codeElement xsi:type="action:ActionElement" name="expression statement" kind="expression statement">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <codeElement xsi:type="action:ActionElement" name="cast" kind="cast">
+                        <source language="java">
+                          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                        </source>
+                        <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                          <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.1/@codeElement.2/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.2/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0"/>
+                        </codeElement>
+                        <actionRelation xsi:type="action:UsesType" to="/0/@model.1/@codeElement.3" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.2/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0"/>
+                      </codeElement>
+                      <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.0" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.2/@codeElement.1/@codeElement.0/@codeElement.0"/>
+                    </codeElement>
+                  </codeElement>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="action:ActionElement" name="if" kind="if">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+                <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.1/@codeElement.2/@codeElement.0" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.3/@codeElement.0"/>
+                </codeElement>
+                <codeElement xsi:type="action:BlockUnit">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <codeElement xsi:type="action:ActionElement" name="expression statement" kind="expression statement">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <codeElement xsi:type="action:ActionElement" name="cast" kind="cast">
+                        <source language="java">
+                          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                        </source>
+                        <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                          <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.1/@codeElement.2/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.3/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0"/>
+                        </codeElement>
+                        <actionRelation xsi:type="action:UsesType" to="/0/@model.1/@codeElement.3" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.3/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0"/>
+                      </codeElement>
+                      <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.0" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.3/@codeElement.1/@codeElement.0/@codeElement.0"/>
+                    </codeElement>
+                  </codeElement>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="action:ActionElement" name="expression statement" kind="expression statement">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+                <codeElement xsi:type="action:ActionElement" name="ASSIGN" kind="assignment">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.13" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.4/@codeElement.0/@codeElement.0"/>
+                  </codeElement>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="action:ActionElement" name="expression statement" kind="expression statement">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+                <codeElement xsi:type="action:ActionElement" name="ASSIGN" kind="assignment">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.14" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.8/@codeElement.1/@codeElement.5/@codeElement.0/@codeElement.0"/>
+                  </codeElement>
+                </codeElement>
+              </codeElement>
+            </codeElement>
+          </codeElement>
+          <codeElement xsi:type="code:MethodUnit" name="permit" type="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.0">
+            <attribute tag="export" value="public"/>
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+            <comment text="/**&#xA;     * permit() method is invoked for each incoming Thrift request&#xA;     * @param context request context includes info about&#xA;     * @param operation operation name&#xA;     * @param topology_conf configuration of targeted topology&#xA;     * @return true if the request is authorized, false if reject&#xA;     */"/>
+            <codeRelation xsi:type="code:HasValue" to="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.8" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9">
+              <annotation text="annotation"/>
+            </codeRelation>
+            <codeElement xsi:type="code:Signature" name="permit">
+              <parameterUnit type="/0/@model.0/@codeElement.1/@codeElement.4" kind="return">
+                <source language="java">
+                  <region language="java"/>
+                </source>
+              </parameterUnit>
+              <parameterUnit name="context" type="/0/@model.1/@codeElement.33" kind="unknown">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+              </parameterUnit>
+              <parameterUnit name="operation" type="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.4" kind="unknown">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+              </parameterUnit>
+              <parameterUnit name="topology_conf" type="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.1" kind="unknown">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+              </parameterUnit>
+            </codeElement>
+            <codeElement xsi:type="action:BlockUnit">
+              <source language="java">
+                <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+              </source>
+              <codeElement xsi:type="action:ActionElement" name="expression statement" kind="expression statement">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+                <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <codeElement xsi:type="action:ActionElement" name="PLUS" kind="infix expression">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;[req &quot;">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                    </codeElement>
+                    <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.16" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.1"/>
+                    </codeElement>
+                    <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;] Access &quot;">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                    </codeElement>
+                    <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot; from: &quot;">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                    </codeElement>
+                    <codeElement xsi:type="action:ActionElement" name="parenthesized" kind="parenthesized">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <codeElement xsi:type="action:ActionElement" name="conditional" kind="conditional">
+                        <source language="java">
+                          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                        </source>
+                        <codeElement xsi:type="action:ActionElement" name="EQUALS" kind="infix expression">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                          <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                            <source language="java">
+                              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                            </source>
+                            <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.17" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.0/@codeElement.0/@codeElement.0"/>
+                          </codeElement>
+                          <codeElement xsi:type="action:ActionElement" name="null" kind="null">
+                            <source language="java">
+                              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                            </source>
+                          </codeElement>
+                        </codeElement>
+                        <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;null&quot;">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                        </codeElement>
+                        <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                          <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                            <source language="java">
+                              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                            </source>
+                            <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.17" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.0/@codeElement.2/@codeElement.0"/>
+                          </codeElement>
+                          <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.18" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.0/@codeElement.2"/>
+                        </codeElement>
+                      </codeElement>
+                    </codeElement>
+                    <codeElement xsi:type="action:ActionElement" name="parenthesized" kind="parenthesized">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <codeElement xsi:type="action:ActionElement" name="conditional" kind="conditional">
+                        <source language="java">
+                          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                        </source>
+                        <codeElement xsi:type="action:ActionElement" name="EQUALS" kind="infix expression">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                          <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                            <source language="java">
+                              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                            </source>
+                            <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.19" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.5/@codeElement.0/@codeElement.0/@codeElement.0"/>
+                          </codeElement>
+                          <codeElement xsi:type="action:ActionElement" name="null" kind="null">
+                            <source language="java">
+                              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                            </source>
+                          </codeElement>
+                        </codeElement>
+                        <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;&quot;">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                        </codeElement>
+                        <codeElement xsi:type="action:ActionElement" name="parenthesized" kind="parenthesized">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                          <codeElement xsi:type="action:ActionElement" name="PLUS" kind="infix expression">
+                            <source language="java">
+                              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                            </source>
+                            <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot; principal:&quot;">
+                              <source language="java">
+                                <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                              </source>
+                            </codeElement>
+                            <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                              <source language="java">
+                                <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                              </source>
+                              <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.19" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.5/@codeElement.0/@codeElement.2/@codeElement.0/@codeElement.1"/>
+                            </codeElement>
+                          </codeElement>
+                        </codeElement>
+                      </codeElement>
+                    </codeElement>
+                    <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot; op:&quot;">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                    </codeElement>
+                    <codeElement xsi:type="action:ActionElement" name="parenthesized" kind="parenthesized">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <codeElement xsi:type="action:ActionElement" name="conditional" kind="conditional">
+                        <source language="java">
+                          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                        </source>
+                        <codeElement xsi:type="action:ActionElement" name="EQUALS" kind="infix expression">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                          <codeElement xsi:type="action:ActionElement" name="null" kind="null">
+                            <source language="java">
+                              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                            </source>
+                          </codeElement>
+                          <actionRelation xsi:type="action:Reads" to="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.0/@parameterUnit.3" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.7/@codeElement.0/@codeElement.0"/>
+                        </codeElement>
+                        <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;&quot;">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                        </codeElement>
+                        <codeElement xsi:type="action:ActionElement" name="parenthesized" kind="parenthesized">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                          <codeElement xsi:type="action:ActionElement" name="PLUS" kind="infix expression">
+                            <source language="java">
+                              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                            </source>
+                            <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot; topoology:&quot;">
+                              <source language="java">
+                                <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                              </source>
+                            </codeElement>
+                            <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                              <source language="java">
+                                <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                              </source>
+                              <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.1/@codeElement.2/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.7/@codeElement.0/@codeElement.2/@codeElement.0/@codeElement.1"/>
+                            </codeElement>
+                          </codeElement>
+                        </codeElement>
+                      </codeElement>
+                    </codeElement>
+                  </codeElement>
+                  <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.15" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.0/@codeElement.0"/>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="action:ActionElement" name="variable declaration" kind="variable declaration">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+                <codeElement xsi:type="code:StorableUnit" name="principal" type="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.4" kind="local">
+                  <attribute tag="export" value="none"/>
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <codeRelation xsi:type="code:HasValue" to="/0/@model.1/@codeElement.9" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.1/@codeElement.0"/>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="action:ActionElement" name="variable declaration" kind="variable declaration">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+                <codeElement xsi:type="code:StorableUnit" name="user" type="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.4" kind="local">
+                  <attribute tag="export" value="none"/>
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <codeRelation xsi:type="code:HasValue" to="/0/@model.1/@codeElement.10" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.2/@codeElement.0"/>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="action:ActionElement" name="if" kind="if">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+                <codeElement xsi:type="action:ActionElement" name="CONDITIONAL_OR" kind="infix expression">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.3/@codeElement.0/@codeElement.0"/>
+                  </codeElement>
+                  <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.3/@codeElement.0/@codeElement.1"/>
+                  </codeElement>
+                </codeElement>
+                <codeElement xsi:type="action:BlockUnit">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <codeElement xsi:type="action:ActionElement" name="return" kind="return">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <codeElement xsi:type="code:Value" name="boolean literal" type="/0/@model.0/@codeElement.1/@codeElement.4" ext="true">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                    </codeElement>
+                  </codeElement>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="action:ActionElement" name="if" kind="if">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+                <codeElement xsi:type="action:ActionElement" name="CONDITIONAL_OR" kind="infix expression">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.4/@codeElement.0/@codeElement.0"/>
+                  </codeElement>
+                  <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.4/@codeElement.0/@codeElement.1"/>
+                  </codeElement>
+                </codeElement>
+                <codeElement xsi:type="action:BlockUnit">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <codeElement xsi:type="action:ActionElement" name="return" kind="return">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.4/@codeElement.1/@codeElement.0/@codeElement.0"/>
+                    </codeElement>
+                  </codeElement>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="action:ActionElement" name="if" kind="if">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+                <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.5/@codeElement.0"/>
+                </codeElement>
+                <codeElement xsi:type="action:BlockUnit">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <codeElement xsi:type="action:ActionElement" name="return" kind="return">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <codeElement xsi:type="code:Value" name="boolean literal" type="/0/@model.0/@codeElement.1/@codeElement.4" ext="true">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                    </codeElement>
+                  </codeElement>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="action:ActionElement" name="if" kind="if">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+                <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.0"/>
+                </codeElement>
+                <codeElement xsi:type="action:BlockUnit">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                  <codeElement xsi:type="action:ActionElement" name="variable declaration" kind="variable declaration">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <codeElement xsi:type="code:StorableUnit" name="topoUsers" type="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2" kind="local">
+                      <attribute tag="export" value="none"/>
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <codeRelation xsi:type="code:HasValue" to="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.0/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.0/@codeElement.0"/>
+                    </codeElement>
+                    <codeElement xsi:type="action:ActionElement" name="class instance creation" kind="class instance creation">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.1/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.0/@codeElement.1"/>
+                      <actionRelation xsi:type="action:Creates" to="/0/@model.1/@codeElement.2" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.0/@codeElement.1"/>
+                    </codeElement>
+                  </codeElement>
+                  <codeElement xsi:type="action:ActionElement" name="if" kind="if">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.1/@codeElement.2/@codeElement.0" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.1/@codeElement.0"/>
+                    </codeElement>
+                    <codeElement xsi:type="action:BlockUnit">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <codeElement xsi:type="action:ActionElement" name="expression statement" kind="expression statement">
+                        <source language="java">
+                          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                        </source>
+                        <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                          <codeElement xsi:type="action:ActionElement" name="cast" kind="cast">
+                            <source language="java">
+                              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                            </source>
+                            <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                              <source language="java">
+                                <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                              </source>
+                              <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.1/@codeElement.2/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.1/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0"/>
+                            </codeElement>
+                            <actionRelation xsi:type="action:UsesType" to="/0/@model.1/@codeElement.3" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.1/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0"/>
+                          </codeElement>
+                          <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.0" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.1/@codeElement.1/@codeElement.0/@codeElement.0"/>
+                        </codeElement>
+                      </codeElement>
+                    </codeElement>
+                  </codeElement>
+                  <codeElement xsi:type="action:ActionElement" name="if" kind="if">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <codeElement xsi:type="action:ActionElement" name="CONDITIONAL_OR" kind="infix expression">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                        <source language="java">
+                          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                        </source>
+                        <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.2/@codeElement.0/@codeElement.0"/>
+                      </codeElement>
+                      <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                        <source language="java">
+                          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                        </source>
+                        <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.2/@codeElement.0/@codeElement.1"/>
+                      </codeElement>
+                    </codeElement>
+                    <codeElement xsi:type="action:BlockUnit">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <codeElement xsi:type="action:ActionElement" name="return" kind="return">
+                        <source language="java">
+                          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                        </source>
+                        <codeElement xsi:type="code:Value" name="boolean literal" type="/0/@model.0/@codeElement.1/@codeElement.4" ext="true">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                        </codeElement>
+                      </codeElement>
+                    </codeElement>
+                  </codeElement>
+                  <codeElement xsi:type="action:ActionElement" name="variable declaration" kind="variable declaration">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <codeElement xsi:type="code:StorableUnit" name="topoGroups" type="/0/@model.1/@codeElement.1" kind="local">
+                      <attribute tag="export" value="none"/>
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <codeRelation xsi:type="code:HasValue" to="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.3/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.3/@codeElement.0"/>
+                    </codeElement>
+                    <codeElement xsi:type="action:ActionElement" name="class instance creation" kind="class instance creation">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.1/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.3/@codeElement.1"/>
+                      <actionRelation xsi:type="action:Creates" to="/0/@model.1/@codeElement.2" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.3/@codeElement.1"/>
+                    </codeElement>
+                  </codeElement>
+                  <codeElement xsi:type="action:ActionElement" name="if" kind="if">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <codeElement xsi:type="action:ActionElement" name="CONDITIONAL_AND" kind="infix expression">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                        <source language="java">
+                          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                        </source>
+                        <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.1/@codeElement.2/@codeElement.0" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.4/@codeElement.0/@codeElement.0"/>
+                      </codeElement>
+                      <codeElement xsi:type="action:ActionElement" name="NOT_EQUALS" kind="infix expression">
+                        <source language="java">
+                          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                        </source>
+                        <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                          <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.1/@codeElement.2/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.4/@codeElement.0/@codeElement.1/@codeElement.0"/>
+                        </codeElement>
+                        <codeElement xsi:type="action:ActionElement" name="null" kind="null">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                        </codeElement>
+                      </codeElement>
+                    </codeElement>
+                    <codeElement xsi:type="action:BlockUnit">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <codeElement xsi:type="action:ActionElement" name="expression statement" kind="expression statement">
+                        <source language="java">
+                          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                        </source>
+                        <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                          <codeElement xsi:type="action:ActionElement" name="cast" kind="cast">
+                            <source language="java">
+                              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                            </source>
+                            <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                              <source language="java">
+                                <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                              </source>
+                              <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.1/@codeElement.2/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.4/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0"/>
+                            </codeElement>
+                            <actionRelation xsi:type="action:UsesType" to="/0/@model.1/@codeElement.3" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.4/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0"/>
+                          </codeElement>
+                          <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.0" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.4/@codeElement.1/@codeElement.0/@codeElement.0"/>
+                        </codeElement>
+                      </codeElement>
+                    </codeElement>
+                  </codeElement>
+                  <codeElement xsi:type="action:ActionElement" name="if" kind="if">
+                    <source language="java">
+                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                    </source>
+                    <codeElement xsi:type="action:ActionElement" name="CONDITIONAL_AND" kind="infix expression">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <codeElement xsi:type="action:ActionElement" name="NOT_EQUALS" kind="infix expression">
+                        <source language="java">
+                          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                        </source>
+                        <codeElement xsi:type="action:ActionElement" name="null" kind="null">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                        </codeElement>
+                      </codeElement>
+                      <codeElement xsi:type="action:ActionElement" name="GREATER" kind="infix expression">
+                        <source language="java">
+                          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                        </source>
+                        <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                          <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.2" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.5/@codeElement.0/@codeElement.1/@codeElement.0"/>
+                        </codeElement>
+                        <codeElement xsi:type="code:Value" name="number literal" type="/0/@model.0/@codeElement.1/@codeElement.0" ext="0">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                        </codeElement>
+                      </codeElement>
+                    </codeElement>
+                    <codeElement xsi:type="action:BlockUnit">
+                      <source language="java">
+                        <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                      </source>
+                      <codeElement xsi:type="action:TryUnit" name="try" kind="try">
+                        <source language="java">
+                          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                        </source>
+                        <codeElement xsi:type="action:BlockUnit">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                          <codeElement xsi:type="action:ActionElement" name="variable declaration" kind="variable declaration">
+                            <source language="java">
+                              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                            </source>
+                            <codeElement xsi:type="code:StorableUnit" name="userGroups" type="/0/@model.1/@codeElement.1" kind="local">
+                              <attribute tag="export" value="none"/>
+                              <source language="java">
+                                <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                              </source>
+                              <codeRelation xsi:type="code:HasValue" to="/0/@model.1/@codeElement.11" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.5/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0"/>
+                            </codeElement>
+                          </codeElement>
+                          <codeElement xsi:type="action:ActionElement" name="foreach" kind="foreach">
+                            <source language="java">
+                              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                            </source>
+                            <codeElement xsi:type="action:BlockUnit">
+                              <source language="java">
+                                <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                              </source>
+                              <codeElement xsi:type="action:ActionElement" name="if" kind="if">
+                                <source language="java">
+                                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                                </source>
+                                <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                                  <source language="java">
+                                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                                  </source>
+                                  <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.5/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0"/>
+                                </codeElement>
+                                <codeElement xsi:type="action:ActionElement" name="return" kind="return">
+                                  <source language="java">
+                                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                                  </source>
+                                  <codeElement xsi:type="code:Value" name="boolean literal" type="/0/@model.0/@codeElement.1/@codeElement.4" ext="true">
+                                    <source language="java">
+                                      <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                                    </source>
+                                  </codeElement>
+                                </codeElement>
+                              </codeElement>
+                            </codeElement>
+                            <codeElement xsi:type="code:StorableUnit" name="tgroup" type="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.4" kind="local">
+                              <attribute tag="export" value="none"/>
+                              <source language="java">
+                                <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                              </source>
+                            </codeElement>
+                          </codeElement>
+                        </codeElement>
+                        <codeElement xsi:type="action:CatchUnit" name="catch" kind="catch">
+                          <source language="java">
+                            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                          </source>
+                          <codeElement xsi:type="action:BlockUnit">
+                            <source language="java">
+                              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                            </source>
+                            <codeElement xsi:type="action:ActionElement" name="expression statement" kind="expression statement">
+                              <source language="java">
+                                <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                              </source>
+                              <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+                                <source language="java">
+                                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                                </source>
+                                <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;Error while trying to fetch user groups&quot;">
+                                  <source language="java">
+                                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                                  </source>
+                                </codeElement>
+                                <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.23" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.5/@codeElement.1/@codeElement.0/@codeElement.1/@codeElement.0/@codeElement.0/@codeElement.0"/>
+                              </codeElement>
+                            </codeElement>
+                          </codeElement>
+                          <codeElement xsi:type="code:StorableUnit" name="e" type="/0/@model.1/@codeElement.0/@codeElement.2/@codeElement.1" kind="local">
+                            <attribute tag="export" value="none"/>
+                            <source language="java">
+                              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                            </source>
+                          </codeElement>
+                          <actionRelation xsi:type="action:ExceptionFlow" to="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.5/@codeElement.1/@codeElement.0/@codeElement.1" from="/0/@model.0/@codeElement.0/@codeElement.0/@codeElement.9/@codeElement.1/@codeElement.6/@codeElement.1/@codeElement.5/@codeElement.1/@codeElement.0"/>
+                        </codeElement>
+                      </codeElement>
+                    </codeElement>
+                  </codeElement>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="action:ActionElement" name="return" kind="return">
+                <source language="java">
+                  <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                </source>
+                <codeElement xsi:type="code:Value" name="boolean literal" type="/0/@model.0/@codeElement.1/@codeElement.4" ext="false">
+                  <source language="java">
+                    <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+                  </source>
+                </codeElement>
+              </codeElement>
+            </codeElement>
+          </codeElement>
+        </codeElement>
+      </codeElement>
+      <codeElement xsi:type="code:LanguageUnit" name="Common Java datatypes">
+        <codeElement xsi:type="code:IntegerType" name="int"/>
+        <codeElement xsi:type="code:IntegerType" name="long"/>
+        <codeElement xsi:type="code:FloatType" name="float"/>
+        <codeElement xsi:type="code:FloatType" name="double"/>
+        <codeElement xsi:type="code:BooleanType" name="boolean"/>
+        <codeElement xsi:type="code:VoidType" name="void"/>
+        <codeElement xsi:type="code:CharType" name="char"/>
+        <codeElement xsi:type="code:IntegerType" name="short"/>
+        <codeElement xsi:type="code:OctetType" name="byte"/>
+        <codeElement xsi:type="code:StringType" name="string"/>
+      </codeElement>
+    </model>
+    <model xsi:type="code:CodeModel" name="externals">
+      <codeElement xsi:type="code:Package" name="java">
+        <codeElement xsi:type="code:Package" name="util">
+          <codeElement xsi:type="code:ClassUnit" name="Arrays">
+            <source language="java">
+              <region language="java"/>
+            </source>
+            <codeElement xsi:type="code:MethodUnit" name="asList" type="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0" export="unknown">
+              <source language="java">
+                <region language="java"/>
+              </source>
+              <codeElement xsi:type="code:Signature" name="asList">
+                <parameterUnit name="arg0" type="/0/@model.1/@codeElement.4" kind="unknown">
+                  <source language="java">
+                    <region language="java"/>
+                  </source>
+                </parameterUnit>
+              </codeElement>
+            </codeElement>
+          </codeElement>
+          <codeElement xsi:type="code:TemplateUnit" name="Map&lt;K, V>">
+            <codeElement xsi:type="code:TemplateParameter" name="K"/>
+            <codeElement xsi:type="code:TemplateParameter" name="V"/>
+            <codeElement xsi:type="code:InterfaceUnit" name="Map">
+              <source language="java">
+                <region language="java"/>
+              </source>
+              <codeElement xsi:type="code:MethodUnit" name="containsKey" type="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.1/@codeElement.2/@codeElement.0/@codeElement.0" export="unknown">
+                <source language="java">
+                  <region language="java"/>
+                </source>
+                <codeElement xsi:type="code:Signature" name="containsKey">
+                  <parameterUnit name="arg0" type="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.7" kind="unknown">
+                    <source language="java">
+                      <region language="java"/>
+                    </source>
+                  </parameterUnit>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="code:MethodUnit" name="get" type="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.1/@codeElement.2/@codeElement.1/@codeElement.0" export="unknown">
+                <source language="java">
+                  <region language="java"/>
+                </source>
+                <codeElement xsi:type="code:Signature" name="get">
+                  <parameterUnit name="arg0" type="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.7" kind="unknown">
+                    <source language="java">
+                      <region language="java"/>
+                    </source>
+                  </parameterUnit>
+                </codeElement>
+              </codeElement>
+            </codeElement>
+          </codeElement>
+          <codeElement xsi:type="code:TemplateUnit" name="Set&lt;E>">
+            <codeElement xsi:type="code:TemplateParameter" name="E"/>
+            <codeElement xsi:type="code:InterfaceUnit" name="Set">
+              <source language="java">
+                <region language="java"/>
+              </source>
+              <codeRelation xsi:type="code:Extends" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.3" from="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1"/>
+              <codeElement xsi:type="code:MethodUnit" name="addAll" type="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.0/@codeElement.0" export="unknown">
+                <source language="java">
+                  <region language="java"/>
+                </source>
+                <codeElement xsi:type="code:Signature" name="addAll">
+                  <parameterUnit name="arg0" type="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.3" kind="unknown">
+                    <source language="java">
+                      <region language="java"/>
+                    </source>
+                  </parameterUnit>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="code:MethodUnit" name="contains" type="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.1/@codeElement.0" export="unknown">
+                <source language="java">
+                  <region language="java"/>
+                </source>
+                <codeElement xsi:type="code:Signature" name="contains">
+                  <parameterUnit name="arg0" type="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.7" kind="unknown">
+                    <source language="java">
+                      <region language="java"/>
+                    </source>
+                  </parameterUnit>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="code:MethodUnit" name="size" type="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2/@codeElement.1/@codeElement.2/@codeElement.0" export="unknown">
+                <source language="java">
+                  <region language="java"/>
+                </source>
+                <codeElement xsi:type="code:Signature" name="size"/>
+              </codeElement>
+            </codeElement>
+          </codeElement>
+          <codeElement xsi:type="code:TemplateUnit" name="Collection&lt;E>">
+            <codeElement xsi:type="code:TemplateParameter" name="E"/>
+            <codeElement xsi:type="code:InterfaceUnit" name="Collection">
+              <source language="java">
+                <region language="java"/>
+              </source>
+              <codeRelation xsi:type="code:Extends" to="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.0" from="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.3/@codeElement.1"/>
+            </codeElement>
+          </codeElement>
+          <codeElement xsi:type="code:TemplateUnit" name="HashSet&lt;E>">
+            <codeElement xsi:type="code:TemplateParameter" name="E"/>
+            <codeElement xsi:type="code:ClassUnit" name="HashSet">
+              <source language="java">
+                <region language="java"/>
+              </source>
+              <codeRelation xsi:type="code:Implements" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2" from="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.1"/>
+              <codeRelation xsi:type="code:Implements" to="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.1" from="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.1"/>
+              <codeRelation xsi:type="code:Implements" to="/0/@model.1/@codeElement.0/@codeElement.2/@codeElement.0" from="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.1"/>
+              <codeRelation xsi:type="code:Extends" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.5" from="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.1"/>
+              <codeElement xsi:type="code:MethodUnit" name="HashSet" type="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.1/@codeElement.0/@codeElement.0" kind="constructor" export="unknown">
+                <source language="java">
+                  <region language="java"/>
+                </source>
+                <codeElement xsi:type="code:Signature" name="HashSet">
+                  <parameterUnit name="arg0" type="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.3" kind="unknown">
+                    <source language="java">
+                      <region language="java"/>
+                    </source>
+                  </parameterUnit>
+                </codeElement>
+              </codeElement>
+              <codeElement xsi:type="code:MethodUnit" name="HashSet" type="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.1/@codeElement.1/@codeElement.0" kind="constructor" export="unknown">
+                <source language="java">
+                  <region language="java"/>
+                </source>
+                <codeElement xsi:type="code:Signature" name="HashSet"/>
+              </codeElement>
+            </codeElement>
+          </codeElement>
+          <codeElement xsi:type="code:TemplateUnit" name="AbstractSet&lt;E>">
+            <codeElement xsi:type="code:TemplateParameter" name="E"/>
+            <codeElement xsi:type="code:ClassUnit" name="AbstractSet">
+              <source language="java">
+                <region language="java"/>
+              </source>
+              <codeRelation xsi:type="code:Implements" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2" from="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.5/@codeElement.1"/>
+              <codeRelation xsi:type="code:Extends" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.6" from="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.5/@codeElement.1"/>
+            </codeElement>
+          </codeElement>
+          <codeElement xsi:type="code:TemplateUnit" name="AbstractCollection&lt;E>">
+            <codeElement xsi:type="code:TemplateParameter" name="E"/>
+            <codeElement xsi:type="code:ClassUnit" name="AbstractCollection">
+              <source language="java">
+                <region language="java"/>
+              </source>
+              <codeRelation xsi:type="code:Implements" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.3" from="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.6/@codeElement.1"/>
+            </codeElement>
+          </codeElement>
+        </codeElement>
+        <codeElement xsi:type="code:Package" name="lang">
+          <codeElement xsi:type="code:TemplateUnit" name="Iterable&lt;T>">
+            <codeElement xsi:type="code:TemplateParameter" name="T"/>
+            <codeElement xsi:type="code:InterfaceUnit" name="Iterable">
+              <source language="java">
+                <region language="java"/>
+              </source>
+            </codeElement>
+          </codeElement>
+          <codeElement xsi:type="code:InterfaceUnit" name="Cloneable">
+            <source language="java">
+              <region language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:ClassUnit" name="Exception">
+            <source language="java">
+              <region language="java"/>
+            </source>
+            <codeRelation xsi:type="code:Extends" to="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.3" from="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.2"/>
+          </codeElement>
+          <codeElement xsi:type="code:ClassUnit" name="Throwable">
+            <source language="java">
+              <region language="java"/>
+            </source>
+            <codeRelation xsi:type="code:Implements" to="/0/@model.1/@codeElement.0/@codeElement.2/@codeElement.0" from="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.3"/>
+          </codeElement>
+          <codeElement xsi:type="code:ClassUnit" name="String">
+            <source language="java">
+              <region language="java"/>
+            </source>
+            <codeRelation xsi:type="code:Implements" to="/0/@model.1/@codeElement.0/@codeElement.2/@codeElement.0" from="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.4"/>
+            <codeRelation xsi:type="code:Implements" to="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.5" from="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.4"/>
+            <codeRelation xsi:type="code:Implements" to="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.6" from="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.4"/>
+          </codeElement>
+          <codeElement xsi:type="code:TemplateUnit" name="Comparable&lt;T>">
+            <codeElement xsi:type="code:TemplateParameter" name="T"/>
+            <codeElement xsi:type="code:InterfaceUnit" name="Comparable">
+              <source language="java">
+                <region language="java"/>
+              </source>
+            </codeElement>
+          </codeElement>
+          <codeElement xsi:type="code:InterfaceUnit" name="CharSequence">
+            <source language="java">
+              <region language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:ClassUnit" name="Object">
+            <source language="java">
+              <region language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:InterfaceUnit" name="Override">
+            <annotation text="annotation"/>
+            <source language="java">
+              <region language="java"/>
+            </source>
+          </codeElement>
+        </codeElement>
+        <codeElement xsi:type="code:Package" name="io">
+          <codeElement xsi:type="code:InterfaceUnit" name="Serializable">
+            <source language="java">
+              <region language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:ClassUnit" name="IOException">
+            <source language="java">
+              <region language="java"/>
+            </source>
+            <codeRelation xsi:type="code:Extends" to="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.2" from="/0/@model.1/@codeElement.0/@codeElement.2/@codeElement.1"/>
+          </codeElement>
+        </codeElement>
+      </codeElement>
+      <codeElement xsi:type="code:TemplateType" name="java.util.Set&lt;java.lang.String>">
+        <codeRelation xsi:type="code:ParameterTo" to="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.4" from="/0/@model.1/@codeElement.1"/>
+        <codeRelation xsi:type="code:InstanceOf" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.2" from="/0/@model.1/@codeElement.1"/>
+      </codeElement>
+      <codeElement xsi:type="code:TemplateType" name="java.util.HashSet&lt;java.lang.String>">
+        <codeRelation xsi:type="code:ParameterTo" to="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.4" from="/0/@model.1/@codeElement.2"/>
+        <codeRelation xsi:type="code:InstanceOf" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.4" from="/0/@model.1/@codeElement.2"/>
+      </codeElement>
+      <codeElement xsi:type="code:TemplateType" name="java.util.Collection&lt;java.lang.String>">
+        <codeRelation xsi:type="code:ParameterTo" to="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.4" from="/0/@model.1/@codeElement.3"/>
+        <codeRelation xsi:type="code:InstanceOf" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.3" from="/0/@model.1/@codeElement.3"/>
+      </codeElement>
+      <codeElement xsi:type="code:ArrayType" name="java.lang.Object[]" size="1">
+        <itemUnit type="/0/@model.1/@codeElement.0/@codeElement.1/@codeElement.7"/>
+        <indexUnit type="/0/@model.0/@codeElement.1/@codeElement.0"/>
+      </codeElement>
+      <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+        <source language="java">
+          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+        </source>
+        <codeElement xsi:type="code:Value" name="type literal" type="/0/@model.0/@codeElement.0/@codeElement.0">
+          <source language="java">
+            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+          </source>
+        </codeElement>
+        <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.12" from="/0/@model.1/@codeElement.5"/>
+      </codeElement>
+      <codeElement xsi:type="action:ActionElement" name="class instance creation" kind="class instance creation">
+        <source language="java">
+          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+        </source>
+        <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+          <source language="java">
+            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+          </source>
+          <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;submitTopology&quot;">
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;fileUpload&quot;">
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;getNimbusConf&quot;">
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;getClusterInfo&quot;">
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0" from="/0/@model.1/@codeElement.6/@codeElement.0"/>
+        </codeElement>
+        <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.1/@codeElement.0" from="/0/@model.1/@codeElement.6"/>
+        <actionRelation xsi:type="action:Creates" to="/0/@model.1/@codeElement.2" from="/0/@model.1/@codeElement.6"/>
+      </codeElement>
+      <codeElement xsi:type="action:ActionElement" name="class instance creation" kind="class instance creation">
+        <source language="java">
+          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+        </source>
+        <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+          <source language="java">
+            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+          </source>
+          <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;fileDownload&quot;">
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0" from="/0/@model.1/@codeElement.7/@codeElement.0"/>
+        </codeElement>
+        <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.1/@codeElement.0" from="/0/@model.1/@codeElement.7"/>
+        <actionRelation xsi:type="action:Creates" to="/0/@model.1/@codeElement.2" from="/0/@model.1/@codeElement.7"/>
+      </codeElement>
+      <codeElement xsi:type="action:ActionElement" name="class instance creation" kind="class instance creation">
+        <source language="java">
+          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+        </source>
+        <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+          <source language="java">
+            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+          </source>
+          <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;killTopology&quot;">
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;rebalance&quot;">
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;activate&quot;">
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;deactivate&quot;">
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;getTopologyConf&quot;">
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;getTopology&quot;">
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;getUserTopology&quot;">
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;getTopologyInfo&quot;">
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <codeElement xsi:type="code:Value" name="string literal" type="/0/@model.0/@codeElement.1/@codeElement.9" ext="&quot;uploadNewCredentials&quot;">
+            <source language="java">
+              <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+            </source>
+          </codeElement>
+          <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.0/@codeElement.0" from="/0/@model.1/@codeElement.8/@codeElement.0"/>
+        </codeElement>
+        <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.0/@codeElement.0/@codeElement.4/@codeElement.1/@codeElement.0" from="/0/@model.1/@codeElement.8"/>
+        <actionRelation xsi:type="action:Creates" to="/0/@model.1/@codeElement.2" from="/0/@model.1/@codeElement.8"/>
+      </codeElement>
+      <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+        <source language="java">
+          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+        </source>
+        <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+          <source language="java">
+            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+          </source>
+          <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.19" from="/0/@model.1/@codeElement.9/@codeElement.0"/>
+        </codeElement>
+        <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.20" from="/0/@model.1/@codeElement.9"/>
+      </codeElement>
+      <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+        <source language="java">
+          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+        </source>
+        <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+          <source language="java">
+            <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+          </source>
+          <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.19" from="/0/@model.1/@codeElement.10/@codeElement.0"/>
+        </codeElement>
+        <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.21" from="/0/@model.1/@codeElement.10"/>
+      </codeElement>
+      <codeElement xsi:type="action:ActionElement" name="method invocation" kind="method invocation">
+        <source language="java">
+          <region file="/0/@model.2/@inventoryElement.0" language="java"/>
+        </source>
+        <actionRelation xsi:type="action:Calls" to="/0/@model.1/@codeElement.22" from="/0/@model.1/@codeElement.11"/>
+      </codeElement>
+      <codeElement xsi:type="code:MethodUnit" name="getLogger" type="/0/@model.1/@codeElement.12/@codeElement.0" export="unknown">
+        <source language="java">
+          <region language="java"/>
+        </source>
+        <codeElement xsi:type="code:Signature" name="getLogger"/>
+      </codeElement>
+      <codeElement xsi:type="code:MethodUnit" name="GetPrincipalToLocalPlugin" type="/0/@model.1/@codeElement.13/@codeElement.0" export="unknown">
+        <source language="java">
+          <region language="java"/>
+        </source>
+        <codeElement xsi:type="code:Signature" name="GetPrincipalToLocalPlugin"/>
+      </codeElement>
+      <codeElement xsi:type="code:MethodUnit" name="GetGroupMappingServiceProviderPlugin" type="/0/@model.1/@codeElement.14/@codeElement.0" export="unknown">
+        <source language="java">
+          <region language="java"/>
+        </source>
+        <codeElement xsi:type="code:Signature" name="GetGroupMappingServiceProviderPlugin"/>
+      </codeElement>
+      <codeElement xsi:type="code:MethodUnit" name="info" type="/0/@model.1/@codeElement.15/@codeElement.0" export="unknown">
+        <source language="java">
+          <region language="java"/>
+        </source>
+        <codeElement xsi:type="code:Signature" name="info"/>
+      </codeElement>
+      <codeElement xsi:type="code:MethodUnit" name="requestID" type="/0/@model.1/@codeElement.16/@codeElement.0" export="unknown">
+        <source language="java">
+          <region language="java"/>
+        </source>
+        <codeElement xsi:type="code:Signature" name="requestID"/>
+      </codeElement>
+      <codeElement xsi:type="code:MethodUnit" name="remoteAddress" type="/0/@model.1/@codeElement.17/@codeElement.0" export="unknown">
+        <source language="java">
+          <region language="java"/>
+        </source>
+        <codeElement xsi:type="code:Signature" name="remoteAddress"/>
+      </codeElement>
+      <codeElement xsi:type="code:MethodUnit" name="toString" type="/0/@model.1/@codeElement.18/@codeElement.0" export="unknown">
+        <source language="java">
+          <region language="java"/>
+        </source>
+        <codeElement xsi:type="code:Signature" name="toString"/>
+      </codeElement>
+      <codeElement xsi:type="code:MethodUnit" name="principal" type="/0/@model.1/@codeElement.19/@codeElement.0" export="unknown">
+        <source language="java">
+          <region language="java"/>
+        </source>
+        <codeElement xsi:type="code:Signature" name="principal"/>
+      </codeElement>
+      <codeElement xsi:type="code:MethodUnit" name="getName" type="/0/@model.1/@codeElement.20/@codeElement.0" export="unknown">
+        <source language="java">
+          <region language="java"/>
+        </source>
+        <codeElement xsi:type="code:Signature" name="getName"/>
+      </codeElement>
+      <codeElement xsi:type="code:MethodUnit" name="toLocal" type="/0/@model.1/@codeElement.21/@codeElement.0" export="unknown">
+        <source language="java">
+          <region language="java"/>
+        </source>
+        <codeElement xsi:type="code:Signature" name="toLocal"/>
+      </codeElement>
+      <codeElement xsi:type="code:MethodUnit" name="getGroups" type="/0/@model.1/@codeElement.22/@codeElement.0" export="unknown">
+        <source language="java">
+          <region language="java"/>
+        </source>
+        <codeElement xsi:type="code:Signature" name="getGroups"/>
+      </codeElement>
+      <codeElement xsi:type="code:MethodUnit" name="warn" type="/0/@model.1/@codeElement.23/@codeElement.0" export="unknown">
+        <source language="java">
+          <region language="java"/>
+        </source>
+        <codeElement xsi:type="code:Signature" name="warn"/>
+      </codeElement>
+      <codeElement xsi:type="code:InterfaceUnit" name="IAuthorizer"/>
+      <codeElement xsi:type="code:InterfaceUnit" name="backtype.storm.Config"/>
+      <codeElement xsi:type="code:InterfaceUnit" name="backtype.storm.security.auth.IAuthorizer"/>
+      <codeElement xsi:type="code:InterfaceUnit" name="backtype.storm.security.auth.ReqContext"/>
+      <codeElement xsi:type="code:InterfaceUnit" name="backtype.storm.security.auth.AuthUtils"/>
+      <codeElement xsi:type="code:InterfaceUnit" name="backtype.storm.security.auth.IPrincipalToLocal"/>
+      <codeElement xsi:type="code:InterfaceUnit" name="backtype.storm.security.auth.IGroupMappingServiceProvider"/>
+      <codeElement xsi:type="code:InterfaceUnit" name="org.slf4j.Logger"/>
+      <codeElement xsi:type="code:InterfaceUnit" name="org.slf4j.LoggerFactory"/>
+      <codeElement xsi:type="code:InterfaceUnit" name="ReqContext"/>
+      <codeElement xsi:type="code:InterfaceUnit" name="Logger"/>
+      <codeElement xsi:type="code:InterfaceUnit" name="IPrincipalToLocal"/>
+      <codeElement xsi:type="code:InterfaceUnit" name="IGroupMappingServiceProvider"/>
+    </model>
+    <model xsi:type="source:InventoryModel" name="source references">
+      <inventoryElement xsi:type="source:SourceFile" name="SimpleACLAuthorizer.java" path="D:\_udemSVN\DSMCompare-Project\srcCode\MergeScenarioMiner\coding\data\ref_conflicts_abs\storm\9b41ddfd599f6b0538095ee43fa8cf72d8f96d03_V2\src\pkg\SimpleACLAuthorizer.java" language="java"/>
+    </model>
+  </kdm:Segment>
+  <kdm:Attribute tag="export" value="none"/>
+  <kdm:Attribute tag="export" value="none"/>
+  <kdm:Attribute tag="export" value="none"/>
+  <kdm:Attribute tag="export" value="none"/>
+</xmi:XMI>

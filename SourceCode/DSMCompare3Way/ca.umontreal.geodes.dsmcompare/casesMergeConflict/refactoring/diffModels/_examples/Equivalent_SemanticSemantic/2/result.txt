@@ -1,0 +1,83 @@
+Matches count 	:	1
+Diffs count 	:	16
+Conflicts count :	0
+Matched resources :
+Left = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V1.xmi
+Right = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V2.xmi
+origin = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/CA.xmi
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| refactoringDiffMM.impl.EPackageImpl@7216fb24 (name: rfc)| refactoringDiffMM.impl.EPackageImpl@45815ffc (name: rfc)|
+| |-refactoringDiffMM.impl.EClassImpl@2072acb2 (name: cls3)| |-refactoringDiffMM.impl.EClassImpl@732f29af (name: cls3)|
+| | |-refactoringDiffMM.impl.EAttributeImpl@50ecde95 (name: attr1, etype: null)| | |-refactoringDiffMM.impl.EAttributeImpl@d3957fe (name: attr1, etype: null)|
+| | |-refactoringDiffMM.impl.EAttributeImpl@35a9782c (name: attr2, etype: null)| | |-refactoringDiffMM.impl.EAttributeImpl@6622fc65 (name: attr2, etype: null)|
+| |-refactoringDiffMM.impl.EClassImpl@70a36a66 (name: root)| |-refactoringDiffMM.impl.EClassImpl@299321e2 (name: root)|
+| |                                      | |                                      |
+| |                                      | |                                      |
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+REFERENCE CHANGES
+
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@50ecde95 (name: attr1, etype: null) has been moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@2072acb2 (name: cls3)
+
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@35a9782c (name: attr2, etype: null) has been moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@2072acb2 (name: cls3)
+
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@d3957fe (name: attr1, etype: null) has been remotely(RIGHT) moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@2072acb2 (name: cls3)
+
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@6622fc65 (name: attr2, etype: null) has been remotely(RIGHT) moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@2072acb2 (name: cls3)
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@70a36a66 (name: root) has been added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@2072acb2 (name: cls3)
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@299321e2 (name: root) has been remotely(RIGHT) added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@2072acb2 (name: cls3)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@6b00f608 (name: root) has been deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@64ba3208 (name: cls1)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@6b00f608 (name: root) has been remotely(RIGHT) deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@64ba3208 (name: cls1)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@6b00f608 (name: root) has been deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@25a6944c (name: cls2)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@6b00f608 (name: root) has been remotely(RIGHT) deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@25a6944c (name: cls2)
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@2072acb2 (name: cls3) has been added to reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@7216fb24 (name: rfc)
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@732f29af (name: cls3) has been remotely(RIGHT) added to reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@7216fb24 (name: rfc)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@64ba3208 (name: cls1) has been deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@7216fb24 (name: rfc)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@64ba3208 (name: cls1) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@7216fb24 (name: rfc)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@25a6944c (name: cls2) has been deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@7216fb24 (name: rfc)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@25a6944c (name: cls2) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@7216fb24 (name: rfc)
+
+ATTRIBUTE CHANGES
+
+CONFLICTS
+false is deleted!Cannot setDiffKind(...) 
+ DSDiffObject: refactoringDiffMM.impl.DiffEClass_eattributesImpl@62452cc9 (diff_kind_Left: DELETE, diff_kind_Right: NON, changeStatus: NON)
+ changeStatusAttribute: org.eclipse.emf.ecore.impl.EAttributeImpl@d86a6f (name: diff_kind_Right) (ordered: true, unique: false, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: NON, unsettable: false, derived: false) (iD: false)
+ DELETE
+false is deleted!Cannot setDiffKind(...) 
+ DSDiffObject: refactoringDiffMM.impl.DiffEClass_eattributesImpl@6941827a (diff_kind_Left: DELETE, diff_kind_Right: NON, changeStatus: NON)
+ changeStatusAttribute: org.eclipse.emf.ecore.impl.EAttributeImpl@d86a6f (name: diff_kind_Right) (ordered: true, unique: false, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: NON, unsettable: false, derived: false) (iD: false)
+ DELETE
+The end of transforming EMF-Diff to DSMC-Diff
+emf-Compare result transformed to Fine-Grained DsmdiffMM!

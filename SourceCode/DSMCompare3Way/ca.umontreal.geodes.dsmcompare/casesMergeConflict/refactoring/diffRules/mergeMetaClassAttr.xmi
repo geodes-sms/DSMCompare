@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring2WayRuleMM="www.geodes.UdeM.edu/refactoring2WayRuleMM"
+    name="mergeMetaClassAttr">
+  <rulePattern_DiffEClass
+      xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass"
+      name="cls3"
+      esupertypes="root"
+      diff_kind="ADD"
+      ID_Pattern="2">
+    <diffeattributes
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_eattributes"
+        diff_kind="ADD"
+        eType="attr1"
+        ID_Pattern="3"/>
+    <diffeattributes
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_eattributes"
+        diff_kind="ADD"
+        eType="attr2"
+        ID_Pattern="4"/>
+    <diffesupertypes
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_esupertypes"
+        diff_kind="ADD"
+        eType="root"
+        ID_Pattern="5"/>
+  </rulePattern_DiffEClass>
+  <rulePattern_DiffEClass
+      xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass"
+      name="cls1"
+      diff_kind="DELETE"
+      ID_Pattern="6">
+    <eattributes
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEAttribute"
+        name="attr1"
+        diff_kind="DELETE"
+        ID_Pattern="7"/>
+    <diffeattributes
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_eattributes"
+        diff_kind="DELETE"
+        eType="attr1"
+        ID_Pattern="8"
+        filter="true"/>
+    <diffesupertypes
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_esupertypes"
+        diff_kind="DELETE"
+        eType="root"
+        ID_Pattern="9"
+        filter="true"/>
+  </rulePattern_DiffEClass>
+  <rulePattern_DiffEClass
+      xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass"
+      name="cls2"
+      diff_kind="DELETE"
+      ID_Pattern="10">
+    <eattributes
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEAttribute"
+        name="attr2"
+        diff_kind="DELETE"
+        ID_Pattern="11"/>
+    <diffeattributes
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_eattributes"
+        diff_kind="DELETE"
+        eType="attr2"
+        ID_Pattern="12"
+        filter="true"/>
+    <diffesupertypes
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_esupertypes"
+        diff_kind="DELETE"
+        eType="root"
+        ID_Pattern="13"
+        filter="true"/>
+  </rulePattern_DiffEClass>
+  <rulePattern_EClass
+      xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+      name="root"
+      ID_Pattern="1"/>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="Merge Meta-Class Attribute"
+      SemanticObject_DiffEAttribute="attr1 attr2"
+      SemanticObject_DiffEClass="cls3 cls1 cls2"
+      SemanticObject_DiffEClass_eattributes="//@rulePattern_DiffEClass.0/@diffeattributes.0 //@rulePattern_DiffEClass.0/@diffeattributes.1 //@rulePattern_DiffEClass.1/@diffeattributes.0 //@rulePattern_DiffEClass.2/@diffeattributes.0"
+      SemanticObject_DiffEClass_esupertypes="//@rulePattern_DiffEClass.0/@diffesupertypes.0 //@rulePattern_DiffEClass.1/@diffesupertypes.0 //@rulePattern_DiffEClass.2/@diffesupertypes.0"
+      SemanticObject_EAttribute="attr1 attr2"
+      SemanticObject_EClass="root cls3 cls1 cls2"
+      ID_Pattern="14"/>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="Merge Meta-Class Attribute"
+      SemanticObject_DiffEAttribute="attr1 attr2"
+      SemanticObject_DiffEClass="cls3 cls1 cls2"
+      SemanticObject_DiffEClass_eattributes="//@rulePattern_DiffEClass.0/@diffeattributes.0 //@rulePattern_DiffEClass.0/@diffeattributes.1 //@rulePattern_DiffEClass.1/@diffeattributes.0 //@rulePattern_DiffEClass.2/@diffeattributes.0"
+      SemanticObject_DiffEClass_esupertypes="//@rulePattern_DiffEClass.0/@diffesupertypes.0 //@rulePattern_DiffEClass.1/@diffesupertypes.0 //@rulePattern_DiffEClass.2/@diffesupertypes.0"
+      SemanticObject_EAttribute="attr1 attr2"
+      SemanticObject_EClass="root cls3 cls1 cls2"
+      ID_Pattern="15"
+      isForbidden="true"/>
+</refactoring2WayRuleMM:Rule>

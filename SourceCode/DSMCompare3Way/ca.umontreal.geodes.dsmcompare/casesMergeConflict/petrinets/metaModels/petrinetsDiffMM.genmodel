@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ca.umontreal.geodes.dsmcompare/src" modelPluginID="ca.umontreal.geodes.dsmcompare"
+    modelName="PetrinetsDiffMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>petrinetsDiffMM.ecore</foreignModel>
+  <genPackages prefix="PetrinetsDiffMM" disposableProviderFactory="true" ecorePackage="petrinetsDiffMM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="petrinetsDiffMM.ecore#//AUTHOR">
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//AUTHOR/NON"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//AUTHOR/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//AUTHOR/RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//AUTHOR/EQUAL"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//AUTHOR/MIXED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="petrinetsDiffMM.ecore#//ChangeStatus">
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ChangeStatus/NON"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ChangeStatus/EQUIVALENT"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ChangeStatus/CONTRADICTING"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ChangeStatus/MERGE_ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ChangeStatus/MERGE_DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ChangeStatus/MERGE_MODIFY"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ChangeStatus/MERGE_DELETE_CREATE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="petrinetsDiffMM.ecore#//ConflictGranularity">
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictGranularity/NIL"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictGranularity/Semantic_Semantic"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictGranularity/Semantic_Fine"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictGranularity/Fine_Fine"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="petrinetsDiffMM.ecore#//ConflictResolutionStrategy">
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictResolutionStrategy/NIL"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictResolutionStrategy/Keep_Left"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictResolutionStrategy/Keep_Right"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictResolutionStrategy/Keep_Semantic_Difference"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictResolutionStrategy/Apply_None"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictResolutionStrategy/Apply_Left_Then_Right"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictResolutionStrategy/Apply_Right_Then_Left"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictResolutionStrategy/Apply_A_User_Defined_Resolution_Pattern"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictResolutionStrategy/Custom_Change_At_Time_Of_Merge"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictResolutionStrategy/Suggest_A_Resolution_Needing_Approval"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="petrinetsDiffMM.ecore#//ConflictResolutionType">
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictResolutionType/Pending"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//ConflictResolutionType/Resolved"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="petrinetsDiffMM.ecore#//DiffKind">
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//DiffKind/NON"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//DiffKind/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//DiffKind/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsDiffMM.ecore#//DiffKind/MODIFY"/>
+    </genEnums>
+    <genClasses ecoreClass="petrinetsDiffMM.ecore#//ConflictResolution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//ConflictResolution/ResolutionType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//ConflictResolution/ResolutionStrategy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//ConflictResolution/semanticconflicts"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsDiffMM.ecore#//DiffPetriNet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet/isMerged"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet/new_id_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet/new_id_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet/idChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet/new_name_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet/new_name_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet/nameChangeStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsDiffMM.ecore#//DiffPetriNet_places">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet_places/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet_places/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet_places/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet_places/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet_places/isMerged"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet_places/diff_Group"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//DiffPetriNet_places/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsDiffMM.ecore#//DiffPetriNet_transitions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet_transitions/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet_transitions/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet_transitions/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet_transitions/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet_transitions/isMerged"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPetriNet_transitions/diff_Group"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//DiffPetriNet_transitions/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsDiffMM.ecore#//DiffPlace">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace/isMerged"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace/new_id_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace/new_id_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace/idChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace/new_name_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace/new_name_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace/nameChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace/new_tokens_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace/new_tokens_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace/tokensChangeStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsDiffMM.ecore#//DiffPlace_transitions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace_transitions/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace_transitions/isMerged"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_Group"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsDiffMM.ecore#//DiffTransition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition/isMerged"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition/new_id_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition/new_id_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition/idChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition/new_name_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition/new_name_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition/nameChangeStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsDiffMM.ecore#//DiffTransition_places">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition_places/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition_places/isMerged"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//DiffTransition_places/diff_Group"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="petrinetsDiffMM.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//NamedElement/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsDiffMM.ecore#//PetriNet">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//PetriNet/places"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//PetriNet/transitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//PetriNet/diffplaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//PetriNet/difftransitions"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsDiffMM.ecore#//Place">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//Place/tokens"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//Place/transitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//Place/difftransitions"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsDiffMM.ecore#//SemanticConflict">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//SemanticConflict/conflict_kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//SemanticConflict/conflict_Granularity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//SemanticConflict/semanticdiffs"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsDiffMM.ecore#//SemanticDiff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//SemanticDiff/author"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="petrinetsDiffMM.ecore#//SemanticObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsDiffMM.ecore#//SemanticObject/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_DiffPetriNet"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_DiffPetriNet_places"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_DiffPetriNet_transitions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_DiffPlace"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_DiffPlace_transitions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_DiffTransition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_DiffTransition_places"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsDiffMM.ecore#//Transition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//Transition/places"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

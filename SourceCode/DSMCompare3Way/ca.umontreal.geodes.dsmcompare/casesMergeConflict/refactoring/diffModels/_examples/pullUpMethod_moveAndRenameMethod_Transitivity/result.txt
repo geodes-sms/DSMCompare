@@ -1,0 +1,44 @@
+Matches count 	:	1
+Diffs count 	:	3
+Conflicts count :	1
+Matched resources :
+Left = file:/D:/_gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V1.xmi
+Right = file:/D:/_gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V2.xmi
+origin = file:/D:/_gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/CA.xmi
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| refactoringDiffMM.impl.EPackageImpl@16ecee1 (name: p)| refactoringDiffMM.impl.EPackageImpl@160ac7fb (name: p)|
+| |-refactoringDiffMM.impl.EClassImpl@3b220bcb (name: sub, extends: null, implements: null, isAbstract: false, packageName: null)| |-refactoringDiffMM.impl.EClassImpl@12bfd80d (name: sub, extends: null, implements: null, isAbstract: false, packageName: null)|
+| |-refactoringDiffMM.impl.EClassImpl@2b95e48b (name: super, extends: null, implements: null, isAbstract: false, packageName: null)| |-refactoringDiffMM.impl.EClassImpl@41925502 (name: super, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | |                                    | | |-refactoringDiffMM.impl.EOperationImpl@13e3c1c7 (name: m, eparameters: int a, etype: void, methodBody: a b, __idKDM: null)|
+| |-refactoringDiffMM.impl.EClassImpl@4a3329b9 (name: Target, extends: null, implements: null, isAbstract: false, packageName: null)| |-refactoringDiffMM.impl.EClassImpl@5316e95f (name: Target, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | |-refactoringDiffMM.impl.EOperationImpl@3dddefd8 (name: renamed, eparameters: int a, etype: void, methodBody: a b, __idKDM: null)| | |                                    |
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+REFERENCE CHANGES
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@618c5d94 (name: m, eparameters: int a, etype: void, methodBody: a b, __idKDM: null) has been deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@3b220bcb (name: sub, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [MOVE] value refactoringDiffMM.impl.EOperationImpl@13e3c1c7 (name: m, eparameters: int a, etype: void, methodBody: a b, __idKDM: null) has been remotely(RIGHT) moved from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@2b95e48b (name: super, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@3dddefd8 (name: renamed, eparameters: int a, etype: void, methodBody: a b, __idKDM: null) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@4a3329b9 (name: Target, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ATTRIBUTE CHANGES
+
+CONFLICTS
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@618c5d94 (name: m, eparameters: int a, etype: void, methodBody: a b, __idKDM: null) has been deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@3b220bcb (name: sub, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [MOVE] value refactoringDiffMM.impl.EOperationImpl@13e3c1c7 (name: m, eparameters: int a, etype: void, methodBody: a b, __idKDM: null) has been remotely(RIGHT) moved from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@2b95e48b (name: super, extends: null, implements: null, isAbstract: false, packageName: null)
+diff012 model saved at: file:/D:/_gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/diffModels/DSMDiff.xmi
+--> Models are merged and initial v012 (non conflicting elements only) saved at: file:/D:/_gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V012.xmi
+Succeed! The end of transforming EMF-Diff to DSMC-Diff
+emf-Compare result transformed to Fine-Grained DsmdiffMM!

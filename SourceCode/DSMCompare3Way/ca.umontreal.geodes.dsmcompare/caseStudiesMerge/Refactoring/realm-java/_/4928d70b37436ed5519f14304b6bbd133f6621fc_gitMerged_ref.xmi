@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="io.realm">
+  <eclassifiers name="TestHelper">
+    <eoperations name="populateForMultiSort()" eparameters="testRealm:Realm" etype="void" methodBody="expression statement; method invocation; commitTransaction; expression statement; method invocation; setColumnString; string literal; expression statement; method invocation; setColumnLong; number literal; variable declaration; object3; expression statement; method invocation; setColumnString; string literal; expression statement; method invocation; setColumnLong; number literal; variable declaration; object2; expression statement; method invocation; setColumnString; string literal; expression statement; method invocation; setColumnLong; number literal; variable declaration; object1; expression statement; method invocation; clear; type literal; expression statement; method invocation; beginTransaction; " __idKDM="populateForMultiSort___Realm___"/>
+    <eoperations name="streamToString()" eparameters="in:InputStream, null:IOException" etype="String" methodBody="return; method invocation; toString; try; if; expression statement; method invocation; close; NOT_EQUALS; br; null; while; expression statement; method invocation; append; NOT_EQUALS; null; parenthesized; ASSIGN; line; method invocation; readLine; expression statement; ASSIGN; br; class instance creation; BufferedReader; class instance creation; InputStreamReader; variable declaration; line; variable declaration; class instance creation; StringBuilder; sb; variable declaration; br; " __idKDM="streamToString___InputStream__IOException___"/>
+    <nested_classes name="StubInputStream" extends="InputStream" esupertypes="InputStream">
+      <eoperations name="read()" eparameters="null:IOException" etype="int" methodBody="return; number literal; " __idKDM="read___IOException___"/>
+    </nested_classes>
+  </eclassifiers>
+  <eclassifiers name="TestHelper">
+    <eoperations name="populateForMultiSort()" eparameters="testRealm:Realm" etype="void" methodBody="expression statement; method invocation; commitTransaction; expression statement; method invocation; setColumnString; string literal; expression statement; method invocation; setColumnLong; number literal; variable declaration; object3; expression statement; method invocation; setColumnString; string literal; expression statement; method invocation; setColumnLong; number literal; variable declaration; object2; expression statement; method invocation; setColumnString; string literal; expression statement; method invocation; setColumnLong; number literal; variable declaration; object1; expression statement; method invocation; clear; type literal; expression statement; method invocation; beginTransaction; " __idKDM="populateForMultiSort___Realm___"/>
+  </eclassifiers>
+  <eclassifiers name="InputStream" implements="Closeable" interfaces="Closeable"/>
+  <interfaces name="Closeable" extends="AutoCloseable" esupertypes="AutoCloseable"/>
+  <interfaces name="AutoCloseable"/>
+</refactoring:EPackage>

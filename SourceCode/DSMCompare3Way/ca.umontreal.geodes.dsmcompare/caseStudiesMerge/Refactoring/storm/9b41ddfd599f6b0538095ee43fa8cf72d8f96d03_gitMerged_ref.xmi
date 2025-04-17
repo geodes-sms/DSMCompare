@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="SimpleACLAuthorizer" implements="IAuthorizer" interfaces="IAuthorizer">
+    <eattributes name="LOG" etype="Logger"/>
+    <eattributes name="_userCommands" etype="java.util.Set&lt;java.lang.String>"/>
+    <eattributes name="_supervisorCommands" etype="java.util.Set&lt;java.lang.String>"/>
+    <eattributes name="_topoCommands" etype="java.util.Set&lt;java.lang.String>"/>
+    <eattributes name="_admins" etype="java.util.Set&lt;java.lang.String>"/>
+    <eattributes name="_supervisors" etype="java.util.Set&lt;java.lang.String>"/>
+    <eattributes name="_nimbusUsers" etype="java.util.Set&lt;java.lang.String>"/>
+    <eattributes name="_nimbusGroups" etype="java.util.Set&lt;java.lang.String>"/>
+    <eattributes name="_ptol" etype="IPrincipalToLocal"/>
+    <eattributes name="_groupMappingProvider" etype="IGroupMappingServiceProvider"/>
+    <eoperations name="prepare()" eparameters="conf:Map&lt;K, V>" etype="void" methodBody="expression statement; ASSIGN; method invocation; GetGroupMappingServiceProviderPlugin; expression statement; ASSIGN; method invocation; GetPrincipalToLocalPlugin; if; expression statement; method invocation; addAll; cast; java.util.Collection&lt;java.lang.String>; method invocation; get; method invocation; containsKey; if; expression statement; method invocation; addAll; cast; java.util.Collection&lt;java.lang.String>; method invocation; get; method invocation; containsKey; if; expression statement; method invocation; addAll; cast; java.util.Collection&lt;java.lang.String>; method invocation; get; method invocation; containsKey; if; expression statement; method invocation; addAll; cast; java.util.Collection&lt;java.lang.String>; method invocation; get; method invocation; containsKey; expression statement; ASSIGN; _nimbusGroups; class instance creation; HashSet; expression statement; ASSIGN; _nimbusUsers; class instance creation; HashSet; expression statement; ASSIGN; _supervisors; class instance creation; HashSet; expression statement; ASSIGN; _admins; class instance creation; HashSet; " __idKDM="prepare___Map_K__V____"/>
+    <eoperations name="permit()" eparameters="context:ReqContext, operation:String, topology_conf:Map&lt;K, V>" etype="boolean" methodBody="" __idKDM="permit___ReqContext__String__Map_K__V____"/>
+    <eoperations name="checkUserGroupAllowed()" eparameters="userGroups:java.util.Set&lt;java.lang.String>, configuredGroups:java.util.Set&lt;java.lang.String>" etype="Boolean" methodBody="return; boolean literal; if; foreach; tgroup; if; return; boolean literal; method invocation; contains; CONDITIONAL_AND; GREATER; number literal; method invocation; size; GREATER; number literal; method invocation; size; " __idKDM="checkUserGroupAllowed___java_util_Set_java_lang_String___java_util_Set_java_lang_String____"/>
+  </eclassifiers>
+  <interfaces name="IAuthorizer"/>
+</refactoring:EPackage>

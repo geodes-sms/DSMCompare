@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrinets:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petrinets="www.geodes.UdeM.edu/petrinets"
+    xsi:schemaLocation="www.geodes.UdeM.edu/petrinets ../metaModels/petrinets.ecore"
+    name="pnModel">
+  <places name="Pending"
+      tokens="2">
+    <sources
+        target="//@transitions.0"/>
+  </places>
+  <places name="OnlineChoice">
+    <sources
+        target="//@transitions.1"/>
+    <sources
+        target="//@transitions.2"/>
+  </places>
+  <places name="CODChoice">
+    <sources
+        target="//@transitions.1"/>
+    <sources
+        target="//@transitions.2"/>
+  </places>
+  <places name="OnlinePayReceived">
+    <sources
+        target="//@transitions.3"/>
+  </places>
+  <places name="CODPayReceived">
+    <sources
+        target="//@transitions.4"/>
+  </places>
+  <places name="Completed"/>
+  <transitions
+      name="receive">
+    <sources
+        target="//@places.1"/>
+    <sources
+        target="//@places.2"/>
+  </transitions>
+  <transitions
+      name="payOnline">
+    <sources
+        target="//@places.3"/>
+  </transitions>
+  <transitions
+      name="payCOD">
+    <sources
+        target="//@places.4"/>
+  </transitions>
+  <transitions
+      name="checkCredit">
+    <sources
+        target="//@places.5"/>
+  </transitions>
+  <transitions
+      name="checkCash">
+    <sources
+        target="//@places.5"/>
+  </transitions>
+</petrinets:PetriNet>

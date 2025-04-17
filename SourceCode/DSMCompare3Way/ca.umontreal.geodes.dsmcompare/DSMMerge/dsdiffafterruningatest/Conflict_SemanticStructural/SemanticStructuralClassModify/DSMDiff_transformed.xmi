@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pacmanDiffMM:DiffGame xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pacmanDiffMM="http://www.zadahmad.org/dsmcompare/pacmanDiffMM" xsi:schemaLocation="http://www.zadahmad.org/dsmcompare/pacmanDiffMM ../MM/pacmanDiffMM.ecore" id="1" score="1" diff_kind_Left="MODIFY" diff_kind_Right="MODIFY" changeStatus="CONTRADICTING" new_score_Left="2" new_score_Right="3" scoreChangeStatus="CONTRADICTING">
+  <gridnodes right="O" id="L"/>
+  <gridnodes left="L" right="R" id="O"/>
+  <gridnodes left="O" id="R"/>
+  <entities xsi:type="pacmanDiffMM:Pacman" on="O" id="P"/>
+  <entities xsi:type="pacmanDiffMM:DiffFood" id="F" diff_kind_Left="DELETE"/>
+  <domainspecificdiffs name="Pacman Eat Food" DomainSpecificDiff_Game="1" DomainSpecificDiff_PositionableEntity="P F"/>
+</pacmanDiffMM:DiffGame>

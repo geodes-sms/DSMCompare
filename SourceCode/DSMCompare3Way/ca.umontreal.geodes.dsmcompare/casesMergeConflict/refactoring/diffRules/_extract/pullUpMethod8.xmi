@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring2WayRuleMM="www.geodes.UdeM.edu/refactoring2WayRuleMM"
+    name="pullUpMethod8">
+  <rulePattern_EPackage
+      xsi:type="refactoring2WayRuleMM:Pattern_EPackage">
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="super"
+        ID_Pattern="1">
+      <diffeoperations
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_eoperations"
+          diff_kind="ADD"
+          eType="//@rulePattern_EPackage.0/@eclassifiers.1/@eoperations.0"
+          ID_Pattern="2"/>
+    </eclassifiers>
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="sub"
+        ID_Pattern="3">
+      <eoperations
+          xsi:type="refactoring2WayRuleMM:Pattern_EOperation"
+          ID_Pattern="4"/>
+      <diffeoperations
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_eoperations"
+          diff_kind="DELETE"
+          eType="//@rulePattern_EPackage.0/@eclassifiers.1/@eoperations.0"
+          ID_Pattern="5"
+          filter="true"/>
+      <diffesupertypes
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_esupertypes"
+          diff_kind="ADD"
+          eType="super"
+          ID_Pattern="6"/>
+    </eclassifiers>
+  </rulePattern_EPackage>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="Pull-up Method"
+      SemanticObject_DiffEClass_eoperations="//@rulePattern_EPackage.0/@eclassifiers.0/@diffeoperations.0 //@rulePattern_EPackage.0/@eclassifiers.1/@diffeoperations.0"
+      SemanticObject_EClass="super sub"
+      SemanticObject_EOperation="//@rulePattern_EPackage.0/@eclassifiers.1/@eoperations.0"
+      SemanticObject_EPackage="//@rulePattern_EPackage.0"
+      ID_Pattern="7"/>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="Pull-up Method"
+      SemanticObject_DiffEClass_eoperations="//@rulePattern_EPackage.0/@eclassifiers.0/@diffeoperations.0 //@rulePattern_EPackage.0/@eclassifiers.1/@diffeoperations.0"
+      SemanticObject_EClass="super sub"
+      SemanticObject_EOperation="//@rulePattern_EPackage.0/@eclassifiers.1/@eoperations.0"
+      SemanticObject_EPackage="//@rulePattern_EPackage.0"
+      ID_Pattern="8"
+      isForbidden="true"/>
+</refactoring2WayRuleMM:Rule>

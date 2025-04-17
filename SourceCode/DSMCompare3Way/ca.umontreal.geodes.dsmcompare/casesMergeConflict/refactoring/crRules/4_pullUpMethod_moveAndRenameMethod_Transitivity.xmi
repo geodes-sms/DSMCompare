@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refactoringCRRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoringCRRuleMM="www.geodes.UdeM.edu/refactoringCRRuleMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/refactoringCRRuleMM ../metaModels/refactoringCRRuleMM.ecore"
+    name="pullUpMethod_moveAndRenameMethod_Transitivity"
+    priority="1">
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_SemanticDiff"
+      ID_Pattern="8"
+      name="Move And Rename Method"
+      SemanticObject_EOperation="2 7"
+      author="RIGHT"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_SemanticDiff"
+      ID_Pattern="9"
+      name="Pull-up Method"
+      SemanticObject_DiffEClass_eoperations="3 5"
+      SemanticObject_EClass="1 4"
+      SemanticObject_EOperation="2"
+      author="LEFT"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_SemanticConflict"
+      ID_Pattern="10"
+      name="Pull-up Method - Move And Rename Method"
+      conflict_Granularity="Semantic_Semantic"
+      semanticdiffs="9 8"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_ConflictResolution"
+      ID_Pattern="11"
+      name="Pull-up Method - Move And Rename Method - Transitivity"
+      ResolutionType="Resolved"
+      ResolutionStrategy="Apply_A_User_Defined_Resolution_Pattern"
+      semanticconflicts="10"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_ConflictResolution"
+      ID_Pattern="12"
+      isForbidden="true"
+      name="Pull-up Method - Move And Rename Method - Transitivity"
+      ResolutionType="Resolved"
+      ResolutionStrategy="Apply_A_User_Defined_Resolution_Pattern"
+      semanticconflicts="10"/>
+  <rulePattern_Pattern_EClass
+      ID_Pattern="1"
+      name=""
+      esupertypes="4">
+    <eoperations
+        xsi:type="refactoringCRRuleMM:Pattern_DiffEOperation"
+        ID_Pattern="2"
+        name=""
+        etype=""
+        diff_kind_Left="DELETE"
+        diff_kind_Right="DELETE"
+        changeStatus="MERGE_DELETE"/>
+    <diffeoperations
+        ID_Pattern="3"
+        diff_kind_Left="DELETE"
+        changeStatus="MERGE_DELETE"
+        eType="2"/>
+  </rulePattern_Pattern_EClass>
+  <rulePattern_Pattern_EClass
+      ID_Pattern="4"
+      name="">
+    <diffeoperations
+        ID_Pattern="5"
+        diff_kind_Left="ADD"
+        changeStatus="MERGE_DELETE"
+        eType="2"/>
+  </rulePattern_Pattern_EClass>
+  <rulePattern_Pattern_EClass
+      ID_Pattern="6"
+      name="">
+    <eoperations
+        xsi:type="refactoringCRRuleMM:Pattern_DiffEOperation"
+        ID_Pattern="7"
+        name=""
+        diff_kind_Right="ADD"/>
+  </rulePattern_Pattern_EClass>
+</refactoringCRRuleMM:Rule>

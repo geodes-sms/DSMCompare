@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM">
+  <refactoringDiffMM:EPackage name="rfc">
+    <eclassifiers name="root"/>
+    <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="cls1" diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="EQUIVALENT">
+      <eattributes name="attr1"/>
+      <diffeattributes diff_kind_Left="DELETE" diff_kind_Right="DELETE" diff_Group="DG-Move-2"/>
+      <diffesupertypes diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="EQUIVALENT" diff_Group="DG-3" eType="root"/>
+      <diffesupertypes diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="EQUIVALENT" diff_Group="DG-4" eType="root"/>
+    </eclassifiers>
+    <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="cls2" diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="EQUIVALENT">
+      <eattributes name="attr2"/>
+      <diffeattributes diff_kind_Left="DELETE" diff_kind_Right="DELETE" diff_Group="DG-Move-1"/>
+      <diffesupertypes diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="EQUIVALENT" diff_Group="DG-1" eType="root"/>
+      <diffesupertypes diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="EQUIVALENT" diff_Group="DG-2" eType="root"/>
+    </eclassifiers>
+    <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="cls3" diff_kind_Left="ADD" diff_kind_Right="ADD" changeStatus="EQUIVALENT">
+      <diffesupertypes diff_kind_Left="ADD" diff_kind_Right="ADD" changeStatus="EQUIVALENT" diff_Group="DG-5" eType="root"/>
+    </eclassifiers>
+  </refactoringDiffMM:EPackage>
+  <refactoringDiffMM:SemanticDiff name="Extract Superclass" SemanticObject_DiffEClass_esupertypes="/0/@eclassifiers.3/@diffesupertypes.0" SemanticObject_EClass="cls3" SemanticObject_EPackage="rfc" author="EQUAL"/>
+  <refactoringDiffMM:SemanticConflict name="Extract Superclass - Extract Superclass -E-1" conflict_kind="EQUIVALENT" conflict_Granularity="Semantic_Semantic" semanticdiffs="/1"/>
+</xmi:XMI>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM">
+  <refactoringDiffMM:EPackage name="pkg">
+    <eclassifiers name="ParallelComputer" extends="Computer">
+      <eattributes name="fClasses" etype="boolean"/>
+      <eattributes name="fMethods" etype="boolean"/>
+      <eoperations name="ParallelComputer()" eparameters="classes:boolean, methods:boolean" methodBody="expression statement; ASSIGN; fMethods; expression statement; ASSIGN; fClasses; " __idKDM="ParallelComputer___boolean__boolean___"/>
+      <eoperations name="classes()" eparameters="" etype="Computer" methodBody="return; class instance creation; ParallelComputer; boolean literal; boolean literal; " __idKDM="classes______"/>
+      <eoperations name="methods()" eparameters="" etype="Computer" methodBody="return; class instance creation; ParallelComputer; boolean literal; boolean literal; " __idKDM="methods______"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="parallelize()" eparameters="runner:ParentRunner&lt;T>, null:InitializationError" etype="Runner" methodBody="return; class instance creation; new ParallelParentRunner&lt;T>(runner); " __idKDM="parallelize___ParentRunner_T___InitializationError___" diff_kind_Left="ADD"/>
+      <nested_classes xsi:type="refactoringDiffMM:DiffEClass" name="ParallelRunner" extends="BlockJUnit4ClassRunner" diff_kind_Left="DELETE" changeStatus="CONTRADICTING">
+        <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="fResults" etype="java.util.List&lt;java.util.concurrent.Future&lt;java.lang.Object>>" diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="EQUIVALENT"/>
+        <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="fService" etype="ExecutorService" diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="EQUIVALENT"/>
+        <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="fCollator" etype="ParallelCollator" diff_kind_Right="ADD" changeStatus="CONTRADICTING"/>
+        <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="ParallelRunner()" eparameters="klass:java.lang.Class&lt;?>, null:InitializationError" methodBody="super constructor invocation; super(klass);&#xA;; " __idKDM="ParallelRunner___java_lang_Class_____InitializationError___" diff_kind_Left="DELETE"/>
+        <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="run()" eparameters="notifier:RunNotifier" etype="void" methodBody="foreach; each; try; catch; catch; e; expression statement; method invocation; printStackTrace; expression statement; method invocation; get; number literal; expression statement; super method invocation; run; " __idKDM="run___RunNotifier___" diff_kind_Left="DELETE" diff_kind_Right="MODIFY" changeStatus="CONTRADICTING" new_methodBody_Right="foreach; each; try; catch; catch; e; expression statement; method invocation; printStackTrace; expression statement; method invocation; get; expression statement; super method invocation; run; "/>
+        <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="superRunChild()" eparameters="method:FrameworkMethod, notifier:RunNotifier" etype="void" methodBody="expression statement; super method invocation; runChild; " __idKDM="superRunChild___FrameworkMethod__RunNotifier___" diff_kind_Left="DELETE"/>
+        <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="runChild()" eparameters="method:FrameworkMethod, notifier:RunNotifier" etype="void" methodBody="expression statement; method invocation; add; method invocation; submit; variable declaration; class instance creation; ; Anonymous type; callable; " __idKDM="runChild___FrameworkMethod__RunNotifier___" diff_kind_Left="DELETE" diff_kind_Right="MODIFY" changeStatus="CONTRADICTING" new_methodBody_Right="expression statement; method invocation; process; variable declaration; class instance creation; ; Anonymous type; callable; "/>
+      </nested_classes>
+      <nested_classes xsi:type="refactoringDiffMM:DiffEClass" name="ParallelSuite" extends="Suite" diff_kind_Left="DELETE">
+        <eattributes name="fService" etype="ExecutorService"/>
+        <eattributes name="fResults" etype="java.util.List&lt;java.util.concurrent.Future&lt;java.lang.Object>>"/>
+        <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="ParallelSuite()" eparameters="builder:RunnerBuilder, classes:java.lang.Class&lt;?>[], null:InitializationError" methodBody="super constructor invocation; Object; " __idKDM="ParallelSuite___RunnerBuilder__java_lang_Class_______InitializationError___" diff_kind_Left="DELETE"/>
+        <eoperations name="runChild()" eparameters="runner:Runner, notifier:RunNotifier" etype="void" methodBody="expression statement; method invocation; add; method invocation; submit; variable declaration; class instance creation; ; Anonymous type; callable; " __idKDM="runChild___Runner__RunNotifier___"/>
+        <eoperations name="superRunChild()" eparameters="runner:Runner, notifier:RunNotifier" etype="void" methodBody="expression statement; super method invocation; runChild; " __idKDM="superRunChild___Runner__RunNotifier___"/>
+        <eoperations name="run()" eparameters="notifier:RunNotifier" etype="void" methodBody="foreach; each; try; catch; catch; e; expression statement; method invocation; printStackTrace; expression statement; method invocation; get; number literal; expression statement; super method invocation; run; " __idKDM="run___RunNotifier___"/>
+      </nested_classes>
+      <nested_classes xsi:type="refactoringDiffMM:DiffEClass" name="ParallelCollator" diff_kind_Right="ADD">
+        <diffeoperations diff_kind_Left="ADD" changeStatus="CONTRADICTING" eType="run()"/>
+      </nested_classes>
+      <diffeoperations diff_kind_Left="DELETE" eType="methods()"/>
+      <diffeoperations diff_kind_Left="ADD" eType="methods()"/>
+      <diffesupertypes diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="EQUIVALENT" eType="Computer"/>
+    </eclassifiers>
+    <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="BlockJUnit4ClassRunner" diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="EQUIVALENT"/>
+    <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="Computer" diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="EQUIVALENT"/>
+  </refactoringDiffMM:EPackage>
+  <refactoringDiffMM:SemanticDiff name="extractMethod" SemanticObject_EClass="ParallelComputer" SemanticObject_EOperation="parallelize()" SemanticObject_EPackage="pkg" author="LEFT"/>
+  <refactoringDiffMM:SemanticDiff name="extractMethod" SemanticObject_EClass="ParallelComputer" SemanticObject_EOperation="parallelize()" SemanticObject_EPackage="pkg" author="LEFT"/>
+  <refactoringDiffMM:SemanticDiff name="moveMethod" SemanticObject_DiffEClass_eoperations="/0/@eclassifiers.0/@nested_classes.2/@diffeoperations.0" SemanticObject_EClass="ParallelRunner ParallelCollator" SemanticObject_EOperation="run()" author="LEFT"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEClass.[Computer].changeStatus - EQUIVALENT ( DELETE | DELETE )" SemanticObject_DiffEClass="Computer"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEClass.[BlockJUnit4ClassRunner].changeStatus - EQUIVALENT ( DELETE | DELETE )" SemanticObject_DiffEClass="BlockJUnit4ClassRunner"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEClass_esupertypes.changeStatus - EQUIVALENT ( DELETE | DELETE )" SemanticObject_DiffEClass_esupertypes="/0/@eclassifiers.0/@diffesupertypes.0"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEClass_eoperations.changeStatus - CONTRADICTING ( ADD | NON )" SemanticObject_DiffEClass_eoperations="/0/@eclassifiers.0/@nested_classes.2/@diffeoperations.0"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEClass.[ParallelRunner].changeStatus - CONTRADICTING ( DELETE | NON )" SemanticObject_DiffEClass="ParallelRunner"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEOperation.[runChild()].changeStatus - CONTRADICTING ( DELETE | MODIFY )" SemanticObject_DiffEOperation="runChild()"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEOperation.[run()].changeStatus - CONTRADICTING ( DELETE | MODIFY )" SemanticObject_DiffEOperation="run()"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEAttribute.[fCollator].changeStatus - CONTRADICTING ( NON | ADD )" SemanticObject_DiffEAttribute="fCollator"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEAttribute.[fService].changeStatus - EQUIVALENT ( DELETE | DELETE )" SemanticObject_DiffEAttribute="fService"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEAttribute.[fResults].changeStatus - EQUIVALENT ( DELETE | DELETE )" SemanticObject_DiffEAttribute="fResults"/>
+  <refactoringDiffMM:SemanticConflict name="moveMethod - moveMethod[ParallelRunner| ParallelCollator| run()] - CONTRADICTING" semanticdiffs="/3"/>
+  <refactoringDiffMM:SemanticConflict name="moveMethod - DiffEClass_eoperations.[ParallelCollator->] - DiffEClass_eoperations.[ParallelCollator->].CONTRADICTING ( ADD | NON )" SemanticObject_DiffEClass_eoperations="/0/@eclassifiers.0/@nested_classes.2/@diffeoperations.0" semanticdiffs="/3"/>
+  <refactoringDiffMM:SemanticConflict name="moveMethod - DiffEClass.[ParallelRunner] - DiffEClass.[ParallelRunner].CONTRADICTING ( DELETE | NON )" SemanticObject_DiffEClass="ParallelRunner" semanticdiffs="/3"/>
+  <refactoringDiffMM:SemanticConflict name="moveMethod - DiffEOperation.[run()] - DiffEOperation.[run()].CONTRADICTING ( DELETE | MODIFY )" SemanticObject_DiffEOperation="run()" semanticdiffs="/3"/>
+</xmi:XMI>

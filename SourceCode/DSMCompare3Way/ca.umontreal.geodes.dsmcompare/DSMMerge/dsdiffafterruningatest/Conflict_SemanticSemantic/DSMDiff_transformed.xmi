@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pacmanDiffMM:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pacmanDiffMM="http://www.zadahmad.org/dsmcompare/pacmanDiffMM" xsi:schemaLocation="http://www.zadahmad.org/dsmcompare/pacmanDiffMM ../MM/pacmanDiffMM.ecore" id="1" score="1">
+  <gridnodes right="O" id="L"/>
+  <gridnodes left="L" right="R" id="O"/>
+  <gridnodes left="O" id="R"/>
+  <entities xsi:type="pacmanDiffMM:Pacman" on="R" id="P">
+    <diffon diff_kind_Left="ADD" eType="L"/>
+    <diffon diff_kind_Right="ADD" eType="R"/>
+  </entities>
+  <entities xsi:type="pacmanDiffMM:Food" on="O" id="F"/>
+  <domainspecificdiffs name="Pacman Move Right" DomainSpecificDiff_GridNode="R" DomainSpecificDiff_PositionableEntity="P" DomainSpecificDiff_DiffPositionableEntity_on="//@entities.0/@diffon.1"/>
+  <domainspecificdiffs name="Pacman Move Left" DomainSpecificDiff_GridNode="L" DomainSpecificDiff_PositionableEntity="P" DomainSpecificDiff_DiffPositionableEntity_on="//@entities.0/@diffon.0"/>
+</pacmanDiffMM:Game>

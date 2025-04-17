@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring2WayRuleMM="www.geodes.UdeM.edu/refactoring2WayRuleMM"
+    name="renameMethod">
+  <constraints>Item(2,&quot;new_name&quot;) != &quot;null&quot;</constraints>
+  <constraints>Item(2,&quot;new_name&quot;) != &quot;\&quot;\&quot;&quot;</constraints>
+  <constraints>Item(2,&quot;name&quot;) != &quot;null&quot;</constraints>
+  <constraints>Item(2,&quot;name&quot;) != &quot;\&quot;\&quot;&quot;</constraints>
+  <constraints>Item(2,&quot;name&quot;) != Item(2,&quot;new_name&quot;)</constraints>
+  <rulePattern_DiffEOperation
+      xsi:type="refactoring2WayRuleMM:Pattern_DiffEOperation"
+      diff_kind="MODIFY"
+      ID_Pattern="2"/>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="Rename Method"
+      SemanticObject_EOperation="//@rulePattern_DiffEOperation.0"
+      ID_Pattern="3"/>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="Rename Method"
+      SemanticObject_EOperation="//@rulePattern_DiffEOperation.0"
+      ID_Pattern="4"
+      isForbidden="true"/>
+</refactoring2WayRuleMM:Rule>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pacmanDiffMM="http://www.zadahmad.org/dsmcompare/pacmanDiffMM" xsi:schemaLocation="http://www.zadahmad.org/dsmcompare/pacmanDiffMM ../../metaModels/pacmanDiffMM.ecore">
+  <pacmanDiffMM:Game id="1" score="1">
+    <gridnodes right="O" id="L"/>
+    <gridnodes left="L" right="R" id="O"/>
+    <gridnodes left="O" id="R"/>
+    <entities xsi:type="pacmanDiffMM:Pacman" on="R" id="P">
+      <diffon diff_kind_Left="ADD" eType="L"/>
+      <diffon diff_kind_Left="DELETE" eType="O"/>
+      <diffon diff_kind_Right="ADD" eType="R"/>
+      <diffon diff_kind_Right="DELETE" eType="O"/>
+    </entities>
+    <entities xsi:type="pacmanDiffMM:Food" on="O" id="F"/>
+  </pacmanDiffMM:Game>
+  <pacmanDiffMM:SemanticDiff name="Pacman Move Left" SemanticObject_Game="1" SemanticObject_GridNode="O L" SemanticObject_PositionableEntity="P" author="LEFT"/>
+  <pacmanDiffMM:SemanticDiff name="Pacman Move" SemanticObject_Game="1" SemanticObject_GridNode="O L" SemanticObject_PositionableEntity="P" author="LEFT"/>
+  <pacmanDiffMM:SemanticDiff name="Ghost Move Left" SemanticObject_Game="1" SemanticObject_GridNode="R O" SemanticObject_PositionableEntity="P" author="RIGHT"/>
+  <pacmanDiffMM:SemanticDiff name="Pacman Move Left" SemanticObject_Game="1" SemanticObject_GridNode="O R" SemanticObject_PositionableEntity="P" author="RIGHT"/>
+  <pacmanDiffMM:SemanticDiff name="Pacman Move" SemanticObject_Game="1" SemanticObject_GridNode="O R" SemanticObject_PositionableEntity="P" author="RIGHT"/>
+</xmi:XMI>

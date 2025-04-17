@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refactoringDiffMM:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" name="rfc">
+  <eclassifiers name="cls1" esupertypes="cls2" interfaces="if1">
+    <eattributes name="modifyLeft" etype="intLeft"/>
+    <eattributes name="modifyRight" etype="intRight"/>
+    <eattributes name="modifyBoth" etype="int"/>
+    <eattributes name="modifyDelete" etype="int"/>
+    <eattributes name="addLeft"/>
+    <eattributes name="addBoth"/>
+    <eattributes name="addRight"/>
+    <eattributes name="deleteModify" etype="int"/>
+    <eoperations name="opModifyBoth" eparameters="parLeft" methodBody="bodyCA"/>
+    <nested_classes name="nc" interfaces="If">
+      <eoperations name="opNC"/>
+    </nested_classes>
+  </eclassifiers>
+  <eclassifiers name="cls2" esupertypes="cls2"/>
+  <eclassifiers name="cls3"/>
+  <eclassifiers name="c1">
+    <eattributes name="c1AttrNew"/>
+    <eoperations name="op2" methodBody="suggested method body"/>
+  </eclassifiers>
+  <interfaces name="If"/>
+  <interfaces name="if1" extends="e" packageName="p" esupertypes="if1"/>
+  <interfaces name="if2" esupertypes="if3"/>
+  <interfaces name="if3" esupertypes="If if3"/>
+  <test name="t1" single="cls1" multi="cls2"/>
+  <test name="t2" single="cls2" multi="cls3"/>
+  <test name="t3" single="cls1" multi="cls3 cls2"/>
+</refactoringDiffMM:EPackage>

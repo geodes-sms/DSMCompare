@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:pacmanDiffMM="http://www.zadahmad.org/dsmcompare/pacmanDiffMM"
+    xsi:schemaLocation="http://www.zadahmad.org/dsmcompare/pacmanDiffMM ../metaModels/pacmanDiffMM.ecore">
+  <pacmanDiffMM:DiffGame
+      id="1"
+      score="1"
+      diff_kind_Left="MODIFY"
+      diff_kind_Right="MODIFY"
+      changeStatus="CONTRADICTING"
+      new_score_Left="3"
+      new_score_Right="2"
+      scoreChangeStatus="CONTRADICTING">
+    <gridnodes
+        right="O"
+        id="L"/>
+    <gridnodes
+        left="L"
+        right="R"
+        id="O"/>
+    <gridnodes
+        left="O"
+        id="R"/>
+    <entities
+        xsi:type="pacmanDiffMM:DiffFood"
+        id="F"
+        diff_kind_Right="DELETE"
+        isMerged="true">
+      <diffon
+          diff_kind_Right="DELETE"
+          isMerged="true"
+          diff_Group="DG-1"
+          eType="O"/>
+      <diffon
+          diff_kind_Right="DELETE"
+          isMerged="true"
+          diff_Group="DG-3"
+          eType="O"/>
+    </entities>
+    <entities
+        xsi:type="pacmanDiffMM:Pacman"
+        on="L"
+        id="P">
+      <diffon
+          diff_kind_Right="MODIFY"
+          isMerged="true"
+          diff_Group="DG-2"
+          eType="O"/>
+      <diffon
+          diff_kind_Right="DELETE"
+          isMerged="true"
+          diff_Group="DG-2"
+          eType="L"/>
+    </entities>
+    <entities
+        xsi:type="pacmanDiffMM:Ghost"
+        on="O"
+        id="G">
+      <diffon
+          diff_kind_Left="MODIFY"
+          diff_kind_Right="MODIFY"
+          isMerged="true"
+          diff_Group="DG-4"
+          eType="R"/>
+      <diffon
+          diff_kind_Right="MODIFY"
+          isMerged="true"
+          diff_Group="DG-4"
+          eType="R"/>
+      <diffon
+          diff_kind_Right="DELETE"
+          isMerged="true"
+          diff_Group="DG-4"
+          eType="O"/>
+    </entities>
+  </pacmanDiffMM:DiffGame>
+  <pacmanDiffMM:SemanticDiff
+      name="Pacman Eat Food"
+      SemanticObject_Game="1"
+      SemanticObject_GridNode="O"
+      SemanticObject_PositionableEntity="P F"
+      author="RIGHT"/>
+  <pacmanDiffMM:SemanticDiff
+      name="Pacman Move Right"
+      SemanticObject_GridNode="O L"
+      SemanticObject_PositionableEntity="P"
+      author="RIGHT"/>
+  <pacmanDiffMM:SemanticDiff
+      name="Ghost Move Right"
+      SemanticObject_GridNode="R O"
+      SemanticObject_PositionableEntity="G"
+      author="RIGHT"/>
+  <pacmanDiffMM:SemanticConflict
+      name="Pacman Eat Food - DiffGame.[-] - DiffGame.[-].CONTRADICTING ( MODIFY | MODIFY ) -C-1"
+      SemanticObject_DiffGame="1"
+      conflict_kind="CONTRADICTING"
+      conflict_Granularity="Semantic_Fine"
+      semanticdiffs="/1"/>
+  <pacmanDiffMM:ConflictResolution
+      name="Keep semantic difference"
+      ResolutionType="Resolved"
+      ResolutionStrategy="Keep_Semantic_Difference"
+      semanticconflicts="/4"/>
+</xmi:XMI>

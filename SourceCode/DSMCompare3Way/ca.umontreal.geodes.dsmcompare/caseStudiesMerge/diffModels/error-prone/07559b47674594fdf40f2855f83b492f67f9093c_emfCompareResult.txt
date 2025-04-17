@@ -1,0 +1,95 @@
+Matches count 	:	1
+Diffs count 	:	14
+Conflicts count (REAL) :	1
+Conflicts count (PSEUDO) :	0
+Matched resources :
+Left = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/07559b47674594fdf40f2855f83b492f67f9093c_V1_ref.xmi
+Right = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/07559b47674594fdf40f2855f83b492f67f9093c_V2_ref.xmi
+origin = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/07559b47674594fdf40f2855f83b492f67f9093c_CA_ref.xmi
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| refactoringDiffMM.impl.EPackageImpl@758a34ce (name: pkg)| refactoringDiffMM.impl.EPackageImpl@40f70521 (name: pkg)|
+| |-refactoringDiffMM.impl.EClassImpl@7ec3394b (name: CompilationTestHelper, extends: null, implements: null, isAbstract: false, packageName: null)| |-refactoringDiffMM.impl.EClassImpl@774698ab (name: CompilationTestHelper, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | |-refactoringDiffMM.impl.EAttributeImpl@bff34c6 (name: diagnosticHelper, etype: DiagnosticTestHelper)| | |-refactoringDiffMM.impl.EAttributeImpl@55342f40 (name: diagnosticHelper, etype: DiagnosticTestHelper)|
+| | |-refactoringDiffMM.impl.EAttributeImpl@1522d8a0 (name: compiler, etype: ErrorProneCompiler)| | |-refactoringDiffMM.impl.EAttributeImpl@a4ca3f6 (name: compiler, etype: ErrorProneCompiler)|
+| | |-refactoringDiffMM.impl.EOperationImpl@312ab28e (name: CompilationTestHelper(), eparameters: scanner:Scanner, etype: null, methodBody: expression statement; ASSIGN; method invocation; build; method invocation; listenToDiagnostics; method invocation; report; class instance creation; new ErrorProneCompiler.Builder(); expression statement; ASSIGN; class instance creation; new DiagnosticTestHelper(); , __idKDM: CompilationTestHelper___Scanner___)| | |                                    |
+| | |-refactoringDiffMM.impl.EOperationImpl@3381b4fc (name: CompilationTestHelper(), eparameters: matcherClass:java.lang.Class<?>, etype: null, methodBody: this(ErrorProneScanner.forMatcher(matcherClass));
+; method invocation; forMatcher; , __idKDM: CompilationTestHelper___java_lang_Class______)| | |                                    |
+| | |-refactoringDiffMM.impl.EOperationImpl@6bea52d4 (name: CompilationTestHelper(), eparameters: checker:BugChecker, etype: null, methodBody: this(new ErrorProneScanner(checker));
+; class instance creation; Object; , __idKDM: CompilationTestHelper___BugChecker___)| | |-refactoringDiffMM.impl.EOperationImpl@72ea6193 (name: CompilationTestHelper(), eparameters: scanner:Scanner, etype: null, methodBody: expression statement; ASSIGN; method invocation; build; method invocation; listenToDiagnostics; method invocation; report; class instance creation; new ErrorProneCompiler.Builder(); expression statement; ASSIGN; class instance creation; new DiagnosticTestHelper(); , __idKDM: CompilationTestHelper___Scanner___)|
+| | |-refactoringDiffMM.impl.EOperationImpl@11981797 (name: assertCompileSucceeds(), eparameters: source:File, dependencies:File, etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; toString; method invocation; getDiagnostics; variable declaration; exitCode; foreach; file; expression statement; method invocation; add; method invocation; getAbsolutePath; variable declaration; arguments; , __idKDM: assertCompileSucceeds___File__File___)| | |-refactoringDiffMM.impl.EOperationImpl@31aa3ca5 (name: assertCompileSucceeds(), eparameters: source:File, dependencies:File, etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; toString; method invocation; getDiagnostics; variable declaration; exitCode; foreach; file; expression statement; method invocation; add; method invocation; getAbsolutePath; variable declaration; arguments; , __idKDM: assertCompileSucceeds___File__File___)|
+| | |-refactoringDiffMM.impl.EOperationImpl@5c42d2b7 (name: assertCompileFailsWithMessages(), eparameters: source:File, dependencies:File, null:IOException, etype: void, methodBody: expression statement; method invocation; assertHasDiagnosticOnAllMatchingLines; method invocation; getDiagnostics; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; compileFileExitCode; string literal; , __idKDM: assertCompileFailsWithMessages___File__File__IOException___)| | |-refactoringDiffMM.impl.EOperationImpl@45905bff (name: assertCompileFailsWithMessages(), eparameters: source:File, dependencies:File, null:IOException, etype: void, methodBody: expression statement; method invocation; assertHasDiagnosticOnAllMatchingLines; method invocation; getDiagnostics; expression statement; method invocation; assertThat; method invocation; is; number literal; string literal; variable declaration; exitCode; foreach; file; expression statement; method invocation; add; method invocation; getAbsolutePath; variable declaration; arguments; , __idKDM: assertCompileFailsWithMessages___File__File__IOException___)|
+| | |-refactoringDiffMM.impl.EOperationImpl@625abb97 (name: assertCompileSucceedsWithMessages(), eparameters: source:File, null:IOException, etype: void, methodBody: expression statement; method invocation; assertHasDiagnosticOnAllMatchingLines; method invocation; getDiagnostics; expression statement; method invocation; assertCompileSucceeds; , __idKDM: assertCompileSucceedsWithMessages___File__IOException___)| | |                                    |
+| | |-refactoringDiffMM.impl.EOperationImpl@5b1f29fa (name: compileFileExitCode(), eparameters: source:File, etype: int, methodBody: return; method invocation; compile; array creation; java.lang.String[]; array initializer; method invocation; getAbsolutePath; string literal; string literal; string literal; , __idKDM: compileFileExitCode___File___)| | |                                    |
+| | |-refactoringDiffMM.impl.EOperationImpl@aeab9a1 (name: sources(), eparameters: klass:java.lang.Class<?>, files:String, null:URISyntaxException, etype: java.lang.String[], methodBody: return; for; expression statement; ASSIGN; method invocation; getAbsolutePath; class instance creation; File; method invocation; toURI; method invocation; getResource; PLUS; array access; files; string literal; array access; result; INCREMENT; variable declaration; int; i; LESS; i; array length access; variable declaration; result; , __idKDM: sources___java_lang_Class_____String__URISyntaxException___)| | |-refactoringDiffMM.impl.EOperationImpl@2a2c13a8 (name: sources(), eparameters: klass:java.lang.Class<?>, files:String, null:URISyntaxException, etype: java.lang.String[], methodBody: return; for; expression statement; ASSIGN; method invocation; getAbsolutePath; class instance creation; File; method invocation; toURI; method invocation; getResource; PLUS; array access; files; string literal; array access; result; INCREMENT; variable declaration; int; i; LESS; i; array length access; variable declaration; result; , __idKDM: sources___java_lang_Class_____String__URISyntaxException___)|
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+---- REFERENCE CHANGES: -------------------------------------------------------
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@312ab28e (name: CompilationTestHelper(), eparameters: scanner:Scanner, etype: null, methodBody: expression statement; ASSIGN; method invocation; build; method invocation; listenToDiagnostics; method invocation; report; class instance creation; new ErrorProneCompiler.Builder(); expression statement; ASSIGN; class instance creation; new DiagnosticTestHelper(); , __idKDM: CompilationTestHelper___Scanner___) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@7ec3394b (name: CompilationTestHelper, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@3381b4fc (name: CompilationTestHelper(), eparameters: matcherClass:java.lang.Class<?>, etype: null, methodBody: this(ErrorProneScanner.forMatcher(matcherClass));
+; method invocation; forMatcher; , __idKDM: CompilationTestHelper___java_lang_Class______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@7ec3394b (name: CompilationTestHelper, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@625abb97 (name: assertCompileSucceedsWithMessages(), eparameters: source:File, null:IOException, etype: void, methodBody: expression statement; method invocation; assertHasDiagnosticOnAllMatchingLines; method invocation; getDiagnostics; expression statement; method invocation; assertCompileSucceeds; , __idKDM: assertCompileSucceedsWithMessages___File__IOException___) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@7ec3394b (name: CompilationTestHelper, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@5b1f29fa (name: compileFileExitCode(), eparameters: source:File, etype: int, methodBody: return; method invocation; compile; array creation; java.lang.String[]; array initializer; method invocation; getAbsolutePath; string literal; string literal; string literal; , __idKDM: compileFileExitCode___File___) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@7ec3394b (name: CompilationTestHelper, extends: null, implements: null, isAbstract: false, packageName: null)
+
+---- ATTRIBUTE CHANGES: -------------------------------------------------------
+
+ value checker:BugChecker has been changed from attribute eparameters
+ of object refactoringDiffMM.impl.EOperationImpl@6bea52d4 (name: CompilationTestHelper(), eparameters: checker:BugChecker, etype: null, methodBody: this(new ErrorProneScanner(checker));
+; class instance creation; Object; , __idKDM: CompilationTestHelper___BugChecker___)
+
+ value this(new ErrorProneScanner(checker));
+; class instance creation; Object;  has been changed from attribute methodBody
+ of object refactoringDiffMM.impl.EOperationImpl@6bea52d4 (name: CompilationTestHelper(), eparameters: checker:BugChecker, etype: null, methodBody: this(new ErrorProneScanner(checker));
+; class instance creation; Object; , __idKDM: CompilationTestHelper___BugChecker___)
+
+ value CompilationTestHelper___BugChecker___ has been changed from attribute __idKDM
+ of object refactoringDiffMM.impl.EOperationImpl@6bea52d4 (name: CompilationTestHelper(), eparameters: checker:BugChecker, etype: null, methodBody: this(new ErrorProneScanner(checker));
+; class instance creation; Object; , __idKDM: CompilationTestHelper___BugChecker___)
+
+ value source:File, dependencies:File has been remotely(RIGHT) changed from attribute eparameters
+ of object refactoringDiffMM.impl.EOperationImpl@11981797 (name: assertCompileSucceeds(), eparameters: source:File, dependencies:File, etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; toString; method invocation; getDiagnostics; variable declaration; exitCode; foreach; file; expression statement; method invocation; add; method invocation; getAbsolutePath; variable declaration; arguments; , __idKDM: assertCompileSucceeds___File__File___)
+
+ value expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; toString; method invocation; getDiagnostics; variable declaration; exitCode; foreach; file; expression statement; method invocation; add; method invocation; getAbsolutePath; variable declaration; arguments;  has been remotely(RIGHT) changed from attribute methodBody
+ of object refactoringDiffMM.impl.EOperationImpl@11981797 (name: assertCompileSucceeds(), eparameters: source:File, dependencies:File, etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; toString; method invocation; getDiagnostics; variable declaration; exitCode; foreach; file; expression statement; method invocation; add; method invocation; getAbsolutePath; variable declaration; arguments; , __idKDM: assertCompileSucceeds___File__File___)
+
+ value assertCompileSucceeds___File__File___ has been remotely(RIGHT) changed from attribute __idKDM
+ of object refactoringDiffMM.impl.EOperationImpl@11981797 (name: assertCompileSucceeds(), eparameters: source:File, dependencies:File, etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; toString; method invocation; getDiagnostics; variable declaration; exitCode; foreach; file; expression statement; method invocation; add; method invocation; getAbsolutePath; variable declaration; arguments; , __idKDM: assertCompileSucceeds___File__File___)
+
+ value source:File, dependencies:File, null:IOException has been remotely(RIGHT) changed from attribute eparameters
+ of object refactoringDiffMM.impl.EOperationImpl@5c42d2b7 (name: assertCompileFailsWithMessages(), eparameters: source:File, dependencies:File, null:IOException, etype: void, methodBody: expression statement; method invocation; assertHasDiagnosticOnAllMatchingLines; method invocation; getDiagnostics; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; compileFileExitCode; string literal; , __idKDM: assertCompileFailsWithMessages___File__File__IOException___)
+
+ value expression statement; method invocation; assertHasDiagnosticOnAllMatchingLines; method invocation; getDiagnostics; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; compileFileExitCode; string literal;  has been changed from attribute methodBody
+ of object refactoringDiffMM.impl.EOperationImpl@5c42d2b7 (name: assertCompileFailsWithMessages(), eparameters: source:File, dependencies:File, null:IOException, etype: void, methodBody: expression statement; method invocation; assertHasDiagnosticOnAllMatchingLines; method invocation; getDiagnostics; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; compileFileExitCode; string literal; , __idKDM: assertCompileFailsWithMessages___File__File__IOException___)
+
+ value expression statement; method invocation; assertHasDiagnosticOnAllMatchingLines; method invocation; getDiagnostics; expression statement; method invocation; assertThat; method invocation; is; number literal; string literal; variable declaration; exitCode; foreach; file; expression statement; method invocation; add; method invocation; getAbsolutePath; variable declaration; arguments;  has been remotely(RIGHT) changed from attribute methodBody
+ of object refactoringDiffMM.impl.EOperationImpl@5c42d2b7 (name: assertCompileFailsWithMessages(), eparameters: source:File, dependencies:File, null:IOException, etype: void, methodBody: expression statement; method invocation; assertHasDiagnosticOnAllMatchingLines; method invocation; getDiagnostics; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; compileFileExitCode; string literal; , __idKDM: assertCompileFailsWithMessages___File__File__IOException___)
+
+ value assertCompileFailsWithMessages___File__File__IOException___ has been remotely(RIGHT) changed from attribute __idKDM
+ of object refactoringDiffMM.impl.EOperationImpl@5c42d2b7 (name: assertCompileFailsWithMessages(), eparameters: source:File, dependencies:File, null:IOException, etype: void, methodBody: expression statement; method invocation; assertHasDiagnosticOnAllMatchingLines; method invocation; getDiagnostics; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; compileFileExitCode; string literal; , __idKDM: assertCompileFailsWithMessages___File__File__IOException___)
+
+
+
+---- REAL CONFLICTS: -------------------------------------------------------
+REAL conflict:
+	
+ value expression statement; method invocation; assertHasDiagnosticOnAllMatchingLines; method invocation; getDiagnostics; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; compileFileExitCode; string literal;  has been changed from attribute methodBody
+ of object refactoringDiffMM.impl.EOperationImpl@5c42d2b7 (name: assertCompileFailsWithMessages(), eparameters: source:File, dependencies:File, null:IOException, etype: void, methodBody: expression statement; method invocation; assertHasDiagnosticOnAllMatchingLines; method invocation; getDiagnostics; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; compileFileExitCode; string literal; , __idKDM: assertCompileFailsWithMessages___File__File__IOException___)
+	
+ value expression statement; method invocation; assertHasDiagnosticOnAllMatchingLines; method invocation; getDiagnostics; expression statement; method invocation; assertThat; method invocation; is; number literal; string literal; variable declaration; exitCode; foreach; file; expression statement; method invocation; add; method invocation; getAbsolutePath; variable declaration; arguments;  has been remotely(RIGHT) changed from attribute methodBody
+ of object refactoringDiffMM.impl.EOperationImpl@5c42d2b7 (name: assertCompileFailsWithMessages(), eparameters: source:File, dependencies:File, null:IOException, etype: void, methodBody: expression statement; method invocation; assertHasDiagnosticOnAllMatchingLines; method invocation; getDiagnostics; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; compileFileExitCode; string literal; , __idKDM: assertCompileFailsWithMessages___File__File__IOException___)
+
+
+---- PSEUDO CONFLICTS: -------------------------------------------------------
+diff012 model saved at: file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/diffModels/07559b47674594fdf40f2855f83b492f67f9093c_dsmDiff.xmi
+--> Models are merged and initial v012 (non conflicting elements only) saved at: file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/07559b47674594fdf40f2855f83b492f67f9093c_V012.xmi
+Succeed! The end of transforming EMF-Diff to DSMC-Diff

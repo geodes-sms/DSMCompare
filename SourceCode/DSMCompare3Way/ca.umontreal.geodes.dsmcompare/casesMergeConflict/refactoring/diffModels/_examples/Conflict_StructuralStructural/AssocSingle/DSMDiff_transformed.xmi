@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoringDiffMM:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" xsi:schemaLocation="www.geodes.UdeM.edu/refactoringDiffMM ../metaModels/refactoringDiffMM.ecore" name="pkg">
+  <eclassifiers name="c1"/>
+  <eclassifiers name="c2"/>
+  <eclassifiers name="c3"/>
+  <test name="t1" single="c1" multi="c3 c2 c1">
+    <diffsingle diff_kind_Left="MODIFY" changeStatus="CONTRADICTING" diff_Group="DG-1" eType="c2"/>
+    <diffsingle diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="CONTRADICTING" diff_Group="DG-1" eType="c1"/>
+    <diffsingle diff_kind_Right="MODIFY" changeStatus="CONTRADICTING" diff_Group="DG-1" eType="c3"/>
+    <diffmulti diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="CONTRADICTING" diff_Group="DG-4" eType="c2"/>
+    <diffmulti diff_kind_Left="DELETE" diff_Group="DG-4" eType="c3"/>
+  </test>
+  <test name="t2" single="c1">
+    <diffsingle diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="CONTRADICTING" diff_Group="DG-2" eType="c1"/>
+    <diffsingle diff_kind_Right="MODIFY" changeStatus="CONTRADICTING" diff_Group="DG-2" eType="c3"/>
+  </test>
+  <test name="t3">
+    <diffsingle diff_kind_Left="ADD" changeStatus="CONTRADICTING" diff_Group="DG-3" eType="c2"/>
+    <diffsingle diff_kind_Right="ADD" changeStatus="CONTRADICTING" diff_Group="DG-3" eType="c3"/>
+  </test>
+</refactoringDiffMM:EPackage>

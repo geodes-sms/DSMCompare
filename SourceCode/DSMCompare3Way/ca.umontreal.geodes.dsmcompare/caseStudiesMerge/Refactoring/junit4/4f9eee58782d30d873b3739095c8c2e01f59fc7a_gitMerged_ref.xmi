@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="ParallelComputer" extends="Computer" esupertypes="Computer">
+    <eattributes name="fClasses" etype="boolean"/>
+    <eattributes name="fMethods" etype="boolean"/>
+    <eoperations name="ParallelComputer()" eparameters="classes:boolean, methods:boolean" methodBody="expression statement; ASSIGN; fMethods; expression statement; ASSIGN; fClasses; variable declaration; __packageName; " __idKDM="ParallelComputer___boolean__boolean___"/>
+    <eoperations name="classes()" etype="Computer" methodBody="return; class instance creation; ParallelComputer; boolean literal; boolean literal; variable declaration; __packageName; " __idKDM="classes______"/>
+    <eoperations name="methods()" etype="Computer" methodBody="return; class instance creation; ParallelComputer; boolean literal; boolean literal; " __idKDM="methods______"/>
+    <eoperations name="parallelize()" eparameters="runner:ParentRunner&lt;T>, null:InitializationError" etype="Runner" methodBody="return; class instance creation; new ParallelParentRunner&lt;T>(runner); " __idKDM="parallelize___ParentRunner_T___InitializationError___"/>
+  </eclassifiers>
+  <eclassifiers name="Computer"/>
+</refactoring:EPackage>

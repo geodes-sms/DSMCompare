@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring2WayRuleMM="www.geodes.UdeM.edu/refactoring2WayRuleMM"
+    name="moveClass3">
+  <rulePattern_EClass
+      xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+      name="from"
+      ID_Pattern="1">
+    <nested_classes
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="moved"
+        ID_Pattern="2"/>
+    <diffnested_classes
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_nested_classes"
+        diff_kind="DELETE"
+        eType="moved"
+        ID_Pattern="3"
+        filter="true"/>
+  </rulePattern_EClass>
+  <rulePattern_EClass
+      xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+      name="to"
+      ID_Pattern="4">
+    <diffnested_classes
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_nested_classes"
+        diff_kind="ADD"
+        eType="moved"
+        ID_Pattern="5"/>
+  </rulePattern_EClass>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="Move Class"
+      SemanticObject_DiffEClass_nested_classes="//@rulePattern_EClass.1/@diffnested_classes.0 //@rulePattern_EClass.0/@diffnested_classes.0"
+      SemanticObject_EClass="from to moved"
+      ID_Pattern="6"/>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="Move Class"
+      SemanticObject_DiffEClass_nested_classes="//@rulePattern_EClass.1/@diffnested_classes.0 //@rulePattern_EClass.0/@diffnested_classes.0"
+      SemanticObject_EClass="from to moved"
+      ID_Pattern="66"
+      isForbidden="true"/>
+</refactoring2WayRuleMM:Rule>

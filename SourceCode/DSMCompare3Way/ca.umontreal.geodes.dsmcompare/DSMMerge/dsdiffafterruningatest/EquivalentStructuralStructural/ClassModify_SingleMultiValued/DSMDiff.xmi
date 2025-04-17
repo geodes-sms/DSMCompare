@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pacmanDiffMM:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pacmanDiffMM="http://www.zadahmad.org/dsmcompare/pacmanDiffMM" id="1" score="1">
+  <gridnodes right="O" id="L"/>
+  <gridnodes left="L" right="R" id="O"/>
+  <gridnodes left="O" id="R"/>
+  <entities xsi:type="pacmanDiffMM:Pacman" on="L" id="P"/>
+  <entities xsi:type="pacmanDiffMM:Food" on="O" id="F"/>
+  <entities xsi:type="pacmanDiffMM:Ghost" on="O" id="G"/>
+  <entities xsi:type="pacmanDiffMM:DiffEnergizer" id="E" diff_kind_Left="MODIFY" diff_kind_Right="MODIFY" changeStatus="EQUIVALENT" durationsChangeStatus="EQUIVALENT">
+    <new_durations_Left>
+      <value>1</value>
+      <value>2</value>
+      <value>3</value>
+    </new_durations_Left>
+    <new_durations_Right>
+      <value>1</value>
+      <value>2</value>
+      <value>3</value>
+    </new_durations_Right>
+  </entities>
+  <entities xsi:type="pacmanDiffMM:DiffFruit" id="Fr" diff_kind_Left="MODIFY" diff_kind_Right="MODIFY" changeStatus="EQUIVALENT" new_value_Left="20" new_value_Right="20" valueChangeStatus="EQUIVALENT"/>
+</pacmanDiffMM:Game>

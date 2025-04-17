@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refactoringRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoringRuleMM="www.geodes.UdeM.edu/refactoringRuleMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/refactoringRuleMM ../metamodels/refactoringRuleMM.ecore#/1"
+    name="moveMethod">
+  <constraints>Item(11,&quot;name&quot;) == Item(21,&quot;name&quot;)</constraints>
+  <pattern name="">
+    <eclassifiers
+        xsi:type="refactoringRuleMM:Pattern_EClass"
+        name=""
+        ID_Pattern="1">
+      <eoperations
+          xsi:type="refactoringRuleMM:Pattern_DiffEOperation"
+          ID_Pattern="11"/>
+    </eclassifiers>
+    <eclassifiers
+        xsi:type="refactoringRuleMM:Pattern_EClass"
+        name=""
+        ID_Pattern="2">
+      <eoperations
+          xsi:type="refactoringRuleMM:Pattern_DiffEOperation"
+          operation="DELETE"
+          ID_Pattern="21"
+          filter="true"/>
+    </eclassifiers>
+    <domainspecificdiffs
+        xsi:type="refactoringRuleMM:Pattern_DomainSpecificDiff"
+        name="moveMethod"
+        DomainSpecificDiff_EClass="2"
+        DomainSpecificDiff_EOperation="11"
+        ID_Pattern="3"/>
+  </pattern>
+</refactoringRuleMM:Rule>

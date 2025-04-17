@@ -1,0 +1,140 @@
+Matches count 	:	1
+Diffs count 	:	16
+Conflicts count (REAL) :	1
+Conflicts count (PSEUDO) :	2
+Matched resources :
+Left = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/petrinets/dsModels/v1.xmi
+Right = null
+origin = null
+Matched resources :
+Left = null
+Right = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/petrinets/dsModels/v2.xmi
+origin = null
+Matched resources :
+Left = null
+Right = null
+origin = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/petrinets/dsModels/v0.xmi
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| petrinetsDiffMM.impl.PetriNetImpl@5669c5fb (id: 0, name: pn)| petrinetsDiffMM.impl.PetriNetImpl@6c45ee6e (id: 0, name: pn)|
+| |-petrinetsDiffMM.impl.PlaceImpl@5f9678e1 (id: 1, name: Pending) (tokens: 2)| |-petrinetsDiffMM.impl.PlaceImpl@35d08e6c (id: 1, name: Pending) (tokens: 2)|
+| |-petrinetsDiffMM.impl.PlaceImpl@189aa67a (id: 2, name: PayChoice) (tokens: 0)| |-petrinetsDiffMM.impl.PlaceImpl@53d102a2 (id: 2, name: OnlineChoice) (tokens: 0)|
+| |-petrinetsDiffMM.impl.PlaceImpl@362045c0 (id: 4, name: OnlinePayReceived) (tokens: 0)| |-petrinetsDiffMM.impl.PlaceImpl@59f63e24 (id: 4, name: OnlinePayReceived) (tokens: 0)|
+| |-petrinetsDiffMM.impl.PlaceImpl@5ccbeb64 (id: 5, name: CODPayReceived) (tokens: 0)| |-petrinetsDiffMM.impl.PlaceImpl@61f05988 (id: 5, name: CODPayReceived) (tokens: 0)|
+| |-petrinetsDiffMM.impl.PlaceImpl@59252cb6 (id: 6, name: Completed) (tokens: 0)| |-petrinetsDiffMM.impl.PlaceImpl@7ca33c24 (id: 6, name: Completed) (tokens: 0)|
+| |-petrinetsDiffMM.impl.TransitionImpl@3243b914 (id: 7, name: receive)| |-petrinetsDiffMM.impl.TransitionImpl@fade1fc (id: 7, name: receive)|
+| |-petrinetsDiffMM.impl.TransitionImpl@542e560f (id: 8, name: payOnline)| |-petrinetsDiffMM.impl.TransitionImpl@613a8ee1 (id: 8, name: payOnline)|
+| |-petrinetsDiffMM.impl.TransitionImpl@4dc8caa7 (id: 9, name: payCOD)| |-petrinetsDiffMM.impl.TransitionImpl@178213b (id: 9, name: payCOD)|
+| |-petrinetsDiffMM.impl.TransitionImpl@3bcbb589 (id: 10, name: checkCredit)| |-petrinetsDiffMM.impl.TransitionImpl@7103cb56 (id: 10, name: checkCredit)|
+| |-petrinetsDiffMM.impl.TransitionImpl@3016fd5e (id: 11, name: checkCash)| |-petrinetsDiffMM.impl.TransitionImpl@1b765a2c (id: 11, name: checkCash)|
+| |                                      | |-petrinetsDiffMM.impl.PlaceImpl@5aac4250 (id: 3, name: CODChoice) (tokens: 0)|
+| |-petrinetsDiffMM.impl.PlaceImpl@15cafec7 (id: 13, name: PayChoice) (tokens: 0)| |-petrinetsDiffMM.impl.PlaceImpl@42463763 (id: 13, name: PayChoice) (tokens: 0)|
+| |-petrinetsDiffMM.impl.TransitionImpl@183e8023 (id: 12, name: choosePay)| |-petrinetsDiffMM.impl.TransitionImpl@41dd05a (id: 12, name: choosePay)|
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+---- REFERENCE CHANGES: -------------------------------------------------------
+
+ [ADD] value petrinetsDiffMM.impl.TransitionImpl@41dd05a (id: 12, name: choosePay) has been remotely(RIGHT) added to reference transitions
+ of object petrinetsDiffMM.impl.PlaceImpl@189aa67a (id: 2, name: PayChoice) (tokens: 0)
+
+ [DELETE] value petrinetsDiffMM.impl.TransitionImpl@39a8312f (id: 8, name: payOnline) has been remotely(RIGHT) deleted from reference transitions
+ of object petrinetsDiffMM.impl.PlaceImpl@189aa67a (id: 2, name: PayChoice) (tokens: 0)
+
+ [DELETE] value petrinetsDiffMM.impl.TransitionImpl@5f6722d3 (id: 9, name: payCOD) has been remotely(RIGHT) deleted from reference transitions
+ of object petrinetsDiffMM.impl.PlaceImpl@189aa67a (id: 2, name: PayChoice) (tokens: 0)
+
+ [DELETE] value petrinetsDiffMM.impl.PlaceImpl@18920cc (id: 3, name: CODChoice) (tokens: 0) has been deleted from reference places
+ of object petrinetsDiffMM.impl.TransitionImpl@3243b914 (id: 7, name: receive)
+
+ [DELETE] value petrinetsDiffMM.impl.TransitionImpl@39a8312f (id: 8, name: payOnline) has been deleted from reference transitions
+ of object petrinetsDiffMM.impl.PlaceImpl@5aac4250 (id: 3, name: CODChoice) (tokens: 0)
+
+ [DELETE] value petrinetsDiffMM.impl.TransitionImpl@5f6722d3 (id: 9, name: payCOD) has been deleted from reference transitions
+ of object petrinetsDiffMM.impl.PlaceImpl@5aac4250 (id: 3, name: CODChoice) (tokens: 0)
+
+ [ADD] value petrinetsDiffMM.impl.TransitionImpl@41dd05a (id: 12, name: choosePay) has been remotely(RIGHT) added to reference transitions
+ of object petrinetsDiffMM.impl.PlaceImpl@5aac4250 (id: 3, name: CODChoice) (tokens: 0)
+
+ [DELETE] value petrinetsDiffMM.impl.TransitionImpl@39a8312f (id: 8, name: payOnline) has been remotely(RIGHT) deleted from reference transitions
+ of object petrinetsDiffMM.impl.PlaceImpl@5aac4250 (id: 3, name: CODChoice) (tokens: 0)
+
+ [DELETE] value petrinetsDiffMM.impl.TransitionImpl@5f6722d3 (id: 9, name: payCOD) has been remotely(RIGHT) deleted from reference transitions
+ of object petrinetsDiffMM.impl.PlaceImpl@5aac4250 (id: 3, name: CODChoice) (tokens: 0)
+
+ [ADD] value petrinetsDiffMM.impl.TransitionImpl@613a8ee1 (id: 8, name: payOnline) has been remotely(RIGHT) added to reference transitions
+ of object petrinetsDiffMM.impl.PlaceImpl@15cafec7 (id: 13, name: PayChoice) (tokens: 0)
+
+ [ADD] value petrinetsDiffMM.impl.TransitionImpl@178213b (id: 9, name: payCOD) has been remotely(RIGHT) added to reference transitions
+ of object petrinetsDiffMM.impl.PlaceImpl@15cafec7 (id: 13, name: PayChoice) (tokens: 0)
+
+ [ADD] value petrinetsDiffMM.impl.PlaceImpl@42463763 (id: 13, name: PayChoice) (tokens: 0) has been remotely(RIGHT) added to reference places
+ of object petrinetsDiffMM.impl.TransitionImpl@183e8023 (id: 12, name: choosePay)
+
+ [ADD] value petrinetsDiffMM.impl.PlaceImpl@42463763 (id: 13, name: PayChoice) (tokens: 0) has been remotely(RIGHT) added to reference places
+ of object petrinetsDiffMM.impl.PetriNetImpl@5669c5fb (id: 0, name: pn)
+
+ [DELETE] value petrinetsDiffMM.impl.PlaceImpl@18920cc (id: 3, name: CODChoice) (tokens: 0) has been deleted from reference places
+ of object petrinetsDiffMM.impl.PetriNetImpl@5669c5fb (id: 0, name: pn)
+
+ [ADD] value petrinetsDiffMM.impl.TransitionImpl@41dd05a (id: 12, name: choosePay) has been remotely(RIGHT) added to reference transitions
+ of object petrinetsDiffMM.impl.PetriNetImpl@5669c5fb (id: 0, name: pn)
+
+---- ATTRIBUTE CHANGES: -------------------------------------------------------
+
+ value PayChoice has been changed from attribute name
+ of object petrinetsDiffMM.impl.PlaceImpl@189aa67a (id: 2, name: PayChoice) (tokens: 0)
+
+
+
+---- REAL CONFLICTS: -------------------------------------------------------
+REAL conflict:
+	
+ [DELETE] value petrinetsDiffMM.impl.PlaceImpl@18920cc (id: 3, name: CODChoice) (tokens: 0) has been deleted from reference places
+ of object petrinetsDiffMM.impl.PetriNetImpl@5669c5fb (id: 0, name: pn)
+	
+ [ADD] value petrinetsDiffMM.impl.TransitionImpl@41dd05a (id: 12, name: choosePay) has been remotely(RIGHT) added to reference transitions
+ of object petrinetsDiffMM.impl.PlaceImpl@5aac4250 (id: 3, name: CODChoice) (tokens: 0)
+
+
+---- PSEUDO CONFLICTS: -------------------------------------------------------
+PSEUDO conflict:
+	
+ [DELETE] value petrinetsDiffMM.impl.TransitionImpl@39a8312f (id: 8, name: payOnline) has been deleted from reference transitions
+ of object petrinetsDiffMM.impl.PlaceImpl@5aac4250 (id: 3, name: CODChoice) (tokens: 0)
+	
+ [DELETE] value petrinetsDiffMM.impl.TransitionImpl@39a8312f (id: 8, name: payOnline) has been remotely(RIGHT) deleted from reference transitions
+ of object petrinetsDiffMM.impl.PlaceImpl@5aac4250 (id: 3, name: CODChoice) (tokens: 0)
+PSEUDO conflict:
+	
+ [DELETE] value petrinetsDiffMM.impl.TransitionImpl@5f6722d3 (id: 9, name: payCOD) has been deleted from reference transitions
+ of object petrinetsDiffMM.impl.PlaceImpl@5aac4250 (id: 3, name: CODChoice) (tokens: 0)
+	
+ [DELETE] value petrinetsDiffMM.impl.TransitionImpl@5f6722d3 (id: 9, name: payCOD) has been remotely(RIGHT) deleted from reference transitions
+ of object petrinetsDiffMM.impl.PlaceImpl@5aac4250 (id: 3, name: CODChoice) (tokens: 0)
+Cannot set the feature!
+ERoot : petrinetsDiffMM.impl.DiffTransition_placesImpl@22d6f11 (diff_kind_Left: NON, diff_kind_Right: ADD, changeStatus: NON, filter: false, isMerged: false, diff_Group: null)
+feature : org.eclipse.emf.ecore.impl.EReferenceImpl@35841320 (name: eType) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (containment: false, resolveProxies: true)
+newValue : null
+Cannot set the feature!
+ERoot : petrinetsDiffMM.impl.DiffPlace_transitionsImpl@4f071df8 (diff_kind_Left: NON, diff_kind_Right: ADD, changeStatus: CONTRADICTING, filter: false, isMerged: false, diff_Group: null)
+feature : org.eclipse.emf.ecore.impl.EReferenceImpl@7188af83 (name: eType) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (containment: false, resolveProxies: true)
+newValue : null
+mergeEquivalentDiffAssociations: org.eclipse.emf.compare.internal.spec.ConflictSpec@4f2c9ba6 (kind: REAL) Exception:java.lang.NullPointerException: element cannot be mapped to a null key
+Cannot set the feature!
+ERoot : petrinetsDiffMM.impl.DiffPlace_transitionsImpl@31e75d13 (diff_kind_Left: NON, diff_kind_Right: ADD, changeStatus: CONTRADICTING, filter: false, isMerged: false, diff_Group: null)
+feature : org.eclipse.emf.ecore.impl.EReferenceImpl@7188af83 (name: eType) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (containment: false, resolveProxies: true)
+newValue : null
+mergeEquivalentDiffAssociations: org.eclipse.emf.compare.internal.spec.ConflictSpec@4f2c9ba6 (kind: REAL) Exception:java.lang.NullPointerException: element cannot be mapped to a null key
+Cannot set the feature!
+ERoot : petrinetsDiffMM.impl.DiffPlace_transitionsImpl@21aa6d6c (diff_kind_Left: NON, diff_kind_Right: ADD, changeStatus: NON, filter: false, isMerged: false, diff_Group: null)
+feature : org.eclipse.emf.ecore.impl.EReferenceImpl@7188af83 (name: eType) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (containment: false, resolveProxies: true)
+newValue : null
+Cannot set the feature!
+ERoot : petrinetsDiffMM.impl.DiffPlace_transitionsImpl@b968a76 (diff_kind_Left: NON, diff_kind_Right: ADD, changeStatus: NON, filter: false, isMerged: false, diff_Group: null)
+feature : org.eclipse.emf.ecore.impl.EReferenceImpl@7188af83 (name: eType) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (containment: false, resolveProxies: true)
+newValue : null
+Succeed! --> diff012 model saved at: file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/petrinets/diffModels/diff012_dsmDiff.xmi
+**>Failed! Could not save v012.
+End of Generating DSMDiff!

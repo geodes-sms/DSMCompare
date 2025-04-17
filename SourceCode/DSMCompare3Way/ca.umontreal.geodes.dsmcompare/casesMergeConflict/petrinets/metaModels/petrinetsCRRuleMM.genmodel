@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ca.umontreal.geodes.dsmcompare/src" modelPluginID="ca.umontreal.geodes.dsmcompare"
+    modelName="PetrinetsCRRuleMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>petrinetsCRRuleMM.ecore</foreignModel>
+  <genPackages prefix="PetrinetsCRRuleMM" disposableProviderFactory="true" ecorePackage="petrinetsCRRuleMM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="petrinetsCRRuleMM.ecore#//AUTHOR">
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//AUTHOR/NON"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//AUTHOR/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//AUTHOR/RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//AUTHOR/EQUAL"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//AUTHOR/MIXED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="petrinetsCRRuleMM.ecore#//ChangeStatus">
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ChangeStatus/NON"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ChangeStatus/EQUIVALENT"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ChangeStatus/CONTRADICTING"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ChangeStatus/MERGE_ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ChangeStatus/MERGE_DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ChangeStatus/MERGE_MODIFY"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ChangeStatus/MERGE_DELETE_CREATE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="petrinetsCRRuleMM.ecore#//ConflictGranularity">
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictGranularity/NIL"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictGranularity/Semantic_Semantic"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictGranularity/Semantic_Fine"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictGranularity/Fine_Fine"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="petrinetsCRRuleMM.ecore#//ConflictResolutionStrategy">
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictResolutionStrategy/NIL"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictResolutionStrategy/Keep_Left"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictResolutionStrategy/Keep_Right"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictResolutionStrategy/Keep_Semantic_Difference"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictResolutionStrategy/Apply_None"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictResolutionStrategy/Apply_Left_Then_Right"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictResolutionStrategy/Apply_Right_Then_Left"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictResolutionStrategy/Apply_A_User_Defined_Resolution_Pattern"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictResolutionStrategy/Custom_Change_At_Time_Of_Merge"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictResolutionStrategy/Suggest_A_Resolution_Needing_Approval"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="petrinetsCRRuleMM.ecore#//ConflictResolutionType">
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictResolutionType/Pending"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//ConflictResolutionType/Resolved"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="petrinetsCRRuleMM.ecore#//DiffKind">
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//DiffKind/NON"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//DiffKind/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//DiffKind/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="petrinetsCRRuleMM.ecore#//DiffKind/MODIFY"/>
+    </genEnums>
+    <genClasses ecoreClass="petrinetsCRRuleMM.ecore#//Pattern_ConflictResolution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_ConflictResolution/ResolutionType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_ConflictResolution/ResolutionStrategy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_ConflictResolution/semanticconflicts"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet/isMerged"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet/new_id_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet/new_id_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet/idChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet/new_name_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet/new_name_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet/nameChangeStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_places">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_places/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_places/isForbidden"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_places/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_places/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_places/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_places/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_places/isMerged"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_places/diff_Group"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_places/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_transitions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_transitions/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_transitions/isForbidden"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_transitions/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_transitions/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_transitions/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_transitions/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_transitions/isMerged"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_transitions/diff_Group"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_DiffPetriNet_transitions/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsCRRuleMM.ecore#//Pattern_DiffPlace">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace/isMerged"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace/new_id_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace/new_id_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace/idChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace/new_name_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace/new_name_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace/nameChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace/new_tokens_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace/new_tokens_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace/tokensChangeStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsCRRuleMM.ecore#//Pattern_DiffPlace_transitions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace_transitions/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace_transitions/isForbidden"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace_transitions/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace_transitions/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace_transitions/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace_transitions/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace_transitions/isMerged"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffPlace_transitions/diff_Group"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_DiffPlace_transitions/eType"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsCRRuleMM.ecore#//Pattern_DiffTransition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition/isMerged"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition/new_id_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition/new_id_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition/idChangeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition/new_name_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition/new_name_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition/nameChangeStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsCRRuleMM.ecore#//Pattern_DiffTransition_places">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition_places/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition_places/isForbidden"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition_places/diff_kind_Left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition_places/diff_kind_Right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition_places/changeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition_places/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition_places/isMerged"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_DiffTransition_places/diff_Group"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_DiffTransition_places/eType"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="petrinetsCRRuleMM.ecore#//Pattern_NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_NamedElement/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_NamedElement/isForbidden"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_NamedElement/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsCRRuleMM.ecore#//Pattern_PetriNet">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_PetriNet/places"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_PetriNet/transitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_PetriNet/diffplaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_PetriNet/difftransitions"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsCRRuleMM.ecore#//Pattern_Place">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_Place/tokens"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_Place/transitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_Place/difftransitions"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsCRRuleMM.ecore#//Pattern_SemanticConflict">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_SemanticConflict/conflict_kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_SemanticConflict/conflict_Granularity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_SemanticConflict/semanticdiffs"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsCRRuleMM.ecore#//Pattern_SemanticDiff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_SemanticDiff/author"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="petrinetsCRRuleMM.ecore#//Pattern_SemanticObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_SemanticObject/ID_Pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_SemanticObject/isForbidden"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Pattern_SemanticObject/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_SemanticObject/SemanticObject_DiffPetriNet"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_SemanticObject/SemanticObject_DiffPetriNet_places"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_SemanticObject/SemanticObject_DiffPetriNet_transitions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_SemanticObject/SemanticObject_DiffPlace"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_SemanticObject/SemanticObject_DiffPlace_transitions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_SemanticObject/SemanticObject_DiffTransition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_SemanticObject/SemanticObject_DiffTransition_places"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_SemanticObject/SemanticObject_NamedElement"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsCRRuleMM.ecore#//Pattern_Transition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_Transition/places"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Pattern_Transition/diffplaces"/>
+    </genClasses>
+    <genClasses ecoreClass="petrinetsCRRuleMM.ecore#//Rule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Rule/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Rule/constraints"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petrinetsCRRuleMM.ecore#//Rule/priority"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Rule/rulePattern_Pattern_SemanticObject"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Rule/rulePattern_Pattern_DiffPetriNet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Rule/rulePattern_Pattern_DiffPetriNet_places"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Rule/rulePattern_Pattern_DiffPetriNet_transitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Rule/rulePattern_Pattern_DiffPlace"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Rule/rulePattern_Pattern_DiffPlace_transitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Rule/rulePattern_Pattern_DiffTransition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Rule/rulePattern_Pattern_DiffTransition_places"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petrinetsCRRuleMM.ecore#//Rule/rulePattern_Pattern_NamedElement"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

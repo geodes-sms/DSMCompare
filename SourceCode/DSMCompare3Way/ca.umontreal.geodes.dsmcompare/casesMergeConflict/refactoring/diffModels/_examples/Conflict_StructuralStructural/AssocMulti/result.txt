@@ -1,0 +1,45 @@
+Matches count 	:	1
+Diffs count 	:	3
+Conflicts count :	1
+Matched resources :
+Left = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V1.xmi
+Right = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V2.xmi
+origin = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/CA.xmi
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| refactoringDiffMM.impl.EPackageImpl@3dddefd8 (name: pkg)| refactoringDiffMM.impl.EPackageImpl@6c6c5427 (name: pkg)|
+| |-refactoringDiffMM.impl.EClassImpl@160ac7fb (name: c1, extends: null, implements: null, isAbstract: false, packageName: null)| |-refactoringDiffMM.impl.EClassImpl@618c5d94 (name: c1, extends: null, implements: null, isAbstract: false, packageName: null)|
+| |-refactoringDiffMM.impl.EClassImpl@12bfd80d (name: c2, extends: null, implements: null, isAbstract: false, packageName: null)| |-refactoringDiffMM.impl.EClassImpl@5b40ceb (name: c2, extends: null, implements: null, isAbstract: false, packageName: null)|
+| |-refactoringDiffMM.impl.EClassImpl@41925502 (name: c3, extends: null, implements: null, isAbstract: false, packageName: null)| |-refactoringDiffMM.impl.EClassImpl@13c3c1e1 (name: c3, extends: null, implements: null, isAbstract: false, packageName: null)|
+| |-refactoringDiffMM.impl.testAssociationsImpl@13e3c1c7 (name: t1)| |-refactoringDiffMM.impl.testAssociationsImpl@1d8062d2 (name: t1)|
+| |-refactoringDiffMM.impl.testAssociationsImpl@5316e95f (name: t2)| |-refactoringDiffMM.impl.testAssociationsImpl@1e63ec0b (name: t2)|
+| |-refactoringDiffMM.impl.testAssociationsImpl@3f053c80 (name: t3)| |-refactoringDiffMM.impl.testAssociationsImpl@3b956878 (name: t3)|
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+REFERENCE CHANGES
+
+ [MOVE] value refactoringDiffMM.impl.EClassImpl@12bfd80d (name: c2, extends: null, implements: null, isAbstract: false, packageName: null) has been moved from reference multi
+ of object refactoringDiffMM.impl.testAssociationsImpl@13e3c1c7 (name: t1)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@3918c187 (name: c3, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference multi
+ of object refactoringDiffMM.impl.testAssociationsImpl@13e3c1c7 (name: t1)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@295eaa7c (name: c2, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference multi
+ of object refactoringDiffMM.impl.testAssociationsImpl@13e3c1c7 (name: t1)
+
+ATTRIBUTE CHANGES
+
+CONFLICTS
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@295eaa7c (name: c2, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference multi
+ of object refactoringDiffMM.impl.testAssociationsImpl@13e3c1c7 (name: t1)
+	
+ [MOVE] value refactoringDiffMM.impl.EClassImpl@12bfd80d (name: c2, extends: null, implements: null, isAbstract: false, packageName: null) has been moved from reference multi
+ of object refactoringDiffMM.impl.testAssociationsImpl@13e3c1c7 (name: t1)
+diff012 model saved at: file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/diffModels/DSMDiff.xmi
+--> Models are merged and initial v012 (non conflicting elements only) saved at: file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V012.xmi
+Succeed! The end of transforming EMF-Diff to DSMC-Diff
+emf-Compare result transformed to Fine-Grained DsmdiffMM!

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM">
+  <refactoringDiffMM:EPackage name="pkg">
+    <eclassifiers name="ThreadedDownloads" extends="Activity">
+      <eattributes name="mDefaultURL" etype="String"/>
+      <eattributes name="mUrlEditText" etype="EditText"/>
+      <eattributes name="mImageView" etype="ImageView"/>
+      <eattributes name="mProgressDialog" etype="ProgressDialog"/>
+      <eattributes name="TAG" etype="String"/>
+      <eattributes name="messageHandler" etype="MessageHandler"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="mThisActivityContext" etype="Context" diff_kind_Right="DELETE"/>
+      <eoperations name="downloadImage()" eparameters="url:String" etype="Bitmap" methodBody="try; catch; catch; e; return; null; expression statement; method invocation; printStackTrace; expression statement; method invocation; e; string literal; expression statement; method invocation; runOnUiThread; class instance creation; ; Anonymous type; this; return; variable declaration; image; variable declaration; is; if; expression statement; ASSIGN; url; method invocation; equals; string literal; " __idKDM="downloadImage___String___"/>
+      <eoperations name="runMessages()" eparameters="view:View" etype="void" methodBody="expression statement; method invocation; start; class instance creation; Thread; class instance creation; RunnableWithMessages; expression statement; method invocation; hideKeyboard; variable declaration; url; " __idKDM="runMessages___View___"/>
+      <eoperations name="runAsyncTask()" eparameters="view:View" etype="void" methodBody="expression statement; method invocation; execute; class instance creation; DownloadTask; expression statement; method invocation; hideKeyboard; variable declaration; url; " __idKDM="runAsyncTask___View___"/>
+      <eoperations name="resetImage()" eparameters="view:View" etype="void" methodBody="expression statement; method invocation; setImageResource; " __idKDM="resetImage___View___"/>
+      <eoperations name="hideKeyboard()" eparameters="" etype="void" methodBody="expression statement; method invocation; hideSoftInputFromWindow; number literal; method invocation; getWindowToken; variable declaration; mgr; " __idKDM="hideKeyboard______"/>
+      <eoperations name="onCreateOptionsMenu()" eparameters="menu:Menu" etype="boolean" methodBody="return; boolean literal; expression statement; method invocation; inflate; method invocation; getMenuInflater; " __idKDM="onCreateOptionsMenu___Menu___"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="getUrlString()" eparameters="" etype="String" methodBody="return; method invocation; toString; method invocation; getText; " __idKDM="getUrlString______" diff_kind_Right="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="showDialog()" eparameters="message:String" etype="void" methodBody="expression statement; ASSIGN; method invocation; show; string literal; this; " __idKDM="showDialog___String___" diff_kind_Right="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="dismissDialog()" eparameters="" etype="void" methodBody="if; expression statement; method invocation; dismiss; NOT_EQUALS; null; " __idKDM="dismissDialog______" diff_kind_Right="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="showErrorToast()" eparameters="errorString:String" etype="void" methodBody="expression statement; method invocation; show; method invocation; makeText; " __idKDM="showErrorToast___String___" diff_kind_Right="MODIFY" new_methodBody_Right="expression statement; method invocation; show; method invocation; makeText; this; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="onCreate()" eparameters="savedInstanceState:Bundle" etype="void" methodBody="expression statement; ASSIGN; cast; method invocation; findViewById; expression statement; ASSIGN; cast; method invocation; findViewById; expression statement; method invocation; setContentView; expression statement; ASSIGN; method invocation; getApplicationContext; method invocation; getApplication; expression statement; super method invocation; onCreate; " __idKDM="onCreate___Bundle___" diff_kind_Right="MODIFY" new_methodBody_Right="expression statement; ASSIGN; cast; method invocation; findViewById; expression statement; ASSIGN; cast; method invocation; findViewById; expression statement; method invocation; setContentView; expression statement; super method invocation; onCreate; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="displayImage()" eparameters="imageBitmap:Bitmap" etype="void" methodBody="if; expression statement; method invocation; showErrorToast; PLUS; string literal; string literal; expression statement; method invocation; setImageBitmap; NOT_EQUALS; null; " __idKDM="displayImage___Bitmap___" diff_kind_Right="MODIFY" new_methodBody_Right="if; if; expression statement; method invocation; setImageBitmap; expression statement; method invocation; showErrorToast; PLUS; string literal; string literal; EQUALS; null; expression statement; method invocation; showErrorToast; PLUS; string literal; string literal; EQUALS; null; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="runRunnable()" eparameters="view:View" etype="void" methodBody="expression statement; method invocation; start; class instance creation; Thread; class instance creation; RunnableWithHandlers; expression statement; ASSIGN; method invocation; show; string literal; string literal; this; ThreadedDownloads; expression statement; method invocation; hideKeyboard; variable declaration; url; " __idKDM="runRunnable___View___" diff_kind_Right="MODIFY" new_methodBody_Right="expression statement; method invocation; start; class instance creation; Thread; class instance creation; RunnableWithHandlers; expression statement; method invocation; showDialog; string literal; expression statement; method invocation; hideKeyboard; variable declaration; url; "/>
+      <nested_classes name="RunnableWithHandlers" implements="Runnable" interfaces="Runnable">
+        <eattributes name="mUrl" etype="String"/>
+        <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="mUrl" etype="String" diff_kind_Left="ADD"/>
+        <eoperations name="run()" eparameters="" etype="void" methodBody="expression statement; method invocation; runOnUiThread; class instance creation; ; Anonymous type; this; ThreadedDownloads; variable declaration; imageBitmap; " __idKDM="run______"/>
+        <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="run()" eparameters="" etype="void" methodBody="expression statement; method invocation; runOnUiThread; class instance creation; ; Anonymous type; this; ThreadedDownloads; variable declaration; imageBitmap; " __idKDM="run______" diff_kind_Left="ADD"/>
+        <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="RunnableWithHandlers()" eparameters="url:String" methodBody="expression statement; ASSIGN; url; field access; mUrl; this; " __idKDM="RunnableWithHandlers___String___" diff_kind_Left="MODIFY" new_methodBody_Left="expression statement; ASSIGN; mUrl; "/>
+      </nested_classes>
+      <nested_classes name="MessageHandler" extends="Handler">
+        <eattributes name="SHOW_DIALOG" etype="int"/>
+        <eattributes name="DISMISS_DIALOG" etype="int"/>
+        <eattributes name="DISPLAY_IMAGE" etype="int"/>
+        <eattributes name="mActivity" etype="java.lang.ref.WeakReference&lt;pkg.ThreadedDownloads>"/>
+        <eoperations name="MessageHandler()" eparameters="activity:ThreadedDownloads" methodBody="expression statement; ASSIGN; mActivity; class instance creation; WeakReference; " __idKDM="MessageHandler___ThreadedDownloads___"/>
+        <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="handleMessage()" eparameters="msg:Message" etype="void" methodBody="switch; expression statement; method invocation; displayImage; cast; case; expression statement; method invocation; dismiss; case; expression statement; ASSIGN; method invocation; show; string literal; string literal; method invocation; get; case; " __idKDM="handleMessage___Message___" diff_kind_Right="MODIFY" new_methodBody_Right="switch; expression statement; method invocation; displayImage; cast; method invocation; get; case; expression statement; method invocation; dismissDialog; method invocation; get; case; expression statement; method invocation; showDialog; string literal; method invocation; get; case; if; return; EQUALS; null; method invocation; get; "/>
+        <diffesupertypes diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="EQUIVALENT" eType="Handler"/>
+      </nested_classes>
+      <nested_classes name="RunnableWithMessages" implements="Runnable" interfaces="Runnable">
+        <eattributes name="mUrl" etype="String"/>
+        <eoperations name="RunnableWithMessages()" eparameters="url:String" methodBody="expression statement; ASSIGN; url; field access; mUrl; this; " __idKDM="RunnableWithMessages___String___"/>
+        <eoperations name="run()" eparameters="" etype="void" methodBody="expression statement; method invocation; sendMessage; expression statement; ASSIGN; method invocation; obtainMessage; expression statement; method invocation; sendMessage; expression statement; ASSIGN; method invocation; obtainMessage; variable declaration; imageBitmap; expression statement; method invocation; sendMessage; variable declaration; msg; variable declaration; mHandler; " __idKDM="run______"/>
+      </nested_classes>
+      <nested_classes name="DownloadTask">
+        <eoperations name="doInBackground()" eparameters="params:String" etype="Bitmap" methodBody="return; method invocation; downloadImage; array access; params; number literal; " __idKDM="doInBackground___String___"/>
+        <eoperations name="DownloadTask()" eparameters="" methodBody="" __idKDM="DownloadTask______"/>
+        <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="onPostExecute()" eparameters="imageBitmap:Bitmap" etype="void" methodBody="expression statement; method invocation; displayImage; expression statement; method invocation; dismiss; " __idKDM="onPostExecute___Bitmap___" diff_kind_Right="MODIFY" new_methodBody_Right="expression statement; method invocation; displayImage; expression statement; method invocation; dismissDialog; "/>
+        <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="onPreExecute()" eparameters="" etype="void" methodBody="expression statement; ASSIGN; method invocation; show; string literal; string literal; this; ThreadedDownloads; " __idKDM="onPreExecute______" diff_kind_Right="MODIFY" new_methodBody_Right="expression statement; method invocation; showDialog; string literal; "/>
+      </nested_classes>
+      <diffesupertypes diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="EQUIVALENT" eType="Activity"/>
+    </eclassifiers>
+    <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="Handler" diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="EQUIVALENT"/>
+    <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="Activity" diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="EQUIVALENT"/>
+    <interfaces name="Runnable"/>
+  </refactoringDiffMM:EPackage>
+  <refactoringDiffMM:SemanticDiff name="extractMethod" SemanticObject_EOperation="showDialog() onPreExecute()" author="RIGHT"/>
+  <refactoringDiffMM:SemanticDiff name="extractMethod" SemanticObject_EOperation="dismissDialog() onPostExecute()" author="RIGHT"/>
+  <refactoringDiffMM:SemanticDiff name="extractMethod" SemanticObject_EOperation="dismissDialog() handleMessage()" author="RIGHT"/>
+  <refactoringDiffMM:SemanticDiff name="extractMethod" SemanticObject_EOperation="showDialog() handleMessage()" author="RIGHT"/>
+  <refactoringDiffMM:SemanticDiff name="extractMethod" SemanticObject_EOperation="showDialog() runRunnable()" author="RIGHT"/>
+  <refactoringDiffMM:SemanticDiff name="extractMethod" SemanticObject_EOperation="displayImage() onPostExecute()" author="RIGHT"/>
+  <refactoringDiffMM:SemanticDiff name="extractMethod" SemanticObject_EOperation="displayImage() handleMessage()" author="RIGHT"/>
+  <refactoringDiffMM:SemanticDiff name="extractMethod" SemanticObject_EOperation="showErrorToast() displayImage()" author="RIGHT"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEClass.[Activity].changeStatus - EQUIVALENT ( DELETE | DELETE )" SemanticObject_DiffEClass="Activity"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEClass.[Handler].changeStatus - EQUIVALENT ( DELETE | DELETE )" SemanticObject_DiffEClass="Handler"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEClass_esupertypes.changeStatus - EQUIVALENT ( DELETE | DELETE )" SemanticObject_DiffEClass_esupertypes="/0/@eclassifiers.0/@diffesupertypes.0"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEClass_esupertypes.changeStatus - EQUIVALENT ( DELETE | DELETE )" SemanticObject_DiffEClass_esupertypes="/0/@eclassifiers.0/@nested_classes.1/@diffesupertypes.0"/>
+</xmi:XMI>

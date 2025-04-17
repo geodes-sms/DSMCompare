@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refactoringCRRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoringCRRuleMM="www.geodes.UdeM.edu/refactoringCRRuleMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/refactoringCRRuleMM ../metaModels/refactoringCRRuleMM.ecore"
+    name="changeParameters_pullUpMethod_Combination"
+    priority="1">
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_SemanticDiff"
+      ID_Pattern="1"
+      name="Pull-up Method"
+      SemanticObject_EOperation="//@rulePattern_Pattern_DiffEOperation.0"
+      author="RIGHT"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_SemanticDiff"
+      ID_Pattern="2"
+      name="Change Parameters"
+      SemanticObject_EOperation="//@rulePattern_Pattern_DiffEOperation.0"
+      author="LEFT"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_SemanticConflict"
+      ID_Pattern="3"
+      name="Change Parameters - Pull-up Method - Contradicting"
+      conflict_kind="CONTRADICTING"
+      conflict_Granularity="Semantic_Semantic"
+      semanticdiffs="1 2"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_ConflictResolution"
+      ID_Pattern="4"
+      name="Change Parameters - Pull-up Method - Combination"
+      ResolutionStrategy="Apply_Right_Then_Left"
+      semanticconflicts="3"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_ConflictResolution"
+      ID_Pattern="5"
+      isForbidden="true"
+      name="Change Parameters - Pull-up Method - Combination"
+      ResolutionStrategy="Apply_Right_Then_Left"
+      semanticconflicts="3"/>
+  <rulePattern_Pattern_DiffEOperation
+      name=""/>
+</refactoringCRRuleMM:Rule>

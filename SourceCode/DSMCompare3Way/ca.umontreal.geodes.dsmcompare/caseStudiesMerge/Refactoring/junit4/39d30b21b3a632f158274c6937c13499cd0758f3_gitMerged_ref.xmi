@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="org.junit.tests.experimental.rules">
+  <eclassifiers name="ExpectedExceptionRuleTest">
+    <eoperations name="expectedExceptionPasses()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; " __idKDM="expectedExceptionPasses______"/>
+    <eoperations name="unExpectedExceptionFails()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; " __idKDM="unExpectedExceptionFails______"/>
+    <eoperations name="wrongMessageFails()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; and; method invocation; hasSingleFailureContaining; string literal; method invocation; both; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; " __idKDM="wrongMessageFails______"/>
+    <eoperations name="failsIfExceptionNeverComes()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; " __idKDM="failsIfExceptionNeverComes______"/>
+    <eoperations name="failsIfExceptionMessageNeverComes()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; " __idKDM="failsIfExceptionMessageNeverComes______"/>
+    <eoperations name="passesWithSubstringMethod()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; " __idKDM="passesWithSubstringMethod______"/>
+    <eoperations name="failsWithNullExceptionMessage()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; " __idKDM="failsWithNullExceptionMessage______"/>
+    <eoperations name="succeedsWithMessageMatcher()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; " __idKDM="succeedsWithMessageMatcher______"/>
+    <eoperations name="startsWith()" eparameters="prefix:String" etype="Matcher&lt;String>" methodBody="return; class instance creation; ; Anonymous type; " __idKDM="startsWith___String___"/>
+    <eoperations name="failsWithMatcher()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; " __idKDM="failsWithMatcher______"/>
+    <eoperations name="succeedsWithMatcher()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; " __idKDM="succeedsWithMatcher______"/>
+    <eoperations name="failsWithMultipleMatchers()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; " __idKDM="failsWithMultipleMatchers______"/>
+    <eoperations name="failsWithWrongCause()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; method invocation; toString; method invocation; testResult; type literal; " __idKDM="failsWithWrongCause______"/>
+    <nested_classes name="HasExpectedException">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsNothing()" etype="void" methodBody="" __idKDM="throwsNothing______"/>
+      <eoperations name="throwsNullPointerException()" etype="void" methodBody="throw; class instance creation; NullPointerException; expression statement; method invocation; expect; type literal; " __idKDM="throwsNullPointerException______"/>
+      <eoperations name="throwsNullPointerExceptionWithMessage()" etype="void" methodBody="throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; " __idKDM="throwsNullPointerExceptionWithMessage______"/>
+      <eoperations name="throwsIllegalArgumentExceptionWithCause()" etype="void" methodBody="throw; class instance creation; IllegalArgumentException; string literal; expression statement; method invocation; expectCause; method invocation; is; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; variable declaration; class instance creation; NullPointerException; string literal; expectedCause; " __idKDM="throwsIllegalArgumentExceptionWithCause______"/>
+      <eoperations name="throwsIllegalArgumentExceptionWithCauseExplicitlyNull()" etype="void" methodBody="throw; class instance creation; IllegalArgumentException; string literal; expression statement; method invocation; expectCause; method invocation; nullValue; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; " __idKDM="throwsIllegalArgumentExceptionWithCauseExplicitlyNull______"/>
+    </nested_classes>
+    <nested_classes name="HasWrongExpectedException">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsNullPointerException()" etype="void" methodBody="throw; class instance creation; IllegalArgumentException; expression statement; method invocation; expect; type literal; " __idKDM="throwsNullPointerException______"/>
+    </nested_classes>
+    <nested_classes name="HasWrongMessage">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsNullPointerException()" etype="void" methodBody="throw; class instance creation; IllegalArgumentException; string literal; expression statement; method invocation; expectMessage; string literal; " __idKDM="throwsNullPointerException______"/>
+    </nested_classes>
+    <nested_classes name="WronglyExpectsException">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="doesntThrowNullPointerException()" etype="void" methodBody="expression statement; method invocation; expect; type literal; " __idKDM="doesntThrowNullPointerException______"/>
+    </nested_classes>
+    <nested_classes name="WronglyExpectsExceptionMessage">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="doesntThrowAnything()" etype="void" methodBody="expression statement; method invocation; expectMessage; string literal; " __idKDM="doesntThrowAnything______"/>
+    </nested_classes>
+    <nested_classes name="ExpectsSubstring">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsMore()" etype="void" methodBody="throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; string literal; " __idKDM="throwsMore______"/>
+    </nested_classes>
+    <nested_classes name="ExpectsSubstringNullMessage">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsMore()" etype="void" methodBody="throw; class instance creation; NullPointerException; expression statement; method invocation; expectMessage; string literal; " __idKDM="throwsMore______"/>
+    </nested_classes>
+    <nested_classes name="ExpectsMessageMatcher">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsMore()" etype="void" methodBody="throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; method invocation; startsWith; string literal; " __idKDM="throwsMore______"/>
+    </nested_classes>
+    <nested_classes name="ExpectedMessageMatcherFails">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsMore()" etype="void" methodBody="throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; method invocation; startsWith; string literal; " __idKDM="throwsMore______"/>
+    </nested_classes>
+    <nested_classes name="ExpectsMatcher">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsMore()" etype="void" methodBody="throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expect; method invocation; any; type literal; " __idKDM="throwsMore______"/>
+    </nested_classes>
+    <nested_classes name="ExpectsMultipleMatchers">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsMore()" etype="void" methodBody="throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; " __idKDM="throwsMore______"/>
+    </nested_classes>
+    <nested_classes name="HasWrongCause">
+      <eattributes name="EXPECTED_CAUSE" etype="NullPointerException"/>
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwWithCause()" etype="void" methodBody="throw; class instance creation; IllegalArgumentException; class instance creation; NullPointerException; string literal; string literal; expression statement; method invocation; expectCause; method invocation; is; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; " __idKDM="throwWithCause______"/>
+    </nested_classes>
+    <nested_classes name="HasExpectedException">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsNothing()" etype="void" methodBody="" __idKDM="throwsNothing______"/>
+      <eoperations name="throwsNullPointerException()" etype="void" methodBody="throw; class instance creation; new NullPointerException(); expression statement; method invocation; expect; type literal; " __idKDM="throwsNullPointerException______"/>
+      <eoperations name="throwsNullPointerExceptionWithMessage()" etype="void" methodBody="throw; class instance creation; new NullPointerException(&quot;What happened?&quot;); string literal; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; " __idKDM="throwsNullPointerExceptionWithMessage______"/>
+    </nested_classes>
+    <nested_classes name="HasWrongExpectedException">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsNullPointerException()" etype="void" methodBody="throw; class instance creation; new IllegalArgumentException(); expression statement; method invocation; expect; type literal; " __idKDM="throwsNullPointerException______"/>
+    </nested_classes>
+    <nested_classes name="HasWrongMessage">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsNullPointerException()" etype="void" methodBody="throw; class instance creation; new IllegalArgumentException(&quot;actualMessage&quot;); string literal; expression statement; method invocation; expectMessage; string literal; " __idKDM="throwsNullPointerException______"/>
+    </nested_classes>
+    <nested_classes name="WronglyExpectsException">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="doesntThrowNullPointerException()" etype="void" methodBody="expression statement; method invocation; expect; type literal; " __idKDM="doesntThrowNullPointerException______"/>
+    </nested_classes>
+    <nested_classes name="WronglyExpectsExceptionMessage">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="doesntThrowAnything()" etype="void" methodBody="expression statement; method invocation; expectMessage; string literal; " __idKDM="doesntThrowAnything______"/>
+    </nested_classes>
+    <nested_classes name="ExpectsSubstring">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsMore()" etype="void" methodBody="throw; class instance creation; new NullPointerException(&quot;This could throw anything! (as long as it has the right substring)&quot;); string literal; expression statement; method invocation; expectMessage; string literal; " __idKDM="throwsMore______"/>
+    </nested_classes>
+    <nested_classes name="ExpectsSubstringNullMessage">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsMore()" etype="void" methodBody="throw; class instance creation; new NullPointerException(); expression statement; method invocation; expectMessage; string literal; " __idKDM="throwsMore______"/>
+    </nested_classes>
+    <nested_classes name="ExpectsMessageMatcher">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsMore()" etype="void" methodBody="throw; class instance creation; new NullPointerException(&quot;Ack!&quot;); string literal; expression statement; method invocation; expectMessage; method invocation; startsWith; string literal; " __idKDM="throwsMore______"/>
+    </nested_classes>
+    <nested_classes name="ExpectedMessageMatcherFails">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsMore()" etype="void" methodBody="throw; class instance creation; new NullPointerException(&quot;Back!&quot;); string literal; expression statement; method invocation; expectMessage; method invocation; startsWith; string literal; " __idKDM="throwsMore______"/>
+    </nested_classes>
+    <nested_classes name="ExpectsMatcher">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsMore()" etype="void" methodBody="throw; class instance creation; new NullPointerException(&quot;Ack!&quot;); string literal; expression statement; method invocation; expect; method invocation; any; type literal; " __idKDM="throwsMore______"/>
+    </nested_classes>
+    <nested_classes name="ExpectsMultipleMatchers">
+      <eattributes name="thrown" etype="ExpectedException"/>
+      <eoperations name="throwsMore()" etype="void" methodBody="throw; class instance creation; new NullPointerException(&quot;Ack!&quot;); string literal; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; " __idKDM="throwsMore______"/>
+    </nested_classes>
+  </eclassifiers>
+  <eclassifiers name="ExpectedExceptionRuleTest">
+    <eoperations name="expectedExceptionPasses()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; " __idKDM="expectedExceptionPasses______"/>
+    <eoperations name="unExpectedExceptionFails()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; " __idKDM="unExpectedExceptionFails______"/>
+    <eoperations name="wrongMessageFails()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; and; method invocation; hasSingleFailureContaining; string literal; method invocation; both; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; " __idKDM="wrongMessageFails______"/>
+    <eoperations name="failsIfExceptionNeverComes()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; " __idKDM="failsIfExceptionNeverComes______"/>
+    <eoperations name="failsIfExceptionMessageNeverComes()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; " __idKDM="failsIfExceptionMessageNeverComes______"/>
+    <eoperations name="passesWithSubstringMethod()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; " __idKDM="passesWithSubstringMethod______"/>
+    <eoperations name="failsWithNullExceptionMessage()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; " __idKDM="failsWithNullExceptionMessage______"/>
+    <eoperations name="succeedsWithMessageMatcher()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; " __idKDM="succeedsWithMessageMatcher______"/>
+    <eoperations name="startsWith()" eparameters="prefix:String" etype="Matcher&lt;String>" methodBody="return; class instance creation; ; Anonymous type; " __idKDM="startsWith___String___"/>
+    <eoperations name="failsWithMatcher()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; " __idKDM="failsWithMatcher______"/>
+    <eoperations name="succeedsWithMatcher()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; " __idKDM="succeedsWithMatcher______"/>
+    <eoperations name="failsWithMultipleMatchers()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; " __idKDM="failsWithMultipleMatchers______"/>
+  </eclassifiers>
+</refactoring:EPackage>

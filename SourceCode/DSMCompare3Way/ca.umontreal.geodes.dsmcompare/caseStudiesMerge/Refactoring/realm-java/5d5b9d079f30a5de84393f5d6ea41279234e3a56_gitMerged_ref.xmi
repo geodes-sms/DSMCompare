@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="RealmSourceCodeGenerator">
+    <eattributes name="processingEnvironment" etype="ProcessingEnvironment"/>
+    <eattributes name="className" etype="String"/>
+    <eattributes name="packageName" etype="String"/>
+    <eattributes name="fields" etype="java.util.List&lt;javax.lang.model.element.VariableElement>"/>
+    <eattributes name="JAVA_TO_REALM_TYPES" etype="java.util.Map&lt;java.lang.String,java.lang.String>"/>
+    <eattributes name="JAVA_TO_COLUMN_TYPES" etype="java.util.Map&lt;java.lang.String,java.lang.String>"/>
+    <eattributes name="CASTING_TYPES" etype="java.util.Map&lt;java.lang.String,java.lang.String>"/>
+    <eoperations name="RealmSourceCodeGenerator()" eparameters="processingEnvironment:ProcessingEnvironment, className:String, packageName:String, fields:java.util.List&lt;javax.lang.model.element.VariableElement>" methodBody="expression statement; ASSIGN; fields; field access; fields; this; expression statement; ASSIGN; packageName; field access; packageName; this; expression statement; ASSIGN; className; field access; className; this; expression statement; ASSIGN; processingEnvironment; field access; processingEnvironment; this; variable declaration; __packageName; " __idKDM="RealmSourceCodeGenerator___ProcessingEnvironment__String__String__java_util_List_javax_lang_model_element_VariableElement____"/>
+    <eoperations name="generate()" eparameters="null:IOException, null:UnsupportedOperationException" etype="void" methodBody="" __idKDM="generate___IOException__UnsupportedOperationException___"/>
+    <eoperations name="capitaliseFirstChar()" eparameters="input:String" etype="String" methodBody="return; PLUS; method invocation; substring; number literal; method invocation; toUpperCase; method invocation; substring; number literal; number literal; " __idKDM="capitaliseFirstChar___String___"/>
+  </eclassifiers>
+</refactoring:EPackage>

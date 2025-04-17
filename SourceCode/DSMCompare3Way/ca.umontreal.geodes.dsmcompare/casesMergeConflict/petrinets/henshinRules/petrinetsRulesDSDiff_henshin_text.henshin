@@ -1,0 +1,2597 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_ULrQEMSIEe2TD---Mk4tOA" name="HenshinDSL">
+  <imports href="../metaModels/petrinetsDiffMM.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_ULrQEcSIEe2TD---Mk4tOA" name="RemoveImplicitPlace_equal">
+    <lhs xmi:id="_ULrQEsSIEe2TD---Mk4tOA" name="RemoveImplicitPlace_equal_LHS">
+      <nodes xmi:id="_ULrQE8SIEe2TD---Mk4tOA" name="n1" outgoing="_ULrQIsSIEe2TD---Mk4tOA _ULrQI8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrQFMSIEe2TD---Mk4tOA" name="n2" incoming="_ULrQI8SIEe2TD---Mk4tOA" outgoing="_ULrQJMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULrQFcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQFsSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQF8SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQGMSIEe2TD---Mk4tOA" name="n3" incoming="_ULrQIsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrQGcSIEe2TD---Mk4tOA" name="n4" incoming="_ULrQJMSIEe2TD---Mk4tOA" outgoing="_ULrQJcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_ULrQGsSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQG8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQHMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQHcSIEe2TD---Mk4tOA" name="n5" incoming="_ULrQJcSIEe2TD---Mk4tOA" outgoing="_ULrQJsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQHsSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQH8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQIMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQIcSIEe2TD---Mk4tOA" name="n6" incoming="_ULrQJsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <edges xmi:id="_ULrQIsSIEe2TD---Mk4tOA" source="_ULrQE8SIEe2TD---Mk4tOA" target="_ULrQGMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/places"/>
+      </edges>
+      <edges xmi:id="_ULrQI8SIEe2TD---Mk4tOA" source="_ULrQE8SIEe2TD---Mk4tOA" target="_ULrQFMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULrQJMSIEe2TD---Mk4tOA" source="_ULrQFMSIEe2TD---Mk4tOA" target="_ULrQGcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQJcSIEe2TD---Mk4tOA" source="_ULrQGcSIEe2TD---Mk4tOA" target="_ULrQHcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrQJsSIEe2TD---Mk4tOA" source="_ULrQHcSIEe2TD---Mk4tOA" target="_ULrQIcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_ULrQJ8SIEe2TD---Mk4tOA" name="RemoveImplicitPlace_equal_RHS">
+      <nodes xmi:id="_ULrQKMSIEe2TD---Mk4tOA" name="n1" outgoing="_ULrQOsSIEe2TD---Mk4tOA _ULrQO8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrQKcSIEe2TD---Mk4tOA" name="n2" incoming="_ULrQO8SIEe2TD---Mk4tOA" outgoing="_ULrQPMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULrQKsSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQK8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQLMSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQLcSIEe2TD---Mk4tOA" name="n3" incoming="_ULrQOsSIEe2TD---Mk4tOA _ULrQQMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrQLsSIEe2TD---Mk4tOA" name="n4" incoming="_ULrQPMSIEe2TD---Mk4tOA" outgoing="_ULrQPcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_ULrQL8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQMMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQMcSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQMsSIEe2TD---Mk4tOA" name="n5" incoming="_ULrQPcSIEe2TD---Mk4tOA" outgoing="_ULrQPsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQM8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQNMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQNcSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQNsSIEe2TD---Mk4tOA" name="n6" incoming="_ULrQPsSIEe2TD---Mk4tOA _ULrQP8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrQN8SIEe2TD---Mk4tOA" name="n7" outgoing="_ULrQP8SIEe2TD---Mk4tOA _ULrQQMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_ULrQOMSIEe2TD---Mk4tOA" value="&quot;Remove Implicit Place&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+        <attributes xmi:id="_ULrQOcSIEe2TD---Mk4tOA" value="&quot;EQUAL&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff/author"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_ULrQOsSIEe2TD---Mk4tOA" source="_ULrQKMSIEe2TD---Mk4tOA" target="_ULrQLcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/places"/>
+      </edges>
+      <edges xmi:id="_ULrQO8SIEe2TD---Mk4tOA" source="_ULrQKMSIEe2TD---Mk4tOA" target="_ULrQKcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULrQPMSIEe2TD---Mk4tOA" source="_ULrQKcSIEe2TD---Mk4tOA" target="_ULrQLsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQPcSIEe2TD---Mk4tOA" source="_ULrQLsSIEe2TD---Mk4tOA" target="_ULrQMsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrQPsSIEe2TD---Mk4tOA" source="_ULrQMsSIEe2TD---Mk4tOA" target="_ULrQNsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQP8SIEe2TD---Mk4tOA" source="_ULrQN8SIEe2TD---Mk4tOA" target="_ULrQNsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_ULrQQMSIEe2TD---Mk4tOA" source="_ULrQN8SIEe2TD---Mk4tOA" target="_ULrQLcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_ULrQQcSIEe2TD---Mk4tOA" origin="_ULrQE8SIEe2TD---Mk4tOA" image="_ULrQKMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrQQsSIEe2TD---Mk4tOA" origin="_ULrQFMSIEe2TD---Mk4tOA" image="_ULrQKcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrQQ8SIEe2TD---Mk4tOA" origin="_ULrQGMSIEe2TD---Mk4tOA" image="_ULrQLcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrQRMSIEe2TD---Mk4tOA" origin="_ULrQGcSIEe2TD---Mk4tOA" image="_ULrQLsSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrQRcSIEe2TD---Mk4tOA" origin="_ULrQHcSIEe2TD---Mk4tOA" image="_ULrQMsSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrQRsSIEe2TD---Mk4tOA" origin="_ULrQIcSIEe2TD---Mk4tOA" image="_ULrQNsSIEe2TD---Mk4tOA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_ULrQR8SIEe2TD---Mk4tOA" name="RemoveImplicitPlace_left">
+    <lhs xmi:id="_ULrQSMSIEe2TD---Mk4tOA" name="RemoveImplicitPlace_left_LHS">
+      <nodes xmi:id="_ULrQScSIEe2TD---Mk4tOA" name="n1" outgoing="_ULrQVcSIEe2TD---Mk4tOA _ULrQVsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrQSsSIEe2TD---Mk4tOA" name="n2" incoming="_ULrQVsSIEe2TD---Mk4tOA" outgoing="_ULrQV8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULrQS8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQTMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQTcSIEe2TD---Mk4tOA" name="n3" incoming="_ULrQVcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrQTsSIEe2TD---Mk4tOA" name="n4" incoming="_ULrQV8SIEe2TD---Mk4tOA" outgoing="_ULrQWMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_ULrQT8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQUMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQUcSIEe2TD---Mk4tOA" name="n5" incoming="_ULrQWMSIEe2TD---Mk4tOA" outgoing="_ULrQWcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQUsSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQU8SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQVMSIEe2TD---Mk4tOA" name="n6" incoming="_ULrQWcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <edges xmi:id="_ULrQVcSIEe2TD---Mk4tOA" source="_ULrQScSIEe2TD---Mk4tOA" target="_ULrQTcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/places"/>
+      </edges>
+      <edges xmi:id="_ULrQVsSIEe2TD---Mk4tOA" source="_ULrQScSIEe2TD---Mk4tOA" target="_ULrQSsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULrQV8SIEe2TD---Mk4tOA" source="_ULrQSsSIEe2TD---Mk4tOA" target="_ULrQTsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQWMSIEe2TD---Mk4tOA" source="_ULrQTsSIEe2TD---Mk4tOA" target="_ULrQUcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrQWcSIEe2TD---Mk4tOA" source="_ULrQUcSIEe2TD---Mk4tOA" target="_ULrQVMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_ULrQWsSIEe2TD---Mk4tOA" name="RemoveImplicitPlace_left_RHS">
+      <nodes xmi:id="_ULrQW8SIEe2TD---Mk4tOA" name="n1" outgoing="_ULrQasSIEe2TD---Mk4tOA _ULrQa8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrQXMSIEe2TD---Mk4tOA" name="n2" incoming="_ULrQa8SIEe2TD---Mk4tOA" outgoing="_ULrQbMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULrQXcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQXsSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQX8SIEe2TD---Mk4tOA" name="n3" incoming="_ULrQasSIEe2TD---Mk4tOA _ULrQcMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrQYMSIEe2TD---Mk4tOA" name="n4" incoming="_ULrQbMSIEe2TD---Mk4tOA" outgoing="_ULrQbcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_ULrQYcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQYsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQY8SIEe2TD---Mk4tOA" name="n5" incoming="_ULrQbcSIEe2TD---Mk4tOA" outgoing="_ULrQbsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQZMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQZcSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQZsSIEe2TD---Mk4tOA" name="n6" incoming="_ULrQbsSIEe2TD---Mk4tOA _ULrQb8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrQZ8SIEe2TD---Mk4tOA" name="n7" outgoing="_ULrQb8SIEe2TD---Mk4tOA _ULrQcMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_ULrQaMSIEe2TD---Mk4tOA" value="&quot;Remove Implicit Place&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+        <attributes xmi:id="_ULrQacSIEe2TD---Mk4tOA" value="&quot;LEFT&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff/author"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_ULrQasSIEe2TD---Mk4tOA" source="_ULrQW8SIEe2TD---Mk4tOA" target="_ULrQX8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/places"/>
+      </edges>
+      <edges xmi:id="_ULrQa8SIEe2TD---Mk4tOA" source="_ULrQW8SIEe2TD---Mk4tOA" target="_ULrQXMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULrQbMSIEe2TD---Mk4tOA" source="_ULrQXMSIEe2TD---Mk4tOA" target="_ULrQYMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQbcSIEe2TD---Mk4tOA" source="_ULrQYMSIEe2TD---Mk4tOA" target="_ULrQY8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrQbsSIEe2TD---Mk4tOA" source="_ULrQY8SIEe2TD---Mk4tOA" target="_ULrQZsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQb8SIEe2TD---Mk4tOA" source="_ULrQZ8SIEe2TD---Mk4tOA" target="_ULrQZsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_ULrQcMSIEe2TD---Mk4tOA" source="_ULrQZ8SIEe2TD---Mk4tOA" target="_ULrQX8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_ULrQccSIEe2TD---Mk4tOA" origin="_ULrQScSIEe2TD---Mk4tOA" image="_ULrQW8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrQcsSIEe2TD---Mk4tOA" origin="_ULrQSsSIEe2TD---Mk4tOA" image="_ULrQXMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrQc8SIEe2TD---Mk4tOA" origin="_ULrQTcSIEe2TD---Mk4tOA" image="_ULrQX8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrQdMSIEe2TD---Mk4tOA" origin="_ULrQTsSIEe2TD---Mk4tOA" image="_ULrQYMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrQdcSIEe2TD---Mk4tOA" origin="_ULrQUcSIEe2TD---Mk4tOA" image="_ULrQY8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrQdsSIEe2TD---Mk4tOA" origin="_ULrQVMSIEe2TD---Mk4tOA" image="_ULrQZsSIEe2TD---Mk4tOA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_ULrQd8SIEe2TD---Mk4tOA" name="RemoveImplicitPlace_right">
+    <lhs xmi:id="_ULrQeMSIEe2TD---Mk4tOA" name="RemoveImplicitPlace_right_LHS">
+      <nodes xmi:id="_ULrQecSIEe2TD---Mk4tOA" name="n1" outgoing="_ULrQhcSIEe2TD---Mk4tOA _ULrQhsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrQesSIEe2TD---Mk4tOA" name="n2" incoming="_ULrQhsSIEe2TD---Mk4tOA" outgoing="_ULrQh8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULrQe8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQfMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQfcSIEe2TD---Mk4tOA" name="n3" incoming="_ULrQhcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrQfsSIEe2TD---Mk4tOA" name="n4" incoming="_ULrQh8SIEe2TD---Mk4tOA" outgoing="_ULrQiMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_ULrQf8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQgMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQgcSIEe2TD---Mk4tOA" name="n5" incoming="_ULrQiMSIEe2TD---Mk4tOA" outgoing="_ULrQicSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQgsSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQg8SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQhMSIEe2TD---Mk4tOA" name="n6" incoming="_ULrQicSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <edges xmi:id="_ULrQhcSIEe2TD---Mk4tOA" source="_ULrQecSIEe2TD---Mk4tOA" target="_ULrQfcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/places"/>
+      </edges>
+      <edges xmi:id="_ULrQhsSIEe2TD---Mk4tOA" source="_ULrQecSIEe2TD---Mk4tOA" target="_ULrQesSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULrQh8SIEe2TD---Mk4tOA" source="_ULrQesSIEe2TD---Mk4tOA" target="_ULrQfsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQiMSIEe2TD---Mk4tOA" source="_ULrQfsSIEe2TD---Mk4tOA" target="_ULrQgcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrQicSIEe2TD---Mk4tOA" source="_ULrQgcSIEe2TD---Mk4tOA" target="_ULrQhMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_ULrQisSIEe2TD---Mk4tOA" name="RemoveImplicitPlace_right_RHS">
+      <nodes xmi:id="_ULrQi8SIEe2TD---Mk4tOA" name="n1" outgoing="_ULrQmsSIEe2TD---Mk4tOA _ULrQm8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrQjMSIEe2TD---Mk4tOA" name="n2" incoming="_ULrQm8SIEe2TD---Mk4tOA" outgoing="_ULrQnMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULrQjcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQjsSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQj8SIEe2TD---Mk4tOA" name="n3" incoming="_ULrQmsSIEe2TD---Mk4tOA _ULrQoMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrQkMSIEe2TD---Mk4tOA" name="n4" incoming="_ULrQnMSIEe2TD---Mk4tOA" outgoing="_ULrQncSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_ULrQkcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQksSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQk8SIEe2TD---Mk4tOA" name="n5" incoming="_ULrQncSIEe2TD---Mk4tOA" outgoing="_ULrQnsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQlMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQlcSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQlsSIEe2TD---Mk4tOA" name="n6" incoming="_ULrQnsSIEe2TD---Mk4tOA _ULrQn8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrQl8SIEe2TD---Mk4tOA" name="n7" outgoing="_ULrQn8SIEe2TD---Mk4tOA _ULrQoMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_ULrQmMSIEe2TD---Mk4tOA" value="&quot;Remove Implicit Place&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+        <attributes xmi:id="_ULrQmcSIEe2TD---Mk4tOA" value="&quot;RIGHT&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff/author"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_ULrQmsSIEe2TD---Mk4tOA" source="_ULrQi8SIEe2TD---Mk4tOA" target="_ULrQj8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/places"/>
+      </edges>
+      <edges xmi:id="_ULrQm8SIEe2TD---Mk4tOA" source="_ULrQi8SIEe2TD---Mk4tOA" target="_ULrQjMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULrQnMSIEe2TD---Mk4tOA" source="_ULrQjMSIEe2TD---Mk4tOA" target="_ULrQkMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQncSIEe2TD---Mk4tOA" source="_ULrQkMSIEe2TD---Mk4tOA" target="_ULrQk8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrQnsSIEe2TD---Mk4tOA" source="_ULrQk8SIEe2TD---Mk4tOA" target="_ULrQlsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQn8SIEe2TD---Mk4tOA" source="_ULrQl8SIEe2TD---Mk4tOA" target="_ULrQlsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_ULrQoMSIEe2TD---Mk4tOA" source="_ULrQl8SIEe2TD---Mk4tOA" target="_ULrQj8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_ULrQocSIEe2TD---Mk4tOA" origin="_ULrQecSIEe2TD---Mk4tOA" image="_ULrQi8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrQosSIEe2TD---Mk4tOA" origin="_ULrQesSIEe2TD---Mk4tOA" image="_ULrQjMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrQo8SIEe2TD---Mk4tOA" origin="_ULrQfcSIEe2TD---Mk4tOA" image="_ULrQj8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrQpMSIEe2TD---Mk4tOA" origin="_ULrQfsSIEe2TD---Mk4tOA" image="_ULrQkMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrQpcSIEe2TD---Mk4tOA" origin="_ULrQgcSIEe2TD---Mk4tOA" image="_ULrQk8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrQpsSIEe2TD---Mk4tOA" origin="_ULrQhMSIEe2TD---Mk4tOA" image="_ULrQlsSIEe2TD---Mk4tOA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_ULrQp8SIEe2TD---Mk4tOA" name="RemoveEfcStructures_equal">
+    <lhs xmi:id="_ULrQqMSIEe2TD---Mk4tOA" name="RemoveEfcStructures_equal_LHS">
+      <nodes xmi:id="_ULrQqcSIEe2TD---Mk4tOA" name="n1" outgoing="_ULrQ08SIEe2TD---Mk4tOA _ULrQ1MSIEe2TD---Mk4tOA _ULrQ1cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrQqsSIEe2TD---Mk4tOA" name="n2" incoming="_ULrQ08SIEe2TD---Mk4tOA" outgoing="_ULrQ1sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQq8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQrMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQrcSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQrsSIEe2TD---Mk4tOA" name="n3" incoming="_ULrQ1MSIEe2TD---Mk4tOA" outgoing="_ULrQ18SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQr8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQsMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQscSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQssSIEe2TD---Mk4tOA" name="n4" incoming="_ULrQ1cSIEe2TD---Mk4tOA" outgoing="_ULrQ2MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQs8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQtMSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQtcSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQtsSIEe2TD---Mk4tOA" name="n5" outgoing="_ULrQ2cSIEe2TD---Mk4tOA _ULrQ2sSIEe2TD---Mk4tOA _ULrQ28SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrQt8SIEe2TD---Mk4tOA" name="n6" incoming="_ULrQ2cSIEe2TD---Mk4tOA" outgoing="_ULrQ3MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQuMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQucSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQusSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQu8SIEe2TD---Mk4tOA" name="n7" incoming="_ULrQ2sSIEe2TD---Mk4tOA" outgoing="_ULrQ3cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQvMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQvcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQvsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQv8SIEe2TD---Mk4tOA" name="n8" incoming="_ULrQ28SIEe2TD---Mk4tOA" outgoing="_ULrQ3sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQwMSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQwcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQwsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQw8SIEe2TD---Mk4tOA" name="n9" incoming="_ULrQ1sSIEe2TD---Mk4tOA _ULrQ3MSIEe2TD---Mk4tOA _ULrQ48SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrQxMSIEe2TD---Mk4tOA" name="n10" incoming="_ULrQ18SIEe2TD---Mk4tOA _ULrQ3cSIEe2TD---Mk4tOA _ULrQ5MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrQxcSIEe2TD---Mk4tOA" name="n11" incoming="_ULrQ2MSIEe2TD---Mk4tOA _ULrQ3sSIEe2TD---Mk4tOA" outgoing="_ULrQ38SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrQxsSIEe2TD---Mk4tOA" name="n12" incoming="_ULrQ38SIEe2TD---Mk4tOA" outgoing="_ULrQ4MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULrQx8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQyMSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQycSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQysSIEe2TD---Mk4tOA" name="n13" incoming="_ULrQ4MSIEe2TD---Mk4tOA" outgoing="_ULrQ4cSIEe2TD---Mk4tOA _ULrQ4sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrQy8SIEe2TD---Mk4tOA" name="n14" incoming="_ULrQ4cSIEe2TD---Mk4tOA" outgoing="_ULrQ48SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQzMSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQzcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQzsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQz8SIEe2TD---Mk4tOA" name="n15" incoming="_ULrQ4sSIEe2TD---Mk4tOA" outgoing="_ULrQ5MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQ0MSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQ0cSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQ0sSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_ULrQ08SIEe2TD---Mk4tOA" source="_ULrQqcSIEe2TD---Mk4tOA" target="_ULrQqsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrQ1MSIEe2TD---Mk4tOA" source="_ULrQqcSIEe2TD---Mk4tOA" target="_ULrQrsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrQ1cSIEe2TD---Mk4tOA" source="_ULrQqcSIEe2TD---Mk4tOA" target="_ULrQssSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrQ1sSIEe2TD---Mk4tOA" source="_ULrQqsSIEe2TD---Mk4tOA" target="_ULrQw8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQ18SIEe2TD---Mk4tOA" source="_ULrQrsSIEe2TD---Mk4tOA" target="_ULrQxMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQ2MSIEe2TD---Mk4tOA" source="_ULrQssSIEe2TD---Mk4tOA" target="_ULrQxcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQ2cSIEe2TD---Mk4tOA" source="_ULrQtsSIEe2TD---Mk4tOA" target="_ULrQt8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrQ2sSIEe2TD---Mk4tOA" source="_ULrQtsSIEe2TD---Mk4tOA" target="_ULrQu8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrQ28SIEe2TD---Mk4tOA" source="_ULrQtsSIEe2TD---Mk4tOA" target="_ULrQv8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrQ3MSIEe2TD---Mk4tOA" source="_ULrQt8SIEe2TD---Mk4tOA" target="_ULrQw8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQ3cSIEe2TD---Mk4tOA" source="_ULrQu8SIEe2TD---Mk4tOA" target="_ULrQxMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQ3sSIEe2TD---Mk4tOA" source="_ULrQv8SIEe2TD---Mk4tOA" target="_ULrQxcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQ38SIEe2TD---Mk4tOA" source="_ULrQxcSIEe2TD---Mk4tOA" target="_ULrQxsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULrQ4MSIEe2TD---Mk4tOA" source="_ULrQxsSIEe2TD---Mk4tOA" target="_ULrQysSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQ4cSIEe2TD---Mk4tOA" source="_ULrQysSIEe2TD---Mk4tOA" target="_ULrQy8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrQ4sSIEe2TD---Mk4tOA" source="_ULrQysSIEe2TD---Mk4tOA" target="_ULrQz8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrQ48SIEe2TD---Mk4tOA" source="_ULrQy8SIEe2TD---Mk4tOA" target="_ULrQw8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrQ5MSIEe2TD---Mk4tOA" source="_ULrQz8SIEe2TD---Mk4tOA" target="_ULrQxMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_ULrQ5cSIEe2TD---Mk4tOA" name="RemoveEfcStructures_equal_RHS">
+      <nodes xmi:id="_ULrQ5sSIEe2TD---Mk4tOA" name="n1" incoming="_ULrRJcSIEe2TD---Mk4tOA" outgoing="_ULrRE8SIEe2TD---Mk4tOA _ULrRFMSIEe2TD---Mk4tOA _ULrRFcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrQ58SIEe2TD---Mk4tOA" name="n2" incoming="_ULrRE8SIEe2TD---Mk4tOA" outgoing="_ULrRFsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQ6MSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQ6cSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQ6sSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQ68SIEe2TD---Mk4tOA" name="n3" incoming="_ULrRFMSIEe2TD---Mk4tOA" outgoing="_ULrRF8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQ7MSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQ7cSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQ7sSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQ78SIEe2TD---Mk4tOA" name="n4" incoming="_ULrRFcSIEe2TD---Mk4tOA" outgoing="_ULrRGMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQ8MSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQ8cSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQ8sSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQ88SIEe2TD---Mk4tOA" name="n5" incoming="_ULrRJsSIEe2TD---Mk4tOA" outgoing="_ULrRGcSIEe2TD---Mk4tOA _ULrRGsSIEe2TD---Mk4tOA _ULrRG8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrQ9MSIEe2TD---Mk4tOA" name="n6" incoming="_ULrRGcSIEe2TD---Mk4tOA" outgoing="_ULrRHMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQ9cSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQ9sSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQ98SIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQ-MSIEe2TD---Mk4tOA" name="n7" incoming="_ULrRGsSIEe2TD---Mk4tOA" outgoing="_ULrRHcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQ-cSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQ-sSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQ-8SIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrQ_MSIEe2TD---Mk4tOA" name="n8" incoming="_ULrRG8SIEe2TD---Mk4tOA" outgoing="_ULrRHsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrQ_cSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrQ_sSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrQ_8SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRAMSIEe2TD---Mk4tOA" name="n9" incoming="_ULrRFsSIEe2TD---Mk4tOA _ULrRHMSIEe2TD---Mk4tOA _ULrRI8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrRAcSIEe2TD---Mk4tOA" name="n10" incoming="_ULrRF8SIEe2TD---Mk4tOA _ULrRHcSIEe2TD---Mk4tOA _ULrRJMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrRAsSIEe2TD---Mk4tOA" name="n11" incoming="_ULrRGMSIEe2TD---Mk4tOA _ULrRHsSIEe2TD---Mk4tOA _ULrRJ8SIEe2TD---Mk4tOA" outgoing="_ULrRH8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrRA8SIEe2TD---Mk4tOA" name="n12" incoming="_ULrRH8SIEe2TD---Mk4tOA" outgoing="_ULrRIMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULrRBMSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRBcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrRBsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRB8SIEe2TD---Mk4tOA" name="n13" incoming="_ULrRIMSIEe2TD---Mk4tOA" outgoing="_ULrRIcSIEe2TD---Mk4tOA _ULrRIsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrRCMSIEe2TD---Mk4tOA" name="n14" incoming="_ULrRIcSIEe2TD---Mk4tOA" outgoing="_ULrRI8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRCcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRCsSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrRC8SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRDMSIEe2TD---Mk4tOA" name="n15" incoming="_ULrRIsSIEe2TD---Mk4tOA" outgoing="_ULrRJMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRDcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRDsSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULrRD8SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrREMSIEe2TD---Mk4tOA" name="n16" outgoing="_ULrRJcSIEe2TD---Mk4tOA _ULrRJsSIEe2TD---Mk4tOA _ULrRJ8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_ULrREcSIEe2TD---Mk4tOA" value="&quot;Remove EFC Structures&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+        <attributes xmi:id="_ULrREsSIEe2TD---Mk4tOA" value="&quot;EQUAL&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff/author"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_ULrRE8SIEe2TD---Mk4tOA" source="_ULrQ5sSIEe2TD---Mk4tOA" target="_ULrQ58SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRFMSIEe2TD---Mk4tOA" source="_ULrQ5sSIEe2TD---Mk4tOA" target="_ULrQ68SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRFcSIEe2TD---Mk4tOA" source="_ULrQ5sSIEe2TD---Mk4tOA" target="_ULrQ78SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRFsSIEe2TD---Mk4tOA" source="_ULrQ58SIEe2TD---Mk4tOA" target="_ULrRAMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRF8SIEe2TD---Mk4tOA" source="_ULrQ68SIEe2TD---Mk4tOA" target="_ULrRAcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRGMSIEe2TD---Mk4tOA" source="_ULrQ78SIEe2TD---Mk4tOA" target="_ULrRAsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRGcSIEe2TD---Mk4tOA" source="_ULrQ88SIEe2TD---Mk4tOA" target="_ULrQ9MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRGsSIEe2TD---Mk4tOA" source="_ULrQ88SIEe2TD---Mk4tOA" target="_ULrQ-MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRG8SIEe2TD---Mk4tOA" source="_ULrQ88SIEe2TD---Mk4tOA" target="_ULrQ_MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRHMSIEe2TD---Mk4tOA" source="_ULrQ9MSIEe2TD---Mk4tOA" target="_ULrRAMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRHcSIEe2TD---Mk4tOA" source="_ULrQ-MSIEe2TD---Mk4tOA" target="_ULrRAcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRHsSIEe2TD---Mk4tOA" source="_ULrQ_MSIEe2TD---Mk4tOA" target="_ULrRAsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRH8SIEe2TD---Mk4tOA" source="_ULrRAsSIEe2TD---Mk4tOA" target="_ULrRA8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULrRIMSIEe2TD---Mk4tOA" source="_ULrRA8SIEe2TD---Mk4tOA" target="_ULrRB8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRIcSIEe2TD---Mk4tOA" source="_ULrRB8SIEe2TD---Mk4tOA" target="_ULrRCMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRIsSIEe2TD---Mk4tOA" source="_ULrRB8SIEe2TD---Mk4tOA" target="_ULrRDMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRI8SIEe2TD---Mk4tOA" source="_ULrRCMSIEe2TD---Mk4tOA" target="_ULrRAMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRJMSIEe2TD---Mk4tOA" source="_ULrRDMSIEe2TD---Mk4tOA" target="_ULrRAcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRJcSIEe2TD---Mk4tOA" source="_ULrREMSIEe2TD---Mk4tOA" target="_ULrQ5sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_ULrRJsSIEe2TD---Mk4tOA" source="_ULrREMSIEe2TD---Mk4tOA" target="_ULrQ88SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_ULrRJ8SIEe2TD---Mk4tOA" source="_ULrREMSIEe2TD---Mk4tOA" target="_ULrRAsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_ULrRKMSIEe2TD---Mk4tOA" origin="_ULrQqcSIEe2TD---Mk4tOA" image="_ULrQ5sSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrRKcSIEe2TD---Mk4tOA" origin="_ULrQqsSIEe2TD---Mk4tOA" image="_ULrQ58SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrRKsSIEe2TD---Mk4tOA" origin="_ULrQrsSIEe2TD---Mk4tOA" image="_ULrQ68SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrRK8SIEe2TD---Mk4tOA" origin="_ULrQssSIEe2TD---Mk4tOA" image="_ULrQ78SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrRLMSIEe2TD---Mk4tOA" origin="_ULrQtsSIEe2TD---Mk4tOA" image="_ULrQ88SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrRLcSIEe2TD---Mk4tOA" origin="_ULrQt8SIEe2TD---Mk4tOA" image="_ULrQ9MSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrRLsSIEe2TD---Mk4tOA" origin="_ULrQu8SIEe2TD---Mk4tOA" image="_ULrQ-MSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrRL8SIEe2TD---Mk4tOA" origin="_ULrQv8SIEe2TD---Mk4tOA" image="_ULrQ_MSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrRMMSIEe2TD---Mk4tOA" origin="_ULrQw8SIEe2TD---Mk4tOA" image="_ULrRAMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrRMcSIEe2TD---Mk4tOA" origin="_ULrQxMSIEe2TD---Mk4tOA" image="_ULrRAcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrRMsSIEe2TD---Mk4tOA" origin="_ULrQxcSIEe2TD---Mk4tOA" image="_ULrRAsSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrRM8SIEe2TD---Mk4tOA" origin="_ULrQxsSIEe2TD---Mk4tOA" image="_ULrRA8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrRNMSIEe2TD---Mk4tOA" origin="_ULrQysSIEe2TD---Mk4tOA" image="_ULrRB8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrRNcSIEe2TD---Mk4tOA" origin="_ULrQy8SIEe2TD---Mk4tOA" image="_ULrRCMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULrRNsSIEe2TD---Mk4tOA" origin="_ULrQz8SIEe2TD---Mk4tOA" image="_ULrRDMSIEe2TD---Mk4tOA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_ULrRN8SIEe2TD---Mk4tOA" name="RemoveEfcStructures_left">
+    <lhs xmi:id="_ULrROMSIEe2TD---Mk4tOA" name="RemoveEfcStructures_left_LHS">
+      <nodes xmi:id="_ULrROcSIEe2TD---Mk4tOA" name="n1" outgoing="_ULrRWsSIEe2TD---Mk4tOA _ULrRW8SIEe2TD---Mk4tOA _ULrRXMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrROsSIEe2TD---Mk4tOA" name="n2" incoming="_ULrRWsSIEe2TD---Mk4tOA" outgoing="_ULrRXcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRO8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRPMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRPcSIEe2TD---Mk4tOA" name="n3" incoming="_ULrRW8SIEe2TD---Mk4tOA" outgoing="_ULrRXsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRPsSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRP8SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRQMSIEe2TD---Mk4tOA" name="n4" incoming="_ULrRXMSIEe2TD---Mk4tOA" outgoing="_ULrRX8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRQcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRQsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRQ8SIEe2TD---Mk4tOA" name="n5" outgoing="_ULrRYMSIEe2TD---Mk4tOA _ULrRYcSIEe2TD---Mk4tOA _ULrRYsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrRRMSIEe2TD---Mk4tOA" name="n6" incoming="_ULrRYMSIEe2TD---Mk4tOA" outgoing="_ULrRY8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRRcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRRsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRR8SIEe2TD---Mk4tOA" name="n7" incoming="_ULrRYcSIEe2TD---Mk4tOA" outgoing="_ULrRZMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRSMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRScSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRSsSIEe2TD---Mk4tOA" name="n8" incoming="_ULrRYsSIEe2TD---Mk4tOA" outgoing="_ULrRZcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRS8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRTMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRTcSIEe2TD---Mk4tOA" name="n9" incoming="_ULrRXcSIEe2TD---Mk4tOA _ULrRY8SIEe2TD---Mk4tOA _ULrRasSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrRTsSIEe2TD---Mk4tOA" name="n10" incoming="_ULrRXsSIEe2TD---Mk4tOA _ULrRZMSIEe2TD---Mk4tOA _ULrRa8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrRT8SIEe2TD---Mk4tOA" name="n11" incoming="_ULrRX8SIEe2TD---Mk4tOA _ULrRZcSIEe2TD---Mk4tOA" outgoing="_ULrRZsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrRUMSIEe2TD---Mk4tOA" name="n12" incoming="_ULrRZsSIEe2TD---Mk4tOA" outgoing="_ULrRZ8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULrRUcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRUsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRU8SIEe2TD---Mk4tOA" name="n13" incoming="_ULrRZ8SIEe2TD---Mk4tOA" outgoing="_ULrRaMSIEe2TD---Mk4tOA _ULrRacSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrRVMSIEe2TD---Mk4tOA" name="n14" incoming="_ULrRaMSIEe2TD---Mk4tOA" outgoing="_ULrRasSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRVcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRVsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRV8SIEe2TD---Mk4tOA" name="n15" incoming="_ULrRacSIEe2TD---Mk4tOA" outgoing="_ULrRa8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRWMSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRWcSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_ULrRWsSIEe2TD---Mk4tOA" source="_ULrROcSIEe2TD---Mk4tOA" target="_ULrROsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRW8SIEe2TD---Mk4tOA" source="_ULrROcSIEe2TD---Mk4tOA" target="_ULrRPcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRXMSIEe2TD---Mk4tOA" source="_ULrROcSIEe2TD---Mk4tOA" target="_ULrRQMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRXcSIEe2TD---Mk4tOA" source="_ULrROsSIEe2TD---Mk4tOA" target="_ULrRTcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRXsSIEe2TD---Mk4tOA" source="_ULrRPcSIEe2TD---Mk4tOA" target="_ULrRTsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRX8SIEe2TD---Mk4tOA" source="_ULrRQMSIEe2TD---Mk4tOA" target="_ULrRT8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRYMSIEe2TD---Mk4tOA" source="_ULrRQ8SIEe2TD---Mk4tOA" target="_ULrRRMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRYcSIEe2TD---Mk4tOA" source="_ULrRQ8SIEe2TD---Mk4tOA" target="_ULrRR8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRYsSIEe2TD---Mk4tOA" source="_ULrRQ8SIEe2TD---Mk4tOA" target="_ULrRSsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRY8SIEe2TD---Mk4tOA" source="_ULrRRMSIEe2TD---Mk4tOA" target="_ULrRTcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRZMSIEe2TD---Mk4tOA" source="_ULrRR8SIEe2TD---Mk4tOA" target="_ULrRTsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRZcSIEe2TD---Mk4tOA" source="_ULrRSsSIEe2TD---Mk4tOA" target="_ULrRT8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRZsSIEe2TD---Mk4tOA" source="_ULrRT8SIEe2TD---Mk4tOA" target="_ULrRUMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULrRZ8SIEe2TD---Mk4tOA" source="_ULrRUMSIEe2TD---Mk4tOA" target="_ULrRU8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRaMSIEe2TD---Mk4tOA" source="_ULrRU8SIEe2TD---Mk4tOA" target="_ULrRVMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRacSIEe2TD---Mk4tOA" source="_ULrRU8SIEe2TD---Mk4tOA" target="_ULrRV8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRasSIEe2TD---Mk4tOA" source="_ULrRVMSIEe2TD---Mk4tOA" target="_ULrRTcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRa8SIEe2TD---Mk4tOA" source="_ULrRV8SIEe2TD---Mk4tOA" target="_ULrRTsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_ULrRbMSIEe2TD---Mk4tOA" name="RemoveEfcStructures_left_RHS">
+      <nodes xmi:id="_ULrRbcSIEe2TD---Mk4tOA" name="n1" incoming="_ULr3K8SIEe2TD---Mk4tOA" outgoing="_ULrRkcSIEe2TD---Mk4tOA _ULrRksSIEe2TD---Mk4tOA _ULrRk8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrRbsSIEe2TD---Mk4tOA" name="n2" incoming="_ULrRkcSIEe2TD---Mk4tOA" outgoing="_ULrRlMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRb8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRcMSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRccSIEe2TD---Mk4tOA" name="n3" incoming="_ULrRksSIEe2TD---Mk4tOA" outgoing="_ULrRlcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRcsSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRc8SIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRdMSIEe2TD---Mk4tOA" name="n4" incoming="_ULrRk8SIEe2TD---Mk4tOA" outgoing="_ULrRlsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRdcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRdsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRd8SIEe2TD---Mk4tOA" name="n5" incoming="_ULr3LMSIEe2TD---Mk4tOA" outgoing="_ULrRl8SIEe2TD---Mk4tOA _ULr3IMSIEe2TD---Mk4tOA _ULr3IcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrReMSIEe2TD---Mk4tOA" name="n6" incoming="_ULrRl8SIEe2TD---Mk4tOA" outgoing="_ULr3IsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRecSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrResSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRe8SIEe2TD---Mk4tOA" name="n7" incoming="_ULr3IMSIEe2TD---Mk4tOA" outgoing="_ULr3I8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRfMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRfcSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRfsSIEe2TD---Mk4tOA" name="n8" incoming="_ULr3IcSIEe2TD---Mk4tOA" outgoing="_ULr3JMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRf8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRgMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRgcSIEe2TD---Mk4tOA" name="n9" incoming="_ULrRlMSIEe2TD---Mk4tOA _ULr3IsSIEe2TD---Mk4tOA _ULr3KcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrRgsSIEe2TD---Mk4tOA" name="n10" incoming="_ULrRlcSIEe2TD---Mk4tOA _ULr3I8SIEe2TD---Mk4tOA _ULr3KsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrRg8SIEe2TD---Mk4tOA" name="n11" incoming="_ULrRlsSIEe2TD---Mk4tOA _ULr3JMSIEe2TD---Mk4tOA _ULr3LcSIEe2TD---Mk4tOA" outgoing="_ULr3JcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULrRhMSIEe2TD---Mk4tOA" name="n12" incoming="_ULr3JcSIEe2TD---Mk4tOA" outgoing="_ULr3JsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULrRhcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRhsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRh8SIEe2TD---Mk4tOA" name="n13" incoming="_ULr3JsSIEe2TD---Mk4tOA" outgoing="_ULr3J8SIEe2TD---Mk4tOA _ULr3KMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULrRiMSIEe2TD---Mk4tOA" name="n14" incoming="_ULr3J8SIEe2TD---Mk4tOA" outgoing="_ULr3KcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRicSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRisSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRi8SIEe2TD---Mk4tOA" name="n15" incoming="_ULr3KMSIEe2TD---Mk4tOA" outgoing="_ULr3KsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULrRjMSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULrRjcSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULrRjsSIEe2TD---Mk4tOA" name="n16" outgoing="_ULr3K8SIEe2TD---Mk4tOA _ULr3LMSIEe2TD---Mk4tOA _ULr3LcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_ULrRj8SIEe2TD---Mk4tOA" value="&quot;Remove EFC Structures&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+        <attributes xmi:id="_ULrRkMSIEe2TD---Mk4tOA" value="&quot;LEFT&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff/author"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_ULrRkcSIEe2TD---Mk4tOA" source="_ULrRbcSIEe2TD---Mk4tOA" target="_ULrRbsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRksSIEe2TD---Mk4tOA" source="_ULrRbcSIEe2TD---Mk4tOA" target="_ULrRccSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRk8SIEe2TD---Mk4tOA" source="_ULrRbcSIEe2TD---Mk4tOA" target="_ULrRdMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULrRlMSIEe2TD---Mk4tOA" source="_ULrRbsSIEe2TD---Mk4tOA" target="_ULrRgcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRlcSIEe2TD---Mk4tOA" source="_ULrRccSIEe2TD---Mk4tOA" target="_ULrRgsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRlsSIEe2TD---Mk4tOA" source="_ULrRdMSIEe2TD---Mk4tOA" target="_ULrRg8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULrRl8SIEe2TD---Mk4tOA" source="_ULrRd8SIEe2TD---Mk4tOA" target="_ULrReMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3IMSIEe2TD---Mk4tOA" source="_ULrRd8SIEe2TD---Mk4tOA" target="_ULrRe8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3IcSIEe2TD---Mk4tOA" source="_ULrRd8SIEe2TD---Mk4tOA" target="_ULrRfsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3IsSIEe2TD---Mk4tOA" source="_ULrReMSIEe2TD---Mk4tOA" target="_ULrRgcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3I8SIEe2TD---Mk4tOA" source="_ULrRe8SIEe2TD---Mk4tOA" target="_ULrRgsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3JMSIEe2TD---Mk4tOA" source="_ULrRfsSIEe2TD---Mk4tOA" target="_ULrRg8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3JcSIEe2TD---Mk4tOA" source="_ULrRg8SIEe2TD---Mk4tOA" target="_ULrRhMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr3JsSIEe2TD---Mk4tOA" source="_ULrRhMSIEe2TD---Mk4tOA" target="_ULrRh8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3J8SIEe2TD---Mk4tOA" source="_ULrRh8SIEe2TD---Mk4tOA" target="_ULrRiMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3KMSIEe2TD---Mk4tOA" source="_ULrRh8SIEe2TD---Mk4tOA" target="_ULrRi8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3KcSIEe2TD---Mk4tOA" source="_ULrRiMSIEe2TD---Mk4tOA" target="_ULrRgcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3KsSIEe2TD---Mk4tOA" source="_ULrRi8SIEe2TD---Mk4tOA" target="_ULrRgsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3K8SIEe2TD---Mk4tOA" source="_ULrRjsSIEe2TD---Mk4tOA" target="_ULrRbcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_ULr3LMSIEe2TD---Mk4tOA" source="_ULrRjsSIEe2TD---Mk4tOA" target="_ULrRd8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_ULr3LcSIEe2TD---Mk4tOA" source="_ULrRjsSIEe2TD---Mk4tOA" target="_ULrRg8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_ULr3LsSIEe2TD---Mk4tOA" origin="_ULrROcSIEe2TD---Mk4tOA" image="_ULrRbcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3L8SIEe2TD---Mk4tOA" origin="_ULrROsSIEe2TD---Mk4tOA" image="_ULrRbsSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3MMSIEe2TD---Mk4tOA" origin="_ULrRPcSIEe2TD---Mk4tOA" image="_ULrRccSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3McSIEe2TD---Mk4tOA" origin="_ULrRQMSIEe2TD---Mk4tOA" image="_ULrRdMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3MsSIEe2TD---Mk4tOA" origin="_ULrRQ8SIEe2TD---Mk4tOA" image="_ULrRd8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3M8SIEe2TD---Mk4tOA" origin="_ULrRRMSIEe2TD---Mk4tOA" image="_ULrReMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3NMSIEe2TD---Mk4tOA" origin="_ULrRR8SIEe2TD---Mk4tOA" image="_ULrRe8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3NcSIEe2TD---Mk4tOA" origin="_ULrRSsSIEe2TD---Mk4tOA" image="_ULrRfsSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3NsSIEe2TD---Mk4tOA" origin="_ULrRTcSIEe2TD---Mk4tOA" image="_ULrRgcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3N8SIEe2TD---Mk4tOA" origin="_ULrRTsSIEe2TD---Mk4tOA" image="_ULrRgsSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3OMSIEe2TD---Mk4tOA" origin="_ULrRT8SIEe2TD---Mk4tOA" image="_ULrRg8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3OcSIEe2TD---Mk4tOA" origin="_ULrRUMSIEe2TD---Mk4tOA" image="_ULrRhMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3OsSIEe2TD---Mk4tOA" origin="_ULrRU8SIEe2TD---Mk4tOA" image="_ULrRh8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3O8SIEe2TD---Mk4tOA" origin="_ULrRVMSIEe2TD---Mk4tOA" image="_ULrRiMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3PMSIEe2TD---Mk4tOA" origin="_ULrRV8SIEe2TD---Mk4tOA" image="_ULrRi8SIEe2TD---Mk4tOA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_ULr3PcSIEe2TD---Mk4tOA" name="RemoveEfcStructures_right">
+    <lhs xmi:id="_ULr3PsSIEe2TD---Mk4tOA" name="RemoveEfcStructures_right_LHS">
+      <nodes xmi:id="_ULr3P8SIEe2TD---Mk4tOA" name="n1" outgoing="_ULr3YMSIEe2TD---Mk4tOA _ULr3YcSIEe2TD---Mk4tOA _ULr3YsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr3QMSIEe2TD---Mk4tOA" name="n2" incoming="_ULr3YMSIEe2TD---Mk4tOA" outgoing="_ULr3Y8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3QcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3QsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3Q8SIEe2TD---Mk4tOA" name="n3" incoming="_ULr3YcSIEe2TD---Mk4tOA" outgoing="_ULr3ZMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3RMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3RcSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3RsSIEe2TD---Mk4tOA" name="n4" incoming="_ULr3YsSIEe2TD---Mk4tOA" outgoing="_ULr3ZcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3R8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3SMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3ScSIEe2TD---Mk4tOA" name="n5" outgoing="_ULr3ZsSIEe2TD---Mk4tOA _ULr3Z8SIEe2TD---Mk4tOA _ULr3aMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr3SsSIEe2TD---Mk4tOA" name="n6" incoming="_ULr3ZsSIEe2TD---Mk4tOA" outgoing="_ULr3acSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3S8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3TMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3TcSIEe2TD---Mk4tOA" name="n7" incoming="_ULr3Z8SIEe2TD---Mk4tOA" outgoing="_ULr3asSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3TsSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3T8SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3UMSIEe2TD---Mk4tOA" name="n8" incoming="_ULr3aMSIEe2TD---Mk4tOA" outgoing="_ULr3a8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3UcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3UsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3U8SIEe2TD---Mk4tOA" name="n9" incoming="_ULr3Y8SIEe2TD---Mk4tOA _ULr3acSIEe2TD---Mk4tOA _ULr3cMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr3VMSIEe2TD---Mk4tOA" name="n10" incoming="_ULr3ZMSIEe2TD---Mk4tOA _ULr3asSIEe2TD---Mk4tOA _ULr3ccSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr3VcSIEe2TD---Mk4tOA" name="n11" incoming="_ULr3ZcSIEe2TD---Mk4tOA _ULr3a8SIEe2TD---Mk4tOA" outgoing="_ULr3bMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr3VsSIEe2TD---Mk4tOA" name="n12" incoming="_ULr3bMSIEe2TD---Mk4tOA" outgoing="_ULr3bcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr3V8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3WMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3WcSIEe2TD---Mk4tOA" name="n13" incoming="_ULr3bcSIEe2TD---Mk4tOA" outgoing="_ULr3bsSIEe2TD---Mk4tOA _ULr3b8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr3WsSIEe2TD---Mk4tOA" name="n14" incoming="_ULr3bsSIEe2TD---Mk4tOA" outgoing="_ULr3cMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3W8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3XMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3XcSIEe2TD---Mk4tOA" name="n15" incoming="_ULr3b8SIEe2TD---Mk4tOA" outgoing="_ULr3ccSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3XsSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3X8SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_ULr3YMSIEe2TD---Mk4tOA" source="_ULr3P8SIEe2TD---Mk4tOA" target="_ULr3QMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3YcSIEe2TD---Mk4tOA" source="_ULr3P8SIEe2TD---Mk4tOA" target="_ULr3Q8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3YsSIEe2TD---Mk4tOA" source="_ULr3P8SIEe2TD---Mk4tOA" target="_ULr3RsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3Y8SIEe2TD---Mk4tOA" source="_ULr3QMSIEe2TD---Mk4tOA" target="_ULr3U8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3ZMSIEe2TD---Mk4tOA" source="_ULr3Q8SIEe2TD---Mk4tOA" target="_ULr3VMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3ZcSIEe2TD---Mk4tOA" source="_ULr3RsSIEe2TD---Mk4tOA" target="_ULr3VcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3ZsSIEe2TD---Mk4tOA" source="_ULr3ScSIEe2TD---Mk4tOA" target="_ULr3SsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3Z8SIEe2TD---Mk4tOA" source="_ULr3ScSIEe2TD---Mk4tOA" target="_ULr3TcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3aMSIEe2TD---Mk4tOA" source="_ULr3ScSIEe2TD---Mk4tOA" target="_ULr3UMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3acSIEe2TD---Mk4tOA" source="_ULr3SsSIEe2TD---Mk4tOA" target="_ULr3U8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3asSIEe2TD---Mk4tOA" source="_ULr3TcSIEe2TD---Mk4tOA" target="_ULr3VMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3a8SIEe2TD---Mk4tOA" source="_ULr3UMSIEe2TD---Mk4tOA" target="_ULr3VcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3bMSIEe2TD---Mk4tOA" source="_ULr3VcSIEe2TD---Mk4tOA" target="_ULr3VsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr3bcSIEe2TD---Mk4tOA" source="_ULr3VsSIEe2TD---Mk4tOA" target="_ULr3WcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3bsSIEe2TD---Mk4tOA" source="_ULr3WcSIEe2TD---Mk4tOA" target="_ULr3WsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3b8SIEe2TD---Mk4tOA" source="_ULr3WcSIEe2TD---Mk4tOA" target="_ULr3XcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3cMSIEe2TD---Mk4tOA" source="_ULr3WsSIEe2TD---Mk4tOA" target="_ULr3U8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3ccSIEe2TD---Mk4tOA" source="_ULr3XcSIEe2TD---Mk4tOA" target="_ULr3VMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_ULr3csSIEe2TD---Mk4tOA" name="RemoveEfcStructures_right_RHS">
+      <nodes xmi:id="_ULr3c8SIEe2TD---Mk4tOA" name="n1" incoming="_ULr3qcSIEe2TD---Mk4tOA" outgoing="_ULr3l8SIEe2TD---Mk4tOA _ULr3mMSIEe2TD---Mk4tOA _ULr3mcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr3dMSIEe2TD---Mk4tOA" name="n2" incoming="_ULr3l8SIEe2TD---Mk4tOA" outgoing="_ULr3msSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3dcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3dsSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3d8SIEe2TD---Mk4tOA" name="n3" incoming="_ULr3mMSIEe2TD---Mk4tOA" outgoing="_ULr3m8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3eMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3ecSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3esSIEe2TD---Mk4tOA" name="n4" incoming="_ULr3mcSIEe2TD---Mk4tOA" outgoing="_ULr3nMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3e8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3fMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3fcSIEe2TD---Mk4tOA" name="n5" incoming="_ULr3qsSIEe2TD---Mk4tOA" outgoing="_ULr3ncSIEe2TD---Mk4tOA _ULr3nsSIEe2TD---Mk4tOA _ULr3n8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr3fsSIEe2TD---Mk4tOA" name="n6" incoming="_ULr3ncSIEe2TD---Mk4tOA" outgoing="_ULr3oMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3f8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3gMSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3gcSIEe2TD---Mk4tOA" name="n7" incoming="_ULr3nsSIEe2TD---Mk4tOA" outgoing="_ULr3ocSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3gsSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3g8SIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3hMSIEe2TD---Mk4tOA" name="n8" incoming="_ULr3n8SIEe2TD---Mk4tOA" outgoing="_ULr3osSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3hcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3hsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3h8SIEe2TD---Mk4tOA" name="n9" incoming="_ULr3msSIEe2TD---Mk4tOA _ULr3oMSIEe2TD---Mk4tOA _ULr3p8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr3iMSIEe2TD---Mk4tOA" name="n10" incoming="_ULr3m8SIEe2TD---Mk4tOA _ULr3ocSIEe2TD---Mk4tOA _ULr3qMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr3icSIEe2TD---Mk4tOA" name="n11" incoming="_ULr3nMSIEe2TD---Mk4tOA _ULr3osSIEe2TD---Mk4tOA _ULr3q8SIEe2TD---Mk4tOA" outgoing="_ULr3o8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr3isSIEe2TD---Mk4tOA" name="n12" incoming="_ULr3o8SIEe2TD---Mk4tOA" outgoing="_ULr3pMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr3i8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3jMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3jcSIEe2TD---Mk4tOA" name="n13" incoming="_ULr3pMSIEe2TD---Mk4tOA" outgoing="_ULr3pcSIEe2TD---Mk4tOA _ULr3psSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr3jsSIEe2TD---Mk4tOA" name="n14" incoming="_ULr3pcSIEe2TD---Mk4tOA" outgoing="_ULr3p8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3j8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3kMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3kcSIEe2TD---Mk4tOA" name="n15" incoming="_ULr3psSIEe2TD---Mk4tOA" outgoing="_ULr3qMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr3ksSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3k8SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3lMSIEe2TD---Mk4tOA" name="n16" outgoing="_ULr3qcSIEe2TD---Mk4tOA _ULr3qsSIEe2TD---Mk4tOA _ULr3q8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_ULr3lcSIEe2TD---Mk4tOA" value="&quot;Remove EFC Structures&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+        <attributes xmi:id="_ULr3lsSIEe2TD---Mk4tOA" value="&quot;RIGHT&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff/author"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_ULr3l8SIEe2TD---Mk4tOA" source="_ULr3c8SIEe2TD---Mk4tOA" target="_ULr3dMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3mMSIEe2TD---Mk4tOA" source="_ULr3c8SIEe2TD---Mk4tOA" target="_ULr3d8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3mcSIEe2TD---Mk4tOA" source="_ULr3c8SIEe2TD---Mk4tOA" target="_ULr3esSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3msSIEe2TD---Mk4tOA" source="_ULr3dMSIEe2TD---Mk4tOA" target="_ULr3h8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3m8SIEe2TD---Mk4tOA" source="_ULr3d8SIEe2TD---Mk4tOA" target="_ULr3iMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3nMSIEe2TD---Mk4tOA" source="_ULr3esSIEe2TD---Mk4tOA" target="_ULr3icSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3ncSIEe2TD---Mk4tOA" source="_ULr3fcSIEe2TD---Mk4tOA" target="_ULr3fsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3nsSIEe2TD---Mk4tOA" source="_ULr3fcSIEe2TD---Mk4tOA" target="_ULr3gcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3n8SIEe2TD---Mk4tOA" source="_ULr3fcSIEe2TD---Mk4tOA" target="_ULr3hMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3oMSIEe2TD---Mk4tOA" source="_ULr3fsSIEe2TD---Mk4tOA" target="_ULr3h8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3ocSIEe2TD---Mk4tOA" source="_ULr3gcSIEe2TD---Mk4tOA" target="_ULr3iMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3osSIEe2TD---Mk4tOA" source="_ULr3hMSIEe2TD---Mk4tOA" target="_ULr3icSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3o8SIEe2TD---Mk4tOA" source="_ULr3icSIEe2TD---Mk4tOA" target="_ULr3isSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr3pMSIEe2TD---Mk4tOA" source="_ULr3isSIEe2TD---Mk4tOA" target="_ULr3jcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3pcSIEe2TD---Mk4tOA" source="_ULr3jcSIEe2TD---Mk4tOA" target="_ULr3jsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3psSIEe2TD---Mk4tOA" source="_ULr3jcSIEe2TD---Mk4tOA" target="_ULr3kcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr3p8SIEe2TD---Mk4tOA" source="_ULr3jsSIEe2TD---Mk4tOA" target="_ULr3h8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3qMSIEe2TD---Mk4tOA" source="_ULr3kcSIEe2TD---Mk4tOA" target="_ULr3iMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3qcSIEe2TD---Mk4tOA" source="_ULr3lMSIEe2TD---Mk4tOA" target="_ULr3c8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_ULr3qsSIEe2TD---Mk4tOA" source="_ULr3lMSIEe2TD---Mk4tOA" target="_ULr3fcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_ULr3q8SIEe2TD---Mk4tOA" source="_ULr3lMSIEe2TD---Mk4tOA" target="_ULr3icSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_ULr3rMSIEe2TD---Mk4tOA" origin="_ULr3P8SIEe2TD---Mk4tOA" image="_ULr3c8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3rcSIEe2TD---Mk4tOA" origin="_ULr3QMSIEe2TD---Mk4tOA" image="_ULr3dMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3rsSIEe2TD---Mk4tOA" origin="_ULr3Q8SIEe2TD---Mk4tOA" image="_ULr3d8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3r8SIEe2TD---Mk4tOA" origin="_ULr3RsSIEe2TD---Mk4tOA" image="_ULr3esSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3sMSIEe2TD---Mk4tOA" origin="_ULr3ScSIEe2TD---Mk4tOA" image="_ULr3fcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3scSIEe2TD---Mk4tOA" origin="_ULr3SsSIEe2TD---Mk4tOA" image="_ULr3fsSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3ssSIEe2TD---Mk4tOA" origin="_ULr3TcSIEe2TD---Mk4tOA" image="_ULr3gcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3s8SIEe2TD---Mk4tOA" origin="_ULr3UMSIEe2TD---Mk4tOA" image="_ULr3hMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3tMSIEe2TD---Mk4tOA" origin="_ULr3U8SIEe2TD---Mk4tOA" image="_ULr3h8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3tcSIEe2TD---Mk4tOA" origin="_ULr3VMSIEe2TD---Mk4tOA" image="_ULr3iMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3tsSIEe2TD---Mk4tOA" origin="_ULr3VcSIEe2TD---Mk4tOA" image="_ULr3icSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3t8SIEe2TD---Mk4tOA" origin="_ULr3VsSIEe2TD---Mk4tOA" image="_ULr3isSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3uMSIEe2TD---Mk4tOA" origin="_ULr3WcSIEe2TD---Mk4tOA" image="_ULr3jcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3ucSIEe2TD---Mk4tOA" origin="_ULr3WsSIEe2TD---Mk4tOA" image="_ULr3jsSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr3usSIEe2TD---Mk4tOA" origin="_ULr3XcSIEe2TD---Mk4tOA" image="_ULr3kcSIEe2TD---Mk4tOA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_ULr3u8SIEe2TD---Mk4tOA" name="RemoveTPCrossStructures_equal">
+    <lhs xmi:id="_ULr3vMSIEe2TD---Mk4tOA" name="RemoveTPCrossStructures_equal_LHS">
+      <nodes xmi:id="_ULr3vcSIEe2TD---Mk4tOA" name="n1" outgoing="_ULr358SIEe2TD---Mk4tOA _ULr36MSIEe2TD---Mk4tOA _ULr36cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr3vsSIEe2TD---Mk4tOA" name="n2" incoming="_ULr358SIEe2TD---Mk4tOA" outgoing="_ULr36sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr3v8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr3wMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3wcSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3wsSIEe2TD---Mk4tOA" name="n3" incoming="_ULr36MSIEe2TD---Mk4tOA" outgoing="_ULr368SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr3w8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr3xMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3xcSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3xsSIEe2TD---Mk4tOA" name="n4" incoming="_ULr36cSIEe2TD---Mk4tOA" outgoing="_ULr37MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr3x8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr3yMSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3ycSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3ysSIEe2TD---Mk4tOA" name="n5" outgoing="_ULr37cSIEe2TD---Mk4tOA _ULr37sSIEe2TD---Mk4tOA _ULr378SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr3y8SIEe2TD---Mk4tOA" name="n6" incoming="_ULr37cSIEe2TD---Mk4tOA" outgoing="_ULr38MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr3zMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr3zcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3zsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3z8SIEe2TD---Mk4tOA" name="n7" incoming="_ULr37sSIEe2TD---Mk4tOA" outgoing="_ULr38cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr30MSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr30cSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr30sSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr308SIEe2TD---Mk4tOA" name="n8" incoming="_ULr378SIEe2TD---Mk4tOA" outgoing="_ULr38sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr31MSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr31cSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr31sSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr318SIEe2TD---Mk4tOA" name="n9" incoming="_ULr36sSIEe2TD---Mk4tOA _ULr38MSIEe2TD---Mk4tOA _ULr398SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr32MSIEe2TD---Mk4tOA" name="n10" incoming="_ULr368SIEe2TD---Mk4tOA _ULr38cSIEe2TD---Mk4tOA _ULr3-MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr32cSIEe2TD---Mk4tOA" name="n11" incoming="_ULr37MSIEe2TD---Mk4tOA _ULr38sSIEe2TD---Mk4tOA" outgoing="_ULr388SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr32sSIEe2TD---Mk4tOA" name="n12" incoming="_ULr388SIEe2TD---Mk4tOA" outgoing="_ULr39MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr328SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr33MSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr33cSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr33sSIEe2TD---Mk4tOA" name="n13" incoming="_ULr39MSIEe2TD---Mk4tOA" outgoing="_ULr39cSIEe2TD---Mk4tOA _ULr39sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr338SIEe2TD---Mk4tOA" name="n14" incoming="_ULr39cSIEe2TD---Mk4tOA" outgoing="_ULr398SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr34MSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr34cSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr34sSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr348SIEe2TD---Mk4tOA" name="n15" incoming="_ULr39sSIEe2TD---Mk4tOA" outgoing="_ULr3-MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr35MSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr35cSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr35sSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_ULr358SIEe2TD---Mk4tOA" source="_ULr3vcSIEe2TD---Mk4tOA" target="_ULr3vsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr36MSIEe2TD---Mk4tOA" source="_ULr3vcSIEe2TD---Mk4tOA" target="_ULr3wsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr36cSIEe2TD---Mk4tOA" source="_ULr3vcSIEe2TD---Mk4tOA" target="_ULr3xsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr36sSIEe2TD---Mk4tOA" source="_ULr3vsSIEe2TD---Mk4tOA" target="_ULr318SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr368SIEe2TD---Mk4tOA" source="_ULr3wsSIEe2TD---Mk4tOA" target="_ULr32MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr37MSIEe2TD---Mk4tOA" source="_ULr3xsSIEe2TD---Mk4tOA" target="_ULr32cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr37cSIEe2TD---Mk4tOA" source="_ULr3ysSIEe2TD---Mk4tOA" target="_ULr3y8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr37sSIEe2TD---Mk4tOA" source="_ULr3ysSIEe2TD---Mk4tOA" target="_ULr3z8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr378SIEe2TD---Mk4tOA" source="_ULr3ysSIEe2TD---Mk4tOA" target="_ULr308SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr38MSIEe2TD---Mk4tOA" source="_ULr3y8SIEe2TD---Mk4tOA" target="_ULr318SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr38cSIEe2TD---Mk4tOA" source="_ULr3z8SIEe2TD---Mk4tOA" target="_ULr32MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr38sSIEe2TD---Mk4tOA" source="_ULr308SIEe2TD---Mk4tOA" target="_ULr32cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr388SIEe2TD---Mk4tOA" source="_ULr32cSIEe2TD---Mk4tOA" target="_ULr32sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr39MSIEe2TD---Mk4tOA" source="_ULr32sSIEe2TD---Mk4tOA" target="_ULr33sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr39cSIEe2TD---Mk4tOA" source="_ULr33sSIEe2TD---Mk4tOA" target="_ULr338SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr39sSIEe2TD---Mk4tOA" source="_ULr33sSIEe2TD---Mk4tOA" target="_ULr348SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr398SIEe2TD---Mk4tOA" source="_ULr338SIEe2TD---Mk4tOA" target="_ULr318SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr3-MSIEe2TD---Mk4tOA" source="_ULr348SIEe2TD---Mk4tOA" target="_ULr32MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_ULr3-cSIEe2TD---Mk4tOA" name="RemoveTPCrossStructures_equal_RHS">
+      <nodes xmi:id="_ULr3-sSIEe2TD---Mk4tOA" name="n1" incoming="_ULr4OcSIEe2TD---Mk4tOA" outgoing="_ULr4J8SIEe2TD---Mk4tOA _ULr4KMSIEe2TD---Mk4tOA _ULr4KcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr3-8SIEe2TD---Mk4tOA" name="n2" incoming="_ULr4J8SIEe2TD---Mk4tOA" outgoing="_ULr4KsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr3_MSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr3_cSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr3_sSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr3_8SIEe2TD---Mk4tOA" name="n3" incoming="_ULr4KMSIEe2TD---Mk4tOA" outgoing="_ULr4K8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4AMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4AcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr4AsSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4A8SIEe2TD---Mk4tOA" name="n4" incoming="_ULr4KcSIEe2TD---Mk4tOA" outgoing="_ULr4LMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4BMSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4BcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr4BsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4B8SIEe2TD---Mk4tOA" name="n5" incoming="_ULr4OsSIEe2TD---Mk4tOA" outgoing="_ULr4LcSIEe2TD---Mk4tOA _ULr4LsSIEe2TD---Mk4tOA _ULr4L8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr4CMSIEe2TD---Mk4tOA" name="n6" incoming="_ULr4LcSIEe2TD---Mk4tOA" outgoing="_ULr4MMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4CcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4CsSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr4C8SIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4DMSIEe2TD---Mk4tOA" name="n7" incoming="_ULr4LsSIEe2TD---Mk4tOA" outgoing="_ULr4McSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4DcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4DsSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr4D8SIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4EMSIEe2TD---Mk4tOA" name="n8" incoming="_ULr4L8SIEe2TD---Mk4tOA" outgoing="_ULr4MsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4EcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4EsSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr4E8SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4FMSIEe2TD---Mk4tOA" name="n9" incoming="_ULr4KsSIEe2TD---Mk4tOA _ULr4MMSIEe2TD---Mk4tOA _ULr4N8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr4FcSIEe2TD---Mk4tOA" name="n10" incoming="_ULr4K8SIEe2TD---Mk4tOA _ULr4McSIEe2TD---Mk4tOA _ULr4OMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr4FsSIEe2TD---Mk4tOA" name="n11" incoming="_ULr4LMSIEe2TD---Mk4tOA _ULr4MsSIEe2TD---Mk4tOA _ULr4O8SIEe2TD---Mk4tOA" outgoing="_ULr4M8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr4F8SIEe2TD---Mk4tOA" name="n12" incoming="_ULr4M8SIEe2TD---Mk4tOA" outgoing="_ULr4NMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr4GMSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4GcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr4GsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4G8SIEe2TD---Mk4tOA" name="n13" incoming="_ULr4NMSIEe2TD---Mk4tOA" outgoing="_ULr4NcSIEe2TD---Mk4tOA _ULr4NsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr4HMSIEe2TD---Mk4tOA" name="n14" incoming="_ULr4NcSIEe2TD---Mk4tOA" outgoing="_ULr4N8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4HcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4HsSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr4H8SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4IMSIEe2TD---Mk4tOA" name="n15" incoming="_ULr4NsSIEe2TD---Mk4tOA" outgoing="_ULr4OMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4IcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4IsSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr4I8SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4JMSIEe2TD---Mk4tOA" name="n16" outgoing="_ULr4OcSIEe2TD---Mk4tOA _ULr4OsSIEe2TD---Mk4tOA _ULr4O8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_ULr4JcSIEe2TD---Mk4tOA" value="&quot;Remove TP-cross structures&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+        <attributes xmi:id="_ULr4JsSIEe2TD---Mk4tOA" value="&quot;EQUAL&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff/author"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_ULr4J8SIEe2TD---Mk4tOA" source="_ULr3-sSIEe2TD---Mk4tOA" target="_ULr3-8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4KMSIEe2TD---Mk4tOA" source="_ULr3-sSIEe2TD---Mk4tOA" target="_ULr3_8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4KcSIEe2TD---Mk4tOA" source="_ULr3-sSIEe2TD---Mk4tOA" target="_ULr4A8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4KsSIEe2TD---Mk4tOA" source="_ULr3-8SIEe2TD---Mk4tOA" target="_ULr4FMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4K8SIEe2TD---Mk4tOA" source="_ULr3_8SIEe2TD---Mk4tOA" target="_ULr4FcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4LMSIEe2TD---Mk4tOA" source="_ULr4A8SIEe2TD---Mk4tOA" target="_ULr4FsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4LcSIEe2TD---Mk4tOA" source="_ULr4B8SIEe2TD---Mk4tOA" target="_ULr4CMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4LsSIEe2TD---Mk4tOA" source="_ULr4B8SIEe2TD---Mk4tOA" target="_ULr4DMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4L8SIEe2TD---Mk4tOA" source="_ULr4B8SIEe2TD---Mk4tOA" target="_ULr4EMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4MMSIEe2TD---Mk4tOA" source="_ULr4CMSIEe2TD---Mk4tOA" target="_ULr4FMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4McSIEe2TD---Mk4tOA" source="_ULr4DMSIEe2TD---Mk4tOA" target="_ULr4FcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4MsSIEe2TD---Mk4tOA" source="_ULr4EMSIEe2TD---Mk4tOA" target="_ULr4FsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4M8SIEe2TD---Mk4tOA" source="_ULr4FsSIEe2TD---Mk4tOA" target="_ULr4F8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr4NMSIEe2TD---Mk4tOA" source="_ULr4F8SIEe2TD---Mk4tOA" target="_ULr4G8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4NcSIEe2TD---Mk4tOA" source="_ULr4G8SIEe2TD---Mk4tOA" target="_ULr4HMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4NsSIEe2TD---Mk4tOA" source="_ULr4G8SIEe2TD---Mk4tOA" target="_ULr4IMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4N8SIEe2TD---Mk4tOA" source="_ULr4HMSIEe2TD---Mk4tOA" target="_ULr4FMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4OMSIEe2TD---Mk4tOA" source="_ULr4IMSIEe2TD---Mk4tOA" target="_ULr4FcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4OcSIEe2TD---Mk4tOA" source="_ULr4JMSIEe2TD---Mk4tOA" target="_ULr3-sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_ULr4OsSIEe2TD---Mk4tOA" source="_ULr4JMSIEe2TD---Mk4tOA" target="_ULr4B8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_ULr4O8SIEe2TD---Mk4tOA" source="_ULr4JMSIEe2TD---Mk4tOA" target="_ULr4FsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_ULr4PMSIEe2TD---Mk4tOA" origin="_ULr3vcSIEe2TD---Mk4tOA" image="_ULr3-sSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4PcSIEe2TD---Mk4tOA" origin="_ULr3vsSIEe2TD---Mk4tOA" image="_ULr3-8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4PsSIEe2TD---Mk4tOA" origin="_ULr3wsSIEe2TD---Mk4tOA" image="_ULr3_8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4P8SIEe2TD---Mk4tOA" origin="_ULr3xsSIEe2TD---Mk4tOA" image="_ULr4A8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4QMSIEe2TD---Mk4tOA" origin="_ULr3ysSIEe2TD---Mk4tOA" image="_ULr4B8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4QcSIEe2TD---Mk4tOA" origin="_ULr3y8SIEe2TD---Mk4tOA" image="_ULr4CMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4QsSIEe2TD---Mk4tOA" origin="_ULr3z8SIEe2TD---Mk4tOA" image="_ULr4DMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4Q8SIEe2TD---Mk4tOA" origin="_ULr308SIEe2TD---Mk4tOA" image="_ULr4EMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4RMSIEe2TD---Mk4tOA" origin="_ULr318SIEe2TD---Mk4tOA" image="_ULr4FMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4RcSIEe2TD---Mk4tOA" origin="_ULr32MSIEe2TD---Mk4tOA" image="_ULr4FcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4RsSIEe2TD---Mk4tOA" origin="_ULr32cSIEe2TD---Mk4tOA" image="_ULr4FsSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4R8SIEe2TD---Mk4tOA" origin="_ULr32sSIEe2TD---Mk4tOA" image="_ULr4F8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4SMSIEe2TD---Mk4tOA" origin="_ULr33sSIEe2TD---Mk4tOA" image="_ULr4G8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4ScSIEe2TD---Mk4tOA" origin="_ULr338SIEe2TD---Mk4tOA" image="_ULr4HMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4SsSIEe2TD---Mk4tOA" origin="_ULr348SIEe2TD---Mk4tOA" image="_ULr4IMSIEe2TD---Mk4tOA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_ULr4S8SIEe2TD---Mk4tOA" name="RemoveTPCrossStructures_left">
+    <lhs xmi:id="_ULr4TMSIEe2TD---Mk4tOA" name="RemoveTPCrossStructures_left_LHS">
+      <nodes xmi:id="_ULr4TcSIEe2TD---Mk4tOA" name="n1" outgoing="_ULr4bsSIEe2TD---Mk4tOA _ULr4b8SIEe2TD---Mk4tOA _ULr4cMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr4TsSIEe2TD---Mk4tOA" name="n2" incoming="_ULr4bsSIEe2TD---Mk4tOA" outgoing="_ULr4ccSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4T8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4UMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4UcSIEe2TD---Mk4tOA" name="n3" incoming="_ULr4b8SIEe2TD---Mk4tOA" outgoing="_ULr4csSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4UsSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4U8SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4VMSIEe2TD---Mk4tOA" name="n4" incoming="_ULr4cMSIEe2TD---Mk4tOA" outgoing="_ULr4c8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4VcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4VsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4V8SIEe2TD---Mk4tOA" name="n5" outgoing="_ULr4dMSIEe2TD---Mk4tOA _ULr4dcSIEe2TD---Mk4tOA _ULr4dsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr4WMSIEe2TD---Mk4tOA" name="n6" incoming="_ULr4dMSIEe2TD---Mk4tOA" outgoing="_ULr4d8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4WcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4WsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4W8SIEe2TD---Mk4tOA" name="n7" incoming="_ULr4dcSIEe2TD---Mk4tOA" outgoing="_ULr4eMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4XMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4XcSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4XsSIEe2TD---Mk4tOA" name="n8" incoming="_ULr4dsSIEe2TD---Mk4tOA" outgoing="_ULr4ecSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4X8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4YMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4YcSIEe2TD---Mk4tOA" name="n9" incoming="_ULr4ccSIEe2TD---Mk4tOA _ULr4d8SIEe2TD---Mk4tOA _ULr4fsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr4YsSIEe2TD---Mk4tOA" name="n10" incoming="_ULr4csSIEe2TD---Mk4tOA _ULr4eMSIEe2TD---Mk4tOA _ULr4f8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr4Y8SIEe2TD---Mk4tOA" name="n11" incoming="_ULr4c8SIEe2TD---Mk4tOA _ULr4ecSIEe2TD---Mk4tOA" outgoing="_ULr4esSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr4ZMSIEe2TD---Mk4tOA" name="n12" incoming="_ULr4esSIEe2TD---Mk4tOA" outgoing="_ULr4e8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr4ZcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4ZsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4Z8SIEe2TD---Mk4tOA" name="n13" incoming="_ULr4e8SIEe2TD---Mk4tOA" outgoing="_ULr4fMSIEe2TD---Mk4tOA _ULr4fcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr4aMSIEe2TD---Mk4tOA" name="n14" incoming="_ULr4fMSIEe2TD---Mk4tOA" outgoing="_ULr4fsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4acSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4asSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4a8SIEe2TD---Mk4tOA" name="n15" incoming="_ULr4fcSIEe2TD---Mk4tOA" outgoing="_ULr4f8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4bMSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4bcSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_ULr4bsSIEe2TD---Mk4tOA" source="_ULr4TcSIEe2TD---Mk4tOA" target="_ULr4TsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4b8SIEe2TD---Mk4tOA" source="_ULr4TcSIEe2TD---Mk4tOA" target="_ULr4UcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4cMSIEe2TD---Mk4tOA" source="_ULr4TcSIEe2TD---Mk4tOA" target="_ULr4VMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4ccSIEe2TD---Mk4tOA" source="_ULr4TsSIEe2TD---Mk4tOA" target="_ULr4YcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4csSIEe2TD---Mk4tOA" source="_ULr4UcSIEe2TD---Mk4tOA" target="_ULr4YsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4c8SIEe2TD---Mk4tOA" source="_ULr4VMSIEe2TD---Mk4tOA" target="_ULr4Y8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4dMSIEe2TD---Mk4tOA" source="_ULr4V8SIEe2TD---Mk4tOA" target="_ULr4WMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4dcSIEe2TD---Mk4tOA" source="_ULr4V8SIEe2TD---Mk4tOA" target="_ULr4W8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4dsSIEe2TD---Mk4tOA" source="_ULr4V8SIEe2TD---Mk4tOA" target="_ULr4XsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4d8SIEe2TD---Mk4tOA" source="_ULr4WMSIEe2TD---Mk4tOA" target="_ULr4YcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4eMSIEe2TD---Mk4tOA" source="_ULr4W8SIEe2TD---Mk4tOA" target="_ULr4YsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4ecSIEe2TD---Mk4tOA" source="_ULr4XsSIEe2TD---Mk4tOA" target="_ULr4Y8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4esSIEe2TD---Mk4tOA" source="_ULr4Y8SIEe2TD---Mk4tOA" target="_ULr4ZMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr4e8SIEe2TD---Mk4tOA" source="_ULr4ZMSIEe2TD---Mk4tOA" target="_ULr4Z8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4fMSIEe2TD---Mk4tOA" source="_ULr4Z8SIEe2TD---Mk4tOA" target="_ULr4aMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4fcSIEe2TD---Mk4tOA" source="_ULr4Z8SIEe2TD---Mk4tOA" target="_ULr4a8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4fsSIEe2TD---Mk4tOA" source="_ULr4aMSIEe2TD---Mk4tOA" target="_ULr4YcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4f8SIEe2TD---Mk4tOA" source="_ULr4a8SIEe2TD---Mk4tOA" target="_ULr4YsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_ULr4gMSIEe2TD---Mk4tOA" name="RemoveTPCrossStructures_left_RHS">
+      <nodes xmi:id="_ULr4gcSIEe2TD---Mk4tOA" name="n1" incoming="_ULr4t8SIEe2TD---Mk4tOA" outgoing="_ULr4pcSIEe2TD---Mk4tOA _ULr4psSIEe2TD---Mk4tOA _ULr4p8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr4gsSIEe2TD---Mk4tOA" name="n2" incoming="_ULr4pcSIEe2TD---Mk4tOA" outgoing="_ULr4qMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4g8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4hMSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4hcSIEe2TD---Mk4tOA" name="n3" incoming="_ULr4psSIEe2TD---Mk4tOA" outgoing="_ULr4qcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4hsSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4h8SIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4iMSIEe2TD---Mk4tOA" name="n4" incoming="_ULr4p8SIEe2TD---Mk4tOA" outgoing="_ULr4qsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4icSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4isSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4i8SIEe2TD---Mk4tOA" name="n5" incoming="_ULr4uMSIEe2TD---Mk4tOA" outgoing="_ULr4q8SIEe2TD---Mk4tOA _ULr4rMSIEe2TD---Mk4tOA _ULr4rcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr4jMSIEe2TD---Mk4tOA" name="n6" incoming="_ULr4q8SIEe2TD---Mk4tOA" outgoing="_ULr4rsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4jcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4jsSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4j8SIEe2TD---Mk4tOA" name="n7" incoming="_ULr4rMSIEe2TD---Mk4tOA" outgoing="_ULr4r8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4kMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4kcSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4ksSIEe2TD---Mk4tOA" name="n8" incoming="_ULr4rcSIEe2TD---Mk4tOA" outgoing="_ULr4sMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4k8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4lMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4lcSIEe2TD---Mk4tOA" name="n9" incoming="_ULr4qMSIEe2TD---Mk4tOA _ULr4rsSIEe2TD---Mk4tOA _ULr4tcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr4lsSIEe2TD---Mk4tOA" name="n10" incoming="_ULr4qcSIEe2TD---Mk4tOA _ULr4r8SIEe2TD---Mk4tOA _ULr4tsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr4l8SIEe2TD---Mk4tOA" name="n11" incoming="_ULr4qsSIEe2TD---Mk4tOA _ULr4sMSIEe2TD---Mk4tOA _ULr4ucSIEe2TD---Mk4tOA" outgoing="_ULr4scSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr4mMSIEe2TD---Mk4tOA" name="n12" incoming="_ULr4scSIEe2TD---Mk4tOA" outgoing="_ULr4ssSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr4mcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4msSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4m8SIEe2TD---Mk4tOA" name="n13" incoming="_ULr4ssSIEe2TD---Mk4tOA" outgoing="_ULr4s8SIEe2TD---Mk4tOA _ULr4tMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr4nMSIEe2TD---Mk4tOA" name="n14" incoming="_ULr4s8SIEe2TD---Mk4tOA" outgoing="_ULr4tcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4ncSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4nsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4n8SIEe2TD---Mk4tOA" name="n15" incoming="_ULr4tMSIEe2TD---Mk4tOA" outgoing="_ULr4tsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4oMSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_ULr4ocSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4osSIEe2TD---Mk4tOA" name="n16" outgoing="_ULr4t8SIEe2TD---Mk4tOA _ULr4uMSIEe2TD---Mk4tOA _ULr4ucSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_ULr4o8SIEe2TD---Mk4tOA" value="&quot;Remove TP-cross structures&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+        <attributes xmi:id="_ULr4pMSIEe2TD---Mk4tOA" value="&quot;LEFT&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff/author"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_ULr4pcSIEe2TD---Mk4tOA" source="_ULr4gcSIEe2TD---Mk4tOA" target="_ULr4gsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4psSIEe2TD---Mk4tOA" source="_ULr4gcSIEe2TD---Mk4tOA" target="_ULr4hcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4p8SIEe2TD---Mk4tOA" source="_ULr4gcSIEe2TD---Mk4tOA" target="_ULr4iMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4qMSIEe2TD---Mk4tOA" source="_ULr4gsSIEe2TD---Mk4tOA" target="_ULr4lcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4qcSIEe2TD---Mk4tOA" source="_ULr4hcSIEe2TD---Mk4tOA" target="_ULr4lsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4qsSIEe2TD---Mk4tOA" source="_ULr4iMSIEe2TD---Mk4tOA" target="_ULr4l8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4q8SIEe2TD---Mk4tOA" source="_ULr4i8SIEe2TD---Mk4tOA" target="_ULr4jMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4rMSIEe2TD---Mk4tOA" source="_ULr4i8SIEe2TD---Mk4tOA" target="_ULr4j8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4rcSIEe2TD---Mk4tOA" source="_ULr4i8SIEe2TD---Mk4tOA" target="_ULr4ksSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4rsSIEe2TD---Mk4tOA" source="_ULr4jMSIEe2TD---Mk4tOA" target="_ULr4lcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4r8SIEe2TD---Mk4tOA" source="_ULr4j8SIEe2TD---Mk4tOA" target="_ULr4lsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4sMSIEe2TD---Mk4tOA" source="_ULr4ksSIEe2TD---Mk4tOA" target="_ULr4l8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4scSIEe2TD---Mk4tOA" source="_ULr4l8SIEe2TD---Mk4tOA" target="_ULr4mMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr4ssSIEe2TD---Mk4tOA" source="_ULr4mMSIEe2TD---Mk4tOA" target="_ULr4m8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4s8SIEe2TD---Mk4tOA" source="_ULr4m8SIEe2TD---Mk4tOA" target="_ULr4nMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4tMSIEe2TD---Mk4tOA" source="_ULr4m8SIEe2TD---Mk4tOA" target="_ULr4n8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4tcSIEe2TD---Mk4tOA" source="_ULr4nMSIEe2TD---Mk4tOA" target="_ULr4lcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4tsSIEe2TD---Mk4tOA" source="_ULr4n8SIEe2TD---Mk4tOA" target="_ULr4lsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4t8SIEe2TD---Mk4tOA" source="_ULr4osSIEe2TD---Mk4tOA" target="_ULr4gcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_ULr4uMSIEe2TD---Mk4tOA" source="_ULr4osSIEe2TD---Mk4tOA" target="_ULr4i8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_ULr4ucSIEe2TD---Mk4tOA" source="_ULr4osSIEe2TD---Mk4tOA" target="_ULr4l8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_ULr4usSIEe2TD---Mk4tOA" origin="_ULr4TcSIEe2TD---Mk4tOA" image="_ULr4gcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4u8SIEe2TD---Mk4tOA" origin="_ULr4TsSIEe2TD---Mk4tOA" image="_ULr4gsSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4vMSIEe2TD---Mk4tOA" origin="_ULr4UcSIEe2TD---Mk4tOA" image="_ULr4hcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4vcSIEe2TD---Mk4tOA" origin="_ULr4VMSIEe2TD---Mk4tOA" image="_ULr4iMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4vsSIEe2TD---Mk4tOA" origin="_ULr4V8SIEe2TD---Mk4tOA" image="_ULr4i8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4v8SIEe2TD---Mk4tOA" origin="_ULr4WMSIEe2TD---Mk4tOA" image="_ULr4jMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4wMSIEe2TD---Mk4tOA" origin="_ULr4W8SIEe2TD---Mk4tOA" image="_ULr4j8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4wcSIEe2TD---Mk4tOA" origin="_ULr4XsSIEe2TD---Mk4tOA" image="_ULr4ksSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4wsSIEe2TD---Mk4tOA" origin="_ULr4YcSIEe2TD---Mk4tOA" image="_ULr4lcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4w8SIEe2TD---Mk4tOA" origin="_ULr4YsSIEe2TD---Mk4tOA" image="_ULr4lsSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4xMSIEe2TD---Mk4tOA" origin="_ULr4Y8SIEe2TD---Mk4tOA" image="_ULr4l8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4xcSIEe2TD---Mk4tOA" origin="_ULr4ZMSIEe2TD---Mk4tOA" image="_ULr4mMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4xsSIEe2TD---Mk4tOA" origin="_ULr4Z8SIEe2TD---Mk4tOA" image="_ULr4m8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4x8SIEe2TD---Mk4tOA" origin="_ULr4aMSIEe2TD---Mk4tOA" image="_ULr4nMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr4yMSIEe2TD---Mk4tOA" origin="_ULr4a8SIEe2TD---Mk4tOA" image="_ULr4n8SIEe2TD---Mk4tOA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_ULr4ycSIEe2TD---Mk4tOA" name="RemoveTPCrossStructures_right">
+    <lhs xmi:id="_ULr4ysSIEe2TD---Mk4tOA" name="RemoveTPCrossStructures_right_LHS">
+      <nodes xmi:id="_ULr4y8SIEe2TD---Mk4tOA" name="n1" outgoing="_ULr47MSIEe2TD---Mk4tOA _ULr47cSIEe2TD---Mk4tOA _ULr47sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr4zMSIEe2TD---Mk4tOA" name="n2" incoming="_ULr47MSIEe2TD---Mk4tOA" outgoing="_ULr478SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr4zcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr4zsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr4z8SIEe2TD---Mk4tOA" name="n3" incoming="_ULr47cSIEe2TD---Mk4tOA" outgoing="_ULr48MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr40MSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr40cSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr40sSIEe2TD---Mk4tOA" name="n4" incoming="_ULr47sSIEe2TD---Mk4tOA" outgoing="_ULr48cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr408SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr41MSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr41cSIEe2TD---Mk4tOA" name="n5" outgoing="_ULr48sSIEe2TD---Mk4tOA _ULr488SIEe2TD---Mk4tOA _ULr49MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr41sSIEe2TD---Mk4tOA" name="n6" incoming="_ULr48sSIEe2TD---Mk4tOA" outgoing="_ULr49cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr418SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr42MSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr42cSIEe2TD---Mk4tOA" name="n7" incoming="_ULr488SIEe2TD---Mk4tOA" outgoing="_ULr49sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr42sSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr428SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr43MSIEe2TD---Mk4tOA" name="n8" incoming="_ULr49MSIEe2TD---Mk4tOA" outgoing="_ULr498SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr43cSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr43sSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr438SIEe2TD---Mk4tOA" name="n9" incoming="_ULr478SIEe2TD---Mk4tOA _ULr49cSIEe2TD---Mk4tOA _ULr4_MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr44MSIEe2TD---Mk4tOA" name="n10" incoming="_ULr48MSIEe2TD---Mk4tOA _ULr49sSIEe2TD---Mk4tOA _ULr4_cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr44cSIEe2TD---Mk4tOA" name="n11" incoming="_ULr48cSIEe2TD---Mk4tOA _ULr498SIEe2TD---Mk4tOA" outgoing="_ULr4-MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr44sSIEe2TD---Mk4tOA" name="n12" incoming="_ULr4-MSIEe2TD---Mk4tOA" outgoing="_ULr4-cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr448SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr45MSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr45cSIEe2TD---Mk4tOA" name="n13" incoming="_ULr4-cSIEe2TD---Mk4tOA" outgoing="_ULr4-sSIEe2TD---Mk4tOA _ULr4-8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr45sSIEe2TD---Mk4tOA" name="n14" incoming="_ULr4-sSIEe2TD---Mk4tOA" outgoing="_ULr4_MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr458SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr46MSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr46cSIEe2TD---Mk4tOA" name="n15" incoming="_ULr4-8SIEe2TD---Mk4tOA" outgoing="_ULr4_cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr46sSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr468SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_ULr47MSIEe2TD---Mk4tOA" source="_ULr4y8SIEe2TD---Mk4tOA" target="_ULr4zMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr47cSIEe2TD---Mk4tOA" source="_ULr4y8SIEe2TD---Mk4tOA" target="_ULr4z8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr47sSIEe2TD---Mk4tOA" source="_ULr4y8SIEe2TD---Mk4tOA" target="_ULr40sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr478SIEe2TD---Mk4tOA" source="_ULr4zMSIEe2TD---Mk4tOA" target="_ULr438SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr48MSIEe2TD---Mk4tOA" source="_ULr4z8SIEe2TD---Mk4tOA" target="_ULr44MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr48cSIEe2TD---Mk4tOA" source="_ULr40sSIEe2TD---Mk4tOA" target="_ULr44cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr48sSIEe2TD---Mk4tOA" source="_ULr41cSIEe2TD---Mk4tOA" target="_ULr41sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr488SIEe2TD---Mk4tOA" source="_ULr41cSIEe2TD---Mk4tOA" target="_ULr42cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr49MSIEe2TD---Mk4tOA" source="_ULr41cSIEe2TD---Mk4tOA" target="_ULr43MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr49cSIEe2TD---Mk4tOA" source="_ULr41sSIEe2TD---Mk4tOA" target="_ULr438SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr49sSIEe2TD---Mk4tOA" source="_ULr42cSIEe2TD---Mk4tOA" target="_ULr44MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr498SIEe2TD---Mk4tOA" source="_ULr43MSIEe2TD---Mk4tOA" target="_ULr44cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4-MSIEe2TD---Mk4tOA" source="_ULr44cSIEe2TD---Mk4tOA" target="_ULr44sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr4-cSIEe2TD---Mk4tOA" source="_ULr44sSIEe2TD---Mk4tOA" target="_ULr45cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4-sSIEe2TD---Mk4tOA" source="_ULr45cSIEe2TD---Mk4tOA" target="_ULr45sSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4-8SIEe2TD---Mk4tOA" source="_ULr45cSIEe2TD---Mk4tOA" target="_ULr46cSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr4_MSIEe2TD---Mk4tOA" source="_ULr45sSIEe2TD---Mk4tOA" target="_ULr438SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr4_cSIEe2TD---Mk4tOA" source="_ULr46cSIEe2TD---Mk4tOA" target="_ULr44MSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_ULr4_sSIEe2TD---Mk4tOA" name="RemoveTPCrossStructures_right_RHS">
+      <nodes xmi:id="_ULr4_8SIEe2TD---Mk4tOA" name="n1" incoming="_ULr5NcSIEe2TD---Mk4tOA" outgoing="_ULr5I8SIEe2TD---Mk4tOA _ULr5JMSIEe2TD---Mk4tOA _ULr5JcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr5AMSIEe2TD---Mk4tOA" name="n2" incoming="_ULr5I8SIEe2TD---Mk4tOA" outgoing="_ULr5JsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr5AcSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr5AsSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr5A8SIEe2TD---Mk4tOA" name="n3" incoming="_ULr5JMSIEe2TD---Mk4tOA" outgoing="_ULr5J8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr5BMSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr5BcSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr5BsSIEe2TD---Mk4tOA" name="n4" incoming="_ULr5JcSIEe2TD---Mk4tOA" outgoing="_ULr5KMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr5B8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr5CMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr5CcSIEe2TD---Mk4tOA" name="n5" incoming="_ULr5NsSIEe2TD---Mk4tOA" outgoing="_ULr5KcSIEe2TD---Mk4tOA _ULr5KsSIEe2TD---Mk4tOA _ULr5K8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr5CsSIEe2TD---Mk4tOA" name="n6" incoming="_ULr5KcSIEe2TD---Mk4tOA" outgoing="_ULr5LMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr5C8SIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr5DMSIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr5DcSIEe2TD---Mk4tOA" name="n7" incoming="_ULr5KsSIEe2TD---Mk4tOA" outgoing="_ULr5LcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr5DsSIEe2TD---Mk4tOA" value="&quot;DELETE&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr5D8SIEe2TD---Mk4tOA" value="true">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr5EMSIEe2TD---Mk4tOA" name="n8" incoming="_ULr5K8SIEe2TD---Mk4tOA" outgoing="_ULr5LsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr5EcSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr5EsSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr5E8SIEe2TD---Mk4tOA" name="n9" incoming="_ULr5JsSIEe2TD---Mk4tOA _ULr5LMSIEe2TD---Mk4tOA _ULr5M8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr5FMSIEe2TD---Mk4tOA" name="n10" incoming="_ULr5J8SIEe2TD---Mk4tOA _ULr5LcSIEe2TD---Mk4tOA _ULr5NMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr5FcSIEe2TD---Mk4tOA" name="n11" incoming="_ULr5KMSIEe2TD---Mk4tOA _ULr5LsSIEe2TD---Mk4tOA _ULr5N8SIEe2TD---Mk4tOA" outgoing="_ULr5L8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_ULr5FsSIEe2TD---Mk4tOA" name="n12" incoming="_ULr5L8SIEe2TD---Mk4tOA" outgoing="_ULr5MMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_ULr5F8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr5GMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr5GcSIEe2TD---Mk4tOA" name="n13" incoming="_ULr5MMSIEe2TD---Mk4tOA" outgoing="_ULr5McSIEe2TD---Mk4tOA _ULr5MsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ULr5GsSIEe2TD---Mk4tOA" name="n14" incoming="_ULr5McSIEe2TD---Mk4tOA" outgoing="_ULr5M8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr5G8SIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr5HMSIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr5HcSIEe2TD---Mk4tOA" name="n15" incoming="_ULr5MsSIEe2TD---Mk4tOA" outgoing="_ULr5NMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_ULr5HsSIEe2TD---Mk4tOA" value="&quot;ADD&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+        <attributes xmi:id="_ULr5H8SIEe2TD---Mk4tOA" value="false">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/filter"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ULr5IMSIEe2TD---Mk4tOA" name="n16" outgoing="_ULr5NcSIEe2TD---Mk4tOA _ULr5NsSIEe2TD---Mk4tOA _ULr5N8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_ULr5IcSIEe2TD---Mk4tOA" value="&quot;Remove TP-cross structures&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+        <attributes xmi:id="_ULr5IsSIEe2TD---Mk4tOA" value="&quot;RIGHT&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff/author"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_ULr5I8SIEe2TD---Mk4tOA" source="_ULr4_8SIEe2TD---Mk4tOA" target="_ULr5AMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr5JMSIEe2TD---Mk4tOA" source="_ULr4_8SIEe2TD---Mk4tOA" target="_ULr5A8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr5JcSIEe2TD---Mk4tOA" source="_ULr4_8SIEe2TD---Mk4tOA" target="_ULr5BsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr5JsSIEe2TD---Mk4tOA" source="_ULr5AMSIEe2TD---Mk4tOA" target="_ULr5E8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr5J8SIEe2TD---Mk4tOA" source="_ULr5A8SIEe2TD---Mk4tOA" target="_ULr5FMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr5KMSIEe2TD---Mk4tOA" source="_ULr5BsSIEe2TD---Mk4tOA" target="_ULr5FcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr5KcSIEe2TD---Mk4tOA" source="_ULr5CcSIEe2TD---Mk4tOA" target="_ULr5CsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr5KsSIEe2TD---Mk4tOA" source="_ULr5CcSIEe2TD---Mk4tOA" target="_ULr5DcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr5K8SIEe2TD---Mk4tOA" source="_ULr5CcSIEe2TD---Mk4tOA" target="_ULr5EMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr5LMSIEe2TD---Mk4tOA" source="_ULr5CsSIEe2TD---Mk4tOA" target="_ULr5E8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr5LcSIEe2TD---Mk4tOA" source="_ULr5DcSIEe2TD---Mk4tOA" target="_ULr5FMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr5LsSIEe2TD---Mk4tOA" source="_ULr5EMSIEe2TD---Mk4tOA" target="_ULr5FcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr5L8SIEe2TD---Mk4tOA" source="_ULr5FcSIEe2TD---Mk4tOA" target="_ULr5FsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_ULr5MMSIEe2TD---Mk4tOA" source="_ULr5FsSIEe2TD---Mk4tOA" target="_ULr5GcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_ULr5McSIEe2TD---Mk4tOA" source="_ULr5GcSIEe2TD---Mk4tOA" target="_ULr5GsSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr5MsSIEe2TD---Mk4tOA" source="_ULr5GcSIEe2TD---Mk4tOA" target="_ULr5HcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_ULr5M8SIEe2TD---Mk4tOA" source="_ULr5GsSIEe2TD---Mk4tOA" target="_ULr5E8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr5NMSIEe2TD---Mk4tOA" source="_ULr5HcSIEe2TD---Mk4tOA" target="_ULr5FMSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_ULr5NcSIEe2TD---Mk4tOA" source="_ULr5IMSIEe2TD---Mk4tOA" target="_ULr4_8SIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_ULr5NsSIEe2TD---Mk4tOA" source="_ULr5IMSIEe2TD---Mk4tOA" target="_ULr5CcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_ULr5N8SIEe2TD---Mk4tOA" source="_ULr5IMSIEe2TD---Mk4tOA" target="_ULr5FcSIEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_ULr5OMSIEe2TD---Mk4tOA" origin="_ULr4y8SIEe2TD---Mk4tOA" image="_ULr4_8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr5OcSIEe2TD---Mk4tOA" origin="_ULr4zMSIEe2TD---Mk4tOA" image="_ULr5AMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr5OsSIEe2TD---Mk4tOA" origin="_ULr4z8SIEe2TD---Mk4tOA" image="_ULr5A8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr5O8SIEe2TD---Mk4tOA" origin="_ULr40sSIEe2TD---Mk4tOA" image="_ULr5BsSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr5PMSIEe2TD---Mk4tOA" origin="_ULr41cSIEe2TD---Mk4tOA" image="_ULr5CcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr5PcSIEe2TD---Mk4tOA" origin="_ULr41sSIEe2TD---Mk4tOA" image="_ULr5CsSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr5PsSIEe2TD---Mk4tOA" origin="_ULr42cSIEe2TD---Mk4tOA" image="_ULr5DcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr5P8SIEe2TD---Mk4tOA" origin="_ULr43MSIEe2TD---Mk4tOA" image="_ULr5EMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr5QMSIEe2TD---Mk4tOA" origin="_ULr438SIEe2TD---Mk4tOA" image="_ULr5E8SIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr5QcSIEe2TD---Mk4tOA" origin="_ULr44MSIEe2TD---Mk4tOA" image="_ULr5FMSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr5QsSIEe2TD---Mk4tOA" origin="_ULr44cSIEe2TD---Mk4tOA" image="_ULr5FcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr5Q8SIEe2TD---Mk4tOA" origin="_ULr44sSIEe2TD---Mk4tOA" image="_ULr5FsSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr5RMSIEe2TD---Mk4tOA" origin="_ULr45cSIEe2TD---Mk4tOA" image="_ULr5GcSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr5RcSIEe2TD---Mk4tOA" origin="_ULr45sSIEe2TD---Mk4tOA" image="_ULr5GsSIEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_ULr5RsSIEe2TD---Mk4tOA" origin="_ULr46cSIEe2TD---Mk4tOA" image="_ULr5HcSIEe2TD---Mk4tOA"/>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_ULr5R8SIEe2TD---Mk4tOA" name="unitSequntialStar" subUnits="_ULr5SMSIEe2TD---Mk4tOA _ULr5ScSIEe2TD---Mk4tOA _ULr5SsSIEe2TD---Mk4tOA _ULr5S8SIEe2TD---Mk4tOA _ULr5TMSIEe2TD---Mk4tOA _ULr5TcSIEe2TD---Mk4tOA _ULr5TsSIEe2TD---Mk4tOA _ULr5T8SIEe2TD---Mk4tOA _ULr5UMSIEe2TD---Mk4tOA"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_ULr5SMSIEe2TD---Mk4tOA" name="unitRemoveImplicitPlace_equalStar" subUnit="_ULrQEcSIEe2TD---Mk4tOA"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_ULr5ScSIEe2TD---Mk4tOA" name="unitRemoveImplicitPlace_leftStar" subUnit="_ULrQR8SIEe2TD---Mk4tOA"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_ULr5SsSIEe2TD---Mk4tOA" name="unitRemoveImplicitPlace_rightStar" subUnit="_ULrQd8SIEe2TD---Mk4tOA"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_ULr5S8SIEe2TD---Mk4tOA" name="unitRemoveEfcStructures_equalStar" subUnit="_ULrQp8SIEe2TD---Mk4tOA"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_ULr5TMSIEe2TD---Mk4tOA" name="unitRemoveEfcStructures_leftStar" subUnit="_ULrRN8SIEe2TD---Mk4tOA"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_ULr5TcSIEe2TD---Mk4tOA" name="unitRemoveEfcStructures_rightStar" subUnit="_ULr3PcSIEe2TD---Mk4tOA"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_ULr5TsSIEe2TD---Mk4tOA" name="unitRemoveTPCrossStructures_equalStar" subUnit="_ULr3u8SIEe2TD---Mk4tOA"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_ULr5T8SIEe2TD---Mk4tOA" name="unitRemoveTPCrossStructures_leftStar" subUnit="_ULr4S8SIEe2TD---Mk4tOA"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_ULr5UMSIEe2TD---Mk4tOA" name="unitRemoveTPCrossStructures_rightStar" subUnit="_ULr4ycSIEe2TD---Mk4tOA"/>
+</henshin:Module>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refactoring:EPackage
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring="www.geodes.UdeM.edu/refactoring"
+    xsi:schemaLocation="www.geodes.UdeM.edu/refactoring ../metaModels/refactoring.ecore"
+    name="rfc">
+  <eclassifiers
+      name="cls1"
+      esupertypes="cls2"
+      interfaces="if1">
+    <eattributes
+        name="deleteRight"
+        etype="int"/>
+    <eattributes
+        name="modifyLeft"
+        etype="intLeft"/>
+    <eattributes
+        name="modifyRight"
+        etype="int"/>
+    <eattributes
+        name="modifyBoth"
+        etype="intLeft"/>
+    <eattributes
+        name="modifyDelete"
+        etype="intLeft"/>
+    <eattributes
+        name="addLeft"/>
+    <eattributes
+        name="addBoth"/>
+    <eoperations
+        name="opModifyBoth"
+        eparameters="parLeft"
+        methodBody="bodyLeft"/>
+    <nested_classes
+        name="nc"
+        interfaces="If">
+      <eoperations
+          name="opNC"/>
+    </nested_classes>
+  </eclassifiers>
+  <eclassifiers
+      name="cls2"/>
+  <eclassifiers
+      name="cls3"
+      interfaces="if1"/>
+  <interfaces
+      name="If"/>
+  <interfaces
+      name="if1"
+      extends="e"
+      packageName="p"
+      esupertypes="if1"/>
+  <interfaces
+      name="if2"
+      esupertypes="if1"/>
+  <interfaces
+      name="if3"
+      esupertypes="If if1 if2 if3"/>
+  <test name="t1"
+      single="cls2"
+      multi="cls2"/>
+  <test name="t2"/>
+  <test name="t3"
+      single="cls3"
+      multi="cls3"/>
+</refactoring:EPackage>

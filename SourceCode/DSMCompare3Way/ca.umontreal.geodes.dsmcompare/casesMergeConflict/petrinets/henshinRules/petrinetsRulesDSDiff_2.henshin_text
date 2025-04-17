@@ -1,0 +1,209 @@
+ePackageImport  petrinetsDiffMM
+
+		rule RemoveEfcStructures(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n6diff_kind_Left:EString,VAR n6diff_kind_Right:EString,VAR n7diff_kind_Left:EString,VAR n7diff_kind_Right:EString,VAR n8diff_kind_Left:EString,VAR n8diff_kind_Right:EString,VAR n9diff_kind_Left:EString,VAR n9diff_kind_Right:EString,VAR n10diff_kind_Left:EString,VAR n10diff_kind_Right:EString,VAR n11diff_kind_Left:EString,VAR n11diff_kind_Right:EString,VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n13diff_kind_Left:EString,VAR n13diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n1:Place			      		
+				 delete				node n2:DiffPlace_transitions{
+					delete diff_kind_Left = n2diff_kind_Left
+					delete diff_kind_Right = n2diff_kind_Right
+				}
+				 delete				node n3:DiffPlace_transitions{
+					delete diff_kind_Left = n3diff_kind_Left
+					delete diff_kind_Right = n3diff_kind_Right
+				}
+				 preserve			node n4:DiffPlace_transitions{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+				}			      		
+				 preserve			node n5:Place			      		
+				 delete				node n6:DiffPlace_transitions{
+					delete diff_kind_Left = n6diff_kind_Left
+					delete diff_kind_Right = n6diff_kind_Right
+				}
+				 delete				node n7:DiffPlace_transitions{
+					delete diff_kind_Left = n7diff_kind_Left
+					delete diff_kind_Right = n7diff_kind_Right
+				}
+				 preserve			node n8:DiffPlace_transitions{
+					preserve diff_kind_Left = n8diff_kind_Left
+					preserve diff_kind_Right = n8diff_kind_Right
+				}			      		
+				 preserve			node n9:DiffTransition{
+					preserve diff_kind_Left = n9diff_kind_Left
+					preserve diff_kind_Right = n9diff_kind_Right
+				}			      		
+				 preserve			node n10:DiffTransition{
+					preserve diff_kind_Left = n10diff_kind_Left
+					preserve diff_kind_Right = n10diff_kind_Right
+				}			      		
+				 preserve			node n11:DiffTransition{
+					preserve diff_kind_Left = n11diff_kind_Left
+					preserve diff_kind_Right = n11diff_kind_Right
+				}			      		
+				 preserve			node n12:DiffTransition_places{
+					preserve diff_kind_Left = n12diff_kind_Left
+					preserve diff_kind_Right = n12diff_kind_Right
+				}			      		
+				 preserve			node n13:DiffPlace{
+					preserve diff_kind_Left = n13diff_kind_Left
+					preserve diff_kind_Right = n13diff_kind_Right
+				}			      		
+				 create				node n14:SemanticDiff{
+					create name = "\"Remove EFC Structures\""
+				}
+			edges[
+			  		(delete		n1->n2:difftransitions),
+			  		(delete		n1->n3:difftransitions),
+			  		(preserve	n1->n4:difftransitions),
+			  		(delete		n2->n9:eType),
+			  		(delete		n3->n10:eType),
+			  		(preserve	n4->n11:eType),
+			  		(delete		n5->n6:difftransitions),
+			  		(delete		n5->n7:difftransitions),
+			  		(preserve	n5->n8:difftransitions),
+			  		(delete		n6->n9:eType),
+			  		(delete		n7->n10:eType),
+			  		(preserve	n8->n11:eType),
+			  		(preserve	n11->n12:diffplaces),
+			  		(preserve	n12->n13:eType),
+			  		(create		n14->n11:SemanticObject_DiffTransition),
+			  		(create		n14->n1:SemanticObject_NamedElement),
+			  		(create		n14->n5:SemanticObject_NamedElement)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"DELETE\"") AND (n3diff_kind_Left == "\"DELETE\"") AND (n4diff_kind_Left == "\"ADD\"") AND (n6diff_kind_Left == "\"DELETE\"") AND (n7diff_kind_Left == "\"DELETE\"") AND (n8diff_kind_Left == "\"ADD\"") AND (n9diff_kind_Left == "\"DELETE\"") AND (n10diff_kind_Left == "\"DELETE\"") AND (n11diff_kind_Left == "\"ADD\"") AND (n12diff_kind_Left == "\"ADD\"") AND (n13diff_kind_Left == "\"ADD\"")) OR ((n2diff_kind_Right == "\"DELETE\"") AND (n3diff_kind_Right == "\"DELETE\"") AND (n4diff_kind_Right == "\"ADD\"") AND (n6diff_kind_Right == "\"DELETE\"") AND (n7diff_kind_Right == "\"DELETE\"") AND (n8diff_kind_Right == "\"ADD\"") AND (n9diff_kind_Right == "\"DELETE\"") AND (n10diff_kind_Right == "\"DELETE\"") AND (n11diff_kind_Right == "\"ADD\"") AND (n12diff_kind_Right == "\"ADD\"") AND (n13diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule RemoveTPCrossStructures(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n6diff_kind_Left:EString,VAR n6diff_kind_Right:EString,VAR n7diff_kind_Left:EString,VAR n7diff_kind_Right:EString,VAR n8diff_kind_Left:EString,VAR n8diff_kind_Right:EString,VAR n9diff_kind_Left:EString,VAR n9diff_kind_Right:EString,VAR n10diff_kind_Left:EString,VAR n10diff_kind_Right:EString,VAR n11diff_kind_Left:EString,VAR n11diff_kind_Right:EString,VAR n12diff_kind_Left:EString,VAR n12diff_kind_Right:EString,VAR n13diff_kind_Left:EString,VAR n13diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n1:Transition			      		
+				 delete				node n2:DiffTransition_places{
+					delete diff_kind_Left = n2diff_kind_Left
+					delete diff_kind_Right = n2diff_kind_Right
+				}
+				 delete				node n3:DiffTransition_places{
+					delete diff_kind_Left = n3diff_kind_Left
+					delete diff_kind_Right = n3diff_kind_Right
+				}
+				 preserve			node n4:DiffTransition_places{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+				}			      		
+				 preserve			node n5:Transition			      		
+				 delete				node n6:DiffTransition_places{
+					delete diff_kind_Left = n6diff_kind_Left
+					delete diff_kind_Right = n6diff_kind_Right
+				}
+				 delete				node n7:DiffTransition_places{
+					delete diff_kind_Left = n7diff_kind_Left
+					delete diff_kind_Right = n7diff_kind_Right
+				}
+				 preserve			node n8:DiffTransition_places{
+					preserve diff_kind_Left = n8diff_kind_Left
+					preserve diff_kind_Right = n8diff_kind_Right
+				}			      		
+				 preserve			node n9:DiffPlace{
+					preserve diff_kind_Left = n9diff_kind_Left
+					preserve diff_kind_Right = n9diff_kind_Right
+				}			      		
+				 preserve			node n10:DiffPlace{
+					preserve diff_kind_Left = n10diff_kind_Left
+					preserve diff_kind_Right = n10diff_kind_Right
+				}			      		
+				 preserve			node n11:DiffPlace{
+					preserve diff_kind_Left = n11diff_kind_Left
+					preserve diff_kind_Right = n11diff_kind_Right
+				}			      		
+				 preserve			node n12:DiffPlace_transitions{
+					preserve diff_kind_Left = n12diff_kind_Left
+					preserve diff_kind_Right = n12diff_kind_Right
+				}			      		
+				 preserve			node n13:DiffTransition{
+					preserve diff_kind_Left = n13diff_kind_Left
+					preserve diff_kind_Right = n13diff_kind_Right
+				}			      		
+				 create				node n14:SemanticDiff{
+					create name = "\"Remove TP-cross structures\""
+				}
+			edges[
+			  		(delete		n1->n2:diffplaces),
+			  		(delete		n1->n3:diffplaces),
+			  		(preserve	n1->n4:diffplaces),
+			  		(delete		n2->n9:eType),
+			  		(delete		n3->n10:eType),
+			  		(preserve	n4->n11:eType),
+			  		(delete		n5->n6:diffplaces),
+			  		(delete		n5->n7:diffplaces),
+			  		(preserve	n5->n8:diffplaces),
+			  		(delete		n6->n9:eType),
+			  		(delete		n7->n10:eType),
+			  		(preserve	n8->n11:eType),
+			  		(preserve	n11->n12:difftransitions),
+			  		(preserve	n12->n13:eType)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"DELETE\"") AND (n3diff_kind_Left == "\"DELETE\"") AND (n4diff_kind_Left == "\"ADD\"") AND (n6diff_kind_Left == "\"DELETE\"") AND (n7diff_kind_Left == "\"DELETE\"") AND (n8diff_kind_Left == "\"ADD\"") AND (n9diff_kind_Left == "\"DELETE\"") AND (n10diff_kind_Left == "\"DELETE\"") AND (n11diff_kind_Left == "\"ADD\"") AND (n12diff_kind_Left == "\"ADD\"") AND (n13diff_kind_Left == "\"ADD\"")) OR ((n2diff_kind_Right == "\"DELETE\"") AND (n3diff_kind_Right == "\"DELETE\"") AND (n4diff_kind_Right == "\"ADD\"") AND (n6diff_kind_Right == "\"DELETE\"") AND (n7diff_kind_Right == "\"DELETE\"") AND (n8diff_kind_Right == "\"ADD\"") AND (n9diff_kind_Right == "\"DELETE\"") AND (n10diff_kind_Right == "\"DELETE\"") AND (n11diff_kind_Right == "\"ADD\"") AND (n12diff_kind_Right == "\"ADD\"") AND (n13diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule RemoveImplicitPlace(VAR n2diff_kind_Left:EString,VAR n2diff_kind_Right:EString,VAR n4diff_kind_Left:EString,VAR n4diff_kind_Right:EString,VAR n5diff_kind_Left:EString,VAR n5diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n1:Transition			      		
+				 delete				node n2:DiffTransition_places{
+					delete diff_kind_Left = n2diff_kind_Left
+					delete diff_kind_Right = n2diff_kind_Right
+				}
+				 preserve			node n3:Place			      		
+				 preserve			node n4:DiffPlace{
+					preserve diff_kind_Left = n4diff_kind_Left
+					preserve diff_kind_Right = n4diff_kind_Right
+				}			      		
+				 preserve			node n5:DiffPlace_transitions{
+					preserve diff_kind_Left = n5diff_kind_Left
+					preserve diff_kind_Right = n5diff_kind_Right
+				}			      		
+				 preserve			node n6:Transition			      		
+				 create				node n7:SemanticDiff{
+					create name = "\"Remove Implicit Place\""
+				}
+			edges[
+			  		(preserve	n1->n3:places),
+			  		(delete		n1->n2:diffplaces),
+			  		(delete		n2->n4:eType),
+			  		(preserve	n4->n5:difftransitions),
+			  		(preserve	n5->n6:eType),
+			  		(create		n7->n6:SemanticObject_NamedElement),
+			  		(create		n7->n3:SemanticObject_NamedElement)
+	      		 ]
+			}
+			conditions [((n2diff_kind_Left == "\"DELETE\"") AND (n4diff_kind_Left == "\"DELETE\"") AND (n5diff_kind_Left == "\"DELETE\"") AND ("pathExistBtw(n3, n6)" == "true")) OR ((n2diff_kind_Right == "\"DELETE\"") AND (n4diff_kind_Right == "\"DELETE\"") AND (n5diff_kind_Right == "\"DELETE\"") AND ("pathExistBtw(n3, n6)" == "true"))] 
+		}
+//----------------------------------------------------------------------
+
+	unit unitSequntialStar(){
+		unitRemoveEfcStructuresStar()
+		unitRemoveTPCrossStructuresStar()
+		unitRemoveImplicitPlaceStar()
+	}
+	unit unitRemoveEfcStructuresStar(){
+		while{
+			RemoveEfcStructures()
+		}
+	}
+	unit unitRemoveTPCrossStructuresStar(){
+		while{
+			RemoveTPCrossStructures()
+		}
+	}
+	unit unitRemoveImplicitPlaceStar(){
+		while{
+			RemoveImplicitPlace()
+		}
+	}

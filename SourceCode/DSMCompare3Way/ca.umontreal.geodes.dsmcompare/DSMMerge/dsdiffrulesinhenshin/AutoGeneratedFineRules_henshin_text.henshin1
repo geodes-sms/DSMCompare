@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_CLO8QGCAEeyqfqTOJJxUtw" name="HenshinDSL">
+  <imports href="../MM/pacmanDiffMM.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8QWCAEeyqfqTOJJxUtw" name="delete_Game">
+    <lhs xmi:id="_CLO8QmCAEeyqfqTOJJxUtw" name="delete_Game_LHS">
+      <nodes xmi:id="_CLO8Q2CAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGame"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLO8RGCAEeyqfqTOJJxUtw" name="delete_Game_RHS"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8RWCAEeyqfqTOJJxUtw" name="changeGame_lives">
+    <parameters xmi:id="_CLO8RmCAEeyqfqTOJJxUtw" name="n0lives" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_CLO8R2CAEeyqfqTOJJxUtw" name="changeGame_lives_LHS">
+      <nodes xmi:id="_CLO8SGCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGame"/>
+        <attributes xmi:id="_CLO8SWCAEeyqfqTOJJxUtw" value="n0lives+1">
+          <type href="../MM/pacmanDiffMM.ecore#//Game/lives"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLO8SmCAEeyqfqTOJJxUtw" name="changeGame_lives_RHS">
+      <nodes xmi:id="_CLO8S2CAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGame"/>
+        <attributes xmi:id="_CLO8TGCAEeyqfqTOJJxUtw" value="n0lives+1">
+          <type href="../MM/pacmanDiffMM.ecore#//Game/lives"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLO8TWCAEeyqfqTOJJxUtw" origin="_CLO8SGCAEeyqfqTOJJxUtw" image="_CLO8S2CAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8TmCAEeyqfqTOJJxUtw" name="changeGame_score">
+    <parameters xmi:id="_CLO8T2CAEeyqfqTOJJxUtw" name="n0score" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_CLO8UGCAEeyqfqTOJJxUtw" name="changeGame_score_LHS">
+      <nodes xmi:id="_CLO8UWCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGame"/>
+        <attributes xmi:id="_CLO8UmCAEeyqfqTOJJxUtw" value="n0score+1">
+          <type href="../MM/pacmanDiffMM.ecore#//Game/score"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLO8U2CAEeyqfqTOJJxUtw" name="changeGame_score_RHS">
+      <nodes xmi:id="_CLO8VGCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGame"/>
+        <attributes xmi:id="_CLO8VWCAEeyqfqTOJJxUtw" value="n0score+1">
+          <type href="../MM/pacmanDiffMM.ecore#//Game/score"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLO8VmCAEeyqfqTOJJxUtw" origin="_CLO8UWCAEeyqfqTOJJxUtw" image="_CLO8VGCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8V2CAEeyqfqTOJJxUtw" name="addGame_gridnodes">
+    <lhs xmi:id="_CLO8WGCAEeyqfqTOJJxUtw" name="addGame_gridnodes_LHS">
+      <nodes xmi:id="_CLO8WWCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLO8WmCAEeyqfqTOJJxUtw" name="addGame_gridnodes_RHS">
+      <nodes xmi:id="_CLO8W2CAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8XGCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGame_gridnodes"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLO8XWCAEeyqfqTOJJxUtw" origin="_CLO8WWCAEeyqfqTOJJxUtw" image="_CLO8W2CAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8XmCAEeyqfqTOJJxUtw" name="deleteGame_gridnodes">
+    <lhs xmi:id="_CLO8X2CAEeyqfqTOJJxUtw" name="deleteGame_gridnodes_LHS">
+      <nodes xmi:id="_CLO8YGCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8YWCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGame_gridnodes"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLO8YmCAEeyqfqTOJJxUtw" name="deleteGame_gridnodes_RHS">
+      <nodes xmi:id="_CLO8Y2CAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLO8ZGCAEeyqfqTOJJxUtw" origin="_CLO8YGCAEeyqfqTOJJxUtw" image="_CLO8Y2CAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8ZWCAEeyqfqTOJJxUtw" name="addGame_entities">
+    <lhs xmi:id="_CLO8ZmCAEeyqfqTOJJxUtw" name="addGame_entities_LHS">
+      <nodes xmi:id="_CLO8Z2CAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLO8aGCAEeyqfqTOJJxUtw" name="addGame_entities_RHS">
+      <nodes xmi:id="_CLO8aWCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8amCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGame_entities"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLO8a2CAEeyqfqTOJJxUtw" origin="_CLO8Z2CAEeyqfqTOJJxUtw" image="_CLO8aWCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8bGCAEeyqfqTOJJxUtw" name="deleteGame_entities">
+    <lhs xmi:id="_CLO8bWCAEeyqfqTOJJxUtw" name="deleteGame_entities_LHS">
+      <nodes xmi:id="_CLO8bmCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8b2CAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGame_entities"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLO8cGCAEeyqfqTOJJxUtw" name="deleteGame_entities_RHS">
+      <nodes xmi:id="_CLO8cWCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLO8cmCAEeyqfqTOJJxUtw" origin="_CLO8bmCAEeyqfqTOJJxUtw" image="_CLO8cWCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8c2CAEeyqfqTOJJxUtw" name="delete_Energizer">
+    <lhs xmi:id="_CLO8dGCAEeyqfqTOJJxUtw" name="delete_Energizer_LHS">
+      <nodes xmi:id="_CLO8dWCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLO8d2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8dmCAEeyqfqTOJJxUtw" name="n1" incoming="_CLO8d2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffEnergizer"/>
+      </nodes>
+      <edges xmi:id="_CLO8d2CAEeyqfqTOJJxUtw" source="_CLO8dWCAEeyqfqTOJJxUtw" target="_CLO8dmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLO8eGCAEeyqfqTOJJxUtw" name="delete_Energizer_RHS">
+      <nodes xmi:id="_CLO8eWCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLO8emCAEeyqfqTOJJxUtw" origin="_CLO8dWCAEeyqfqTOJJxUtw" image="_CLO8eWCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8e2CAEeyqfqTOJJxUtw" name="changeEnergizer_value">
+    <parameters xmi:id="_CLO8fGCAEeyqfqTOJJxUtw" name="n1value" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_CLO8fWCAEeyqfqTOJJxUtw" name="changeEnergizer_value_LHS">
+      <nodes xmi:id="_CLO8fmCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLO8gWCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8f2CAEeyqfqTOJJxUtw" name="n1" incoming="_CLO8gWCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffEnergizer"/>
+        <attributes xmi:id="_CLO8gGCAEeyqfqTOJJxUtw" value="n1value+1">
+          <type href="../MM/pacmanDiffMM.ecore#//Food/value"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_CLO8gWCAEeyqfqTOJJxUtw" source="_CLO8fmCAEeyqfqTOJJxUtw" target="_CLO8f2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLO8gmCAEeyqfqTOJJxUtw" name="changeEnergizer_value_RHS">
+      <nodes xmi:id="_CLO8g2CAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8hGCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffEnergizer"/>
+        <attributes xmi:id="_CLO8hWCAEeyqfqTOJJxUtw" value="n1value+1">
+          <type href="../MM/pacmanDiffMM.ecore#//Food/value"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLO8hmCAEeyqfqTOJJxUtw" origin="_CLO8fmCAEeyqfqTOJJxUtw" image="_CLO8g2CAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLO8h2CAEeyqfqTOJJxUtw" origin="_CLO8f2CAEeyqfqTOJJxUtw" image="_CLO8hGCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8iGCAEeyqfqTOJJxUtw" name="changeEnergizer_durations">
+    <parameters xmi:id="_CLO8iWCAEeyqfqTOJJxUtw" name="n1durations" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_CLO8imCAEeyqfqTOJJxUtw" name="changeEnergizer_durations_LHS">
+      <nodes xmi:id="_CLO8i2CAEeyqfqTOJJxUtw" name="n0" outgoing="_CLO8jmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8jGCAEeyqfqTOJJxUtw" name="n1" incoming="_CLO8jmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffEnergizer"/>
+        <attributes xmi:id="_CLO8jWCAEeyqfqTOJJxUtw" value="n1durations+1">
+          <type href="../MM/pacmanDiffMM.ecore#//Energizer/durations"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_CLO8jmCAEeyqfqTOJJxUtw" source="_CLO8i2CAEeyqfqTOJJxUtw" target="_CLO8jGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLO8j2CAEeyqfqTOJJxUtw" name="changeEnergizer_durations_RHS">
+      <nodes xmi:id="_CLO8kGCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8kWCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffEnergizer"/>
+        <attributes xmi:id="_CLO8kmCAEeyqfqTOJJxUtw" value="n1durations+1">
+          <type href="../MM/pacmanDiffMM.ecore#//Energizer/durations"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLO8k2CAEeyqfqTOJJxUtw" origin="_CLO8i2CAEeyqfqTOJJxUtw" image="_CLO8kGCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLO8lGCAEeyqfqTOJJxUtw" origin="_CLO8jGCAEeyqfqTOJJxUtw" image="_CLO8kWCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8lWCAEeyqfqTOJJxUtw" name="addEnergizer_on">
+    <lhs xmi:id="_CLO8lmCAEeyqfqTOJJxUtw" name="addEnergizer_on_LHS">
+      <nodes xmi:id="_CLO8l2CAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8mGCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//Energizer"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLO8mWCAEeyqfqTOJJxUtw" name="addEnergizer_on_RHS">
+      <nodes xmi:id="_CLO8mmCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLO8nWCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8m2CAEeyqfqTOJJxUtw" name="n1" incoming="_CLO8nWCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Energizer"/>
+      </nodes>
+      <nodes xmi:id="_CLO8nGCAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_CLO8nWCAEeyqfqTOJJxUtw" source="_CLO8mmCAEeyqfqTOJJxUtw" target="_CLO8m2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_CLO8nmCAEeyqfqTOJJxUtw" origin="_CLO8l2CAEeyqfqTOJJxUtw" image="_CLO8mmCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLO8n2CAEeyqfqTOJJxUtw" origin="_CLO8mGCAEeyqfqTOJJxUtw" image="_CLO8m2CAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8oGCAEeyqfqTOJJxUtw" name="deleteEnergizer_on">
+    <lhs xmi:id="_CLO8oWCAEeyqfqTOJJxUtw" name="deleteEnergizer_on_LHS">
+      <nodes xmi:id="_CLO8omCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLO8pWCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8o2CAEeyqfqTOJJxUtw" name="n1" incoming="_CLO8pWCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Energizer"/>
+      </nodes>
+      <nodes xmi:id="_CLO8pGCAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_CLO8pWCAEeyqfqTOJJxUtw" source="_CLO8omCAEeyqfqTOJJxUtw" target="_CLO8o2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLO8pmCAEeyqfqTOJJxUtw" name="deleteEnergizer_on_RHS">
+      <nodes xmi:id="_CLO8p2CAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8qGCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//Energizer"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLO8qWCAEeyqfqTOJJxUtw" origin="_CLO8omCAEeyqfqTOJJxUtw" image="_CLO8p2CAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLO8qmCAEeyqfqTOJJxUtw" origin="_CLO8o2CAEeyqfqTOJJxUtw" image="_CLO8qGCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8q2CAEeyqfqTOJJxUtw" name="delete_Pacman">
+    <lhs xmi:id="_CLO8rGCAEeyqfqTOJJxUtw" name="delete_Pacman_LHS">
+      <nodes xmi:id="_CLO8rWCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLO8r2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8rmCAEeyqfqTOJJxUtw" name="n1" incoming="_CLO8r2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPacman"/>
+      </nodes>
+      <edges xmi:id="_CLO8r2CAEeyqfqTOJJxUtw" source="_CLO8rWCAEeyqfqTOJJxUtw" target="_CLO8rmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLO8sGCAEeyqfqTOJJxUtw" name="delete_Pacman_RHS">
+      <nodes xmi:id="_CLO8sWCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLO8smCAEeyqfqTOJJxUtw" origin="_CLO8rWCAEeyqfqTOJJxUtw" image="_CLO8sWCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8s2CAEeyqfqTOJJxUtw" name="changePacman_initialPosition">
+    <parameters xmi:id="_CLO8tGCAEeyqfqTOJJxUtw" name="n2initialPosition" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_CLO8tWCAEeyqfqTOJJxUtw" name="changePacman_initialPosition_LHS">
+      <nodes xmi:id="_CLO8tmCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLO8uWCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8t2CAEeyqfqTOJJxUtw" name="n1" incoming="_CLO8uWCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPacman"/>
+        <attributes xmi:id="_CLO8uGCAEeyqfqTOJJxUtw" value="CONTRADICTING">
+          <type href="../MM/pacmanDiffMM.ecore#//Pacman/initialPosition"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_CLO8uWCAEeyqfqTOJJxUtw" source="_CLO8tmCAEeyqfqTOJJxUtw" target="_CLO8t2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLO8umCAEeyqfqTOJJxUtw" name="changePacman_initialPosition_RHS">
+      <nodes xmi:id="_CLO8u2CAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8vGCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPacman"/>
+        <attributes xmi:id="_CLO8vWCAEeyqfqTOJJxUtw" value="CONTRADICTING">
+          <type href="../MM/pacmanDiffMM.ecore#//Pacman/initialPosition"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLO8vmCAEeyqfqTOJJxUtw" origin="_CLO8tmCAEeyqfqTOJJxUtw" image="_CLO8u2CAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLO8v2CAEeyqfqTOJJxUtw" origin="_CLO8t2CAEeyqfqTOJJxUtw" image="_CLO8vGCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8wGCAEeyqfqTOJJxUtw" name="addPacman_on">
+    <lhs xmi:id="_CLO8wWCAEeyqfqTOJJxUtw" name="addPacman_on_LHS">
+      <nodes xmi:id="_CLO8wmCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8w2CAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLO8xGCAEeyqfqTOJJxUtw" name="addPacman_on_RHS">
+      <nodes xmi:id="_CLO8xWCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLO8yGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8xmCAEeyqfqTOJJxUtw" name="n1" incoming="_CLO8yGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_CLO8x2CAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_CLO8yGCAEeyqfqTOJJxUtw" source="_CLO8xWCAEeyqfqTOJJxUtw" target="_CLO8xmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_CLO8yWCAEeyqfqTOJJxUtw" origin="_CLO8wmCAEeyqfqTOJJxUtw" image="_CLO8xWCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLO8ymCAEeyqfqTOJJxUtw" origin="_CLO8w2CAEeyqfqTOJJxUtw" image="_CLO8xmCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO8y2CAEeyqfqTOJJxUtw" name="deletePacman_on">
+    <lhs xmi:id="_CLO8zGCAEeyqfqTOJJxUtw" name="deletePacman_on_LHS">
+      <nodes xmi:id="_CLO8zWCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLO80GCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO8zmCAEeyqfqTOJJxUtw" name="n1" incoming="_CLO80GCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_CLO8z2CAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_CLO80GCAEeyqfqTOJJxUtw" source="_CLO8zWCAEeyqfqTOJJxUtw" target="_CLO8zmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLO80WCAEeyqfqTOJJxUtw" name="deletePacman_on_RHS">
+      <nodes xmi:id="_CLO80mCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO802CAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//Pacman"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLO81GCAEeyqfqTOJJxUtw" origin="_CLO8zWCAEeyqfqTOJJxUtw" image="_CLO80mCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLO81WCAEeyqfqTOJJxUtw" origin="_CLO8zmCAEeyqfqTOJJxUtw" image="_CLO802CAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO81mCAEeyqfqTOJJxUtw" name="delete_GridNode">
+    <lhs xmi:id="_CLO812CAEeyqfqTOJJxUtw" name="delete_GridNode_LHS">
+      <nodes xmi:id="_CLO82GCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLO82mCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO82WCAEeyqfqTOJJxUtw" name="n1" incoming="_CLO82mCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGridNode"/>
+      </nodes>
+      <edges xmi:id="_CLO82mCAEeyqfqTOJJxUtw" source="_CLO82GCAEeyqfqTOJJxUtw" target="_CLO82WCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLO822CAEeyqfqTOJJxUtw" name="delete_GridNode_RHS">
+      <nodes xmi:id="_CLO83GCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLO83WCAEeyqfqTOJJxUtw" origin="_CLO82GCAEeyqfqTOJJxUtw" image="_CLO83GCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO83mCAEeyqfqTOJJxUtw" name="addGridNode_up">
+    <lhs xmi:id="_CLO832CAEeyqfqTOJJxUtw" name="addGridNode_up_LHS">
+      <nodes xmi:id="_CLO84GCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO84WCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLO84mCAEeyqfqTOJJxUtw" name="addGridNode_up_RHS">
+      <nodes xmi:id="_CLO842CAEeyqfqTOJJxUtw" name="n0" outgoing="_CLO85mCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLO85GCAEeyqfqTOJJxUtw" name="n1" incoming="_CLO85mCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_CLO85WCAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGridNode_up"/>
+      </nodes>
+      <edges xmi:id="_CLO85mCAEeyqfqTOJJxUtw" source="_CLO842CAEeyqfqTOJJxUtw" target="_CLO85GCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_CLO852CAEeyqfqTOJJxUtw" origin="_CLO84GCAEeyqfqTOJJxUtw" image="_CLO842CAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLO86GCAEeyqfqTOJJxUtw" origin="_CLO84WCAEeyqfqTOJJxUtw" image="_CLO85GCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLO86WCAEeyqfqTOJJxUtw" name="deleteGridNode_up">
+    <lhs xmi:id="_CLPjUGCAEeyqfqTOJJxUtw" name="deleteGridNode_up_LHS">
+      <nodes xmi:id="_CLPjUWCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPjVGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjUmCAEeyqfqTOJJxUtw" name="n1" incoming="_CLPjVGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_CLPjU2CAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGridNode_up"/>
+      </nodes>
+      <edges xmi:id="_CLPjVGCAEeyqfqTOJJxUtw" source="_CLPjUWCAEeyqfqTOJJxUtw" target="_CLPjUmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLPjVWCAEeyqfqTOJJxUtw" name="deleteGridNode_up_RHS">
+      <nodes xmi:id="_CLPjVmCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjV2CAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLPjWGCAEeyqfqTOJJxUtw" origin="_CLPjUWCAEeyqfqTOJJxUtw" image="_CLPjVmCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPjWWCAEeyqfqTOJJxUtw" origin="_CLPjUmCAEeyqfqTOJJxUtw" image="_CLPjV2CAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPjWmCAEeyqfqTOJJxUtw" name="addGridNode_down">
+    <lhs xmi:id="_CLPjW2CAEeyqfqTOJJxUtw" name="addGridNode_down_LHS">
+      <nodes xmi:id="_CLPjXGCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjXWCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLPjXmCAEeyqfqTOJJxUtw" name="addGridNode_down_RHS">
+      <nodes xmi:id="_CLPjX2CAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPjYmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjYGCAEeyqfqTOJJxUtw" name="n1" incoming="_CLPjYmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_CLPjYWCAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGridNode_down"/>
+      </nodes>
+      <edges xmi:id="_CLPjYmCAEeyqfqTOJJxUtw" source="_CLPjX2CAEeyqfqTOJJxUtw" target="_CLPjYGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_CLPjY2CAEeyqfqTOJJxUtw" origin="_CLPjXGCAEeyqfqTOJJxUtw" image="_CLPjX2CAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPjZGCAEeyqfqTOJJxUtw" origin="_CLPjXWCAEeyqfqTOJJxUtw" image="_CLPjYGCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPjZWCAEeyqfqTOJJxUtw" name="deleteGridNode_down">
+    <lhs xmi:id="_CLPjZmCAEeyqfqTOJJxUtw" name="deleteGridNode_down_LHS">
+      <nodes xmi:id="_CLPjZ2CAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPjamCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjaGCAEeyqfqTOJJxUtw" name="n1" incoming="_CLPjamCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_CLPjaWCAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGridNode_down"/>
+      </nodes>
+      <edges xmi:id="_CLPjamCAEeyqfqTOJJxUtw" source="_CLPjZ2CAEeyqfqTOJJxUtw" target="_CLPjaGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLPja2CAEeyqfqTOJJxUtw" name="deleteGridNode_down_RHS">
+      <nodes xmi:id="_CLPjbGCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjbWCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLPjbmCAEeyqfqTOJJxUtw" origin="_CLPjZ2CAEeyqfqTOJJxUtw" image="_CLPjbGCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPjb2CAEeyqfqTOJJxUtw" origin="_CLPjaGCAEeyqfqTOJJxUtw" image="_CLPjbWCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPjcGCAEeyqfqTOJJxUtw" name="addGridNode_left">
+    <lhs xmi:id="_CLPjcWCAEeyqfqTOJJxUtw" name="addGridNode_left_LHS">
+      <nodes xmi:id="_CLPjcmCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjc2CAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLPjdGCAEeyqfqTOJJxUtw" name="addGridNode_left_RHS">
+      <nodes xmi:id="_CLPjdWCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPjeGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjdmCAEeyqfqTOJJxUtw" name="n1" incoming="_CLPjeGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_CLPjd2CAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGridNode_left"/>
+      </nodes>
+      <edges xmi:id="_CLPjeGCAEeyqfqTOJJxUtw" source="_CLPjdWCAEeyqfqTOJJxUtw" target="_CLPjdmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_CLPjeWCAEeyqfqTOJJxUtw" origin="_CLPjcmCAEeyqfqTOJJxUtw" image="_CLPjdWCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPjemCAEeyqfqTOJJxUtw" origin="_CLPjc2CAEeyqfqTOJJxUtw" image="_CLPjdmCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPje2CAEeyqfqTOJJxUtw" name="deleteGridNode_left">
+    <lhs xmi:id="_CLPjfGCAEeyqfqTOJJxUtw" name="deleteGridNode_left_LHS">
+      <nodes xmi:id="_CLPjfWCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPjgGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjfmCAEeyqfqTOJJxUtw" name="n1" incoming="_CLPjgGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_CLPjf2CAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGridNode_left"/>
+      </nodes>
+      <edges xmi:id="_CLPjgGCAEeyqfqTOJJxUtw" source="_CLPjfWCAEeyqfqTOJJxUtw" target="_CLPjfmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLPjgWCAEeyqfqTOJJxUtw" name="deleteGridNode_left_RHS">
+      <nodes xmi:id="_CLPjgmCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjg2CAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLPjhGCAEeyqfqTOJJxUtw" origin="_CLPjfWCAEeyqfqTOJJxUtw" image="_CLPjgmCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPjhWCAEeyqfqTOJJxUtw" origin="_CLPjfmCAEeyqfqTOJJxUtw" image="_CLPjg2CAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPjhmCAEeyqfqTOJJxUtw" name="addGridNode_right">
+    <lhs xmi:id="_CLPjh2CAEeyqfqTOJJxUtw" name="addGridNode_right_LHS">
+      <nodes xmi:id="_CLPjiGCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjiWCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLPjimCAEeyqfqTOJJxUtw" name="addGridNode_right_RHS">
+      <nodes xmi:id="_CLPji2CAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPjjmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjjGCAEeyqfqTOJJxUtw" name="n1" incoming="_CLPjjmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_CLPjjWCAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGridNode_right"/>
+      </nodes>
+      <edges xmi:id="_CLPjjmCAEeyqfqTOJJxUtw" source="_CLPji2CAEeyqfqTOJJxUtw" target="_CLPjjGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_CLPjj2CAEeyqfqTOJJxUtw" origin="_CLPjiGCAEeyqfqTOJJxUtw" image="_CLPji2CAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPjkGCAEeyqfqTOJJxUtw" origin="_CLPjiWCAEeyqfqTOJJxUtw" image="_CLPjjGCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPjkWCAEeyqfqTOJJxUtw" name="deleteGridNode_right">
+    <lhs xmi:id="_CLPjkmCAEeyqfqTOJJxUtw" name="deleteGridNode_right_LHS">
+      <nodes xmi:id="_CLPjk2CAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPjlmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjlGCAEeyqfqTOJJxUtw" name="n1" incoming="_CLPjlmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_CLPjlWCAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGridNode_right"/>
+      </nodes>
+      <edges xmi:id="_CLPjlmCAEeyqfqTOJJxUtw" source="_CLPjk2CAEeyqfqTOJJxUtw" target="_CLPjlGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/gridnodes"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLPjl2CAEeyqfqTOJJxUtw" name="deleteGridNode_right_RHS">
+      <nodes xmi:id="_CLPjmGCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjmWCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//GridNode"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLPjmmCAEeyqfqTOJJxUtw" origin="_CLPjk2CAEeyqfqTOJJxUtw" image="_CLPjmGCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPjm2CAEeyqfqTOJJxUtw" origin="_CLPjlGCAEeyqfqTOJJxUtw" image="_CLPjmWCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPjnGCAEeyqfqTOJJxUtw" name="delete_Fruit">
+    <lhs xmi:id="_CLPjnWCAEeyqfqTOJJxUtw" name="delete_Fruit_LHS">
+      <nodes xmi:id="_CLPjnmCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPjoGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjn2CAEeyqfqTOJJxUtw" name="n1" incoming="_CLPjoGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffFruit"/>
+      </nodes>
+      <edges xmi:id="_CLPjoGCAEeyqfqTOJJxUtw" source="_CLPjnmCAEeyqfqTOJJxUtw" target="_CLPjn2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLPjoWCAEeyqfqTOJJxUtw" name="delete_Fruit_RHS">
+      <nodes xmi:id="_CLPjomCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLPjo2CAEeyqfqTOJJxUtw" origin="_CLPjnmCAEeyqfqTOJJxUtw" image="_CLPjomCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPjpGCAEeyqfqTOJJxUtw" name="changeFruit_value">
+    <parameters xmi:id="_CLPjpWCAEeyqfqTOJJxUtw" name="n5value" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_CLPjpmCAEeyqfqTOJJxUtw" name="changeFruit_value_LHS">
+      <nodes xmi:id="_CLPjp2CAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPjqmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjqGCAEeyqfqTOJJxUtw" name="n1" incoming="_CLPjqmCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffFruit"/>
+        <attributes xmi:id="_CLPjqWCAEeyqfqTOJJxUtw" value="n5value+1">
+          <type href="../MM/pacmanDiffMM.ecore#//Food/value"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_CLPjqmCAEeyqfqTOJJxUtw" source="_CLPjp2CAEeyqfqTOJJxUtw" target="_CLPjqGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLPjq2CAEeyqfqTOJJxUtw" name="changeFruit_value_RHS">
+      <nodes xmi:id="_CLPjrGCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjrWCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffFruit"/>
+        <attributes xmi:id="_CLPjrmCAEeyqfqTOJJxUtw" value="n5value+1">
+          <type href="../MM/pacmanDiffMM.ecore#//Food/value"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLPjr2CAEeyqfqTOJJxUtw" origin="_CLPjp2CAEeyqfqTOJJxUtw" image="_CLPjrGCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPjsGCAEeyqfqTOJJxUtw" origin="_CLPjqGCAEeyqfqTOJJxUtw" image="_CLPjrWCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPjsWCAEeyqfqTOJJxUtw" name="addFruit_on">
+    <lhs xmi:id="_CLPjsmCAEeyqfqTOJJxUtw" name="addFruit_on_LHS">
+      <nodes xmi:id="_CLPjs2CAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjtGCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//Fruit"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLPjtWCAEeyqfqTOJJxUtw" name="addFruit_on_RHS">
+      <nodes xmi:id="_CLPjtmCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPjuWCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjt2CAEeyqfqTOJJxUtw" name="n1" incoming="_CLPjuWCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Fruit"/>
+      </nodes>
+      <nodes xmi:id="_CLPjuGCAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_CLPjuWCAEeyqfqTOJJxUtw" source="_CLPjtmCAEeyqfqTOJJxUtw" target="_CLPjt2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_CLPjumCAEeyqfqTOJJxUtw" origin="_CLPjs2CAEeyqfqTOJJxUtw" image="_CLPjtmCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPju2CAEeyqfqTOJJxUtw" origin="_CLPjtGCAEeyqfqTOJJxUtw" image="_CLPjt2CAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPjvGCAEeyqfqTOJJxUtw" name="deleteFruit_on">
+    <lhs xmi:id="_CLPjvWCAEeyqfqTOJJxUtw" name="deleteFruit_on_LHS">
+      <nodes xmi:id="_CLPjvmCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPjwWCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjv2CAEeyqfqTOJJxUtw" name="n1" incoming="_CLPjwWCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Fruit"/>
+      </nodes>
+      <nodes xmi:id="_CLPjwGCAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_CLPjwWCAEeyqfqTOJJxUtw" source="_CLPjvmCAEeyqfqTOJJxUtw" target="_CLPjv2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLPjwmCAEeyqfqTOJJxUtw" name="deleteFruit_on_RHS">
+      <nodes xmi:id="_CLPjw2CAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjxGCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//Fruit"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLPjxWCAEeyqfqTOJJxUtw" origin="_CLPjvmCAEeyqfqTOJJxUtw" image="_CLPjw2CAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPjxmCAEeyqfqTOJJxUtw" origin="_CLPjv2CAEeyqfqTOJJxUtw" image="_CLPjxGCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPjx2CAEeyqfqTOJJxUtw" name="delete_Ghost">
+    <lhs xmi:id="_CLPjyGCAEeyqfqTOJJxUtw" name="delete_Ghost_LHS">
+      <nodes xmi:id="_CLPjyWCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPjy2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPjymCAEeyqfqTOJJxUtw" name="n1" incoming="_CLPjy2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGhost"/>
+      </nodes>
+      <edges xmi:id="_CLPjy2CAEeyqfqTOJJxUtw" source="_CLPjyWCAEeyqfqTOJJxUtw" target="_CLPjymCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLPjzGCAEeyqfqTOJJxUtw" name="delete_Ghost_RHS">
+      <nodes xmi:id="_CLPjzWCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLPjzmCAEeyqfqTOJJxUtw" origin="_CLPjyWCAEeyqfqTOJJxUtw" image="_CLPjzWCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPjz2CAEeyqfqTOJJxUtw" name="changeGhost_strategy">
+    <parameters xmi:id="_CLPj0GCAEeyqfqTOJJxUtw" name="n6strategy" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_CLPj0WCAEeyqfqTOJJxUtw" name="changeGhost_strategy_LHS">
+      <nodes xmi:id="_CLPj0mCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPj1WCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPj02CAEeyqfqTOJJxUtw" name="n1" incoming="_CLPj1WCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGhost"/>
+        <attributes xmi:id="_CLPj1GCAEeyqfqTOJJxUtw" value="CONTRADICTING">
+          <type href="../MM/pacmanDiffMM.ecore#//Ghost/strategy"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_CLPj1WCAEeyqfqTOJJxUtw" source="_CLPj0mCAEeyqfqTOJJxUtw" target="_CLPj02CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLPj1mCAEeyqfqTOJJxUtw" name="changeGhost_strategy_RHS">
+      <nodes xmi:id="_CLPj12CAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPj2GCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffGhost"/>
+        <attributes xmi:id="_CLPj2WCAEeyqfqTOJJxUtw" value="CONTRADICTING">
+          <type href="../MM/pacmanDiffMM.ecore#//Ghost/strategy"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLPj2mCAEeyqfqTOJJxUtw" origin="_CLPj0mCAEeyqfqTOJJxUtw" image="_CLPj12CAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPj22CAEeyqfqTOJJxUtw" origin="_CLPj02CAEeyqfqTOJJxUtw" image="_CLPj2GCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPj3GCAEeyqfqTOJJxUtw" name="addGhost_on">
+    <lhs xmi:id="_CLPj3WCAEeyqfqTOJJxUtw" name="addGhost_on_LHS">
+      <nodes xmi:id="_CLPj3mCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPj32CAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLPj4GCAEeyqfqTOJJxUtw" name="addGhost_on_RHS">
+      <nodes xmi:id="_CLPj4WCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPj5GCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPj4mCAEeyqfqTOJJxUtw" name="n1" incoming="_CLPj5GCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_CLPj42CAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_CLPj5GCAEeyqfqTOJJxUtw" source="_CLPj4WCAEeyqfqTOJJxUtw" target="_CLPj4mCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_CLPj5WCAEeyqfqTOJJxUtw" origin="_CLPj3mCAEeyqfqTOJJxUtw" image="_CLPj4WCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPj5mCAEeyqfqTOJJxUtw" origin="_CLPj32CAEeyqfqTOJJxUtw" image="_CLPj4mCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPj52CAEeyqfqTOJJxUtw" name="deleteGhost_on">
+    <lhs xmi:id="_CLPj6GCAEeyqfqTOJJxUtw" name="deleteGhost_on_LHS">
+      <nodes xmi:id="_CLPj6WCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPj7GCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPj6mCAEeyqfqTOJJxUtw" name="n1" incoming="_CLPj7GCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+      <nodes xmi:id="_CLPj62CAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_CLPj7GCAEeyqfqTOJJxUtw" source="_CLPj6WCAEeyqfqTOJJxUtw" target="_CLPj6mCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLPj7WCAEeyqfqTOJJxUtw" name="deleteGhost_on_RHS">
+      <nodes xmi:id="_CLPj7mCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPj72CAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//Ghost"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLPj8GCAEeyqfqTOJJxUtw" origin="_CLPj6WCAEeyqfqTOJJxUtw" image="_CLPj7mCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPj8WCAEeyqfqTOJJxUtw" origin="_CLPj6mCAEeyqfqTOJJxUtw" image="_CLPj72CAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPj8mCAEeyqfqTOJJxUtw" name="delete_Food">
+    <lhs xmi:id="_CLPj82CAEeyqfqTOJJxUtw" name="delete_Food_LHS">
+      <nodes xmi:id="_CLPj9GCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPj9mCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPj9WCAEeyqfqTOJJxUtw" name="n1" incoming="_CLPj9mCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffFood"/>
+      </nodes>
+      <edges xmi:id="_CLPj9mCAEeyqfqTOJJxUtw" source="_CLPj9GCAEeyqfqTOJJxUtw" target="_CLPj9WCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLPj92CAEeyqfqTOJJxUtw" name="delete_Food_RHS">
+      <nodes xmi:id="_CLPj-GCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLPj-WCAEeyqfqTOJJxUtw" origin="_CLPj9GCAEeyqfqTOJJxUtw" image="_CLPj-GCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPj-mCAEeyqfqTOJJxUtw" name="changeFood_value">
+    <parameters xmi:id="_CLPj-2CAEeyqfqTOJJxUtw" name="n7value" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_CLPj_GCAEeyqfqTOJJxUtw" name="changeFood_value_LHS">
+      <nodes xmi:id="_CLPj_WCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPkAGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPj_mCAEeyqfqTOJJxUtw" name="n1" incoming="_CLPkAGCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffFood"/>
+        <attributes xmi:id="_CLPj_2CAEeyqfqTOJJxUtw" value="n7value+1">
+          <type href="../MM/pacmanDiffMM.ecore#//Food/value"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_CLPkAGCAEeyqfqTOJJxUtw" source="_CLPj_WCAEeyqfqTOJJxUtw" target="_CLPj_mCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLPkAWCAEeyqfqTOJJxUtw" name="changeFood_value_RHS">
+      <nodes xmi:id="_CLPkAmCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPkA2CAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffFood"/>
+        <attributes xmi:id="_CLPkBGCAEeyqfqTOJJxUtw" value="n7value+1">
+          <type href="../MM/pacmanDiffMM.ecore#//Food/value"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLPkBWCAEeyqfqTOJJxUtw" origin="_CLPj_WCAEeyqfqTOJJxUtw" image="_CLPkAmCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPkBmCAEeyqfqTOJJxUtw" origin="_CLPj_mCAEeyqfqTOJJxUtw" image="_CLPkA2CAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPkB2CAEeyqfqTOJJxUtw" name="addFood_on">
+    <lhs xmi:id="_CLPkCGCAEeyqfqTOJJxUtw" name="addFood_on_LHS">
+      <nodes xmi:id="_CLPkCWCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPkCmCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//Food"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_CLPkC2CAEeyqfqTOJJxUtw" name="addFood_on_RHS">
+      <nodes xmi:id="_CLPkDGCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPkD2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPkDWCAEeyqfqTOJJxUtw" name="n1" incoming="_CLPkD2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Food"/>
+      </nodes>
+      <nodes xmi:id="_CLPkDmCAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_CLPkD2CAEeyqfqTOJJxUtw" source="_CLPkDGCAEeyqfqTOJJxUtw" target="_CLPkDWCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_CLPkEGCAEeyqfqTOJJxUtw" origin="_CLPkCWCAEeyqfqTOJJxUtw" image="_CLPkDGCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPkEWCAEeyqfqTOJJxUtw" origin="_CLPkCmCAEeyqfqTOJJxUtw" image="_CLPkDWCAEeyqfqTOJJxUtw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_CLPkEmCAEeyqfqTOJJxUtw" name="deleteFood_on">
+    <lhs xmi:id="_CLPkE2CAEeyqfqTOJJxUtw" name="deleteFood_on_LHS">
+      <nodes xmi:id="_CLPkFGCAEeyqfqTOJJxUtw" name="n0" outgoing="_CLPkF2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPkFWCAEeyqfqTOJJxUtw" name="n1" incoming="_CLPkF2CAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Food"/>
+      </nodes>
+      <nodes xmi:id="_CLPkFmCAEeyqfqTOJJxUtw" name="n2">
+        <type href="../MM/pacmanDiffMM.ecore#//DiffPositionableEntity_on"/>
+      </nodes>
+      <edges xmi:id="_CLPkF2CAEeyqfqTOJJxUtw" source="_CLPkFGCAEeyqfqTOJJxUtw" target="_CLPkFWCAEeyqfqTOJJxUtw">
+        <type href="../MM/pacmanDiffMM.ecore#//Game/entities"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_CLPkGGCAEeyqfqTOJJxUtw" name="deleteFood_on_RHS">
+      <nodes xmi:id="_CLPkGWCAEeyqfqTOJJxUtw" name="n0">
+        <type href="../MM/pacmanDiffMM.ecore#//Game"/>
+      </nodes>
+      <nodes xmi:id="_CLPkGmCAEeyqfqTOJJxUtw" name="n1">
+        <type href="../MM/pacmanDiffMM.ecore#//Food"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CLPkG2CAEeyqfqTOJJxUtw" origin="_CLPkFGCAEeyqfqTOJJxUtw" image="_CLPkGWCAEeyqfqTOJJxUtw"/>
+    <mappings xmi:id="_CLPkHGCAEeyqfqTOJJxUtw" origin="_CLPkFWCAEeyqfqTOJJxUtw" image="_CLPkGmCAEeyqfqTOJJxUtw"/>
+  </units>
+</henshin:Module>

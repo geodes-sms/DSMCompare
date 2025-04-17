@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_rnjn4PRJEemiYp-F8vEvxA">
+  <imports href="../metamodels/PacManGo.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_swbUcPRJEemiYp-F8vEvxA" name="eat">
+    <lhs xmi:id="_swu2cPRJEemiYp-F8vEvxA" name="Lhs">
+      <nodes xmi:id="_wRm8MPRJEemiYp-F8vEvxA" incoming="_05-1gPRJEemiYp-F8vEvxA _2Ao7kPRJEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_yRa30PRJEemiYp-F8vEvxA" outgoing="_05-1gPRJEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_0IoREPRJEemiYp-F8vEvxA" outgoing="_2Ao7kPRJEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//Food"/>
+      </nodes>
+      <edges xmi:id="_05-1gPRJEemiYp-F8vEvxA" source="_yRa30PRJEemiYp-F8vEvxA" target="_wRm8MPRJEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//PositionableEntity/on"/>
+      </edges>
+      <edges xmi:id="_2Ao7kPRJEemiYp-F8vEvxA" source="_0IoREPRJEemiYp-F8vEvxA" target="_wRm8MPRJEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//PositionableEntity/on"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_swu2cfRJEemiYp-F8vEvxA" name="Rhs">
+      <nodes xmi:id="_wRm8MfRJEemiYp-F8vEvxA" incoming="_05-1gfRJEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_yRa30fRJEemiYp-F8vEvxA" outgoing="_05-1gfRJEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//Pacman"/>
+      </nodes>
+      <edges xmi:id="_05-1gfRJEemiYp-F8vEvxA" source="_yRa30fRJEemiYp-F8vEvxA" target="_wRm8MfRJEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//PositionableEntity/on"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_wRm8MvRJEemiYp-F8vEvxA" origin="_wRm8MPRJEemiYp-F8vEvxA" image="_wRm8MfRJEemiYp-F8vEvxA"/>
+    <mappings xmi:id="_yRa30vRJEemiYp-F8vEvxA" origin="_yRa30PRJEemiYp-F8vEvxA" image="_yRa30fRJEemiYp-F8vEvxA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_AGrXcPRKEemiYp-F8vEvxA" name="die">
+    <lhs xmi:id="_AG-SYPRKEemiYp-F8vEvxA" name="Lhs">
+      <nodes xmi:id="_BolPEPRKEemiYp-F8vEvxA" incoming="_HA5XkPRKEemiYp-F8vEvxA _HitEIPRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_ElE1YPRKEemiYp-F8vEvxA" outgoing="_HitEIPRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//Pacman"/>
+      </nodes>
+      <nodes xmi:id="_GZdkIPRKEemiYp-F8vEvxA" outgoing="_HA5XkPRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//Ghost"/>
+      </nodes>
+      <edges xmi:id="_HA5XkPRKEemiYp-F8vEvxA" source="_GZdkIPRKEemiYp-F8vEvxA" target="_BolPEPRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//PositionableEntity/on"/>
+      </edges>
+      <edges xmi:id="_HitEIPRKEemiYp-F8vEvxA" source="_ElE1YPRKEemiYp-F8vEvxA" target="_BolPEPRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//PositionableEntity/on"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_AG-SYfRKEemiYp-F8vEvxA" name="Rhs">
+      <nodes xmi:id="_Bol2IPRKEemiYp-F8vEvxA" incoming="_HA5XkfRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_GZdkIfRKEemiYp-F8vEvxA" outgoing="_HA5XkfRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//Ghost"/>
+      </nodes>
+      <edges xmi:id="_HA5XkfRKEemiYp-F8vEvxA" source="_GZdkIfRKEemiYp-F8vEvxA" target="_Bol2IPRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//PositionableEntity/on"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Bol2IfRKEemiYp-F8vEvxA" origin="_BolPEPRKEemiYp-F8vEvxA" image="_Bol2IPRKEemiYp-F8vEvxA"/>
+    <mappings xmi:id="_GZdkIvRKEemiYp-F8vEvxA" origin="_GZdkIPRKEemiYp-F8vEvxA" image="_GZdkIfRKEemiYp-F8vEvxA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_MAmLwPRKEemiYp-F8vEvxA" name="pacmanMovesRight">
+    <lhs xmi:id="_MA34kPRKEemiYp-F8vEvxA" name="Lhs">
+      <nodes xmi:id="_OexeYPRKEemiYp-F8vEvxA" incoming="_Wtd-IPRKEemiYp-F8vEvxA" outgoing="_USg-oPRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_PFECUPRKEemiYp-F8vEvxA" incoming="_USg-oPRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_P9T48PRKEemiYp-F8vEvxA" outgoing="_Wtd-IPRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//Pacman"/>
+      </nodes>
+      <edges xmi:id="_USg-oPRKEemiYp-F8vEvxA" source="_OexeYPRKEemiYp-F8vEvxA" target="_PFECUPRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//GridNode/right"/>
+      </edges>
+      <edges xmi:id="_Wtd-IPRKEemiYp-F8vEvxA" source="_P9T48PRKEemiYp-F8vEvxA" target="_OexeYPRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//PositionableEntity/on"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_RIq40_RKEemiYp-F8vEvxA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_RIq41PRKEemiYp-F8vEvxA">
+          <conclusion xmi:id="_RIq41fRKEemiYp-F8vEvxA">
+            <nodes xmi:id="_RIq41vRKEemiYp-F8vEvxA">
+              <type href="../metamodels/PacManGo.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_RIq42PRKEemiYp-F8vEvxA" incoming="_eFEd0PRKEemiYp-F8vEvxA">
+              <type href="../metamodels/PacManGo.ecore#//GridNode"/>
+            </nodes>
+            <nodes xmi:id="_RIq42vRKEemiYp-F8vEvxA">
+              <type href="../metamodels/PacManGo.ecore#//Pacman"/>
+            </nodes>
+            <nodes xmi:id="_RIq40PRKEemiYp-F8vEvxA" outgoing="_eFEd0PRKEemiYp-F8vEvxA">
+              <type href="../metamodels/PacManGo.ecore#//Ghost"/>
+            </nodes>
+            <edges xmi:id="_eFEd0PRKEemiYp-F8vEvxA" source="_RIq40PRKEemiYp-F8vEvxA" target="_RIq42PRKEemiYp-F8vEvxA">
+              <type href="../metamodels/PacManGo.ecore#//PositionableEntity/on"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_RIq41_RKEemiYp-F8vEvxA" origin="_OexeYPRKEemiYp-F8vEvxA" image="_RIq41vRKEemiYp-F8vEvxA"/>
+          <mappings xmi:id="_RIq42fRKEemiYp-F8vEvxA" origin="_PFECUPRKEemiYp-F8vEvxA" image="_RIq42PRKEemiYp-F8vEvxA"/>
+          <mappings xmi:id="_RIq42_RKEemiYp-F8vEvxA" origin="_P9T48PRKEemiYp-F8vEvxA" image="_RIq42vRKEemiYp-F8vEvxA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_MA4foPRKEemiYp-F8vEvxA" name="Rhs">
+      <nodes xmi:id="_OexeYfRKEemiYp-F8vEvxA" outgoing="_USg-ofRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_PFECUfRKEemiYp-F8vEvxA" incoming="_USg-ofRKEemiYp-F8vEvxA _g1R7oPRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//GridNode"/>
+      </nodes>
+      <nodes xmi:id="_P9T48fRKEemiYp-F8vEvxA" outgoing="_g1R7oPRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//Pacman"/>
+      </nodes>
+      <edges xmi:id="_USg-ofRKEemiYp-F8vEvxA" source="_OexeYfRKEemiYp-F8vEvxA" target="_PFECUfRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//GridNode/right"/>
+      </edges>
+      <edges xmi:id="_g1R7oPRKEemiYp-F8vEvxA" source="_P9T48fRKEemiYp-F8vEvxA" target="_PFECUfRKEemiYp-F8vEvxA">
+        <type href="../metamodels/PacManGo.ecore#//PositionableEntity/on"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_OexeYvRKEemiYp-F8vEvxA" origin="_OexeYPRKEemiYp-F8vEvxA" image="_OexeYfRKEemiYp-F8vEvxA"/>
+    <mappings xmi:id="_PFECUvRKEemiYp-F8vEvxA" origin="_PFECUPRKEemiYp-F8vEvxA" image="_PFECUfRKEemiYp-F8vEvxA"/>
+    <mappings xmi:id="_P9T48vRKEemiYp-F8vEvxA" origin="_P9T48PRKEemiYp-F8vEvxA" image="_P9T48fRKEemiYp-F8vEvxA"/>
+  </units>
+</henshin:Module>

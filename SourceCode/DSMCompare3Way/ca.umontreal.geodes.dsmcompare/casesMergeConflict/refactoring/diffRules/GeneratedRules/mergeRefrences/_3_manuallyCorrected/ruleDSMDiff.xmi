@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring2WayRuleMM="www.geodes.UdeM.edu/refactoring2WayRuleMM"
+    name="ruleDSMDiff">
+  <constraints>Item(8,&quot;etype&quot;) == Item(15,&quot;etype&quot;)</constraints>
+  <constraints>Item(9,&quot;etype&quot;) == Item(16,&quot;etype&quot;)</constraints>
+  <constraints>Item(1,&quot;name&quot;) == Item(8,&quot;etype&quot;)</constraints>
+  <constraints>Item(2,&quot;name&quot;) == Item(9,&quot;etype&quot;)</constraints>
+  <constraints>Item(3,&quot;name&quot;) == Item(14,&quot;etype&quot;)</constraints>
+  <pattern xsi:type="refactoring2WayRuleMM:Pattern_EPackage">
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="cls1"
+        esupertypes="root"
+        ID_Pattern="1"/>
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="cls2"
+        esupertypes="root"
+        ID_Pattern="2"/>
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="root"
+        ID_Pattern="3">
+      <ereferences
+          xsi:type="refactoring2WayRuleMM:Pattern_EReference"
+          name="refC1"
+          etype="cls1"
+          ID_Pattern="8"/>
+      <ereferences
+          xsi:type="refactoring2WayRuleMM:Pattern_EReference"
+          name="refC2"
+          etype="cls2"
+          ID_Pattern="9"/>
+    </eclassifiers>
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="superRoot"
+        ID_Pattern="4">
+      <ereferences
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEReference"
+          name="refRoot"
+          etype="root"
+          diff_kind="ADD"
+          ID_Pattern="14"/>
+      <ereferences
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEReference"
+          name="refSC1"
+          etype="cls1"
+          diff_kind="DELETE"
+          ID_Pattern="15"
+          filter="true"/>
+      <ereferences
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEReference"
+          name="refSC2"
+          etype="cls2"
+          diff_kind="DELETE"
+          ID_Pattern="16"
+          filter="true"/>
+    </eclassifiers>
+    <domainspecificdiffs
+        xsi:type="refactoring2WayRuleMM:Pattern_DomainSpecificDiff"
+        name="ruleDSMDiff"
+        DomainSpecificDiff_EClass="cls1 cls2 superRoot"
+        DomainSpecificDiff_EPackage="//@pattern"
+        DomainSpecificDiff_EReference="refC1 refC2 refRoot"
+        ID_Pattern="5"/>
+  </pattern>
+</refactoring2WayRuleMM:Rule>

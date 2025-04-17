@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refactoringDiffMM:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" name="rfc">
+  <eclassifiers name="cls1" esupertypes="root"/>
+  <eclassifiers name="cls2" esupertypes="root"/>
+  <eclassifiers name="root">
+    <ereferences name="refC1" etype="cls1"/>
+    <ereferences name="refC2" etype="cls2"/>
+  </eclassifiers>
+  <eclassifiers name="superRoot">
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="refRoot" etype="root" diff_kind_Left="ADD"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="refSC1" etype="cls1" diff_kind_Left="DELETE"/>
+    <ereferences xsi:type="refactoringDiffMM:DiffEReference" name="refSC2" etype="cls2" diff_kind_Left="DELETE"/>
+  </eclassifiers>
+</refactoringDiffMM:EPackage>

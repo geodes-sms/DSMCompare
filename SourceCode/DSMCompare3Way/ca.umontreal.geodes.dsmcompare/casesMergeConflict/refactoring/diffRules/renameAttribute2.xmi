@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring2WayRuleMM="www.geodes.UdeM.edu/refactoring2WayRuleMM"
+    name="renameAttribute2">
+  <constraints>Item(1,&quot;name&quot;) != &quot;null&quot;</constraints>
+  <constraints>Item(1,&quot;name&quot;) != &quot;\&quot;\&quot;&quot;</constraints>
+  <constraints>Item(2,&quot;name&quot;) != &quot;null&quot;</constraints>
+  <constraints>Item(2,&quot;name&quot;) != &quot;\&quot;\&quot;&quot;</constraints>
+  <constraints>Item(1,&quot;etype&quot;) != &quot;null&quot;</constraints>
+  <constraints>Item(1,&quot;etype&quot;) != &quot;\&quot;\&quot;&quot;</constraints>
+  <constraints>Item(2,&quot;etype&quot;) != &quot;null&quot;</constraints>
+  <constraints>Item(2,&quot;etype&quot;) != &quot;\&quot;\&quot;&quot;</constraints>
+  <constraints>Item(1,&quot;name&quot;) != Item(2,&quot;name&quot;)</constraints>
+  <constraints>Item(1,&quot;etype&quot;) == Item(2,&quot;etype&quot;)</constraints>
+  <rulePattern_EClass
+      xsi:type="refactoring2WayRuleMM:Pattern_EClass">
+    <eattributes
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEAttribute"
+        diff_kind="DELETE"
+        ID_Pattern="1"/>
+    <eattributes
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEAttribute"
+        diff_kind="ADD"
+        ID_Pattern="2"/>
+  </rulePattern_EClass>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="Rename Attribute 2"
+      SemanticObject_EAttribute="//@rulePattern_EClass.0/@eattributes.0 //@rulePattern_EClass.0/@eattributes.1"
+      ID_Pattern="3"/>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="Rename Attribute 2"
+      SemanticObject_EAttribute="//@rulePattern_EClass.0/@eattributes.0 //@rulePattern_EClass.0/@eattributes.1"
+      ID_Pattern="4"
+      isForbidden="true"/>
+</refactoring2WayRuleMM:Rule>

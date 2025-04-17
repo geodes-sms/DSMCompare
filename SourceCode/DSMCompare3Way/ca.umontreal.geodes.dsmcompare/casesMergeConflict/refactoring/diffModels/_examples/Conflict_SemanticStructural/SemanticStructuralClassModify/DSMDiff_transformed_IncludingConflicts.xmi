@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM">
+  <refactoringDiffMM:EPackage name="rfc">
+    <eclassifiers name="cls1">
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="attr1" diff_kind_Left="DELETE" diff_kind_Right="MODIFY" new_etype_Right="EInt"/>
+      <diffeattributes diff_kind_Left="DELETE" diff_Group="DG-Move-1" eType="attr1"/>
+      <diffesupertypes diff_kind_Left="ADD" diff_Group="DG-1" eType="clsP"/>
+    </eclassifiers>
+    <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="clsP" diff_kind_Left="ADD">
+      <diffeattributes diff_kind_Left="ADD" filter="true" diff_Group="DG-Move-1" eType="attr1"/>
+    </eclassifiers>
+  </refactoringDiffMM:EPackage>
+  <refactoringDiffMM:SemanticDiff name="Move Attribute" SemanticObject_DiffEClass_eattributes="/0/@eclassifiers.1/@diffeattributes.0 /0/@eclassifiers.0/@diffeattributes.0" SemanticObject_EAttribute="attr1" SemanticObject_EClass="cls1 clsP" SemanticObject_EPackage="rfc" author="LEFT"/>
+  <refactoringDiffMM:SemanticDiff name="Extract Superclass" SemanticObject_DiffEClass_esupertypes="/0/@eclassifiers.0/@diffesupertypes.0" SemanticObject_EClass="cls1" SemanticObject_EPackage="rfc" author="LEFT"/>
+</xmi:XMI>

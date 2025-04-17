@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="AuthController" extends="Controller">
+    <eattributes name="auth" etype="DefaultAuthenticator"/>
+    <eoperations name="AuthController()" eparameters="auth:DefaultAuthenticator" methodBody="expression statement; ASSIGN; field access; auth; this; " __idKDM="AuthController___DefaultAuthenticator___"/>
+    <eoperations name="loginForm()" etype="void" methodBody="" __idKDM="loginForm______"/>
+    <eoperations name="login()" eparameters="email:String, password:String, redirectUrl:String" etype="void" methodBody="if; expression statement; method invocation; loginForm; method invocation; redirectTo; this; expression statement; method invocation; include; string literal; expression statement; method invocation; includeAsList; method invocation; i18n; string literal; string literal; string literal; expression statement; method invocation; redirectToRightUrl; method invocation; authenticate; " __idKDM="login___String__String__String___"/>
+    <eoperations name="logout()" etype="void" methodBody="expression statement; method invocation; home; method invocation; redirectTo; type literal; expression statement; method invocation; signout; " __idKDM="logout______"/>
+    <eoperations name="redirectToRightUrl()" eparameters="redirectUrl:String" etype="void" methodBody="if; expression statement; method invocation; home; method invocation; redirectTo; type literal; expression statement; method invocation; redirectTo; CONDITIONAL_AND; NOT; method invocation; isEmpty; NOT_EQUALS; redirectUrl; null; " __idKDM="redirectToRightUrl___String___"/>
+    <esupertypes href="57ab702b02702ac60aa41e22e9eb61ab8c693b62_gitMerged_ref.xmi#Controller"/>
+  </eclassifiers>
+</refactoring:EPackage>

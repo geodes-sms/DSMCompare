@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refactoringRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoringRuleMM="www.geodes.UdeM.edu/refactoringRuleMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/refactoringRuleMM ../metamodels/refactoringRuleMM.ecore#/1"
+    name="mergeReference">
+  <constraints>Item(11,&quot;etype&quot;) == Item(21,&quot;etype&quot;)</constraints>
+  <constraints>Item(12,&quot;etype&quot;) == Item(2,&quot;name&quot;)</constraints>
+  <pattern name="">
+    <eclassifiers
+        xsi:type="refactoringRuleMM:Pattern_EClass"
+        ID_Pattern="1">
+      <ereferences
+          xsi:type="refactoringRuleMM:Pattern_DiffEReference"
+          operation="DELETE"
+          ID_Pattern="11"
+          filter="true"/>
+      <ereferences
+          xsi:type="refactoringRuleMM:Pattern_DiffEReference"
+          ID_Pattern="12"/>
+    </eclassifiers>
+    <eclassifiers
+        xsi:type="refactoringRuleMM:Pattern_EClass"
+        ID_Pattern="2">
+      <ereferences
+          xsi:type="refactoringRuleMM:Pattern_EReference"
+          ID_Pattern="21"/>
+    </eclassifiers>
+    <domainspecificdiffs
+        xsi:type="refactoringRuleMM:Pattern_DomainSpecificDiff"
+        name="mergeReferences"
+        DomainSpecificDiff_EReference="12"
+        ID_Pattern="3"/>
+  </pattern>
+</refactoringRuleMM:Rule>

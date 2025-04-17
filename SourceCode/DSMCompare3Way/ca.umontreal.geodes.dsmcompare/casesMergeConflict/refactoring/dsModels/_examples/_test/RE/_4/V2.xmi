@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:refactoring="www.geodes.UdeM.edu/refactoring"
+    name="org.apache.storm.redis.trident.state">
+  <eclassifiers
+      name="RedisMapState"/>
+  <eclassifiers
+      name="RedisClusterMapState">
+    <eoperations
+        name="multiPut()"
+        eparameters="keys:java.util.List&lt;java.util.List&lt;java.lang.Object>>, vals:java.util.List&lt;T>"
+        etype="void"
+        methodBody="if; expression statement; method invocation; hmset; field access; hkey; field access; options; this; for; expression statement; method invocation; put; method invocation; build; method invocation; get; variable declaration; class instance creation; String; method invocation; serialize; method invocation; get; val; INCREMENT; variable declaration; int; i; LESS; i; method invocation; size; variable declaration; class instance creation; HashMap; keyValues; for; expression statement; method invocation; set; variable declaration; redisKey; variable declaration; class instance creation; String; method invocation; serialize; method invocation; get; val; INCREMENT; variable declaration; int; i; LESS; i; method invocation; size; method invocation; isNullOrEmpty; field access; hkey; field access; options; this; if; return; EQUALS; number literal; method invocation; size; "
+        __idKDM="multiPut___java_util_List_java_util_List_java_lang_Object____java_util_List_T____"/>
+  </eclassifiers>
+  <eclassifiers
+      name="AbstractRedisMapState"/>
+</refactoring:EPackage>

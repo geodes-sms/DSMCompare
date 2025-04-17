@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refactoring2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring2WayDiffMM="www.geodes.UdeM.edu/refactoring2WayDiffMM"
+    xmlns:refactoring2WayRuleMM="www.geodes.UdeM.edu/refactoring2WayRuleMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/refactoring2WayDiffMM ../metaModels/refactoring2WayRuleMM.ecore#/0 www.geodes.UdeM.edu/refactoring2WayRuleMM ../metaModels/refactoring2WayRuleMM.ecore#/1"
+    name="pullUpM">
+  <rulePattern_EPackage
+      xsi:type="refactoring2WayRuleMM:Pattern_EPackage"
+      ID_Pattern="1">
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="b"
+        ID_Pattern="11">
+      <diffeoperations
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_eoperations"
+          diff_kind="ADD"
+          eType="//@rulePattern_EPackage.0/@eclassifiers.1/@eoperations.0"
+          ID_Pattern="111"/>
+    </eclassifiers>
+    <eclassifiers
+        xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+        name="d"
+        esupertypes="b"
+        ID_Pattern="12">
+      <eoperations
+          xsi:type="refactoring2WayRuleMM:Pattern_EOperation"
+          ID_Pattern="121"/>
+      <diffeoperations
+          xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_eoperations"
+          diff_kind="DELETE"
+          eType="//@rulePattern_EPackage.0/@eclassifiers.1/@eoperations.0"
+          ID_Pattern="122"
+          filter="true"/>
+    </eclassifiers>
+  </rulePattern_EPackage>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="pullUpM"
+      SemanticObject_DiffEClass_eoperations="//@rulePattern_EPackage.0/@eclassifiers.0/@diffeoperations.0"
+      SemanticObject_EClass="b"
+      SemanticObject_EOperation="//@rulePattern_EPackage.0/@eclassifiers.1/@eoperations.0"
+      SemanticObject_EPackage="//@rulePattern_EPackage.0"
+      ID_Pattern="2"/>
+</refactoring2WayRuleMM:Rule>

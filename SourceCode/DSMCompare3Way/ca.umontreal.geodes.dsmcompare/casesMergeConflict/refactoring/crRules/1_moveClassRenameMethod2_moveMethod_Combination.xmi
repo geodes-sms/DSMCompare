@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refactoringCRRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoringCRRuleMM="www.geodes.UdeM.edu/refactoringCRRuleMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/refactoringCRRuleMM ../metaModels/refactoringCRRuleMM.ecore"
+    name="moveClassRenameMethod2_moveMethod_Combination"
+    priority="1">
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_SemanticDiff"
+      ID_Pattern="21"
+      name="Move Class"
+      SemanticObject_DiffEClass_nested_classes="8"
+      SemanticObject_DiffEPackage_eclassifiers="2"
+      SemanticObject_EPackage="1"
+      author="LEFT"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_SemanticDiff"
+      ID_Pattern="22"
+      name="Rename Method 2"
+      SemanticObject_EOperation="4 5"
+      author="LEFT"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_SemanticDiff"
+      ID_Pattern="23"
+      name="Move Method"
+      SemanticObject_DiffEClass_eoperations="6 10"
+      SemanticObject_EOperation="5"
+      author="RIGHT"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_SemanticConflict"
+      ID_Pattern="24"
+      name="Move Class / Rename Method 2 - Move Method"
+      conflict_Granularity="Semantic_Semantic"
+      semanticdiffs="21 22 23"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_ConflictResolution"
+      ID_Pattern="25"
+      name="Move Class / Rename Method 2 - Move Method - Combination"
+      ResolutionType="Resolved"
+      ResolutionStrategy="Apply_A_User_Defined_Resolution_Pattern"
+      semanticconflicts="24"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_ConflictResolution"
+      ID_Pattern="26"
+      isForbidden="true"
+      name="Move Class / Rename Method 2 - Move Method - Combination"
+      ResolutionType="Resolved"
+      ResolutionStrategy="Apply_A_User_Defined_Resolution_Pattern"
+      semanticconflicts="24"/>
+  <rulePattern_Pattern_EClass
+      ID_Pattern="3"
+      name="">
+    <eoperations
+        xsi:type="refactoringCRRuleMM:Pattern_DiffEOperation"
+        ID_Pattern="4"
+        name=""
+        diff_kind_Left="ADD"/>
+    <eoperations
+        xsi:type="refactoringCRRuleMM:Pattern_DiffEOperation"
+        ID_Pattern="5"
+        name=""
+        diff_kind_Left="DELETE"
+        diff_kind_Right="DELETE"
+        changeStatus="MERGE_DELETE"/>
+    <diffeoperations
+        ID_Pattern="6"
+        diff_kind_Right="DELETE"
+        eType="5"/>
+  </rulePattern_Pattern_EClass>
+  <rulePattern_Pattern_EClass
+      ID_Pattern="7"
+      name="">
+    <diffnested_classes
+        ID_Pattern="8"
+        diff_kind_Left="ADD"
+        eType="3"/>
+  </rulePattern_Pattern_EClass>
+  <rulePattern_Pattern_EClass
+      ID_Pattern="9"
+      name="">
+    <diffeoperations
+        ID_Pattern="10"
+        diff_kind_Right="ADD"
+        eType="5"/>
+  </rulePattern_Pattern_EClass>
+  <rulePattern_Pattern_EPackage
+      ID_Pattern="1">
+    <diffeclassifiers
+        ID_Pattern="2"
+        diff_kind_Left="DELETE"
+        eType="3"/>
+  </rulePattern_Pattern_EPackage>
+</refactoringCRRuleMM:Rule>

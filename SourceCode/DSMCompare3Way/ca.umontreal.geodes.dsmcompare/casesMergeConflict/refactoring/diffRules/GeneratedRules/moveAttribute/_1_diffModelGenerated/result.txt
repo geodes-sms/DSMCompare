@@ -1,0 +1,27 @@
+Matches count 	:	1
+Diffs count 	:	1
+Conflicts count :	0
+Matched resources :
+Left = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V1.xmi
+Right = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V2.xmi
+origin = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/CA.xmi
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| refactoringDiffMM.impl.EPackageImpl@2d1dee39 (name: rfc)| refactoringDiffMM.impl.EPackageImpl@2dd80673 (name: rfc)|
+| |-refactoringDiffMM.impl.EClassImpl@48d5f34e (name: cls1)| |-refactoringDiffMM.impl.EClassImpl@4af0df05 (name: cls1)|
+| |-refactoringDiffMM.impl.EClassImpl@fc258b1 (name: cls2)| |-refactoringDiffMM.impl.EClassImpl@acdb094 (name: cls2)|
+| | |-refactoringDiffMM.impl.EAttributeImpl@6ff65192 (name: attr1, etype: null)| | |-refactoringDiffMM.impl.EAttributeImpl@57ea113a (name: attr1, etype: null)|
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+REFERENCE CHANGES
+
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@6ff65192 (name: attr1, etype: null) has been moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@fc258b1 (name: cls2)
+
+ATTRIBUTE CHANGES
+
+CONFLICTS
+The end of transforming EMF-Diff to DSMC-Diff
+emf-Compare result transformed to Fine-Grained DsmdiffMM!

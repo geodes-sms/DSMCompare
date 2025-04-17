@@ -1,0 +1,1942 @@
+ePackageImport  pacmanDiffMM
+
+//=========================== EQUAL
+		rule PacmanEatFood_equal(VAR n0score:EInt,VAR n0new_score_Left:EInt,VAR n0new_score_Right:EInt)
+		{
+			graph
+			{
+				 preserve			node n0:DiffGame{
+					preserve diff_kind_Left = "\"MODIFY\""
+					preserve diff_kind_Right = "\"MODIFY\""
+					preserve score =  n0score
+					preserve new_score_Left =  n0new_score_Left
+					preserve new_score_Right =  n0new_score_Right
+				}			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:Pacman			      		
+				 preserve			node n3:DiffFood{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 create				node n5:SemanticDiff{
+					create name = "\"Pacman Eat Food\""
+					create author		=  "\"EQUAL\""
+				}
+				 forbid			node n6:SemanticDiff{
+					forbid name = "\"Pacman Eat Food\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:entities),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n2->n1:on),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(create		n5->n0:SemanticObject_Game),
+			  		(create		n5->n1:SemanticObject_GridNode),
+			  		(create		n5->n2:SemanticObject_PositionableEntity),
+			  		(create		n5->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n6->n0:SemanticObject_Game),
+			  		(forbid		n6->n1:SemanticObject_GridNode),
+			  		(forbid		n6->n2:SemanticObject_PositionableEntity),
+			  		(forbid		n6->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+			conditions [((n0score < n0new_score_Left)) AND ((n0score < n0new_score_Right))] 
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanDie_equal()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:Ghost			      		
+				 preserve			node n3:DiffPacman{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 create				node n5:SemanticDiff{
+					create name = "\"Pacman Die\""
+					create author		=  "\"EQUAL\""
+				}
+				 forbid			node n6:SemanticDiff{
+					forbid name = "\"Pacman Die\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:entities),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n2->n1:on),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(create		n5->n0:SemanticObject_Game),
+			  		(create		n5->n1:SemanticObject_GridNode),
+			  		(create		n5->n3:SemanticObject_PositionableEntity),
+			  		(create		n5->n2:SemanticObject_PositionableEntity),
+			  		(forbid		n6->n0:SemanticObject_Game),
+			  		(forbid		n6->n1:SemanticObject_GridNode),
+			  		(forbid		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n6->n2:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanJumpToEatFood_equal(VAR n0score:EInt,VAR n0new_score_Left:EInt,VAR n0new_score_Right:EInt)
+		{
+			graph
+			{
+				 preserve			node n0:DiffGame{
+					preserve diff_kind_Left = "\"MODIFY\""
+					preserve diff_kind_Right = "\"MODIFY\""
+					preserve score =  n0score
+					preserve new_score_Left =  n0new_score_Left
+					preserve new_score_Right =  n0new_score_Right
+				}			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:Pacman			      		
+				 preserve			node n3:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 preserve			node n4:DiffFood{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Eat Food\""
+					create author		=  "\"EQUAL\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Pacman Eat Food\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:entities),
+			  		(preserve	n0->n4:entities),
+			  		(preserve	n2->n3:diffon),
+			  		(preserve	n3->n1:eType),
+			  		(preserve	n4->n5:diffon),
+			  		(preserve	n5->n1:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n2:SemanticObject_PositionableEntity),
+			  		(create		n6->n4:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n2:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n4:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+			conditions [((n0score < n0new_score_Left)) AND ((n0score < n0new_score_Right))] 
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveLeft_equal()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Move Left\""
+					create author		=  "\"EQUAL\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Pacman Move Left\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:left),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveRight_equal()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Move Right\""
+					create author		=  "\"EQUAL\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Pacman Move Right\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:right),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveUp_equal()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Move Up\""
+					create author		=  "\"EQUAL\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Pacman Move Up\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:up),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveDown_equal()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Move Down\""
+					create author		=  "\"EQUAL\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Pacman Move Down\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:down),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveLeft_equal()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Ghost Move Left\""
+					create author		=  "\"EQUAL\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Ghost Move Left\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:left),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveRight_equal()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Ghost Move Right\""
+					create author		=  "\"EQUAL\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Ghost Move Right\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:right),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveUp_equal()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Ghost Move Up\""
+					create author		=  "\"EQUAL\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Ghost Move Up\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:up),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveDown_equal()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Ghost Move Down\""
+					create author		=  "\"EQUAL\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Ghost Move Down\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:down),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMove_equal()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Move\""
+					create author		=  "\"EQUAL\""
+				}
+				 forbid			node n7:SemanticDiff					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMove_equal()
+		{
+			graph
+			{
+				 preserve			node n1:Game			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:GridNode			      		
+				 preserve			node n4:Ghost			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n6:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n7:SemanticDiff{
+					create name = "\"Ghost Move\""
+					create author		=  "\"EQUAL\""
+				}
+				 forbid			node n8:SemanticDiff					
+			edges[
+			  		(preserve	n1->n2:gridnodes),
+			  		(preserve	n1->n3:gridnodes),
+			  		(preserve	n1->n4:entities),
+			  		(preserve	n4->n5:diffon),
+			  		(preserve	n4->n6:diffon),
+			  		(preserve	n5->n2:eType),
+			  		(preserve	n6->n3:eType),
+			  		(create		n7->n1:SemanticObject_Game),
+			  		(create		n7->n2:SemanticObject_GridNode),
+			  		(create		n7->n3:SemanticObject_GridNode),
+			  		(create		n7->n4:SemanticObject_PositionableEntity),
+			  		(forbid		n8->n1:SemanticObject_Game),
+			  		(forbid		n8->n2:SemanticObject_GridNode),
+			  		(forbid		n8->n3:SemanticObject_GridNode),
+			  		(forbid		n8->n4:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+//=========================== LEFT
+		rule PacmanEatFood_left(VAR n0score:EInt,VAR n0new_score_Left:EInt)
+		{
+			graph
+			{
+				 preserve			node n0:DiffGame{
+					preserve diff_kind_Left = "\"MODIFY\""
+					preserve score =  n0score
+					preserve new_score_Left =  n0new_score_Left
+				}			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:Pacman			      		
+				 preserve			node n3:DiffFood{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 create				node n5:SemanticDiff{
+					create name = "\"Pacman Eat Food\""
+					create author		=  "\"LEFT\""
+				}
+				 forbid			node n6:SemanticDiff{
+					forbid name = "\"Pacman Eat Food\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:entities),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n2->n1:on),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(create		n5->n0:SemanticObject_Game),
+			  		(create		n5->n1:SemanticObject_GridNode),
+			  		(create		n5->n2:SemanticObject_PositionableEntity),
+			  		(create		n5->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n6->n0:SemanticObject_Game),
+			  		(forbid		n6->n1:SemanticObject_GridNode),
+			  		(forbid		n6->n2:SemanticObject_PositionableEntity),
+			  		(forbid		n6->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+			conditions [(n0score < n0new_score_Left)] 
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanDie_left()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:Ghost			      		
+				 preserve			node n3:DiffPacman{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 create				node n5:SemanticDiff{
+					create name = "\"Pacman Die\""
+					create author		=  "\"LEFT\""
+				}
+				 forbid			node n6:SemanticDiff{
+					forbid name = "\"Pacman Die\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:entities),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n2->n1:on),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(create		n5->n0:SemanticObject_Game),
+			  		(create		n5->n1:SemanticObject_GridNode),
+			  		(create		n5->n3:SemanticObject_PositionableEntity),
+			  		(create		n5->n2:SemanticObject_PositionableEntity),
+			  		(forbid		n6->n0:SemanticObject_Game),
+			  		(forbid		n6->n1:SemanticObject_GridNode),
+			  		(forbid		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n6->n2:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanJumpToEatFood_left(VAR n0score:EInt,VAR n0new_score_Left:EInt)
+		{
+			graph
+			{
+				 preserve			node n0:DiffGame{
+					preserve diff_kind_Left = "\"MODIFY\""
+					preserve score =  n0score
+					preserve new_score_Left =  n0new_score_Left
+				}			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:Pacman			      		
+				 preserve			node n3:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+				}			      		
+				 preserve			node n4:DiffFood{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Eat Food\""
+					create author		=  "\"LEFT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Pacman Eat Food\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:entities),
+			  		(preserve	n0->n4:entities),
+			  		(preserve	n2->n3:diffon),
+			  		(preserve	n3->n1:eType),
+			  		(preserve	n4->n5:diffon),
+			  		(preserve	n5->n1:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n2:SemanticObject_PositionableEntity),
+			  		(create		n6->n4:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n2:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n4:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+			conditions [(n0score < n0new_score_Left)] 
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveLeft_left()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Move Left\""
+					create author		=  "\"LEFT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Pacman Move Left\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:left),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveRight_left()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Move Right\""
+					create author		=  "\"LEFT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Pacman Move Right\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:right),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveUp_left()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Move Up\""
+					create author		=  "\"LEFT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Pacman Move Up\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:up),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveDown_left()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Move Down\""
+					create author		=  "\"LEFT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Pacman Move Down\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:down),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveLeft_left()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Ghost Move Left\""
+					create author		=  "\"LEFT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Ghost Move Left\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:left),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveRight_left()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Ghost Move Right\""
+					create author		=  "\"LEFT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Ghost Move Right\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:right),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveUp_left()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Ghost Move Up\""
+					create author		=  "\"LEFT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Ghost Move Up\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:up),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveDown_left()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Ghost Move Down\""
+					create author		=  "\"LEFT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Ghost Move Down\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:down),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMove_left()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Move\""
+					create author		=  "\"LEFT\""
+				}
+				 forbid			node n7:SemanticDiff					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMove_left()
+		{
+			graph
+			{
+				 preserve			node n1:Game			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:GridNode			      		
+				 preserve			node n4:Ghost			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"DELETE\""
+				}			      		
+				 preserve			node n6:DiffPositionableEntity_on{
+					preserve diff_kind_Left = "\"MODIFY\""
+				}			      		
+				 create				node n7:SemanticDiff{
+					create name = "\"Ghost Move\""
+					create author		=  "\"LEFT\""
+				}
+				 forbid			node n8:SemanticDiff					
+			edges[
+			  		(preserve	n1->n2:gridnodes),
+			  		(preserve	n1->n3:gridnodes),
+			  		(preserve	n1->n4:entities),
+			  		(preserve	n4->n5:diffon),
+			  		(preserve	n4->n6:diffon),
+			  		(preserve	n5->n2:eType),
+			  		(preserve	n6->n3:eType),
+			  		(create		n7->n1:SemanticObject_Game),
+			  		(create		n7->n2:SemanticObject_GridNode),
+			  		(create		n7->n3:SemanticObject_GridNode),
+			  		(create		n7->n4:SemanticObject_PositionableEntity),
+			  		(forbid		n8->n1:SemanticObject_Game),
+			  		(forbid		n8->n2:SemanticObject_GridNode),
+			  		(forbid		n8->n3:SemanticObject_GridNode),
+			  		(forbid		n8->n4:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+//=========================== RIGHT
+		rule PacmanEatFood_right(VAR n0score:EInt,VAR n0new_score_Right:EInt)
+		{
+			graph
+			{
+				 preserve			node n0:DiffGame{
+					preserve diff_kind_Right = "\"MODIFY\""
+					preserve score =  n0score
+					preserve new_score_Right =  n0new_score_Right
+				}			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:Pacman			      		
+				 preserve			node n3:DiffFood{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 create				node n5:SemanticDiff{
+					create name = "\"Pacman Eat Food\""
+					create author		=  "\"RIGHT\""
+				}
+				 forbid			node n6:SemanticDiff{
+					forbid name = "\"Pacman Eat Food\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:entities),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n2->n1:on),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(create		n5->n0:SemanticObject_Game),
+			  		(create		n5->n1:SemanticObject_GridNode),
+			  		(create		n5->n2:SemanticObject_PositionableEntity),
+			  		(create		n5->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n6->n0:SemanticObject_Game),
+			  		(forbid		n6->n1:SemanticObject_GridNode),
+			  		(forbid		n6->n2:SemanticObject_PositionableEntity),
+			  		(forbid		n6->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+			conditions [(n0score < n0new_score_Right)] 
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanDie_right()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:Ghost			      		
+				 preserve			node n3:DiffPacman{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 create				node n5:SemanticDiff{
+					create name = "\"Pacman Die\""
+					create author		=  "\"RIGHT\""
+				}
+				 forbid			node n6:SemanticDiff{
+					forbid name = "\"Pacman Die\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:entities),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n2->n1:on),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(create		n5->n0:SemanticObject_Game),
+			  		(create		n5->n1:SemanticObject_GridNode),
+			  		(create		n5->n3:SemanticObject_PositionableEntity),
+			  		(create		n5->n2:SemanticObject_PositionableEntity),
+			  		(forbid		n6->n0:SemanticObject_Game),
+			  		(forbid		n6->n1:SemanticObject_GridNode),
+			  		(forbid		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n6->n2:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanJumpToEatFood_right(VAR n0score:EInt,VAR n0new_score_Right:EInt)
+		{
+			graph
+			{
+				 preserve			node n0:DiffGame{
+					preserve diff_kind_Right = "\"MODIFY\""
+					preserve score =  n0score
+					preserve new_score_Right =  n0new_score_Right
+				}			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:Pacman			      		
+				 preserve			node n3:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 preserve			node n4:DiffFood{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Eat Food\""
+					create author		=  "\"RIGHT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Pacman Eat Food\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:entities),
+			  		(preserve	n0->n4:entities),
+			  		(preserve	n2->n3:diffon),
+			  		(preserve	n3->n1:eType),
+			  		(preserve	n4->n5:diffon),
+			  		(preserve	n5->n1:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n2:SemanticObject_PositionableEntity),
+			  		(create		n6->n4:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n2:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n4:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+			conditions [(n0score < n0new_score_Right)] 
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveLeft_right()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Move Left\""
+					create author		=  "\"RIGHT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Pacman Move Left\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:left),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveRight_right()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Move Right\""
+					create author		=  "\"RIGHT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Pacman Move Right\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:right),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveUp_right()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Move Up\""
+					create author		=  "\"RIGHT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Pacman Move Up\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:up),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveDown_right()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Move Down\""
+					create author		=  "\"RIGHT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Pacman Move Down\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:down),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveLeft_right()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Ghost Move Left\""
+					create author		=  "\"RIGHT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Ghost Move Left\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:left),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveRight_right()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Ghost Move Right\""
+					create author		=  "\"RIGHT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Ghost Move Right\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:right),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveUp_right()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Ghost Move Up\""
+					create author		=  "\"RIGHT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Ghost Move Up\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:up),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveDown_right()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Ghost Move Down\""
+					create author		=  "\"RIGHT\""
+				}
+				 forbid			node n7:SemanticDiff{
+					forbid name = "\"Ghost Move Down\""
+				}					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n1->n2:down),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMove_right()
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 preserve			node n4:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n6:SemanticDiff{
+					create name = "\"Pacman Move\""
+					create author		=  "\"RIGHT\""
+				}
+				 forbid			node n7:SemanticDiff					
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(preserve	n3->n4:diffon),
+			  		(preserve	n3->n5:diffon),
+			  		(preserve	n4->n1:eType),
+			  		(preserve	n5->n2:eType),
+			  		(create		n6->n0:SemanticObject_Game),
+			  		(create		n6->n1:SemanticObject_GridNode),
+			  		(create		n6->n2:SemanticObject_GridNode),
+			  		(create		n6->n3:SemanticObject_PositionableEntity),
+			  		(forbid		n7->n0:SemanticObject_Game),
+			  		(forbid		n7->n1:SemanticObject_GridNode),
+			  		(forbid		n7->n2:SemanticObject_GridNode),
+			  		(forbid		n7->n3:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMove_right()
+		{
+			graph
+			{
+				 preserve			node n1:Game			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:GridNode			      		
+				 preserve			node n4:Ghost			      		
+				 preserve			node n5:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"DELETE\""
+				}			      		
+				 preserve			node n6:DiffPositionableEntity_on{
+					preserve diff_kind_Right = "\"MODIFY\""
+				}			      		
+				 create				node n7:SemanticDiff{
+					create name = "\"Ghost Move\""
+					create author		=  "\"RIGHT\""
+				}
+				 forbid			node n8:SemanticDiff					
+			edges[
+			  		(preserve	n1->n2:gridnodes),
+			  		(preserve	n1->n3:gridnodes),
+			  		(preserve	n1->n4:entities),
+			  		(preserve	n4->n5:diffon),
+			  		(preserve	n4->n6:diffon),
+			  		(preserve	n5->n2:eType),
+			  		(preserve	n6->n3:eType),
+			  		(create		n7->n1:SemanticObject_Game),
+			  		(create		n7->n2:SemanticObject_GridNode),
+			  		(create		n7->n3:SemanticObject_GridNode),
+			  		(create		n7->n4:SemanticObject_PositionableEntity),
+			  		(forbid		n8->n1:SemanticObject_Game),
+			  		(forbid		n8->n2:SemanticObject_GridNode),
+			  		(forbid		n8->n3:SemanticObject_GridNode),
+			  		(forbid		n8->n4:SemanticObject_PositionableEntity)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+//=========================== UNITS
+
+	unit unitSequntialStar(){
+		unitPacmanEatFood_equalStar()
+		unitPacmanDie_equalStar()
+		unitPacmanJumpToEatFood_equalStar()
+		unitPacmanMoveLeft_equalStar()
+		unitPacmanMoveRight_equalStar()
+		unitPacmanMoveUp_equalStar()
+		unitPacmanMoveDown_equalStar()
+		unitGhostMoveLeft_equalStar()
+		unitGhostMoveRight_equalStar()
+		unitGhostMoveUp_equalStar()
+		unitGhostMoveDown_equalStar()
+		unitPacmanMove_equalStar()
+		unitGhostMove_equalStar()
+		unitPacmanEatFood_leftStar()
+		unitPacmanDie_leftStar()
+		unitPacmanJumpToEatFood_leftStar()
+		unitPacmanMoveLeft_leftStar()
+		unitPacmanMoveRight_leftStar()
+		unitPacmanMoveUp_leftStar()
+		unitPacmanMoveDown_leftStar()
+		unitGhostMoveLeft_leftStar()
+		unitGhostMoveRight_leftStar()
+		unitGhostMoveUp_leftStar()
+		unitGhostMoveDown_leftStar()
+		unitPacmanMove_leftStar()
+		unitGhostMove_leftStar()
+		unitPacmanEatFood_rightStar()
+		unitPacmanDie_rightStar()
+		unitPacmanJumpToEatFood_rightStar()
+		unitPacmanMoveLeft_rightStar()
+		unitPacmanMoveRight_rightStar()
+		unitPacmanMoveUp_rightStar()
+		unitPacmanMoveDown_rightStar()
+		unitGhostMoveLeft_rightStar()
+		unitGhostMoveRight_rightStar()
+		unitGhostMoveUp_rightStar()
+		unitGhostMoveDown_rightStar()
+		unitPacmanMove_rightStar()
+		unitGhostMove_rightStar()
+	}
+	unit unitPacmanEatFood_equalStar(){
+		while{
+			PacmanEatFood_equal()
+		}
+	}
+	unit unitPacmanDie_equalStar(){
+		while{
+			PacmanDie_equal()
+		}
+	}
+	unit unitPacmanJumpToEatFood_equalStar(){
+		while{
+			PacmanJumpToEatFood_equal()
+		}
+	}
+	unit unitPacmanMoveLeft_equalStar(){
+		while{
+			PacmanMoveLeft_equal()
+		}
+	}
+	unit unitPacmanMoveRight_equalStar(){
+		while{
+			PacmanMoveRight_equal()
+		}
+	}
+	unit unitPacmanMoveUp_equalStar(){
+		while{
+			PacmanMoveUp_equal()
+		}
+	}
+	unit unitPacmanMoveDown_equalStar(){
+		while{
+			PacmanMoveDown_equal()
+		}
+	}
+	unit unitGhostMoveLeft_equalStar(){
+		while{
+			GhostMoveLeft_equal()
+		}
+	}
+	unit unitGhostMoveRight_equalStar(){
+		while{
+			GhostMoveRight_equal()
+		}
+	}
+	unit unitGhostMoveUp_equalStar(){
+		while{
+			GhostMoveUp_equal()
+		}
+	}
+	unit unitGhostMoveDown_equalStar(){
+		while{
+			GhostMoveDown_equal()
+		}
+	}
+	unit unitPacmanMove_equalStar(){
+		while{
+			PacmanMove_equal()
+		}
+	}
+	unit unitGhostMove_equalStar(){
+		while{
+			GhostMove_equal()
+		}
+	}
+	unit unitPacmanEatFood_leftStar(){
+		while{
+			PacmanEatFood_left()
+		}
+	}
+	unit unitPacmanDie_leftStar(){
+		while{
+			PacmanDie_left()
+		}
+	}
+	unit unitPacmanJumpToEatFood_leftStar(){
+		while{
+			PacmanJumpToEatFood_left()
+		}
+	}
+	unit unitPacmanMoveLeft_leftStar(){
+		while{
+			PacmanMoveLeft_left()
+		}
+	}
+	unit unitPacmanMoveRight_leftStar(){
+		while{
+			PacmanMoveRight_left()
+		}
+	}
+	unit unitPacmanMoveUp_leftStar(){
+		while{
+			PacmanMoveUp_left()
+		}
+	}
+	unit unitPacmanMoveDown_leftStar(){
+		while{
+			PacmanMoveDown_left()
+		}
+	}
+	unit unitGhostMoveLeft_leftStar(){
+		while{
+			GhostMoveLeft_left()
+		}
+	}
+	unit unitGhostMoveRight_leftStar(){
+		while{
+			GhostMoveRight_left()
+		}
+	}
+	unit unitGhostMoveUp_leftStar(){
+		while{
+			GhostMoveUp_left()
+		}
+	}
+	unit unitGhostMoveDown_leftStar(){
+		while{
+			GhostMoveDown_left()
+		}
+	}
+	unit unitPacmanMove_leftStar(){
+		while{
+			PacmanMove_left()
+		}
+	}
+	unit unitGhostMove_leftStar(){
+		while{
+			GhostMove_left()
+		}
+	}
+	unit unitPacmanEatFood_rightStar(){
+		while{
+			PacmanEatFood_right()
+		}
+	}
+	unit unitPacmanDie_rightStar(){
+		while{
+			PacmanDie_right()
+		}
+	}
+	unit unitPacmanJumpToEatFood_rightStar(){
+		while{
+			PacmanJumpToEatFood_right()
+		}
+	}
+	unit unitPacmanMoveLeft_rightStar(){
+		while{
+			PacmanMoveLeft_right()
+		}
+	}
+	unit unitPacmanMoveRight_rightStar(){
+		while{
+			PacmanMoveRight_right()
+		}
+	}
+	unit unitPacmanMoveUp_rightStar(){
+		while{
+			PacmanMoveUp_right()
+		}
+	}
+	unit unitPacmanMoveDown_rightStar(){
+		while{
+			PacmanMoveDown_right()
+		}
+	}
+	unit unitGhostMoveLeft_rightStar(){
+		while{
+			GhostMoveLeft_right()
+		}
+	}
+	unit unitGhostMoveRight_rightStar(){
+		while{
+			GhostMoveRight_right()
+		}
+	}
+	unit unitGhostMoveUp_rightStar(){
+		while{
+			GhostMoveUp_right()
+		}
+	}
+	unit unitGhostMoveDown_rightStar(){
+		while{
+			GhostMoveDown_right()
+		}
+	}
+	unit unitPacmanMove_rightStar(){
+		while{
+			PacmanMove_right()
+		}
+	}
+	unit unitGhostMove_rightStar(){
+		while{
+			GhostMove_right()
+		}
+	}

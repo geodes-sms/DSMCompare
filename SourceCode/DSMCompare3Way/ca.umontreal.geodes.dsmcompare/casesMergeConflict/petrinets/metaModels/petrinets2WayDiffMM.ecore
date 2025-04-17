@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="petrinets2WayDiffMM" nsURI="www.geodes.UdeM.edu/petrinets2WayDiffMM"
+    nsPrefix="petrinets2WayDiffMM">
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PetriNet" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="places" upperBound="-1"
+        eType="#//Place" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
+        eType="#//Transition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffplaces" upperBound="-1"
+        eType="#//DiffPetriNet_places" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="difftransitions" upperBound="-1"
+        eType="#//DiffPetriNet_transitions" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tokens" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
+        eType="#//Transition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="difftransitions" upperBound="-1"
+        eType="#//DiffPlace_transitions" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transition" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="places" upperBound="-1"
+        eType="#//Place"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffplaces" upperBound="-1"
+        eType="#//DiffTransition_places" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DiffKind">
+    <eLiterals name="NON" literal="NON"/>
+    <eLiterals name="ADD" value="1" literal="ADD"/>
+    <eLiterals name="DELETE" value="2" literal="DELETE"/>
+    <eLiterals name="MODIFY" value="3" literal="MODIFY"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SemanticObject" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffPetriNet"
+        ordered="false" upperBound="-1" eType="#//DiffPetriNet"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffPetriNet_places"
+        ordered="false" upperBound="-1" eType="#//DiffPetriNet_places"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffPetriNet_transitions"
+        ordered="false" upperBound="-1" eType="#//DiffPetriNet_transitions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffPlace"
+        ordered="false" upperBound="-1" eType="#//DiffPlace"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffPlace_transitions"
+        ordered="false" upperBound="-1" eType="#//DiffPlace_transitions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffTransition"
+        ordered="false" upperBound="-1" eType="#//DiffTransition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_DiffTransition_places"
+        ordered="false" upperBound="-1" eType="#//DiffTransition_places"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SemanticObject_NamedElement"
+        ordered="false" upperBound="-1" eType="#//NamedElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SemanticDiff" eSuperTypes="#//SemanticObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SemanticConflict" eSuperTypes="#//SemanticObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semanticdiffs" ordered="false"
+        upperBound="-1" eType="#//SemanticDiff"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffPetriNet" eSuperTypes="#//PetriNet">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffPetriNet_places">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//Place"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffPetriNet_transitions">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//Transition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffPlace" eSuperTypes="#//Place">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_tokens" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffPlace_transitions">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//Transition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffTransition" eSuperTypes="#//Transition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_id" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_name" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffTransition_places">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" unique="false"
+        lowerBound="1" eType="#//DiffKind" defaultValueLiteral="NON"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" lowerBound="1" eType="#//Place"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoringDiffMM:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" name="pkg">
+  <eclassifiers name="AllTypes" extends="RealmObject">
+    <eattributes name="CLASS_NAME" etype="String"/>
+    <eattributes name="FIELD_STRING" etype="String"/>
+    <eattributes name="FIELD_LONG" etype="String"/>
+    <eattributes name="FIELD_FLOAT" etype="String"/>
+    <eattributes name="FIELD_DOUBLE" etype="String"/>
+    <eattributes name="FIELD_BOOLEAN" etype="String"/>
+    <eattributes name="FIELD_DATE" etype="String"/>
+    <eattributes name="FIELD_BINARY" etype="String"/>
+    <eattributes name="FIELD_MUTABLEREALMINTEGER" etype="String"/>
+    <eattributes name="FIELD_DECIMAL128" etype="String"/>
+    <eattributes name="FIELD_OBJECT_ID" etype="String"/>
+    <eattributes name="FIELD_UUID" etype="String"/>
+    <eattributes name="FIELD_MIXED" etype="String"/>
+    <eattributes name="FIELD_REALMOBJECT" etype="String"/>
+    <eattributes name="FIELD_REALMLINK" etype="String"/>
+    <eattributes name="FIELD_REALMBACKLINK" etype="String"/>
+    <eattributes name="FIELD_REALMLIST" etype="String"/>
+    <eattributes name="FIELD_STRING_LIST" etype="String"/>
+    <eattributes name="FIELD_BINARY_LIST" etype="String"/>
+    <eattributes name="FIELD_BOOLEAN_LIST" etype="String"/>
+    <eattributes name="FIELD_LONG_LIST" etype="String"/>
+    <eattributes name="FIELD_DOUBLE_LIST" etype="String"/>
+    <eattributes name="FIELD_FLOAT_LIST" etype="String"/>
+    <eattributes name="FIELD_DATE_LIST" etype="String"/>
+    <eattributes name="FIELD_BOOLEAN_DICTIONARY" etype="String"/>
+    <eattributes name="FIELD_STRING_DICTIONARY" etype="String"/>
+    <eattributes name="FIELD_INTEGER_DICTIONARY" etype="String"/>
+    <eattributes name="FIELD_FLOAT_DICTIONARY" etype="String"/>
+    <eattributes name="FIELD_LONG_DICTIONARY" etype="String"/>
+    <eattributes name="FIELD_SHORT_DICTIONARY" etype="String"/>
+    <eattributes name="FIELD_DOUBLE_DICTIONARY" etype="String"/>
+    <eattributes name="FIELD_BYTE_DICTIONARY" etype="String"/>
+    <eattributes name="FIELD_BINARY_DICTIONARY" etype="String"/>
+    <eattributes name="FIELD_BOXED_BINARY_DICTIONARY" etype="String"/>
+    <eattributes name="FIELD_DATE_DICTIONARY" etype="String"/>
+    <eattributes name="FIELD_OBJECT_ID_DICTIONARY" etype="String"/>
+    <eattributes name="FIELD_UUID_DICTIONARY" etype="String"/>
+    <eattributes name="FIELD_DECIMAL128_DICTIONARY" etype="String"/>
+    <eattributes name="FIELD_MIXED_DICTIONARY" etype="String"/>
+    <eattributes name="INVALID_TYPES_FIELDS_FOR_DISTINCT" etype="java.lang.String[]"/>
+    <eattributes name="columnString" etype="String"/>
+    <eattributes name="columnLong" etype="long"/>
+    <eattributes name="columnFloat" etype="float"/>
+    <eattributes name="columnDouble" etype="double"/>
+    <eattributes name="columnBoolean" etype="boolean"/>
+    <eattributes name="columnDate" etype="Date"/>
+    <eattributes name="columnBinary" etype="byte[]"/>
+    <eattributes name="columnDecimal128" etype="Decimal128"/>
+    <eattributes name="columnObjectId" etype="ObjectId"/>
+    <eattributes name="columnUUID" etype="UUID"/>
+    <eattributes name="columnMixed" etype="Mixed"/>
+    <eattributes name="columnMutableRealmInteger" etype="MutableRealmInteger"/>
+    <eattributes name="columnRealmObject" etype="Dog"/>
+    <eattributes name="columnRealmLink" etype="AllTypes"/>
+    <eattributes name="columnRealmBackLink" etype="RealmResults&lt;AllTypes>"/>
+    <eattributes name="columnRealmList" etype="RealmList&lt;Dog>"/>
+    <eattributes name="columnStringList" etype="RealmList&lt;String>"/>
+    <eattributes name="columnBinaryList" etype="RealmList&lt;byte[]>"/>
+    <eattributes name="columnBooleanList" etype="RealmList&lt;Boolean>"/>
+    <eattributes name="columnLongList" etype="RealmList&lt;Long>"/>
+    <eattributes name="columnDoubleList" etype="RealmList&lt;Double>"/>
+    <eattributes name="columnFloatList" etype="RealmList&lt;Float>"/>
+    <eattributes name="columnDateList" etype="RealmList&lt;Date>"/>
+    <eattributes name="columnDecimal128List" etype="RealmList&lt;Decimal128>"/>
+    <eattributes name="columnObjectIdList" etype="RealmList&lt;ObjectId>"/>
+    <eattributes name="columnUUIDList" etype="RealmList&lt;UUID>"/>
+    <eattributes name="columnMixedList" etype="RealmList&lt;Mixed>"/>
+    <eattributes name="columnRealmDictionary" etype="RealmDictionary&lt;DogPrimaryKey>"/>
+    <eattributes name="columnBooleanDictionary" etype="RealmDictionary&lt;Boolean>"/>
+    <eattributes name="columnStringDictionary" etype="RealmDictionary&lt;String>"/>
+    <eattributes name="columnIntegerDictionary" etype="RealmDictionary&lt;Integer>"/>
+    <eattributes name="columnFloatDictionary" etype="RealmDictionary&lt;Float>"/>
+    <eattributes name="columnLongDictionary" etype="RealmDictionary&lt;Long>"/>
+    <eattributes name="columnShortDictionary" etype="RealmDictionary&lt;Short>"/>
+    <eattributes name="columnDoubleDictionary" etype="RealmDictionary&lt;Double>"/>
+    <eattributes name="columnByteDictionary" etype="RealmDictionary&lt;Byte>"/>
+    <eattributes name="columnBinaryDictionary" etype="RealmDictionary&lt;byte[]>"/>
+    <eattributes name="columnDateDictionary" etype="RealmDictionary&lt;Date>"/>
+    <eattributes name="columnObjectIdDictionary" etype="RealmDictionary&lt;ObjectId>"/>
+    <eattributes name="columnUUIDDictionary" etype="RealmDictionary&lt;UUID>"/>
+    <eattributes name="columnDecimal128Dictionary" etype="RealmDictionary&lt;Decimal128>"/>
+    <eattributes name="columnMixedDictionary" etype="RealmDictionary&lt;Mixed>"/>
+    <eattributes name="columnMixedList" etype="RealmList&lt;Mixed>"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="columnMixedList" etype="RealmList&lt;Mixed>" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="columnBoxedBinaryDictionary" etype="RealmDictionary&lt;Byte[]>" diff_kind_Right="DELETE"/>
+    <eoperations name="getColumnString()" etype="String" methodBody="return; " __idKDM="getColumnString______"/>
+    <eoperations name="setColumnString()" eparameters="columnString:String" etype="void" methodBody="expression statement; ASSIGN; columnString; field access; columnString; this; " __idKDM="setColumnString___String___"/>
+    <eoperations name="getColumnLong()" etype="long" methodBody="return; " __idKDM="getColumnLong______"/>
+    <eoperations name="setColumnLong()" eparameters="columnLong:long" etype="void" methodBody="expression statement; ASSIGN; columnLong; field access; columnLong; this; " __idKDM="setColumnLong___long___"/>
+    <eoperations name="getColumnFloat()" etype="float" methodBody="return; " __idKDM="getColumnFloat______"/>
+    <eoperations name="setColumnFloat()" eparameters="columnFloat:float" etype="void" methodBody="expression statement; ASSIGN; columnFloat; field access; columnFloat; this; " __idKDM="setColumnFloat___float___"/>
+    <eoperations name="getColumnDouble()" etype="double" methodBody="return; " __idKDM="getColumnDouble______"/>
+    <eoperations name="setColumnDouble()" eparameters="columnDouble:double" etype="void" methodBody="expression statement; ASSIGN; columnDouble; field access; columnDouble; this; " __idKDM="setColumnDouble___double___"/>
+    <eoperations name="isColumnBoolean()" etype="boolean" methodBody="return; " __idKDM="isColumnBoolean______"/>
+    <eoperations name="setColumnBoolean()" eparameters="columnBoolean:boolean" etype="void" methodBody="expression statement; ASSIGN; columnBoolean; field access; columnBoolean; this; " __idKDM="setColumnBoolean___boolean___"/>
+    <eoperations name="getColumnDate()" etype="Date" methodBody="return; " __idKDM="getColumnDate______"/>
+    <eoperations name="setColumnDate()" eparameters="columnDate:Date" etype="void" methodBody="expression statement; ASSIGN; columnDate; field access; columnDate; this; " __idKDM="setColumnDate___Date___"/>
+    <eoperations name="getColumnBinary()" etype="byte[]" methodBody="return; " __idKDM="getColumnBinary______"/>
+    <eoperations name="getColumnRealmInteger()" etype="MutableRealmInteger" methodBody="return; " __idKDM="getColumnRealmInteger______"/>
+    <eoperations name="setColumnMutableRealmInteger()" eparameters="value:int" etype="void" methodBody="expression statement; method invocation; set; " __idKDM="setColumnMutableRealmInteger___int___"/>
+    <eoperations name="setColumnBinary()" eparameters="columnBinary:byte[]" etype="void" methodBody="expression statement; ASSIGN; columnBinary; field access; columnBinary; this; " __idKDM="setColumnBinary___byte_____"/>
+    <eoperations name="getColumnRealmObject()" etype="Dog" methodBody="return; " __idKDM="getColumnRealmObject______"/>
+    <eoperations name="setColumnRealmObject()" eparameters="columnRealmObject:Dog" etype="void" methodBody="expression statement; ASSIGN; field access; columnRealmObject; this; " __idKDM="setColumnRealmObject___Dog___"/>
+    <eoperations name="getColumnRealmLink()" etype="AllTypes" methodBody="return; " __idKDM="getColumnRealmLink______"/>
+    <eoperations name="setColumnRealmLink()" eparameters="columnRealmLink:AllTypes" etype="void" methodBody="expression statement; ASSIGN; columnRealmLink; field access; columnRealmLink; this; " __idKDM="setColumnRealmLink___AllTypes___"/>
+    <eoperations name="getColumnRealmBackLink()" etype="RealmResults&lt;AllTypes>" methodBody="return; " __idKDM="getColumnRealmBackLink______"/>
+    <eoperations name="getColumnRealmList()" etype="RealmList&lt;Dog>" methodBody="return; " __idKDM="getColumnRealmList______"/>
+    <eoperations name="setColumnRealmList()" eparameters="columnRealmList:RealmList&lt;Dog>" etype="void" methodBody="expression statement; ASSIGN; field access; columnRealmList; this; " __idKDM="setColumnRealmList___RealmList_Dog____"/>
+    <eoperations name="getColumnStringList()" etype="RealmList&lt;String>" methodBody="return; " __idKDM="getColumnStringList______"/>
+    <eoperations name="setColumnStringList()" eparameters="columnStringList:RealmList&lt;String>" etype="void" methodBody="expression statement; ASSIGN; field access; columnStringList; this; " __idKDM="setColumnStringList___RealmList_String____"/>
+    <eoperations name="getColumnBinaryList()" etype="RealmList&lt;byte[]>" methodBody="return; " __idKDM="getColumnBinaryList______"/>
+    <eoperations name="setColumnBinaryList()" eparameters="columnBinaryList:RealmList&lt;byte[]>" etype="void" methodBody="expression statement; ASSIGN; field access; columnBinaryList; this; " __idKDM="setColumnBinaryList___RealmList_byte______"/>
+    <eoperations name="getColumnBooleanList()" etype="RealmList&lt;Boolean>" methodBody="return; " __idKDM="getColumnBooleanList______"/>
+    <eoperations name="setColumnBooleanList()" eparameters="columnBooleanList:RealmList&lt;Boolean>" etype="void" methodBody="expression statement; ASSIGN; field access; columnBooleanList; this; " __idKDM="setColumnBooleanList___RealmList_Boolean____"/>
+    <eoperations name="getColumnLongList()" etype="RealmList&lt;Long>" methodBody="return; " __idKDM="getColumnLongList______"/>
+    <eoperations name="setColumnLongList()" eparameters="columnLongList:RealmList&lt;Long>" etype="void" methodBody="expression statement; ASSIGN; field access; columnLongList; this; " __idKDM="setColumnLongList___RealmList_Long____"/>
+    <eoperations name="getColumnDoubleList()" etype="RealmList&lt;Double>" methodBody="return; " __idKDM="getColumnDoubleList______"/>
+    <eoperations name="setColumnDoubleList()" eparameters="columnDoubleList:RealmList&lt;Double>" etype="void" methodBody="expression statement; ASSIGN; field access; columnDoubleList; this; " __idKDM="setColumnDoubleList___RealmList_Double____"/>
+    <eoperations name="getColumnFloatList()" etype="RealmList&lt;Float>" methodBody="return; " __idKDM="getColumnFloatList______"/>
+    <eoperations name="setColumnFloatList()" eparameters="columnFloatList:RealmList&lt;Float>" etype="void" methodBody="expression statement; ASSIGN; field access; columnFloatList; this; " __idKDM="setColumnFloatList___RealmList_Float____"/>
+    <eoperations name="getColumnDateList()" etype="RealmList&lt;Date>" methodBody="return; " __idKDM="getColumnDateList______"/>
+    <eoperations name="setColumnDateList()" eparameters="columnDateList:RealmList&lt;Date>" etype="void" methodBody="expression statement; ASSIGN; field access; columnDateList; this; " __idKDM="setColumnDateList___RealmList_Date____"/>
+    <eoperations name="getColumnDecimal128()" etype="Decimal128" methodBody="return; " __idKDM="getColumnDecimal128______"/>
+    <eoperations name="setColumnDecimal128()" eparameters="columnDecimal128:Decimal128" etype="void" methodBody="expression statement; ASSIGN; field access; columnDecimal128; this; " __idKDM="setColumnDecimal128___Decimal128___"/>
+    <eoperations name="getColumnObjectId()" etype="ObjectId" methodBody="return; " __idKDM="getColumnObjectId______"/>
+    <eoperations name="setColumnObjectId()" eparameters="columnObjectId:ObjectId" etype="void" methodBody="expression statement; ASSIGN; field access; columnObjectId; this; " __idKDM="setColumnObjectId___ObjectId___"/>
+    <eoperations name="getColumnUUID()" etype="UUID" methodBody="return; " __idKDM="getColumnUUID______"/>
+    <eoperations name="setColumnUUID()" eparameters="columnUUID:UUID" etype="void" methodBody="expression statement; ASSIGN; columnUUID; field access; columnUUID; this; " __idKDM="setColumnUUID___UUID___"/>
+    <eoperations name="getColumnMixed()" etype="Mixed" methodBody="return; " __idKDM="getColumnMixed______"/>
+    <eoperations name="setColumnMixed()" eparameters="columnMixed:Mixed" etype="void" methodBody="expression statement; ASSIGN; field access; columnMixed; this; " __idKDM="setColumnMixed___Mixed___"/>
+    <eoperations name="getColumnDecimal128List()" etype="RealmList&lt;Decimal128>" methodBody="return; " __idKDM="getColumnDecimal128List______"/>
+    <eoperations name="setColumnDecimal128List()" eparameters="columnDecimal128List:RealmList&lt;Decimal128>" etype="void" methodBody="expression statement; ASSIGN; field access; columnDecimal128List; this; " __idKDM="setColumnDecimal128List___RealmList_Decimal128____"/>
+    <eoperations name="getColumnObjectIdList()" etype="RealmList&lt;ObjectId>" methodBody="return; " __idKDM="getColumnObjectIdList______"/>
+    <eoperations name="setColumnObjectIdList()" eparameters="columnObjectIdList:RealmList&lt;ObjectId>" etype="void" methodBody="expression statement; ASSIGN; field access; columnObjectIdList; this; " __idKDM="setColumnObjectIdList___RealmList_ObjectId____"/>
+    <eoperations name="getColumnUUIDList()" etype="RealmList&lt;UUID>" methodBody="return; " __idKDM="getColumnUUIDList______"/>
+    <eoperations name="setColumnUUIDList()" eparameters="columnUUIDList:RealmList&lt;UUID>" etype="void" methodBody="expression statement; ASSIGN; field access; columnUUIDList; this; " __idKDM="setColumnUUIDList___RealmList_UUID____"/>
+    <eoperations name="getColumnMixedList()" etype="RealmList&lt;Mixed>" methodBody="return; " __idKDM="getColumnMixedList______"/>
+    <eoperations name="setColumnMixedList()" eparameters="columnMixedList:RealmList&lt;Mixed>" etype="void" methodBody="expression statement; ASSIGN; field access; columnMixedList; this; " __idKDM="setColumnMixedList___RealmList_Mixed____"/>
+    <eoperations name="getColumnRealmDictionary()" etype="RealmDictionary&lt;DogPrimaryKey>" methodBody="return; " __idKDM="getColumnRealmDictionary______"/>
+    <eoperations name="setColumnRealmDictionary()" eparameters="columnRealmDictionary:RealmDictionary&lt;DogPrimaryKey>" etype="void" methodBody="expression statement; ASSIGN; field access; columnRealmDictionary; this; " __idKDM="setColumnRealmDictionary___RealmDictionary_DogPrimaryKey____"/>
+    <eoperations name="getColumnBooleanDictionary()" etype="RealmDictionary&lt;Boolean>" methodBody="return; " __idKDM="getColumnBooleanDictionary______"/>
+    <eoperations name="setColumnBooleanDictionary()" eparameters="columnBooleanDictionary:RealmDictionary&lt;Boolean>" etype="void" methodBody="expression statement; ASSIGN; field access; columnBooleanDictionary; this; " __idKDM="setColumnBooleanDictionary___RealmDictionary_Boolean____"/>
+    <eoperations name="getColumnStringDictionary()" etype="RealmDictionary&lt;String>" methodBody="return; " __idKDM="getColumnStringDictionary______"/>
+    <eoperations name="setColumnStringDictionary()" eparameters="columnStringDictionary:RealmDictionary&lt;String>" etype="void" methodBody="expression statement; ASSIGN; field access; columnStringDictionary; this; " __idKDM="setColumnStringDictionary___RealmDictionary_String____"/>
+    <eoperations name="getColumnIntegerDictionary()" etype="RealmDictionary&lt;Integer>" methodBody="return; " __idKDM="getColumnIntegerDictionary______"/>
+    <eoperations name="setColumnIntegerDictionary()" eparameters="columnIntegerDictionary:RealmDictionary&lt;Integer>" etype="void" methodBody="expression statement; ASSIGN; field access; columnIntegerDictionary; this; " __idKDM="setColumnIntegerDictionary___RealmDictionary_Integer____"/>
+    <eoperations name="getColumnFloatDictionary()" etype="RealmDictionary&lt;Float>" methodBody="return; " __idKDM="getColumnFloatDictionary______"/>
+    <eoperations name="setColumnFloatDictionary()" eparameters="columnFloatDictionary:RealmDictionary&lt;Float>" etype="void" methodBody="expression statement; ASSIGN; field access; columnFloatDictionary; this; " __idKDM="setColumnFloatDictionary___RealmDictionary_Float____"/>
+    <eoperations name="getColumnLongDictionary()" etype="RealmDictionary&lt;Long>" methodBody="return; " __idKDM="getColumnLongDictionary______"/>
+    <eoperations name="setColumnLongDictionary()" eparameters="columnLongDictionary:RealmDictionary&lt;Long>" etype="void" methodBody="expression statement; ASSIGN; field access; columnLongDictionary; this; " __idKDM="setColumnLongDictionary___RealmDictionary_Long____"/>
+    <eoperations name="getColumnShortDictionary()" etype="RealmDictionary&lt;Short>" methodBody="return; " __idKDM="getColumnShortDictionary______"/>
+    <eoperations name="setColumnShortDictionary()" eparameters="columnShortDictionary:RealmDictionary&lt;Short>" etype="void" methodBody="expression statement; ASSIGN; field access; columnShortDictionary; this; " __idKDM="setColumnShortDictionary___RealmDictionary_Short____"/>
+    <eoperations name="getColumnDoubleDictionary()" etype="RealmDictionary&lt;Double>" methodBody="return; " __idKDM="getColumnDoubleDictionary______"/>
+    <eoperations name="setColumnDoubleDictionary()" eparameters="columnDoubleDictionary:RealmDictionary&lt;Double>" etype="void" methodBody="expression statement; ASSIGN; field access; columnDoubleDictionary; this; " __idKDM="setColumnDoubleDictionary___RealmDictionary_Double____"/>
+    <eoperations name="getColumnByteDictionary()" etype="RealmDictionary&lt;Byte>" methodBody="return; " __idKDM="getColumnByteDictionary______"/>
+    <eoperations name="setColumnByteDictionary()" eparameters="columnByteDictionary:RealmDictionary&lt;Byte>" etype="void" methodBody="expression statement; ASSIGN; field access; columnByteDictionary; this; " __idKDM="setColumnByteDictionary___RealmDictionary_Byte____"/>
+    <eoperations name="getColumnBinaryDictionary()" etype="RealmDictionary&lt;byte[]>" methodBody="return; " __idKDM="getColumnBinaryDictionary______"/>
+    <eoperations name="setColumnBinaryDictionary()" eparameters="columnBinaryDictionary:RealmDictionary&lt;byte[]>" etype="void" methodBody="expression statement; ASSIGN; field access; columnBinaryDictionary; this; " __idKDM="setColumnBinaryDictionary___RealmDictionary_byte______"/>
+    <eoperations name="getColumnDateDictionary()" etype="RealmDictionary&lt;Date>" methodBody="return; " __idKDM="getColumnDateDictionary______"/>
+    <eoperations name="setColumnDateDictionary()" eparameters="columnDateDictionary:RealmDictionary&lt;Date>" etype="void" methodBody="expression statement; ASSIGN; field access; columnDateDictionary; this; " __idKDM="setColumnDateDictionary___RealmDictionary_Date____"/>
+    <eoperations name="getColumnObjectIdDictionary()" etype="RealmDictionary&lt;ObjectId>" methodBody="return; " __idKDM="getColumnObjectIdDictionary______"/>
+    <eoperations name="setColumnObjectIdDictionary()" eparameters="columnObjectIdDictionary:RealmDictionary&lt;ObjectId>" etype="void" methodBody="expression statement; ASSIGN; field access; columnObjectIdDictionary; this; " __idKDM="setColumnObjectIdDictionary___RealmDictionary_ObjectId____"/>
+    <eoperations name="getColumnUUIDDictionary()" etype="RealmDictionary&lt;UUID>" methodBody="return; " __idKDM="getColumnUUIDDictionary______"/>
+    <eoperations name="setColumnUUIDDictionary()" eparameters="columnUUIDDictionary:RealmDictionary&lt;UUID>" etype="void" methodBody="expression statement; ASSIGN; field access; columnUUIDDictionary; this; " __idKDM="setColumnUUIDDictionary___RealmDictionary_UUID____"/>
+    <eoperations name="getColumnDecimal128Dictionary()" etype="RealmDictionary&lt;Decimal128>" methodBody="return; " __idKDM="getColumnDecimal128Dictionary______"/>
+    <eoperations name="setColumnDecimal128Dictionary()" eparameters="columnDecimal128Dictionary:RealmDictionary&lt;Decimal128>" etype="void" methodBody="expression statement; ASSIGN; field access; columnDecimal128Dictionary; this; " __idKDM="setColumnDecimal128Dictionary___RealmDictionary_Decimal128____"/>
+    <eoperations name="getColumnMixedDictionary()" etype="RealmDictionary&lt;Mixed>" methodBody="return; " __idKDM="getColumnMixedDictionary______"/>
+    <eoperations name="setColumnMixedDictionary()" eparameters="columnMixedDictionary:RealmDictionary&lt;Mixed>" etype="void" methodBody="expression statement; ASSIGN; field access; columnMixedDictionary; this; " __idKDM="setColumnMixedDictionary___RealmDictionary_Mixed____"/>
+    <eoperations name="getColumnMixedList()" etype="RealmList&lt;Mixed>" methodBody="return; " __idKDM="getColumnMixedList______"/>
+    <eoperations name="setColumnMixedList()" eparameters="columnMixedList:RealmList&lt;Mixed>" etype="void" methodBody="expression statement; ASSIGN; field access; columnMixedList; this; " __idKDM="setColumnMixedList___RealmList_Mixed____"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="getColumnBoxedBinaryDictionary()" etype="RealmDictionary&lt;Byte[]>" methodBody="return; " __idKDM="getColumnBoxedBinaryDictionary______" diff_kind_Right="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="setColumnBoxedBinaryDictionary()" eparameters="columnBoxedBinaryDictionary:RealmDictionary&lt;Byte[]>" etype="void" methodBody="expression statement; ASSIGN; field access; columnBoxedBinaryDictionary; this; " __idKDM="setColumnBoxedBinaryDictionary___RealmDictionary_Byte______" diff_kind_Right="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="getColumnMixedList()" etype="RealmList&lt;Mixed>" methodBody="return; " __idKDM="getColumnMixedList______" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="setColumnMixedList()" eparameters="columnMixedList:RealmList&lt;Mixed>" etype="void" methodBody="expression statement; ASSIGN; field access; columnMixedList; this; " __idKDM="setColumnMixedList___RealmList_Mixed____" diff_kind_Left="ADD"/>
+    <esupertypes href="3bfb79bfe048114be4e73eba3d6e9503583a2752_gitMerged_ref.xmi#RealmObject"/>
+    <diffeattributes diff_kind_Right="DELETE" diff_Group="DG-Move-3" eType="columnMixedList"/>
+    <diffeattributes diff_kind_Right="ADD" diff_Group="DG-Move-3" eType="columnMixedList"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-2" eType="getColumnMixedList()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-2" eType="getColumnMixedList()"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-4" eType="setColumnMixedList()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-4" eType="setColumnMixedList()"/>
+  </eclassifiers>
+  <eclassifiers name="OsObjectBuilder" implements="Closeable" interfaces="Closeable">
+    <eattributes name="table" etype="Table"/>
+    <eattributes name="sharedRealmPtr" etype="long"/>
+    <eattributes name="builderPtr" etype="long"/>
+    <eattributes name="tablePtr" etype="long"/>
+    <eattributes name="context" etype="NativeContext"/>
+    <eattributes name="objectItemCallback" etype="ItemCallback&lt;? extends RealmModel>"/>
+    <eattributes name="stringItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.lang.String>"/>
+    <eattributes name="byteItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.lang.Byte>"/>
+    <eattributes name="shortItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.lang.Short>"/>
+    <eattributes name="integerItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.lang.Integer>"/>
+    <eattributes name="longItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.lang.Long>"/>
+    <eattributes name="booleanItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.lang.Boolean>"/>
+    <eattributes name="floatItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.lang.Float>"/>
+    <eattributes name="doubleItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.lang.Double>"/>
+    <eattributes name="dateItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Date>"/>
+    <eattributes name="byteArrayItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;byte[]>"/>
+    <eattributes name="mutableRealmIntegerItemCallback" etype="ItemCallback&lt;MutableRealmInteger>"/>
+    <eattributes name="decimal128ItemCallback" etype="ItemCallback&lt;Decimal128>"/>
+    <eattributes name="objectIdItemCallback" etype="ItemCallback&lt;ObjectId>"/>
+    <eattributes name="uuidItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.UUID>"/>
+    <eattributes name="booleanMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Boolean>>"/>
+    <eattributes name="stringMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.String>>"/>
+    <eattributes name="integerMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Integer>>"/>
+    <eattributes name="floatMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Float>>"/>
+    <eattributes name="longMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Long>>"/>
+    <eattributes name="shortMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Short>>"/>
+    <eattributes name="byteMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Byte>>"/>
+    <eattributes name="doubleMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Double>>"/>
+    <eattributes name="binaryMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,byte[]>>"/>
+    <eattributes name="dateMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.util.Date>>"/>
+    <eattributes name="decimal128MapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,Decimal128>>"/>
+    <eattributes name="objectIdMapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,ObjectId>>"/>
+    <eattributes name="uuidMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.util.UUID>>"/>
+    <eattributes name="mixedItemCallback" etype="ItemCallback&lt;Mixed>"/>
+    <eattributes name="decimal128MapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,Decimal128>>"/>
+    <eattributes name="objectIdMapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,ObjectId>>"/>
+    <eattributes name="mixedItemCallback" etype="ItemCallback&lt;Mixed>"/>
+    <eattributes name="ignoreFieldsWithSameValue" etype="boolean"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="nonPrimitiveBinaryMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Byte[]>>" diff_kind_Right="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="booleanMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Boolean>>" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="floatMapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,Float>>" diff_kind_Right="MODIFY" new_etype_Right="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Float>>"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="uuidMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.util.UUID>>" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="longMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Long>>" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="objectIdMapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,ObjectId>>" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="integerMapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,Integer>>" diff_kind_Right="MODIFY" new_etype_Right="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Integer>>"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="uuidMapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,UUID>>" diff_kind_Right="MODIFY" new_etype_Right="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.util.UUID>>"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="binaryMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,byte[]>>" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="shortMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Short>>" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="stringMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.String>>" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="byteMapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,Byte>>" diff_kind_Right="MODIFY" new_etype_Right="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Byte>>"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="longMapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,Long>>" diff_kind_Right="MODIFY" new_etype_Right="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Long>>"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="booleanMapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,Boolean>>" diff_kind_Right="MODIFY" new_etype_Right="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Boolean>>"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="byteMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Byte>>" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="floatMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Float>>" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="doubleMapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,Double>>" diff_kind_Right="MODIFY" new_etype_Right="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Double>>"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="shortMapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,Short>>" diff_kind_Right="MODIFY" new_etype_Right="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Short>>"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="integerMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Integer>>" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="mixedItemCallback" etype="ItemCallback&lt;Mixed>" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="doubleMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.Double>>" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="stringMapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,String>>" diff_kind_Right="MODIFY" new_etype_Right="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.lang.String>>"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="decimal128MapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,Decimal128>>" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="dateMapItemCallback" etype="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.util.Date>>" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="dateMapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,Date>>" diff_kind_Right="MODIFY" new_etype_Right="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,java.util.Date>>"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="binaryMapItemCallback" etype="ItemCallback&lt;Map.Entry&lt;String,byte[]>>" diff_kind_Right="MODIFY" new_etype_Right="pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,byte[]>>"/>
+    <eoperations name="OsObjectBuilder()" eparameters="table:Table, flags:Set&lt;ImportFlag>" methodBody="expression statement; ASSIGN; method invocation; contains; field access; ignoreFieldsWithSameValue; this; expression statement; ASSIGN; field access; context; this; expression statement; ASSIGN; method invocation; nativeCreateBuilder; field access; builderPtr; this; expression statement; ASSIGN; method invocation; getNativePtr; field access; tablePtr; this; expression statement; method invocation; getColumnNames; field access; table; this; expression statement; ASSIGN; field access; table; this; expression statement; ASSIGN; method invocation; getNativePtr; field access; sharedRealmPtr; this; variable declaration; sharedRealm; " __idKDM="OsObjectBuilder___Table__Set_ImportFlag____"/>
+    <eoperations name="addInteger()" eparameters="columnKey:long, val:Byte" etype="void" methodBody="if; expression statement; method invocation; nativeAddInteger; expression statement; method invocation; nativeAddNull; EQUALS; val; null; " __idKDM="addInteger___long__Byte___"/>
+    <eoperations name="addInteger()" eparameters="columnKey:long, val:Short" etype="void" methodBody="if; expression statement; method invocation; nativeAddInteger; expression statement; method invocation; nativeAddNull; EQUALS; val; null; " __idKDM="addInteger___long__Short___"/>
+    <eoperations name="addInteger()" eparameters="columnKey:long, val:Integer" etype="void" methodBody="if; expression statement; method invocation; nativeAddInteger; expression statement; method invocation; nativeAddNull; EQUALS; val; null; " __idKDM="addInteger___long__Integer___"/>
+    <eoperations name="addInteger()" eparameters="columnKey:long, val:Long" etype="void" methodBody="if; expression statement; method invocation; nativeAddInteger; expression statement; method invocation; nativeAddNull; EQUALS; val; null; " __idKDM="addInteger___long__Long___"/>
+    <eoperations name="addMutableRealmInteger()" eparameters="columnKey:long, val:MutableRealmInteger" etype="void" methodBody="if; expression statement; method invocation; nativeAddInteger; method invocation; get; expression statement; method invocation; nativeAddNull; CONDITIONAL_OR; EQUALS; null; method invocation; get; EQUALS; null; " __idKDM="addMutableRealmInteger___long__MutableRealmInteger___"/>
+    <eoperations name="addMixed()" eparameters="columnKey:long, mixedPtr:long" etype="void" methodBody="expression statement; method invocation; nativeAddMixed; " __idKDM="addMixed___long__long___"/>
+    <eoperations name="addString()" eparameters="columnKey:long, val:String" etype="void" methodBody="if; expression statement; method invocation; nativeAddString; expression statement; method invocation; nativeAddNull; EQUALS; val; null; " __idKDM="addString___long__String___"/>
+    <eoperations name="addFloat()" eparameters="columnKey:long, val:Float" etype="void" methodBody="if; expression statement; method invocation; nativeAddFloat; expression statement; method invocation; nativeAddNull; EQUALS; val; null; " __idKDM="addFloat___long__Float___"/>
+    <eoperations name="addDouble()" eparameters="columnKey:long, val:Double" etype="void" methodBody="if; expression statement; method invocation; nativeAddDouble; expression statement; method invocation; nativeAddNull; EQUALS; val; null; " __idKDM="addDouble___long__Double___"/>
+    <eoperations name="addBoolean()" eparameters="columnKey:long, val:Boolean" etype="void" methodBody="if; expression statement; method invocation; nativeAddBoolean; expression statement; method invocation; nativeAddNull; EQUALS; val; null; " __idKDM="addBoolean___long__Boolean___"/>
+    <eoperations name="addDate()" eparameters="columnKey:long, val:Date" etype="void" methodBody="if; expression statement; method invocation; nativeAddDate; method invocation; getTime; expression statement; method invocation; nativeAddNull; EQUALS; val; null; " __idKDM="addDate___long__Date___"/>
+    <eoperations name="addByteArray()" eparameters="columnKey:long, val:byte[]" etype="void" methodBody="if; expression statement; method invocation; nativeAddByteArray; expression statement; method invocation; nativeAddNull; EQUALS; val; null; " __idKDM="addByteArray___long__byte_____"/>
+    <eoperations name="addDecimal128()" eparameters="columnKey:long, val:Decimal128" etype="void" methodBody="if; expression statement; method invocation; nativeAddDecimal128; method invocation; getHigh; method invocation; getLow; expression statement; method invocation; nativeAddNull; EQUALS; null; " __idKDM="addDecimal128___long__Decimal128___"/>
+    <eoperations name="addObjectId()" eparameters="columnKey:long, val:ObjectId" etype="void" methodBody="if; expression statement; method invocation; nativeAddObjectId; method invocation; toString; expression statement; method invocation; nativeAddNull; EQUALS; null; " __idKDM="addObjectId___long__ObjectId___"/>
+    <eoperations name="addUUID()" eparameters="columnKey:long, val:UUID" etype="void" methodBody="if; expression statement; method invocation; nativeAddUUID; method invocation; toString; expression statement; method invocation; nativeAddNull; EQUALS; val; null; " __idKDM="addUUID___long__UUID___"/>
+    <eoperations name="addNull()" eparameters="columnKey:long" etype="void" methodBody="expression statement; method invocation; nativeAddNull; " __idKDM="addNull___long___"/>
+    <eoperations name="addObject()" eparameters="columnKey:long, val:RealmModel" etype="void" methodBody="if; expression statement; method invocation; nativeAddObject; method invocation; getNativePtr; variable declaration; row; variable declaration; proxy; expression statement; method invocation; nativeAddNull; EQUALS; null; " __idKDM="addObject___long__RealmModel___"/>
+    <eoperations name="addListItem()" eparameters="builderPtr:long, columnKey:long, list:java.util.List&lt;T>, itemCallback:pkg.OsObjectBuilder.ItemCallback&lt;T>" etype="void" methodBody="if; expression statement; method invocation; addEmptyList; expression statement; method invocation; nativeStopList; for; if; expression statement; method invocation; handleItem; expression statement; method invocation; nativeAddNullListItem; if; throw; class instance creation; IllegalArgumentException; string literal; NOT; EQUALS; item; null; variable declaration; item; INCREMENT; variable declaration; int; i; LESS; i; method invocation; size; variable declaration; isNullable; variable declaration; listPtr; NOT_EQUALS; list; null; " __idKDM="addListItem___long__long__java_util_List_T___pkg_OsObjectBuilder_ItemCallback_T____"/>
+    <eoperations name="addObjectList()" eparameters="columnKey:long, list:RealmList&lt;T>" etype="void" methodBody="if; expression statement; method invocation; nativeAddObjectList; array creation; long[]; number literal; expression statement; method invocation; nativeAddObjectList; for; if; expression statement; ASSIGN; method invocation; getNativePtr; parenthesized; cast; method invocation; getRow$realm; method invocation; realmGet$proxyState; array access; rowPointers; throw; class instance creation; IllegalArgumentException; string literal; EQUALS; null; variable declaration; item; INCREMENT; variable declaration; int; i; LESS; i; method invocation; size; variable declaration; rowPointers; NOT_EQUALS; null; " __idKDM="addObjectList___long__RealmList_T____"/>
+    <eoperations name="addStringList()" eparameters="columnKey:long, list:RealmList&lt;String>" etype="void" methodBody="expression statement; method invocation; addListItem; " __idKDM="addStringList___long__RealmList_String____"/>
+    <eoperations name="addByteList()" eparameters="columnKey:long, list:RealmList&lt;Byte>" etype="void" methodBody="expression statement; method invocation; addListItem; " __idKDM="addByteList___long__RealmList_Byte____"/>
+    <eoperations name="addShortList()" eparameters="columnKey:long, list:RealmList&lt;Short>" etype="void" methodBody="expression statement; method invocation; addListItem; " __idKDM="addShortList___long__RealmList_Short____"/>
+    <eoperations name="addIntegerList()" eparameters="columnKey:long, list:RealmList&lt;Integer>" etype="void" methodBody="expression statement; method invocation; addListItem; " __idKDM="addIntegerList___long__RealmList_Integer____"/>
+    <eoperations name="addLongList()" eparameters="columnKey:long, list:RealmList&lt;Long>" etype="void" methodBody="expression statement; method invocation; addListItem; " __idKDM="addLongList___long__RealmList_Long____"/>
+    <eoperations name="addBooleanList()" eparameters="columnKey:long, list:RealmList&lt;Boolean>" etype="void" methodBody="expression statement; method invocation; addListItem; " __idKDM="addBooleanList___long__RealmList_Boolean____"/>
+    <eoperations name="addFloatList()" eparameters="columnKey:long, list:RealmList&lt;Float>" etype="void" methodBody="expression statement; method invocation; addListItem; " __idKDM="addFloatList___long__RealmList_Float____"/>
+    <eoperations name="addDoubleList()" eparameters="columnKey:long, list:RealmList&lt;Double>" etype="void" methodBody="expression statement; method invocation; addListItem; " __idKDM="addDoubleList___long__RealmList_Double____"/>
+    <eoperations name="addDateList()" eparameters="columnKey:long, list:RealmList&lt;Date>" etype="void" methodBody="expression statement; method invocation; addListItem; " __idKDM="addDateList___long__RealmList_Date____"/>
+    <eoperations name="addByteArrayList()" eparameters="columnKey:long, list:RealmList&lt;byte[]>" etype="void" methodBody="expression statement; method invocation; addListItem; " __idKDM="addByteArrayList___long__RealmList_byte______"/>
+    <eoperations name="addMutableRealmIntegerList()" eparameters="columnKey:long, list:RealmList&lt;MutableRealmInteger>" etype="void" methodBody="expression statement; method invocation; addListItem; " __idKDM="addMutableRealmIntegerList___long__RealmList_MutableRealmInteger____"/>
+    <eoperations name="addDecimal128List()" eparameters="columnKey:long, list:RealmList&lt;Decimal128>" etype="void" methodBody="expression statement; method invocation; addListItem; " __idKDM="addDecimal128List___long__RealmList_Decimal128____"/>
+    <eoperations name="addObjectIdList()" eparameters="columnKey:long, list:RealmList&lt;ObjectId>" etype="void" methodBody="expression statement; method invocation; addListItem; " __idKDM="addObjectIdList___long__RealmList_ObjectId____"/>
+    <eoperations name="addUUIDList()" eparameters="columnKey:long, list:RealmList&lt;UUID>" etype="void" methodBody="expression statement; method invocation; addListItem; " __idKDM="addUUIDList___long__RealmList_UUID____"/>
+    <eoperations name="addMixedList()" eparameters="columnKey:long, list:RealmList&lt;Mixed>" etype="void" methodBody="expression statement; method invocation; addListItem; " __idKDM="addMixedList___long__RealmList_Mixed____"/>
+    <eoperations name="addEmptyList()" eparameters="columnKey:long" etype="void" methodBody="expression statement; method invocation; nativeStopList; variable declaration; listPtr; " __idKDM="addEmptyList___long___"/>
+    <eoperations name="addMixedValueDictionary()" eparameters="columnKey:long" etype="void" methodBody="expression statement; method invocation; addEmptyDictionary; " __idKDM="addMixedValueDictionary___long___"/>
+    <eoperations name="addMixedValueDictionary()" eparameters="columnKey:long, keys:java.util.List&lt;java.lang.String>, mixedPointers:java.util.List&lt;java.lang.Long>" etype="void" methodBody="expression statement; method invocation; addMixedDictionaryItem; " __idKDM="addMixedValueDictionary___long__java_util_List_java_lang_String___java_util_List_java_lang_Long____"/>
+    <eoperations name="addMixedDictionaryItem()" eparameters="builderPtr:long, columnKey:long, keys:java.util.List&lt;java.lang.String>, mixedPointers:java.util.List&lt;java.lang.Long>" etype="void" methodBody="if; expression statement; method invocation; nativeStopDictionary; for; expression statement; method invocation; nativeAddMixedDictionaryEntry; method invocation; get; method invocation; get; INCREMENT; variable declaration; int; i; LESS; i; method invocation; size; variable declaration; dictionaryPtr; expression statement; method invocation; addEmptyDictionary; CONDITIONAL_AND; method invocation; isEmpty; method invocation; isEmpty; " __idKDM="addMixedDictionaryItem___long__long__java_util_List_java_lang_String___java_util_List_java_lang_Long____"/>
+    <eoperations name="addBooleanValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Boolean>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addBooleanValueDictionary___long__RealmDictionary_Boolean____"/>
+    <eoperations name="addIntegerValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Integer>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addIntegerValueDictionary___long__RealmDictionary_Integer____"/>
+    <eoperations name="addFloatValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Float>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addFloatValueDictionary___long__RealmDictionary_Float____"/>
+    <eoperations name="addLongValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Long>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addLongValueDictionary___long__RealmDictionary_Long____"/>
+    <eoperations name="addShortValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Short>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addShortValueDictionary___long__RealmDictionary_Short____"/>
+    <eoperations name="addByteValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Byte>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addByteValueDictionary___long__RealmDictionary_Byte____"/>
+    <eoperations name="addDoubleValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Double>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addDoubleValueDictionary___long__RealmDictionary_Double____"/>
+    <eoperations name="addStringValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;String>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addStringValueDictionary___long__RealmDictionary_String____"/>
+    <eoperations name="addDateValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Date>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addDateValueDictionary___long__RealmDictionary_Date____"/>
+    <eoperations name="addDecimal128ValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Decimal128>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addDecimal128ValueDictionary___long__RealmDictionary_Decimal128____"/>
+    <eoperations name="addBinaryValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;byte[]>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addBinaryValueDictionary___long__RealmDictionary_byte______"/>
+    <eoperations name="addObjectIdValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;ObjectId>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addObjectIdValueDictionary___long__RealmDictionary_ObjectId____"/>
+    <eoperations name="addUUIDValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;UUID>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addUUIDValueDictionary___long__RealmDictionary_UUID____"/>
+    <eoperations name="addDictionaryItem()" eparameters="builderPtr:long, columnKey:long, dictionary:RealmDictionary&lt;T>, mapItemCallback:pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,T>>" etype="void" methodBody="if; expression statement; method invocation; addEmptyDictionary; expression statement; method invocation; nativeStopDictionary; foreach; entry; if; expression statement; method invocation; handleItem; expression statement; method invocation; nativeAddNullDictionaryEntry; method invocation; getKey; EQUALS; null; method invocation; getValue; method invocation; entrySet; variable declaration; dictionaryPtr; NOT_EQUALS; null; " __idKDM="addDictionaryItem___long__long__RealmDictionary_T___pkg_OsObjectBuilder_ItemCallback_java_util_Map_Entry_java_lang_String_T_____"/>
+    <eoperations name="addEmptyDictionary()" eparameters="columnKey:long" etype="void" methodBody="expression statement; method invocation; nativeStopDictionary; method invocation; nativeStartDictionary; " __idKDM="addEmptyDictionary___long___"/>
+    <eoperations name="addMixedValueDictionary()" eparameters="columnKey:long" etype="void" methodBody="expression statement; method invocation; addEmptyDictionary; " __idKDM="addMixedValueDictionary___long___"/>
+    <eoperations name="addMixedValueDictionary()" eparameters="columnKey:long, keys:java.util.List&lt;java.lang.String>, mixedPointers:java.util.List&lt;java.lang.Long>" etype="void" methodBody="expression statement; method invocation; addMixedDictionaryItem; " __idKDM="addMixedValueDictionary___long__java_util_List_java_lang_String___java_util_List_java_lang_Long____"/>
+    <eoperations name="addMixedDictionaryItem()" eparameters="builderPtr:long, columnKey:long, keys:java.util.List&lt;java.lang.String>, mixedPointers:java.util.List&lt;java.lang.Long>" etype="void" methodBody="if; expression statement; method invocation; nativeStopDictionary; for; expression statement; method invocation; nativeAddMixedDictionaryEntry; method invocation; get; method invocation; get; INCREMENT; variable declaration; int; i; LESS; i; method invocation; size; variable declaration; dictionaryPtr; expression statement; method invocation; addEmptyDictionary; CONDITIONAL_AND; method invocation; isEmpty; method invocation; isEmpty; " __idKDM="addMixedDictionaryItem___long__long__java_util_List_java_lang_String___java_util_List_java_lang_Long____"/>
+    <eoperations name="addBooleanValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Boolean>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addBooleanValueDictionary___long__RealmDictionary_Boolean____"/>
+    <eoperations name="addIntegerValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Integer>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addIntegerValueDictionary___long__RealmDictionary_Integer____"/>
+    <eoperations name="addFloatValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Float>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addFloatValueDictionary___long__RealmDictionary_Float____"/>
+    <eoperations name="addLongValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Long>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addLongValueDictionary___long__RealmDictionary_Long____"/>
+    <eoperations name="addShortValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Short>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addShortValueDictionary___long__RealmDictionary_Short____"/>
+    <eoperations name="addByteValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Byte>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addByteValueDictionary___long__RealmDictionary_Byte____"/>
+    <eoperations name="addDoubleValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Double>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addDoubleValueDictionary___long__RealmDictionary_Double____"/>
+    <eoperations name="addStringValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;String>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addStringValueDictionary___long__RealmDictionary_String____"/>
+    <eoperations name="addDateValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Date>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addDateValueDictionary___long__RealmDictionary_Date____"/>
+    <eoperations name="addDecimal128ValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Decimal128>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addDecimal128ValueDictionary___long__RealmDictionary_Decimal128____"/>
+    <eoperations name="addBinaryValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;byte[]>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addBinaryValueDictionary___long__RealmDictionary_byte______"/>
+    <eoperations name="addObjectIdValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;ObjectId>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addObjectIdValueDictionary___long__RealmDictionary_ObjectId____"/>
+    <eoperations name="addUUIDValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;UUID>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addUUIDValueDictionary___long__RealmDictionary_UUID____"/>
+    <eoperations name="addDictionaryItem()" eparameters="builderPtr:long, columnKey:long, dictionary:RealmDictionary&lt;T>, mapItemCallback:pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,T>>" etype="void" methodBody="if; expression statement; method invocation; addEmptyDictionary; expression statement; method invocation; nativeStopDictionary; foreach; entry; if; expression statement; method invocation; handleItem; expression statement; method invocation; nativeAddNullDictionaryEntry; method invocation; getKey; EQUALS; null; method invocation; getValue; method invocation; entrySet; variable declaration; dictionaryPtr; NOT_EQUALS; null; " __idKDM="addDictionaryItem___long__long__RealmDictionary_T___pkg_OsObjectBuilder_ItemCallback_java_util_Map_Entry_java_lang_String_T_____"/>
+    <eoperations name="addEmptyDictionary()" eparameters="columnKey:long" etype="void" methodBody="expression statement; method invocation; nativeStopDictionary; method invocation; nativeStartDictionary; " __idKDM="addEmptyDictionary___long___"/>
+    <eoperations name="updateExistingTopLevelObject()" etype="void" methodBody="try; expression statement; method invocation; close; expression statement; method invocation; nativeCreateOrUpdateTopLevelObject; boolean literal; " __idKDM="updateExistingTopLevelObject______"/>
+    <eoperations name="updateExistingEmbeddedObject()" eparameters="embeddedObject:RealmObjectProxy" etype="void" methodBody="try; expression statement; method invocation; close; expression statement; method invocation; nativeUpdateEmbeddedObject; variable declaration; objKey; " __idKDM="updateExistingEmbeddedObject___RealmObjectProxy___"/>
+    <eoperations name="createNewObject()" etype="UncheckedRow" methodBody="return; try; expression statement; method invocation; close; expression statement; ASSIGN; class instance creation; Object; variable declaration; rowPtr; variable declaration; row; " __idKDM="createNewObject______"/>
+    <eoperations name="getNativePtr()" etype="long" methodBody="return; " __idKDM="getNativePtr______"/>
+    <eoperations name="close()" etype="void" methodBody="expression statement; method invocation; nativeDestroyBuilder; " __idKDM="close______"/>
+    <eoperations name="nativeCreateBuilder()" etype="long" methodBody="" __idKDM="nativeCreateBuilder______"/>
+    <eoperations name="nativeDestroyBuilder()" eparameters="builderPtr:long" etype="void" methodBody="" __idKDM="nativeDestroyBuilder___long___"/>
+    <eoperations name="nativeCreateOrUpdateTopLevelObject()" eparameters="sharedRealmPtr:long, tablePtr:long, builderPtr:long, updateExistingObject:boolean, ignoreFieldsWithSameValue:boolean" etype="long" methodBody="" __idKDM="nativeCreateOrUpdateTopLevelObject___long__long__long__boolean__boolean___"/>
+    <eoperations name="nativeUpdateEmbeddedObject()" eparameters="sharedRealmPtr:long, tablePtr:long, builderPtr:long, objKey:long, ignoreFieldsWithSameValue:boolean" etype="long" methodBody="" __idKDM="nativeUpdateEmbeddedObject___long__long__long__long__boolean___"/>
+    <eoperations name="nativeAddNull()" eparameters="builderPtr:long, columnKey:long" etype="void" methodBody="" __idKDM="nativeAddNull___long__long___"/>
+    <eoperations name="nativeAddInteger()" eparameters="builderPtr:long, columnKey:long, val:long" etype="void" methodBody="" __idKDM="nativeAddInteger___long__long__long___"/>
+    <eoperations name="nativeAddString()" eparameters="builderPtr:long, columnKey:long, val:String" etype="void" methodBody="" __idKDM="nativeAddString___long__long__String___"/>
+    <eoperations name="nativeAddFloat()" eparameters="builderPtr:long, columnKey:long, val:float" etype="void" methodBody="" __idKDM="nativeAddFloat___long__long__float___"/>
+    <eoperations name="nativeAddDouble()" eparameters="builderPtr:long, columnKey:long, val:double" etype="void" methodBody="" __idKDM="nativeAddDouble___long__long__double___"/>
+    <eoperations name="nativeAddBoolean()" eparameters="builderPtr:long, columnKey:long, val:boolean" etype="void" methodBody="" __idKDM="nativeAddBoolean___long__long__boolean___"/>
+    <eoperations name="nativeAddByteArray()" eparameters="builderPtr:long, columnKey:long, val:byte[]" etype="void" methodBody="" __idKDM="nativeAddByteArray___long__long__byte_____"/>
+    <eoperations name="nativeAddDate()" eparameters="builderPtr:long, columnKey:long, val:long" etype="void" methodBody="" __idKDM="nativeAddDate___long__long__long___"/>
+    <eoperations name="nativeAddObject()" eparameters="builderPtr:long, columnKey:long, rowPtr:long" etype="void" methodBody="" __idKDM="nativeAddObject___long__long__long___"/>
+    <eoperations name="nativeAddDecimal128()" eparameters="builderPtr:long, columnKey:long, low:long, high:long" etype="void" methodBody="" __idKDM="nativeAddDecimal128___long__long__long__long___"/>
+    <eoperations name="nativeAddObjectId()" eparameters="builderPtr:long, columnKey:long, data:String" etype="void" methodBody="" __idKDM="nativeAddObjectId___long__long__String___"/>
+    <eoperations name="nativeAddUUID()" eparameters="builderPtr:long, columnKey:long, data:String" etype="void" methodBody="" __idKDM="nativeAddUUID___long__long__String___"/>
+    <eoperations name="nativeAddMixed()" eparameters="builderPtr:long, columnKey:long, mixedPtr:long" etype="void" methodBody="" __idKDM="nativeAddMixed___long__long__long___"/>
+    <eoperations name="nativeStartList()" eparameters="size:long" etype="long" methodBody="" __idKDM="nativeStartList___long___"/>
+    <eoperations name="nativeStopList()" eparameters="builderPtr:long, columnKey:long, listPtr:long" etype="void" methodBody="" __idKDM="nativeStopList___long__long__long___"/>
+    <eoperations name="nativeAddNullListItem()" eparameters="listPtr:long" etype="void" methodBody="" __idKDM="nativeAddNullListItem___long___"/>
+    <eoperations name="nativeAddIntegerListItem()" eparameters="listPtr:long, value:long" etype="void" methodBody="" __idKDM="nativeAddIntegerListItem___long__long___"/>
+    <eoperations name="nativeAddStringListItem()" eparameters="listPtr:long, val:String" etype="void" methodBody="" __idKDM="nativeAddStringListItem___long__String___"/>
+    <eoperations name="nativeAddFloatListItem()" eparameters="listPtr:long, val:float" etype="void" methodBody="" __idKDM="nativeAddFloatListItem___long__float___"/>
+    <eoperations name="nativeAddDoubleListItem()" eparameters="listPtr:long, val:double" etype="void" methodBody="" __idKDM="nativeAddDoubleListItem___long__double___"/>
+    <eoperations name="nativeAddBooleanListItem()" eparameters="listPtr:long, val:boolean" etype="void" methodBody="" __idKDM="nativeAddBooleanListItem___long__boolean___"/>
+    <eoperations name="nativeAddByteArrayListItem()" eparameters="listPtr:long, val:byte[]" etype="void" methodBody="" __idKDM="nativeAddByteArrayListItem___long__byte_____"/>
+    <eoperations name="nativeAddDateListItem()" eparameters="listPtr:long, val:long" etype="void" methodBody="" __idKDM="nativeAddDateListItem___long__long___"/>
+    <eoperations name="nativeAddDecimal128ListItem()" eparameters="listPtr:long, low:long, high:long" etype="void" methodBody="" __idKDM="nativeAddDecimal128ListItem___long__long__long___"/>
+    <eoperations name="nativeAddObjectIdListItem()" eparameters="listPtr:long, data:String" etype="void" methodBody="" __idKDM="nativeAddObjectIdListItem___long__String___"/>
+    <eoperations name="nativeAddUUIDListItem()" eparameters="listPtr:long, data:String" etype="void" methodBody="" __idKDM="nativeAddUUIDListItem___long__String___"/>
+    <eoperations name="nativeAddMixedListItem()" eparameters="listPtr:long, mixedPtr:long" etype="void" methodBody="" __idKDM="nativeAddMixedListItem___long__long___"/>
+    <eoperations name="nativeAddObjectListItem()" eparameters="listPtr:long, rowPtr:long" etype="void" methodBody="" __idKDM="nativeAddObjectListItem___long__long___"/>
+    <eoperations name="nativeAddObjectList()" eparameters="builderPtr:long, columnKey:long, rowPtrs:long[]" etype="void" methodBody="" __idKDM="nativeAddObjectList___long__long__long_____"/>
+    <eoperations name="nativeStartDictionary()" etype="long" methodBody="" __idKDM="nativeStartDictionary______"/>
+    <eoperations name="nativeStopDictionary()" eparameters="builderPtr:long, columnKey:long, dictionaryPtr:long" etype="void" methodBody="" __idKDM="nativeStopDictionary___long__long__long___"/>
+    <eoperations name="nativeAddNullDictionaryEntry()" eparameters="dictionaryPtr:long, key:String" etype="void" methodBody="" __idKDM="nativeAddNullDictionaryEntry___long__String___"/>
+    <eoperations name="nativeAddBooleanDictionaryEntry()" eparameters="dictionaryPtr:long, key:String, value:boolean" etype="void" methodBody="" __idKDM="nativeAddBooleanDictionaryEntry___long__String__boolean___"/>
+    <eoperations name="nativeAddStringDictionaryEntry()" eparameters="dictionaryPtr:long, key:String, value:String" etype="void" methodBody="" __idKDM="nativeAddStringDictionaryEntry___long__String__String___"/>
+    <eoperations name="nativeAddIntegerDictionaryEntry()" eparameters="dictionaryPtr:long, key:String, value:long" etype="void" methodBody="" __idKDM="nativeAddIntegerDictionaryEntry___long__String__long___"/>
+    <eoperations name="nativeAddDoubleDictionaryEntry()" eparameters="dictionaryPtr:long, key:String, value:double" etype="void" methodBody="" __idKDM="nativeAddDoubleDictionaryEntry___long__String__double___"/>
+    <eoperations name="nativeAddFloatDictionaryEntry()" eparameters="dictionaryPtr:long, key:String, value:float" etype="void" methodBody="" __idKDM="nativeAddFloatDictionaryEntry___long__String__float___"/>
+    <eoperations name="nativeAddBinaryDictionaryEntry()" eparameters="dictionaryPtr:long, key:String, value:byte[]" etype="void" methodBody="" __idKDM="nativeAddBinaryDictionaryEntry___long__String__byte_____"/>
+    <eoperations name="nativeAddDateDictionaryEntry()" eparameters="dictionaryPtr:long, key:String, value:long" etype="void" methodBody="" __idKDM="nativeAddDateDictionaryEntry___long__String__long___"/>
+    <eoperations name="nativeAddDecimal128DictionaryEntry()" eparameters="dictionaryPtr:long, key:String, high:long, low:long" etype="void" methodBody="" __idKDM="nativeAddDecimal128DictionaryEntry___long__String__long__long___"/>
+    <eoperations name="nativeAddObjectIdDictionaryEntry()" eparameters="dictionaryPtr:long, key:String, value:String" etype="void" methodBody="" __idKDM="nativeAddObjectIdDictionaryEntry___long__String__String___"/>
+    <eoperations name="nativeAddUUIDDictionaryEntry()" eparameters="dictionaryPtr:long, key:String, value:String" etype="void" methodBody="" __idKDM="nativeAddUUIDDictionaryEntry___long__String__String___"/>
+    <eoperations name="nativeAddMixedDictionaryEntry()" eparameters="dictionaryPtr:long, key:String, mixedPtr:long" etype="void" methodBody="" __idKDM="nativeAddMixedDictionaryEntry___long__String__long___"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addDecimal128ValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Decimal128>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addDecimal128ValueDictionary___long__RealmDictionary_Decimal128____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addMixedValueDictionary()" eparameters="columnKey:long" etype="void" methodBody="expression statement; method invocation; addEmptyDictionary; " __idKDM="addMixedValueDictionary___long___" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addObjectIdValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;ObjectId>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addObjectIdValueDictionary___long__RealmDictionary_ObjectId____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addBooleanValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Boolean>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addBooleanValueDictionary___long__RealmDictionary_Boolean____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addShortValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Short>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addShortValueDictionary___long__RealmDictionary_Short____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addMixedDictionaryItem()" eparameters="builderPtr:long, columnKey:long, keys:java.util.List&lt;java.lang.String>, mixedPointers:java.util.List&lt;java.lang.Long>" etype="void" methodBody="if; expression statement; method invocation; nativeStopDictionary; for; expression statement; method invocation; nativeAddMixedDictionaryEntry; method invocation; get; method invocation; get; INCREMENT; variable declaration; int; i; LESS; i; method invocation; size; variable declaration; dictionaryPtr; expression statement; method invocation; addEmptyDictionary; CONDITIONAL_AND; method invocation; isEmpty; method invocation; isEmpty; " __idKDM="addMixedDictionaryItem___long__long__java_util_List_java_lang_String___java_util_List_java_lang_Long____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addEmptyDictionary()" eparameters="columnKey:long" etype="void" methodBody="expression statement; method invocation; nativeStopDictionary; method invocation; nativeStartDictionary; " __idKDM="addEmptyDictionary___long___" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addByteValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Byte>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addByteValueDictionary___long__RealmDictionary_Byte____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addLongValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Long>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addLongValueDictionary___long__RealmDictionary_Long____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addUUIDValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;UUID>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addUUIDValueDictionary___long__RealmDictionary_UUID____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addInteger()" eparameters="columnKey:long, val:Byte" etype="void" methodBody="if; expression statement; method invocation; nativeAddInteger; expression statement; method invocation; nativeAddNull; EQUALS; val; null; " __idKDM="addInteger___long__Byte___" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addBinaryValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;byte[]>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addBinaryValueDictionary___long__RealmDictionary_byte______" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addStringValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;String>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addStringValueDictionary___long__RealmDictionary_String____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addInteger()" eparameters="columnKey:long, val:Integer" etype="void" methodBody="if; expression statement; method invocation; nativeAddInteger; expression statement; method invocation; nativeAddNull; EQUALS; val; null; " __idKDM="addInteger___long__Integer___" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addMixedValueDictionary()" eparameters="columnKey:long" etype="void" methodBody="expression statement; method invocation; addEmptyDictionary; " __idKDM="addMixedValueDictionary___long___" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addNonPrimitiveBinaryValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Byte[]>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addNonPrimitiveBinaryValueDictionary___long__RealmDictionary_Byte______" diff_kind_Right="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addFloatValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Float>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addFloatValueDictionary___long__RealmDictionary_Float____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addDictionaryItem()" eparameters="builderPtr:long, columnKey:long, dictionary:RealmDictionary&lt;T>, mapItemCallback:pkg.OsObjectBuilder.ItemCallback&lt;java.util.Map.Entry&lt;java.lang.String,T>>" etype="void" methodBody="if; expression statement; method invocation; addEmptyDictionary; expression statement; method invocation; nativeStopDictionary; foreach; entry; if; expression statement; method invocation; handleItem; expression statement; method invocation; nativeAddNullDictionaryEntry; method invocation; getKey; EQUALS; null; method invocation; getValue; method invocation; entrySet; variable declaration; dictionaryPtr; NOT_EQUALS; null; " __idKDM="addDictionaryItem___long__long__RealmDictionary_T___pkg_OsObjectBuilder_ItemCallback_java_util_Map_Entry_java_lang_String_T_____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addInteger()" eparameters="columnKey:long, val:Short" etype="void" methodBody="if; expression statement; method invocation; nativeAddInteger; expression statement; method invocation; nativeAddNull; EQUALS; val; null; " __idKDM="addInteger___long__Short___" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addIntegerValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Integer>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addIntegerValueDictionary___long__RealmDictionary_Integer____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addMixedValueDictionary()" eparameters="columnKey:long, keys:java.util.List&lt;java.lang.String>, mixedPointers:java.util.List&lt;java.lang.Long>" etype="void" methodBody="expression statement; method invocation; addMixedDictionaryItem; " __idKDM="addMixedValueDictionary___long__java_util_List_java_lang_String___java_util_List_java_lang_Long____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addDateValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Date>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addDateValueDictionary___long__RealmDictionary_Date____" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="addDoubleValueDictionary()" eparameters="columnKey:long, dictionary:RealmDictionary&lt;Double>" etype="void" methodBody="expression statement; method invocation; addDictionaryItem; " __idKDM="addDoubleValueDictionary___long__RealmDictionary_Double____" diff_kind_Left="ADD"/>
+  </eclassifiers>
+  <interfaces name="Closeable" extends="AutoCloseable" esupertypes="AutoCloseable"/>
+  <interfaces name="AutoCloseable"/>
+  <diffeclassifiers diff_kind_Right="DELETE" diff_Group="DG-Move-1" eType="AllTypes"/>
+  <diffeclassifiers diff_kind_Right="ADD" diff_Group="DG-Move-1" eType="AllTypes"/>
+</refactoringDiffMM:EPackage>

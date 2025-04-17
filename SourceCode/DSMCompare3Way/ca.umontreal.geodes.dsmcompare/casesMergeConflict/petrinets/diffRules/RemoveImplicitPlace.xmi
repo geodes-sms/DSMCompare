@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrinets2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petrinets2WayRuleMM="www.geodes.UdeM.edu/petrinets2WayRuleMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/petrinets2WayRuleMM ../metaModels/petrinets2WayRuleMM.ecore#/1"
+    name="RemoveImplicitPlace"
+    priority="1">
+  <constraints>pathExistBtw(Item(3), Item(6))</constraints>
+  <rulePattern_DiffPlace
+      xsi:type="petrinets2WayRuleMM:Pattern_DiffPlace"
+      name=""
+      diff_kind="DELETE"
+      ID_Pattern="4">
+    <difftransitions
+        xsi:type="petrinets2WayRuleMM:Pattern_DiffPlace_transitions"
+        diff_kind="DELETE"
+        eType="//@rulePattern_NamedElement.1"
+        ID_Pattern="5"/>
+  </rulePattern_DiffPlace>
+  <rulePattern_NamedElement
+      xsi:type="petrinets2WayRuleMM:Pattern_Transition"
+      name=""
+      places="//@rulePattern_NamedElement.2"
+      ID_Pattern="1">
+    <diffplaces
+        xsi:type="petrinets2WayRuleMM:Pattern_DiffTransition_places"
+        diff_kind="DELETE"
+        eType="//@rulePattern_DiffPlace.0"
+        ID_Pattern="2"
+        filter="true"/>
+  </rulePattern_NamedElement>
+  <rulePattern_NamedElement
+      xsi:type="petrinets2WayRuleMM:Pattern_Transition"
+      name=""
+      ID_Pattern="6"/>
+  <rulePattern_NamedElement
+      xsi:type="petrinets2WayRuleMM:Pattern_Place"
+      name=""
+      ID_Pattern="3"/>
+  <rulePattern_SemanticObject
+      xsi:type="petrinets2WayRuleMM:Pattern_SemanticDiff"
+      name="Remove Implicit Place"
+      SemanticObject_NamedElement="//@rulePattern_NamedElement.1 //@rulePattern_NamedElement.2"
+      ID_Pattern="7"/>
+</petrinets2WayRuleMM:Rule>

@@ -1,0 +1,66 @@
+Matches count 	:	1
+Diffs count 	:	7
+Conflicts count :	2
+Matched resources :
+Left = file:/D:/_gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/pacman/dsModels/V1.xmi
+Right = file:/D:/_gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/pacman/dsModels/V2.xmi
+origin = file:/D:/_gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/pacman/dsModels/CA.xmi
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| pacmanDiffMM.impl.GameImpl@2bd2b28e (id: 1, lives: 1, score: 3)| pacmanDiffMM.impl.GameImpl@565b064f (id: 1, lives: 1, score: 2)|
+| |-pacmanDiffMM.impl.GridNodeImpl@16746061 (id: L)| |-pacmanDiffMM.impl.GridNodeImpl@26425897 (id: L)|
+| |-pacmanDiffMM.impl.GridNodeImpl@57fd91c9 (id: O)| |-pacmanDiffMM.impl.GridNodeImpl@73163d48 (id: O)|
+| |-pacmanDiffMM.impl.GridNodeImpl@6cfcd46d (id: R)| |-pacmanDiffMM.impl.GridNodeImpl@58c34bb3 (id: R)|
+| |-pacmanDiffMM.impl.PacmanImpl@52045dbe (id: P) (initialPosition: null)| |-pacmanDiffMM.impl.PacmanImpl@56a4479a (id: P) (initialPosition: null)|
+| |                                      | |                                      |
+| |-pacmanDiffMM.impl.GhostImpl@5c8eee0f (id: G) (strategy: Blinky)| |-pacmanDiffMM.impl.GhostImpl@62163b39 (id: G) (strategy: Blinky)|
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+REFERENCE CHANGES
+
+ [CHANGE] value pacmanDiffMM.impl.GridNodeImpl@73163d48 (id: O) has been remotely(RIGHT) changed from reference on
+ of object pacmanDiffMM.impl.PacmanImpl@52045dbe (id: P) (initialPosition: null)
+
+ [CHANGE] value pacmanDiffMM.impl.GridNodeImpl@1698fc68 (id: O) has been remotely(RIGHT) changed from reference on
+ of object pacmanDiffMM.impl.FoodImpl@65b3a85a (id: F) (value: 1)
+
+ [CHANGE] value pacmanDiffMM.impl.GridNodeImpl@6cfcd46d (id: R) has been changed from reference on
+ of object pacmanDiffMM.impl.GhostImpl@5c8eee0f (id: G) (strategy: Blinky)
+
+ [CHANGE] value pacmanDiffMM.impl.GridNodeImpl@58c34bb3 (id: R) has been remotely(RIGHT) changed from reference on
+ of object pacmanDiffMM.impl.GhostImpl@5c8eee0f (id: G) (strategy: Blinky)
+
+ [DELETE] value pacmanDiffMM.impl.FoodImpl@65b3a85a (id: F) (value: 1) has been remotely(RIGHT) deleted from reference entities
+ of object pacmanDiffMM.impl.GameImpl@2bd2b28e (id: 1, lives: 1, score: 3)
+
+ATTRIBUTE CHANGES
+
+ value 3 has been changed from attribute score
+ of object pacmanDiffMM.impl.GameImpl@2bd2b28e (id: 1, lives: 1, score: 3)
+
+ value 2 has been remotely(RIGHT) changed from attribute score
+ of object pacmanDiffMM.impl.GameImpl@2bd2b28e (id: 1, lives: 1, score: 3)
+
+CONFLICTS
+PSEUDO conflict:
+	
+ [CHANGE] value pacmanDiffMM.impl.GridNodeImpl@6cfcd46d (id: R) has been changed from reference on
+ of object pacmanDiffMM.impl.GhostImpl@5c8eee0f (id: G) (strategy: Blinky)
+	
+ [CHANGE] value pacmanDiffMM.impl.GridNodeImpl@58c34bb3 (id: R) has been remotely(RIGHT) changed from reference on
+ of object pacmanDiffMM.impl.GhostImpl@5c8eee0f (id: G) (strategy: Blinky)
+REAL conflict:
+	
+ value 3 has been changed from attribute score
+ of object pacmanDiffMM.impl.GameImpl@2bd2b28e (id: 1, lives: 1, score: 3)
+	
+ value 2 has been remotely(RIGHT) changed from attribute score
+ of object pacmanDiffMM.impl.GameImpl@2bd2b28e (id: 1, lives: 1, score: 3)
+COULD NOT set the container !!! : java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+COULD NOT find the container !!! : com.zadahmad.dsmcompare.core.threeWay.ClassDiffGroup@7fcbe147
+diff012 model saved at: file:/D:/_gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/pacman/diffModels/DSMDiff.xmi
+--> Models are merged and initial v012 (non conflicting elements only) saved at: file:/D:/_gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/pacman/dsModels/V012.xmi
+The end of transforming EMF-Diff to DSMC-Diff
+emf-Compare result transformed to Fine-Grained DsmdiffMM!

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated pacman -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="pacman.presentation.PacmanModelWizardID"
+            name="%_UI_PacmanModelWizard_label"
+            class="pacman.presentation.PacmanModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PacmanModelFile.gif">
+         <description>%_UI_PacmanModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated pacman -->
+      <editor
+            id="pacman.presentation.PacmanEditorID"
+            name="%_UI_PacmanEditor_label"
+            icon="icons/full/obj16/PacmanModelFile.gif"
+            extensions="pacman"
+            class="pacman.presentation.PacmanEditor"
+            contributorClass="pacman.presentation.PacmanActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated pacmanDiffMM -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="pacmanDiffMM.presentation.PacmanDiffMMModelWizardID"
+            name="%_UI_PacmanDiffMMModelWizard_label"
+            class="pacmanDiffMM.presentation.PacmanDiffMMModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PacmanDiffMMModelFile.gif">
+         <description>%_UI_PacmanDiffMMModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated pacmanDiffMM -->
+      <editor
+            id="pacmanDiffMM.presentation.PacmanDiffMMEditorID"
+            name="%_UI_PacmanDiffMMEditor_label"
+            icon="icons/full/obj16/PacmanDiffMMModelFile.gif"
+            extensions="pacmandiffmm"
+            class="pacmanDiffMM.presentation.PacmanDiffMMEditor"
+            contributorClass="pacmanDiffMM.presentation.PacmanDiffMMActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated refactoring -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="refactoring.presentation.RefactoringModelWizardID"
+            name="%_UI_RefactoringModelWizard_label"
+            class="refactoring.presentation.RefactoringModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RefactoringModelFile.gif">
+         <description>%_UI_RefactoringModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated refactoring -->
+      <editor
+            id="refactoring.presentation.RefactoringEditorID"
+            name="%_UI_RefactoringEditor_label"
+            icon="icons/full/obj16/RefactoringModelFile.gif"
+            extensions="refactoring"
+            class="refactoring.presentation.RefactoringEditor"
+            contributorClass="refactoring.presentation.RefactoringActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated refactoringDiffMM -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="refactoringDiffMM.presentation.RefactoringDiffMMModelWizardID"
+            name="%_UI_RefactoringDiffMMModelWizard_label"
+            class="refactoringDiffMM.presentation.RefactoringDiffMMModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RefactoringDiffMMModelFile.gif">
+         <description>%_UI_RefactoringDiffMMModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated refactoringDiffMM -->
+      <editor
+            id="refactoringDiffMM.presentation.RefactoringDiffMMEditorID"
+            name="%_UI_RefactoringDiffMMEditor_label"
+            icon="icons/full/obj16/RefactoringDiffMMModelFile.gif"
+            extensions="refactoringdiffmm"
+            class="refactoringDiffMM.presentation.RefactoringDiffMMEditor"
+            contributorClass="refactoringDiffMM.presentation.RefactoringDiffMMActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

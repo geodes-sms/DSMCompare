@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/refactoringDiffMM ../metaModels/refactoringDiffMM.ecore">
+  <refactoringDiffMM:EPackage
+      name="p">
+    <eclassifiers
+        name="sub"
+        esupertypes="super">
+      <eoperations
+          xsi:type="refactoringDiffMM:DiffEOperation"
+          name="m"
+          eparameters="int a"
+          etype="void"
+          methodBody="a b"
+          diff_kind_Left="DELETE"
+          diff_kind_Right="DELETE"
+          changeStatus="MERGE_DELETE"/>
+      <diffeoperations
+          diff_kind_Right="DELETE"
+          changeStatus="MERGE_DELETE"
+          diff_Group="DG-Move-1"
+          eType="m"/>
+    </eclassifiers>
+    <eclassifiers
+        name="super">
+      <diffeoperations
+          diff_kind_Right="ADD"
+          changeStatus="MERGE_DELETE"
+          filter="true"
+          diff_Group="DG-Move-1"
+          eType="m"/>
+    </eclassifiers>
+    <eclassifiers
+        name="Target">
+      <eoperations
+          xsi:type="refactoringDiffMM:DiffEOperation"
+          name="renamed"
+          eparameters="int a"
+          etype="void"
+          methodBody="a b"
+          diff_kind_Left="ADD"/>
+    </eclassifiers>
+  </refactoringDiffMM:EPackage>
+  <refactoringDiffMM:SemanticDiff
+      name="Pull-up Method"
+      SemanticObject_DiffEClass_eoperations="/0/@eclassifiers.1/@diffeoperations.0 /0/@eclassifiers.0/@diffeoperations.0"
+      SemanticObject_EClass="super sub"
+      SemanticObject_EOperation="m"
+      author="RIGHT"/>
+  <refactoringDiffMM:SemanticDiff
+      name="Move And Rename Method"
+      SemanticObject_EOperation="m renamed"
+      author="LEFT"/>
+  <refactoringDiffMM:SemanticConflict
+      name="Pull-up Method - DiffEOperation.[m] - CONTRADICTING ( DELETE | DELETE ) -C-1"
+      SemanticObject_DiffEOperation="m"
+      conflict_kind="CONTRADICTING"
+      conflict_Granularity="Semantic_Fine"
+      semanticdiffs="/1"/>
+  <refactoringDiffMM:SemanticConflict
+      name="Pull-up Method - Move And Rename Method"
+      conflict_kind="CONTRADICTING"
+      conflict_Granularity="Semantic_Semantic"
+      semanticdiffs="/1 /2"/>
+  <refactoringDiffMM:ConflictResolution
+      name="Pull-up Method - Move And Rename Method - Transitivity"
+      ResolutionType="Resolved"
+      ResolutionStrategy="Apply_A_User_Defined_Resolution_Pattern"
+      semanticconflicts="/4"/>
+  <refactoringDiffMM:ConflictResolution
+      name="Keep semantic difference"
+      ResolutionStrategy="Keep_Semantic_Difference"
+      semanticconflicts="/3"/>
+</xmi:XMI>

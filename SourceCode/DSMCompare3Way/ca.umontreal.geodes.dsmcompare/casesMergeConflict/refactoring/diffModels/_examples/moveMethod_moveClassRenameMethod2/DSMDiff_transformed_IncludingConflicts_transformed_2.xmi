@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM">
+  <refactoringDiffMM:EPackage name="p">
+    <eclassifiers name="sub" esupertypes="super">
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="m" eparameters="i:int" methodBody="a b" diff_kind_Left="DELETE" diff_kind_Right="DELETE" isMerged="true" changeStatus="MERGE_DELETE"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="m_renamed" eparameters="i:int" methodBody="a b" diff_kind_Right="ADD"/>
+      <diffeoperations diff_kind_Left="DELETE" diff_Group="DG-Move-2" eType="m"/>
+    </eclassifiers>
+    <eclassifiers name="super">
+      <diffnested_classes diff_kind_Right="ADD" diff_Group="DG-Move-1" eType="sub"/>
+    </eclassifiers>
+    <eclassifiers name="c">
+      <diffeoperations diff_kind_Left="ADD" filter="true" diff_Group="DG-Move-2" eType="m"/>
+    </eclassifiers>
+    <diffeclassifiers diff_kind_Right="DELETE" diff_Group="DG-Move-1" eType="sub"/>
+  </refactoringDiffMM:EPackage>
+  <refactoringDiffMM:SemanticDiff name="Move Class" SemanticObject_DiffEClass_nested_classes="/0/@eclassifiers.1/@diffnested_classes.0" SemanticObject_DiffEPackage_eclassifiers="/0/@diffeclassifiers.0" SemanticObject_EPackage="p" author="RIGHT"/>
+  <refactoringDiffMM:SemanticDiff name="Move Method" SemanticObject_DiffEClass_eoperations="/0/@eclassifiers.2/@diffeoperations.0 /0/@eclassifiers.0/@diffeoperations.0" SemanticObject_EClass="sub c" SemanticObject_EOperation="m" author="LEFT"/>
+  <refactoringDiffMM:SemanticDiff name="Rename Method 2" SemanticObject_EOperation="m m_renamed" author="RIGHT"/>
+  <refactoringDiffMM:SemanticConflict name="Move Method - DiffEOperation.[m] - CONTRADICTING ( DELETE | DELETE ) -C-1" SemanticObject_DiffEOperation="m" conflict_kind="CONTRADICTING" conflict_Granularity="Semantic_Fine" semanticdiffs="/2"/>
+  <refactoringDiffMM:SemanticConflict name="Move Class / Rename Method 2 - Move Method" conflict_kind="CONTRADICTING" conflict_Granularity="Semantic_Semantic" semanticdiffs="/1 /3 /2"/>
+  <refactoringDiffMM:ConflictResolution name="Move Class / Rename Method 2 - Move Method" ResolutionType="Resolved" ResolutionStrategy="Apply_A_User_Defined_Resolution_Pattern" semanticconflicts="/5"/>
+  <refactoringDiffMM:ConflictResolution name="Semantic Conflict - Move Method - DiffEOperation.[m] - CONTRADICTING ( DELETE | DELETE ) -C-1" semanticconflicts="/4"/>
+</xmi:XMI>

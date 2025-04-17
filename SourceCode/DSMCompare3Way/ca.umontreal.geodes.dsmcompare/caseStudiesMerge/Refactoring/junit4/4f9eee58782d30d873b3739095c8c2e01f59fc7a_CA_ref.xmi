@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="ParallelComputer" extends="Computer" esupertypes="Computer">
+    <eattributes name="fClasses" etype="boolean"/>
+    <eattributes name="fMethods" etype="boolean"/>
+    <eoperations name="ParallelComputer()" eparameters="classes:boolean, methods:boolean" methodBody="expression statement; ASSIGN; fMethods; expression statement; ASSIGN; fClasses; " __idKDM="ParallelComputer___boolean__boolean___"/>
+    <eoperations name="classes()" eparameters="" etype="Computer" methodBody="return; class instance creation; ParallelComputer; boolean literal; boolean literal; " __idKDM="classes______"/>
+    <eoperations name="getSuite()" eparameters="builder:RunnerBuilder, classes:java.lang.Class&lt;?>[], null:InitializationError" etype="Suite" methodBody="return; conditional; super method invocation; getSuite; class instance creation; new ParallelSuite(builder,classes); " __idKDM="getSuite___RunnerBuilder__java_lang_Class_______InitializationError___"/>
+    <eoperations name="getRunner()" eparameters="builder:RunnerBuilder, testClass:java.lang.Class&lt;?>, null:Throwable" etype="Runner" methodBody="return; conditional; super method invocation; getRunner; class instance creation; new ParallelRunner(testClass); " __idKDM="getRunner___RunnerBuilder__java_lang_Class_____Throwable___"/>
+    <eoperations name="methods()" eparameters="" etype="Computer" methodBody="return; class instance creation; ParallelComputer; boolean literal; boolean literal; " __idKDM="methods______"/>
+    <nested_classes name="ParallelSuite" extends="Suite">
+      <eattributes name="fService" etype="ExecutorService"/>
+      <eattributes name="fResults" etype="java.util.List&lt;java.util.concurrent.Future&lt;java.lang.Object>>"/>
+      <eoperations name="ParallelSuite()" eparameters="builder:RunnerBuilder, classes:java.lang.Class&lt;?>[], null:InitializationError" methodBody="super constructor invocation; Object; " __idKDM="ParallelSuite___RunnerBuilder__java_lang_Class_______InitializationError___"/>
+      <eoperations name="runChild()" eparameters="runner:Runner, notifier:RunNotifier" etype="void" methodBody="expression statement; method invocation; add; method invocation; submit; variable declaration; class instance creation; ; Anonymous type; callable; " __idKDM="runChild___Runner__RunNotifier___"/>
+      <eoperations name="superRunChild()" eparameters="runner:Runner, notifier:RunNotifier" etype="void" methodBody="expression statement; super method invocation; runChild; " __idKDM="superRunChild___Runner__RunNotifier___"/>
+      <eoperations name="run()" eparameters="notifier:RunNotifier" etype="void" methodBody="foreach; each; try; catch; catch; e; expression statement; method invocation; printStackTrace; expression statement; method invocation; get; number literal; expression statement; super method invocation; run; " __idKDM="run___RunNotifier___"/>
+      <esupertypes href="02fc1f509a670de3632417bbf33168989bfcf872_CA_ref.xmi#Suite"/>
+    </nested_classes>
+    <nested_classes name="ParallelRunner" extends="BlockJUnit4ClassRunner" esupertypes="BlockJUnit4ClassRunner">
+      <eattributes name="fService" etype="ExecutorService"/>
+      <eattributes name="fResults" etype="java.util.List&lt;java.util.concurrent.Future&lt;java.lang.Object>>"/>
+      <eoperations name="ParallelRunner()" eparameters="klass:java.lang.Class&lt;?>, null:InitializationError" methodBody="super constructor invocation; super(klass);&#xA;; " __idKDM="ParallelRunner___java_lang_Class_____InitializationError___"/>
+      <eoperations name="runChild()" eparameters="method:FrameworkMethod, notifier:RunNotifier" etype="void" methodBody="expression statement; method invocation; add; method invocation; submit; variable declaration; class instance creation; ; Anonymous type; callable; " __idKDM="runChild___FrameworkMethod__RunNotifier___"/>
+      <eoperations name="superRunChild()" eparameters="method:FrameworkMethod, notifier:RunNotifier" etype="void" methodBody="expression statement; super method invocation; runChild; " __idKDM="superRunChild___FrameworkMethod__RunNotifier___"/>
+      <eoperations name="run()" eparameters="notifier:RunNotifier" etype="void" methodBody="foreach; each; try; catch; catch; e; expression statement; method invocation; printStackTrace; expression statement; method invocation; get; number literal; expression statement; super method invocation; run; " __idKDM="run___RunNotifier___"/>
+    </nested_classes>
+  </eclassifiers>
+  <eclassifiers name="Computer"/>
+  <eclassifiers name="BlockJUnit4ClassRunner"/>
+</refactoring:EPackage>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoringDiffMM:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" name="org.syncany.events">
+  <eclassifiers name="SyncEvent">
+    <eattributes name="type" etype="Type"/>
+    <eattributes name="subjects" etype="java.lang.Object[]"/>
+    <eoperations name="SyncEvent()" eparameters="type:Type, subjects:Object" methodBody="expression statement; ASSIGN; subjects; field access; subjects; this; expression statement; ASSIGN; type; field access; type; this; " __idKDM="SyncEvent___Type__Object___"/>
+    <eoperations name="getType()" etype="Type" methodBody="return; " __idKDM="getType______"/>
+    <eoperations name="getSubjects()" etype="java.lang.Object[]" methodBody="return; " __idKDM="getSubjects______"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="SyncEvent" diff_kind_Right="DELETE">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="subjects" etype="Object[]" diff_kind_Right="DELETE"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="type" etype="Type" diff_kind_Right="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="getType()" etype="Type" methodBody="return; " __idKDM="getType______" diff_kind_Right="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="getSubjects()" etype="Object[]" methodBody="return; " __idKDM="getSubjects______" diff_kind_Right="DELETE"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="SyncEvent()" eparameters="type:Type, subjects:Object" methodBody="expression statement; ASSIGN; field access; subjects; this; expression statement; ASSIGN; field access; type; this; " __idKDM="SyncEvent___Type__Object___" diff_kind_Right="DELETE"/>
+  </eclassifiers>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="SyncEvent" diff_kind_Left="ADD" changeStatus="CONTRADICTING">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="subjects" etype="java.lang.Object[]" diff_kind_Left="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="type" etype="Type" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="SyncEvent()" eparameters="type:Type, subjects:Object" methodBody="expression statement; ASSIGN; subjects; field access; subjects; this; expression statement; ASSIGN; type; field access; type; this; " __idKDM="SyncEvent___Type__Object___" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="getType()" etype="Type" methodBody="return; " __idKDM="getType______" diff_kind_Left="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="getSubjects()" etype="java.lang.Object[]" methodBody="return; " __idKDM="getSubjects______" diff_kind_Left="ADD"/>
+  </eclassifiers>
+</refactoringDiffMM:EPackage>

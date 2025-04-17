@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoringDiffMM:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" name="pkg">
+  <eclassifiers name="TestWatcherTest">
+    <eoperations name="neitherLogSuccessNorFailedForViolatedAssumption()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; string literal; method invocation; toString; expression statement; method invocation; runClasses; type literal; expression statement; ASSIGN; watchedLog; class instance creation; StringBuilder; " __idKDM="neitherLogSuccessNorFailedForViolatedAssumption______"/>
+    <eoperations name="testWatcherSkippedThrowsException()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasFailureContaining; string literal; expression statement; method invocation; assertThat; method invocation; hasFailureContaining; string literal; expression statement; method invocation; assertThat; method invocation; failureCountIs; number literal; variable declaration; result; " __idKDM="testWatcherSkippedThrowsException______"/>
+    <eoperations name="logFailingTest()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; string literal; method invocation; toString; expression statement; method invocation; runClasses; type literal; expression statement; ASSIGN; watchedLog; class instance creation; StringBuilder; " __idKDM="logFailingTest______"/>
+    <eoperations name="testWatcherFailedThrowsException()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasFailureContaining; string literal; expression statement; method invocation; assertThat; method invocation; hasFailureContaining; string literal; expression statement; method invocation; assertThat; method invocation; failureCountIs; number literal; variable declaration; result; " __idKDM="testWatcherFailedThrowsException______"/>
+    <eoperations name="testWatcherStartingThrowsException()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasFailureContaining; string literal; expression statement; method invocation; assertThat; method invocation; hasFailureContaining; string literal; expression statement; method invocation; assertThat; method invocation; failureCountIs; number literal; variable declaration; result; " __idKDM="testWatcherStartingThrowsException______"/>
+    <eoperations name="testWatcherFailedAndFinishedThrowsException()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; hasFailureContaining; string literal; expression statement; method invocation; assertThat; method invocation; hasFailureContaining; string literal; expression statement; method invocation; assertThat; method invocation; hasFailureContaining; string literal; expression statement; method invocation; assertThat; method invocation; failureCountIs; number literal; variable declaration; result; " __idKDM="testWatcherFailedAndFinishedThrowsException______"/>
+    <nested_classes name="ViolatedAssumptionTest">
+      <eattributes name="watchedLog" etype="StringBuilder"/>
+      <eattributes name="watcher" etype="TestRule"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="watcher" etype="TestRule" diff_kind_Left="ADD"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="watchedLog" etype="StringBuilder" diff_kind_Left="ADD"/>
+      <eoperations name="succeeds()" etype="void" methodBody="expression statement; method invocation; assumeTrue; boolean literal; " __idKDM="succeeds______"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="succeeds()" etype="void" methodBody="expression statement; method invocation; assumeTrue; boolean literal; " __idKDM="succeeds______" diff_kind_Left="ADD"/>
+    </nested_classes>
+    <nested_classes name="TestWatcherSkippedThrowsExceptionTest">
+      <eattributes name="watcher" etype="TestRule"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="watcher" etype="TestRule" diff_kind_Left="ADD"/>
+      <eoperations name="fails()" etype="void" methodBody="throw; class instance creation; new AssumptionViolatedException(&quot;test failure&quot;); string literal; " __idKDM="fails______"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="fails()" etype="void" methodBody="throw; class instance creation; new AssumptionViolatedException(&quot;test failure&quot;); string literal; " __idKDM="fails______" diff_kind_Left="ADD"/>
+    </nested_classes>
+    <nested_classes name="FailingTest">
+      <eattributes name="watchedLog" etype="StringBuilder"/>
+      <eattributes name="watcher" etype="TestRule"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="watcher" etype="TestRule" diff_kind_Left="ADD"/>
+      <eoperations name="succeeds()" etype="void" methodBody="expression statement; method invocation; fail; " __idKDM="succeeds______"/>
+    </nested_classes>
+    <nested_classes name="TestWatcherFailedThrowsExceptionTest">
+      <eattributes name="watcher" etype="TestRule"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="watcher" etype="TestRule" diff_kind_Left="ADD"/>
+      <eoperations name="fails()" etype="void" methodBody="throw; class instance creation; IllegalArgumentException; string literal; " __idKDM="fails______"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="fails()" etype="void" methodBody="throw; class instance creation; IllegalArgumentException; string literal; " __idKDM="fails______" diff_kind_Left="ADD"/>
+    </nested_classes>
+    <nested_classes name="TestWatcherStartingThrowsExceptionTest">
+      <eattributes name="watcher" etype="TestRule"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="watcher" etype="TestRule" diff_kind_Left="ADD"/>
+      <eoperations name="fails()" etype="void" methodBody="throw; class instance creation; IllegalArgumentException; string literal; " __idKDM="fails______"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="fails()" etype="void" methodBody="throw; class instance creation; IllegalArgumentException; string literal; " __idKDM="fails______" diff_kind_Left="ADD"/>
+    </nested_classes>
+    <nested_classes name="TestWatcherFailedAndFinishedThrowsExceptionTest">
+      <eattributes name="watcher" etype="TestRule"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="fails()" etype="void" methodBody="throw; class instance creation; IllegalArgumentException; string literal; " __idKDM="fails______" diff_kind_Right="MODIFY" new_methodBody_Right="throw; class instance creation; new IllegalArgumentException(&quot;test failure&quot;); string literal; "/>
+    </nested_classes>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-1" eType="testWatcherStartingThrowsException()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-1" eType="testWatcherStartingThrowsException()"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-2" eType="neitherLogSuccessNorFailedForViolatedAssumption()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-2" eType="neitherLogSuccessNorFailedForViolatedAssumption()"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-10" eType="logFailingTest()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-10" eType="logFailingTest()"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-13" eType="testWatcherFailedAndFinishedThrowsException()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-13" eType="testWatcherFailedAndFinishedThrowsException()"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-16" eType="testWatcherFailedThrowsException()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-16" eType="testWatcherFailedThrowsException()"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-19" eType="testWatcherSkippedThrowsException()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-19" eType="testWatcherSkippedThrowsException()"/>
+    <diffnested_classes diff_kind_Right="DELETE" diff_Group="DG-Move-6" eType="TestWatcherStartingThrowsExceptionTest"/>
+    <diffnested_classes diff_kind_Right="ADD" diff_Group="DG-Move-6" eType="TestWatcherStartingThrowsExceptionTest"/>
+    <diffnested_classes diff_kind_Right="DELETE" diff_Group="DG-Move-9" eType="FailingTest"/>
+    <diffnested_classes diff_kind_Right="ADD" diff_Group="DG-Move-9" eType="FailingTest"/>
+    <diffnested_classes diff_kind_Right="DELETE" diff_Group="DG-Move-11" eType="TestWatcherSkippedThrowsExceptionTest"/>
+    <diffnested_classes diff_kind_Right="ADD" diff_Group="DG-Move-11" eType="TestWatcherSkippedThrowsExceptionTest"/>
+    <diffnested_classes diff_kind_Right="DELETE" diff_Group="DG-Move-12" eType="ViolatedAssumptionTest"/>
+    <diffnested_classes diff_kind_Right="ADD" diff_Group="DG-Move-12" eType="ViolatedAssumptionTest"/>
+    <diffnested_classes diff_kind_Right="DELETE" diff_Group="DG-Move-14" eType="TestWatcherFailedThrowsExceptionTest"/>
+    <diffnested_classes diff_kind_Right="ADD" diff_Group="DG-Move-14" eType="TestWatcherFailedThrowsExceptionTest"/>
+    <diffnested_classes diff_kind_Right="DELETE" diff_Group="DG-Move-15" eType="TestWatcherFailedAndFinishedThrowsExceptionTest"/>
+    <diffnested_classes diff_kind_Right="ADD" diff_Group="DG-Move-15" eType="TestWatcherFailedAndFinishedThrowsExceptionTest"/>
+  </eclassifiers>
+  <eclassifiers name="TestWatcher" implements="TestRule" interfaces="TestRule">
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="MultipleFailureException" etype="theirs" diff_kind_Right="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="e" etype="AssumptionViolatedException" diff_kind_Right="ADD"/>
+    <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="t" etype="Throwable" diff_kind_Right="ADD"/>
+    <eoperations name="succeededQuietly()" eparameters="description:Description, errors:java.util.List&lt;java.lang.Throwable>" etype="void" methodBody="try; catch; catch; t; expression statement; method invocation; add; expression statement; method invocation; succeeded; " __idKDM="succeededQuietly___Description__java_util_List_java_lang_Throwable____"/>
+    <eoperations name="failedQuietly()" eparameters="t:Throwable, description:Description, errors:java.util.List&lt;java.lang.Throwable>" etype="void" methodBody="try; catch; catch; t1; expression statement; method invocation; add; expression statement; method invocation; failed; " __idKDM="failedQuietly___Throwable__Description__java_util_List_java_lang_Throwable____"/>
+    <eoperations name="skippedQuietly()" eparameters="e:AssumptionViolatedException, description:Description, errors:java.util.List&lt;java.lang.Throwable>" etype="void" methodBody="try; catch; catch; t; expression statement; method invocation; add; expression statement; method invocation; skipped; " __idKDM="skippedQuietly___AssumptionViolatedException__Description__java_util_List_java_lang_Throwable____"/>
+    <eoperations name="startingQuietly()" eparameters="description:Description, errors:java.util.List&lt;java.lang.Throwable>" etype="void" methodBody="try; catch; catch; t; expression statement; method invocation; add; expression statement; method invocation; starting; " __idKDM="startingQuietly___Description__java_util_List_java_lang_Throwable____"/>
+    <eoperations name="finishedQuietly()" eparameters="description:Description, errors:java.util.List&lt;java.lang.Throwable>" etype="void" methodBody="try; catch; catch; t; expression statement; method invocation; add; expression statement; method invocation; finished; " __idKDM="finishedQuietly___Description__java_util_List_java_lang_Throwable____"/>
+    <eoperations name="succeeded()" eparameters="description:Description" etype="void" methodBody="" __idKDM="succeeded___Description___"/>
+    <eoperations name="failed()" eparameters="e:Throwable, description:Description" etype="void" methodBody="" __idKDM="failed___Throwable__Description___"/>
+    <eoperations name="skipped()" eparameters="e:AssumptionViolatedException, description:Description" etype="void" methodBody="" __idKDM="skipped___AssumptionViolatedException__Description___"/>
+    <eoperations name="starting()" eparameters="description:Description" etype="void" methodBody="" __idKDM="starting___Description___"/>
+    <eoperations name="finished()" eparameters="description:Description" etype="void" methodBody="" __idKDM="finished___Description___"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="apply()" eparameters="base:Statement, description:Description" etype="Statement" methodBody="return; class instance creation; ; Anonymous type; " __idKDM="apply___Statement__Description___" diff_kind_Right="MODIFY" new_methodBody_Right="return; class instance creation; ; Anonymous type; "/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-3" eType="skippedQuietly()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-3" eType="skippedQuietly()"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-4" eType="failedQuietly()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-4" eType="failedQuietly()"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-5" eType="skipped()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-5" eType="skipped()"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-7" eType="failed()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-7" eType="failed()"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-8" eType="succeeded()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-8" eType="succeeded()"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-17" eType="finishedQuietly()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-17" eType="finishedQuietly()"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-18" eType="succeededQuietly()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-18" eType="succeededQuietly()"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-20" eType="startingQuietly()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-20" eType="startingQuietly()"/>
+  </eclassifiers>
+  <interfaces name="TestRule"/>
+</refactoringDiffMM:EPackage>

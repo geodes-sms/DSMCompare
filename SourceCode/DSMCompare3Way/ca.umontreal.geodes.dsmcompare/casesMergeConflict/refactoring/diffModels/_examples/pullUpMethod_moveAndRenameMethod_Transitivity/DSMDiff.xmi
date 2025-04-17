@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refactoringDiffMM:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" name="p">
+  <eclassifiers name="sub" esupertypes="super">
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="m" eparameters="int a" etype="void" methodBody="a b" diff_kind_Left="DELETE" diff_kind_Right="DELETE" changeStatus="CONTRADICTING"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-1" eType="m"/>
+  </eclassifiers>
+  <eclassifiers name="super">
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-1" eType="m"/>
+  </eclassifiers>
+  <eclassifiers name="Target">
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="renamed" eparameters="int a" etype="void" methodBody="a b" diff_kind_Left="ADD"/>
+  </eclassifiers>
+</refactoringDiffMM:EPackage>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="Utils">
+    <eattributes name="LOG" etype="Logger"/>
+    <eattributes name="DEFAULT_STREAM_ID" etype="String"/>
+    <eattributes name="serializationDelegate" etype="SerializationDelegate"/>
+    <eoperations name="newInstance()" eparameters="klass:String" etype="Object" methodBody="try; catch; catch; e; throw; class instance creation; RuntimeException; return; method invocation; newInstance; variable declaration; c; " __idKDM="newInstance___String___"/>
+    <eoperations name="serialize()" eparameters="obj:Object" etype="byte[]" methodBody="return; method invocation; serialize; " __idKDM="serialize___Object___"/>
+    <eoperations name="deserialize()" eparameters="serialized:byte[]" etype="Object" methodBody="return; method invocation; deserialize; " __idKDM="deserialize___byte_____"/>
+    <eoperations name="join()" eparameters="coll:java.lang.Iterable&lt;T>, sep:String" etype="String" methodBody="return; while; if; expression statement; ASSIGN; ret; PLUS; ret; method invocation; hasNext; expression statement; ASSIGN; ret; PLUS; ret; method invocation; next; method invocation; hasNext; variable declaration; ret; variable declaration; it; " __idKDM="join___java_lang_Iterable_T___String___"/>
+    <eoperations name="sleep()" eparameters="millis:long" etype="void" methodBody="try; catch; catch; e; throw; class instance creation; RuntimeException; expression statement; method invocation; sleep; " __idKDM="sleep___long___"/>
+    <eoperations name="findResources()" eparameters="name:String" etype="java.util.List&lt;java.net.URL>" methodBody="try; catch; catch; e; throw; class instance creation; RuntimeException; return; while; expression statement; method invocation; add; method invocation; nextElement; method invocation; hasMoreElements; variable declaration; class instance creation; ArrayList; ret; variable declaration; resources; " __idKDM="findResources___String___"/>
+    <eoperations name="findAndReadConfigFile()" eparameters="name:String, mustExist:boolean" etype="Map&lt;K, V>" methodBody="try; catch; catch; e; throw; class instance creation; RuntimeException; return; class instance creation; HashMap; if; expression statement; ASSIGN; ret; class instance creation; HashMap; EQUALS; ret; null; try; expression statement; method invocation; close; expression statement; ASSIGN; ret; cast; Map&lt;K, V>; method invocation; load; class instance creation; InputStreamReader; variable declaration; input; variable declaration; ret; variable declaration; class instance creation; Object; class instance creation; new SafeConstructor(); yaml; variable declaration; resource; if; throw; class instance creation; RuntimeException; PLUS; name; string literal; string literal; GREATER; number literal; method invocation; size; if; if; return; class instance creation; HashMap; throw; class instance creation; RuntimeException; PLUS; name; string literal; method invocation; isEmpty; variable declaration; class instance creation; HashSet; method invocation; findResources; resources; " __idKDM="findAndReadConfigFile___String__boolean___"/>
+    <eoperations name="findAndReadConfigFile()" eparameters="name:String" etype="Map&lt;K, V>" methodBody="return; method invocation; findAndReadConfigFile; boolean literal; " __idKDM="findAndReadConfigFile___String___"/>
+    <eoperations name="readDefaultConfig()" eparameters="" etype="Map&lt;K, V>" methodBody="return; method invocation; findAndReadConfigFile; boolean literal; string literal; " __idKDM="readDefaultConfig______"/>
+    <eoperations name="readCommandLineOpts()" eparameters="" etype="Map&lt;K, V>" methodBody="return; if; foreach; config; if; expression statement; method invocation; put; array access; options; number literal; if; expression statement; ASSIGN; val; array access; options; number literal; EQUALS; val; null; variable declaration; val; EQUALS; number literal; array length access; variable declaration; options; expression statement; ASSIGN; config; method invocation; decode; variable declaration; configs; NOT_EQUALS; commandOptions; null; variable declaration; commandOptions; variable declaration; class instance creation; HashMap; ret; " __idKDM="readCommandLineOpts______"/>
+    <eoperations name="readStormConfig()" eparameters="" etype="Map&lt;K, V>" methodBody="return; expression statement; method invocation; putAll; method invocation; readCommandLineOpts; expression statement; method invocation; putAll; if; expression statement; ASSIGN; storm; method invocation; findAndReadConfigFile; boolean literal; expression statement; ASSIGN; storm; method invocation; findAndReadConfigFile; boolean literal; string literal; CONDITIONAL_OR; method invocation; equals; string literal; EQUALS; confFile; null; variable declaration; storm; variable declaration; confFile; variable declaration; ret; " __idKDM="readStormConfig______"/>
+    <eoperations name="normalizeConf()" eparameters="conf:Object" etype="Object" methodBody="if; if; if; if; return; return; method invocation; doubleValue; parenthesized; cast; Float; instanceof; Float; return; method invocation; longValue; parenthesized; cast; Integer; instanceof; Integer; return; for; expression statement; method invocation; set; method invocation; normalizeConf; variable declaration; val; INCREMENT; variable declaration; int; i; LESS; i; method invocation; size; variable declaration; class instance creation; ArrayList; cast; List&lt;E>; confList; instanceof; List&lt;E>; return; foreach; key; expression statement; method invocation; put; method invocation; normalizeConf; variable declaration; val; method invocation; keySet; variable declaration; class instance creation; HashMap; cast; Map&lt;K, V>; confMap; instanceof; Map&lt;K, V>; if; return; class instance creation; HashMap; EQUALS; conf; null; " __idKDM="normalizeConf___Object___"/>
+    <eoperations name="isValidConf()" eparameters="stormConf:java.util.Map&lt;java.lang.String,java.lang.Object>" etype="boolean" methodBody="return; method invocation; equals; method invocation; normalizeConf; cast; Map&lt;K, V>; method invocation; parse; method invocation; toJSONString; method invocation; normalizeConf; " __idKDM="isValidConf___java_util_Map_java_lang_String_java_lang_Object____"/>
+    <eoperations name="getSetComponentObject()" eparameters="obj:ComponentObject" etype="Object" methodBody="if; if; return; method invocation; get_shell; return; method invocation; get_java_object; EQUALS; method invocation; getSetField; return; method invocation; deserialize; method invocation; get_serialized_java; EQUALS; method invocation; getSetField; " __idKDM="getSetComponentObject___ComponentObject___"/>
+    <eoperations name="get()" eparameters="m:java.util.Map&lt;S,T>, key:S, def:T" etype="T" methodBody="return; if; expression statement; ASSIGN; ret; EQUALS; ret; null; variable declaration; ret; " __idKDM="get___java_util_Map_S_T___S__T___"/>
+    <eoperations name="tuple()" eparameters="values:Object" etype="java.util.List&lt;java.lang.Object>" methodBody="return; foreach; v; expression statement; method invocation; add; variable declaration; class instance creation; ArrayList; ret; " __idKDM="tuple___Object___"/>
+    <eoperations name="downloadFromMaster()" eparameters="conf:Map&lt;K, V>, file:String, localFile:String, null:IOException, null:TException" etype="void" methodBody="expression statement; method invocation; close; while; if; EQUALS; written; number literal; variable declaration; written; variable declaration; chunk; boolean literal; variable declaration; out; variable declaration; id; variable declaration; client; " __idKDM="downloadFromMaster___Map_K__V___String__String__IOException__TException___"/>
+    <eoperations name="loadClojureFn()" eparameters="namespace:String, name:String" etype="IFn" methodBody="return; cast; method invocation; deref; method invocation; var; try; catch; catch; e; expression statement; method invocation; eval; method invocation; readString; PLUS; namespace; string literal; string literal; " __idKDM="loadClojureFn___String__String___"/>
+    <eoperations name="isSystemId()" eparameters="id:String" etype="boolean" methodBody="return; method invocation; startsWith; string literal; " __idKDM="isSystemId___String___"/>
+    <eoperations name="reverseMap()" eparameters="map:java.util.Map&lt;K,V>" etype="java.util.Map&lt;V,K>" methodBody="return; foreach; key; expression statement; method invocation; put; method invocation; get; method invocation; keySet; variable declaration; class instance creation; HashMap; ret; " __idKDM="reverseMap___java_util_Map_K_V____"/>
+    <eoperations name="getComponentCommon()" eparameters="topology:StormTopology, id:String" etype="ComponentCommon" methodBody="throw; class instance creation; IllegalArgumentException; PLUS; id; string literal; if; return; method invocation; get_common; method invocation; get; method invocation; get_state_spouts; method invocation; containsKey; method invocation; get_state_spouts; if; return; method invocation; get_common; method invocation; get; method invocation; get_bolts; method invocation; containsKey; method invocation; get_bolts; if; return; method invocation; get_common; method invocation; get; method invocation; get_spouts; method invocation; containsKey; method invocation; get_spouts; " __idKDM="getComponentCommon___StormTopology__String___"/>
+    <eoperations name="getInt()" eparameters="o:Object" etype="Integer" methodBody="return; if; throw; class instance creation; IllegalArgumentException; string literal; EQUALS; result; null; variable declaration; result; " __idKDM="getInt___Object___"/>
+    <eoperations name="getInt()" eparameters="o:Object, defaultValue:Integer" etype="Integer" methodBody="throw; class instance creation; IllegalArgumentException; PLUS; o; string literal; string literal; if; if; if; return; cast; int; CONDITIONAL_AND; GREATER_EQUALS; l; LESS_EQUALS; l; variable declaration; l; instanceof; Long; return; method invocation; intValue; parenthesized; cast; Number; CONDITIONAL_OR; instanceof; Byte; instanceof; Short; instanceof; Integer; if; return; EQUALS; o; null; " __idKDM="getInt___Object__Integer___"/>
+    <eoperations name="getBoolean()" eparameters="o:Object, defaultValue:boolean" etype="boolean" methodBody="if; throw; class instance creation; IllegalArgumentException; PLUS; o; string literal; string literal; return; cast; Boolean; instanceof; Boolean; if; return; EQUALS; o; null; " __idKDM="getBoolean___Object__boolean___"/>
+    <eoperations name="secureRandomLong()" eparameters="" etype="long" methodBody="return; method invocation; getLeastSignificantBits; method invocation; randomUUID; " __idKDM="secureRandomLong______"/>
+    <eoperations name="newCurator()" eparameters="conf:Map&lt;K, V>, servers:java.util.List&lt;java.lang.String>, port:Object, root:String" etype="CuratorFramework" methodBody="return; method invocation; newCurator; null; " __idKDM="newCurator___Map_K__V___java_util_List_java_lang_String___Object__String___"/>
+    <eoperations name="newCurator()" eparameters="conf:Map&lt;K, V>, servers:java.util.List&lt;java.lang.String>, port:Object, root:String, auth:ZookeeperAuthInfo" etype="CuratorFramework" methodBody="return; method invocation; build; if; expression statement; ASSIGN; method invocation; authorization; CONDITIONAL_AND; NOT_EQUALS; null; NOT_EQUALS; null; variable declaration; builder; variable declaration; zkStr; foreach; zkServer; expression statement; method invocation; add; PLUS; zkServer; method invocation; getInt; string literal; cast; java.util.List&lt;java.lang.String>; variable declaration; class instance creation; ArrayList; serverPorts; " __idKDM="newCurator___Map_K__V___java_util_List_java_lang_String___Object__String__ZookeeperAuthInfo___"/>
+    <eoperations name="newCurator()" eparameters="conf:Map&lt;K, V>, servers:java.util.List&lt;java.lang.String>, port:Object" etype="CuratorFramework" methodBody="return; method invocation; newCurator; string literal; " __idKDM="newCurator___Map_K__V___java_util_List_java_lang_String___Object___"/>
+    <eoperations name="newCuratorStarted()" eparameters="conf:Map&lt;K, V>, servers:java.util.List&lt;java.lang.String>, port:Object, root:String" etype="CuratorFramework" methodBody="return; expression statement; method invocation; start; variable declaration; ret; " __idKDM="newCuratorStarted___Map_K__V___java_util_List_java_lang_String___Object__String___"/>
+    <eoperations name="newCuratorStarted()" eparameters="conf:Map&lt;K, V>, servers:java.util.List&lt;java.lang.String>, port:Object" etype="CuratorFramework" methodBody="return; expression statement; method invocation; start; variable declaration; ret; " __idKDM="newCuratorStarted___Map_K__V___java_util_List_java_lang_String___Object___"/>
+    <eoperations name="integerDivided()" eparameters="sum:int, numPieces:int" etype="java.util.TreeMap&lt;java.lang.Integer,java.lang.Integer>" methodBody="return; if; expression statement; method invocation; put; PLUS; base; number literal; NOT_EQUALS; numInc; number literal; expression statement; method invocation; put; variable declaration; class instance creation; TreeMap; ret; variable declaration; numBases; variable declaration; numInc; variable declaration; base; " __idKDM="integerDivided___int__int___"/>
+    <eoperations name="toByteArray()" eparameters="buffer:ByteBuffer" etype="byte[]" methodBody="return; expression statement; method invocation; get; array length access; number literal; variable declaration; ret; " __idKDM="toByteArray___ByteBuffer___"/>
+    <eoperations name="exceptionCauseIsInstanceOf()" eparameters="klass:Class&lt;T>, throwable:Throwable" etype="boolean" methodBody="return; boolean literal; while; expression statement; ASSIGN; t; method invocation; getCause; if; return; boolean literal; method invocation; isInstance; NOT_EQUALS; t; null; variable declaration; t; " __idKDM="exceptionCauseIsInstanceOf___Class_T___Throwable___"/>
+    <eoperations name="getSerializationDelegate()" eparameters="stormConf:Map&lt;K, V>" etype="SerializationDelegate" methodBody="return; expression statement; method invocation; prepare; try; catch; catch; e; expression statement; ASSIGN; class instance creation; new DefaultSerializationDelegate(); expression statement; method invocation; error; string literal; catch; catch; e; expression statement; ASSIGN; class instance creation; new DefaultSerializationDelegate(); expression statement; method invocation; error; string literal; catch; catch; e; expression statement; ASSIGN; class instance creation; new DefaultSerializationDelegate(); expression statement; method invocation; error; string literal; expression statement; ASSIGN; cast; method invocation; newInstance; variable declaration; delegateClass; variable declaration; delegate; variable declaration; delegateClassName; " __idKDM="getSerializationDelegate___Map_K__V____"/>
+    <nested_classes name="BoundedExponentialBackoffRetry" extends="ExponentialBackoffRetry">
+      <eattributes name="maxRetryInterval" etype="int"/>
+      <eoperations name="BoundedExponentialBackoffRetry()" eparameters="baseSleepTimeMs:int, maxRetries:int, maxSleepTimeMs:int" methodBody="expression statement; ASSIGN; maxSleepTimeMs; field access; maxRetryInterval; this; super constructor invocation; super(baseSleepTimeMs,maxRetries);&#xA;; " __idKDM="BoundedExponentialBackoffRetry___int__int__int___"/>
+      <eoperations name="getMaxRetryInterval()" eparameters="" etype="int" methodBody="return; field access; maxRetryInterval; this; " __idKDM="getMaxRetryInterval______"/>
+      <eoperations name="getSleepTimeMs()" eparameters="count:int, elapsedMs:long" etype="int" methodBody="return; method invocation; min; super method invocation; getSleepTimeMs; " __idKDM="getSleepTimeMs___int__long___"/>
+      <esupertypes href="0a98bee214b46ed20b566a9b49c3eca2895f9fd5_CA_ref.xmi#ExponentialBackoffRetry"/>
+    </nested_classes>
+  </eclassifiers>
+  <eclassifiers name="Config">
+    <eattributes name="STORM_MESSAGING_TRANSPORT" etype="String"/>
+    <eattributes name="STORM_MESSAGING_TRANSPORT_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_MESSAGING_NETTY_BUFFER_SIZE" etype="String"/>
+    <eattributes name="STORM_MESSAGING_NETTY_BUFFER_SIZE_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_MESSAGING_NETTY_MAX_RETRIES" etype="String"/>
+    <eattributes name="STORM_MESSAGING_NETTY_MAX_RETRIES_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_MESSAGING_NETTY_MIN_SLEEP_MS" etype="String"/>
+    <eattributes name="STORM_MESSAGING_NETTY_MIN_SLEEP_MS_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_MESSAGING_NETTY_MAX_SLEEP_MS" etype="String"/>
+    <eattributes name="STORM_MESSAGING_NETTY_MAX_SLEEP_MS_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_MESSAGING_NETTY_SERVER_WORKER_THREADS" etype="String"/>
+    <eattributes name="STORM_MESSAGING_NETTY_SERVER_WORKER_THREADS_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_MESSAGING_NETTY_CLIENT_WORKER_THREADS" etype="String"/>
+    <eattributes name="STORM_MESSAGING_NETTY_CLIENT_WORKER_THREADS_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_NETTY_MESSAGE_BATCH_SIZE" etype="String"/>
+    <eattributes name="STORM_NETTY_MESSAGE_BATCH_SIZE_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_NETTY_FLUSH_CHECK_INTERVAL_MS" etype="String"/>
+    <eattributes name="STORM_NETTY_FLUSH_CHECK_INTERVAL_MS_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_META_SERIALIZATION_DELEGATE" etype="String"/>
+    <eattributes name="STORM_META_SERIALIZATION_DELEGATE_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_ZOOKEEPER_SERVERS" etype="String"/>
+    <eattributes name="STORM_ZOOKEEPER_SERVERS_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_ZOOKEEPER_PORT" etype="String"/>
+    <eattributes name="STORM_ZOOKEEPER_PORT_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_LOCAL_DIR" etype="String"/>
+    <eattributes name="STORM_LOCAL_DIR_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_SCHEDULER" etype="String"/>
+    <eattributes name="STORM_SCHEDULER_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_CLUSTER_MODE" etype="String"/>
+    <eattributes name="STORM_CLUSTER_MODE_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_LOCAL_HOSTNAME" etype="String"/>
+    <eattributes name="STORM_LOCAL_HOSTNAME_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_THRIFT_TRANSPORT_PLUGIN" etype="String"/>
+    <eattributes name="STORM_THRIFT_TRANSPORT_PLUGIN_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_TUPLE_SERIALIZER" etype="String"/>
+    <eattributes name="TOPOLOGY_TUPLE_SERIALIZER_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_LOCAL_MODE_ZMQ" etype="String"/>
+    <eattributes name="STORM_LOCAL_MODE_ZMQ_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_ZOOKEEPER_ROOT" etype="String"/>
+    <eattributes name="STORM_ZOOKEEPER_ROOT_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_ZOOKEEPER_SESSION_TIMEOUT" etype="String"/>
+    <eattributes name="STORM_ZOOKEEPER_SESSION_TIMEOUT_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_ZOOKEEPER_CONNECTION_TIMEOUT" etype="String"/>
+    <eattributes name="STORM_ZOOKEEPER_CONNECTION_TIMEOUT_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_ZOOKEEPER_RETRY_TIMES" etype="String"/>
+    <eattributes name="STORM_ZOOKEEPER_RETRY_TIMES_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_ZOOKEEPER_RETRY_INTERVAL" etype="String"/>
+    <eattributes name="STORM_ZOOKEEPER_RETRY_INTERVAL_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_ZOOKEEPER_RETRY_INTERVAL_CEILING" etype="String"/>
+    <eattributes name="STORM_ZOOKEEPER_RETRY_INTERVAL_CEILING_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_ZOOKEEPER_AUTH_SCHEME" etype="String"/>
+    <eattributes name="STORM_ZOOKEEPER_AUTH_SCHEME_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_ZOOKEEPER_AUTH_PAYLOAD" etype="String"/>
+    <eattributes name="STORM_ZOOKEEPER_AUTH_PAYLOAD_SCHEMA" etype="Object"/>
+    <eattributes name="STORM_ID" etype="String"/>
+    <eattributes name="STORM_ID_SCHEMA" etype="Object"/>
+    <eattributes name="NIMBUS_HOST" etype="String"/>
+    <eattributes name="NIMBUS_HOST_SCHEMA" etype="Object"/>
+    <eattributes name="NIMBUS_THRIFT_PORT" etype="String"/>
+    <eattributes name="NIMBUS_THRIFT_PORT_SCHEMA" etype="Object"/>
+    <eattributes name="NIMBUS_THRIFT_MAX_BUFFER_SIZE" etype="String"/>
+    <eattributes name="NIMBUS_THRIFT_MAX_BUFFER_SIZE_SCHEMA" etype="Object"/>
+    <eattributes name="NIMBUS_CHILDOPTS" etype="String"/>
+    <eattributes name="NIMBUS_CHILDOPTS_SCHEMA" etype="Object"/>
+    <eattributes name="NIMBUS_TASK_TIMEOUT_SECS" etype="String"/>
+    <eattributes name="NIMBUS_TASK_TIMEOUT_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="NIMBUS_MONITOR_FREQ_SECS" etype="String"/>
+    <eattributes name="NIMBUS_MONITOR_FREQ_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="NIMBUS_CLEANUP_INBOX_FREQ_SECS" etype="String"/>
+    <eattributes name="NIMBUS_CLEANUP_INBOX_FREQ_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="NIMBUS_INBOX_JAR_EXPIRATION_SECS" etype="String"/>
+    <eattributes name="NIMBUS_INBOX_JAR_EXPIRATION_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="NIMBUS_SUPERVISOR_TIMEOUT_SECS" etype="String"/>
+    <eattributes name="NIMBUS_SUPERVISOR_TIMEOUT_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="NIMBUS_TASK_LAUNCH_SECS" etype="String"/>
+    <eattributes name="NIMBUS_TASK_LAUNCH_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="NIMBUS_REASSIGN" etype="String"/>
+    <eattributes name="NIMBUS_REASSIGN_SCHEMA" etype="Object"/>
+    <eattributes name="NIMBUS_FILE_COPY_EXPIRATION_SECS" etype="String"/>
+    <eattributes name="NIMBUS_FILE_COPY_EXPIRATION_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="NIMBUS_TOPOLOGY_VALIDATOR" etype="String"/>
+    <eattributes name="NIMBUS_TOPOLOGY_VALIDATOR_SCHEMA" etype="Object"/>
+    <eattributes name="NIMBUS_AUTHORIZER" etype="String"/>
+    <eattributes name="NIMBUS_AUTHORIZER_SCHEMA" etype="Object"/>
+    <eattributes name="UI_PORT" etype="String"/>
+    <eattributes name="UI_PORT_SCHEMA" etype="Object"/>
+    <eattributes name="LOGVIEWER_PORT" etype="String"/>
+    <eattributes name="LOGVIEWER_PORT_SCHEMA" etype="Object"/>
+    <eattributes name="LOGVIEWER_CHILDOPTS" etype="String"/>
+    <eattributes name="LOGVIEWER_CHILDOPTS_SCHEMA" etype="Object"/>
+    <eattributes name="LOGVIEWER_APPENDER_NAME" etype="String"/>
+    <eattributes name="LOGVIEWER_APPENDER_NAME_SCHEMA" etype="Object"/>
+    <eattributes name="UI_CHILDOPTS" etype="String"/>
+    <eattributes name="UI_CHILDOPTS_SCHEMA" etype="Object"/>
+    <eattributes name="DRPC_SERVERS" etype="String"/>
+    <eattributes name="DRPC_SERVERS_SCHEMA" etype="Object"/>
+    <eattributes name="DRPC_PORT" etype="String"/>
+    <eattributes name="DRPC_PORT_SCHEMA" etype="Object"/>
+    <eattributes name="DRPC_WORKER_THREADS" etype="String"/>
+    <eattributes name="DRPC_WORKER_THREADS_SCHEMA" etype="Object"/>
+    <eattributes name="DRPC_QUEUE_SIZE" etype="String"/>
+    <eattributes name="DRPC_QUEUE_SIZE_SCHEMA" etype="Object"/>
+    <eattributes name="DRPC_INVOCATIONS_PORT" etype="String"/>
+    <eattributes name="DRPC_INVOCATIONS_PORT_SCHEMA" etype="Object"/>
+    <eattributes name="DRPC_REQUEST_TIMEOUT_SECS" etype="String"/>
+    <eattributes name="DRPC_REQUEST_TIMEOUT_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="DRPC_CHILDOPTS" etype="String"/>
+    <eattributes name="DRPC_CHILDOPTS_SCHEMA" etype="Object"/>
+    <eattributes name="SUPERVISOR_SCHEDULER_META" etype="String"/>
+    <eattributes name="SUPERVISOR_SCHEDULER_META_SCHEMA" etype="Object"/>
+    <eattributes name="SUPERVISOR_SLOTS_PORTS" etype="String"/>
+    <eattributes name="SUPERVISOR_SLOTS_PORTS_SCHEMA" etype="Object"/>
+    <eattributes name="SUPERVISOR_CHILDOPTS" etype="String"/>
+    <eattributes name="SUPERVISOR_CHILDOPTS_SCHEMA" etype="Object"/>
+    <eattributes name="SUPERVISOR_WORKER_TIMEOUT_SECS" etype="String"/>
+    <eattributes name="SUPERVISOR_WORKER_TIMEOUT_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="SUPERVISOR_WORKER_START_TIMEOUT_SECS" etype="String"/>
+    <eattributes name="SUPERVISOR_WORKER_START_TIMEOUT_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="SUPERVISOR_ENABLE" etype="String"/>
+    <eattributes name="SUPERVISOR_ENABLE_SCHEMA" etype="Object"/>
+    <eattributes name="SUPERVISOR_HEARTBEAT_FREQUENCY_SECS" etype="String"/>
+    <eattributes name="SUPERVISOR_HEARTBEAT_FREQUENCY_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="SUPERVISOR_MONITOR_FREQUENCY_SECS" etype="String"/>
+    <eattributes name="SUPERVISOR_MONITOR_FREQUENCY_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="WORKER_CHILDOPTS" etype="String"/>
+    <eattributes name="WORKER_CHILDOPTS_SCHEMA" etype="Object"/>
+    <eattributes name="WORKER_RECEIVER_THREAD_COUNT" etype="String"/>
+    <eattributes name="WORKER_RECEIVER_THREAD_COUNT_SCHEMA" etype="Object"/>
+    <eattributes name="WORKER_HEARTBEAT_FREQUENCY_SECS" etype="String"/>
+    <eattributes name="WORKER_HEARTBEAT_FREQUENCY_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="TASK_HEARTBEAT_FREQUENCY_SECS" etype="String"/>
+    <eattributes name="TASK_HEARTBEAT_FREQUENCY_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="TASK_REFRESH_POLL_SECS" etype="String"/>
+    <eattributes name="TASK_REFRESH_POLL_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_ENABLE_MESSAGE_TIMEOUTS" etype="String"/>
+    <eattributes name="TOPOLOGY_ENABLE_MESSAGE_TIMEOUTS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_DEBUG" etype="String"/>
+    <eattributes name="TOPOLOGY_DEBUG_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_MULTILANG_SERIALIZER" etype="String"/>
+    <eattributes name="TOPOLOGY_MULTILANG_SERIALIZER_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_WORKERS" etype="String"/>
+    <eattributes name="TOPOLOGY_WORKERS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_TASKS" etype="String"/>
+    <eattributes name="TOPOLOGY_TASKS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_ACKER_EXECUTORS" etype="String"/>
+    <eattributes name="TOPOLOGY_ACKER_EXECUTORS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_MESSAGE_TIMEOUT_SECS" etype="String"/>
+    <eattributes name="TOPOLOGY_MESSAGE_TIMEOUT_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_KRYO_REGISTER" etype="String"/>
+    <eattributes name="TOPOLOGY_KRYO_REGISTER_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_KRYO_DECORATORS" etype="String"/>
+    <eattributes name="TOPOLOGY_KRYO_DECORATORS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_KRYO_FACTORY" etype="String"/>
+    <eattributes name="TOPOLOGY_KRYO_FACTORY_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_SKIP_MISSING_KRYO_REGISTRATIONS" etype="String"/>
+    <eattributes name="TOPOLOGY_SKIP_MISSING_KRYO_REGISTRATIONS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_METRICS_CONSUMER_REGISTER" etype="String"/>
+    <eattributes name="TOPOLOGY_METRICS_CONSUMER_REGISTER_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_MAX_TASK_PARALLELISM" etype="String"/>
+    <eattributes name="TOPOLOGY_MAX_TASK_PARALLELISM_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_MAX_SPOUT_PENDING" etype="String"/>
+    <eattributes name="TOPOLOGY_MAX_SPOUT_PENDING_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_SPOUT_WAIT_STRATEGY" etype="String"/>
+    <eattributes name="TOPOLOGY_SPOUT_WAIT_STRATEGY_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_SLEEP_SPOUT_WAIT_STRATEGY_TIME_MS" etype="String"/>
+    <eattributes name="TOPOLOGY_SLEEP_SPOUT_WAIT_STRATEGY_TIME_MS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_STATE_SYNCHRONIZATION_TIMEOUT_SECS" etype="String"/>
+    <eattributes name="TOPOLOGY_STATE_SYNCHRONIZATION_TIMEOUT_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_STATS_SAMPLE_RATE" etype="String"/>
+    <eattributes name="TOPOLOGY_STATS_SAMPLE_RATE_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_BUILTIN_METRICS_BUCKET_SIZE_SECS" etype="String"/>
+    <eattributes name="TOPOLOGY_BUILTIN_METRICS_BUCKET_SIZE_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_FALL_BACK_ON_JAVA_SERIALIZATION" etype="String"/>
+    <eattributes name="TOPOLOGY_FALL_BACK_ON_JAVA_SERIALIZATION_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_WORKER_CHILDOPTS" etype="String"/>
+    <eattributes name="TOPOLOGY_WORKER_CHILDOPTS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_CLASSPATH" etype="String"/>
+    <eattributes name="TOPOLOGY_CLASSPATH_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_ENVIRONMENT" etype="String"/>
+    <eattributes name="TOPOLOGY_ENVIRONMENT_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_TRANSACTIONAL_ID" etype="String"/>
+    <eattributes name="TOPOLOGY_TRANSACTIONAL_ID_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_AUTO_TASK_HOOKS" etype="String"/>
+    <eattributes name="TOPOLOGY_AUTO_TASK_HOOKS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_EXECUTOR_RECEIVE_BUFFER_SIZE" etype="String"/>
+    <eattributes name="TOPOLOGY_EXECUTOR_RECEIVE_BUFFER_SIZE_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_RECEIVER_BUFFER_SIZE" etype="String"/>
+    <eattributes name="TOPOLOGY_RECEIVER_BUFFER_SIZE_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_EXECUTOR_SEND_BUFFER_SIZE" etype="String"/>
+    <eattributes name="TOPOLOGY_EXECUTOR_SEND_BUFFER_SIZE_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_TRANSFER_BUFFER_SIZE" etype="String"/>
+    <eattributes name="TOPOLOGY_TRANSFER_BUFFER_SIZE_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_TICK_TUPLE_FREQ_SECS" etype="String"/>
+    <eattributes name="TOPOLOGY_TICK_TUPLE_FREQ_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_DISRUPTOR_WAIT_STRATEGY" etype="String"/>
+    <eattributes name="TOPOLOGY_DISRUPTOR_WAIT_STRATEGY_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_WORKER_SHARED_THREAD_POOL_SIZE" etype="String"/>
+    <eattributes name="TOPOLOGY_WORKER_SHARED_THREAD_POOL_SIZE_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_ERROR_THROTTLE_INTERVAL_SECS" etype="String"/>
+    <eattributes name="TOPOLOGY_ERROR_THROTTLE_INTERVAL_SECS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_MAX_ERROR_REPORT_PER_INTERVAL" etype="String"/>
+    <eattributes name="TOPOLOGY_MAX_ERROR_REPORT_PER_INTERVAL_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_TRIDENT_BATCH_EMIT_INTERVAL_MILLIS" etype="String"/>
+    <eattributes name="TOPOLOGY_TRIDENT_BATCH_EMIT_INTERVAL_MILLIS_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_NAME" etype="String"/>
+    <eattributes name="TOPOLOGY_NAME_SCHEMA" etype="Object"/>
+    <eattributes name="TOPOLOGY_SHELLBOLT_MAX_PENDING" etype="String"/>
+    <eattributes name="TOPOLOGY_SHELLBOLT_MAX_PENDING_SCHEMA" etype="Object"/>
+    <eattributes name="TRANSACTIONAL_ZOOKEEPER_ROOT" etype="String"/>
+    <eattributes name="TRANSACTIONAL_ZOOKEEPER_ROOT_SCHEMA" etype="Object"/>
+    <eattributes name="TRANSACTIONAL_ZOOKEEPER_SERVERS" etype="String"/>
+    <eattributes name="TRANSACTIONAL_ZOOKEEPER_SERVERS_SCHEMA" etype="Object"/>
+    <eattributes name="TRANSACTIONAL_ZOOKEEPER_PORT" etype="String"/>
+    <eattributes name="TRANSACTIONAL_ZOOKEEPER_PORT_SCHEMA" etype="Object"/>
+    <eattributes name="ZMQ_THREADS" etype="String"/>
+    <eattributes name="ZMQ_THREADS_SCHEMA" etype="Object"/>
+    <eattributes name="ZMQ_LINGER_MILLIS" etype="String"/>
+    <eattributes name="ZMQ_LINGER_MILLIS_SCHEMA" etype="Object"/>
+    <eattributes name="ZMQ_HWM" etype="String"/>
+    <eattributes name="ZMQ_HWM_SCHEMA" etype="Object"/>
+    <eattributes name="JAVA_LIBRARY_PATH" etype="String"/>
+    <eattributes name="JAVA_LIBRARY_PATH_SCHEMA" etype="Object"/>
+    <eattributes name="DEV_ZOOKEEPER_PATH" etype="String"/>
+    <eattributes name="DEV_ZOOKEEPER_PATH_SCHEMA" etype="Object"/>
+    <eattributes name="ISOLATION_SCHEDULER_MACHINES" etype="String"/>
+    <eattributes name="ISOLATION_SCHEDULER_MACHINES_SCHEMA" etype="Object"/>
+    <eoperations name="setClasspath()" eparameters="conf:Map&lt;K, V>, cp:String" etype="void" methodBody="expression statement; method invocation; put; " __idKDM="setClasspath___Map_K__V___String___"/>
+    <eoperations name="setClasspath()" eparameters="cp:String" etype="void" methodBody="expression statement; method invocation; setClasspath; this; " __idKDM="setClasspath___String___"/>
+    <eoperations name="setEnvironment()" eparameters="conf:Map&lt;K, V>, env:Map&lt;K, V>" etype="void" methodBody="expression statement; method invocation; put; " __idKDM="setEnvironment___Map_K__V___Map_K__V____"/>
+    <eoperations name="setEnvironment()" eparameters="env:Map&lt;K, V>" etype="void" methodBody="expression statement; method invocation; setEnvironment; this; " __idKDM="setEnvironment___Map_K__V____"/>
+    <eoperations name="setDebug()" eparameters="conf:Map&lt;K, V>, isOn:boolean" etype="void" methodBody="expression statement; method invocation; put; " __idKDM="setDebug___Map_K__V___boolean___"/>
+    <eoperations name="setDebug()" eparameters="isOn:boolean" etype="void" methodBody="expression statement; method invocation; setDebug; this; " __idKDM="setDebug___boolean___"/>
+    <eoperations name="setNumWorkers()" eparameters="conf:Map&lt;K, V>, workers:int" etype="void" methodBody="expression statement; method invocation; put; " __idKDM="setNumWorkers___Map_K__V___int___"/>
+    <eoperations name="setNumWorkers()" eparameters="workers:int" etype="void" methodBody="expression statement; method invocation; setNumWorkers; this; " __idKDM="setNumWorkers___int___"/>
+    <eoperations name="setNumAckers()" eparameters="conf:Map&lt;K, V>, numExecutors:int" etype="void" methodBody="expression statement; method invocation; put; " __idKDM="setNumAckers___Map_K__V___int___"/>
+    <eoperations name="setNumAckers()" eparameters="numExecutors:int" etype="void" methodBody="expression statement; method invocation; setNumAckers; this; " __idKDM="setNumAckers___int___"/>
+    <eoperations name="setMessageTimeoutSecs()" eparameters="conf:Map&lt;K, V>, secs:int" etype="void" methodBody="expression statement; method invocation; put; " __idKDM="setMessageTimeoutSecs___Map_K__V___int___"/>
+    <eoperations name="setMessageTimeoutSecs()" eparameters="secs:int" etype="void" methodBody="expression statement; method invocation; setMessageTimeoutSecs; this; " __idKDM="setMessageTimeoutSecs___int___"/>
+    <eoperations name="registerSerialization()" eparameters="conf:Map&lt;K, V>, klass:Class&lt;T>" etype="void" methodBody="expression statement; method invocation; add; method invocation; getName; method invocation; getRegisteredSerializations; " __idKDM="registerSerialization___Map_K__V___Class_T____"/>
+    <eoperations name="registerSerialization()" eparameters="klass:Class&lt;T>" etype="void" methodBody="expression statement; method invocation; registerSerialization; this; " __idKDM="registerSerialization___Class_T____"/>
+    <eoperations name="registerSerialization()" eparameters="conf:Map&lt;K, V>, klass:Class&lt;T>, serializerClass:Class&lt;? extends Serializer>" etype="void" methodBody="expression statement; method invocation; add; method invocation; getRegisteredSerializations; expression statement; method invocation; put; method invocation; getName; method invocation; getName; variable declaration; class instance creation; HashMap; register; " __idKDM="registerSerialization___Map_K__V___Class_T___Class___extends_Serializer____"/>
+    <eoperations name="registerSerialization()" eparameters="klass:Class&lt;T>, serializerClass:Class&lt;? extends Serializer>" etype="void" methodBody="expression statement; method invocation; registerSerialization; this; " __idKDM="registerSerialization___Class_T___Class___extends_Serializer____"/>
+    <eoperations name="registerMetricsConsumer()" eparameters="conf:Map&lt;K, V>, klass:Class&lt;T>, argument:Object, parallelismHint:long" etype="void" methodBody="expression statement; method invocation; put; expression statement; method invocation; add; if; expression statement; ASSIGN; l; class instance creation; ArrayList; EQUALS; l; null; variable declaration; l; expression statement; method invocation; put; string literal; expression statement; method invocation; put; string literal; expression statement; method invocation; put; method invocation; getCanonicalName; string literal; variable declaration; class instance creation; HashMap; m; " __idKDM="registerMetricsConsumer___Map_K__V___Class_T___Object__long___"/>
+    <eoperations name="registerMetricsConsumer()" eparameters="klass:Class&lt;T>, argument:Object, parallelismHint:long" etype="void" methodBody="expression statement; method invocation; registerMetricsConsumer; this; " __idKDM="registerMetricsConsumer___Class_T___Object__long___"/>
+    <eoperations name="registerMetricsConsumer()" eparameters="conf:Map&lt;K, V>, klass:Class&lt;T>, parallelismHint:long" etype="void" methodBody="expression statement; method invocation; registerMetricsConsumer; null; " __idKDM="registerMetricsConsumer___Map_K__V___Class_T___long___"/>
+    <eoperations name="registerMetricsConsumer()" eparameters="klass:Class&lt;T>, parallelismHint:long" etype="void" methodBody="expression statement; method invocation; registerMetricsConsumer; this; " __idKDM="registerMetricsConsumer___Class_T___long___"/>
+    <eoperations name="registerMetricsConsumer()" eparameters="conf:Map&lt;K, V>, klass:Class&lt;T>" etype="void" methodBody="expression statement; method invocation; registerMetricsConsumer; number literal; null; " __idKDM="registerMetricsConsumer___Map_K__V___Class_T____"/>
+    <eoperations name="registerMetricsConsumer()" eparameters="klass:Class&lt;T>" etype="void" methodBody="expression statement; method invocation; registerMetricsConsumer; this; " __idKDM="registerMetricsConsumer___Class_T____"/>
+    <eoperations name="registerDecorator()" eparameters="conf:Map&lt;K, V>, klass:Class&lt;? extends IKryoDecorator>" etype="void" methodBody="expression statement; method invocation; add; method invocation; getName; method invocation; getRegisteredDecorators; " __idKDM="registerDecorator___Map_K__V___Class___extends_IKryoDecorator____"/>
+    <eoperations name="registerDecorator()" eparameters="klass:Class&lt;? extends IKryoDecorator>" etype="void" methodBody="expression statement; method invocation; registerDecorator; this; " __idKDM="registerDecorator___Class___extends_IKryoDecorator____"/>
+    <eoperations name="setKryoFactory()" eparameters="conf:Map&lt;K, V>, klass:Class&lt;? extends IKryoFactory>" etype="void" methodBody="expression statement; method invocation; put; method invocation; getName; " __idKDM="setKryoFactory___Map_K__V___Class___extends_IKryoFactory____"/>
+    <eoperations name="setKryoFactory()" eparameters="klass:Class&lt;? extends IKryoFactory>" etype="void" methodBody="expression statement; method invocation; setKryoFactory; this; " __idKDM="setKryoFactory___Class___extends_IKryoFactory____"/>
+    <eoperations name="setSkipMissingKryoRegistrations()" eparameters="conf:Map&lt;K, V>, skip:boolean" etype="void" methodBody="expression statement; method invocation; put; " __idKDM="setSkipMissingKryoRegistrations___Map_K__V___boolean___"/>
+    <eoperations name="setSkipMissingKryoRegistrations()" eparameters="skip:boolean" etype="void" methodBody="expression statement; method invocation; setSkipMissingKryoRegistrations; this; " __idKDM="setSkipMissingKryoRegistrations___boolean___"/>
+    <eoperations name="setMaxTaskParallelism()" eparameters="conf:Map&lt;K, V>, max:int" etype="void" methodBody="expression statement; method invocation; put; " __idKDM="setMaxTaskParallelism___Map_K__V___int___"/>
+    <eoperations name="setMaxTaskParallelism()" eparameters="max:int" etype="void" methodBody="expression statement; method invocation; setMaxTaskParallelism; this; " __idKDM="setMaxTaskParallelism___int___"/>
+    <eoperations name="setMaxSpoutPending()" eparameters="conf:Map&lt;K, V>, max:int" etype="void" methodBody="expression statement; method invocation; put; " __idKDM="setMaxSpoutPending___Map_K__V___int___"/>
+    <eoperations name="setMaxSpoutPending()" eparameters="max:int" etype="void" methodBody="expression statement; method invocation; setMaxSpoutPending; this; " __idKDM="setMaxSpoutPending___int___"/>
+    <eoperations name="setStatsSampleRate()" eparameters="conf:Map&lt;K, V>, rate:double" etype="void" methodBody="expression statement; method invocation; put; " __idKDM="setStatsSampleRate___Map_K__V___double___"/>
+    <eoperations name="setStatsSampleRate()" eparameters="rate:double" etype="void" methodBody="expression statement; method invocation; setStatsSampleRate; this; " __idKDM="setStatsSampleRate___double___"/>
+    <eoperations name="setFallBackOnJavaSerialization()" eparameters="conf:Map&lt;K, V>, fallback:boolean" etype="void" methodBody="expression statement; method invocation; put; " __idKDM="setFallBackOnJavaSerialization___Map_K__V___boolean___"/>
+    <eoperations name="setFallBackOnJavaSerialization()" eparameters="fallback:boolean" etype="void" methodBody="expression statement; method invocation; setFallBackOnJavaSerialization; this; " __idKDM="setFallBackOnJavaSerialization___boolean___"/>
+    <eoperations name="getRegisteredSerializations()" eparameters="conf:Map&lt;K, V>" etype="List&lt;E>" methodBody="return; expression statement; method invocation; put; if; expression statement; ASSIGN; ret; class instance creation; ArrayList; cast; List&lt;E>; method invocation; get; expression statement; ASSIGN; ret; class instance creation; ArrayList; NOT; method invocation; containsKey; variable declaration; ret; " __idKDM="getRegisteredSerializations___Map_K__V____"/>
+    <eoperations name="getRegisteredDecorators()" eparameters="conf:Map&lt;K, V>" etype="List&lt;E>" methodBody="return; expression statement; method invocation; put; if; expression statement; ASSIGN; ret; class instance creation; ArrayList; cast; List&lt;E>; method invocation; get; expression statement; ASSIGN; ret; class instance creation; ArrayList; NOT; method invocation; containsKey; variable declaration; ret; " __idKDM="getRegisteredDecorators___Map_K__V____"/>
+  </eclassifiers>
+</refactoring:EPackage>

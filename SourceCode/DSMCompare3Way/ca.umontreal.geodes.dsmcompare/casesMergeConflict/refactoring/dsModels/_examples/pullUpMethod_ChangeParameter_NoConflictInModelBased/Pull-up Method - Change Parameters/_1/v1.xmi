@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refactoring:EPackage
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring="www.geodes.UdeM.edu/refactoring"
+    xsi:schemaLocation="www.geodes.UdeM.edu/refactoring ../metaModels/refactoring.ecore"
+    name="p">
+  <eclassifiers
+      name="c"
+      esupertypes="c2">
+    <eoperations
+        name="m"
+        eparameters="i:int; j:int"
+        methodBody="a method invocation; m2; "/>
+    <eoperations
+        name="m2"
+        eparameters="i:int"
+        methodBody="b"/>
+  </eclassifiers>
+  <eclassifiers
+      name="c2"/>
+</refactoring:EPackage>

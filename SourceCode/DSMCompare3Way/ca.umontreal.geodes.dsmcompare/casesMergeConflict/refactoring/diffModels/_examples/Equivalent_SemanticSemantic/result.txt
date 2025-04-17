@@ -1,0 +1,139 @@
+Matches count 	:	1
+Diffs count 	:	16
+Conflicts count :	8
+Matched resources :
+Left = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V1.xmi
+Right = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V2.xmi
+origin = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/CA.xmi
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| refactoringDiffMM.impl.EPackageImpl@41925502 (name: rfc)| refactoringDiffMM.impl.EPackageImpl@618c5d94 (name: rfc)|
+| |-refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null)| |-refactoringDiffMM.impl.EClassImpl@5b40ceb (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | |-refactoringDiffMM.impl.EAttributeImpl@5316e95f (name: attr1, etype: null)| | |-refactoringDiffMM.impl.EAttributeImpl@13c3c1e1 (name: attr1, etype: null)|
+| | |-refactoringDiffMM.impl.EAttributeImpl@3f053c80 (name: attr2, etype: null)| | |-refactoringDiffMM.impl.EAttributeImpl@1d8062d2 (name: attr2, etype: null)|
+| |-refactoringDiffMM.impl.EClassImpl@6c6c5427 (name: root, extends: null, implements: null, isAbstract: false, packageName: null)| |-refactoringDiffMM.impl.EClassImpl@1e63ec0b (name: root, extends: null, implements: null, isAbstract: false, packageName: null)|
+| |                                      | |                                      |
+| |                                      | |                                      |
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+REFERENCE CHANGES
+
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@5316e95f (name: attr1, etype: null) has been moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@3f053c80 (name: attr2, etype: null) has been moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@13c3c1e1 (name: attr1, etype: null) has been remotely(RIGHT) moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@1d8062d2 (name: attr2, etype: null) has been remotely(RIGHT) moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@6c6c5427 (name: root, extends: null, implements: null, isAbstract: false, packageName: null) has been added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@1e63ec0b (name: root, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@2c88b9fc (name: root, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@36546a22 (name: cls1, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@2c88b9fc (name: root, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@36546a22 (name: cls1, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@2c88b9fc (name: root, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@295eaa7c (name: cls2, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@2c88b9fc (name: root, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@295eaa7c (name: cls2, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null) has been added to reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@41925502 (name: rfc)
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@5b40ceb (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) added to reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@41925502 (name: rfc)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@36546a22 (name: cls1, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@41925502 (name: rfc)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@36546a22 (name: cls1, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@41925502 (name: rfc)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@295eaa7c (name: cls2, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@41925502 (name: rfc)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@295eaa7c (name: cls2, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@41925502 (name: rfc)
+
+ATTRIBUTE CHANGES
+
+CONFLICTS
+PSEUDO conflict:
+	
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@5316e95f (name: attr1, etype: null) has been moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@13c3c1e1 (name: attr1, etype: null) has been remotely(RIGHT) moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null)
+PSEUDO conflict:
+	
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@3f053c80 (name: attr2, etype: null) has been moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@1d8062d2 (name: attr2, etype: null) has been remotely(RIGHT) moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null)
+PSEUDO conflict:
+	
+ [ADD] value refactoringDiffMM.impl.EClassImpl@6c6c5427 (name: root, extends: null, implements: null, isAbstract: false, packageName: null) has been added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EClassImpl@1e63ec0b (name: root, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null)
+PSEUDO conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@2c88b9fc (name: root, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@36546a22 (name: cls1, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@2c88b9fc (name: root, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@36546a22 (name: cls1, extends: null, implements: null, isAbstract: false, packageName: null)
+PSEUDO conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@2c88b9fc (name: root, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@295eaa7c (name: cls2, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@2c88b9fc (name: root, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@295eaa7c (name: cls2, extends: null, implements: null, isAbstract: false, packageName: null)
+PSEUDO conflict:
+	
+ [ADD] value refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null) has been added to reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@41925502 (name: rfc)
+	
+ [ADD] value refactoringDiffMM.impl.EClassImpl@5b40ceb (name: cls3, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) added to reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@41925502 (name: rfc)
+PSEUDO conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@36546a22 (name: cls1, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@41925502 (name: rfc)
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@36546a22 (name: cls1, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@41925502 (name: rfc)
+PSEUDO conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@295eaa7c (name: cls2, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@41925502 (name: rfc)
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@295eaa7c (name: cls2, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@41925502 (name: rfc)
+MOVE-MOVE same target: Couldn't set.refactoringDiffMM.impl.EAttributeImpl@3f053c80 (name: attr2, etype: null)
+MOVE-MOVE same target: Couldn't set.refactoringDiffMM.impl.EAttributeImpl@5316e95f (name: attr1, etype: null)
+
+ setChangeStatus(...): Index 0 out of bounds for length 0 --> changeStatus / refactoringDiffMM.impl.EAttributeImpl@303e3593 (name: attr2, etype: null)
+
+ setChangeStatus(...): Index 0 out of bounds for length 0 --> changeStatus / refactoringDiffMM.impl.EAttributeImpl@224b4d61 (name: attr1, etype: null)
+diff012 model saved at: file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/diffModels/DSMDiff.xmi
+--> Models are merged and initial v012 (non conflicting elements only) saved at: file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V012.xmi
+Succeed! The end of transforming EMF-Diff to DSMC-Diff
+emf-Compare result transformed to Fine-Grained DsmdiffMM!

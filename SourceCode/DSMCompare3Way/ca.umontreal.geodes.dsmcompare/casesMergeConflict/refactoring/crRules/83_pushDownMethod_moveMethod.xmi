@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refactoringCRRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoringCRRuleMM="www.geodes.UdeM.edu/refactoringCRRuleMM"
+    xsi:schemaLocation="www.geodes.UdeM.edu/refactoringCRRuleMM ../metaModels/refactoringCRRuleMM.ecore"
+    name="pushDownMethod_moveMethod"
+    priority="1">
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_SemanticDiff"
+      ID_Pattern="1"
+      name="Push-down Method"
+      author="LEFT"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_SemanticDiff"
+      ID_Pattern="2"
+      name="Move Method"
+      author="RIGHT"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_SemanticConflict"
+      ID_Pattern="4"
+      name="Push-down - Move Method"
+      conflict_kind="CONTRADICTING"
+      conflict_Granularity="Semantic_Semantic"
+      semanticdiffs="1 2"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_ConflictResolution"
+      ID_Pattern="5"
+      name="Prefer Push-down over Move Method"
+      ResolutionStrategy="Keep_Left"
+      semanticconflicts="4"/>
+  <rulePattern_Pattern_SemanticObject
+      xsi:type="refactoringCRRuleMM:Pattern_ConflictResolution"
+      ID_Pattern="6"
+      isForbidden="true"
+      name="Prefer Push-down over Move Method"
+      ResolutionStrategy="Keep_Left"
+      semanticconflicts="4"/>
+</refactoringCRRuleMM:Rule>

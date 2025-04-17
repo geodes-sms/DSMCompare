@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:refactoring2WayRuleMM="www.geodes.UdeM.edu/refactoring2WayRuleMM"
+    name="pullUpMethodInterface">
+  <rulePattern_EClass
+      xsi:type="refactoring2WayRuleMM:Pattern_EClass"
+      name="m"
+      ID_Pattern="1">
+    <eoperations
+        xsi:type="refactoring2WayRuleMM:Pattern_EOperation"
+        ID_Pattern="2"/>
+    <diffeoperations
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffEClass_eoperations"
+        diff_kind="DELETE"
+        eType="//@rulePattern_EClass.0/@eoperations.0"
+        ID_Pattern="3"
+        filter="true"/>
+  </rulePattern_EClass>
+  <rulePattern_Interface
+      xsi:type="refactoring2WayRuleMM:Pattern_Interface"
+      name="i"
+      ID_Pattern="4">
+    <diffeoperations
+        xsi:type="refactoring2WayRuleMM:Pattern_DiffInterface_eoperations"
+        diff_kind="ADD"
+        eType="//@rulePattern_EClass.0/@eoperations.0"
+        ID_Pattern="5"/>
+  </rulePattern_Interface>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="Pull-up Method"
+      SemanticObject_DiffEClass_eoperations="//@rulePattern_EClass.0/@diffeoperations.0"
+      SemanticObject_DiffInterface_eoperations="//@rulePattern_Interface.0/@diffeoperations.0"
+      SemanticObject_EClass="m"
+      SemanticObject_EOperation="//@rulePattern_EClass.0/@eoperations.0"
+      SemanticObject_Interface="i"
+      ID_Pattern="6"/>
+  <rulePattern_SemanticObject
+      xsi:type="refactoring2WayRuleMM:Pattern_SemanticDiff"
+      name="Pull-up Method"
+      SemanticObject_DiffEClass_eoperations="//@rulePattern_EClass.0/@diffeoperations.0"
+      SemanticObject_DiffInterface_eoperations="//@rulePattern_Interface.0/@diffeoperations.0"
+      SemanticObject_EClass="m"
+      SemanticObject_EOperation="//@rulePattern_EClass.0/@eoperations.0"
+      SemanticObject_Interface="i"
+      ID_Pattern="66"
+      isForbidden="true"/>
+</refactoring2WayRuleMM:Rule>

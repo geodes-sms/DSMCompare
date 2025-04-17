@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrinets:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petrinets="www.geodes.UdeM.edu/petrinets"
+    xsi:schemaLocation="www.geodes.UdeM.edu/petrinets ../metaModels/petrinets.ecore"
+    name="pnModel">
+  <places name="Pending"
+      tokens="2">
+    <sources
+        target="receive"/>
+  </places>
+  <places name="PayChoice">
+    <sources
+        target="payOnline"/>
+    <sources
+        target="payCOD"/>
+  </places>
+  <places name="OnlinePayReceived">
+    <sources
+        target="checkCredit"/>
+  </places>
+  <places name="CODPayReceived">
+    <sources
+        target="checkCash"/>
+  </places>
+  <places name="Completed"/>
+  <transitions
+      name="receive">
+    <sources
+        target="PayChoice"/>
+  </transitions>
+  <transitions
+      name="payOnline">
+    <sources
+        target="OnlinePayReceived"/>
+  </transitions>
+  <transitions
+      name="payCOD">
+    <sources
+        target="CODPayReceived"/>
+  </transitions>
+  <transitions
+      name="checkCredit">
+    <sources
+        target="Completed"/>
+  </transitions>
+  <transitions
+      name="checkCash">
+    <sources
+        target="Completed"/>
+  </transitions>
+</petrinets:PetriNet>

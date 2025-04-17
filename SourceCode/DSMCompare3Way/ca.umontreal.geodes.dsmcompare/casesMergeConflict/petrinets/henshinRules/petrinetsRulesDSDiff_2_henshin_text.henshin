@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_f9sqEMQvEe2TD---Mk4tOA" name="HenshinDSL">
+  <imports href="../metaModels/petrinetsDiffMM.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_f9sqEcQvEe2TD---Mk4tOA" name="RemoveEfcStructures">
+    <parameters xmi:id="_f9sqEsQvEe2TD---Mk4tOA" name="n2diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqE8QvEe2TD---Mk4tOA" name="n2diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqFMQvEe2TD---Mk4tOA" name="n3diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqFcQvEe2TD---Mk4tOA" name="n3diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqFsQvEe2TD---Mk4tOA" name="n4diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqF8QvEe2TD---Mk4tOA" name="n4diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqGMQvEe2TD---Mk4tOA" name="n6diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqGcQvEe2TD---Mk4tOA" name="n6diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqGsQvEe2TD---Mk4tOA" name="n7diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqG8QvEe2TD---Mk4tOA" name="n7diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqHMQvEe2TD---Mk4tOA" name="n8diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqHcQvEe2TD---Mk4tOA" name="n8diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqHsQvEe2TD---Mk4tOA" name="n9diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqH8QvEe2TD---Mk4tOA" name="n9diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqIMQvEe2TD---Mk4tOA" name="n10diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqIcQvEe2TD---Mk4tOA" name="n10diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqIsQvEe2TD---Mk4tOA" name="n11diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqI8QvEe2TD---Mk4tOA" name="n11diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqJMQvEe2TD---Mk4tOA" name="n12diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqJcQvEe2TD---Mk4tOA" name="n12diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqJsQvEe2TD---Mk4tOA" name="n13diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqJ8QvEe2TD---Mk4tOA" name="n13diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_f9sqKMQvEe2TD---Mk4tOA" name="RemoveEfcStructures_LHS">
+      <nodes xmi:id="_f9sqKcQvEe2TD---Mk4tOA" name="n1" outgoing="_f9sqTMQvEe2TD---Mk4tOA _f9sqTcQvEe2TD---Mk4tOA _f9sqTsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_f9sqKsQvEe2TD---Mk4tOA" name="n4" incoming="_f9sqTsQvEe2TD---Mk4tOA" outgoing="_f9sqUcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_f9sqK8QvEe2TD---Mk4tOA" value="n4diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqLMQvEe2TD---Mk4tOA" value="n4diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqLcQvEe2TD---Mk4tOA" name="n5" outgoing="_f9sqUsQvEe2TD---Mk4tOA _f9sqU8QvEe2TD---Mk4tOA _f9sqVMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_f9sqLsQvEe2TD---Mk4tOA" name="n8" incoming="_f9sqVMQvEe2TD---Mk4tOA" outgoing="_f9sqV8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_f9sqL8QvEe2TD---Mk4tOA" value="n8diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqMMQvEe2TD---Mk4tOA" value="n8diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqMcQvEe2TD---Mk4tOA" name="n9" incoming="_f9sqT8QvEe2TD---Mk4tOA _f9sqVcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition"/>
+        <attributes xmi:id="_f9sqMsQvEe2TD---Mk4tOA" value="n9diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqM8QvEe2TD---Mk4tOA" value="n9diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqNMQvEe2TD---Mk4tOA" name="n10" incoming="_f9sqUMQvEe2TD---Mk4tOA _f9sqVsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition"/>
+        <attributes xmi:id="_f9sqNcQvEe2TD---Mk4tOA" value="n10diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqNsQvEe2TD---Mk4tOA" value="n10diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqN8QvEe2TD---Mk4tOA" name="n11" incoming="_f9sqUcQvEe2TD---Mk4tOA _f9sqV8QvEe2TD---Mk4tOA" outgoing="_f9sqWMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition"/>
+        <attributes xmi:id="_f9sqOMQvEe2TD---Mk4tOA" value="n11diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqOcQvEe2TD---Mk4tOA" value="n11diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqOsQvEe2TD---Mk4tOA" name="n12" incoming="_f9sqWMQvEe2TD---Mk4tOA" outgoing="_f9sqWcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_f9sqO8QvEe2TD---Mk4tOA" value="n12diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqPMQvEe2TD---Mk4tOA" value="n12diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqPcQvEe2TD---Mk4tOA" name="n13" incoming="_f9sqWcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_f9sqPsQvEe2TD---Mk4tOA" value="n13diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqP8QvEe2TD---Mk4tOA" value="n13diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqQMQvEe2TD---Mk4tOA" name="n2" incoming="_f9sqTMQvEe2TD---Mk4tOA" outgoing="_f9sqT8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_f9sqQcQvEe2TD---Mk4tOA" value="n2diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqQsQvEe2TD---Mk4tOA" value="n2diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqQ8QvEe2TD---Mk4tOA" name="n3" incoming="_f9sqTcQvEe2TD---Mk4tOA" outgoing="_f9sqUMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_f9sqRMQvEe2TD---Mk4tOA" value="n3diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqRcQvEe2TD---Mk4tOA" value="n3diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqRsQvEe2TD---Mk4tOA" name="n6" incoming="_f9sqUsQvEe2TD---Mk4tOA" outgoing="_f9sqVcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_f9sqR8QvEe2TD---Mk4tOA" value="n6diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqSMQvEe2TD---Mk4tOA" value="n6diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqScQvEe2TD---Mk4tOA" name="n7" incoming="_f9sqU8QvEe2TD---Mk4tOA" outgoing="_f9sqVsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_f9sqSsQvEe2TD---Mk4tOA" value="n7diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqS8QvEe2TD---Mk4tOA" value="n7diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_f9sqTMQvEe2TD---Mk4tOA" source="_f9sqKcQvEe2TD---Mk4tOA" target="_f9sqQMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_f9sqTcQvEe2TD---Mk4tOA" source="_f9sqKcQvEe2TD---Mk4tOA" target="_f9sqQ8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_f9sqTsQvEe2TD---Mk4tOA" source="_f9sqKcQvEe2TD---Mk4tOA" target="_f9sqKsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_f9sqT8QvEe2TD---Mk4tOA" source="_f9sqQMQvEe2TD---Mk4tOA" target="_f9sqMcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_f9sqUMQvEe2TD---Mk4tOA" source="_f9sqQ8QvEe2TD---Mk4tOA" target="_f9sqNMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_f9sqUcQvEe2TD---Mk4tOA" source="_f9sqKsQvEe2TD---Mk4tOA" target="_f9sqN8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_f9sqUsQvEe2TD---Mk4tOA" source="_f9sqLcQvEe2TD---Mk4tOA" target="_f9sqRsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_f9sqU8QvEe2TD---Mk4tOA" source="_f9sqLcQvEe2TD---Mk4tOA" target="_f9sqScQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_f9sqVMQvEe2TD---Mk4tOA" source="_f9sqLcQvEe2TD---Mk4tOA" target="_f9sqLsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_f9sqVcQvEe2TD---Mk4tOA" source="_f9sqRsQvEe2TD---Mk4tOA" target="_f9sqMcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_f9sqVsQvEe2TD---Mk4tOA" source="_f9sqScQvEe2TD---Mk4tOA" target="_f9sqNMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_f9sqV8QvEe2TD---Mk4tOA" source="_f9sqLsQvEe2TD---Mk4tOA" target="_f9sqN8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_f9sqWMQvEe2TD---Mk4tOA" source="_f9sqN8QvEe2TD---Mk4tOA" target="_f9sqOsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_f9sqWcQvEe2TD---Mk4tOA" source="_f9sqOsQvEe2TD---Mk4tOA" target="_f9sqPcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_f9sqWsQvEe2TD---Mk4tOA" name="RemoveEfcStructures_RHS">
+      <nodes xmi:id="_f9sqW8QvEe2TD---Mk4tOA" name="n1" incoming="_f9sqe8QvEe2TD---Mk4tOA" outgoing="_f9sqdMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_f9sqXMQvEe2TD---Mk4tOA" name="n4" incoming="_f9sqdMQvEe2TD---Mk4tOA" outgoing="_f9sqdcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_f9sqXcQvEe2TD---Mk4tOA" value="n4diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqXsQvEe2TD---Mk4tOA" value="n4diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqX8QvEe2TD---Mk4tOA" name="n5" incoming="_f9sqfMQvEe2TD---Mk4tOA" outgoing="_f9sqdsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_f9sqYMQvEe2TD---Mk4tOA" name="n8" incoming="_f9sqdsQvEe2TD---Mk4tOA" outgoing="_f9sqd8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_f9sqYcQvEe2TD---Mk4tOA" value="n8diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqYsQvEe2TD---Mk4tOA" value="n8diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqY8QvEe2TD---Mk4tOA" name="n9">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition"/>
+        <attributes xmi:id="_f9sqZMQvEe2TD---Mk4tOA" value="n9diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqZcQvEe2TD---Mk4tOA" value="n9diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqZsQvEe2TD---Mk4tOA" name="n10">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition"/>
+        <attributes xmi:id="_f9sqZ8QvEe2TD---Mk4tOA" value="n10diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqaMQvEe2TD---Mk4tOA" value="n10diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqacQvEe2TD---Mk4tOA" name="n11" incoming="_f9sqdcQvEe2TD---Mk4tOA _f9sqd8QvEe2TD---Mk4tOA _f9sqesQvEe2TD---Mk4tOA" outgoing="_f9sqeMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition"/>
+        <attributes xmi:id="_f9sqasQvEe2TD---Mk4tOA" value="n11diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqa8QvEe2TD---Mk4tOA" value="n11diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqbMQvEe2TD---Mk4tOA" name="n12" incoming="_f9sqeMQvEe2TD---Mk4tOA" outgoing="_f9sqecQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_f9sqbcQvEe2TD---Mk4tOA" value="n12diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqbsQvEe2TD---Mk4tOA" value="n12diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqb8QvEe2TD---Mk4tOA" name="n13" incoming="_f9sqecQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_f9sqcMQvEe2TD---Mk4tOA" value="n13diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqccQvEe2TD---Mk4tOA" value="n13diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqcsQvEe2TD---Mk4tOA" name="n14" outgoing="_f9sqesQvEe2TD---Mk4tOA _f9sqe8QvEe2TD---Mk4tOA _f9sqfMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_f9sqc8QvEe2TD---Mk4tOA" value="&quot;Remove EFC Structures&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_f9sqdMQvEe2TD---Mk4tOA" source="_f9sqW8QvEe2TD---Mk4tOA" target="_f9sqXMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_f9sqdcQvEe2TD---Mk4tOA" source="_f9sqXMQvEe2TD---Mk4tOA" target="_f9sqacQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_f9sqdsQvEe2TD---Mk4tOA" source="_f9sqX8QvEe2TD---Mk4tOA" target="_f9sqYMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_f9sqd8QvEe2TD---Mk4tOA" source="_f9sqYMQvEe2TD---Mk4tOA" target="_f9sqacQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_f9sqeMQvEe2TD---Mk4tOA" source="_f9sqacQvEe2TD---Mk4tOA" target="_f9sqbMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_f9sqecQvEe2TD---Mk4tOA" source="_f9sqbMQvEe2TD---Mk4tOA" target="_f9sqb8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_f9sqesQvEe2TD---Mk4tOA" source="_f9sqcsQvEe2TD---Mk4tOA" target="_f9sqacQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_DiffTransition"/>
+      </edges>
+      <edges xmi:id="_f9sqe8QvEe2TD---Mk4tOA" source="_f9sqcsQvEe2TD---Mk4tOA" target="_f9sqW8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_f9sqfMQvEe2TD---Mk4tOA" source="_f9sqcsQvEe2TD---Mk4tOA" target="_f9sqX8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_f9sqfcQvEe2TD---Mk4tOA" conditionText="((n2diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n3diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n4diff_kind_Left==&quot;ADD&quot;) &amp;&amp; (n6diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n7diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n8diff_kind_Left==&quot;ADD&quot;) &amp;&amp; (n9diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n10diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n11diff_kind_Left==&quot;ADD&quot;) &amp;&amp; (n12diff_kind_Left==&quot;ADD&quot;) &amp;&amp; (n13diff_kind_Left==&quot;ADD&quot;)) || ((n2diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n3diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n4diff_kind_Right==&quot;ADD&quot;) &amp;&amp; (n6diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n7diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n8diff_kind_Right==&quot;ADD&quot;) &amp;&amp; (n9diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n10diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n11diff_kind_Right==&quot;ADD&quot;) &amp;&amp; (n12diff_kind_Right==&quot;ADD&quot;) &amp;&amp; (n13diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_f9sqfsQvEe2TD---Mk4tOA" origin="_f9sqKcQvEe2TD---Mk4tOA" image="_f9sqW8QvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sqf8QvEe2TD---Mk4tOA" origin="_f9sqKsQvEe2TD---Mk4tOA" image="_f9sqXMQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sqgMQvEe2TD---Mk4tOA" origin="_f9sqLcQvEe2TD---Mk4tOA" image="_f9sqX8QvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sqgcQvEe2TD---Mk4tOA" origin="_f9sqLsQvEe2TD---Mk4tOA" image="_f9sqYMQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sqgsQvEe2TD---Mk4tOA" origin="_f9sqMcQvEe2TD---Mk4tOA" image="_f9sqY8QvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sqg8QvEe2TD---Mk4tOA" origin="_f9sqNMQvEe2TD---Mk4tOA" image="_f9sqZsQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sqhMQvEe2TD---Mk4tOA" origin="_f9sqN8QvEe2TD---Mk4tOA" image="_f9sqacQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sqhcQvEe2TD---Mk4tOA" origin="_f9sqOsQvEe2TD---Mk4tOA" image="_f9sqbMQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sqhsQvEe2TD---Mk4tOA" origin="_f9sqPcQvEe2TD---Mk4tOA" image="_f9sqb8QvEe2TD---Mk4tOA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_f9sqh8QvEe2TD---Mk4tOA" name="RemoveTPCrossStructures">
+    <parameters xmi:id="_f9sqiMQvEe2TD---Mk4tOA" name="n2diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqicQvEe2TD---Mk4tOA" name="n2diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqisQvEe2TD---Mk4tOA" name="n3diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqi8QvEe2TD---Mk4tOA" name="n3diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqjMQvEe2TD---Mk4tOA" name="n4diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqjcQvEe2TD---Mk4tOA" name="n4diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqjsQvEe2TD---Mk4tOA" name="n6diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqj8QvEe2TD---Mk4tOA" name="n6diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqkMQvEe2TD---Mk4tOA" name="n7diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqkcQvEe2TD---Mk4tOA" name="n7diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqksQvEe2TD---Mk4tOA" name="n8diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqk8QvEe2TD---Mk4tOA" name="n8diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqlMQvEe2TD---Mk4tOA" name="n9diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqlcQvEe2TD---Mk4tOA" name="n9diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqlsQvEe2TD---Mk4tOA" name="n10diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sql8QvEe2TD---Mk4tOA" name="n10diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqmMQvEe2TD---Mk4tOA" name="n11diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqmcQvEe2TD---Mk4tOA" name="n11diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqmsQvEe2TD---Mk4tOA" name="n12diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqm8QvEe2TD---Mk4tOA" name="n12diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqnMQvEe2TD---Mk4tOA" name="n13diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sqncQvEe2TD---Mk4tOA" name="n13diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_f9sqnsQvEe2TD---Mk4tOA" name="RemoveTPCrossStructures_LHS">
+      <nodes xmi:id="_f9sqn8QvEe2TD---Mk4tOA" name="n1" outgoing="_f9sqwsQvEe2TD---Mk4tOA _f9sqw8QvEe2TD---Mk4tOA _f9sqxMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_f9sqoMQvEe2TD---Mk4tOA" name="n4" incoming="_f9sqxMQvEe2TD---Mk4tOA" outgoing="_f9sqx8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_f9sqocQvEe2TD---Mk4tOA" value="n4diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqosQvEe2TD---Mk4tOA" value="n4diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqo8QvEe2TD---Mk4tOA" name="n5" outgoing="_f9sqyMQvEe2TD---Mk4tOA _f9sqycQvEe2TD---Mk4tOA _f9sqysQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_f9sqpMQvEe2TD---Mk4tOA" name="n8" incoming="_f9sqysQvEe2TD---Mk4tOA" outgoing="_f9sqzcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_f9sqpcQvEe2TD---Mk4tOA" value="n8diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqpsQvEe2TD---Mk4tOA" value="n8diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqp8QvEe2TD---Mk4tOA" name="n9" incoming="_f9sqxcQvEe2TD---Mk4tOA _f9sqy8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_f9sqqMQvEe2TD---Mk4tOA" value="n9diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqqcQvEe2TD---Mk4tOA" value="n9diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqqsQvEe2TD---Mk4tOA" name="n10" incoming="_f9sqxsQvEe2TD---Mk4tOA _f9sqzMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_f9sqq8QvEe2TD---Mk4tOA" value="n10diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqrMQvEe2TD---Mk4tOA" value="n10diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqrcQvEe2TD---Mk4tOA" name="n11" incoming="_f9sqx8QvEe2TD---Mk4tOA _f9sqzcQvEe2TD---Mk4tOA" outgoing="_f9sqzsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_f9sqrsQvEe2TD---Mk4tOA" value="n11diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqr8QvEe2TD---Mk4tOA" value="n11diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqsMQvEe2TD---Mk4tOA" name="n12" incoming="_f9sqzsQvEe2TD---Mk4tOA" outgoing="_f9sqz8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_f9sqscQvEe2TD---Mk4tOA" value="n12diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqssQvEe2TD---Mk4tOA" value="n12diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqs8QvEe2TD---Mk4tOA" name="n13" incoming="_f9sqz8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition"/>
+        <attributes xmi:id="_f9sqtMQvEe2TD---Mk4tOA" value="n13diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqtcQvEe2TD---Mk4tOA" value="n13diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqtsQvEe2TD---Mk4tOA" name="n2" incoming="_f9sqwsQvEe2TD---Mk4tOA" outgoing="_f9sqxcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_f9sqt8QvEe2TD---Mk4tOA" value="n2diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9squMQvEe2TD---Mk4tOA" value="n2diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9squcQvEe2TD---Mk4tOA" name="n3" incoming="_f9sqw8QvEe2TD---Mk4tOA" outgoing="_f9sqxsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_f9squsQvEe2TD---Mk4tOA" value="n3diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9squ8QvEe2TD---Mk4tOA" value="n3diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqvMQvEe2TD---Mk4tOA" name="n6" incoming="_f9sqyMQvEe2TD---Mk4tOA" outgoing="_f9sqy8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_f9sqvcQvEe2TD---Mk4tOA" value="n6diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqvsQvEe2TD---Mk4tOA" value="n6diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sqv8QvEe2TD---Mk4tOA" name="n7" incoming="_f9sqycQvEe2TD---Mk4tOA" outgoing="_f9sqzMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_f9sqwMQvEe2TD---Mk4tOA" value="n7diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sqwcQvEe2TD---Mk4tOA" value="n7diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_f9sqwsQvEe2TD---Mk4tOA" source="_f9sqn8QvEe2TD---Mk4tOA" target="_f9sqtsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_f9sqw8QvEe2TD---Mk4tOA" source="_f9sqn8QvEe2TD---Mk4tOA" target="_f9squcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_f9sqxMQvEe2TD---Mk4tOA" source="_f9sqn8QvEe2TD---Mk4tOA" target="_f9sqoMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_f9sqxcQvEe2TD---Mk4tOA" source="_f9sqtsQvEe2TD---Mk4tOA" target="_f9sqp8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_f9sqxsQvEe2TD---Mk4tOA" source="_f9squcQvEe2TD---Mk4tOA" target="_f9sqqsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_f9sqx8QvEe2TD---Mk4tOA" source="_f9sqoMQvEe2TD---Mk4tOA" target="_f9sqrcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_f9sqyMQvEe2TD---Mk4tOA" source="_f9sqo8QvEe2TD---Mk4tOA" target="_f9sqvMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_f9sqycQvEe2TD---Mk4tOA" source="_f9sqo8QvEe2TD---Mk4tOA" target="_f9sqv8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_f9sqysQvEe2TD---Mk4tOA" source="_f9sqo8QvEe2TD---Mk4tOA" target="_f9sqpMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_f9sqy8QvEe2TD---Mk4tOA" source="_f9sqvMQvEe2TD---Mk4tOA" target="_f9sqp8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_f9sqzMQvEe2TD---Mk4tOA" source="_f9sqv8QvEe2TD---Mk4tOA" target="_f9sqqsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_f9sqzcQvEe2TD---Mk4tOA" source="_f9sqpMQvEe2TD---Mk4tOA" target="_f9sqrcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_f9sqzsQvEe2TD---Mk4tOA" source="_f9sqrcQvEe2TD---Mk4tOA" target="_f9sqsMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_f9sqz8QvEe2TD---Mk4tOA" source="_f9sqsMQvEe2TD---Mk4tOA" target="_f9sqs8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_f9sq0MQvEe2TD---Mk4tOA" name="RemoveTPCrossStructures_RHS">
+      <nodes xmi:id="_f9sq0cQvEe2TD---Mk4tOA" name="n1" outgoing="_f9sq6sQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_f9sq0sQvEe2TD---Mk4tOA" name="n4" incoming="_f9sq6sQvEe2TD---Mk4tOA" outgoing="_f9sq68QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_f9sq08QvEe2TD---Mk4tOA" value="n4diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sq1MQvEe2TD---Mk4tOA" value="n4diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sq1cQvEe2TD---Mk4tOA" name="n5" outgoing="_f9sq7MQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_f9sq1sQvEe2TD---Mk4tOA" name="n8" incoming="_f9sq7MQvEe2TD---Mk4tOA" outgoing="_f9sq7cQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_f9sq18QvEe2TD---Mk4tOA" value="n8diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sq2MQvEe2TD---Mk4tOA" value="n8diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sq2cQvEe2TD---Mk4tOA" name="n9">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_f9sq2sQvEe2TD---Mk4tOA" value="n9diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sq28QvEe2TD---Mk4tOA" value="n9diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sq3MQvEe2TD---Mk4tOA" name="n10">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_f9sq3cQvEe2TD---Mk4tOA" value="n10diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sq3sQvEe2TD---Mk4tOA" value="n10diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sq38QvEe2TD---Mk4tOA" name="n11" incoming="_f9sq68QvEe2TD---Mk4tOA _f9sq7cQvEe2TD---Mk4tOA" outgoing="_f9sq7sQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_f9sq4MQvEe2TD---Mk4tOA" value="n11diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sq4cQvEe2TD---Mk4tOA" value="n11diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sq4sQvEe2TD---Mk4tOA" name="n12" incoming="_f9sq7sQvEe2TD---Mk4tOA" outgoing="_f9sq78QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_f9sq48QvEe2TD---Mk4tOA" value="n12diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sq5MQvEe2TD---Mk4tOA" value="n12diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sq5cQvEe2TD---Mk4tOA" name="n13" incoming="_f9sq78QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition"/>
+        <attributes xmi:id="_f9sq5sQvEe2TD---Mk4tOA" value="n13diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9sq58QvEe2TD---Mk4tOA" value="n13diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9sq6MQvEe2TD---Mk4tOA" name="n14">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_f9sq6cQvEe2TD---Mk4tOA" value="&quot;Remove TP-cross structures&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_f9sq6sQvEe2TD---Mk4tOA" source="_f9sq0cQvEe2TD---Mk4tOA" target="_f9sq0sQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_f9sq68QvEe2TD---Mk4tOA" source="_f9sq0sQvEe2TD---Mk4tOA" target="_f9sq38QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_f9sq7MQvEe2TD---Mk4tOA" source="_f9sq1cQvEe2TD---Mk4tOA" target="_f9sq1sQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_f9sq7cQvEe2TD---Mk4tOA" source="_f9sq1sQvEe2TD---Mk4tOA" target="_f9sq38QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_f9sq7sQvEe2TD---Mk4tOA" source="_f9sq38QvEe2TD---Mk4tOA" target="_f9sq4sQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_f9sq78QvEe2TD---Mk4tOA" source="_f9sq4sQvEe2TD---Mk4tOA" target="_f9sq5cQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_f9sq8MQvEe2TD---Mk4tOA" conditionText="((n2diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n3diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n4diff_kind_Left==&quot;ADD&quot;) &amp;&amp; (n6diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n7diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n8diff_kind_Left==&quot;ADD&quot;) &amp;&amp; (n9diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n10diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n11diff_kind_Left==&quot;ADD&quot;) &amp;&amp; (n12diff_kind_Left==&quot;ADD&quot;) &amp;&amp; (n13diff_kind_Left==&quot;ADD&quot;)) || ((n2diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n3diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n4diff_kind_Right==&quot;ADD&quot;) &amp;&amp; (n6diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n7diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n8diff_kind_Right==&quot;ADD&quot;) &amp;&amp; (n9diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n10diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n11diff_kind_Right==&quot;ADD&quot;) &amp;&amp; (n12diff_kind_Right==&quot;ADD&quot;) &amp;&amp; (n13diff_kind_Right==&quot;ADD&quot;))"/>
+    <mappings xmi:id="_f9sq8cQvEe2TD---Mk4tOA" origin="_f9sqn8QvEe2TD---Mk4tOA" image="_f9sq0cQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sq8sQvEe2TD---Mk4tOA" origin="_f9sqoMQvEe2TD---Mk4tOA" image="_f9sq0sQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sq88QvEe2TD---Mk4tOA" origin="_f9sqo8QvEe2TD---Mk4tOA" image="_f9sq1cQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sq9MQvEe2TD---Mk4tOA" origin="_f9sqpMQvEe2TD---Mk4tOA" image="_f9sq1sQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sq9cQvEe2TD---Mk4tOA" origin="_f9sqp8QvEe2TD---Mk4tOA" image="_f9sq2cQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sq9sQvEe2TD---Mk4tOA" origin="_f9sqqsQvEe2TD---Mk4tOA" image="_f9sq3MQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sq98QvEe2TD---Mk4tOA" origin="_f9sqrcQvEe2TD---Mk4tOA" image="_f9sq38QvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sq-MQvEe2TD---Mk4tOA" origin="_f9sqsMQvEe2TD---Mk4tOA" image="_f9sq4sQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9sq-cQvEe2TD---Mk4tOA" origin="_f9sqs8QvEe2TD---Mk4tOA" image="_f9sq5cQvEe2TD---Mk4tOA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_f9sq-sQvEe2TD---Mk4tOA" name="RemoveImplicitPlace">
+    <parameters xmi:id="_f9sq-8QvEe2TD---Mk4tOA" name="n2diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sq_MQvEe2TD---Mk4tOA" name="n2diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sq_cQvEe2TD---Mk4tOA" name="n4diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sq_sQvEe2TD---Mk4tOA" name="n4diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9sq_8QvEe2TD---Mk4tOA" name="n5diff_kind_Left" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f9srAMQvEe2TD---Mk4tOA" name="n5diff_kind_Right" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_f9srAcQvEe2TD---Mk4tOA" name="RemoveImplicitPlace_LHS">
+      <nodes xmi:id="_f9srAsQvEe2TD---Mk4tOA" name="n1" outgoing="_f9srDsQvEe2TD---Mk4tOA _f9srD8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_f9srA8QvEe2TD---Mk4tOA" name="n3" incoming="_f9srDsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_f9srBMQvEe2TD---Mk4tOA" name="n4" incoming="_f9srEMQvEe2TD---Mk4tOA" outgoing="_f9srEcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_f9srBcQvEe2TD---Mk4tOA" value="n4diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9srBsQvEe2TD---Mk4tOA" value="n4diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9srB8QvEe2TD---Mk4tOA" name="n5" incoming="_f9srEcQvEe2TD---Mk4tOA" outgoing="_f9srEsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_f9srCMQvEe2TD---Mk4tOA" value="n5diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9srCcQvEe2TD---Mk4tOA" value="n5diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9srCsQvEe2TD---Mk4tOA" name="n6" incoming="_f9srEsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_f9srC8QvEe2TD---Mk4tOA" name="n2" incoming="_f9srD8QvEe2TD---Mk4tOA" outgoing="_f9srEMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places"/>
+        <attributes xmi:id="_f9srDMQvEe2TD---Mk4tOA" value="n2diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9srDcQvEe2TD---Mk4tOA" value="n2diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_f9srDsQvEe2TD---Mk4tOA" source="_f9srAsQvEe2TD---Mk4tOA" target="_f9srA8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/places"/>
+      </edges>
+      <edges xmi:id="_f9srD8QvEe2TD---Mk4tOA" source="_f9srAsQvEe2TD---Mk4tOA" target="_f9srC8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/diffplaces"/>
+      </edges>
+      <edges xmi:id="_f9srEMQvEe2TD---Mk4tOA" source="_f9srC8QvEe2TD---Mk4tOA" target="_f9srBMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffTransition_places/eType"/>
+      </edges>
+      <edges xmi:id="_f9srEcQvEe2TD---Mk4tOA" source="_f9srBMQvEe2TD---Mk4tOA" target="_f9srB8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_f9srEsQvEe2TD---Mk4tOA" source="_f9srB8QvEe2TD---Mk4tOA" target="_f9srCsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_f9srE8QvEe2TD---Mk4tOA" name="RemoveImplicitPlace_RHS">
+      <nodes xmi:id="_f9srFMQvEe2TD---Mk4tOA" name="n1" outgoing="_f9srH8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_f9srFcQvEe2TD---Mk4tOA" name="n3" incoming="_f9srH8QvEe2TD---Mk4tOA _f9srI8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_f9srFsQvEe2TD---Mk4tOA" name="n4" outgoing="_f9srIMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace"/>
+        <attributes xmi:id="_f9srF8QvEe2TD---Mk4tOA" value="n4diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9srGMQvEe2TD---Mk4tOA" value="n4diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9srGcQvEe2TD---Mk4tOA" name="n5" incoming="_f9srIMQvEe2TD---Mk4tOA" outgoing="_f9srIcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions"/>
+        <attributes xmi:id="_f9srGsQvEe2TD---Mk4tOA" value="n5diff_kind_Left">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Left"/>
+        </attributes>
+        <attributes xmi:id="_f9srG8QvEe2TD---Mk4tOA" value="n5diff_kind_Right">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/diff_kind_Right"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_f9srHMQvEe2TD---Mk4tOA" name="n6" incoming="_f9srIcQvEe2TD---Mk4tOA _f9srIsQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_f9srHcQvEe2TD---Mk4tOA" name="n7" outgoing="_f9srIsQvEe2TD---Mk4tOA _f9srI8QvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticDiff"/>
+        <attributes xmi:id="_f9srHsQvEe2TD---Mk4tOA" value="&quot;Remove Implicit Place&quot;">
+          <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_f9srH8QvEe2TD---Mk4tOA" source="_f9srFMQvEe2TD---Mk4tOA" target="_f9srFcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Transition/places"/>
+      </edges>
+      <edges xmi:id="_f9srIMQvEe2TD---Mk4tOA" source="_f9srFsQvEe2TD---Mk4tOA" target="_f9srGcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//Place/difftransitions"/>
+      </edges>
+      <edges xmi:id="_f9srIcQvEe2TD---Mk4tOA" source="_f9srGcQvEe2TD---Mk4tOA" target="_f9srHMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//DiffPlace_transitions/eType"/>
+      </edges>
+      <edges xmi:id="_f9srIsQvEe2TD---Mk4tOA" source="_f9srHcQvEe2TD---Mk4tOA" target="_f9srHMQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+      <edges xmi:id="_f9srI8QvEe2TD---Mk4tOA" source="_f9srHcQvEe2TD---Mk4tOA" target="_f9srFcQvEe2TD---Mk4tOA">
+        <type href="../metaModels/petrinetsDiffMM.ecore#//SemanticObject/SemanticObject_NamedElement"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_f9srJMQvEe2TD---Mk4tOA" name="" description="" conditionText="((n2diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n4diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Left==&quot;DELETE&quot;) &amp;&amp; (pathExistBtw(n3, n6)==true)) || ((n2diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n4diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (n5diff_kind_Right==&quot;DELETE&quot;) &amp;&amp; (pathExistBtw(n3, n6)==true))"/>
+    <mappings xmi:id="_f9srJcQvEe2TD---Mk4tOA" origin="_f9srAsQvEe2TD---Mk4tOA" image="_f9srFMQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9srJsQvEe2TD---Mk4tOA" origin="_f9srA8QvEe2TD---Mk4tOA" image="_f9srFcQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9srJ8QvEe2TD---Mk4tOA" origin="_f9srBMQvEe2TD---Mk4tOA" image="_f9srFsQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9srKMQvEe2TD---Mk4tOA" origin="_f9srB8QvEe2TD---Mk4tOA" image="_f9srGcQvEe2TD---Mk4tOA"/>
+    <mappings xmi:id="_f9srKcQvEe2TD---Mk4tOA" origin="_f9srCsQvEe2TD---Mk4tOA" image="_f9srHMQvEe2TD---Mk4tOA"/>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_f9srKsQvEe2TD---Mk4tOA" name="unitSequntialStar" subUnits="_f9srK8QvEe2TD---Mk4tOA _f9srLMQvEe2TD---Mk4tOA _f9srLcQvEe2TD---Mk4tOA"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_f9srK8QvEe2TD---Mk4tOA" name="unitRemoveEfcStructuresStar" subUnit="_f9sqEcQvEe2TD---Mk4tOA"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_f9srLMQvEe2TD---Mk4tOA" name="unitRemoveTPCrossStructuresStar" subUnit="_f9sqh8QvEe2TD---Mk4tOA"/>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_f9srLcQvEe2TD---Mk4tOA" name="unitRemoveImplicitPlaceStar" subUnit="_f9sq-sQvEe2TD---Mk4tOA"/>
+</henshin:Module>

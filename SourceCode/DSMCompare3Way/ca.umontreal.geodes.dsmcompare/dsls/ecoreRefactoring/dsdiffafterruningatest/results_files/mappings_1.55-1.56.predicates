@@ -1,0 +1,8 @@
+set(FeatureInitializer, interface, false)
+// Applied composite operation
+replaceInheritanceByDelegation(FeatureValueSpec, ValueExpression, value)
+// Atomic changes realizing the composite operation above
+create(FeatureValueSpec.value)
+remove(FeatureValueSpec, eSuperTypes, ValueExpression)
+
+

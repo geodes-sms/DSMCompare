@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="ErrorFindingCompilerIntegrationTest">
+    <eattributes name="diagnosticHelper" etype="DiagnosticTestHelper"/>
+    <eattributes name="printWriter" etype="PrintWriter"/>
+    <eattributes name="outputStream" etype="ByteArrayOutputStream"/>
+    <eoperations name="setUp()" etype="void" methodBody="expression statement; ASSIGN; printWriter; class instance creation; PrintWriter; class instance creation; OutputStreamWriter; expression statement; ASSIGN; outputStream; class instance creation; ByteArrayOutputStream; expression statement; ASSIGN; class instance creation; new DiagnosticTestHelper(); " __idKDM="setUp______"/>
+    <eoperations name="testShouldFailToCompileSourceFileWithError()" eparameters="null:Exception" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; getDiagnostics; PLUS; method invocation; getDiagnostics; string literal; variable declaration; matcher; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; toString; expression statement; method invocation; flush; variable declaration; exitCode; variable declaration; compiler; " __idKDM="testShouldFailToCompileSourceFileWithError___Exception___"/>
+    <eoperations name="testShouldSucceedCompileSourceFileWithMultipleTopLevelClasses()" eparameters="null:Exception" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; toString; expression statement; method invocation; flush; variable declaration; exitCode; variable declaration; compiler; " __idKDM="testShouldSucceedCompileSourceFileWithMultipleTopLevelClasses___Exception___"/>
+    <eoperations name="sources()" eparameters="files:String, null:URISyntaxException" etype="java.lang.String[]" methodBody="return; for; expression statement; ASSIGN; method invocation; getAbsolutePath; class instance creation; File; method invocation; toURI; method invocation; getResource; PLUS; array access; files; string literal; method invocation; getClass; array access; result; INCREMENT; variable declaration; int; i; LESS; i; array length access; variable declaration; result; " __idKDM="sources___String__URISyntaxException___"/>
+  </eclassifiers>
+</refactoring:EPackage>

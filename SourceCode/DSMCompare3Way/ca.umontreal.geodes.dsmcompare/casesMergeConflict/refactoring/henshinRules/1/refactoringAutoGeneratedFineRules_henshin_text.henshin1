@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_Gp7QYKc-Ee2L3PbcA0pnQg" name="HenshinDSL">
+  <imports href="../metaModels/refactoringDiffMM.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7QYac-Ee2L3PbcA0pnQg" name="delete_EPackage">
+    <lhs xmi:id="_Gp7QYqc-Ee2L3PbcA0pnQg" name="delete_EPackage_LHS">
+      <nodes xmi:id="_Gp7QY6c-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEPackage"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_Gp7QZKc-Ee2L3PbcA0pnQg" name="delete_EPackage_RHS"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7QZac-Ee2L3PbcA0pnQg" name="addEPackage_eclassifiers">
+    <lhs xmi:id="_Gp7QZqc-Ee2L3PbcA0pnQg" name="addEPackage_eclassifiers_LHS">
+      <nodes xmi:id="_Gp7QZ6c-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_Gp7QaKc-Ee2L3PbcA0pnQg" name="addEPackage_eclassifiers_RHS">
+      <nodes xmi:id="_Gp7Qaac-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Qaqc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEPackage_eclassifiers"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7Qa6c-Ee2L3PbcA0pnQg" origin="_Gp7QZ6c-Ee2L3PbcA0pnQg" image="_Gp7Qaac-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7QbKc-Ee2L3PbcA0pnQg" name="deleteEPackage_eclassifiers">
+    <lhs xmi:id="_Gp7Qbac-Ee2L3PbcA0pnQg" name="deleteEPackage_eclassifiers_LHS">
+      <nodes xmi:id="_Gp7Qbqc-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Qb6c-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEPackage_eclassifiers"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_Gp7QcKc-Ee2L3PbcA0pnQg" name="deleteEPackage_eclassifiers_RHS">
+      <nodes xmi:id="_Gp7Qcac-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7Qcqc-Ee2L3PbcA0pnQg" origin="_Gp7Qbqc-Ee2L3PbcA0pnQg" image="_Gp7Qcac-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7Qc6c-Ee2L3PbcA0pnQg" name="addEPackage_interfaces">
+    <lhs xmi:id="_Gp7QdKc-Ee2L3PbcA0pnQg" name="addEPackage_interfaces_LHS">
+      <nodes xmi:id="_Gp7Qdac-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_Gp7Qdqc-Ee2L3PbcA0pnQg" name="addEPackage_interfaces_RHS">
+      <nodes xmi:id="_Gp7Qd6c-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7QeKc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEPackage_interfaces"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7Qeac-Ee2L3PbcA0pnQg" origin="_Gp7Qdac-Ee2L3PbcA0pnQg" image="_Gp7Qd6c-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7Qeqc-Ee2L3PbcA0pnQg" name="deleteEPackage_interfaces">
+    <lhs xmi:id="_Gp7Qe6c-Ee2L3PbcA0pnQg" name="deleteEPackage_interfaces_LHS">
+      <nodes xmi:id="_Gp7QfKc-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Qfac-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEPackage_interfaces"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_Gp7Qfqc-Ee2L3PbcA0pnQg" name="deleteEPackage_interfaces_RHS">
+      <nodes xmi:id="_Gp7Qf6c-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7QgKc-Ee2L3PbcA0pnQg" origin="_Gp7QfKc-Ee2L3PbcA0pnQg" image="_Gp7Qf6c-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7Qgac-Ee2L3PbcA0pnQg" name="delete_EClass">
+    <lhs xmi:id="_Gp7Qgqc-Ee2L3PbcA0pnQg" name="delete_EClass_LHS">
+      <nodes xmi:id="_Gp7Qg6c-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7Qhac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7QhKc-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7Qhac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass"/>
+      </nodes>
+      <edges xmi:id="_Gp7Qhac-Ee2L3PbcA0pnQg" source="_Gp7Qg6c-Ee2L3PbcA0pnQg" target="_Gp7QhKc-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Gp7Qhqc-Ee2L3PbcA0pnQg" name="delete_EClass_RHS">
+      <nodes xmi:id="_Gp7Qh6c-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7QiKc-Ee2L3PbcA0pnQg" origin="_Gp7Qg6c-Ee2L3PbcA0pnQg" image="_Gp7Qh6c-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7Qiac-Ee2L3PbcA0pnQg" name="changeEClass_extends">
+    <parameters xmi:id="_Gp7Qiqc-Ee2L3PbcA0pnQg" name="n1extends" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_Gp7Qi6c-Ee2L3PbcA0pnQg" name="changeEClass_extends_LHS">
+      <nodes xmi:id="_Gp7QjKc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7Qj6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Qjac-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7Qj6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass"/>
+        <attributes xmi:id="_Gp7Qjqc-Ee2L3PbcA0pnQg" value="&quot;CONTRADICTING&quot;">
+          <type href="../metaModels/refactoringDiffMM.ecore#//EClass/extends"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_Gp7Qj6c-Ee2L3PbcA0pnQg" source="_Gp7QjKc-Ee2L3PbcA0pnQg" target="_Gp7Qjac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Gp7QkKc-Ee2L3PbcA0pnQg" name="changeEClass_extends_RHS">
+      <nodes xmi:id="_Gp7Qkac-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Qkqc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass"/>
+        <attributes xmi:id="_Gp7Qk6c-Ee2L3PbcA0pnQg" value="&quot;CONTRADICTING&quot;">
+          <type href="../metaModels/refactoringDiffMM.ecore#//EClass/extends"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7QlKc-Ee2L3PbcA0pnQg" origin="_Gp7QjKc-Ee2L3PbcA0pnQg" image="_Gp7Qkac-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7Qlac-Ee2L3PbcA0pnQg" origin="_Gp7Qjac-Ee2L3PbcA0pnQg" image="_Gp7Qkqc-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7Qlqc-Ee2L3PbcA0pnQg" name="changeEClass_implements">
+    <parameters xmi:id="_Gp7Ql6c-Ee2L3PbcA0pnQg" name="n1implements" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_Gp7QmKc-Ee2L3PbcA0pnQg" name="changeEClass_implements_LHS">
+      <nodes xmi:id="_Gp7Qmac-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7QnKc-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Qmqc-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7QnKc-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass"/>
+        <attributes xmi:id="_Gp7Qm6c-Ee2L3PbcA0pnQg" value="&quot;CONTRADICTING&quot;">
+          <type href="../metaModels/refactoringDiffMM.ecore#//EClass/implements"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_Gp7QnKc-Ee2L3PbcA0pnQg" source="_Gp7Qmac-Ee2L3PbcA0pnQg" target="_Gp7Qmqc-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Gp7Qnac-Ee2L3PbcA0pnQg" name="changeEClass_implements_RHS">
+      <nodes xmi:id="_Gp7Qnqc-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Qn6c-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass"/>
+        <attributes xmi:id="_Gp7QoKc-Ee2L3PbcA0pnQg" value="&quot;CONTRADICTING&quot;">
+          <type href="../metaModels/refactoringDiffMM.ecore#//EClass/implements"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7Qoac-Ee2L3PbcA0pnQg" origin="_Gp7Qmac-Ee2L3PbcA0pnQg" image="_Gp7Qnqc-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7Qoqc-Ee2L3PbcA0pnQg" origin="_Gp7Qmqc-Ee2L3PbcA0pnQg" image="_Gp7Qn6c-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7Qo6c-Ee2L3PbcA0pnQg" name="changeEClass_isAbstract">
+    <parameters xmi:id="_Gp7QpKc-Ee2L3PbcA0pnQg" name="n1isAbstract" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </parameters>
+    <lhs xmi:id="_Gp7Qpac-Ee2L3PbcA0pnQg" name="changeEClass_isAbstract_LHS">
+      <nodes xmi:id="_Gp7Qpqc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7Qqac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Qp6c-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7Qqac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass"/>
+        <attributes xmi:id="_Gp7QqKc-Ee2L3PbcA0pnQg" value="false">
+          <type href="../metaModels/refactoringDiffMM.ecore#//EClass/isAbstract"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_Gp7Qqac-Ee2L3PbcA0pnQg" source="_Gp7Qpqc-Ee2L3PbcA0pnQg" target="_Gp7Qp6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Gp7Qqqc-Ee2L3PbcA0pnQg" name="changeEClass_isAbstract_RHS">
+      <nodes xmi:id="_Gp7Qq6c-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7QrKc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass"/>
+        <attributes xmi:id="_Gp7Qrac-Ee2L3PbcA0pnQg" value="false">
+          <type href="../metaModels/refactoringDiffMM.ecore#//EClass/isAbstract"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7Qrqc-Ee2L3PbcA0pnQg" origin="_Gp7Qpqc-Ee2L3PbcA0pnQg" image="_Gp7Qq6c-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7Qr6c-Ee2L3PbcA0pnQg" origin="_Gp7Qp6c-Ee2L3PbcA0pnQg" image="_Gp7QrKc-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7QsKc-Ee2L3PbcA0pnQg" name="changeEClass_packageName">
+    <parameters xmi:id="_Gp7Qsac-Ee2L3PbcA0pnQg" name="n1packageName" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_Gp7Qsqc-Ee2L3PbcA0pnQg" name="changeEClass_packageName_LHS">
+      <nodes xmi:id="_Gp7Qs6c-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7Qtqc-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7QtKc-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7Qtqc-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass"/>
+        <attributes xmi:id="_Gp7Qtac-Ee2L3PbcA0pnQg" value="&quot;CONTRADICTING&quot;">
+          <type href="../metaModels/refactoringDiffMM.ecore#//EClass/packageName"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_Gp7Qtqc-Ee2L3PbcA0pnQg" source="_Gp7Qs6c-Ee2L3PbcA0pnQg" target="_Gp7QtKc-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Gp7Qt6c-Ee2L3PbcA0pnQg" name="changeEClass_packageName_RHS">
+      <nodes xmi:id="_Gp7QuKc-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Quac-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass"/>
+        <attributes xmi:id="_Gp7Quqc-Ee2L3PbcA0pnQg" value="&quot;CONTRADICTING&quot;">
+          <type href="../metaModels/refactoringDiffMM.ecore#//EClass/packageName"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7Qu6c-Ee2L3PbcA0pnQg" origin="_Gp7Qs6c-Ee2L3PbcA0pnQg" image="_Gp7QuKc-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7QvKc-Ee2L3PbcA0pnQg" origin="_Gp7QtKc-Ee2L3PbcA0pnQg" image="_Gp7Quac-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7Qvac-Ee2L3PbcA0pnQg" name="addEClass_eattributes">
+    <lhs xmi:id="_Gp7Qvqc-Ee2L3PbcA0pnQg" name="addEClass_eattributes_LHS">
+      <nodes xmi:id="_Gp7Qv6c-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7QwKc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_Gp7Qwac-Ee2L3PbcA0pnQg" name="addEClass_eattributes_RHS">
+      <nodes xmi:id="_Gp7Qwqc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7Qxac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Qw6c-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7Qxac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+      <nodes xmi:id="_Gp7QxKc-Ee2L3PbcA0pnQg" name="n2">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass_eattributes"/>
+      </nodes>
+      <edges xmi:id="_Gp7Qxac-Ee2L3PbcA0pnQg" source="_Gp7Qwqc-Ee2L3PbcA0pnQg" target="_Gp7Qw6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Gp7Qxqc-Ee2L3PbcA0pnQg" origin="_Gp7Qv6c-Ee2L3PbcA0pnQg" image="_Gp7Qwqc-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7Qx6c-Ee2L3PbcA0pnQg" origin="_Gp7QwKc-Ee2L3PbcA0pnQg" image="_Gp7Qw6c-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7QyKc-Ee2L3PbcA0pnQg" name="deleteEClass_eattributes">
+    <lhs xmi:id="_Gp7Qyac-Ee2L3PbcA0pnQg" name="deleteEClass_eattributes_LHS">
+      <nodes xmi:id="_Gp7Qyqc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7Qzac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Qy6c-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7Qzac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+      <nodes xmi:id="_Gp7QzKc-Ee2L3PbcA0pnQg" name="n2">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass_eattributes"/>
+      </nodes>
+      <edges xmi:id="_Gp7Qzac-Ee2L3PbcA0pnQg" source="_Gp7Qyqc-Ee2L3PbcA0pnQg" target="_Gp7Qy6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Gp7Qzqc-Ee2L3PbcA0pnQg" name="deleteEClass_eattributes_RHS">
+      <nodes xmi:id="_Gp7Qz6c-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Q0Kc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7Q0ac-Ee2L3PbcA0pnQg" origin="_Gp7Qyqc-Ee2L3PbcA0pnQg" image="_Gp7Qz6c-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7Q0qc-Ee2L3PbcA0pnQg" origin="_Gp7Qy6c-Ee2L3PbcA0pnQg" image="_Gp7Q0Kc-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7Q06c-Ee2L3PbcA0pnQg" name="addEClass_eoperations">
+    <lhs xmi:id="_Gp7Q1Kc-Ee2L3PbcA0pnQg" name="addEClass_eoperations_LHS">
+      <nodes xmi:id="_Gp7Q1ac-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Q1qc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_Gp7Q16c-Ee2L3PbcA0pnQg" name="addEClass_eoperations_RHS">
+      <nodes xmi:id="_Gp7Q2Kc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7Q26c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Q2ac-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7Q26c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Q2qc-Ee2L3PbcA0pnQg" name="n2">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass_eoperations"/>
+      </nodes>
+      <edges xmi:id="_Gp7Q26c-Ee2L3PbcA0pnQg" source="_Gp7Q2Kc-Ee2L3PbcA0pnQg" target="_Gp7Q2ac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Gp7Q3Kc-Ee2L3PbcA0pnQg" origin="_Gp7Q1ac-Ee2L3PbcA0pnQg" image="_Gp7Q2Kc-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7Q3ac-Ee2L3PbcA0pnQg" origin="_Gp7Q1qc-Ee2L3PbcA0pnQg" image="_Gp7Q2ac-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7Q3qc-Ee2L3PbcA0pnQg" name="deleteEClass_eoperations">
+    <lhs xmi:id="_Gp7Q36c-Ee2L3PbcA0pnQg" name="deleteEClass_eoperations_LHS">
+      <nodes xmi:id="_Gp7Q4Kc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7Q46c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Q4ac-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7Q46c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Q4qc-Ee2L3PbcA0pnQg" name="n2">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass_eoperations"/>
+      </nodes>
+      <edges xmi:id="_Gp7Q46c-Ee2L3PbcA0pnQg" source="_Gp7Q4Kc-Ee2L3PbcA0pnQg" target="_Gp7Q4ac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Gp7Q5Kc-Ee2L3PbcA0pnQg" name="deleteEClass_eoperations_RHS">
+      <nodes xmi:id="_Gp7Q5ac-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Q5qc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7Q56c-Ee2L3PbcA0pnQg" origin="_Gp7Q4Kc-Ee2L3PbcA0pnQg" image="_Gp7Q5ac-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7Q6Kc-Ee2L3PbcA0pnQg" origin="_Gp7Q4ac-Ee2L3PbcA0pnQg" image="_Gp7Q5qc-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7Q6ac-Ee2L3PbcA0pnQg" name="addEClass_ereferences">
+    <lhs xmi:id="_Gp7Q6qc-Ee2L3PbcA0pnQg" name="addEClass_ereferences_LHS">
+      <nodes xmi:id="_Gp7Q66c-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Q7Kc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_Gp7Q7ac-Ee2L3PbcA0pnQg" name="addEClass_ereferences_RHS">
+      <nodes xmi:id="_Gp7Q7qc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7Q8ac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Q76c-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7Q8ac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Q8Kc-Ee2L3PbcA0pnQg" name="n2">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass_ereferences"/>
+      </nodes>
+      <edges xmi:id="_Gp7Q8ac-Ee2L3PbcA0pnQg" source="_Gp7Q7qc-Ee2L3PbcA0pnQg" target="_Gp7Q76c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Gp7Q8qc-Ee2L3PbcA0pnQg" origin="_Gp7Q66c-Ee2L3PbcA0pnQg" image="_Gp7Q7qc-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7Q86c-Ee2L3PbcA0pnQg" origin="_Gp7Q7Kc-Ee2L3PbcA0pnQg" image="_Gp7Q76c-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7Q9Kc-Ee2L3PbcA0pnQg" name="deleteEClass_ereferences">
+    <lhs xmi:id="_Gp7Q9ac-Ee2L3PbcA0pnQg" name="deleteEClass_ereferences_LHS">
+      <nodes xmi:id="_Gp7Q9qc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7Q-ac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Q96c-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7Q-ac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Q-Kc-Ee2L3PbcA0pnQg" name="n2">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass_ereferences"/>
+      </nodes>
+      <edges xmi:id="_Gp7Q-ac-Ee2L3PbcA0pnQg" source="_Gp7Q9qc-Ee2L3PbcA0pnQg" target="_Gp7Q96c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Gp7Q-qc-Ee2L3PbcA0pnQg" name="deleteEClass_ereferences_RHS">
+      <nodes xmi:id="_Gp7Q-6c-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7Q_Kc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7Q_ac-Ee2L3PbcA0pnQg" origin="_Gp7Q9qc-Ee2L3PbcA0pnQg" image="_Gp7Q-6c-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7Q_qc-Ee2L3PbcA0pnQg" origin="_Gp7Q96c-Ee2L3PbcA0pnQg" image="_Gp7Q_Kc-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7Q_6c-Ee2L3PbcA0pnQg" name="addEClass_esupertypes">
+    <lhs xmi:id="_Gp7RAKc-Ee2L3PbcA0pnQg" name="addEClass_esupertypes_LHS">
+      <nodes xmi:id="_Gp7RAac-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RAqc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_Gp7RA6c-Ee2L3PbcA0pnQg" name="addEClass_esupertypes_RHS">
+      <nodes xmi:id="_Gp7RBKc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7RB6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RBac-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7RB6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RBqc-Ee2L3PbcA0pnQg" name="n2">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass_esupertypes"/>
+      </nodes>
+      <edges xmi:id="_Gp7RB6c-Ee2L3PbcA0pnQg" source="_Gp7RBKc-Ee2L3PbcA0pnQg" target="_Gp7RBac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Gp7RCKc-Ee2L3PbcA0pnQg" origin="_Gp7RAac-Ee2L3PbcA0pnQg" image="_Gp7RBKc-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7RCac-Ee2L3PbcA0pnQg" origin="_Gp7RAqc-Ee2L3PbcA0pnQg" image="_Gp7RBac-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7RCqc-Ee2L3PbcA0pnQg" name="deleteEClass_esupertypes">
+    <lhs xmi:id="_Gp7RC6c-Ee2L3PbcA0pnQg" name="deleteEClass_esupertypes_LHS">
+      <nodes xmi:id="_Gp7RDKc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7RD6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RDac-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7RD6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RDqc-Ee2L3PbcA0pnQg" name="n2">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass_esupertypes"/>
+      </nodes>
+      <edges xmi:id="_Gp7RD6c-Ee2L3PbcA0pnQg" source="_Gp7RDKc-Ee2L3PbcA0pnQg" target="_Gp7RDac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Gp7REKc-Ee2L3PbcA0pnQg" name="deleteEClass_esupertypes_RHS">
+      <nodes xmi:id="_Gp7REac-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7REqc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7RE6c-Ee2L3PbcA0pnQg" origin="_Gp7RDKc-Ee2L3PbcA0pnQg" image="_Gp7REac-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7RFKc-Ee2L3PbcA0pnQg" origin="_Gp7RDac-Ee2L3PbcA0pnQg" image="_Gp7REqc-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7RFac-Ee2L3PbcA0pnQg" name="addEClass_interfaces">
+    <lhs xmi:id="_Gp7RFqc-Ee2L3PbcA0pnQg" name="addEClass_interfaces_LHS">
+      <nodes xmi:id="_Gp7RF6c-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RGKc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_Gp7RGac-Ee2L3PbcA0pnQg" name="addEClass_interfaces_RHS">
+      <nodes xmi:id="_Gp7RGqc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7RHac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RG6c-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7RHac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RHKc-Ee2L3PbcA0pnQg" name="n2">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass_interfaces"/>
+      </nodes>
+      <edges xmi:id="_Gp7RHac-Ee2L3PbcA0pnQg" source="_Gp7RGqc-Ee2L3PbcA0pnQg" target="_Gp7RG6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Gp7RHqc-Ee2L3PbcA0pnQg" origin="_Gp7RF6c-Ee2L3PbcA0pnQg" image="_Gp7RGqc-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7RH6c-Ee2L3PbcA0pnQg" origin="_Gp7RGKc-Ee2L3PbcA0pnQg" image="_Gp7RG6c-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7RIKc-Ee2L3PbcA0pnQg" name="deleteEClass_interfaces">
+    <lhs xmi:id="_Gp7RIac-Ee2L3PbcA0pnQg" name="deleteEClass_interfaces_LHS">
+      <nodes xmi:id="_Gp7RIqc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7RJac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RI6c-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7RJac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RJKc-Ee2L3PbcA0pnQg" name="n2">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass_interfaces"/>
+      </nodes>
+      <edges xmi:id="_Gp7RJac-Ee2L3PbcA0pnQg" source="_Gp7RIqc-Ee2L3PbcA0pnQg" target="_Gp7RI6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Gp7RJqc-Ee2L3PbcA0pnQg" name="deleteEClass_interfaces_RHS">
+      <nodes xmi:id="_Gp7RJ6c-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RKKc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7RKac-Ee2L3PbcA0pnQg" origin="_Gp7RIqc-Ee2L3PbcA0pnQg" image="_Gp7RJ6c-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7RKqc-Ee2L3PbcA0pnQg" origin="_Gp7RI6c-Ee2L3PbcA0pnQg" image="_Gp7RKKc-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7RK6c-Ee2L3PbcA0pnQg" name="addEClass_nested_classes">
+    <lhs xmi:id="_Gp7RLKc-Ee2L3PbcA0pnQg" name="addEClass_nested_classes_LHS">
+      <nodes xmi:id="_Gp7RLac-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RLqc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_Gp7RL6c-Ee2L3PbcA0pnQg" name="addEClass_nested_classes_RHS">
+      <nodes xmi:id="_Gp7RMKc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7RM6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RMac-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7RM6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RMqc-Ee2L3PbcA0pnQg" name="n2">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass_nested_classes"/>
+      </nodes>
+      <edges xmi:id="_Gp7RM6c-Ee2L3PbcA0pnQg" source="_Gp7RMKc-Ee2L3PbcA0pnQg" target="_Gp7RMac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Gp7RNKc-Ee2L3PbcA0pnQg" origin="_Gp7RLac-Ee2L3PbcA0pnQg" image="_Gp7RMKc-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7RNac-Ee2L3PbcA0pnQg" origin="_Gp7RLqc-Ee2L3PbcA0pnQg" image="_Gp7RMac-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7RNqc-Ee2L3PbcA0pnQg" name="deleteEClass_nested_classes">
+    <lhs xmi:id="_Gp7RN6c-Ee2L3PbcA0pnQg" name="deleteEClass_nested_classes_LHS">
+      <nodes xmi:id="_Gp7ROKc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7RO6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7ROac-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7RO6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+      <nodes xmi:id="_Gp7ROqc-Ee2L3PbcA0pnQg" name="n2">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass_nested_classes"/>
+      </nodes>
+      <edges xmi:id="_Gp7RO6c-Ee2L3PbcA0pnQg" source="_Gp7ROKc-Ee2L3PbcA0pnQg" target="_Gp7ROac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Gp7RPKc-Ee2L3PbcA0pnQg" name="deleteEClass_nested_classes_RHS">
+      <nodes xmi:id="_Gp7RPac-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RPqc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7RP6c-Ee2L3PbcA0pnQg" origin="_Gp7ROKc-Ee2L3PbcA0pnQg" image="_Gp7RPac-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7RQKc-Ee2L3PbcA0pnQg" origin="_Gp7ROac-Ee2L3PbcA0pnQg" image="_Gp7RPqc-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7RQac-Ee2L3PbcA0pnQg" name="addEClass_nested_interfaces">
+    <lhs xmi:id="_Gp7RQqc-Ee2L3PbcA0pnQg" name="addEClass_nested_interfaces_LHS">
+      <nodes xmi:id="_Gp7RQ6c-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RRKc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_Gp7RRac-Ee2L3PbcA0pnQg" name="addEClass_nested_interfaces_RHS">
+      <nodes xmi:id="_Gp7RRqc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7RSac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RR6c-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7RSac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RSKc-Ee2L3PbcA0pnQg" name="n2">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass_nested_interfaces"/>
+      </nodes>
+      <edges xmi:id="_Gp7RSac-Ee2L3PbcA0pnQg" source="_Gp7RRqc-Ee2L3PbcA0pnQg" target="_Gp7RR6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Gp7RSqc-Ee2L3PbcA0pnQg" origin="_Gp7RQ6c-Ee2L3PbcA0pnQg" image="_Gp7RRqc-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7RS6c-Ee2L3PbcA0pnQg" origin="_Gp7RRKc-Ee2L3PbcA0pnQg" image="_Gp7RR6c-Ee2L3PbcA0pnQg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Gp7RTKc-Ee2L3PbcA0pnQg" name="deleteEClass_nested_interfaces">
+    <lhs xmi:id="_Gp7RTac-Ee2L3PbcA0pnQg" name="deleteEClass_nested_interfaces_LHS">
+      <nodes xmi:id="_Gp7RTqc-Ee2L3PbcA0pnQg" name="n0" outgoing="_Gp7RUac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RT6c-Ee2L3PbcA0pnQg" name="n1" incoming="_Gp7RUac-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RUKc-Ee2L3PbcA0pnQg" name="n2">
+        <type href="../metaModels/refactoringDiffMM.ecore#//DiffEClass_nested_interfaces"/>
+      </nodes>
+      <edges xmi:id="_Gp7RUac-Ee2L3PbcA0pnQg" source="_Gp7RTqc-Ee2L3PbcA0pnQg" target="_Gp7RT6c-Ee2L3PbcA0pnQg">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage/eclassifiers"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Gp7RUqc-Ee2L3PbcA0pnQg" name="deleteEClass_nested_interfaces_RHS">
+      <nodes xmi:id="_Gp7RU6c-Ee2L3PbcA0pnQg" name="n0">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EPackage"/>
+      </nodes>
+      <nodes xmi:id="_Gp7RVKc-Ee2L3PbcA0pnQg" name="n1">
+        <type href="../metaModels/refactoringDiffMM.ecore#//EClass"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Gp7RVac-Ee2L3PbcA0pnQg" origin="_Gp7RTqc-Ee2L3PbcA0pnQg" image="_Gp7RU6c-Ee2L3PbcA0pnQg"/>
+    <mappings xmi:id="_Gp7RVqc-Ee2L3PbcA0pnQg" origin="_Gp7RT6c-Ee2L3PbcA0pnQg" image="_Gp7RVKc-Ee2L3PbcA0pnQg"/>
+  </units>
+</henshin:Module>

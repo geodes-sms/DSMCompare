@@ -1,0 +1,44 @@
+Matches count 	:	1
+Diffs count 	:	6
+Conflicts count :	0
+Matched resources :
+Left = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/ca.umontreal.geodes.dsmcompare/DSMMerge/versionsfortest/V1.xmi
+Right = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/ca.umontreal.geodes.dsmcompare/DSMMerge/versionsfortest/V2.xmi
+origin = file:/D:/_udemSVN/DSMCompare-Project/srcCode/DSMCompare/ca.umontreal.geodes.dsmcompare/DSMMerge/versionsfortest/CA.xmi
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| pacmanDiffMM.impl.GameImpl@7c1e2a2d (id: 1, lives: 1, score: 2)| pacmanDiffMM.impl.GameImpl@710b18a6 (id: 1, lives: 1, score: 2)|
+| |-pacmanDiffMM.impl.GridNodeImpl@333dd51e (id: L)| |-pacmanDiffMM.impl.GridNodeImpl@119020fb (id: L)|
+| |-pacmanDiffMM.impl.GridNodeImpl@52d645b1 (id: O)| |-pacmanDiffMM.impl.GridNodeImpl@3d9f6567 (id: O)|
+| |-pacmanDiffMM.impl.GridNodeImpl@2101b44a (id: R)| |-pacmanDiffMM.impl.GridNodeImpl@c055c54 (id: R)|
+| |-pacmanDiffMM.impl.PacmanImpl@2cc3ad05 (id: P) (initialPosition: null)| |-pacmanDiffMM.impl.PacmanImpl@25e2ab5a (id: P) (initialPosition: null)|
+| |                                      | |                                      |
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+REFERENCE CHANGES
+
+ [CHANGE] value pacmanDiffMM.impl.GridNodeImpl@55562aa9 (id: O) has been changed from reference on
+ of object pacmanDiffMM.impl.FoodImpl@3401a114 (id: F) (value: 0)
+
+ [CHANGE] value pacmanDiffMM.impl.GridNodeImpl@55562aa9 (id: O) has been remotely(RIGHT) changed from reference on
+ of object pacmanDiffMM.impl.FoodImpl@3401a114 (id: F) (value: 0)
+
+ [DELETE] value pacmanDiffMM.impl.FoodImpl@3401a114 (id: F) (value: 0) has been deleted from reference entities
+ of object pacmanDiffMM.impl.GameImpl@7c1e2a2d (id: 1, lives: 1, score: 2)
+
+ [DELETE] value pacmanDiffMM.impl.FoodImpl@3401a114 (id: F) (value: 0) has been remotely(RIGHT) deleted from reference entities
+ of object pacmanDiffMM.impl.GameImpl@7c1e2a2d (id: 1, lives: 1, score: 2)
+
+ATTRIBUTE CHANGES
+
+ value 2 has been changed from attribute score
+ of object pacmanDiffMM.impl.GameImpl@7c1e2a2d (id: 1, lives: 1, score: 2)
+
+ value 2 has been remotely(RIGHT) changed from attribute score
+ of object pacmanDiffMM.impl.GameImpl@7c1e2a2d (id: 1, lives: 1, score: 2)
+
+CONFLICTS
+F is deleted!The end of transforming EMF-Diff to DSMC-Diff
+emf-Compare result transformed to Fine-Grained DsmdiffMM!

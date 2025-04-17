@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="vMinecraftListener" extends="PluginListener" esupertypes="PluginListener">
+    <eattributes name="damagetype" etype="int"/>
+    <eattributes name="deadplayer" etype="String"/>
+    <eattributes name="senddeath" etype="boolean"/>
+    <eattributes name="log" etype="Logger"/>
+    <eoperations name="disable()" eparameters="" etype="void" methodBody="expression statement; method invocation; log; string literal; " __idKDM="disable______"/>
+    <eoperations name="onChat()" eparameters="player:Player, message:String" etype="boolean" methodBody="if; if; if; return; method invocation; quakeColors; return; method invocation; rage; method invocation; startsWith; string literal; return; method invocation; quote; method invocation; startsWith; string literal; return; method invocation; adminChat; CONDITIONAL_OR; method invocation; isAdminToggled; method invocation; getName; method invocation; getInstance; method invocation; startsWith; string literal; " __idKDM="onChat___Player__String___"/>
+    <eoperations name="onCommand()" eparameters="player:Player, split:java.lang.String[]" etype="boolean" methodBody="if; if; return; boolean literal; return; boolean literal; EQUALS; exitCode; number literal; return; boolean literal; EQUALS; exitCode; number literal; variable declaration; exitCode; expression statement; method invocation; arraycopy; array length access; number literal; number literal; variable declaration; args; " __idKDM="onCommand___Player__java_lang_String_____"/>
+    <eoperations name="onHealthChange()" eparameters="player:Player, oldValue:int, newValue:int" etype="boolean" methodBody="return; boolean literal; if; expression statement; method invocation; gmsg; PLUS; deadplayer; method invocation; randomDeathMsg; string literal; expression statement; ASSIGN; deadplayer; method invocation; getName; expression statement; ASSIGN; senddeath; boolean literal; LESS; number literal; method invocation; getHealth; if; return; GREATER; oldValue; method invocation; isEzModo; method invocation; getName; method invocation; getInstance; " __idKDM="onHealthChange___Player__int__int___"/>
+    <eoperations name="onLogin()" eparameters="player:Player" etype="void" methodBody="expression statement; method invocation; addUser; expression statement; method invocation; sendMessage; PLUS; string literal; method invocation; size; method invocation; getPlayerList; method invocation; getServer; string literal; " __idKDM="onLogin___Player___"/>
+    <eoperations name="onDisconnect()" eparameters="player:Player" etype="void" methodBody="expression statement; method invocation; removeUser; " __idKDM="onDisconnect___Player___"/>
+    <eoperations name="onIgnite()" eparameters="block:Block, player:Player" etype="boolean" methodBody="return; boolean literal; if; if; return; boolean literal; CONDITIONAL_AND; NOT; method invocation; isAdmin; EQUALS; number literal; method invocation; getStatus; if; return; boolean literal; CONDITIONAL_OR; EQUALS; number literal; method invocation; getStatus; EQUALS; number literal; method invocation; getStatus; " __idKDM="onIgnite___Block__Player___"/>
+    <eoperations name="onDamage()" eparameters="type:DamageType, attacker:BaseEntity, defender:BaseEntity, amount:int" etype="boolean" methodBody="return; boolean literal; " __idKDM="onDamage___DamageType__BaseEntity__BaseEntity__int___"/>
+  </eclassifiers>
+  <eclassifiers name="PluginListener"/>
+</refactoring:EPackage>

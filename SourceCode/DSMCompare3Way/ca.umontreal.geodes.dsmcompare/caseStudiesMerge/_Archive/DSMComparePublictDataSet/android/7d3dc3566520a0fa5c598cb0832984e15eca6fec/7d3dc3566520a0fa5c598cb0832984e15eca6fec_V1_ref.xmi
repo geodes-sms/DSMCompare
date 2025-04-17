@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:refactoring="www.geodes.UdeM.edu/refactoring"
+    name="com.github.pockethub.android.ui.gist.CreateGistActivity">
+  <eclassifiers
+      name="CreateGistActivity"
+      extends="BaseActivity"
+      packageName="com.github.pockethub.android.ui.gist.CreateGistActivity">
+    <eattributes
+        name="descriptionText"
+        etype="EditText"/>
+    <eattributes
+        name="nameText"
+        etype="EditText"/>
+    <eattributes
+        name="contentText"
+        etype="EditText"/>
+    <eattributes
+        name="publicCheckBox"
+        etype="CheckBox"/>
+    <eattributes
+        name="menuItem"
+        etype="MenuItem"/>
+    <eoperations
+        name="onCreate()"
+        eparameters="savedInstanceState:Bundle"
+        etype="void"
+        methodBody="expression statement; method invocation; updateCreateMenu; expression statement; method invocation; addTextChangedListener; class instance creation; ; Anonymous type; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; subject; if; expression statement; method invocation; setText; NOT; method invocation; isEmpty; variable declaration; text; expression statement; method invocation; setDisplayHomeAsUpEnabled; boolean literal; variable declaration; actionBar; expression statement; method invocation; setOnCheckedChangeListener; class instance creation; ; Anonymous type; expression statement; method invocation; addTextChangedListener; expression statement; method invocation; addTextChangedListener; expression statement; method invocation; addTextChangedListener; variable declaration; class instance creation; ; Anonymous type; expandAppBarTextWatcher; expression statement; method invocation; setOnFocusChangeListener; expression statement; method invocation; setOnFocusChangeListener; expression statement; method invocation; setOnFocusChangeListener; variable declaration; class instance creation; ; Anonymous type; expandAppBarOnFocusChangeListener; variable declaration; appBarLayout; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; ASSIGN; method invocation; find; expression statement; method invocation; setSupportActionBar; cast; method invocation; findViewById; expression statement; method invocation; setContentView; expression statement; super method invocation; onCreate; "
+        __idKDM="onCreate___Bundle___"/>
+    <eoperations
+        name="onCreateOptionsMenu()"
+        eparameters="menu:Menu"
+        etype="boolean"
+        methodBody="return; boolean literal; expression statement; method invocation; updateCreateMenu; expression statement; ASSIGN; method invocation; findItem; expression statement; method invocation; inflate; method invocation; getMenuInflater; expression statement; super method invocation; onCreateOptionsMenu; "
+        __idKDM="onCreateOptionsMenu___Menu___"/>
+    <eoperations
+        name="onOptionsItemSelected()"
+        eparameters="item:MenuItem"
+        etype="boolean"
+        methodBody="switch; return; super method invocation; onOptionsItemSelected; case; return; boolean literal; expression statement; method invocation; createGist; case; method invocation; getItemId; "
+        __idKDM="onOptionsItemSelected___MenuItem___"/>
+    <eoperations
+        name="updateCreateMenu()"
+        eparameters=""
+        etype="void"
+        methodBody="if; expression statement; method invocation; updateCreateMenu; method invocation; getText; NOT_EQUALS; null; "
+        __idKDM="updateCreateMenu______"/>
+    <eoperations
+        name="updateCreateMenu()"
+        eparameters="text:CharSequence"
+        etype="void"
+        methodBody="if; expression statement; method invocation; setEnabled; NOT; method invocation; isEmpty; NOT_EQUALS; null; "
+        __idKDM="updateCreateMenu___CharSequence___"/>
+    <eoperations
+        name="createGist()"
+        eparameters=""
+        etype="void"
+        methodBody="expression statement; method invocation; create; class instance creation; ; Anonymous type; this; variable declaration; content; variable declaration; name; variable declaration; enteredName; variable declaration; description; variable declaration; enteredDescription; variable declaration; isPublic; "
+        __idKDM="createGist______"/>
+    <esupertypes
+        href="7d3dc3566520a0fa5c598cb0832984e15eca6fec_CA_ref.xmi#BaseActivity"/>
+  </eclassifiers>
+  <eclassifiers
+      name="BaseActivity"/>
+</refactoring:EPackage>

@@ -1,0 +1,42 @@
+Matches count 	:	1
+Diffs count 	:	2
+Conflicts count :	1
+Matched resources :
+Left = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V1.xmi
+Right = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V2.xmi
+origin = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/CA.xmi
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| refactoringDiffMM.impl.EPackageImpl@3dddefd8 (name: rfc)| refactoringDiffMM.impl.EPackageImpl@5316e95f (name: rfc)|
+| |-refactoringDiffMM.impl.EClassImpl@160ac7fb (name: super, extends: null, implements: null, isAbstract: false, packageName: null)| |-refactoringDiffMM.impl.EClassImpl@3f053c80 (name: super, extends: null, implements: null, isAbstract: false, packageName: null)|
+| | |-refactoringDiffMM.impl.EOperationImpl@12bfd80d (name: op1, eparameters: null, etype: null, methodBody: null, __idKDM: null)| | |-refactoringDiffMM.impl.EOperationImpl@5b40ceb (name: op1, eparameters: null, etype: null, methodBody: null, __idKDM: null)|
+| |-refactoringDiffMM.impl.EClassImpl@41925502 (name: sub, extends: null, implements: null, isAbstract: false, packageName: null)| |-refactoringDiffMM.impl.EClassImpl@6c6c5427 (name: sub, extends: null, implements: null, isAbstract: false, packageName: null)|
+| |-refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls, extends: null, implements: null, isAbstract: false, packageName: null)| |-refactoringDiffMM.impl.EClassImpl@618c5d94 (name: cls, extends: null, implements: null, isAbstract: false, packageName: null)|
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+REFERENCE CHANGES
+
+ [MOVE] value refactoringDiffMM.impl.EOperationImpl@12bfd80d (name: op1, eparameters: null, etype: null, methodBody: null, __idKDM: null) has been moved from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@160ac7fb (name: super, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [MOVE] value refactoringDiffMM.impl.EOperationImpl@5b40ceb (name: op1, eparameters: null, etype: null, methodBody: null, __idKDM: null) has been remotely(RIGHT) moved from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ATTRIBUTE CHANGES
+
+CONFLICTS
+REAL conflict:
+	
+ [MOVE] value refactoringDiffMM.impl.EOperationImpl@12bfd80d (name: op1, eparameters: null, etype: null, methodBody: null, __idKDM: null) has been moved from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@160ac7fb (name: super, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [MOVE] value refactoringDiffMM.impl.EOperationImpl@5b40ceb (name: op1, eparameters: null, etype: null, methodBody: null, __idKDM: null) has been remotely(RIGHT) moved from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@13e3c1c7 (name: cls, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ setChangeStatus(...): Index 0 out of bounds for length 0 --> changeStatus / refactoringDiffMM.impl.EOperationImpl@1c98290c (name: op1, eparameters: null, etype: null, methodBody: null, __idKDM: null)
+diff012 model saved at: file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/diffModels/DSMDiff.xmi
+--> Models are merged and initial v012 (non conflicting elements only) saved at: file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/V012.xmi
+Succeed! The end of transforming EMF-Diff to DSMC-Diff
+emf-Compare result transformed to Fine-Grained DsmdiffMM!

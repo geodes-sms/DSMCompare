@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pacman2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:pacman2WayRuleMM="http://www.zadahmad.org/dsmcompare/pacman2WayRuleMM"
+    xsi:schemaLocation="http://www.zadahmad.org/dsmcompare/pacman2WayRuleMM ../metaModels/pacman2WayRuleMM.ecore#/1"
+    name="PacmanJumpToEatFood">
+  <constraints>Item(0,&quot;score&quot;) &lt; Item(0,&quot;new_score&quot;)</constraints>
+  <rulePattern_Game
+      xsi:type="pacman2WayRuleMM:Pattern_DiffGame"
+      id="G"
+      diff_kind="MODIFY">
+    <gridnodes
+        xsi:type="pacman2WayRuleMM:Pattern_GridNode"
+        id="O"
+        ID_Pattern="1"/>
+    <entities
+        xsi:type="pacman2WayRuleMM:Pattern_Pacman"
+        id="P"
+        ID_Pattern="2">
+      <diffon
+          xsi:type="pacman2WayRuleMM:Pattern_DiffPositionableEntity_on"
+          diff_kind="MODIFY"
+          eType="O"
+          ID_Pattern="3"/>
+    </entities>
+    <entities
+        xsi:type="pacman2WayRuleMM:Pattern_DiffFood"
+        id="F"
+        diff_kind="DELETE"
+        ID_Pattern="4">
+      <diffon
+          xsi:type="pacman2WayRuleMM:Pattern_DiffPositionableEntity_on"
+          diff_kind="DELETE"
+          eType="O"
+          ID_Pattern="5"/>
+    </entities>
+  </rulePattern_Game>
+  <rulePattern_SemanticObject
+      xsi:type="pacman2WayRuleMM:Pattern_SemanticDiff"
+      name="Pacman Eat Food"
+      SemanticObject_Game="G"
+      SemanticObject_GridNode="O"
+      SemanticObject_PositionableEntity="P F"
+      ID_Pattern="6"/>
+  <rulePattern_SemanticObject
+      xsi:type="pacman2WayRuleMM:Pattern_SemanticDiff"
+      name="Pacman Eat Food"
+      SemanticObject_Game="G"
+      SemanticObject_GridNode="O"
+      SemanticObject_PositionableEntity="P F"
+      ID_Pattern="7"
+      isForbidden="true"/>
+</pacman2WayRuleMM:Rule>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM">
+  <refactoringDiffMM:EPackage name="p">
+    <eclassifiers name="c" esupertypes="c2">
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="m" eparameters="i:int" methodBody="a b" diff_kind_Left="MODIFY" diff_kind_Right="DELETE" changeStatus="CONTRADICTING" new_eparameters_Left="i:int; j:int; c:int" new_eparameters_Right="i:int; j:int" new_methodBody_Left="a method invocation; m2; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="m2" eparameters="i:int" methodBody="b" diff_kind_Left="ADD" isMerged="true"/>
+      <diffeoperations diff_kind_Right="DELETE" changeStatus="CONTRADICTING" diff_Group="DG-Move-1" eType="m"/>
+    </eclassifiers>
+    <eclassifiers name="c2">
+      <diffeoperations diff_kind_Right="ADD" changeStatus="CONTRADICTING" filter="true" diff_Group="DG-Move-1" eType="m"/>
+    </eclassifiers>
+  </refactoringDiffMM:EPackage>
+  <refactoringDiffMM:SemanticDiff name="Extract Method" SemanticObject_EClass="c" SemanticObject_EOperation="m2 m" SemanticObject_EPackage="p" author="LEFT"/>
+  <refactoringDiffMM:SemanticDiff name="Pull-up Method" SemanticObject_DiffEClass_eoperations="/0/@eclassifiers.1/@diffeoperations.0 /0/@eclassifiers.0/@diffeoperations.0" SemanticObject_EClass="c2 c" SemanticObject_EOperation="m" SemanticObject_EPackage="p" author="RIGHT"/>
+  <refactoringDiffMM:SemanticDiff name="Change Parameters" SemanticObject_EOperation="m" author="LEFT"/>
+  <refactoringDiffMM:SemanticConflict name="Extract Method - DiffEOperation.[m] - CONTRADICTING ( MODIFY | DELETE ) -C-1" SemanticObject_DiffEOperation="m" conflict_kind="CONTRADICTING" conflict_Granularity="Semantic_Fine" semanticdiffs="/1"/>
+  <refactoringDiffMM:SemanticConflict name="Extract Method - DiffEOperation.[m] - DiffEOperation.[m].CONTRADICTING ( MODIFY | DELETE ) -C-2" SemanticObject_DiffEOperation="m" conflict_kind="CONTRADICTING" conflict_Granularity="Semantic_Fine" semanticdiffs="/1"/>
+  <refactoringDiffMM:SemanticConflict name="Pull-up Method - Change Parameters[m] -C-3" conflict_kind="CONTRADICTING" conflict_Granularity="Semantic_Semantic" semanticdiffs="/2 /3"/>
+  <refactoringDiffMM:SemanticConflict name="Pull-up Method - DiffEClass_eoperations.[c2->] - CONTRADICTING ( NON | ADD ) -C-4" SemanticObject_DiffEClass_eoperations="/0/@eclassifiers.1/@diffeoperations.0" conflict_kind="CONTRADICTING" conflict_Granularity="Semantic_Fine" semanticdiffs="/2"/>
+  <refactoringDiffMM:SemanticConflict name="Pull-up Method - DiffEClass_eoperations.[c->] - CONTRADICTING ( NON | DELETE ) -C-5" SemanticObject_DiffEClass_eoperations="/0/@eclassifiers.0/@diffeoperations.0" conflict_kind="CONTRADICTING" conflict_Granularity="Semantic_Fine" semanticdiffs="/2"/>
+  <refactoringDiffMM:SemanticConflict name="Pull-up Method - DiffEOperation.[m] - CONTRADICTING ( MODIFY | DELETE ) -C-6" SemanticObject_DiffEOperation="m" conflict_kind="CONTRADICTING" conflict_Granularity="Semantic_Fine" semanticdiffs="/2"/>
+  <refactoringDiffMM:SemanticConflict name="Pull-up Method - DiffEClass_eoperations.[c2->] - DiffEClass_eoperations.[c2->].CONTRADICTING ( NON | ADD ) -C-7" SemanticObject_DiffEClass_eoperations="/0/@eclassifiers.1/@diffeoperations.0" conflict_kind="CONTRADICTING" conflict_Granularity="Semantic_Fine" semanticdiffs="/2"/>
+  <refactoringDiffMM:SemanticConflict name="Pull-up Method - DiffEClass_eoperations.[c->] - DiffEClass_eoperations.[c->].CONTRADICTING ( NON | DELETE ) -C-8" SemanticObject_DiffEClass_eoperations="/0/@eclassifiers.0/@diffeoperations.0" conflict_kind="CONTRADICTING" conflict_Granularity="Semantic_Fine" semanticdiffs="/2"/>
+  <refactoringDiffMM:SemanticConflict name="Pull-up Method - DiffEOperation.[m] - DiffEOperation.[m].CONTRADICTING ( MODIFY | DELETE ) -C-9" SemanticObject_DiffEOperation="m" conflict_kind="CONTRADICTING" conflict_Granularity="Semantic_Fine" semanticdiffs="/2"/>
+  <refactoringDiffMM:SemanticConflict name="Change Parameters - DiffEOperation.[m] - CONTRADICTING ( MODIFY | DELETE ) -C-10" SemanticObject_DiffEOperation="m" conflict_kind="CONTRADICTING" conflict_Granularity="Semantic_Fine" semanticdiffs="/3"/>
+  <refactoringDiffMM:SemanticConflict name="Change Parameters - DiffEOperation.[m] - DiffEOperation.[m].CONTRADICTING ( MODIFY | DELETE ) -C-11" SemanticObject_DiffEOperation="m" conflict_kind="CONTRADICTING" conflict_Granularity="Semantic_Fine" semanticdiffs="/3"/>
+</xmi:XMI>

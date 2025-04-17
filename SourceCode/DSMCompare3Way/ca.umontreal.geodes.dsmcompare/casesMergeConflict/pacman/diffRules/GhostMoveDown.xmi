@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pacman2WayRuleMM:Rule
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:pacman2WayRuleMM="http://www.zadahmad.org/dsmcompare/pacman2WayRuleMM"
+    xsi:schemaLocation="http://www.zadahmad.org/dsmcompare/pacman2WayRuleMM ../metaModels/pacman2WayRuleMM.ecore#/1"
+    name="GhostMoveDown">
+  <rulePattern_GridNode
+      xsi:type="pacman2WayRuleMM:Pattern_GridNode"
+      down="D"
+      id="O"
+      ID_Pattern="1"/>
+  <rulePattern_GridNode
+      xsi:type="pacman2WayRuleMM:Pattern_GridNode"
+      id="D"
+      ID_Pattern="2"/>
+  <rulePattern_PositionableEntity
+      xsi:type="pacman2WayRuleMM:Pattern_Ghost"
+      id="Gh"
+      ID_Pattern="3">
+    <diffon
+        xsi:type="pacman2WayRuleMM:Pattern_DiffPositionableEntity_on"
+        diff_kind="DELETE"
+        eType="O"
+        ID_Pattern="4"/>
+    <diffon
+        xsi:type="pacman2WayRuleMM:Pattern_DiffPositionableEntity_on"
+        diff_kind="MODIFY"
+        eType="D"
+        ID_Pattern="5"/>
+  </rulePattern_PositionableEntity>
+  <rulePattern_SemanticObject
+      xsi:type="pacman2WayRuleMM:Pattern_SemanticDiff"
+      name="Ghost Move Down"
+      SemanticObject_GridNode="D O"
+      SemanticObject_PositionableEntity="Gh"
+      ID_Pattern="6"/>
+  <rulePattern_SemanticObject
+      xsi:type="pacman2WayRuleMM:Pattern_SemanticDiff"
+      name="Ghost Move Down"
+      SemanticObject_GridNode="D O"
+      SemanticObject_PositionableEntity="Gh"
+      ID_Pattern="7"
+      isForbidden="true"/>
+</pacman2WayRuleMM:Rule>
