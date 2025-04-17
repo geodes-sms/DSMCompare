@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoringDiffMM:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" xsi:schemaLocation="www.geodes.UdeM.edu/refactoringDiffMM ../../../casesMergeConflict/refactoring/metaModels/refactoringDiffMM.ecore" name="pkg">
+  <eclassifiers name="TestClassTest">
+    <eattributes name="exception" etype="ExpectedException"/>
+    <eoperations name="complainIfMultipleConstructors()" etype="void" methodBody="expression statement; class instance creation; new TestClass(TwoConstructors.class); type literal; " __idKDM="complainIfMultipleConstructors______"/>
+    <eoperations name="fieldsOnSubclassesShadowSuperclasses()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; method invocation; getAnnotatedFields; type literal; class instance creation; new TestClass(SubclassWithField.class); type literal; variable declaration; __packageName; " __idKDM="fieldsOnSubclassesShadowSuperclasses______"/>
+    <eoperations name="identifyNonStaticInnerClass()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; boolean literal; method invocation; isANonStaticInnerClass; class instance creation; new TestClass(OuterClass.NonStaticInnerClass.class); type literal; " __idKDM="identifyNonStaticInnerClass______"/>
+    <eoperations name="dontMarkStaticInnerClassAsNonStatic()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; boolean literal; method invocation; isANonStaticInnerClass; class instance creation; new TestClass(OuterClass2.StaticInnerClass.class); type literal; " __idKDM="dontMarkStaticInnerClassAsNonStatic______"/>
+    <eoperations name="dontMarkNonInnerClassAsInnerClass()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; boolean literal; method invocation; isANonStaticInnerClass; class instance creation; new TestClass(SimpleClass.class); type literal; " __idKDM="dontMarkNonInnerClassAsInnerClass______"/>
+    <eoperations name="providesAnnotatedFieldsSortedByName()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; string literal; method invocation; getName; method invocation; next; method invocation; iterator; string literal; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; string literal; variable declaration; annotatedFields; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; " __idKDM="providesAnnotatedFieldsSortedByName______"/>
+    <eoperations name="annotatedFieldValues()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; expression statement; method invocation; assertThat; method invocation; hasItem; string literal; variable declaration; values; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; " __idKDM="annotatedFieldValues______"/>
+    <eoperations name="providesAnnotatedMethodsSortedByName()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; string literal; method invocation; getName; method invocation; next; method invocation; iterator; string literal; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; string literal; variable declaration; annotatedMethods; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; " __idKDM="providesAnnotatedMethodsSortedByName______"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="annotationToFieldsReturnsKeysInADeterministicOrder()" etype="void" methodBody="" __idKDM="annotationToFieldsReturnsKeysInADeterministicOrder______" diff_kind_Right="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="annotatedMethodValues()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; expression statement; method invocation; assertThat; method invocation; hasItem; string literal; variable declaration; values; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; " __idKDM="annotatedMethodValues______" diff_kind_Right="DELETE" new_methodBody_Right="expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; expression statement; method invocation; assertThat; method invocation; hasItem; string literal; variable declaration; values; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; "/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="annotationToMethodsReturnsValuesInTheMapThatAreUnmodifiable()" etype="void" methodBody="expression statement; method invocation; add; null; expression statement; method invocation; expect; type literal; variable declaration; methods; variable declaration; annotationToMethods; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; " __idKDM="annotationToMethodsReturnsValuesInTheMapThatAreUnmodifiable______" diff_kind_Right="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="annotationToMethods()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; variable declaration; methods; variable declaration; annotationToMethods; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; " __idKDM="annotationToMethods______" diff_kind_Right="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="annotationToFieldsReturnsUnmodifiableMap()" etype="void" methodBody="expression statement; method invocation; put; null; type literal; expression statement; method invocation; expect; type literal; variable declaration; annotationToFields; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; " __idKDM="annotationToFieldsReturnsUnmodifiableMap______" diff_kind_Right="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="annotationToFieldsReturnsValuesInTheMapThatAreUnmodifiable()" etype="void" methodBody="expression statement; method invocation; add; null; expression statement; method invocation; expect; type literal; variable declaration; fields; variable declaration; annotationToFields; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; " __idKDM="annotationToFieldsReturnsValuesInTheMapThatAreUnmodifiable______" diff_kind_Right="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="annotationToMethodsReturnsUnmodifiableMap()" etype="void" methodBody="expression statement; method invocation; put; null; type literal; expression statement; method invocation; expect; type literal; variable declaration; annotationToMethods; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; " __idKDM="annotationToMethodsReturnsUnmodifiableMap______" diff_kind_Right="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="annotationToFields()" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; variable declaration; fields; variable declaration; annotationToFields; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; " __idKDM="annotationToFields______" diff_kind_Right="ADD"/>
+    <nested_classes name="TwoConstructors">
+      <eoperations name="TwoConstructors()" methodBody="" __idKDM="TwoConstructors______"/>
+      <eoperations name="TwoConstructors()" eparameters="x:int" methodBody="" __idKDM="TwoConstructors___int___"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="TwoConstructors()" methodBody="" __idKDM="TwoConstructors______" diff_kind_Left="ADD"/>
+    </nested_classes>
+    <nested_classes name="SuperclassWithField">
+      <eattributes name="x" etype="TestRule"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="x" etype="TestRule" diff_kind_Left="ADD"/>
+    </nested_classes>
+    <nested_classes name="SubclassWithField" extends="SuperclassWithField" esupertypes="SuperclassWithField">
+      <eattributes name="x" etype="TestRule"/>
+    </nested_classes>
+    <nested_classes name="OuterClass"/>
+    <nested_classes name="NonStaticInnerClass"/>
+    <nested_classes name="OuterClass2"/>
+    <nested_classes name="StaticInnerClass"/>
+    <nested_classes name="SimpleClass"/>
+    <nested_classes name="FieldAnnotated">
+      <eattributes name="fieldC" etype="String"/>
+      <eattributes name="fieldA" etype="boolean"/>
+      <eattributes name="fieldB" etype="boolean"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="fieldThatShouldBeMatched" etype="String" diff_kind_Right="ADD"/>
+      <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="fieldThatShouldNotBeMachted" etype="boolean" diff_kind_Right="ADD"/>
+      <eoperations name="FieldAnnotated()" methodBody="" __idKDM="FieldAnnotated______"/>
+      <diffeattributes diff_kind_Right="DELETE" diff_Group="DG-Move-1" eType="fieldC"/>
+      <diffeattributes diff_kind_Right="ADD" diff_Group="DG-Move-1" eType="fieldC"/>
+      <diffeattributes diff_kind_Right="DELETE" diff_Group="DG-Move-3" eType="fieldA"/>
+      <diffeattributes diff_kind_Right="ADD" diff_Group="DG-Move-3" eType="fieldA"/>
+    </nested_classes>
+    <nested_classes name="MethodsAnnotated">
+      <eoperations name="methodC()" etype="int" methodBody="return; number literal; " __idKDM="methodC______"/>
+      <eoperations name="methodA()" etype="String" methodBody="return; string literal; " __idKDM="methodA______"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="methodToBeMatched()" etype="String" methodBody="return; string literal; " __idKDM="methodToBeMatched______" diff_kind_Right="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="methodOfWrongType()" etype="int" methodBody="" __idKDM="methodOfWrongType______" diff_kind_Right="ADD"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="MethodsAnnotated()" methodBody="" __idKDM="MethodsAnnotated______" diff_kind_Right="DELETE"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="methodB()" etype="int" methodBody="return; number literal; " __idKDM="methodB______" diff_kind_Right="MODIFY" new_methodBody_Right="return; number literal; "/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-4" eType="methodC()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-4" eType="methodC()"/>
+      <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-5" eType="methodA()"/>
+      <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-5" eType="methodA()"/>
+    </nested_classes>
+    <nested_classes xsi:type="refactoringDiffMM:DiffEClass" name="MultipleFieldsAnnotated" diff_kind_Right="ADD"/>
+    <diffeoperations diff_kind_Right="DELETE" diff_Group="DG-Move-2" eType="annotatedMethodValues()"/>
+    <diffeoperations diff_kind_Right="ADD" diff_Group="DG-Move-2" eType="annotatedMethodValues()"/>
+  </eclassifiers>
+  <eclassifiers name="ParentRunnerTest">
+    <eattributes name="log" etype="String"/>
+    <eoperations name="useChildHarvester()" eparameters="null:InitializationError" etype="void" methodBody="expression statement; method invocation; assertEquals; string literal; expression statement; method invocation; run; class instance creation; new RunNotifier(); expression statement; method invocation; setScheduler; class instance creation; ; Anonymous type; variable declaration; class instance creation; new BlockJUnit4ClassRunner(FruitTest.class); type literal; runner; expression statement; ASSIGN; log; string literal; " __idKDM="useChildHarvester___InitializationError___"/>
+    <eoperations name="testMultipleFilters()" eparameters="null:Exception" etype="void" methodBody="expression statement; method invocation; assertEquals; method invocation; getRunCount; number literal; expression statement; method invocation; assertThat; method invocation; isEmpty; method invocation; getFailures; variable declaration; result; variable declaration; requestFilteredFiltered; variable declaration; requestFiltered; variable declaration; request; variable declaration; class instance creation; new JUnitCore(); junitCore; " __idKDM="testMultipleFilters___Exception___"/>
+    <eoperations name="isEmpty()" etype="Matcher&lt;List&lt;?>>" methodBody="return; class instance creation; ; Anonymous type; " __idKDM="isEmpty______"/>
+    <eoperations name="failWithHelpfulMessageForProtectedClassRule()" etype="void" methodBody="expression statement; method invocation; assertClassHasFailureMessage; string literal; type literal; " __idKDM="failWithHelpfulMessageForProtectedClassRule______"/>
+    <eoperations name="failWithHelpfulMessageForNonStaticClassRule()" etype="void" methodBody="expression statement; method invocation; assertClassHasFailureMessage; string literal; type literal; " __idKDM="failWithHelpfulMessageForNonStaticClassRule______"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="validatorIsCalledForAClass()" etype="void" methodBody="expression statement; method invocation; assertClassHasFailureMessage; type literal; " __idKDM="validatorIsCalledForAClass______" diff_kind_Right="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="validatorIsCalledForAField()" etype="void" methodBody="" __idKDM="validatorIsCalledForAField______" diff_kind_Right="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="validatorIsCalledForAMethod()" eparameters="null:InitializationError" etype="void" methodBody="expression statement; method invocation; assertClassHasFailureMessage; type literal; " __idKDM="validatorIsCalledForAMethod___InitializationError___" diff_kind_Right="ADD"/>
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="assertClassHasFailureMessage()" eparameters="klass:java.lang.Class&lt;?>, message:String" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; method invocation; equalTo; method invocation; getMessage; method invocation; get; number literal; method invocation; getFailures; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; getFailureCount; variable declaration; result; variable declaration; request; variable declaration; class instance creation; new JUnitCore(); junitCore; " __idKDM="assertClassHasFailureMessage___java_lang_Class_____String___" diff_kind_Right="MODIFY" new_methodBody_Right="expression statement; method invocation; assertThat; method invocation; is; method invocation; equalTo; method invocation; getMessage; method invocation; get; number literal; method invocation; getFailures; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; getFailureCount; variable declaration; result; variable declaration; request; variable declaration; class instance creation; new JUnitCore(); junitCore; "/>
+    <nested_classes name="FruitTest">
+      <eoperations name="apple()" etype="void" methodBody="expression statement; PLUS_ASSIGN; log; string literal; " __idKDM="apple______"/>
+      <eoperations name="Banana()" etype="void" methodBody="expression statement; PLUS_ASSIGN; log; string literal; " __idKDM="Banana______"/>
+    </nested_classes>
+    <nested_classes name="Exclude" extends="Filter">
+      <eattributes name="methodName" etype="String"/>
+      <eoperations name="Exclude()" eparameters="methodName:String" methodBody="expression statement; ASSIGN; methodName; field access; methodName; this; " __idKDM="Exclude___String___"/>
+      <eoperations name="shouldRun()" eparameters="description:Description" etype="boolean" methodBody="return; NOT; method invocation; equals; method invocation; getMethodName; " __idKDM="shouldRun___Description___"/>
+      <eoperations name="describe()" etype="String" methodBody="return; PLUS; methodName; string literal; " __idKDM="describe______"/>
+      <esupertypes href="02fc1f509a670de3632417bbf33168989bfcf872_gitMerged_ref.xmi#Filter"/>
+    </nested_classes>
+    <nested_classes name="ExampleTest">
+      <eoperations name="test1()" eparameters="null:Exception" etype="void" methodBody="" __idKDM="test1___Exception___"/>
+      <eoperations name="test2()" eparameters="null:Exception" etype="void" methodBody="" __idKDM="test2___Exception___"/>
+      <eoperations name="test3()" eparameters="null:Exception" etype="void" methodBody="" __idKDM="test3___Exception___"/>
+    </nested_classes>
+  </eclassifiers>
+  <diffeclassifiers diff_kind_Right="DELETE" diff_Group="DG-Move-6" eType="TestClassTest"/>
+  <diffeclassifiers diff_kind_Right="ADD" diff_Group="DG-Move-6" eType="TestClassTest"/>
+</refactoringDiffMM:EPackage>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PacmanGo:Game
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:PacmanGo="http://www.zadahmad.org/dsmcompare/PacmanGo"
+    xsi:schemaLocation="http://www.zadahmad.org/dsmcompare/PacmanGo ../metamodels/PacManGo.ecore">
+  <gridnodes
+      id="1"/>
+  <gridnodes
+      id="2"/>
+  <gridnodes
+      id="3"/>
+  <scoreboard
+      value="1"
+      id="4"/>
+  <entities
+      xsi:type="PacmanGo:Pacman"
+      on="//@gridnodes.0"
+      id="5"/>
+  <entities
+      xsi:type="PacmanGo:Food"
+      on="//@gridnodes.1"
+      id="6"/>
+  <entities
+      xsi:type="PacmanGo:Ghost"
+      on="//@gridnodes.2"
+      id="7"/>
+</PacmanGo:Game>

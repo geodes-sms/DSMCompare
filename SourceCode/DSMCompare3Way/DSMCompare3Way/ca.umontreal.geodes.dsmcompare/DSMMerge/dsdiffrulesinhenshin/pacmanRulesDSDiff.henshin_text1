@@ -1,0 +1,529 @@
+ePackageImport  pacmanDiffMM
+
+		rule PacmanEatFood(VAR n0diff_kind_Left:EString,VAR n0diff_kind_Right:EString,VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n31diff_kind_Left:EString,VAR n31diff_kind_Right:EString,VAR n0score:EInt,VAR n0new_score_Left:EInt,VAR n0new_score_Right:EInt)
+		{
+			graph
+			{
+				 preserve			node n0:DiffGame{
+					preserve diff_kind_Left = n0diff_kind_Left
+					preserve diff_kind_Right = n0diff_kind_Right
+					preserve score =  n0score
+					preserve new_score_Left =  n0new_score_Left
+					preserve new_score_Right =  n0new_score_Right
+				}			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:Pacman			      		
+				 preserve			node n3:DiffFood{
+					preserve diff_kind_Left = n3diff_kind_Left
+					preserve diff_kind_Right = n3diff_kind_Right
+				}			      		
+				 delete				node n31:DiffPositionableEntity_on{
+					delete diff_kind_Left = n31diff_kind_Left
+					delete diff_kind_Right = n31diff_kind_Right
+				}
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"Pacman Eat Food\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:entities),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n2->n1:on),
+			  		(delete		n3->n31:diffon),
+			  		(delete		n31->n1:eType),
+			  		(create		n4->n0:DomainSpecificDiff_Game),
+			  		(create		n4->n2:DomainSpecificDiff_PositionableEntity),
+			  		(create		n4->n3:DomainSpecificDiff_PositionableEntity)
+	      		 ]
+			}
+			conditions [((n0score < n0new_score_Left) AND (n0diff_kind_Left == "\"MODIFY\"") AND (n3diff_kind_Left == "\"DELETE\"") AND (n31diff_kind_Left == "\"DELETE\"")) OR ((n0score < n0new_score_Right) AND (n0diff_kind_Right == "\"MODIFY\"") AND (n3diff_kind_Right == "\"DELETE\"") AND (n31diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+
+		rule PacmanDie(VAR n3diff_kind_Left:EString,VAR n3diff_kind_Right:EString,VAR n31diff_kind_Left:EString,VAR n31diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:Ghost			      		
+				 preserve			node n3:DiffPacman{
+					preserve diff_kind_Left = n3diff_kind_Left
+					preserve diff_kind_Right = n3diff_kind_Right
+				}			      		
+				 preserve			node n31:DiffPositionableEntity_on{
+					preserve diff_kind_Left = n31diff_kind_Left
+					preserve diff_kind_Right = n31diff_kind_Right
+				}			      		
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"PacmanDie\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:entities),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n2->n1:on),
+			  		(preserve	n3->n31:diffon),
+			  		(preserve	n31->n1:eType),
+			  		(create		n4->n2:DomainSpecificDiff_PositionableEntity)
+	      		 ]
+			}
+			conditions [((n3diff_kind_Left == "\"DELETE\"") AND (n31diff_kind_Left == "\"DELETE\"")) OR ((n3diff_kind_Right == "\"DELETE\"") AND (n31diff_kind_Right == "\"DELETE\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveRight(VAR n31diff_kind_Left:EString,VAR n31diff_kind_Right:EString,VAR n32diff_kind_Left:EString,VAR n32diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 delete				node n31:DiffPositionableEntity_on{
+					delete diff_kind_Left = n31diff_kind_Left
+					delete diff_kind_Right = n31diff_kind_Right
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve diff_kind_Left = n32diff_kind_Left
+					preserve diff_kind_Right = n32diff_kind_Right
+				}			      		
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"Ghost Move Right\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:right),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_PositionableEntity),
+			  		(create		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+			conditions [((n31diff_kind_Left == "\"DELETE\"") AND (n32diff_kind_Left == "\"ADD\"")) OR ((n31diff_kind_Right == "\"DELETE\"") AND (n32diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveLeft(VAR n31diff_kind_Left:EString,VAR n31diff_kind_Right:EString,VAR n32diff_kind_Left:EString,VAR n32diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 delete				node n31:DiffPositionableEntity_on{
+					delete diff_kind_Left = n31diff_kind_Left
+					delete diff_kind_Right = n31diff_kind_Right
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve diff_kind_Left = n32diff_kind_Left
+					preserve diff_kind_Right = n32diff_kind_Right
+				}			      		
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"Ghost Move Left\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:left),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_PositionableEntity),
+			  		(create		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+			conditions [((n31diff_kind_Left == "\"DELETE\"") AND (n32diff_kind_Left == "\"ADD\"")) OR ((n31diff_kind_Right == "\"DELETE\"") AND (n32diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveUp(VAR n31diff_kind_Left:EString,VAR n31diff_kind_Right:EString,VAR n32diff_kind_Left:EString,VAR n32diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 delete				node n31:DiffPositionableEntity_on{
+					delete diff_kind_Left = n31diff_kind_Left
+					delete diff_kind_Right = n31diff_kind_Right
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve diff_kind_Left = n32diff_kind_Left
+					preserve diff_kind_Right = n32diff_kind_Right
+				}			      		
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"Ghost Move Up\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:up),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_PositionableEntity),
+			  		(create		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+			conditions [((n31diff_kind_Left == "\"DELETE\"") AND (n32diff_kind_Left == "\"ADD\"")) OR ((n31diff_kind_Right == "\"DELETE\"") AND (n32diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMoveDown(VAR n31diff_kind_Left:EString,VAR n31diff_kind_Right:EString,VAR n32diff_kind_Left:EString,VAR n32diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 delete				node n31:DiffPositionableEntity_on{
+					delete diff_kind_Left = n31diff_kind_Left
+					delete diff_kind_Right = n31diff_kind_Right
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve diff_kind_Left = n32diff_kind_Left
+					preserve diff_kind_Right = n32diff_kind_Right
+				}			      		
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"Ghost Move Down\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:down),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_PositionableEntity),
+			  		(create		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+			conditions [((n31diff_kind_Left == "\"DELETE\"") AND (n32diff_kind_Left == "\"ADD\"")) OR ((n31diff_kind_Right == "\"DELETE\"") AND (n32diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule GhostMove(VAR n31diff_kind_Left:EString,VAR n31diff_kind_Right:EString,VAR n32diff_kind_Left:EString,VAR n32diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Ghost			      		
+				 delete				node n31:DiffPositionableEntity_on{
+					delete diff_kind_Left = n31diff_kind_Left
+					delete diff_kind_Right = n31diff_kind_Right
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve diff_kind_Left = n32diff_kind_Left
+					preserve diff_kind_Right = n32diff_kind_Right
+				}			      		
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"Ghost Move\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_PositionableEntity),
+			  		(create		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+			conditions [((n31diff_kind_Left == "\"DELETE\"") AND (n32diff_kind_Left == "\"ADD\"")) OR ((n31diff_kind_Right == "\"DELETE\"") AND (n32diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveRight(VAR n31diff_kind_Left:EString,VAR n31diff_kind_Right:EString,VAR n32diff_kind_Left:EString,VAR n32diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 delete				node n31:DiffPositionableEntity_on{
+					delete diff_kind_Left = n31diff_kind_Left
+					delete diff_kind_Right = n31diff_kind_Right
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve diff_kind_Left = n32diff_kind_Left
+					preserve diff_kind_Right = n32diff_kind_Right
+				}			      		
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"Pacman Move Right\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:right),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_PositionableEntity),
+			  		(create		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+			conditions [((n31diff_kind_Left == "\"DELETE\"") AND (n32diff_kind_Left == "\"ADD\"")) OR ((n31diff_kind_Right == "\"DELETE\"") AND (n32diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveLeft(VAR n31diff_kind_Left:EString,VAR n31diff_kind_Right:EString,VAR n32diff_kind_Left:EString,VAR n32diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 delete				node n31:DiffPositionableEntity_on{
+					delete diff_kind_Left = n31diff_kind_Left
+					delete diff_kind_Right = n31diff_kind_Right
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve diff_kind_Left = n32diff_kind_Left
+					preserve diff_kind_Right = n32diff_kind_Right
+				}			      		
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"Pacman Move Left\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:left),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_PositionableEntity),
+			  		(create		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+			conditions [((n31diff_kind_Left == "\"DELETE\"") AND (n32diff_kind_Left == "\"ADD\"")) OR ((n31diff_kind_Right == "\"DELETE\"") AND (n32diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveUp(VAR n31diff_kind_Left:EString,VAR n31diff_kind_Right:EString,VAR n32diff_kind_Left:EString,VAR n32diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 delete				node n31:DiffPositionableEntity_on{
+					delete diff_kind_Left = n31diff_kind_Left
+					delete diff_kind_Right = n31diff_kind_Right
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve diff_kind_Left = n32diff_kind_Left
+					preserve diff_kind_Right = n32diff_kind_Right
+				}			      		
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"Pacman Move Up\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:up),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_PositionableEntity),
+			  		(create		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+			conditions [((n31diff_kind_Left == "\"DELETE\"") AND (n32diff_kind_Left == "\"ADD\"")) OR ((n31diff_kind_Right == "\"DELETE\"") AND (n32diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMoveDown(VAR n31diff_kind_Left:EString,VAR n31diff_kind_Right:EString,VAR n32diff_kind_Left:EString,VAR n32diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 delete				node n31:DiffPositionableEntity_on{
+					delete diff_kind_Left = n31diff_kind_Left
+					delete diff_kind_Right = n31diff_kind_Right
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve diff_kind_Left = n32diff_kind_Left
+					preserve diff_kind_Right = n32diff_kind_Right
+				}			      		
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"Pacman Move Down\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(preserve	n1->n2:down),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_PositionableEntity),
+			  		(create		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+			conditions [((n31diff_kind_Left == "\"DELETE\"") AND (n32diff_kind_Left == "\"ADD\"")) OR ((n31diff_kind_Right == "\"DELETE\"") AND (n32diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+		rule PacmanMove(VAR n31diff_kind_Left:EString,VAR n31diff_kind_Right:EString,VAR n32diff_kind_Left:EString,VAR n32diff_kind_Right:EString)
+		{
+			graph
+			{
+				 preserve			node n0:Game			      		
+				 preserve			node n1:GridNode			      		
+				 preserve			node n2:GridNode			      		
+				 preserve			node n3:Pacman			      		
+				 delete				node n31:DiffPositionableEntity_on{
+					delete diff_kind_Left = n31diff_kind_Left
+					delete diff_kind_Right = n31diff_kind_Right
+				}
+				 preserve			node n32:DiffPositionableEntity_on{
+					preserve diff_kind_Left = n32diff_kind_Left
+					preserve diff_kind_Right = n32diff_kind_Right
+				}			      		
+				 create				node n4:DomainSpecificDiff{
+					create name = "\"Pacman Move\""
+				}
+			edges[
+			  		(preserve	n0->n1:gridnodes),
+			  		(preserve	n0->n2:gridnodes),
+			  		(preserve	n0->n3:entities),
+			  		(create		n0->n4:domainspecificdiffs),
+			  		(delete		n3->n31:diffon),
+			  		(preserve	n3->n32:diffon),
+			  		(delete		n31->n1:eType),
+			  		(preserve	n32->n2:eType),
+			  		(create		n4->n2:DomainSpecificDiff_GridNode),
+			  		(create		n4->n3:DomainSpecificDiff_PositionableEntity),
+			  		(create		n4->n32:DomainSpecificDiff_DiffPositionableEntity_on)
+	      		 ]
+			}
+			conditions [((n31diff_kind_Left == "\"DELETE\"") AND (n32diff_kind_Left == "\"ADD\"")) OR ((n31diff_kind_Right == "\"DELETE\"") AND (n32diff_kind_Right == "\"ADD\""))] 
+		}
+//----------------------------------------------------------------------
+
+	unit unitSequntialStar(){
+		unitPacmanEatFoodStar()
+		unitPacmanDieStar()
+		unitGhostMoveRightStar()
+		unitGhostMoveLeftStar()
+		unitGhostMoveUpStar()
+		unitGhostMoveDownStar()
+		unitGhostMoveStar()
+		unitPacmanMoveRightStar()
+		unitPacmanMoveLeftStar()
+		unitPacmanMoveUpStar()
+		unitPacmanMoveDownStar()
+		unitPacmanMoveStar()
+	}
+	unit unitPacmanEatFoodStar(){
+		while{
+			PacmanEatFood()
+		}
+	}
+	unit unitPacmanDieStar(){
+		while{
+			PacmanDie()
+		}
+	}
+	unit unitGhostMoveRightStar(){
+		while{
+			GhostMoveRight()
+		}
+	}
+	unit unitGhostMoveLeftStar(){
+		while{
+			GhostMoveLeft()
+		}
+	}
+	unit unitGhostMoveUpStar(){
+		while{
+			GhostMoveUp()
+		}
+	}
+	unit unitGhostMoveDownStar(){
+		while{
+			GhostMoveDown()
+		}
+	}
+	unit unitGhostMoveStar(){
+		while{
+			GhostMove()
+		}
+	}
+	unit unitPacmanMoveRightStar(){
+		while{
+			PacmanMoveRight()
+		}
+	}
+	unit unitPacmanMoveLeftStar(){
+		while{
+			PacmanMoveLeft()
+		}
+	}
+	unit unitPacmanMoveUpStar(){
+		while{
+			PacmanMoveUp()
+		}
+	}
+	unit unitPacmanMoveDownStar(){
+		while{
+			PacmanMoveDown()
+		}
+	}
+	unit unitPacmanMoveStar(){
+		while{
+			PacmanMove()
+		}
+	}

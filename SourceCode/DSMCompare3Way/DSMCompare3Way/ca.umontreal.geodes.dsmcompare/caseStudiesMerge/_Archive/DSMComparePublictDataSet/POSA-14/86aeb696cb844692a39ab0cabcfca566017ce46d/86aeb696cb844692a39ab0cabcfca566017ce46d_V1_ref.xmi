@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="ThreadedDownloads" extends="Activity">
+    <eattributes name="mDefaultURL" etype="String"/>
+    <eattributes name="mUrlEditText" etype="EditText"/>
+    <eattributes name="mImageView" etype="ImageView"/>
+    <eattributes name="mProgressDialog" etype="ProgressDialog"/>
+    <eattributes name="TAG" etype="String"/>
+    <eattributes name="mThisActivityContext" etype="Context"/>
+    <eattributes name="messageHandler" etype="MessageHandler"/>
+    <eoperations name="onCreate()" eparameters="savedInstanceState:Bundle" etype="void" methodBody="expression statement; ASSIGN; cast; method invocation; findViewById; expression statement; ASSIGN; cast; method invocation; findViewById; expression statement; method invocation; setContentView; expression statement; ASSIGN; method invocation; getApplicationContext; method invocation; getApplication; expression statement; super method invocation; onCreate; " __idKDM="onCreate___Bundle___"/>
+    <eoperations name="showErrorToast()" eparameters="errorString:String" etype="void" methodBody="expression statement; method invocation; show; method invocation; makeText; " __idKDM="showErrorToast___String___"/>
+    <eoperations name="displayImage()" eparameters="imageBitmap:Bitmap" etype="void" methodBody="if; expression statement; method invocation; showErrorToast; PLUS; string literal; string literal; expression statement; method invocation; setImageBitmap; NOT_EQUALS; null; " __idKDM="displayImage___Bitmap___"/>
+    <eoperations name="downloadImage()" eparameters="url:String" etype="Bitmap" methodBody="try; catch; catch; e; return; null; expression statement; method invocation; printStackTrace; expression statement; method invocation; e; string literal; expression statement; method invocation; runOnUiThread; class instance creation; ; Anonymous type; this; return; variable declaration; image; variable declaration; is; if; expression statement; ASSIGN; url; method invocation; equals; string literal; " __idKDM="downloadImage___String___"/>
+    <eoperations name="runRunnable()" eparameters="view:View" etype="void" methodBody="expression statement; method invocation; start; class instance creation; Thread; class instance creation; RunnableWithHandlers; expression statement; ASSIGN; method invocation; show; string literal; string literal; this; ThreadedDownloads; expression statement; method invocation; hideKeyboard; variable declaration; url; " __idKDM="runRunnable___View___"/>
+    <eoperations name="runMessages()" eparameters="view:View" etype="void" methodBody="expression statement; method invocation; start; class instance creation; Thread; class instance creation; RunnableWithMessages; expression statement; method invocation; hideKeyboard; variable declaration; url; " __idKDM="runMessages___View___"/>
+    <eoperations name="runAsyncTask()" eparameters="view:View" etype="void" methodBody="expression statement; method invocation; execute; class instance creation; DownloadTask; expression statement; method invocation; hideKeyboard; variable declaration; url; " __idKDM="runAsyncTask___View___"/>
+    <eoperations name="resetImage()" eparameters="view:View" etype="void" methodBody="expression statement; method invocation; setImageResource; " __idKDM="resetImage___View___"/>
+    <eoperations name="hideKeyboard()" eparameters="" etype="void" methodBody="expression statement; method invocation; hideSoftInputFromWindow; number literal; method invocation; getWindowToken; variable declaration; mgr; " __idKDM="hideKeyboard______"/>
+    <eoperations name="onCreateOptionsMenu()" eparameters="menu:Menu" etype="boolean" methodBody="return; boolean literal; expression statement; method invocation; inflate; method invocation; getMenuInflater; " __idKDM="onCreateOptionsMenu___Menu___"/>
+    <esupertypes href="86aeb696cb844692a39ab0cabcfca566017ce46d_CA_ref.xmi#Activity"/>
+    <nested_classes name="RunnableWithHandlers" implements="Runnable" interfaces="Runnable">
+      <eattributes name="mUrl" etype="String"/>
+      <eoperations name="RunnableWithHandlers()" eparameters="url:String" methodBody="expression statement; ASSIGN; mUrl; " __idKDM="RunnableWithHandlers___String___"/>
+      <eoperations name="run()" eparameters="" etype="void" methodBody="expression statement; method invocation; runOnUiThread; class instance creation; ; Anonymous type; this; ThreadedDownloads; variable declaration; imageBitmap; " __idKDM="run______"/>
+    </nested_classes>
+    <nested_classes name="MessageHandler" extends="Handler">
+      <eattributes name="SHOW_DIALOG" etype="int"/>
+      <eattributes name="DISMISS_DIALOG" etype="int"/>
+      <eattributes name="DISPLAY_IMAGE" etype="int"/>
+      <eattributes name="mActivity" etype="java.lang.ref.WeakReference&lt;pkg.ThreadedDownloads>"/>
+      <eoperations name="MessageHandler()" eparameters="activity:ThreadedDownloads" methodBody="expression statement; ASSIGN; mActivity; class instance creation; WeakReference; " __idKDM="MessageHandler___ThreadedDownloads___"/>
+      <eoperations name="handleMessage()" eparameters="msg:Message" etype="void" methodBody="switch; expression statement; method invocation; displayImage; cast; case; expression statement; method invocation; dismiss; case; expression statement; ASSIGN; method invocation; show; string literal; string literal; method invocation; get; case; " __idKDM="handleMessage___Message___"/>
+      <esupertypes href="86aeb696cb844692a39ab0cabcfca566017ce46d_CA_ref.xmi#Handler"/>
+    </nested_classes>
+    <nested_classes name="RunnableWithMessages" implements="Runnable" interfaces="Runnable">
+      <eattributes name="mUrl" etype="String"/>
+      <eoperations name="RunnableWithMessages()" eparameters="url:String" methodBody="expression statement; ASSIGN; url; field access; mUrl; this; " __idKDM="RunnableWithMessages___String___"/>
+      <eoperations name="run()" eparameters="" etype="void" methodBody="expression statement; method invocation; sendMessage; expression statement; ASSIGN; method invocation; obtainMessage; expression statement; method invocation; sendMessage; expression statement; ASSIGN; method invocation; obtainMessage; variable declaration; imageBitmap; expression statement; method invocation; sendMessage; variable declaration; msg; variable declaration; mHandler; " __idKDM="run______"/>
+    </nested_classes>
+    <nested_classes name="DownloadTask">
+      <eoperations name="onPreExecute()" eparameters="" etype="void" methodBody="expression statement; ASSIGN; method invocation; show; string literal; string literal; this; ThreadedDownloads; " __idKDM="onPreExecute______"/>
+      <eoperations name="doInBackground()" eparameters="params:String" etype="Bitmap" methodBody="return; method invocation; downloadImage; array access; params; number literal; " __idKDM="doInBackground___String___"/>
+      <eoperations name="onPostExecute()" eparameters="imageBitmap:Bitmap" etype="void" methodBody="expression statement; method invocation; displayImage; expression statement; method invocation; dismiss; " __idKDM="onPostExecute___Bitmap___"/>
+      <eoperations name="DownloadTask()" eparameters="" methodBody="" __idKDM="DownloadTask______"/>
+    </nested_classes>
+  </eclassifiers>
+  <interfaces name="Runnable"/>
+</refactoring:EPackage>

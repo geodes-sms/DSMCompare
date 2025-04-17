@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="AbstractEsBoltTest">
+    <eattributes name="config" etype="Config"/>
+    <eattributes name="outputCollector" etype="OutputCollector"/>
+    <eattributes name="bolt" etype="Bolt"/>
+    <eoperations name="createBolt()" eparameters="null:Exception" etype="void" methodBody="expression statement; method invocation; prepare; null; expression statement; ASSIGN; bolt; method invocation; createBolt; method invocation; esConfig; " __idKDM="createBolt___Exception___"/>
+    <eoperations name="createBolt()" eparameters="esConfig:EsConfig" etype="Bolt" methodBody="" __idKDM="createBolt___EsConfig___"/>
+    <eoperations name="esConfig()" etype="EsConfig" methodBody="return; expression statement; method invocation; setNodes; array creation; java.lang.String[]; array initializer; string literal; expression statement; method invocation; setClusterName; string literal; variable declaration; class instance creation; new EsConfig(); esConfig; " __idKDM="esConfig______"/>
+    <eoperations name="cleanupBolt()" eparameters="null:Exception" etype="void" methodBody="expression statement; method invocation; cleanup; " __idKDM="cleanupBolt___Exception___"/>
+  </eclassifiers>
+  <eclassifiers name="EsIndexBoltTest">
+    <eattributes name="bolt" etype="EsIndexBolt"/>
+    <nested_classes name="EsIndexBoltTest" extends="AbstractEsBoltTest" esupertypes="AbstractEsBoltTest">
+      <eattributes name="LOG" etype="Logger"/>
+      <eattributes name="bolt" etype="EsIndexBolt"/>
+    </nested_classes>
+    <nested_classes name="EsIndexBoltTest">
+      <eattributes name="LOG" etype="Logger"/>
+      <eoperations name="testEsIndexBolt()" eparameters="null:Exception" etype="void" methodBody="" __idKDM="testEsIndexBolt___Exception___"/>
+      <eoperations name="createTestTuple()" eparameters="index:String, type:String" etype="Tuple" methodBody="return; method invocation; generateTestTuple; variable declaration; id; variable declaration; source; " __idKDM="createTestTuple___String__String___"/>
+      <eoperations name="createBolt()" eparameters="esConfig:EsConfig" etype="EsIndexBolt" methodBody="return; class instance creation; new EsIndexBolt(esConfig); " __idKDM="createBolt___EsConfig___"/>
+    </nested_classes>
+  </eclassifiers>
+  <eclassifiers name="EsPercolateBoltTest">
+    <eattributes name="bolt" etype="EsPercolateBolt"/>
+    <nested_classes name="EsPercolateBoltTest" extends="AbstractEsBoltTest" esupertypes="AbstractEsBoltTest">
+      <eattributes name="LOG" etype="Logger"/>
+      <eattributes name="bolt" etype="EsPercolateBolt"/>
+    </nested_classes>
+    <nested_classes name="EsPercolateBoltTest">
+      <eoperations name="createBolt()" eparameters="esConfig:EsConfig" etype="EsPercolateBolt" methodBody="return; class instance creation; new EsPercolateBolt(esConfig); " __idKDM="createBolt___EsConfig___"/>
+      <eoperations name="testEsPercolateBolt()" eparameters="null:Exception" etype="void" methodBody="" __idKDM="testEsPercolateBolt___Exception___"/>
+    </nested_classes>
+  </eclassifiers>
+</refactoring:EPackage>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="io.realm">
+  <eclassifiers name="ManagedSetManager" implements="ManageableObject" interfaces="ManageableObject">
+    <eattributes name="setValueOperator" etype="pkg.SetValueOperator&lt;E>"/>
+    <eoperations name="ManagedSetManager()" eparameters="setValueOperator:pkg.SetValueOperator&lt;E>" methodBody="expression statement; ASSIGN; setValueOperator; field access; setValueOperator; this; " __idKDM="ManagedSetManager___pkg_SetValueOperator_E____"/>
+    <eoperations name="isManaged()" etype="boolean" methodBody="return; boolean literal; " __idKDM="isManaged______"/>
+    <eoperations name="isValid()" etype="boolean" methodBody="return; method invocation; isValid; " __idKDM="isValid______"/>
+    <eoperations name="isFrozen()" etype="boolean" methodBody="return; method invocation; isFrozen; " __idKDM="isFrozen______"/>
+    <eoperations name="size()" etype="int" methodBody="return; method invocation; size; " __idKDM="size______"/>
+    <eoperations name="isEmpty()" etype="boolean" methodBody="return; method invocation; isEmpty; " __idKDM="isEmpty______"/>
+    <eoperations name="contains()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; contains; " __idKDM="contains___Object___"/>
+    <eoperations name="iterator()" etype="java.util.Iterator&lt;E>" methodBody="return; method invocation; iterator; " __idKDM="iterator______"/>
+    <eoperations name="toArray()" etype="java.lang.Object[]" methodBody="return; method invocation; toArray; " __idKDM="toArray______"/>
+    <eoperations name="toArray()" eparameters="a:T[]" etype="T[]" methodBody="return; method invocation; toArray; " __idKDM="toArray___T_____"/>
+    <eoperations name="add()" eparameters="e:E" etype="boolean" methodBody="return; method invocation; add; " __idKDM="add___E___"/>
+    <eoperations name="remove()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; remove; " __idKDM="remove___Object___"/>
+    <eoperations name="containsAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; containsAll; " __idKDM="containsAll___java_util_Collection______"/>
+    <eoperations name="addAll()" eparameters="c:java.util.Collection&lt;? extends E>" etype="boolean" methodBody="return; method invocation; addAll; " __idKDM="addAll___java_util_Collection___extends_E____"/>
+    <eoperations name="retainAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; retainAll; " __idKDM="retainAll___java_util_Collection______"/>
+    <eoperations name="removeAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; method invocation; removeAll; " __idKDM="removeAll___java_util_Collection______"/>
+    <eoperations name="clear()" etype="void" methodBody="expression statement; method invocation; clear; " __idKDM="clear______"/>
+    <eoperations name="freeze()" etype="pkg.RealmSet&lt;E>" methodBody="return; null; " __idKDM="freeze______"/>
+  </eclassifiers>
+  <eclassifiers name="SetValueOperator">
+    <eattributes name="baseRealm" etype="BaseRealm"/>
+    <eattributes name="osSet" etype="OsSet"/>
+    <eoperations name="SetValueOperator()" eparameters="baseRealm:BaseRealm, osSet:OsSet" methodBody="expression statement; ASSIGN; osSet; field access; osSet; this; expression statement; ASSIGN; field access; baseRealm; this; " __idKDM="SetValueOperator___BaseRealm__OsSet___"/>
+    <eoperations name="add()" eparameters="e:E" etype="boolean" methodBody="return; NOT; expression statement; method invocation; add; variable declaration; found; " __idKDM="add___E___"/>
+    <eoperations name="isValid()" etype="boolean" methodBody="return; method invocation; isValid; if; return; boolean literal; method invocation; isClosed; " __idKDM="isValid______"/>
+    <eoperations name="isFrozen()" etype="boolean" methodBody="return; boolean literal; " __idKDM="isFrozen______"/>
+    <eoperations name="size()" etype="int" methodBody="return; method invocation; intValue; method invocation; valueOf; method invocation; size; " __idKDM="size______"/>
+    <eoperations name="isEmpty()" etype="boolean" methodBody="return; boolean literal; " __idKDM="isEmpty______"/>
+    <eoperations name="contains()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; contains; " __idKDM="contains___Object___"/>
+    <eoperations name="iterator()" etype="java.util.Iterator&lt;E>" methodBody="return; null; " __idKDM="iterator______"/>
+    <eoperations name="toArray()" etype="java.lang.Object[]" methodBody="return; array creation; java.lang.Object[]; number literal; " __idKDM="toArray______"/>
+    <eoperations name="toArray()" eparameters="a:T[]" etype="T[]" methodBody="return; null; " __idKDM="toArray___T_____"/>
+    <eoperations name="remove()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; remove; " __idKDM="remove___Object___"/>
+    <eoperations name="containsAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; boolean literal; " __idKDM="containsAll___java_util_Collection______"/>
+    <eoperations name="addAll()" eparameters="c:java.util.Collection&lt;? extends E>" etype="boolean" methodBody="return; boolean literal; " __idKDM="addAll___java_util_Collection___extends_E____"/>
+    <eoperations name="retainAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; boolean literal; " __idKDM="retainAll___java_util_Collection______"/>
+    <eoperations name="removeAll()" eparameters="c:java.util.Collection&lt;?>" etype="boolean" methodBody="return; boolean literal; " __idKDM="removeAll___java_util_Collection______"/>
+    <eoperations name="clear()" etype="void" methodBody="expression statement; method invocation; clear; " __idKDM="clear______"/>
+  </eclassifiers>
+  <eclassifiers name="SetIterator">
+    <eattributes name="osSet" etype="OsSet"/>
+    <eattributes name="baseRealm" etype="BaseRealm"/>
+    <eattributes name="pos" etype="int"/>
+    <eoperations name="SetIterator()" eparameters="osSet:OsSet, baseRealm:BaseRealm" methodBody="expression statement; ASSIGN; field access; baseRealm; this; expression statement; ASSIGN; osSet; field access; osSet; this; " __idKDM="SetIterator___OsSet__BaseRealm___"/>
+    <eoperations name="hasNext()" etype="boolean" methodBody="return; LESS; method invocation; size; PLUS; pos; number literal; " __idKDM="hasNext______"/>
+    <eoperations name="next()" etype="E" methodBody="return; method invocation; getValueAtIndex; if; throw; class instance creation; NoSuchElementException; PLUS; pos; string literal; string literal; string literal; GREATER_EQUALS; pos; variable declaration; size; expression statement; INCREMENT; " __idKDM="next______"/>
+    <eoperations name="getValueAtIndex()" eparameters="position:int" etype="E" methodBody="return; cast; E; method invocation; getValueAtIndex; " __idKDM="getValueAtIndex___int___"/>
+  </eclassifiers>
+  <eclassifiers name="ManagedSetManager" implements="ManageableObject" interfaces="ManageableObject">
+    <eattributes name="setValueOperator" etype="SetValueOperator&lt;E>"/>
+    <eoperations name="ManagedSetManager()" eparameters="setValueOperator:SetValueOperator&lt;E>" methodBody="expression statement; ASSIGN; field access; setValueOperator; this; " __idKDM="ManagedSetManager___SetValueOperator_E____"/>
+    <eoperations name="isManaged()" etype="boolean" methodBody="return; boolean literal; " __idKDM="isManaged______"/>
+    <eoperations name="isValid()" etype="boolean" methodBody="return; method invocation; isValid; " __idKDM="isValid______"/>
+    <eoperations name="isFrozen()" etype="boolean" methodBody="return; method invocation; isFrozen; " __idKDM="isFrozen______"/>
+    <eoperations name="size()" etype="int" methodBody="return; method invocation; size; " __idKDM="size______"/>
+    <eoperations name="isEmpty()" etype="boolean" methodBody="return; method invocation; isEmpty; " __idKDM="isEmpty______"/>
+    <eoperations name="contains()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; contains; " __idKDM="contains___Object___"/>
+    <eoperations name="iterator()" etype="Iterator&lt;E>" methodBody="return; method invocation; iterator; " __idKDM="iterator______"/>
+    <eoperations name="toArray()" etype="Object[]" methodBody="return; method invocation; toArray; " __idKDM="toArray______"/>
+    <eoperations name="toArray()" eparameters="a:T[]" etype="T[]" methodBody="return; method invocation; toArray; " __idKDM="toArray___T_____"/>
+    <eoperations name="add()" eparameters="e:E" etype="boolean" methodBody="return; method invocation; add; " __idKDM="add___E___"/>
+    <eoperations name="remove()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; remove; " __idKDM="remove___Object___"/>
+    <eoperations name="containsAll()" eparameters="c:Collection&lt;?>" etype="boolean" methodBody="return; method invocation; containsAll; " __idKDM="containsAll___Collection______"/>
+    <eoperations name="addAll()" eparameters="c:Collection&lt;? extends E>" etype="boolean" methodBody="return; method invocation; addAll; " __idKDM="addAll___Collection___extends_E____"/>
+    <eoperations name="retainAll()" eparameters="c:Collection&lt;?>" etype="boolean" methodBody="return; method invocation; retainAll; " __idKDM="retainAll___Collection______"/>
+    <eoperations name="removeAll()" eparameters="c:Collection&lt;?>" etype="boolean" methodBody="return; method invocation; removeAll; " __idKDM="removeAll___Collection______"/>
+    <eoperations name="clear()" etype="void" methodBody="expression statement; method invocation; clear; " __idKDM="clear______"/>
+    <eoperations name="freeze()" etype="RealmSet&lt;E>" methodBody="return; method invocation; freeze; " __idKDM="freeze______"/>
+    <eoperations name="getOsSet()" etype="OsSet" methodBody="return; " __idKDM="getOsSet______"/>
+  </eclassifiers>
+  <eclassifiers name="SetValueOperator">
+    <eattributes name="baseRealm" etype="BaseRealm"/>
+    <eattributes name="osSet" etype="OsSet"/>
+    <eattributes name="valueClass" etype="Class&lt;E>"/>
+    <eoperations name="SetValueOperator()" eparameters="baseRealm:BaseRealm, osSet:OsSet, valueClass:Class&lt;E>" methodBody="expression statement; ASSIGN; field access; valueClass; this; expression statement; ASSIGN; field access; osSet; this; expression statement; ASSIGN; field access; baseRealm; this; " __idKDM="SetValueOperator___BaseRealm__OsSet__Class_E____"/>
+    <eoperations name="add()" eparameters="e:E" etype="boolean" methodBody="return; method invocation; add; " __idKDM="add___E___"/>
+    <eoperations name="isValid()" etype="boolean" methodBody="return; method invocation; isValid; if; return; boolean literal; method invocation; isClosed; " __idKDM="isValid______"/>
+    <eoperations name="isFrozen()" etype="boolean" methodBody="return; method invocation; isFrozen; " __idKDM="isFrozen______"/>
+    <eoperations name="size()" etype="int" methodBody="return; method invocation; intValue; method invocation; valueOf; method invocation; size; " __idKDM="size______"/>
+    <eoperations name="isEmpty()" etype="boolean" methodBody="return; EQUALS; number literal; method invocation; size; " __idKDM="isEmpty______"/>
+    <eoperations name="contains()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; contains; " __idKDM="contains___Object___"/>
+    <eoperations name="iterator()" etype="Iterator&lt;E>" methodBody="return; class instance creation; new SetIterator&lt;>(osSet,baseRealm); " __idKDM="iterator______"/>
+    <eoperations name="toArray()" etype="Object[]" methodBody="return; array creation; Object[]; number literal; " __idKDM="toArray______"/>
+    <eoperations name="toArray()" eparameters="a:T[]" etype="T[]" methodBody="return; null; " __idKDM="toArray___T_____"/>
+    <eoperations name="remove()" eparameters="o:Object" etype="boolean" methodBody="return; method invocation; remove; " __idKDM="remove___Object___"/>
+    <eoperations name="containsAll()" eparameters="c:Collection&lt;?>" etype="boolean" methodBody="return; method invocation; containsAll; if; return; method invocation; isSubSetOf; method invocation; getNativePtr; variable declaration; otherOsSet; variable declaration; setFromCollection; CONDITIONAL_AND; method invocation; isManaged; parenthesized; cast; RealmSet&lt;?>; instanceof; " __idKDM="containsAll___Collection______"/>
+    <eoperations name="addAll()" eparameters="c:Collection&lt;? extends E>" etype="boolean" methodBody="return; method invocation; collectionFunnel; " __idKDM="addAll___Collection___extends_E____"/>
+    <eoperations name="retainAll()" eparameters="c:Collection&lt;?>" etype="boolean" methodBody="return; method invocation; collectionFunnel; " __idKDM="retainAll___Collection______"/>
+    <eoperations name="removeAll()" eparameters="c:Collection&lt;?>" etype="boolean" methodBody="return; method invocation; collectionFunnel; " __idKDM="removeAll___Collection______"/>
+    <eoperations name="collectionFunnel()" eparameters="c:Collection&lt;?>, operation:ExternalCollectionOperation" etype="boolean" methodBody="switch; throw; class instance creation; new IllegalStateException(&quot;Unexpected value: &quot; + operation); PLUS; string literal; case; return; method invocation; retainAll; case; return; method invocation; removeAll; case; return; method invocation; addAll; case; if; switch; return; method invocation; intersect; case; return; method invocation; asymmetricDifference; case; return; method invocation; union; case; if; switch; return; boolean literal; case; return; boolean literal; expression statement; method invocation; clear; case; return; boolean literal; case; EQUALS; method invocation; getNativePtr; method invocation; getNativePtr; variable declaration; otherOsSet; CONDITIONAL_AND; method invocation; isManaged; parenthesized; cast; RealmSet&lt;? extends E>; instanceof; " __idKDM="collectionFunnel___Collection_____ExternalCollectionOperation___"/>
+    <eoperations name="clear()" etype="void" methodBody="expression statement; method invocation; clear; " __idKDM="clear______"/>
+    <eoperations name="freeze()" etype="RealmSet&lt;E>" methodBody="return; class instance creation; new RealmSet&lt;>(frozenRealm,frozenOsSet,valueClass); variable declaration; frozenOsSet; variable declaration; frozenRealm; " __idKDM="freeze______"/>
+  </eclassifiers>
+  <eclassifiers name="SetIterator">
+    <eattributes name="osSet" etype="OsSet"/>
+    <eattributes name="baseRealm" etype="BaseRealm"/>
+    <eattributes name="pos" etype="int"/>
+    <eoperations name="SetIterator()" eparameters="osSet:OsSet, baseRealm:BaseRealm" methodBody="expression statement; ASSIGN; field access; baseRealm; this; expression statement; ASSIGN; field access; osSet; this; " __idKDM="SetIterator___OsSet__BaseRealm___"/>
+    <eoperations name="hasNext()" etype="boolean" methodBody="return; LESS; method invocation; size; PLUS; number literal; " __idKDM="hasNext______"/>
+    <eoperations name="next()" etype="E" methodBody="return; method invocation; getValueAtIndex; if; throw; class instance creation; new NoSuchElementException(&quot;Cannot access index &quot; + pos + &quot; when size is &quot;+ size+ &quot;. Remember to check hasNext() before using next().&quot;); PLUS; string literal; string literal; string literal; GREATER_EQUALS; variable declaration; size; expression statement; INCREMENT; " __idKDM="next______"/>
+    <eoperations name="getValueAtIndex()" eparameters="position:int" etype="E" methodBody="return; cast; method invocation; getValueAtIndex; " __idKDM="getValueAtIndex___int___"/>
+  </eclassifiers>
+  <interfaces name="ManageableObject"/>
+</refactoring:EPackage>

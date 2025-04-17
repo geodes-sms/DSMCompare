@@ -1,0 +1,209 @@
+ePackageImport  PacmanGoDiffMM
+
+		rule PacmanEatFood(VAR n3value:EInt, VAR n3new_value:EInt)
+		{
+			graph
+			{
+				 preserve			node n1:Game
+				 preserve			node n2:GridNode
+				 preserve			node n3:DiffScoreboard{
+					preserve value =  n3value
+					preserve new_value =  n3new_value
+				}
+				 preserve			node n4:Pacman
+				 preserve			node n5:DiffFood
+				 delete				node n6:DiffPositionableEntity_on
+				 create				node n7:DomainSpecificDiff{
+					create name = "\"PacmanEatFood\""
+				}
+			edges[
+			  		(preserve	n1->n2:gridnodes),
+			  		(preserve	n1->n3:scoreboard),
+			  		(preserve	n1->n4:entities),
+			  		(preserve	n1->n5:entities),
+			  		(create		n1->n7:domainspecificdiffs),
+			  		(preserve	n4->n2:on),
+			  		(delete		n5->n6:diffon),
+			  		(delete		n6->n2:eType),
+			  		(create		n7->n5:DomainSpecificDiff_Food),
+			  		(create		n7->n4:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+			conditions [n3value < n3new_value]
+		}
+//----------------------------------------------------------------------
+
+		rule pacmanmoves()
+		{
+			graph
+			{
+				 preserve			node n1:Game
+				 preserve			node n2:GridNode
+				 preserve			node n3:GridNode
+				 preserve			node n4:Pacman
+				 delete				node n5:DiffPositionableEntity_on
+				 preserve			node n6:DiffPositionableEntity_on
+				 create				node n7:DomainSpecificDiff{
+					create name = "\"pacmanmoves\""
+				}
+			edges[
+			  		(preserve	n1->n2:gridnodes),
+			  		(preserve	n1->n3:gridnodes),
+			  		(preserve	n1->n4:entities),
+			  		(create		n1->n7:domainspecificdiffs),
+			  		(delete		n4->n5:diffon),
+			  		(preserve	n4->n6:diffon),
+			  		(delete		n5->n2:eType),
+			  		(preserve	n6->n3:eType),
+			  		(create		n7->n4:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmanmovesright()
+		{
+			graph
+			{
+				 preserve			node n1:Game
+				 preserve			node n2:GridNode
+				 preserve			node n3:GridNode
+				 preserve			node n4:Pacman
+				 delete				node n5:DiffPositionableEntity_on
+				 preserve			node n6:DiffPositionableEntity_on
+				 create				node n7:DomainSpecificDiff{
+					create name = "\"pacmanmovesright\""
+				}
+			edges[
+			  		(preserve	n1->n2:gridnodes),
+			  		(preserve	n1->n3:gridnodes),
+			  		(preserve	n1->n4:entities),
+			  		(create		n1->n7:domainspecificdiffs),
+			  		(preserve	n2->n3:right),
+			  		(preserve	n3->n2:left),
+			  		(delete		n4->n5:diffon),
+			  		(preserve	n4->n6:diffon),
+			  		(delete		n5->n2:eType),
+			  		(preserve	n6->n3:eType),
+			  		(create		n7->n4:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmanmovesleft()
+		{
+			graph
+			{
+				 preserve			node n1:Game
+				 preserve			node n2:GridNode
+				 preserve			node n3:GridNode
+				 preserve			node n4:Pacman
+				 delete				node n5:DiffPositionableEntity_on
+				 preserve			node n6:DiffPositionableEntity_on
+				 create				node n7:DomainSpecificDiff{
+					create name = "\"pacmanmovesleft\""
+				}
+			edges[
+			  		(preserve	n1->n2:gridnodes),
+			  		(preserve	n1->n3:gridnodes),
+			  		(preserve	n1->n4:entities),
+			  		(create		n1->n7:domainspecificdiffs),
+			  		(preserve	n2->n3:left),
+			  		(preserve	n3->n2:right),
+			  		(delete		n4->n5:diffon),
+			  		(preserve	n4->n6:diffon),
+			  		(delete		n5->n2:eType),
+			  		(preserve	n6->n3:eType),
+			  		(create		n7->n4:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmanmovesup()
+		{
+			graph
+			{
+				 preserve			node n1:Game
+				 preserve			node n2:GridNode
+				 preserve			node n3:GridNode
+				 preserve			node n4:Pacman
+				 delete				node n5:DiffPositionableEntity_on
+				 preserve			node n6:DiffPositionableEntity_on
+				 create				node n7:DomainSpecificDiff{
+					create name = "\"pacmanmovesup\""
+				}
+			edges[
+			  		(preserve	n1->n2:gridnodes),
+			  		(preserve	n1->n3:gridnodes),
+			  		(preserve	n1->n4:entities),
+			  		(create		n1->n7:domainspecificdiffs),
+			  		(preserve	n2->n3:up),
+			  		(preserve	n3->n2:bottom),
+			  		(delete		n4->n5:diffon),
+			  		(preserve	n4->n6:diffon),
+			  		(delete		n5->n2:eType),
+			  		(preserve	n6->n3:eType),
+			  		(create		n7->n4:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmanmovesbottom()
+		{
+			graph
+			{
+				 preserve			node n1:Game
+				 preserve			node n2:GridNode
+				 preserve			node n3:GridNode
+				 preserve			node n4:Pacman
+				 delete				node n5:DiffPositionableEntity_on
+				 preserve			node n6:DiffPositionableEntity_on
+				 create				node n7:DomainSpecificDiff{
+					create name = "\"pacmanmovesbottom\""
+				}
+			edges[
+			  		(preserve	n1->n2:gridnodes),
+			  		(preserve	n1->n3:gridnodes),
+			  		(preserve	n1->n4:entities),
+			  		(create		n1->n7:domainspecificdiffs),
+			  		(preserve	n2->n3:bottom),
+			  		(preserve	n3->n2:up),
+			  		(delete		n4->n5:diffon),
+			  		(preserve	n4->n6:diffon),
+			  		(delete		n5->n2:eType),
+			  		(preserve	n6->n3:eType),
+			  		(create		n7->n4:DomainSpecificDiff_Pacman)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------
+
+		rule pacmandies()
+		{
+			graph
+			{
+				 preserve			node n1:Game
+				 preserve			node n2:GridNode
+				 preserve			node n3:Pacman
+				 delete				node n4:DiffPositionableEntity_on
+				 preserve			node n5:Ghost
+				 create				node n6:DomainSpecificDiff{
+					create name = "\"pacmandies\""
+				}
+			edges[
+			  		(preserve	n1->n2:gridnodes),
+			  		(preserve	n1->n3:entities),
+			  		(preserve	n1->n5:entities),
+			  		(create		n1->n6:domainspecificdiffs),
+			  		(delete		n3->n4:diffon),
+			  		(delete		n4->n2:eType),
+			  		(preserve	n5->n2:on),
+			  		(create		n6->n3:DomainSpecificDiff_Pacman),
+			  		(create		n6->n5:DomainSpecificDiff_Ghost)
+	      		 ]
+			}
+		}
+//----------------------------------------------------------------------

@@ -1,0 +1,518 @@
+Matches count 	:	2
+Diffs count 	:	78
+Conflicts count (REAL) :	14
+Conflicts count (PSEUDO) :	3
+Matched resources :
+Left = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/39d30b21b3a632f158274c6937c13499cd0758f3_V1_ref.xmi
+Right = null
+origin = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/39d30b21b3a632f158274c6937c13499cd0758f3_CA_ref.xmi
+Matched resources :
+Left = null
+Right = file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/39d30b21b3a632f158274c6937c13499cd0758f3_V2_ref.xmi
+origin = null
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
+| refactoringDiffMM.impl.EPackageImpl@40f70521 (name: pkg)|                                        |
+| |-refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@55342f40 (name: expectedExceptionPasses(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; , __idKDM: expectedExceptionPasses______)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@a4ca3f6 (name: unExpectedExceptionFails(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; , __idKDM: unExpectedExceptionFails______)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@72ea6193 (name: wrongMessageFails(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; and; method invocation; hasSingleFailureContaining; string literal; method invocation; both; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; , __idKDM: wrongMessageFails______)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@31aa3ca5 (name: failsIfExceptionNeverComes(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; , __idKDM: failsIfExceptionNeverComes______)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@45905bff (name: failsIfExceptionMessageNeverComes(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; , __idKDM: failsIfExceptionMessageNeverComes______)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@2a2c13a8 (name: passesWithSubstringMethod(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; , __idKDM: passesWithSubstringMethod______)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@b6b1987 (name: failsWithNullExceptionMessage(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; , __idKDM: failsWithNullExceptionMessage______)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@6b44435b (name: succeedsWithMessageMatcher(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; , __idKDM: succeedsWithMessageMatcher______)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@2ccca26f (name: startsWith(), eparameters: prefix:String, etype: Matcher<String>, methodBody: return; class instance creation; ; Anonymous type; , __idKDM: startsWith___String___)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@66b7550d (name: failsWithMatcher(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; , __idKDM: failsWithMatcher______)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@3543df7d (name: succeedsWithMatcher(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; , __idKDM: succeedsWithMatcher______)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@7c541c15 (name: failsWithMultipleMatchers(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; , __idKDM: failsWithMultipleMatchers______)|                                        |
+| | |-refactoringDiffMM.impl.EOperationImpl@3542162a (name: failsWithWrongCause(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; method invocation; toString; method invocation; testResult; type literal; , __idKDM: failsWithWrongCause______)|                                        |
+| | |-refactoringDiffMM.impl.EClassImpl@698122b2 (name: HasExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)|                                        |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@4212a0c8 (name: thrown, etype: ExpectedException)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@1e7aa82b (name: throwsNothing(), eparameters: , etype: void, methodBody: , __idKDM: throwsNothing______)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@3b2c0e88 (name: throwsNullPointerException(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; expression statement; method invocation; expect; type literal; , __idKDM: throwsNullPointerException______)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@5bd82fed (name: throwsNullPointerExceptionWithMessage(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; , __idKDM: throwsNullPointerExceptionWithMessage______)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@c1bd0be (name: throwsIllegalArgumentExceptionWithCause(), eparameters: , etype: void, methodBody: throw; class instance creation; IllegalArgumentException; string literal; expression statement; method invocation; expectCause; method invocation; is; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; variable declaration; class instance creation; NullPointerException; string literal; expectedCause; , __idKDM: throwsIllegalArgumentExceptionWithCause______)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@476b0ae6 (name: throwsIllegalArgumentExceptionWithCauseExplicitlyNull(), eparameters: , etype: void, methodBody: throw; class instance creation; IllegalArgumentException; string literal; expression statement; method invocation; expectCause; method invocation; nullValue; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; , __idKDM: throwsIllegalArgumentExceptionWithCauseExplicitlyNull______)|                                        |
+| | |-refactoringDiffMM.impl.EClassImpl@1c6804cd (name: HasWrongExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)|                                        |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@3eeb318f (name: thrown, etype: ExpectedException)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@20a14b55 (name: throwsNullPointerException(), eparameters: , etype: void, methodBody: throw; class instance creation; IllegalArgumentException; expression statement; method invocation; expect; type literal; , __idKDM: throwsNullPointerException______)|                                        |
+| | |-refactoringDiffMM.impl.EClassImpl@39ad977d (name: HasWrongMessage, extends: null, implements: null, isAbstract: false, packageName: null)|                                        |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@6da00fb9 (name: thrown, etype: ExpectedException)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@a202ccb (name: throwsNullPointerException(), eparameters: , etype: void, methodBody: throw; class instance creation; IllegalArgumentException; string literal; expression statement; method invocation; expectMessage; string literal; , __idKDM: throwsNullPointerException______)|                                        |
+| | |-refactoringDiffMM.impl.EClassImpl@20f12539 (name: WronglyExpectsException, extends: null, implements: null, isAbstract: false, packageName: null)|                                        |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@75b25825 (name: thrown, etype: ExpectedException)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@18025ced (name: doesntThrowNullPointerException(), eparameters: , etype: void, methodBody: expression statement; method invocation; expect; type literal; , __idKDM: doesntThrowNullPointerException______)|                                        |
+| | |-refactoringDiffMM.impl.EClassImpl@13cf7d52 (name: WronglyExpectsExceptionMessage, extends: null, implements: null, isAbstract: false, packageName: null)|                                        |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@3a3e4aff (name: thrown, etype: ExpectedException)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@5d2a4eed (name: doesntThrowAnything(), eparameters: , etype: void, methodBody: expression statement; method invocation; expectMessage; string literal; , __idKDM: doesntThrowAnything______)|                                        |
+| | |-refactoringDiffMM.impl.EClassImpl@57459491 (name: ExpectsSubstring, extends: null, implements: null, isAbstract: false, packageName: null)|                                        |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@3f0846c6 (name: thrown, etype: ExpectedException)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@77a98a6a (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; string literal; , __idKDM: throwsMore______)|                                        |
+| | |-refactoringDiffMM.impl.EClassImpl@78fbff54 (name: ExpectsSubstringNullMessage, extends: null, implements: null, isAbstract: false, packageName: null)|                                        |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@3e10dc6 (name: thrown, etype: ExpectedException)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@7e22550a (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; expression statement; method invocation; expectMessage; string literal; , __idKDM: throwsMore______)|                                        |
+| | |-refactoringDiffMM.impl.EClassImpl@45e37a7e (name: ExpectsMessageMatcher, extends: null, implements: null, isAbstract: false, packageName: null)|                                        |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@62452cc9 (name: thrown, etype: ExpectedException)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@6941827a (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; method invocation; startsWith; string literal; , __idKDM: throwsMore______)|                                        |
+| | |-refactoringDiffMM.impl.EClassImpl@5a7005d (name: ExpectedMessageMatcherFails, extends: null, implements: null, isAbstract: false, packageName: null)|                                        |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@5bc9ba1d (name: thrown, etype: ExpectedException)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@1021f6c9 (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; method invocation; startsWith; string literal; , __idKDM: throwsMore______)|                                        |
+| | |-refactoringDiffMM.impl.EClassImpl@7516e4e5 (name: ExpectsMatcher, extends: null, implements: null, isAbstract: false, packageName: null)|                                        |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@488eb7f2 (name: thrown, etype: ExpectedException)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@5e81e5ac (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expect; method invocation; any; type literal; , __idKDM: throwsMore______)|                                        |
+| | |-refactoringDiffMM.impl.EClassImpl@4189d70b (name: ExpectsMultipleMatchers, extends: null, implements: null, isAbstract: false, packageName: null)|                                        |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@3fa2213 (name: thrown, etype: ExpectedException)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@3e7634b9 (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; , __idKDM: throwsMore______)|                                        |
+| | |-refactoringDiffMM.impl.EClassImpl@6f0b0a5e (name: HasWrongCause, extends: null, implements: null, isAbstract: false, packageName: null)|                                        |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@6035b93b (name: EXPECTED_CAUSE, etype: NullPointerException)|                                        |
+| | | |-refactoringDiffMM.impl.EAttributeImpl@320de594 (name: thrown, etype: ExpectedException)|                                        |
+| | | |-refactoringDiffMM.impl.EOperationImpl@3dd1dc90 (name: throwWithCause(), eparameters: , etype: void, methodBody: throw; class instance creation; IllegalArgumentException; class instance creation; NullPointerException; string literal; string literal; expression statement; method invocation; expectCause; method invocation; is; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; , __idKDM: throwWithCause______)|                                        |
+| |-refactoringDiffMM.impl.EClassImpl@abf688e (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null)| |-refactoringDiffMM.impl.EClassImpl@6aecbb8d (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null)|
+| | |-refactoringDiffMM.impl.EAttributeImpl@478ee483 (name: fMatcher, etype: Matcher<Object>)| | |-refactoringDiffMM.impl.EAttributeImpl@1af146 (name: fMatcher, etype: Matcher<Object>)|
+| | |-refactoringDiffMM.impl.EOperationImpl@1a7288a3 (name: none(), eparameters: , etype: ExpectedException, methodBody: return; class instance creation; ExpectedException; , __idKDM: none______)| | |-refactoringDiffMM.impl.EOperationImpl@25b2cfcb (name: none(), eparameters: , etype: ExpectedException, methodBody: return; class instance creation; ExpectedException; , __idKDM: none______)|
+| | |-refactoringDiffMM.impl.EOperationImpl@2974f221 (name: ExpectedException(), eparameters: , etype: null, methodBody: , __idKDM: ExpectedException______)| | |-refactoringDiffMM.impl.EOperationImpl@72758afa (name: ExpectedException(), eparameters: , etype: null, methodBody: , __idKDM: ExpectedException______)|
+| | |-refactoringDiffMM.impl.EOperationImpl@58fe0499 (name: apply(), eparameters: base:Statement, description:Description, etype: Statement, methodBody: return; class instance creation; new ExpectedExceptionStatement(base); , __idKDM: apply___Statement__Description___)| | |-refactoringDiffMM.impl.EOperationImpl@7fc6de5b (name: apply(), eparameters: base:Statement, description:Description, etype: Statement, methodBody: return; class instance creation; new ExpectedExceptionStatement(base); , __idKDM: apply___Statement__Description___)|
+| | |-refactoringDiffMM.impl.EOperationImpl@686449f9 (name: expect(), eparameters: matcher:Matcher<?>, etype: void, methodBody: if; expression statement; ASSIGN; method invocation; and; method invocation; both; expression statement; ASSIGN; cast; Matcher<Object>; EQUALS; null; , __idKDM: expect___Matcher______)| |                                      |
+| | |-refactoringDiffMM.impl.EOperationImpl@665df3c6 (name: expect(), eparameters: type:java.lang.Class<? extends java.lang.Throwable>, etype: void, methodBody: expression statement; method invocation; expect; method invocation; instanceOf; , __idKDM: expect___java_lang_Class___extends_java_lang_Throwable____)| | |-refactoringDiffMM.impl.EOperationImpl@607fbe09 (name: expect(), eparameters: type:java.lang.Class<? extends java.lang.Throwable>, etype: void, methodBody: expression statement; method invocation; expect; method invocation; instanceOf; , __idKDM: expect___java_lang_Class___extends_java_lang_Throwable____)|
+| | |-refactoringDiffMM.impl.EOperationImpl@68b6f0d6 (name: expectMessage(), eparameters: substring:String, etype: void, methodBody: expression statement; method invocation; expectMessage; method invocation; containsString; , __idKDM: expectMessage___String___)| |                                      |
+| | |-refactoringDiffMM.impl.EOperationImpl@4044fb95 (name: expectMessage(), eparameters: matcher:Matcher<String>, etype: void, methodBody: expression statement; method invocation; expect; method invocation; hasMessage; , __idKDM: expectMessage___Matcher_String____)| | |-refactoringDiffMM.impl.EOperationImpl@29df4d43 (name: expectMessage(), eparameters: matcher:Matcher<String>, etype: void, methodBody: expression statement; method invocation; expect; method invocation; hasMessage; , __idKDM: expectMessage___Matcher_String____)|
+| | |-refactoringDiffMM.impl.EOperationImpl@aa549e5 (name: expectCause(), eparameters: expectedCause:Matcher<? extends Throwable>, etype: void, methodBody: expression statement; method invocation; expect; method invocation; hasCause; , __idKDM: expectCause___Matcher___extends_Throwable____)| |                                      |
+| | |-refactoringDiffMM.impl.EOperationImpl@36f48b4 (name: hasMessage(), eparameters: matcher:Matcher<String>, etype: Matcher<Throwable>, methodBody: return; class instance creation; ; Anonymous type; , __idKDM: hasMessage___Matcher_String____)| | |-refactoringDiffMM.impl.EOperationImpl@3382f8ae (name: hasMessage(), eparameters: matcher:Matcher<String>, etype: Matcher<Throwable>, methodBody: return; class instance creation; ; Anonymous type; , __idKDM: hasMessage___Matcher_String____)|
+| | |-refactoringDiffMM.impl.EOperationImpl@5c00384f (name: hasCause(), eparameters: causeMatcher:Matcher<? extends Throwable>, etype: Matcher<Throwable>, methodBody: return; class instance creation; ; Anonymous type; , __idKDM: hasCause___Matcher___extends_Throwable____)| |                                      |
+| | |-refactoringDiffMM.impl.EClassImpl@3b7ff809 (name: ExpectedExceptionStatement, extends: Statement, implements: null, isAbstract: false, packageName: null)| | |-refactoringDiffMM.impl.EClassImpl@60641ec8 (name: ExpectedExceptionStatement, extends: Statement, implements: null, isAbstract: false, packageName: null)|
+| | | |-refactoringDiffMM.impl.EAttributeImpl@1bb564e2 (name: fNext, etype: Statement)| | | |-refactoringDiffMM.impl.EAttributeImpl@75f65e45 (name: fNext, etype: Statement)|
+| | | |-refactoringDiffMM.impl.EOperationImpl@62e6b5c8 (name: ExpectedExceptionStatement(), eparameters: base:Statement, etype: null, methodBody: expression statement; ASSIGN; , __idKDM: ExpectedExceptionStatement___Statement___)| | | |-refactoringDiffMM.impl.EOperationImpl@6eeade6c (name: ExpectedExceptionStatement(), eparameters: base:Statement, etype: null, methodBody: expression statement; ASSIGN; , __idKDM: ExpectedExceptionStatement___Statement___)|
+| | | |-refactoringDiffMM.impl.EOperationImpl@3f792b9b (name: evaluate(), eparameters: null:Throwable, etype: void, methodBody: if; throw; class instance creation; Error; PLUS; method invocation; toString; string literal; NOT_EQUALS; null; try; catch; catch; e; return; expression statement; method invocation; assertThat; if; throw; EQUALS; null; expression statement; method invocation; evaluate; , __idKDM: evaluate___Throwable___)| | | |-refactoringDiffMM.impl.EOperationImpl@4a891c97 (name: evaluate(), eparameters: null:Throwable, etype: void, methodBody: if; throw; class instance creation; Error; PLUS; method invocation; toString; string literal; NOT_EQUALS; null; try; catch; catch; e; return; expression statement; method invocation; handleException; catch; catch; e; return; expression statement; method invocation; optionallyHandleException; catch; catch; e; return; expression statement; method invocation; optionallyHandleException; expression statement; method invocation; evaluate; , __idKDM: evaluate___Throwable___)|
+| | |                                    | | |-refactoringDiffMM.impl.EAttributeImpl@4da602fc (name: handleAssumptionViolatedExceptions, etype: boolean)|
+| | |                                    | | |-refactoringDiffMM.impl.EAttributeImpl@2a8d39c4 (name: handleAssertionErrors, etype: boolean)|
+| | |                                    | | |-refactoringDiffMM.impl.EOperationImpl@fb9c7aa (name: handleAssertionErrors(), eparameters: , etype: ExpectedException, methodBody: return; this; expression statement; ASSIGN; handleAssertionErrors; boolean literal; , __idKDM: handleAssertionErrors______)|
+| | |                                    | | |-refactoringDiffMM.impl.EOperationImpl@4c398c80 (name: handleAssumptionViolatedExceptions(), eparameters: , etype: ExpectedException, methodBody: return; this; expression statement; ASSIGN; handleAssumptionViolatedExceptions; boolean literal; , __idKDM: handleAssumptionViolatedExceptions______)|
+| | |                                    | | |-refactoringDiffMM.impl.EOperationImpl@5dd91bca (name: optionallyHandleException(), eparameters: e:Throwable, handleException:boolean, null:Throwable, etype: void, methodBody: if; throw; expression statement; method invocation; handleException; , __idKDM: optionallyHandleException___Throwable__boolean__Throwable___)|
+| | |                                    | | |-refactoringDiffMM.impl.EOperationImpl@40cb698e (name: handleException(), eparameters: e:Throwable, null:Throwable, etype: void, methodBody: expression statement; method invocation; assertThat; if; throw; EQUALS; null; , __idKDM: handleException___Throwable__Throwable___)|
+| |-refactoringDiffMM.impl.InterfaceImpl@7b8233cd (name: TestRule, extends: null, packageName: null)| |-refactoringDiffMM.impl.InterfaceImpl@a5bd950 (name: TestRule, extends: null, packageName: null)|
+| |                                      |                                        |
+|                                        | refactoringDiffMM.impl.EPackageImpl@1cbf6e72 (name: )|
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+---- REFERENCE CHANGES: -------------------------------------------------------
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@4212a0c8 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@698122b2 (name: HasExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@3b2c0e88 (name: throwsNullPointerException(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; expression statement; method invocation; expect; type literal; , __idKDM: throwsNullPointerException______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@698122b2 (name: HasExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@c1bd0be (name: throwsIllegalArgumentExceptionWithCause(), eparameters: , etype: void, methodBody: throw; class instance creation; IllegalArgumentException; string literal; expression statement; method invocation; expectCause; method invocation; is; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; variable declaration; class instance creation; NullPointerException; string literal; expectedCause; , __idKDM: throwsIllegalArgumentExceptionWithCause______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@698122b2 (name: HasExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@476b0ae6 (name: throwsIllegalArgumentExceptionWithCauseExplicitlyNull(), eparameters: , etype: void, methodBody: throw; class instance creation; IllegalArgumentException; string literal; expression statement; method invocation; expectCause; method invocation; nullValue; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; , __idKDM: throwsIllegalArgumentExceptionWithCauseExplicitlyNull______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@698122b2 (name: HasExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@2262b621 (name: throwsNothing(), eparameters: , etype: void, methodBody: , __idKDM: throwsNothing______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@698122b2 (name: HasExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@f667fe (name: throwsNullPointerExceptionWithMessage(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; , __idKDM: throwsNullPointerExceptionWithMessage______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@698122b2 (name: HasExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@3eeb318f (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@1c6804cd (name: HasWrongExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@20a14b55 (name: throwsNullPointerException(), eparameters: , etype: void, methodBody: throw; class instance creation; IllegalArgumentException; expression statement; method invocation; expect; type literal; , __idKDM: throwsNullPointerException______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@1c6804cd (name: HasWrongExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@6da00fb9 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@39ad977d (name: HasWrongMessage, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@2fc0cc3 (name: throwsNullPointerException(), eparameters: , etype: void, methodBody: throw; class instance creation; IllegalArgumentException; string literal; expression statement; method invocation; expectMessage; string literal; , __idKDM: throwsNullPointerException______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@39ad977d (name: HasWrongMessage, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@75b25825 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@20f12539 (name: WronglyExpectsException, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@42e3ede4 (name: doesntThrowNullPointerException(), eparameters: , etype: void, methodBody: expression statement; method invocation; expect; type literal; , __idKDM: doesntThrowNullPointerException______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@20f12539 (name: WronglyExpectsException, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@3a3e4aff (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@13cf7d52 (name: WronglyExpectsExceptionMessage, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@183e8023 (name: doesntThrowAnything(), eparameters: , etype: void, methodBody: expression statement; method invocation; expectMessage; string literal; , __idKDM: doesntThrowAnything______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@13cf7d52 (name: WronglyExpectsExceptionMessage, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@3f0846c6 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@57459491 (name: ExpectsSubstring, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@77a98a6a (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; string literal; , __idKDM: throwsMore______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@57459491 (name: ExpectsSubstring, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@3e10dc6 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@78fbff54 (name: ExpectsSubstringNullMessage, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@7e22550a (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; expression statement; method invocation; expectMessage; string literal; , __idKDM: throwsMore______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@78fbff54 (name: ExpectsSubstringNullMessage, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@62452cc9 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@45e37a7e (name: ExpectsMessageMatcher, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@6941827a (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; method invocation; startsWith; string literal; , __idKDM: throwsMore______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@45e37a7e (name: ExpectsMessageMatcher, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@5bc9ba1d (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@5a7005d (name: ExpectedMessageMatcherFails, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@1021f6c9 (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; method invocation; startsWith; string literal; , __idKDM: throwsMore______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@5a7005d (name: ExpectedMessageMatcherFails, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@488eb7f2 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@7516e4e5 (name: ExpectsMatcher, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@5e81e5ac (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expect; method invocation; any; type literal; , __idKDM: throwsMore______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@7516e4e5 (name: ExpectsMatcher, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@3fa2213 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@4189d70b (name: ExpectsMultipleMatchers, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@338494fa (name: thrown, etype: ExpectedException) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@4189d70b (name: ExpectsMultipleMatchers, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@505a9d7c (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; , __idKDM: throwsMore______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@4189d70b (name: ExpectsMultipleMatchers, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@6035b93b (name: EXPECTED_CAUSE, etype: NullPointerException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@6f0b0a5e (name: HasWrongCause, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@320de594 (name: thrown, etype: ExpectedException) has been moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@6f0b0a5e (name: HasWrongCause, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@3dd1dc90 (name: throwWithCause(), eparameters: , etype: void, methodBody: throw; class instance creation; IllegalArgumentException; class instance creation; NullPointerException; string literal; string literal; expression statement; method invocation; expectCause; method invocation; is; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; , __idKDM: throwWithCause______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@6f0b0a5e (name: HasWrongCause, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@3542162a (name: failsWithWrongCause(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; method invocation; toString; method invocation; testResult; type literal; , __idKDM: failsWithWrongCause______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@62163b39 (name: expectedExceptionPasses(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; , __idKDM: expectedExceptionPasses______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@20a8a64e (name: unExpectedExceptionFails(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; , __idKDM: unExpectedExceptionFails______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@62f4ff3b (name: wrongMessageFails(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; and; method invocation; hasSingleFailureContaining; string literal; method invocation; both; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; , __idKDM: wrongMessageFails______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@1698fc68 (name: failsIfExceptionNeverComes(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; , __idKDM: failsIfExceptionNeverComes______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@4504d271 (name: failsIfExceptionMessageNeverComes(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; , __idKDM: failsIfExceptionMessageNeverComes______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@207b8649 (name: passesWithSubstringMethod(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; , __idKDM: passesWithSubstringMethod______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@65b3a85a (name: failsWithNullExceptionMessage(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; , __idKDM: failsWithNullExceptionMessage______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@34997338 (name: succeedsWithMessageMatcher(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; , __idKDM: succeedsWithMessageMatcher______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@57eda880 (name: startsWith(), eparameters: prefix:String, etype: Matcher<String>, methodBody: return; class instance creation; ; Anonymous type; , __idKDM: startsWith___String___) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@2b5825fa (name: failsWithMatcher(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; , __idKDM: failsWithMatcher______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@53d1b9b3 (name: succeedsWithMatcher(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; isSuccessful; method invocation; testResult; type literal; , __idKDM: succeedsWithMatcher______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EOperationImpl@2cae1042 (name: failsWithMultipleMatchers(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; string literal; method invocation; testResult; type literal; , __idKDM: failsWithMultipleMatchers______) has been remotely(RIGHT) deleted from reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@6f0b0a5e (name: HasWrongCause, extends: null, implements: null, isAbstract: false, packageName: null) has been added to reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@163d04ff (name: HasExpectedException, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@788fcafb (name: HasWrongExpectedException, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@1698ee84 (name: HasWrongMessage, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@328cf0e1 (name: WronglyExpectsException, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@201b6b6f (name: WronglyExpectsExceptionMessage, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@45efc20d (name: ExpectsSubstring, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@b78a709 (name: ExpectsSubstringNullMessage, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@15cafec7 (name: ExpectsMessageMatcher, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@42f48531 (name: ExpectedMessageMatcherFails, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@79145d5a (name: ExpectsMatcher, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@6821ea29 (name: ExpectsMultipleMatchers, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@2c7d121c (eProxyURI: file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/39d30b21b3a632f158274c6937c13499cd0758f3_CA_ref.xmi#Statement) has been added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@3b7ff809 (name: ExpectedExceptionStatement, extends: Statement, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@758c83d8 (name: Statement, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@3b7ff809 (name: ExpectedExceptionStatement, extends: Statement, implements: null, isAbstract: false, packageName: null)
+Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@65aa6596 (eProxyURI: file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/39d30b21b3a632f158274c6937c13499cd0758f3_CA_ref.xmi#Statement) has been remotely(RIGHT) added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@3b7ff809 (name: ExpectedExceptionStatement, extends: Statement, implements: null, isAbstract: false, packageName: null)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@758c83d8 (name: Statement, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@3b7ff809 (name: ExpectedExceptionStatement, extends: Statement, implements: null, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@4da602fc (name: handleAssumptionViolatedExceptions, etype: boolean) has been remotely(RIGHT) added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@abf688e (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@2a8d39c4 (name: handleAssertionErrors, etype: boolean) has been remotely(RIGHT) added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@abf688e (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@686449f9 (name: expect(), eparameters: matcher:Matcher<?>, etype: void, methodBody: if; expression statement; ASSIGN; method invocation; and; method invocation; both; expression statement; ASSIGN; cast; Matcher<Object>; EQUALS; null; , __idKDM: expect___Matcher______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@abf688e (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@68b6f0d6 (name: expectMessage(), eparameters: substring:String, etype: void, methodBody: expression statement; method invocation; expectMessage; method invocation; containsString; , __idKDM: expectMessage___String___) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@abf688e (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@aa549e5 (name: expectCause(), eparameters: expectedCause:Matcher<? extends Throwable>, etype: void, methodBody: expression statement; method invocation; expect; method invocation; hasCause; , __idKDM: expectCause___Matcher___extends_Throwable____) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@abf688e (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@5c00384f (name: hasCause(), eparameters: causeMatcher:Matcher<? extends Throwable>, etype: Matcher<Throwable>, methodBody: return; class instance creation; ; Anonymous type; , __idKDM: hasCause___Matcher___extends_Throwable____) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@abf688e (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@fb9c7aa (name: handleAssertionErrors(), eparameters: , etype: ExpectedException, methodBody: return; this; expression statement; ASSIGN; handleAssertionErrors; boolean literal; , __idKDM: handleAssertionErrors______) has been remotely(RIGHT) added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@abf688e (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@4c398c80 (name: handleAssumptionViolatedExceptions(), eparameters: , etype: ExpectedException, methodBody: return; this; expression statement; ASSIGN; handleAssumptionViolatedExceptions; boolean literal; , __idKDM: handleAssumptionViolatedExceptions______) has been remotely(RIGHT) added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@abf688e (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@5dd91bca (name: optionallyHandleException(), eparameters: e:Throwable, handleException:boolean, null:Throwable, etype: void, methodBody: if; throw; expression statement; method invocation; handleException; , __idKDM: optionallyHandleException___Throwable__boolean__Throwable___) has been remotely(RIGHT) added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@abf688e (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null)
+
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@40cb698e (name: handleException(), eparameters: e:Throwable, null:Throwable, etype: void, methodBody: expression statement; method invocation; assertThat; if; throw; EQUALS; null; , __idKDM: handleException___Throwable__Throwable___) has been remotely(RIGHT) added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@abf688e (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null)
+
+ [MOVE] value refactoringDiffMM.impl.EClassImpl@abf688e (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null) has been moved from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@40f70521 (name: pkg)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@56a4479a (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@40f70521 (name: pkg)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@758c83d8 (name: Statement, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@40f70521 (name: pkg)
+
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@758c83d8 (name: Statement, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@40f70521 (name: pkg)
+
+ [MOVE] value refactoringDiffMM.impl.EClassImpl@6aecbb8d (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null) has been remotely(RIGHT) moved from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@1cbf6e72 (name: )
+
+ [MOVE] value refactoringDiffMM.impl.InterfaceImpl@a5bd950 (name: TestRule, extends: null, packageName: null) has been remotely(RIGHT) moved from reference interfaces
+ of object refactoringDiffMM.impl.EPackageImpl@1cbf6e72 (name: )
+
+---- ATTRIBUTE CHANGES: -------------------------------------------------------
+
+ value if; throw; class instance creation; Error; PLUS; method invocation; toString; string literal; NOT_EQUALS; null; try; catch; catch; e; return; expression statement; method invocation; handleException; catch; catch; e; return; expression statement; method invocation; optionallyHandleException; catch; catch; e; return; expression statement; method invocation; optionallyHandleException; expression statement; method invocation; evaluate;  has been remotely(RIGHT) changed from attribute methodBody
+ of object refactoringDiffMM.impl.EOperationImpl@3f792b9b (name: evaluate(), eparameters: null:Throwable, etype: void, methodBody: if; throw; class instance creation; Error; PLUS; method invocation; toString; string literal; NOT_EQUALS; null; try; catch; catch; e; return; expression statement; method invocation; assertThat; if; throw; EQUALS; null; expression statement; method invocation; evaluate; , __idKDM: evaluate___Throwable___)
+
+
+
+---- REAL CONFLICTS: -------------------------------------------------------
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EAttributeImpl@338494fa (name: thrown, etype: ExpectedException) has been remotely(RIGHT) deleted from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@4189d70b (name: ExpectsMultipleMatchers, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [MOVE] value refactoringDiffMM.impl.EAttributeImpl@320de594 (name: thrown, etype: ExpectedException) has been moved from reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@6f0b0a5e (name: HasWrongCause, extends: null, implements: null, isAbstract: false, packageName: null)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@163d04ff (name: HasExpectedException, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@4212a0c8 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@698122b2 (name: HasExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@3b2c0e88 (name: throwsNullPointerException(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; expression statement; method invocation; expect; type literal; , __idKDM: throwsNullPointerException______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@698122b2 (name: HasExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@c1bd0be (name: throwsIllegalArgumentExceptionWithCause(), eparameters: , etype: void, methodBody: throw; class instance creation; IllegalArgumentException; string literal; expression statement; method invocation; expectCause; method invocation; is; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; variable declaration; class instance creation; NullPointerException; string literal; expectedCause; , __idKDM: throwsIllegalArgumentExceptionWithCause______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@698122b2 (name: HasExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@476b0ae6 (name: throwsIllegalArgumentExceptionWithCauseExplicitlyNull(), eparameters: , etype: void, methodBody: throw; class instance creation; IllegalArgumentException; string literal; expression statement; method invocation; expectCause; method invocation; nullValue; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; , __idKDM: throwsIllegalArgumentExceptionWithCauseExplicitlyNull______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@698122b2 (name: HasExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@788fcafb (name: HasWrongExpectedException, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@3eeb318f (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@1c6804cd (name: HasWrongExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@20a14b55 (name: throwsNullPointerException(), eparameters: , etype: void, methodBody: throw; class instance creation; IllegalArgumentException; expression statement; method invocation; expect; type literal; , __idKDM: throwsNullPointerException______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@1c6804cd (name: HasWrongExpectedException, extends: null, implements: null, isAbstract: false, packageName: null)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@1698ee84 (name: HasWrongMessage, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@6da00fb9 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@39ad977d (name: HasWrongMessage, extends: null, implements: null, isAbstract: false, packageName: null)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@328cf0e1 (name: WronglyExpectsException, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@75b25825 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@20f12539 (name: WronglyExpectsException, extends: null, implements: null, isAbstract: false, packageName: null)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@201b6b6f (name: WronglyExpectsExceptionMessage, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@3a3e4aff (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@13cf7d52 (name: WronglyExpectsExceptionMessage, extends: null, implements: null, isAbstract: false, packageName: null)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@45efc20d (name: ExpectsSubstring, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@3f0846c6 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@57459491 (name: ExpectsSubstring, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@77a98a6a (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; string literal; , __idKDM: throwsMore______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@57459491 (name: ExpectsSubstring, extends: null, implements: null, isAbstract: false, packageName: null)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@b78a709 (name: ExpectsSubstringNullMessage, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@3e10dc6 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@78fbff54 (name: ExpectsSubstringNullMessage, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@7e22550a (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; expression statement; method invocation; expectMessage; string literal; , __idKDM: throwsMore______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@78fbff54 (name: ExpectsSubstringNullMessage, extends: null, implements: null, isAbstract: false, packageName: null)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@15cafec7 (name: ExpectsMessageMatcher, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@62452cc9 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@45e37a7e (name: ExpectsMessageMatcher, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@6941827a (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; method invocation; startsWith; string literal; , __idKDM: throwsMore______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@45e37a7e (name: ExpectsMessageMatcher, extends: null, implements: null, isAbstract: false, packageName: null)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@42f48531 (name: ExpectedMessageMatcherFails, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@5bc9ba1d (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@5a7005d (name: ExpectedMessageMatcherFails, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@1021f6c9 (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expectMessage; method invocation; startsWith; string literal; , __idKDM: throwsMore______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@5a7005d (name: ExpectedMessageMatcherFails, extends: null, implements: null, isAbstract: false, packageName: null)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@79145d5a (name: ExpectsMatcher, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@488eb7f2 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@7516e4e5 (name: ExpectsMatcher, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@5e81e5ac (name: throwsMore(), eparameters: , etype: void, methodBody: throw; class instance creation; NullPointerException; string literal; expression statement; method invocation; expect; method invocation; any; type literal; , __idKDM: throwsMore______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@7516e4e5 (name: ExpectsMatcher, extends: null, implements: null, isAbstract: false, packageName: null)
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@6821ea29 (name: ExpectsMultipleMatchers, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EAttributeImpl@3fa2213 (name: thrown, etype: ExpectedException) has been added to reference eattributes
+ of object refactoringDiffMM.impl.EClassImpl@4189d70b (name: ExpectsMultipleMatchers, extends: null, implements: null, isAbstract: false, packageName: null)
+REAL conflict:
+	
+ [MOVE] value refactoringDiffMM.impl.EClassImpl@abf688e (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null) has been moved from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@40f70521 (name: pkg)
+	
+ [MOVE] value refactoringDiffMM.impl.EClassImpl@6aecbb8d (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null) has been remotely(RIGHT) moved from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@1cbf6e72 (name: )
+REAL conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@56a4479a (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@40f70521 (name: pkg)
+	
+ [ADD] value refactoringDiffMM.impl.EOperationImpl@3542162a (name: failsWithWrongCause(), eparameters: , etype: void, methodBody: expression statement; method invocation; assertThat; method invocation; hasSingleFailureContaining; method invocation; toString; method invocation; testResult; type literal; , __idKDM: failsWithWrongCause______) has been added to reference eoperations
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+	
+ [ADD] value refactoringDiffMM.impl.EClassImpl@6f0b0a5e (name: HasWrongCause, extends: null, implements: null, isAbstract: false, packageName: null) has been added to reference nested_classes
+ of object refactoringDiffMM.impl.EClassImpl@774698ab (name: ExpectedExceptionRuleTest, extends: null, implements: null, isAbstract: false, packageName: null)
+
+
+---- PSEUDO CONFLICTS: -------------------------------------------------------
+PSEUDO conflict:
+	Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@2c7d121c (eProxyURI: file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/39d30b21b3a632f158274c6937c13499cd0758f3_CA_ref.xmi#Statement) has been added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@3b7ff809 (name: ExpectedExceptionStatement, extends: Statement, implements: null, isAbstract: false, packageName: null)
+	Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.originValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.leftValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+Couldn't set fineDiffReference.rightValueMatch :java.lang.NullPointerException
+
+ [ADD] value refactoringDiffMM.impl.EClassImpl@65aa6596 (eProxyURI: file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/dsModels/39d30b21b3a632f158274c6937c13499cd0758f3_CA_ref.xmi#Statement) has been remotely(RIGHT) added to reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@3b7ff809 (name: ExpectedExceptionStatement, extends: Statement, implements: null, isAbstract: false, packageName: null)
+PSEUDO conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@758c83d8 (name: Statement, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@3b7ff809 (name: ExpectedExceptionStatement, extends: Statement, implements: null, isAbstract: false, packageName: null)
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@758c83d8 (name: Statement, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference esupertypes
+ of object refactoringDiffMM.impl.EClassImpl@3b7ff809 (name: ExpectedExceptionStatement, extends: Statement, implements: null, isAbstract: false, packageName: null)
+PSEUDO conflict:
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@758c83d8 (name: Statement, extends: null, implements: null, isAbstract: false, packageName: null) has been deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@40f70521 (name: pkg)
+	
+ [DELETE] value refactoringDiffMM.impl.EClassImpl@758c83d8 (name: Statement, extends: null, implements: null, isAbstract: false, packageName: null) has been remotely(RIGHT) deleted from reference eclassifiers
+ of object refactoringDiffMM.impl.EPackageImpl@40f70521 (name: pkg)
+MOVE3: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+MOVE-Right: Couldn't set.refactoringDiffMM.impl.InterfaceImpl@a5bd950 (name: TestRule, extends: null, packageName: null)
+Cannot setDiffKind(...) 
+ : Index 0 out of bounds for length 0
+
+ setChangeStatus(...): Index 0 out of bounds for length 0 --> changeStatus / refactoringDiffMM.impl.EClassImpl@4a8ab068 (name: ExpectedException, extends: null, implements: TestRule, isAbstract: false, packageName: null)
+Succeed! --> diff012 model saved at: file:/D:/_Gitlab/dsmmerge/ca.umontreal.geodes.dsmcompare/casesMergeConflict/refactoring/diffModels/39d30b21b3a632f158274c6937c13499cd0758f3_dsmDiff.xmi
+End of Generating DSMDiff!

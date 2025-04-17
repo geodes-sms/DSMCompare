@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="acmsrc" nsURI="www.acmsrc.org" nsPrefix="acmsrc">
+  <eClassifiers xsi:type="ecore:EClass" name="Game">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="score" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//Pacman" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diffentities" upperBound="-1"
+        eType="#//DiffGame_entities"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pacman">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialPosition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffPacman" eSuperTypes="#//Pacman">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" eType="#//ClassDiffKind"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="new_initialPosition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffGame" eSuperTypes="#//Game"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="ClassDiffKind">
+    <eLiterals name="ADD"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AscDiffKind">
+    <eLiterals name="ADD"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiffGame_entities">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diff_kind" eType="#//AscDiffKind"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//DiffPacman"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rule">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constraints" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pattern" eType="#//Pattern_Game"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pattern_Game" eSuperTypes="#//Game">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pattern_Pacman" eSuperTypes="#//Pacman">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID_Pattern" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NAC_Group" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

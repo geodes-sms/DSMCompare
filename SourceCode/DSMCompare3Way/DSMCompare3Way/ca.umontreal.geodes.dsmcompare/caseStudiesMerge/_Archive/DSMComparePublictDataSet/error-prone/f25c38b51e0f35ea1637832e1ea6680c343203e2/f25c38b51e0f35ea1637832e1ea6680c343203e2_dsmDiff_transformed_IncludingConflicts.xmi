@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM">
+  <refactoringDiffMM:EPackage name="pkg">
+    <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="CovariantEquals" packageName="com.google.errorprone.refactors" diff_kind_Left="DELETE" diff_kind_Right="MODIFY" changeStatus="CONTRADICTING" new_packageName_Left=" com.google.errorprone.bugpatterns">
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="refactor()" eparameters="methodTree:MethodTree, state:VisitorState" etype="Refactor" methodBody="return; class instance creation; Object; variable declaration; fix; " __idKDM="refactor___MethodTree__VisitorState___" diff_kind_Left="MODIFY" diff_kind_Right="DELETE" changeStatus="CONTRADICTING" new_name_Left="describe()" new_methodBody_Left="return; class instance creation; Object; variable declaration; changeMethodDecl; variable declaration; parameterName; variable declaration; parameterType; "/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="matches()" eparameters="methodTree:MethodTree, state:VisitorState" etype="boolean" methodBody="return; method invocation; matches; method invocation; allOf; method invocation; enclosingClass; method invocation; not; method invocation; hasMethod; method invocation; allOf; method invocation; methodHasParameters; method invocation; variableType; method invocation; isSameType; field access; objectType; method invocation; getSymtab; method invocation; methodReturns; field access; booleanType; method invocation; getSymtab; method invocation; methodIsNamed; string literal; type literal; method invocation; methodHasParameters; method invocation; variableType; method invocation; isSameType; method invocation; findEnclosingClass; method invocation; methodReturns; field access; booleanType; method invocation; getSymtab; method invocation; methodIsNamed; string literal; method invocation; methodHasVisibility; " __idKDM="matches___MethodTree__VisitorState___" diff_kind_Right="DELETE"/>
+      <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="CovariantEquals()" eparameters="" methodBody="" __idKDM="CovariantEquals______" diff_kind_Right="DELETE"/>
+      <nested_classes xsi:type="refactoringDiffMM:DiffEClass" name="Scanner" extends="Scanner" diff_kind_Right="DELETE">
+        <eattributes xsi:type="refactoringDiffMM:DiffEAttribute" name="matcher" etype="CovariantEquals" diff_kind_Right="DELETE"/>
+        <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="visitMethod()" eparameters="node:MethodTree, visitorState:VisitorState" etype="Void" methodBody="return; super method invocation; visitMethod; expression statement; method invocation; evaluateMatch; " __idKDM="visitMethod___MethodTree__VisitorState___" diff_kind_Right="DELETE"/>
+      </nested_classes>
+    </eclassifiers>
+  </refactoringDiffMM:EPackage>
+  <refactoringDiffMM:SemanticDiff name="renameMethod" SemanticObject_EClass="CovariantEquals" SemanticObject_EOperation="refactor()" SemanticObject_EPackage="pkg" author="LEFT"/>
+  <refactoringDiffMM:SemanticDiff name="changePaclage" SemanticObject_EClass="CovariantEquals" SemanticObject_EPackage="pkg" author="LEFT"/>
+  <refactoringDiffMM:SemanticDiff name="moveClass" SemanticObject_EClass="CovariantEquals" SemanticObject_EPackage="pkg" author="LEFT"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEClass.[CovariantEquals].changeStatus - CONTRADICTING ( DELETE | MODIFY )" SemanticObject_DiffEClass="CovariantEquals"/>
+  <refactoringDiffMM:SemanticConflict name="DiffEOperation.[refactor()].changeStatus - CONTRADICTING ( MODIFY | DELETE )" SemanticObject_DiffEOperation="refactor()"/>
+  <refactoringDiffMM:SemanticConflict name="renameMethod - DiffEClass.[CovariantEquals] - DiffEClass.[CovariantEquals].CONTRADICTING ( DELETE | MODIFY )" SemanticObject_DiffEClass="CovariantEquals" semanticdiffs="/1"/>
+  <refactoringDiffMM:SemanticConflict name="renameMethod - DiffEOperation.[refactor()] - DiffEOperation.[refactor()].CONTRADICTING ( MODIFY | DELETE )" SemanticObject_DiffEOperation="refactor()" semanticdiffs="/1"/>
+  <refactoringDiffMM:SemanticConflict name="changePaclage - DiffEClass.[CovariantEquals] - DiffEClass.[CovariantEquals].CONTRADICTING ( DELETE | MODIFY )" SemanticObject_DiffEClass="CovariantEquals" semanticdiffs="/2"/>
+  <refactoringDiffMM:SemanticConflict name="moveClass - moveClass[CovariantEquals| pkg] - CONTRADICTING" semanticdiffs="/3"/>
+  <refactoringDiffMM:SemanticConflict name="moveClass - DiffEClass.[CovariantEquals] - DiffEClass.[CovariantEquals].CONTRADICTING ( DELETE | MODIFY )" SemanticObject_DiffEClass="CovariantEquals" semanticdiffs="/3"/>
+</xmi:XMI>

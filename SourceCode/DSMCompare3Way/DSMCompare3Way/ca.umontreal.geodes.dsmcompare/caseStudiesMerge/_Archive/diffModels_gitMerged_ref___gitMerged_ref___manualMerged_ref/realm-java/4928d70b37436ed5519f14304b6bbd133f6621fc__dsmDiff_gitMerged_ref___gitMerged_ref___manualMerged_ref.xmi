@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoringDiffMM:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" name="io.realm">
+  <eclassifiers name="TestHelper">
+    <eoperations name="populateForMultiSort()" eparameters="testRealm:Realm" etype="void" methodBody="expression statement; method invocation; commitTransaction; expression statement; method invocation; setColumnString; string literal; expression statement; method invocation; setColumnLong; number literal; variable declaration; object3; expression statement; method invocation; setColumnString; string literal; expression statement; method invocation; setColumnLong; number literal; variable declaration; object2; expression statement; method invocation; setColumnString; string literal; expression statement; method invocation; setColumnLong; number literal; variable declaration; object1; expression statement; method invocation; clear; type literal; expression statement; method invocation; beginTransaction; " __idKDM="populateForMultiSort___Realm___"/>
+    <eoperations name="streamToString()" eparameters="in:InputStream, null:IOException" etype="String" methodBody="return; method invocation; toString; try; if; expression statement; method invocation; close; NOT_EQUALS; br; null; while; expression statement; method invocation; append; NOT_EQUALS; null; parenthesized; ASSIGN; line; method invocation; readLine; expression statement; ASSIGN; br; class instance creation; BufferedReader; class instance creation; InputStreamReader; variable declaration; line; variable declaration; class instance creation; StringBuilder; sb; variable declaration; br; " __idKDM="streamToString___InputStream__IOException___"/>
+    <nested_classes name="StubInputStream" extends="InputStream" esupertypes="InputStream">
+      <eoperations name="read()" eparameters="null:IOException" etype="int" methodBody="return; number literal; " __idKDM="read___IOException___"/>
+    </nested_classes>
+  </eclassifiers>
+  <eclassifiers name="TestHelper">
+    <eoperations name="populateForMultiSort()" eparameters="testRealm:Realm" etype="void" methodBody="expression statement; method invocation; commitTransaction; expression statement; method invocation; setColumnString; string literal; expression statement; method invocation; setColumnLong; number literal; variable declaration; object3; expression statement; method invocation; setColumnString; string literal; expression statement; method invocation; setColumnLong; number literal; variable declaration; object2; expression statement; method invocation; setColumnString; string literal; expression statement; method invocation; setColumnLong; number literal; variable declaration; object1; expression statement; method invocation; clear; type literal; expression statement; method invocation; beginTransaction; " __idKDM="populateForMultiSort___Realm___"/>
+  </eclassifiers>
+  <eclassifiers name="InputStream" implements="Closeable" interfaces="Closeable"/>
+  <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="TestHelper" diff_kind_Left="ADD" changeStatus="CONTRADICTING">
+    <eoperations xsi:type="refactoringDiffMM:DiffEOperation" name="populateForMultiSort()" eparameters="testRealm:Realm" etype="void" methodBody="expression statement; method invocation; commitTransaction; expression statement; method invocation; setColumnString; string literal; expression statement; method invocation; setColumnLong; number literal; variable declaration; object3; expression statement; method invocation; setColumnString; string literal; expression statement; method invocation; setColumnLong; number literal; variable declaration; object2; expression statement; method invocation; setColumnString; string literal; expression statement; method invocation; setColumnLong; number literal; variable declaration; object1; expression statement; method invocation; clear; type literal; expression statement; method invocation; beginTransaction; " __idKDM="populateForMultiSort___Realm___" diff_kind_Left="ADD"/>
+  </eclassifiers>
+  <interfaces name="Closeable" extends="AutoCloseable" esupertypes="AutoCloseable"/>
+  <interfaces name="AutoCloseable"/>
+  <diffeclassifiers diff_kind_Right="DELETE" diff_Group="DG-Move-3"/>
+  <diffeclassifiers diff_kind_Right="DELETE" diff_Group="DG-Move-6"/>
+  <diffinterfaces diff_kind_Right="DELETE" diff_Group="DG-Move-1"/>
+  <diffinterfaces diff_kind_Right="DELETE" diff_Group="DG-Move-4"/>
+</refactoringDiffMM:EPackage>

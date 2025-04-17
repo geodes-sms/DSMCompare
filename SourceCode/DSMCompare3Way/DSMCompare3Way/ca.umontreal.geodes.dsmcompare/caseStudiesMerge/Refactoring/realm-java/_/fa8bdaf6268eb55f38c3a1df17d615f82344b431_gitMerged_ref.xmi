@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <interfaces name="TableOrView">
+    <eoperations name="clear()" etype="void" methodBody="" __idKDM="clear______"/>
+    <eoperations name="close()" etype="void" methodBody="" __idKDM="close______"/>
+    <eoperations name="size()" etype="long" methodBody="" __idKDM="size______"/>
+    <eoperations name="isEmpty()" etype="boolean" methodBody="" __idKDM="isEmpty______"/>
+    <eoperations name="remove()" eparameters="index:long" etype="void" methodBody="" __idKDM="remove___long___"/>
+    <eoperations name="removeLast()" etype="void" methodBody="" __idKDM="removeLast______"/>
+    <eoperations name="getColumnCount()" etype="long" methodBody="" __idKDM="getColumnCount______"/>
+    <eoperations name="getColumnName()" eparameters="columnIndex:long" etype="String" methodBody="" __idKDM="getColumnName___long___"/>
+    <eoperations name="getColumnIndex()" eparameters="name:String" etype="long" methodBody="" __idKDM="getColumnIndex___String___"/>
+    <eoperations name="getColumnType()" eparameters="columnIndex:long" etype="ColumnType" methodBody="" __idKDM="getColumnType___long___"/>
+    <eoperations name="getLong()" eparameters="columnIndex:long, rowIndex:long" etype="long" methodBody="" __idKDM="getLong___long__long___"/>
+    <eoperations name="getBoolean()" eparameters="columnIndex:long, rowIndex:long" etype="boolean" methodBody="" __idKDM="getBoolean___long__long___"/>
+    <eoperations name="getFloat()" eparameters="columnIndex:long, rowIndex:long" etype="float" methodBody="" __idKDM="getFloat___long__long___"/>
+    <eoperations name="getDouble()" eparameters="columnIndex:long, rowIndex:long" etype="double" methodBody="" __idKDM="getDouble___long__long___"/>
+    <eoperations name="getString()" eparameters="columnIndex:long, rowIndex:long" etype="String" methodBody="" __idKDM="getString___long__long___"/>
+    <eoperations name="getDate()" eparameters="columnIndex:long, rowIndex:long" etype="Date" methodBody="" __idKDM="getDate___long__long___"/>
+    <eoperations name="getBinaryByteArray()" eparameters="columnIndex:long, rowIndex:long" etype="byte[]" methodBody="" __idKDM="getBinaryByteArray___long__long___"/>
+    <eoperations name="getMixed()" eparameters="columnIndex:long, rowIndex:long" etype="Mixed" methodBody="" __idKDM="getMixed___long__long___"/>
+    <eoperations name="getMixedType()" eparameters="columnIndex:long, rowIndex:long" etype="ColumnType" methodBody="" __idKDM="getMixedType___long__long___"/>
+    <eoperations name="getSubtable()" eparameters="columnIndex:long, rowIndex:long" etype="Table" methodBody="" __idKDM="getSubtable___long__long___"/>
+    <eoperations name="clearSubtable()" eparameters="columnIndex:long, rowIndex:long" etype="void" methodBody="" __idKDM="clearSubtable___long__long___"/>
+    <eoperations name="getSubtableSize()" eparameters="columnIndex:long, rowIndex:long" etype="long" methodBody="" __idKDM="getSubtableSize___long__long___"/>
+    <eoperations name="setLong()" eparameters="columnIndex:long, rowIndex:long, value:long" etype="void" methodBody="" __idKDM="setLong___long__long__long___"/>
+    <eoperations name="setBoolean()" eparameters="columnIndex:long, rowIndex:long, value:boolean" etype="void" methodBody="" __idKDM="setBoolean___long__long__boolean___"/>
+    <eoperations name="setFloat()" eparameters="columnIndex:long, rowIndex:long, value:float" etype="void" methodBody="" __idKDM="setFloat___long__long__float___"/>
+    <eoperations name="setDouble()" eparameters="columnIndex:long, rowIndex:long, value:double" etype="void" methodBody="" __idKDM="setDouble___long__long__double___"/>
+    <eoperations name="setString()" eparameters="columnIndex:long, rowIndex:long, value:String" etype="void" methodBody="" __idKDM="setString___long__long__String___"/>
+    <eoperations name="setBinaryByteArray()" eparameters="columnIndex:long, rowIndex:long, data:byte[]" etype="void" methodBody="" __idKDM="setBinaryByteArray___long__long__byte_____"/>
+    <eoperations name="setDate()" eparameters="columnIndex:long, rowIndex:long, date:Date" etype="void" methodBody="" __idKDM="setDate___long__long__Date___"/>
+    <eoperations name="setMixed()" eparameters="columnIndex:long, rowIndex:long, data:Mixed" etype="void" methodBody="" __idKDM="setMixed___long__long__Mixed___"/>
+    <eoperations name="adjust()" eparameters="columnIndex:long, value:long" etype="void" methodBody="" __idKDM="adjust___long__long___"/>
+    <eoperations name="sumInt()" eparameters="columnIndex:long" etype="long" methodBody="" __idKDM="sumInt___long___"/>
+    <eoperations name="maximumInt()" eparameters="columnIndex:long" etype="long" methodBody="" __idKDM="maximumInt___long___"/>
+    <eoperations name="minimumInt()" eparameters="columnIndex:long" etype="long" methodBody="" __idKDM="minimumInt___long___"/>
+    <eoperations name="averageInt()" eparameters="columnIndex:long" etype="double" methodBody="" __idKDM="averageInt___long___"/>
+    <eoperations name="sumFloat()" eparameters="columnIndex:long" etype="double" methodBody="" __idKDM="sumFloat___long___"/>
+    <eoperations name="maximumFloat()" eparameters="columnIndex:long" etype="float" methodBody="" __idKDM="maximumFloat___long___"/>
+    <eoperations name="minimumFloat()" eparameters="columnIndex:long" etype="float" methodBody="" __idKDM="minimumFloat___long___"/>
+    <eoperations name="averageFloat()" eparameters="columnIndex:long" etype="double" methodBody="" __idKDM="averageFloat___long___"/>
+    <eoperations name="sumDouble()" eparameters="columnIndex:long" etype="double" methodBody="" __idKDM="sumDouble___long___"/>
+    <eoperations name="maximumDouble()" eparameters="columnIndex:long" etype="double" methodBody="" __idKDM="maximumDouble___long___"/>
+    <eoperations name="minimumDouble()" eparameters="columnIndex:long" etype="double" methodBody="" __idKDM="minimumDouble___long___"/>
+    <eoperations name="averageDouble()" eparameters="columnIndex:long" etype="double" methodBody="" __idKDM="averageDouble___long___"/>
+    <eoperations name="findFirstLong()" eparameters="columnIndex:long, value:long" etype="long" methodBody="" __idKDM="findFirstLong___long__long___"/>
+    <eoperations name="findFirstBoolean()" eparameters="columnIndex:long, value:boolean" etype="long" methodBody="" __idKDM="findFirstBoolean___long__boolean___"/>
+    <eoperations name="findFirstFloat()" eparameters="columnIndex:long, value:float" etype="long" methodBody="" __idKDM="findFirstFloat___long__float___"/>
+    <eoperations name="findFirstDouble()" eparameters="columnIndex:long, value:double" etype="long" methodBody="" __idKDM="findFirstDouble___long__double___"/>
+    <eoperations name="findFirstDate()" eparameters="columnIndex:long, value:Date" etype="long" methodBody="" __idKDM="findFirstDate___long__Date___"/>
+    <eoperations name="findFirstString()" eparameters="columnIndex:long, value:String" etype="long" methodBody="" __idKDM="findFirstString___long__String___"/>
+    <eoperations name="lowerBoundLong()" eparameters="columnIndex:long, value:long" etype="long" methodBody="" __idKDM="lowerBoundLong___long__long___"/>
+    <eoperations name="upperBoundLong()" eparameters="columnIndex:long, value:long" etype="long" methodBody="" __idKDM="upperBoundLong___long__long___"/>
+    <eoperations name="findAllLong()" eparameters="columnIndex:long, value:long" etype="TableView" methodBody="" __idKDM="findAllLong___long__long___"/>
+    <eoperations name="findAllBoolean()" eparameters="columnIndex:long, value:boolean" etype="TableView" methodBody="" __idKDM="findAllBoolean___long__boolean___"/>
+    <eoperations name="findAllFloat()" eparameters="columnIndex:long, value:float" etype="TableView" methodBody="" __idKDM="findAllFloat___long__float___"/>
+    <eoperations name="findAllDouble()" eparameters="columnIndex:long, value:double" etype="TableView" methodBody="" __idKDM="findAllDouble___long__double___"/>
+    <eoperations name="findAllDate()" eparameters="columnIndex:long, value:Date" etype="TableView" methodBody="" __idKDM="findAllDate___long__Date___"/>
+    <eoperations name="findAllString()" eparameters="columnIndex:long, value:String" etype="TableView" methodBody="" __idKDM="findAllString___long__String___"/>
+    <eoperations name="toJson()" etype="String" methodBody="" __idKDM="toJson______"/>
+    <eoperations name="toString()" etype="String" methodBody="" __idKDM="toString______"/>
+    <eoperations name="toString()" eparameters="maxRows:long" etype="String" methodBody="" __idKDM="toString___long___"/>
+    <eoperations name="rowToString()" eparameters="rowIndex:long" etype="String" methodBody="" __idKDM="rowToString___long___"/>
+    <eoperations name="where()" etype="TableQuery" methodBody="" __idKDM="where______"/>
+    <eoperations name="lookup()" eparameters="value:String" etype="long" methodBody="" __idKDM="lookup___String___"/>
+    <eoperations name="count()" eparameters="columnIndex:long, value:String" etype="long" methodBody="" __idKDM="count___long__String___"/>
+    <eoperations name="pivot()" eparameters="stringCol:long, intCol:long, pivotType:PivotType" etype="Table" methodBody="" __idKDM="pivot___long__long__PivotType___"/>
+  </interfaces>
+</refactoring:EPackage>

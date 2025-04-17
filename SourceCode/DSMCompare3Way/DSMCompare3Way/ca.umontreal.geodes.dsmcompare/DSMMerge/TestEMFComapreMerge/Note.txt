@@ -1,0 +1,56 @@
+C3 class created and added to to (single) reference svC3 of C1 class:
+====>  [ADD] value mergetestDiffMM.impl.C3Impl@12c7a01b (svID: 21, Name: svsvsv) has been added to reference svC3
+ of object mergetestDiffMM.impl.C1Impl@4df5bcb4 (svAttrC1: 2, mvAttrC1: [], svAttrC1NotID: 0)
+ 
+C1 class created and added to to (multi) reference mvRefC1 of Root class:
+=====>  [ADD] value mergetestDiffMM.impl.C1Impl@13d9b21f (svAttrC1: 4, mvAttrC1: [1, 2, 3], svAttrC1NotID: 111) has been added to reference mvRefC1
+ of object mergetestDiffMM.impl.RootImpl@5629510 (svAttrRoot: 1, mvAttrRoot: [])
+
+
+Multi-Reference (mvRefC2) to class C2 from Class C1 ADDed: 
+===>  [ADD] value mergetestDiffMM.impl.C2Impl@2826f61 (svAttrC2: 3, mvAttrC2: []) has been added to reference mvRefC2
+ of object mergetestDiffMM.impl.C1Impl@13d9b21f (svAttrC1: 4, mvAttrC1: [1, 2, 3], svAttrC1NotID: 111)
+
+Single-Reference (svRefC2) to class C2 from Class C1 ADDed: 
+===>  [CHANGE] value mergetestDiffMM.impl.C2Impl@2826f61 (svAttrC2: 3, mvAttrC2: []) has been changed from reference svRefC2
+ of object mergetestDiffMM.impl.C1Impl@13d9b21f (svAttrC1: 4, mvAttrC1: [1, 2, 3], svAttrC1NotID: 111)
+
+
+
+
+-------------------------------
+-------------------------------
+
+In Reference Change ===>
+
+DifferenceKind.CHANGE  - Single-Valued Reference : Reference which are ADDED
+------------------------------------------------
+
+DifferenceKind.ADD  - Single-Valued Reference : Class which are ADDED
+
+--------------------------------------------- ???? ------
+---------How to differentiate the following two Diffs? 
+ if value already exist (originMatch != null), it is A reference change. 
+ Otherwise (originMatch == null) it is a class Add/Delete. 
+
+
+DifferenceKind.ADD  - Multi-Valued Reference : Class which are ADDED
+
+DifferenceKind.ADD  - Multi-Valued Reference : Reference which are ADDED
+
+----------------------
+----------------------
+None of changes in multi, single valued ATTRIBUTES of a added/deleted class considered as a Diff 
+But
+Changes in multi, single valued references of a added class considered as a Diff 
+
+
+----------------------------
+
+EMF-Compare did not show the conflict when an attribute changed from a class in one version 
+ which was deleted in the other version
+
+
+
+
+

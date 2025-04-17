@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="AssumingInTheoriesTest">
+    <eoperations name="noTheoryAnnotationMeansAssumeShouldIgnore()" etype="void" methodBody="expression statement; method invocation; assumeTrue; boolean literal; " __idKDM="noTheoryAnnotationMeansAssumeShouldIgnore______"/>
+    <eoperations name="theoryMeansOnlyAssumeShouldFail()" eparameters="null:InitializationError" etype="void" methodBody="expression statement; method invocation; assertEquals; method invocation; getFailureCount; number literal; variable declaration; result; " __idKDM="theoryMeansOnlyAssumeShouldFail___InitializationError___"/>
+    <nested_classes name="TheoryWithNoUnassumedParameters">
+      <eattributes name="FALSE" etype="boolean"/>
+      <eoperations name="theoryWithNoUnassumedParameters()" eparameters="value:boolean" etype="void" methodBody="expression statement; method invocation; assumeTrue; " __idKDM="theoryWithNoUnassumedParameters___boolean___"/>
+    </nested_classes>
+  </eclassifiers>
+  <eclassifiers name="AllMembersSupplierTest">
+    <eattributes name="expected" etype="ExpectedException"/>
+    <eoperations name="dataPointsArrayShouldBeRecognized()" eparameters="null:Throwable" etype="void" methodBody="expression statement; method invocation; assertEquals; method invocation; size; number literal; variable declaration; assignments; " __idKDM="dataPointsArrayShouldBeRecognized___Throwable___"/>
+    <eoperations name="dataPointsArrayShouldBeRecognizedOnValueTypeNotFieldType()" eparameters="null:Throwable" etype="void" methodBody="expression statement; method invocation; assertEquals; method invocation; size; number literal; variable declaration; assignments; " __idKDM="dataPointsArrayShouldBeRecognizedOnValueTypeNotFieldType___Throwable___"/>
+    <eoperations name="dataPointMethodShouldBeRecognizedForOverlyGeneralParameters()" eparameters="null:Throwable" etype="void" methodBody="expression statement; method invocation; assertEquals; method invocation; size; number literal; variable declaration; assignments; " __idKDM="dataPointMethodShouldBeRecognizedForOverlyGeneralParameters___Throwable___"/>
+    <eoperations name="dataPointsAnnotationMeansTreatAsArrayOnly()" eparameters="null:Throwable" etype="void" methodBody="foreach; assignment; expression statement; method invocation; assertNotEquals; method invocation; getValue; expression statement; method invocation; assertEquals; method invocation; size; number literal; variable declaration; assignments; " __idKDM="dataPointsAnnotationMeansTreatAsArrayOnly___Throwable___"/>
+    <eoperations name="dataPointsArrayFieldMayContainNullValue()" eparameters="null:Throwable" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; variable declaration; valueSources; " __idKDM="dataPointsArrayFieldMayContainNullValue___Throwable___"/>
+    <eoperations name="dataPointsArrayMethodMayContainNullValue()" eparameters="null:Throwable" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; variable declaration; valueSources; " __idKDM="dataPointsArrayMethodMayContainNullValue___Throwable___"/>
+    <eoperations name="allMembersFailsOnFailingDataPointsArrayMethod()" eparameters="null:Throwable" etype="void" methodBody="expression statement; method invocation; allMemberValuesFor; type literal; type literal; expression statement; method invocation; expectMessage; string literal; expression statement; method invocation; expect; type literal; " __idKDM="allMembersFailsOnFailingDataPointsArrayMethod___Throwable___"/>
+    <eoperations name="allMemberValuesFor()" eparameters="testClass:java.lang.Class&lt;?>, constructorParameterTypes:java.lang.Class&lt;?>, null:Throwable" etype="List&lt;PotentialAssignment>" methodBody="return; method invocation; getValueSources; method invocation; get; number literal; method invocation; signatures; method invocation; getConstructor; class instance creation; new AllMembersSupplier(new TestClass(testClass)); class instance creation; new TestClass(testClass); " __idKDM="allMemberValuesFor___java_lang_Class_____java_lang_Class_____Throwable___"/>
+    <nested_classes name="HasDataPointsArrayField">
+      <eattributes name="list" etype="java.lang.String[]"/>
+      <eoperations name="theory()" eparameters="param:String" etype="void" methodBody="" __idKDM="theory___String___"/>
+    </nested_classes>
+    <nested_classes name="HasDataPointsArrayWithMatchingButInaccurateTypes">
+      <eattributes name="objects" etype="java.lang.Object[]"/>
+      <eoperations name="theory()" eparameters="param:Integer" etype="void" methodBody="" __idKDM="theory___Integer___"/>
+    </nested_classes>
+    <nested_classes name="HasDataPointMethodWithOverlyGeneralTypes">
+      <eoperations name="object()" etype="Integer" methodBody="return; number literal; " __idKDM="object______"/>
+      <eoperations name="theory()" eparameters="param:Object" etype="void" methodBody="" __idKDM="theory___Object___"/>
+    </nested_classes>
+    <nested_classes name="HasDataPointsWithObjectParameter">
+      <eattributes name="objectField" etype="java.lang.Object[]"/>
+      <eoperations name="theory()" eparameters="obj:Object" etype="void" methodBody="" __idKDM="theory___Object___"/>
+    </nested_classes>
+    <nested_classes name="HasDataPointsFieldWithNullValue">
+      <eattributes name="objects" etype="java.lang.Object[]"/>
+      <eoperations name="HasDataPointsFieldWithNullValue()" eparameters="obj:Object" methodBody="" __idKDM="HasDataPointsFieldWithNullValue___Object___"/>
+    </nested_classes>
+    <nested_classes name="HasDataPointsMethodWithNullValue">
+      <eoperations name="getObjects()" etype="java.lang.Integer[]" methodBody="return; array creation; java.lang.Integer[]; array initializer; number literal; null; " __idKDM="getObjects______"/>
+      <eoperations name="HasDataPointsMethodWithNullValue()" eparameters="i:Integer" methodBody="" __idKDM="HasDataPointsMethodWithNullValue___Integer___"/>
+    </nested_classes>
+    <nested_classes name="HasFailingDataPointsArrayMethod">
+      <eoperations name="objects()" etype="java.lang.Object[]" methodBody="throw; class instance creation; RuntimeException; string literal; " __idKDM="objects______"/>
+      <eoperations name="HasFailingDataPointsArrayMethod()" eparameters="obj:Object" methodBody="" __idKDM="HasFailingDataPointsArrayMethod___Object___"/>
+    </nested_classes>
+  </eclassifiers>
+  <eclassifiers name="AllMembersSupplier" extends="ParameterSupplier">
+    <eattributes name="fClass" etype="TestClass"/>
+    <eoperations name="AllMembersSupplier()" eparameters="type:TestClass" methodBody="expression statement; ASSIGN; " __idKDM="AllMembersSupplier___TestClass___"/>
+    <eoperations name="getValueSources()" eparameters="sig:ParameterSignature, null:Throwable" etype="List&lt;PotentialAssignment>" methodBody="return; expression statement; method invocation; addMultiPointMethods; expression statement; method invocation; addSinglePointMethods; expression statement; method invocation; addMultiPointFields; expression statement; method invocation; addSinglePointFields; variable declaration; class instance creation; new ArrayList&lt;PotentialAssignment>(); list; " __idKDM="getValueSources___ParameterSignature__Throwable___"/>
+    <eoperations name="addMultiPointMethods()" eparameters="sig:ParameterSignature, list:List&lt;PotentialAssignment>, null:Throwable" etype="void" methodBody="foreach; dataPointsMethod; if; try; catch; catch; t; throw; if; foreach; ignored; if; return; method invocation; isAssignableFrom; method invocation; getClass; method invocation; ignoredExceptions; NOT_EQUALS; null; variable declaration; annotation; expression statement; method invocation; addArrayValues; method invocation; invokeExplosively; null; method invocation; getName; CONDITIONAL_AND; method invocation; canPotentiallyAcceptType; method invocation; getComponentType; method invocation; isArray; variable declaration; returnType; method invocation; getDataPointsMethods; " __idKDM="addMultiPointMethods___ParameterSignature__List_PotentialAssignment___Throwable___"/>
+    <eoperations name="addSinglePointMethods()" eparameters="sig:ParameterSignature, list:List&lt;PotentialAssignment>" etype="void" methodBody="foreach; dataPointMethod; if; expression statement; method invocation; add; class instance creation; new MethodParameterValue(dataPointMethod); method invocation; canAcceptType; method invocation; getType; method invocation; getSingleDataPointMethods; " __idKDM="addSinglePointMethods___ParameterSignature__List_PotentialAssignment____"/>
+    <eoperations name="addMultiPointFields()" eparameters="sig:ParameterSignature, list:List&lt;PotentialAssignment>" etype="void" methodBody="foreach; field; expression statement; method invocation; addArrayValues; method invocation; getStaticFieldValue; method invocation; getName; method invocation; getDataPointsFields; " __idKDM="addMultiPointFields___ParameterSignature__List_PotentialAssignment____"/>
+    <eoperations name="addSinglePointFields()" eparameters="sig:ParameterSignature, list:List&lt;PotentialAssignment>" etype="void" methodBody="foreach; field; if; expression statement; method invocation; add; method invocation; forValue; method invocation; getName; method invocation; canAcceptValue; variable declaration; value; method invocation; getSingleDataPointFields; " __idKDM="addSinglePointFields___ParameterSignature__List_PotentialAssignment____"/>
+    <eoperations name="addArrayValues()" eparameters="sig:ParameterSignature, name:String, list:List&lt;PotentialAssignment>, array:Object" etype="void" methodBody="for; if; expression statement; method invocation; add; method invocation; forValue; PLUS; name; string literal; string literal; method invocation; canAcceptValue; variable declaration; value; INCREMENT; variable declaration; int; i; LESS; i; method invocation; getLength; " __idKDM="addArrayValues___ParameterSignature__String__List_PotentialAssignment___Object___"/>
+    <eoperations name="getStaticFieldValue()" eparameters="field:Field" etype="Object" methodBody="try; catch; catch; e; throw; class instance creation; RuntimeException; string literal; catch; catch; e; throw; class instance creation; RuntimeException; string literal; return; method invocation; get; null; " __idKDM="getStaticFieldValue___Field___"/>
+    <eoperations name="getDataPointsMethods()" eparameters="sig:ParameterSignature" etype="Collection&lt;FrameworkMethod>" methodBody="return; method invocation; getAnnotatedMethods; type literal; " __idKDM="getDataPointsMethods___ParameterSignature___"/>
+    <eoperations name="getSingleDataPointFields()" eparameters="sig:ParameterSignature" etype="java.util.Collection&lt;java.lang.reflect.Field>" methodBody="return; foreach; frameworkField; expression statement; method invocation; add; method invocation; getField; variable declaration; class instance creation; ArrayList; validFields; variable declaration; fields; " __idKDM="getSingleDataPointFields___ParameterSignature___"/>
+    <eoperations name="getDataPointsFields()" eparameters="sig:ParameterSignature" etype="java.util.Collection&lt;java.lang.reflect.Field>" methodBody="return; foreach; frameworkField; expression statement; method invocation; add; method invocation; getField; variable declaration; class instance creation; ArrayList; validFields; variable declaration; fields; " __idKDM="getDataPointsFields___ParameterSignature___"/>
+    <eoperations name="getSingleDataPointMethods()" eparameters="sig:ParameterSignature" etype="Collection&lt;FrameworkMethod>" methodBody="return; method invocation; getAnnotatedMethods; type literal; " __idKDM="getSingleDataPointMethods___ParameterSignature___"/>
+    <esupertypes href="93d773835c0c6f70bc89bbf5e4d273c289423a64_gitMerged_ref.xmi#ParameterSupplier"/>
+    <nested_classes name="MethodParameterValue" extends="PotentialAssignment">
+      <eattributes name="fMethod" etype="FrameworkMethod"/>
+      <eoperations name="MethodParameterValue()" eparameters="dataPointMethod:FrameworkMethod" methodBody="expression statement; ASSIGN; " __idKDM="MethodParameterValue___FrameworkMethod___"/>
+      <eoperations name="getValue()" eparameters="null:CouldNotGenerateValueException" etype="Object" methodBody="try; catch; catch; t; throw; class instance creation; new CouldNotGenerateValueException(t); if; foreach; ignorable; expression statement; method invocation; assumeThat; method invocation; not; method invocation; instanceOf; method invocation; NOT_EQUALS; annotation; null; variable declaration; annotation; catch; catch; e; throw; class instance creation; RuntimeException; string literal; catch; catch; e; throw; class instance creation; RuntimeException; string literal; return; method invocation; invokeExplosively; null; " __idKDM="getValue___CouldNotGenerateValueException___"/>
+      <eoperations name="getDescription()" eparameters="null:CouldNotGenerateValueException" etype="String" methodBody="return; method invocation; getName; " __idKDM="getDescription___CouldNotGenerateValueException___"/>
+      <esupertypes href="93d773835c0c6f70bc89bbf5e4d273c289423a64_gitMerged_ref.xmi#PotentialAssignment"/>
+    </nested_classes>
+  </eclassifiers>
+  <interfaces name="DataPoint"/>
+</refactoring:EPackage>

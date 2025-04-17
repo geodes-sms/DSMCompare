@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="CoordinatedBolt" implements="IRichBolt" interfaces="IRichBolt">
+    <eattributes name="LOG" etype="Logger"/>
+    <eattributes name="_sourceArgs" etype="java.util.Map&lt;java.lang.String,pkg.CoordinatedBolt.SourceArgs>"/>
+    <eattributes name="_idStreamSpec" etype="IdStreamSpec"/>
+    <eattributes name="_delegate" etype="IRichBolt"/>
+    <eattributes name="_numSourceReports" etype="Integer"/>
+    <eattributes name="_countOutTasks" etype="java.util.List&lt;java.lang.Integer>"/>
+    <eattributes name="_collector" etype="OutputCollector"/>
+    <eattributes name="_tracked" etype="TimeCacheMap&lt;Object,TrackingInfo>"/>
+    <eoperations name="CoordinatedBolt()" eparameters="delegate:IRichBolt" methodBody="this(delegate,null,null);&#xA;; null; null; " __idKDM="CoordinatedBolt___IRichBolt___"/>
+    <eoperations name="CoordinatedBolt()" eparameters="delegate:IRichBolt, sourceComponent:String, sourceArgs:SourceArgs, idStreamSpec:IdStreamSpec" methodBody="this(delegate,singleSourceArgs(sourceComponent,sourceArgs),idStreamSpec);&#xA;; method invocation; singleSourceArgs; " __idKDM="CoordinatedBolt___IRichBolt__String__SourceArgs__IdStreamSpec___"/>
+    <eoperations name="CoordinatedBolt()" eparameters="delegate:IRichBolt, sourceArgs:java.util.Map&lt;java.lang.String,pkg.CoordinatedBolt.SourceArgs>, idStreamSpec:IdStreamSpec" methodBody="expression statement; ASSIGN; _idStreamSpec; expression statement; ASSIGN; if; expression statement; ASSIGN; _sourceArgs; class instance creation; HashMap; EQUALS; _sourceArgs; null; expression statement; ASSIGN; _sourceArgs; " __idKDM="CoordinatedBolt___IRichBolt__java_util_Map_java_lang_String_pkg_CoordinatedBolt_SourceArgs___IdStreamSpec___"/>
+    <eoperations name="prepare()" eparameters="config:Map&lt;K, V>, context:TopologyContext, collector:OutputCollector" etype="void" methodBody="if; foreach; entry; if; expression statement; PLUS_ASSIGN; _numSourceReports; method invocation; size; method invocation; getComponentTasks; method invocation; getKey; expression statement; PLUS_ASSIGN; _numSourceReports; number literal; field access; singleCount; method invocation; getValue; method invocation; entrySet; expression statement; ASSIGN; _numSourceReports; number literal; NOT; method invocation; isEmpty; foreach; component; foreach; task; expression statement; method invocation; add; method invocation; getComponentTasks; method invocation; keySet; method invocation; get; class instance creation; new HashMap&lt;String,Grouping>(); method invocation; getThisTargets; expression statement; method invocation; prepare; class instance creation; new OutputCollector(new CoordinatedOutputCollector(collector)); class instance creation; new CoordinatedOutputCollector(collector); expression statement; ASSIGN; expression statement; ASSIGN; class instance creation; Object; method invocation; maxTopologyMessageTimeout; if; expression statement; ASSIGN; class instance creation; TimeoutItems; instanceof; TimeoutCallback; variable declaration; callback; " __idKDM="prepare___Map_K__V___TopologyContext__OutputCollector___"/>
+    <eoperations name="checkFinishId()" eparameters="tup:Tuple" etype="boolean" methodBody="return; synchronized; try; catch; catch; e; expression statement; ASSIGN; ret; boolean literal; expression statement; ASSIGN; failed; boolean literal; expression statement; method invocation; error; string literal; if; expression statement; method invocation; remove; expression statement; ASSIGN; finished; boolean literal; while; expression statement; method invocation; emitDirect; class instance creation; new Values(id,numTuples); variable declaration; numTuples; variable declaration; task; method invocation; hasNext; variable declaration; outTasks; if; throw; class instance creation; IllegalStateException; string literal; NOT; parenthesized; CONDITIONAL_OR; parenthesized; CONDITIONAL_AND; method invocation; equals; method invocation; getSourceGlobalStreamid; NOT_EQUALS; _idStreamSpec; null; method invocation; equals; method invocation; getSourceStreamId; method invocation; isEmpty; if; expression statement; method invocation; finishedId; parenthesized; cast; FinishedCallback; instanceof; FinishedCallback; CONDITIONAL_AND; parenthesized; CONDITIONAL_OR; CONDITIONAL_AND; EQUALS; expectedTupleCount; EQUALS; reportCount; method invocation; isEmpty; CONDITIONAL_AND; receivedId; CONDITIONAL_AND; NOT; NOT_EQUALS; track; null; if; expression statement; ASSIGN; ret; boolean literal; CONDITIONAL_OR; failed; EQUALS; track; null; variable declaration; track; variable declaration; id; variable declaration; ret; " __idKDM="checkFinishId___Tuple___"/>
+    <eoperations name="execute()" eparameters="tuple:Tuple" etype="void" methodBody="if; if; synchronized; expression statement; method invocation; execute; if; expression statement; method invocation; ack; expression statement; method invocation; fail; variable declaration; failed; synchronized; expression statement; PLUS_ASSIGN; expectedTupleCount; expression statement; INCREMENT; variable declaration; count; CONDITIONAL_AND; method invocation; equals; method invocation; getSourceStreamId; NOT; method invocation; isEmpty; if; expression statement; method invocation; ack; expression statement; method invocation; fail; variable declaration; failed; synchronized; expression statement; ASSIGN; receivedId; boolean literal; CONDITIONAL_AND; method invocation; equals; method invocation; getSourceGlobalStreamid; NOT_EQUALS; _idStreamSpec; null; synchronized; if; expression statement; method invocation; put; if; expression statement; ASSIGN; receivedId; boolean literal; EQUALS; _idStreamSpec; null; expression statement; ASSIGN; track; class instance creation; TrackingInfo; EQUALS; track; null; expression statement; ASSIGN; track; method invocation; get; variable declaration; track; variable declaration; id; " __idKDM="execute___Tuple___"/>
+    <eoperations name="cleanup()" eparameters="" etype="void" methodBody="expression statement; method invocation; cleanup; " __idKDM="cleanup______"/>
+    <eoperations name="declareOutputFields()" eparameters="declarer:OutputFieldsDeclarer" etype="void" methodBody="expression statement; method invocation; declareStream; class instance creation; new Fields(&quot;id&quot;,&quot;count&quot;); string literal; string literal; boolean literal; expression statement; method invocation; declareOutputFields; " __idKDM="declareOutputFields___OutputFieldsDeclarer___"/>
+    <eoperations name="getComponentConfiguration()" eparameters="" etype="java.util.Map&lt;java.lang.String,java.lang.Object>" methodBody="return; method invocation; getComponentConfiguration; " __idKDM="getComponentConfiguration______"/>
+    <eoperations name="singleSourceArgs()" eparameters="sourceComponent:String, sourceArgs:SourceArgs" etype="java.util.Map&lt;java.lang.String,pkg.CoordinatedBolt.SourceArgs>" methodBody="return; expression statement; method invocation; put; variable declaration; class instance creation; HashMap; ret; " __idKDM="singleSourceArgs___String__SourceArgs___"/>
+    <nested_classes name="SourceArgs" implements="Serializable" interfaces="Serializable">
+      <eattributes name="singleCount" etype="boolean"/>
+      <eoperations name="SourceArgs()" eparameters="singleCount:boolean" methodBody="expression statement; ASSIGN; singleCount; field access; singleCount; this; " __idKDM="SourceArgs___boolean___"/>
+      <eoperations name="single()" eparameters="" etype="SourceArgs" methodBody="return; class instance creation; SourceArgs; boolean literal; " __idKDM="single______"/>
+      <eoperations name="all()" eparameters="" etype="SourceArgs" methodBody="return; class instance creation; SourceArgs; boolean literal; " __idKDM="all______"/>
+      <eoperations name="toString()" eparameters="" etype="String" methodBody="return; PLUS; singleCount; string literal; string literal; " __idKDM="toString______"/>
+    </nested_classes>
+    <nested_classes name="CoordinatedOutputCollector" implements="IOutputCollector" interfaces="IOutputCollector">
+      <eattributes name="_delegate" etype="IOutputCollector"/>
+      <eoperations name="CoordinatedOutputCollector()" eparameters="delegate:IOutputCollector" methodBody="expression statement; ASSIGN; " __idKDM="CoordinatedOutputCollector___IOutputCollector___"/>
+      <eoperations name="emit()" eparameters="stream:String, anchors:Collection&lt;Tuple>, tuple:java.util.List&lt;java.lang.Object>" etype="java.util.List&lt;java.lang.Integer>" methodBody="return; expression statement; method invocation; updateTaskCounts; method invocation; get; number literal; variable declaration; tasks; " __idKDM="emit___String__Collection_Tuple___java_util_List_java_lang_Object____"/>
+      <eoperations name="emitDirect()" eparameters="task:int, stream:String, anchors:Collection&lt;Tuple>, tuple:java.util.List&lt;java.lang.Object>" etype="void" methodBody="expression statement; method invocation; emitDirect; expression statement; method invocation; updateTaskCounts; method invocation; asList; method invocation; get; number literal; " __idKDM="emitDirect___int__String__Collection_Tuple___java_util_List_java_lang_Object____"/>
+      <eoperations name="ack()" eparameters="tuple:Tuple" etype="void" methodBody="if; expression statement; method invocation; ack; expression statement; method invocation; fail; variable declaration; failed; synchronized; if; expression statement; INCREMENT; NOT_EQUALS; track; null; variable declaration; track; variable declaration; id; " __idKDM="ack___Tuple___"/>
+      <eoperations name="fail()" eparameters="tuple:Tuple" etype="void" methodBody="expression statement; method invocation; fail; synchronized; if; expression statement; ASSIGN; failed; boolean literal; NOT_EQUALS; track; null; variable declaration; track; variable declaration; id; " __idKDM="fail___Tuple___"/>
+      <eoperations name="reportError()" eparameters="error:Throwable" etype="void" methodBody="expression statement; method invocation; reportError; " __idKDM="reportError___Throwable___"/>
+      <eoperations name="updateTaskCounts()" eparameters="id:Object, tasks:java.util.List&lt;java.lang.Integer>" etype="void" methodBody="synchronized; if; foreach; task; expression statement; method invocation; put; variable declaration; newCount; variable declaration; taskEmittedTuples; NOT_EQUALS; track; null; variable declaration; track; " __idKDM="updateTaskCounts___Object__java_util_List_java_lang_Integer____"/>
+    </nested_classes>
+    <nested_classes name="TrackingInfo">
+      <eattributes name="reportCount" etype="int"/>
+      <eattributes name="expectedTupleCount" etype="int"/>
+      <eattributes name="receivedTuples" etype="int"/>
+      <eattributes name="failed" etype="boolean"/>
+      <eattributes name="taskEmittedTuples" etype="java.util.Map&lt;java.lang.Integer,java.lang.Integer>"/>
+      <eattributes name="receivedId" etype="boolean"/>
+      <eattributes name="finished" etype="boolean"/>
+      <eoperations name="toString()" eparameters="" etype="String" methodBody="return; PLUS; reportCount; method invocation; toString; string literal; string literal; string literal; string literal; string literal; string literal; string literal; string literal; " __idKDM="toString______"/>
+      <eoperations name="TrackingInfo()" eparameters="" methodBody="" __idKDM="TrackingInfo______"/>
+    </nested_classes>
+    <nested_classes name="IdStreamSpec" implements="Serializable" interfaces="Serializable">
+      <eattributes name="_id" etype="GlobalStreamId"/>
+      <eoperations name="getGlobalStreamId()" eparameters="" etype="GlobalStreamId" methodBody="return; " __idKDM="getGlobalStreamId______"/>
+      <eoperations name="makeDetectSpec()" eparameters="component:String, stream:String" etype="IdStreamSpec" methodBody="return; class instance creation; IdStreamSpec; " __idKDM="makeDetectSpec___String__String___"/>
+      <eoperations name="IdStreamSpec()" eparameters="component:String, stream:String" methodBody="expression statement; ASSIGN; class instance creation; new GlobalStreamId(component,stream); " __idKDM="IdStreamSpec___String__String___"/>
+    </nested_classes>
+    <nested_classes name="TimeoutItems">
+      <eoperations name="expire()" eparameters="id:Object, val:TrackingInfo" etype="void" methodBody="synchronized; if; expression statement; method invocation; timeoutId; parenthesized; cast; TimeoutCallback; NOT; " __idKDM="expire___Object__TrackingInfo___"/>
+      <eoperations name="TimeoutItems()" eparameters="" methodBody="" __idKDM="TimeoutItems______"/>
+    </nested_classes>
+    <nested_interfaces name="FinishedCallback">
+      <eoperations name="finishedId()" eparameters="id:Object" etype="void" methodBody="" __idKDM="finishedId___Object___"/>
+    </nested_interfaces>
+    <nested_interfaces name="TimeoutCallback">
+      <eoperations name="timeoutId()" eparameters="id:Object" etype="void" methodBody="" __idKDM="timeoutId___Object___"/>
+    </nested_interfaces>
+  </eclassifiers>
+  <interfaces name="IRichBolt"/>
+  <interfaces name="Serializable"/>
+  <interfaces name="IOutputCollector"/>
+</refactoring:EPackage>

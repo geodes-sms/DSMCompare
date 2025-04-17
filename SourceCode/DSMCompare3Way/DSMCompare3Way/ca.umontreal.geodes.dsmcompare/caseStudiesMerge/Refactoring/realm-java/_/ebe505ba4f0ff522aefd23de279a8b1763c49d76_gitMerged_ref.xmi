@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="SharedGroup" implements="Closeable" interfaces="Closeable">
+    <eattributes name="path" etype="String"/>
+    <eattributes name="nativePtr" etype="long"/>
+    <eattributes name="nativeReplicationPtr" etype="long"/>
+    <eattributes name="implicitTransactionsEnabled" etype="boolean"/>
+    <eattributes name="activeTransaction" etype="boolean"/>
+    <eattributes name="context" etype="Context"/>
+    <eoperations name="SharedGroup()" eparameters="databaseFile:String" methodBody="expression statement; method invocation; checkNativePtrNotZero; expression statement; ASSIGN; nativePtr; method invocation; nativeCreate; null; boolean literal; boolean literal; expression statement; ASSIGN; path; expression statement; ASSIGN; class instance creation; new Context(); " __idKDM="SharedGroup___String___"/>
+    <eoperations name="SharedGroup()" eparameters="databaseFile:String, enableImplicitTransactions:boolean, durability:Durability, key:byte[]" methodBody="expression statement; method invocation; checkNativePtrNotZero; expression statement; ASSIGN; path; expression statement; ASSIGN; class instance creation; new Context(); if; expression statement; ASSIGN; nativePtr; method invocation; nativeCreate; boolean literal; boolean literal; expression statement; ASSIGN; implicitTransactionsEnabled; boolean literal; expression statement; ASSIGN; nativePtr; method invocation; createNativeWithImplicitTransactions; expression statement; ASSIGN; nativeReplicationPtr; method invocation; nativeCreateReplication; " __idKDM="SharedGroup___String__boolean__Durability__byte_____"/>
+    <eoperations name="SharedGroup()" eparameters="databaseFile:String, durability:Durability, key:byte[]" methodBody="expression statement; method invocation; checkNativePtrNotZero; expression statement; ASSIGN; nativePtr; method invocation; nativeCreate; boolean literal; boolean literal; expression statement; ASSIGN; class instance creation; new Context(); expression statement; ASSIGN; path; " __idKDM="SharedGroup___String__Durability__byte_____"/>
+    <eoperations name="SharedGroup()" eparameters="databaseFile:String, durability:Durability, fileMustExist:boolean" methodBody="expression statement; method invocation; checkNativePtrNotZero; expression statement; ASSIGN; nativePtr; method invocation; nativeCreate; null; boolean literal; expression statement; ASSIGN; class instance creation; new Context(); expression statement; ASSIGN; path; " __idKDM="SharedGroup___String__Durability__boolean___"/>
+    <eoperations name="createNativeWithImplicitTransactions()" eparameters="nativeReplicationPtr:long, durability:int, key:byte[]" etype="long" methodBody="" __idKDM="createNativeWithImplicitTransactions___long__int__byte_____"/>
+    <eoperations name="getNativePointer()" etype="long" methodBody="return; " __idKDM="getNativePointer______"/>
+    <eoperations name="getNativeReplicationPointer()" etype="long" methodBody="return; " __idKDM="getNativeReplicationPointer______"/>
+    <eoperations name="nativeCreateReplication()" eparameters="databaseFile:String, key:byte[]" etype="long" methodBody="" __idKDM="nativeCreateReplication___String__byte_____"/>
+    <eoperations name="createNativeWithImplicitTransactions()" eparameters="nativeReplicationPtr:long, durability:int, key:byte[]" etype="long" methodBody="" __idKDM="createNativeWithImplicitTransactions___long__int__byte_____"/>
+    <eoperations name="nativeCreateReplication()" eparameters="databaseFile:String, key:byte[]" etype="long" methodBody="" __idKDM="nativeCreateReplication___String__byte_____"/>
+    <eoperations name="advanceRead()" etype="void" methodBody="expression statement; method invocation; nativeAdvanceRead; " __idKDM="advanceRead______"/>
+    <eoperations name="advanceRead()" eparameters="versionID:VersionID" etype="void" methodBody="expression statement; method invocation; nativeAdvanceReadToVersion; " __idKDM="advanceRead___VersionID___"/>
+    <eoperations name="nativeAdvanceRead()" eparameters="nativePtr:long, nativeReplicationPtr:long" etype="void" methodBody="" __idKDM="nativeAdvanceRead___long__long___"/>
+    <eoperations name="nativeAdvanceReadToVersion()" eparameters="nativePtr:long, nativeReplicationPtr:long, version:long, index:long" etype="void" methodBody="" __idKDM="nativeAdvanceReadToVersion___long__long__long__long___"/>
+    <eoperations name="nativeAdvanceRead()" eparameters="nativePtr:long" etype="void" methodBody="" __idKDM="nativeAdvanceRead___long___"/>
+    <eoperations name="promoteToWrite()" etype="void" methodBody="expression statement; method invocation; nativePromoteToWrite; " __idKDM="promoteToWrite______"/>
+    <eoperations name="nativePromoteToWrite()" eparameters="nativePtr:long, nativeReplicationPtr:long" etype="void" methodBody="" __idKDM="nativePromoteToWrite___long__long___"/>
+    <eoperations name="nativePromoteToWrite()" eparameters="nativePtr:long" etype="void" methodBody="" __idKDM="nativePromoteToWrite___long___"/>
+    <eoperations name="commitAndContinueAsRead()" etype="void" methodBody="expression statement; method invocation; nativeCommitAndContinueAsRead; " __idKDM="commitAndContinueAsRead______"/>
+    <eoperations name="rollbackAndContinueAsRead()" etype="void" methodBody="expression statement; method invocation; nativeRollbackAndContinueAsRead; " __idKDM="rollbackAndContinueAsRead______"/>
+    <eoperations name="nativeRollbackAndContinueAsRead()" eparameters="nativePtr:long, nativeReplicationPtr:long" etype="void" methodBody="" __idKDM="nativeRollbackAndContinueAsRead___long__long___"/>
+    <eoperations name="nativeRollbackAndContinueAsRead()" eparameters="nativePtr:long" etype="void" methodBody="" __idKDM="nativeRollbackAndContinueAsRead___long___"/>
+    <eoperations name="beginImplicitTransaction()" etype="ImplicitTransaction" methodBody="return; expression statement; ASSIGN; activeTransaction; boolean literal; variable declaration; class instance creation; Object; this; transaction; variable declaration; nativeGroupPtr; if; throw; class instance creation; IllegalStateException; string literal; " __idKDM="beginImplicitTransaction______"/>
+    <eoperations name="beginWrite()" etype="WriteTransaction" methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; expression statement; ASSIGN; activeTransaction; boolean literal; variable declaration; class instance creation; Object; this; t; variable declaration; nativeWritePtr; if; throw; class instance creation; IllegalStateException; string literal; " __idKDM="beginWrite______"/>
+    <eoperations name="beginRead()" etype="ReadTransaction" methodBody="try; catch; catch; e; throw; expression statement; method invocation; nativeClose; return; expression statement; ASSIGN; activeTransaction; boolean literal; variable declaration; class instance creation; Object; this; t; variable declaration; nativeReadPtr; if; throw; class instance creation; IllegalStateException; string literal; " __idKDM="beginRead______"/>
+    <eoperations name="endRead()" etype="void" methodBody="expression statement; ASSIGN; activeTransaction; boolean literal; expression statement; method invocation; nativeEndRead; if; throw; class instance creation; IllegalStateException; string literal; method invocation; isClosed; " __idKDM="endRead______"/>
+    <eoperations name="close()" etype="void" methodBody="synchronized; if; if; expression statement; ASSIGN; nativeReplicationPtr; number literal; expression statement; method invocation; nativeCloseReplication; CONDITIONAL_AND; implicitTransactionsEnabled; NOT_EQUALS; nativeReplicationPtr; number literal; expression statement; ASSIGN; nativePtr; number literal; expression statement; method invocation; nativeClose; NOT_EQUALS; nativePtr; number literal; " __idKDM="close______"/>
+    <eoperations name="finalize()" etype="void" methodBody="synchronized; if; if; expression statement; ASSIGN; nativeReplicationPtr; number literal; expression statement; method invocation; nativeCloseReplication; CONDITIONAL_AND; implicitTransactionsEnabled; NOT_EQUALS; nativeReplicationPtr; number literal; expression statement; ASSIGN; nativePtr; number literal; expression statement; method invocation; asyncDisposeSharedGroup; NOT_EQUALS; nativePtr; number literal; " __idKDM="finalize______"/>
+    <eoperations name="commit()" etype="void" methodBody="expression statement; ASSIGN; activeTransaction; boolean literal; expression statement; method invocation; nativeCommit; if; throw; class instance creation; IllegalStateException; string literal; method invocation; isClosed; " __idKDM="commit______"/>
+    <eoperations name="rollback()" etype="void" methodBody="expression statement; ASSIGN; activeTransaction; boolean literal; expression statement; method invocation; nativeRollback; if; throw; class instance creation; IllegalStateException; string literal; method invocation; isClosed; " __idKDM="rollback______"/>
+    <eoperations name="isClosed()" etype="boolean" methodBody="return; EQUALS; nativePtr; number literal; " __idKDM="isClosed______"/>
+    <eoperations name="hasChanged()" etype="boolean" methodBody="return; method invocation; nativeHasChanged; " __idKDM="hasChanged______"/>
+    <eoperations name="reserve()" eparameters="bytes:long" etype="void" methodBody="expression statement; method invocation; nativeReserve; " __idKDM="reserve___long___"/>
+    <eoperations name="compact()" etype="boolean" methodBody="return; method invocation; nativeCompact; " __idKDM="compact______"/>
+    <eoperations name="getVersion()" etype="VersionID" methodBody="return; class instance creation; VersionID; array access; versionId; number literal; array access; versionId; number literal; variable declaration; versionId; " __idKDM="getVersion______"/>
+    <eoperations name="nativeGetVersionID()" eparameters="nativePtr:long" etype="long[]" methodBody="" __idKDM="nativeGetVersionID___long___"/>
+    <eoperations name="getPath()" etype="String" methodBody="return; " __idKDM="getPath______"/>
+    <eoperations name="checkNativePtrNotZero()" etype="void" methodBody="if; throw; class instance creation; IOError; class instance creation; new RealmIOException(&quot;Realm could not be opened&quot;); string literal; EQUALS; number literal; field access; nativePtr; this; " __idKDM="checkNativePtrNotZero______"/>
+    <eoperations name="createNativeWithImplicitTransactions()" eparameters="nativeReplicationPtr:long, durability:int, key:byte[]" etype="long" methodBody="" __idKDM="createNativeWithImplicitTransactions___long__int__byte_____"/>
+    <eoperations name="nativeCreateReplication()" eparameters="databaseFile:String, key:byte[]" etype="long" methodBody="" __idKDM="nativeCreateReplication___String__byte_____"/>
+    <eoperations name="nativeAdvanceRead()" eparameters="nativePtr:long" etype="void" methodBody="" __idKDM="nativeAdvanceRead___long___"/>
+    <eoperations name="nativePromoteToWrite()" eparameters="nativePtr:long" etype="void" methodBody="" __idKDM="nativePromoteToWrite___long___"/>
+    <eoperations name="nativeCommitAndContinueAsRead()" eparameters="nativePtr:long" etype="void" methodBody="" __idKDM="nativeCommitAndContinueAsRead___long___"/>
+    <eoperations name="nativeRollbackAndContinueAsRead()" eparameters="nativePtr:long" etype="void" methodBody="" __idKDM="nativeRollbackAndContinueAsRead___long___"/>
+    <eoperations name="nativeBeginImplicit()" eparameters="nativePtr:long" etype="long" methodBody="" __idKDM="nativeBeginImplicit___long___"/>
+    <eoperations name="nativeGetDefaultReplicationDatabaseFileName()" etype="String" methodBody="" __idKDM="nativeGetDefaultReplicationDatabaseFileName______"/>
+    <eoperations name="nativeReserve()" eparameters="nativePtr:long, bytes:long" etype="void" methodBody="" __idKDM="nativeReserve___long__long___"/>
+    <eoperations name="nativeHasChanged()" eparameters="nativePtr:long" etype="boolean" methodBody="" __idKDM="nativeHasChanged___long___"/>
+    <eoperations name="nativeBeginRead()" eparameters="nativePtr:long" etype="long" methodBody="" __idKDM="nativeBeginRead___long___"/>
+    <eoperations name="nativeEndRead()" eparameters="nativePtr:long" etype="void" methodBody="" __idKDM="nativeEndRead___long___"/>
+    <eoperations name="nativeBeginWrite()" eparameters="nativePtr:long" etype="long" methodBody="" __idKDM="nativeBeginWrite___long___"/>
+    <eoperations name="nativeCommit()" eparameters="nativePtr:long" etype="void" methodBody="" __idKDM="nativeCommit___long___"/>
+    <eoperations name="nativeRollback()" eparameters="nativePtr:long" etype="void" methodBody="" __idKDM="nativeRollback___long___"/>
+    <eoperations name="nativeCreate()" eparameters="databaseFile:String, durabilityValue:int, no_create:boolean, enableReplication:boolean, key:byte[]" etype="long" methodBody="" __idKDM="nativeCreate___String__int__boolean__boolean__byte_____"/>
+    <eoperations name="nativeCompact()" eparameters="nativePtr:long" etype="boolean" methodBody="" __idKDM="nativeCompact___long___"/>
+    <eoperations name="nativeClose()" eparameters="nativePtr:long" etype="void" methodBody="" __idKDM="nativeClose___long___"/>
+    <eoperations name="nativeCloseReplication()" eparameters="nativeReplicationPtr:long" etype="void" methodBody="" __idKDM="nativeCloseReplication___long___"/>
+    <nested_classes name="VersionID" implements="Serializable" interfaces="Serializable">
+      <eattributes name="version" etype="long"/>
+      <eattributes name="index" etype="long"/>
+      <eoperations name="VersionID()" eparameters="version:long, index:long" methodBody="expression statement; ASSIGN; index; field access; index; this; expression statement; ASSIGN; version; field access; version; this; " __idKDM="VersionID___long__long___"/>
+      <eoperations name="compareTo()" eparameters="another:VersionID" etype="int" methodBody="if; if; return; number literal; return; MINUS; number literal; LESS; version; return; number literal; GREATER; version; " __idKDM="compareTo___VersionID___"/>
+      <eoperations name="toString()" etype="String" methodBody="return; PLUS; version; character literal; string literal; PLUS; string literal; string literal; " __idKDM="toString______"/>
+    </nested_classes>
+  </eclassifiers>
+  <interfaces name="Closeable" extends="AutoCloseable" esupertypes="AutoCloseable"/>
+  <interfaces name="Serializable"/>
+  <interfaces name="AutoCloseable"/>
+</refactoring:EPackage>

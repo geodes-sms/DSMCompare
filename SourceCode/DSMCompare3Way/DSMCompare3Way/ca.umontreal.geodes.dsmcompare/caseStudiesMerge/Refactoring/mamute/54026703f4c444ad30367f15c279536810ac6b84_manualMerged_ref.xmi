@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="TagPageValidator">
+    <eattributes name="validator" etype="Validator"/>
+    <eattributes name="messageFactory" etype="MessageFactory"/>
+    <eattributes name="tagPages" etype="TagPageDAO"/>
+    <eoperations name="TagPageValidator()" methodBody="" __idKDM="TagPageValidator______"/>
+    <eoperations name="TagPageValidator()" eparameters="validator:Validator, messageFactory:MessageFactory, tagPages:TagPageDAO" methodBody="expression statement; ASSIGN; field access; tagPages; this; expression statement; ASSIGN; field access; messageFactory; this; expression statement; ASSIGN; field access; validator; this; " __idKDM="TagPageValidator___Validator__MessageFactory__TagPageDAO___"/>
+    <eoperations name="validateCreationWithTag()" eparameters="tagName:String" etype="boolean" methodBody="return; NOT; method invocation; hasErrors; expression statement; method invocation; showTagPage; method invocation; onErrorRedirectTo; type literal; if; expression statement; method invocation; add; method invocation; build; string literal; string literal; method invocation; existsOfTag; " __idKDM="validateCreationWithTag___String___"/>
+    <eoperations name="validate()" eparameters="tagPage:TagPage" etype="boolean" methodBody="return; NOT; method invocation; hasErrors; expression statement; method invocation; validate; " __idKDM="validate___TagPage___"/>
+    <eoperations name="onErrorRedirectTo()" eparameters="controller:java.lang.Class&lt;T>" etype="T" methodBody="return; method invocation; onErrorRedirectTo; " __idKDM="onErrorRedirectTo___java_lang_Class_T____"/>
+  </eclassifiers>
+  <eclassifiers name="GlobalInterceptor">
+    <eattributes name="SLASH_AT_END" etype="String"/>
+    <eattributes name="LOG" etype="Logger"/>
+    <eattributes name="env" etype="Environment"/>
+    <eattributes name="result" etype="Result"/>
+    <eattributes name="req" etype="HttpServletRequest"/>
+    <eattributes name="localization" etype="Localization"/>
+    <eattributes name="menuInfo" etype="MenuInfo"/>
+    <eattributes name="brutalDateFormat" etype="BrutalDateFormat"/>
+    <eattributes name="messageFactory" etype="MessageFactory"/>
+    <eattributes name="ads" etype="BrutalAds"/>
+    <eattributes name="sideBarInfo" etype="SideBarInfo"/>
+    <eoperations name="intercept()" eparameters="stack:InterceptorStack, method:ControllerMethod, resourceInstance:Object, null:InterceptionException" etype="void" methodBody="expression statement; method invocation; next; expression statement; method invocation; logHeaders; expression statement; method invocation; loginForm; string literal; method invocation; redirectTo; type literal; method invocation; include; method invocation; asList; method invocation; build; string literal; string literal; string literal; method invocation; on; type literal; expression statement; method invocation; notFound; method invocation; on; type literal; expression statement; method invocation; include; method invocation; shouldShowAds; string literal; expression statement; method invocation; include; method invocation; deployTimestamp; string literal; expression statement; method invocation; include; method invocation; getContextPath; string literal; expression statement; method invocation; include; method invocation; getCurrentUrl; string literal; expression statement; method invocation; include; method invocation; getInstance; string literal; string literal; expression statement; method invocation; include; class instance creation; Object; method invocation; getLocale; string literal; expression statement; method invocation; include; string literal; expression statement; method invocation; include; expression statement; method invocation; include; " __idKDM="intercept___InterceptorStack__ControllerMethod__Object__InterceptionException___"/>
+    <eoperations name="deployTimestamp()" etype="String" methodBody="return; method invocation; getProperty; string literal; string literal; " __idKDM="deployTimestamp______"/>
+    <eoperations name="getCurrentUrl()" etype="String" methodBody="return; expression statement; method invocation; debug; PLUS; url; string literal; if; expression statement; ASSIGN; url; array access; number literal; method invocation; split; method invocation; endsWith; string literal; if; expression statement; ASSIGN; url; PLUS; host; method invocation; getRequestURI; string literal; expression statement; ASSIGN; url; method invocation; toString; method invocation; getRequestURL; EQUALS; host; null; variable declaration; url; variable declaration; host; " __idKDM="getCurrentUrl______"/>
+    <eoperations name="logHeaders()" etype="void" methodBody="while; expression statement; method invocation; debug; expression statement; method invocation; debug; variable declaration; value; variable declaration; key; method invocation; hasMoreElements; expression statement; method invocation; debug; string literal; variable declaration; headerNames; " __idKDM="logHeaders______"/>
+  </eclassifiers>
+</refactoring:EPackage>

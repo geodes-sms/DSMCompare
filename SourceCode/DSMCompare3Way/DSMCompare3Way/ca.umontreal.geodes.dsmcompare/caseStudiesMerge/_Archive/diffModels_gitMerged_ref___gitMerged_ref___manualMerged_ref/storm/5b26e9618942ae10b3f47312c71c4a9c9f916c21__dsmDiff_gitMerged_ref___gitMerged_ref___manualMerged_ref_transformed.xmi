@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:refactoringDiffMM="www.geodes.UdeM.edu/refactoringDiffMM" xsi:schemaLocation="www.geodes.UdeM.edu/refactoringDiffMM ../../../casesMergeConflict/refactoring/metaModels/refactoringDiffMM.ecore">
+  <refactoringDiffMM:EPackage name="storm.kafka">
+    <eclassifiers name="UpdateOffsetException" extends="FailedFetchException">
+      <eoperations name="UpdateOffsetException()" eparameters="message:String" methodBody="super constructor invocation; super(message);&#xA;; " __idKDM="UpdateOffsetException___String___"/>
+    </eclassifiers>
+    <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="UpdateOffsetException" extends="RuntimeException" diff_kind_Right="DELETE">
+      <diffesupertypes diff_kind_Right="DELETE" diff_Group="DG-1" eType="RuntimeException"/>
+      <diffesupertypes diff_kind_Right="DELETE" diff_Group="DG-2" eType="RuntimeException"/>
+    </eclassifiers>
+    <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="RuntimeException" diff_kind_Right="DELETE"/>
+    <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="UpdateOffsetException" extends="FailedFetchException" diff_kind_Left="ADD" changeStatus="CONTRADICTING">
+      <diffesupertypes diff_kind_Left="ADD" changeStatus="CONTRADICTING" diff_Group="DG-4" eType="FailedFetchException"/>
+    </eclassifiers>
+    <eclassifiers xsi:type="refactoringDiffMM:DiffEClass" name="FailedFetchException" diff_kind_Right="DELETE" changeStatus="CONTRADICTING"/>
+  </refactoringDiffMM:EPackage>
+  <refactoringDiffMM:SemanticDiff name="Extract Superclass" SemanticObject_DiffEClass_esupertypes="/0/@eclassifiers.3/@diffesupertypes.0" author="LEFT"/>
+</xmi:XMI>

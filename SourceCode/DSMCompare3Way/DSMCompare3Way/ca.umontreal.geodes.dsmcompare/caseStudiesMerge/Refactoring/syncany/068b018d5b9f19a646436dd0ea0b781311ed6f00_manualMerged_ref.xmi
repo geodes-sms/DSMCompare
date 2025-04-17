@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="Client">
+    <eattributes name="APPLICATION_PROPERTIES_RESOURCE" etype="String"/>
+    <eattributes name="APPLICATION_PROPERTIES_RELEASE_KEY" etype="String"/>
+    <eattributes name="APPLICATION_PROPERTIES_VERSION_KEY" etype="String"/>
+    <eattributes name="APPLICATION_PROPERTIES_REVISION_KEY" etype="String"/>
+    <eattributes name="applicationProperties" etype="Properties"/>
+    <eattributes name="config" etype="Config"/>
+    <eoperations name="getApplicationProperties()" etype="Properties" methodBody="return; " __idKDM="getApplicationProperties______"/>
+    <eoperations name="isApplicationRelease()" etype="boolean" methodBody="return; method invocation; parseBoolean; method invocation; getProperty; " __idKDM="isApplicationRelease______"/>
+    <eoperations name="getApplicationVersion()" etype="String" methodBody="return; method invocation; getProperty; " __idKDM="getApplicationVersion______"/>
+    <eoperations name="getApplicationRevision()" etype="String" methodBody="return; method invocation; getProperty; " __idKDM="getApplicationRevision______"/>
+    <eoperations name="Client()" methodBody="" __idKDM="Client______"/>
+    <eoperations name="setConfig()" eparameters="config:Config" etype="void" methodBody="expression statement; ASSIGN; field access; config; this; " __idKDM="setConfig___Config___"/>
+    <eoperations name="getConfig()" etype="Config" methodBody="return; " __idKDM="getConfig______"/>
+    <eoperations name="up()" eparameters="null:Exception" etype="UpOperationResult" methodBody="return; method invocation; up; class instance creation; new UpOperationOptions(); " __idKDM="up___Exception___"/>
+    <eoperations name="up()" eparameters="options:UpOperationOptions, null:Exception" etype="UpOperationResult" methodBody="return; method invocation; up; null; " __idKDM="up___UpOperationOptions__Exception___"/>
+    <eoperations name="up()" eparameters="options:UpOperationOptions, listener:UpOperationListener, null:Exception" etype="UpOperationResult" methodBody="return; method invocation; execute; class instance creation; Object; " __idKDM="up___UpOperationOptions__UpOperationListener__Exception___"/>
+    <eoperations name="down()" eparameters="null:Exception" etype="DownOperationResult" methodBody="return; method invocation; down; null; class instance creation; new DownOperationOptions(); " __idKDM="down___Exception___"/>
+    <eoperations name="down()" eparameters="options:DownOperationOptions, null:Exception" etype="DownOperationResult" methodBody="return; method invocation; down; null; " __idKDM="down___DownOperationOptions__Exception___"/>
+    <eoperations name="down()" eparameters="options:DownOperationOptions, listener:DownOperationListener, null:Exception" etype="DownOperationResult" methodBody="return; method invocation; execute; class instance creation; Object; " __idKDM="down___DownOperationOptions__DownOperationListener__Exception___"/>
+    <eoperations name="status()" eparameters="null:Exception" etype="ChangeSet" methodBody="return; method invocation; status; class instance creation; new StatusOperationOptions(); " __idKDM="status___Exception___"/>
+    <eoperations name="status()" eparameters="options:StatusOperationOptions, null:Exception" etype="ChangeSet" methodBody="return; method invocation; getChangeSet; parenthesized; method invocation; execute; class instance creation; Object; " __idKDM="status___StatusOperationOptions__Exception___"/>
+    <eoperations name="lsRemote()" eparameters="null:Exception" etype="LsRemoteOperationResult" methodBody="return; method invocation; execute; class instance creation; Object; " __idKDM="lsRemote___Exception___"/>
+    <eoperations name="restore()" eparameters="options:RestoreOperationOptions, null:Exception" etype="RestoreOperationResult" methodBody="return; method invocation; execute; class instance creation; Object; " __idKDM="restore___RestoreOperationOptions__Exception___"/>
+    <eoperations name="log()" eparameters="options:LogOperationOptions, null:Exception" etype="LogOperationResult" methodBody="return; method invocation; execute; class instance creation; Object; " __idKDM="log___LogOperationOptions__Exception___"/>
+    <eoperations name="watch()" eparameters="options:WatchOperationOptions, null:Exception" etype="void" methodBody="expression statement; method invocation; watch; null; " __idKDM="watch___WatchOperationOptions__Exception___"/>
+    <eoperations name="watch()" eparameters="options:WatchOperationOptions, listener:WatchOperationListener, null:Exception" etype="void" methodBody="expression statement; method invocation; execute; class instance creation; Object; " __idKDM="watch___WatchOperationOptions__WatchOperationListener__Exception___"/>
+    <eoperations name="genlink()" eparameters="null:Exception" etype="GenlinkOperationResult" methodBody="return; method invocation; execute; class instance creation; Object; " __idKDM="genlink___Exception___"/>
+    <eoperations name="init()" eparameters="options:InitOperationOptions, null:Exception" etype="InitOperationResult" methodBody="return; method invocation; init; null; " __idKDM="init___InitOperationOptions__Exception___"/>
+    <eoperations name="init()" eparameters="options:InitOperationOptions, listener:InitOperationListener, null:Exception" etype="InitOperationResult" methodBody="return; method invocation; execute; class instance creation; Object; " __idKDM="init___InitOperationOptions__InitOperationListener__Exception___"/>
+    <eoperations name="connect()" eparameters="options:ConnectOperationOptions, null:IOException, null:StorageException, null:CipherException" etype="ConnectOperationResult" methodBody="return; method invocation; connect; null; " __idKDM="connect___ConnectOperationOptions__IOException__StorageException__CipherException___"/>
+    <eoperations name="connect()" eparameters="options:ConnectOperationOptions, listener:ConnectOperationListener, null:IOException, null:StorageException, null:CipherException" etype="ConnectOperationResult" methodBody="return; method invocation; execute; class instance creation; Object; " __idKDM="connect___ConnectOperationOptions__ConnectOperationListener__IOException__StorageException__CipherException___"/>
+    <eoperations name="cleanup()" eparameters="null:Exception" etype="CleanupOperationResult" methodBody="return; method invocation; execute; class instance creation; Object; class instance creation; new CleanupOperationOptions(); " __idKDM="cleanup___Exception___"/>
+    <eoperations name="cleanup()" eparameters="options:CleanupOperationOptions, null:Exception" etype="CleanupOperationResult" methodBody="return; method invocation; execute; class instance creation; Object; " __idKDM="cleanup___CleanupOperationOptions__Exception___"/>
+  </eclassifiers>
+</refactoring:EPackage>

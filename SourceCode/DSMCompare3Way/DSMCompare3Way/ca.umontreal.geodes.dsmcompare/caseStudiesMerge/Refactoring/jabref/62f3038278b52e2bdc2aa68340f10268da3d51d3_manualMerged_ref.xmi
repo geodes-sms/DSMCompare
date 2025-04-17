@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="MainTableNameFormatter">
+    <eattributes name="preferencesService" etype="PreferencesService"/>
+    <eoperations name="MainTableNameFormatter()" eparameters="preferences:PreferencesService" methodBody="expression statement; ASSIGN; field access; preferencesService; this; " __idKDM="MainTableNameFormatter___PreferencesService___"/>
+    <eoperations name="formatNameLatexFree()" eparameters="nameToFormat:String" etype="String" methodBody="switch; return; method invocation; getAsLastFirstNamesLatexFree; boolean literal; EQUALS; case; case; return; method invocation; getAsFirstLastNamesLatexFree; boolean literal; EQUALS; case; return; method invocation; getAsNatbibLatexFree; case; return; case; method invocation; getDisplayStyle; if; return; method invocation; getAsLastNamesLatexFree; boolean literal; CONDITIONAL_AND; EQUALS; parenthesized; CONDITIONAL_OR; parenthesized; EQUALS; parenthesized; EQUALS; variable declaration; authors; variable declaration; abbreviationStyle; variable declaration; displayStyle; variable declaration; nameFormatPreferences; if; return; null; EQUALS; nameToFormat; null; " __idKDM="formatNameLatexFree___String___"/>
+  </eclassifiers>
+  <eclassifiers name="BibEntryTableViewModel">
+    <eattributes name="entry" etype="BibEntry"/>
+    <eattributes name="database" etype="BibDatabase"/>
+    <eattributes name="nameFormatter" etype="ObservableValue&lt;MainTableNameFormatter>"/>
+    <eattributes name="fieldValues" etype="Map&lt;OrFields,ObservableValue&lt;String>>"/>
+    <eattributes name="specialFieldValues" etype="Map&lt;SpecialField,OptionalBinding&lt;SpecialFieldValueViewModel>>"/>
+    <eattributes name="linkedFiles" etype="EasyBinding&lt;List&lt;LinkedFile>>"/>
+    <eattributes name="linkedIdentifiers" etype="EasyBinding&lt;Map&lt;Field,String>>"/>
+    <eattributes name="matchedGroups" etype="ObservableValue&lt;List&lt;AbstractGroup>>"/>
+    <eoperations name="BibEntryTableViewModel()" eparameters="entry:BibEntry, database:BibDatabaseContext, nameFormatter:ObservableValue&lt;MainTableNameFormatter>" methodBody="expression statement; ASSIGN; method invocation; createMatchedGroupsBinding; field access; matchedGroups; this; expression statement; ASSIGN; method invocation; createLinkedIdentifiersBinding; field access; linkedIdentifiers; this; expression statement; ASSIGN; method invocation; orElse; method invocation; emptyList; method invocation; map; null; method invocation; getField; field access; linkedFiles; this; expression statement; ASSIGN; field access; nameFormatter; this; expression statement; ASSIGN; method invocation; getDatabase; field access; database; this; expression statement; ASSIGN; field access; entry; this; " __idKDM="BibEntryTableViewModel___BibEntry__BibDatabaseContext__ObservableValue_MainTableNameFormatter____"/>
+    <eoperations name="createLinkedIdentifiersBinding()" eparameters="entry:BibEntry" etype="EasyBinding&lt;Map&lt;Field,String>>" methodBody="return; method invocation; combine; null; method invocation; getFieldBinding; method invocation; getFieldBinding; method invocation; getFieldBinding; method invocation; getFieldBinding; " __idKDM="createLinkedIdentifiersBinding___BibEntry___"/>
+    <eoperations name="getEntry()" etype="BibEntry" methodBody="return; " __idKDM="getEntry______"/>
+    <eoperations name="createMatchedGroupsBinding()" eparameters="database:BibDatabaseContext, entry:BibEntry" etype="ObservableValue&lt;List&lt;AbstractGroup>>" methodBody="return; class instance creation; new SimpleObjectProperty&lt;>(Collections.emptyList()); method invocation; emptyList; if; return; method invocation; map; null; method invocation; getFieldBinding; method invocation; isPresent; variable declaration; root; " __idKDM="createMatchedGroupsBinding___BibDatabaseContext__BibEntry___"/>
+    <eoperations name="getField()" eparameters="field:Field" etype="OptionalBinding&lt;String>" methodBody="return; method invocation; getFieldBinding; " __idKDM="getField___Field___"/>
+    <eoperations name="getLinkedFiles()" etype="ObservableValue&lt;List&lt;LinkedFile>>" methodBody="return; " __idKDM="getLinkedFiles______"/>
+    <eoperations name="getLinkedIdentifiers()" etype="ObservableValue&lt;Map&lt;Field,String>>" methodBody="return; " __idKDM="getLinkedIdentifiers______"/>
+    <eoperations name="getMatchedGroups()" etype="ObservableValue&lt;List&lt;AbstractGroup>>" methodBody="return; " __idKDM="getMatchedGroups______"/>
+    <eoperations name="getSpecialField()" eparameters="field:SpecialField" etype="ObservableValue&lt;Optional&lt;SpecialFieldValueViewModel>>" methodBody="if; return; expression statement; method invocation; put; expression statement; ASSIGN; method invocation; flatMap; null; method invocation; getField; return; NOT_EQUALS; null; variable declaration; value; " __idKDM="getSpecialField___SpecialField___"/>
+    <eoperations name="getFields()" eparameters="fields:OrFields" etype="ObservableValue&lt;String>" methodBody="return; expression statement; method invocation; put; expression statement; ASSIGN; method invocation; createStringBinding; method invocation; toArray; null; null; expression statement; method invocation; add; variable declaration; class instance creation; new ArrayList&lt;>(List.of(entry.getObservables())); method invocation; of; method invocation; getObservables; observables; if; return; NOT_EQUALS; null; variable declaration; value; " __idKDM="getFields___OrFields___"/>
+  </eclassifiers>
+</refactoring:EPackage>

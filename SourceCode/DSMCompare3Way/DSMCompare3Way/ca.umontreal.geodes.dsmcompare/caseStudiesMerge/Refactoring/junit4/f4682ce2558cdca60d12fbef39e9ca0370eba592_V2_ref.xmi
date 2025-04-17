@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ASCII"?>
+<refactoring:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:refactoring="www.geodes.UdeM.edu/refactoring" name="pkg">
+  <eclassifiers name="ParentRunnerTest">
+    <eattributes name="log" etype="String"/>
+    <eoperations name="useChildHarvester()" eparameters="null:InitializationError" etype="void" methodBody="expression statement; method invocation; assertEquals; string literal; expression statement; method invocation; run; class instance creation; new RunNotifier(); expression statement; method invocation; setScheduler; class instance creation; ; Anonymous type; variable declaration; class instance creation; new BlockJUnit4ClassRunner(FruitTest.class); type literal; runner; expression statement; ASSIGN; log; string literal; " __idKDM="useChildHarvester___InitializationError___"/>
+    <eoperations name="testMultipleFilters()" eparameters="null:Exception" etype="void" methodBody="expression statement; method invocation; assertEquals; method invocation; getRunCount; number literal; expression statement; method invocation; assertThat; method invocation; isEmpty; method invocation; getFailures; variable declaration; result; variable declaration; requestFilteredFiltered; variable declaration; requestFiltered; variable declaration; request; variable declaration; class instance creation; new JUnitCore(); junitCore; " __idKDM="testMultipleFilters___Exception___"/>
+    <eoperations name="isEmpty()" eparameters="" etype="Matcher&lt;List&lt;?>>" methodBody="return; class instance creation; ; Anonymous type; " __idKDM="isEmpty______"/>
+    <eoperations name="failWithHelpfulMessageForProtectedClassRule()" eparameters="" etype="void" methodBody="expression statement; method invocation; assertClassHasFailureMessage; string literal; type literal; " __idKDM="failWithHelpfulMessageForProtectedClassRule______"/>
+    <eoperations name="failWithHelpfulMessageForNonStaticClassRule()" eparameters="" etype="void" methodBody="expression statement; method invocation; assertClassHasFailureMessage; string literal; type literal; " __idKDM="failWithHelpfulMessageForNonStaticClassRule______"/>
+    <eoperations name="assertClassHasFailureMessage()" eparameters="klass:java.lang.Class&lt;?>, message:String" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; method invocation; equalTo; method invocation; getMessage; method invocation; get; number literal; method invocation; getFailures; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; getFailureCount; variable declaration; result; variable declaration; request; variable declaration; class instance creation; new JUnitCore(); junitCore; " __idKDM="assertClassHasFailureMessage___java_lang_Class_____String___"/>
+    <nested_classes name="FruitTest">
+      <eoperations name="apple()" eparameters="" etype="void" methodBody="expression statement; PLUS_ASSIGN; log; string literal; " __idKDM="apple______"/>
+      <eoperations name="Banana()" eparameters="" etype="void" methodBody="expression statement; PLUS_ASSIGN; log; string literal; " __idKDM="Banana______"/>
+    </nested_classes>
+    <nested_classes name="Exclude" extends="Filter">
+      <eattributes name="methodName" etype="String"/>
+      <eoperations name="Exclude()" eparameters="methodName:String" methodBody="expression statement; ASSIGN; methodName; field access; methodName; this; " __idKDM="Exclude___String___"/>
+      <eoperations name="shouldRun()" eparameters="description:Description" etype="boolean" methodBody="return; NOT; method invocation; equals; method invocation; getMethodName; " __idKDM="shouldRun___Description___"/>
+      <eoperations name="describe()" eparameters="" etype="String" methodBody="return; PLUS; methodName; string literal; " __idKDM="describe______"/>
+      <esupertypes href="02fc1f509a670de3632417bbf33168989bfcf872_CA_ref.xmi#Filter"/>
+    </nested_classes>
+    <nested_classes name="ExampleTest">
+      <eoperations name="test1()" eparameters="null:Exception" etype="void" methodBody="" __idKDM="test1___Exception___"/>
+      <eoperations name="test2()" eparameters="null:Exception" etype="void" methodBody="" __idKDM="test2___Exception___"/>
+      <eoperations name="test3()" eparameters="null:Exception" etype="void" methodBody="" __idKDM="test3___Exception___"/>
+    </nested_classes>
+  </eclassifiers>
+  <eclassifiers name="TestClassTest">
+    <eattributes name="exception" etype="ExpectedException"/>
+    <eoperations name="complainIfMultipleConstructors()" eparameters="" etype="void" methodBody="expression statement; class instance creation; new TestClass(TwoConstructors.class); type literal; " __idKDM="complainIfMultipleConstructors______"/>
+    <eoperations name="fieldsOnSubclassesShadowSuperclasses()" eparameters="" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; method invocation; getAnnotatedFields; type literal; class instance creation; new TestClass(SubclassWithField.class); type literal; " __idKDM="fieldsOnSubclassesShadowSuperclasses______"/>
+    <eoperations name="identifyNonStaticInnerClass()" eparameters="" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; boolean literal; method invocation; isANonStaticInnerClass; class instance creation; new TestClass(OuterClass.NonStaticInnerClass.class); type literal; " __idKDM="identifyNonStaticInnerClass______"/>
+    <eoperations name="dontMarkStaticInnerClassAsNonStatic()" eparameters="" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; boolean literal; method invocation; isANonStaticInnerClass; class instance creation; new TestClass(OuterClass2.StaticInnerClass.class); type literal; " __idKDM="dontMarkStaticInnerClassAsNonStatic______"/>
+    <eoperations name="dontMarkNonInnerClassAsInnerClass()" eparameters="" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; boolean literal; method invocation; isANonStaticInnerClass; class instance creation; new TestClass(SimpleClass.class); type literal; " __idKDM="dontMarkNonInnerClassAsInnerClass______"/>
+    <eoperations name="providesAnnotatedFieldsSortedByName()" eparameters="" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; string literal; method invocation; getName; method invocation; next; method invocation; iterator; string literal; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; string literal; variable declaration; annotatedFields; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; " __idKDM="providesAnnotatedFieldsSortedByName______"/>
+    <eoperations name="annotatedFieldValues()" eparameters="" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; expression statement; method invocation; assertThat; method invocation; hasItem; string literal; variable declaration; values; variable declaration; class instance creation; new TestClass(FieldAnnotated.class); type literal; tc; " __idKDM="annotatedFieldValues______"/>
+    <eoperations name="providesAnnotatedMethodsSortedByName()" eparameters="" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; string literal; method invocation; getName; method invocation; next; method invocation; iterator; string literal; expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; string literal; variable declaration; annotatedMethods; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; " __idKDM="providesAnnotatedMethodsSortedByName______"/>
+    <eoperations name="annotatedMethodValues()" eparameters="" etype="void" methodBody="expression statement; method invocation; assertThat; method invocation; is; number literal; method invocation; size; expression statement; method invocation; assertThat; method invocation; hasItem; string literal; variable declaration; values; variable declaration; class instance creation; new TestClass(MethodsAnnotated.class); type literal; tc; " __idKDM="annotatedMethodValues______"/>
+    <nested_classes name="TwoConstructors">
+      <eoperations name="TwoConstructors()" eparameters="" methodBody="" __idKDM="TwoConstructors______"/>
+      <eoperations name="TwoConstructors()" eparameters="x:int" methodBody="" __idKDM="TwoConstructors___int___"/>
+    </nested_classes>
+    <nested_classes name="SuperclassWithField">
+      <eattributes name="x" etype="TestRule"/>
+    </nested_classes>
+    <nested_classes name="SubclassWithField" extends="SuperclassWithField" esupertypes="SuperclassWithField">
+      <eattributes name="x" etype="TestRule"/>
+    </nested_classes>
+    <nested_classes name="OuterClass"/>
+    <nested_classes name="NonStaticInnerClass"/>
+    <nested_classes name="OuterClass2"/>
+    <nested_classes name="StaticInnerClass"/>
+    <nested_classes name="SimpleClass"/>
+    <nested_classes name="FieldAnnotated">
+      <eattributes name="fieldC" etype="String"/>
+      <eattributes name="fieldA" etype="boolean"/>
+      <eattributes name="fieldB" etype="boolean"/>
+      <eoperations name="FieldAnnotated()" eparameters="" methodBody="" __idKDM="FieldAnnotated______"/>
+    </nested_classes>
+    <nested_classes name="MethodsAnnotated">
+      <eoperations name="methodC()" eparameters="" etype="int" methodBody="return; number literal; " __idKDM="methodC______"/>
+      <eoperations name="methodA()" eparameters="" etype="String" methodBody="return; string literal; " __idKDM="methodA______"/>
+      <eoperations name="methodB()" eparameters="" etype="int" methodBody="return; number literal; " __idKDM="methodB______"/>
+      <eoperations name="MethodsAnnotated()" eparameters="" methodBody="" __idKDM="MethodsAnnotated______"/>
+    </nested_classes>
+  </eclassifiers>
+</refactoring:EPackage>
